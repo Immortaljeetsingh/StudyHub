@@ -333,7 +333,7 @@
                     item.innerHTML = `
                         <div class="review-qnum">Q${i + 1}</div>
                         <div class="review-content">
-                            <strong>${isCorrect ? 'âœ“ Correct' : 'âœ— Incorrect'}</strong>
+                            <strong>${isCorrect ? '&#x2713; Correct' : '&#x2717; Incorrect'}</strong>
                             <div><strong>Question:</strong> ${q.question}</div>
                             ${userAnswer !== undefined ? `<div><strong>Your answer:</strong> ${q.options[userAnswer]}</div>` : ''}
                             ${!isCorrect ? `<div><strong>Correct answer:</strong> ${q.options[q.answer]}</div>` : ''}
