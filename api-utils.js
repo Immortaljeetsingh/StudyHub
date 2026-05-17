@@ -51,8 +51,8 @@ function initSummarizeButtons() {
             btn.disabled = true; btn.textContent = '⏳ Summarizing...';
             try {
                 const summary = await callOpenRouter(target.innerText, 'You are a study assistant for MBA students. Summarize into clear bullet points. Highlight key definitions, important facts, exam-relevant points.');
-                let out = btn.parentElement.querySelector('.ai-output');
-                if (!out) { out = document.createElement('div'); out.className = 'ai-output'; btn.parentElement.insertBefore(out, btn.nextSibling.nextSibling || null); }
+                let out = document.querySelector('#ai-' + btn.getAttribute('data-target').replace('#',''));
+                if (!out) { out = document.createElement('div'); out.id = 'ai-' + btn.getAttribute('data-target').replace('#',''); out.className = 'ai-output'; target.parentElement.insertBefore(out, target); }
                 out.innerHTML = '<strong>📝 AI Summary:</strong>\n\n' + formatAIResponse(summary);
                 out.classList.add('visible'); btn.textContent = '✅ Summarized!';
                 setTimeout(() => { btn.textContent = '📝 Summarize'; btn.disabled = false; }, 2000);
@@ -71,8 +71,8 @@ function initAskButtons() {
             btn.disabled = true; btn.textContent = '🤔 Thinking...';
             try {
                 const answer = await callOpenRouter(`Context:\n${target.innerText}\n\nStudent's Question: ${question}`, 'You are a patient MBA tutor. Answer using the context. Use simple language, examples, bullet points.');
-                let out = btn.parentElement.querySelector('.ai-output');
-                if (!out) { out = document.createElement('div'); out.className = 'ai-output'; btn.parentElement.insertBefore(out, btn.nextSibling.nextSibling || null); }
+                let out = document.querySelector('#ai-' + btn.getAttribute('data-target').replace('#',''));
+                if (!out) { out = document.createElement('div'); out.id = 'ai-' + btn.getAttribute('data-target').replace('#',''); out.className = 'ai-output'; target.parentElement.insertBefore(out, target); }
                 out.innerHTML = `<strong>💬 Q: ${escapeHtml(question)}</strong>\n\n` + formatAIResponse(answer);
                 out.classList.add('visible'); btn.textContent = '💬 Ask AI'; btn.disabled = false;
             } catch (e) { btn.textContent = '❌ Error'; btn.disabled = false; setTimeout(() => btn.textContent = '💬 Ask AI', 2000); showToast('❌ ' + e.message, 'error'); }
