@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
@@ -41,7 +41,7 @@
             top: -50%; left: -50%; width: 200%; height: 200%;
             background:
                 radial-gradient(ellipse at 20% 20%, rgba(200,200,200,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(180,180,180,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(176,176,176,0.1) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 90%, rgba(80,200,120,0.06) 0%, transparent 40%);
             z-index: -1; pointer-events: none;
             animation: ambientDrift 25s ease-in-out infinite alternate;
@@ -52,8 +52,8 @@
             top: 0; left: 0; width: 100%; height: 100%;
             background:
                 radial-gradient(circle at 50% 0%, rgba(200,200,200,0.08) 0%, transparent 60%),
-                radial-gradient(circle at 0% 100%, rgba(180,180,180,0.06) 0%, transparent 50%),
-                radial-gradient(circle at 100% 50%, rgba(160,160,160,0.04) 0%, transparent 40%);
+                radial-gradient(circle at 0% 100%, rgba(176,176,176,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 100% 50%, rgba(244,114,182,0.04) 0%, transparent 40%);
             z-index: -2; pointer-events: none;
         }
 
@@ -104,7 +104,133 @@
 
         
 
+        /* API Settings Modal */
 
+        .api-settings {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(0,0,0,0.8);
+
+            display: none;
+
+            justify-content: center;
+
+            align-items: center;
+
+            z-index: 10000;
+
+        }
+
+        .api-settings.active { display: flex; }
+
+        .api-modal {
+
+            background: rgba(20, 20, 40, 0.6);
+
+            backdrop-filter: blur(40px);
+
+            -webkit-backdrop-filter: blur(40px);
+
+            padding: 2rem;
+
+            border-radius: 20px;
+
+            max-width: 460px;
+
+            width: 92%;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+
+            animation: modalIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+        }
+
+        @keyframes modalIn {
+
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+
+            to { opacity: 1; transform: scale(1) translateY(0); }
+
+        }
+
+        body.light-theme .api-modal { background: rgba(255,255,255,0.6); border-color: rgba(0,0,0,0.06); color: #1c1c1e; }
+
+        .api-modal h2 { color: #c8c8c8; margin-bottom: 1rem; font-size: 1.25rem; }
+
+        .api-modal label { display: block; color: #6b7a90; margin: 1rem 0 0.4rem; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        body.light-theme .api-modal label { color: #8e8e93; }
+
+        .api-modal input {
+
+            width: 100%;
+
+            padding: 0.7rem 0.9rem;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            color: #f0f0f5;
+
+            font-size: 0.93rem;
+
+            font-family: 'Inter', sans-serif;
+
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.1, 1);
+
+        }
+
+        .api-modal input:focus { outline: none; border-color: #c8c8c8; box-shadow: 0 0 0 3px rgba(200,200,200, 0.25); }
+
+        body.light-theme .api-modal input { background: rgba(255,255,255,0.5); color: #1c1c1e; border-color: rgba(0,0,0,0.06); }
+
+        .api-modal button {
+
+            margin-top: 1.5rem;
+
+            padding: 0.55rem 1.2rem;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            cursor: pointer;
+
+            font-size: 0.85rem;
+
+            font-weight: 600;
+
+            backdrop-filter: blur(8px);
+
+            -webkit-backdrop-filter: blur(8px);
+
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+        }
+
+        .btn-save { background: rgba(200,200,200, 0.15); color: #c8c8c8; border-color: rgba(200,200,200, 0.25); }
+
+        .btn-save:hover { background: rgba(200,200,200, 0.25); box-shadow: 0 0 20px rgba(200,200,200, 0.25); transform: translateY(-1px); }
+
+        .btn-cancel { background: rgba(255, 255, 255, 0.06); color: #b0b8c8; margin-left: 0.75rem; border-color: rgba(255, 255, 255, 0.1); }
+
+        .btn-cancel:hover { background: rgba(255, 255, 255, 0.08); color: #c8c8c8; }
+
+        .api-status { margin-top: 0.75rem; padding: 0.6rem; border-radius: 12px; font-size: 0.88rem; display: none; }
 
         .api-status.success { background: rgba(52,211,153,0.12); color: #34d399; display: block; }
 
@@ -146,7 +272,7 @@
         }
         .stat-card:hover {
             transform: translateY(-6px) scale(1.02);
-            border-color: rgba(200, 200, 200, 0.3);
+            border-color: rgba(200,200,200, 0.3);
             background: rgba(255, 255, 255, 0.07);
             box-shadow: 0 20px 60px rgba(200,200,200,0.15), 0 0 40px rgba(200,200,200,0.06);
         }
@@ -160,7 +286,7 @@
             letter-spacing: 0.1em;
         }
         .stat-card .stat-number {
-            background: linear-gradient(135deg, #7ba4f7, #b0b0b0);
+            background: linear-gradient(135deg, #b0b0b0, #b0b0b0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -223,7 +349,7 @@
 
             z-index: 1000;
 
-            border: 1px solid rgba(200, 200, 200, 0.3);
+            border: 1px solid rgba(200,200,200, 0.3);
 
             box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 
@@ -292,7 +418,7 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(200, 200, 200, 0.4), 0 0 40px rgba(200,200,200,0.15);
+            box-shadow: 0 6px 20px rgba(200,200,200, 0.4), 0 0 40px rgba(200,200,200,0.15);
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             display: flex;
             align-items: center;
@@ -300,7 +426,7 @@
         }
         .fab-main:hover {
             transform: scale(1.15) rotate(90deg);
-            box-shadow: 0 8px 30px rgba(200, 200, 200, 0.5), 0 0 60px rgba(200,200,200,0.2);
+            box-shadow: 0 8px 30px rgba(200,200,200, 0.5), 0 0 60px rgba(200,200,200,0.2);
         }
         .fab-main.active {
             transform: rotate(45deg);
@@ -358,7 +484,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
         .fab-option:hover {
-            background: rgba(200, 200, 200, 0.2);
+            background: rgba(200,200,200, 0.2);
             transform: scale(1.15);
             box-shadow: 0 6px 24px rgba(200,200,200,0.25);
         }
@@ -386,7 +512,7 @@
             top: 0; left: 0; right: 0; bottom: 0;
             background:
                 radial-gradient(circle at 20% 30%, rgba(200,200,200,0.06) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(180,180,180,0.05) 0%, transparent 40%);
+                radial-gradient(circle at 80% 70%, rgba(176,176,176,0.05) 0%, transparent 40%);
             pointer-events: none;
         }
 
@@ -414,7 +540,7 @@
 
         
 
-        .link { stroke: rgba(200, 200, 200, 0.3); stroke-width: 2px; transition: stroke 0.3s; }
+        .link { stroke: rgba(200,200,200, 0.3); stroke-width: 2px; transition: stroke 0.3s; }
 
         .link:hover { stroke: #c8c8c8; stroke-width: 3px; filter: drop-shadow(0 0 6px rgba(200,200,200,0.5)); }
 
@@ -511,7 +637,7 @@
             background-size: 300% 100%;
             animation: progressShimmer 4s ease infinite;
             transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 0 15px rgba(200, 200, 200, 0.5);
+            box-shadow: 0 0 15px rgba(200,200,200, 0.5);
             border-radius: 50px;
         }
         @keyframes progressShimmer {
@@ -587,7 +713,7 @@
         }
         .search-box:focus-within {
             border-color: rgba(200,200,200,0.6);
-            box-shadow: 0 0 0 4px rgba(200, 200, 200, 0.15), 0 8px 32px rgba(0,0,0,0.25);
+            box-shadow: 0 0 0 4px rgba(200,200,200, 0.15), 0 8px 32px rgba(0,0,0,0.25);
             background: rgba(255, 255, 255, 0.07);
             transform: translateY(-2px);
         }
@@ -631,9 +757,9 @@
             transition: left 0.5s;
         }
         .quick-links a:hover {
-            background: rgba(200, 200, 200, 0.15);
-            color: #7ba4f7;
-            border-color: rgba(200, 200, 200, 0.3);
+            background: rgba(200,200,200, 0.15);
+            color: #b0b0b0;
+            border-color: rgba(200,200,200, 0.3);
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(200,200,200,0.2);
         }
@@ -763,7 +889,7 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.06), 0 0 20px rgba(200,200,200,0.08);
         }
         body.light-theme .stat-card .stat-number {
-            background: linear-gradient(135deg, #3b6fcf, #d0d0d0);
+            background: linear-gradient(135deg, #c8c8c8, #d0d0d0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -773,7 +899,7 @@
             border-color: rgba(0,0,0,0.06);
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
-        body.light-theme .subject-card h3 { color: #3b6fcf; }
+        body.light-theme .subject-card h3 { color: #c8c8c8; }
         body.light-theme .subject-card p { color: #48484a; }
         body.light-theme .search-box {
             background: rgba(255,255,255,0.8);
@@ -791,7 +917,7 @@
         }
         body.light-theme .quick-links a:hover {
             background: rgba(200,200,200,0.1);
-            color: #3b6fcf;
+            color: #c8c8c8;
         }
         body.light-theme #graph-container {
             background: rgba(255,255,255,0.8);
@@ -936,7 +1062,7 @@
 
 
 
-        /* Focus Mode — hides non-essential elements */
+        /* Focus Mode ÔÇö hides non-essential elements */
 
         body.focus-mode .stat-card,
 
@@ -1154,7 +1280,7 @@
 
         background: rgba(200,200,200,0.1);
 
-        color: #3b6fcf;
+        color: #c8c8c8;
 
     }
 
@@ -1206,7 +1332,7 @@
     body.light-theme .stat-card .stat-number { color: #1c1c1e; }
     body.light-theme .graph-legend { background: rgba(255,255,255,0.5); border-color: rgba(0,0,0,0.06); }
     body.light-theme .quick-links a { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.08); color: #333; }
-    body.light-theme .quick-links a:hover { background: rgba(200,200,200,0.1); color: #3b6fcf; }
+    body.light-theme .quick-links a:hover { background: rgba(200,200,200,0.1); color: #c8c8c8; }
     body.light-theme .subject-card { background: rgba(255,255,255,0.6); border-color: rgba(0,0,0,0.06); }
     body.light-theme .search-box { background: rgba(255,255,255,0.5); border-color: rgba(0,0,0,0.06); }
 
@@ -1226,13 +1352,376 @@
 
     
 
+    <!-- API Settings Modal -->
+
+    <div id="apiSettings" class="api-settings">
+
+        <div class="api-modal">
+
+            <h2>ÔÜÖ´©Å OpenRouter API Settings</h2>
+
+            <label for="apiKey">OpenRouter API Key:</label>
+
+            <input type="password" id="apiKey" placeholder="sk-or-v1-..." aria-label="OpenRouter API Key">
+
+            
+
+            <label for="modelName">Model Name (e.g., google/gemini-pro, meta-llama/llama-3-70b-instruct):</label>
+
+            <input type="text" id="modelName" placeholder="google/gemini-pro" aria-label="Model Name">
+
+            
+
+            <div>
+
+                <button class="btn-save" onclick="saveApiSettings()">­ƒÆ¥ Save Settings</button>
+
+                <button class="btn-cancel" onclick="closeApiSettings()">Cancel</button>
+
+            </div>
+
+            <div id="apiStatus" class="api-status"></div>
+
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #a0aec0;">
+
+                Get your API key from <a href="https://openrouter.ai/keys" target="_blank" style="color: #c8c8c8;">openrouter.ai/keys</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
     
+
+    <header style="background:linear-gradient(135deg,#0a0a1a 0%,#1a1040 30%,#0d2137 60%,#0a0a1a 100%);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 40%,rgba(200,200,200,0.15) 0%,transparent 50%),radial-gradient(circle at 70% 60%,rgba(176,176,176,0.12) 0%,transparent 50%),radial-gradient(circle at 50% 80%,rgba(244,114,182,0.08) 0%,transparent 40%);pointer-events:none;"></div>
+        <div style="position:absolute;top:-20%;right:-10%;width:300px;height:300px;background:radial-gradient(circle,rgba(200,200,200,0.2) 0%,transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-20%;left:-10%;width:250px;height:250px;background:radial-gradient(circle,rgba(176,176,176,0.15) 0%,transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
+        <div class="header-particles">
+            <div class="header-particle"></div><div class="header-particle"></div>
+            <div class="header-particle"></div><div class="header-particle"></div>
+            <div class="header-particle"></div><div class="header-particle"></div>
+            <div class="header-particle"></div><div class="header-particle"></div>
+        </div>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 1.5rem; align-items: center; flex-wrap: wrap; position: relative; z-index: 1;">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">­ƒîÖ Dark Mode</button>
+            <button class="theme-toggle" onclick="openApiSettings()" aria-label="API Settings" style="background: rgba(200,200,200,0.08); border-color: rgba(200,200,200,0.15);">ÔÜÖ´©Å API Settings</button>
+            <div class="streak-widget" title="Study streak days">
+                <span class="streak-flame">­ƒöÑ</span>
+                <span class="streak-count" id="streakDisplay">0</span>
+                <span class="streak-label">day streak</span>
+            </div>
+        </div>
+        <h1 style="font-size:2.8rem;font-weight:900;background:linear-gradient(135deg,#c8c8c8 0%,#b0b0b0 30%,#d0d0d0 60%,#ffd700 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.04em;filter:drop-shadow(0 0 30px rgba(200,200,200,0.2));">­ƒôÜ Study Hub</h1>
+        <p style="color:rgba(255,255,255,0.55);font-size:1.05rem;margin-top:0.5rem;letter-spacing:0.02em;">MMPC Course Knowledge Graph &bull; Interactive Learning Platform</p>
+    </header>
+
+    
+
+    <main id="main"><div class="container">
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h2>Master Your MMPC Courses</h2>
+            <p>Interactive knowledge graphs, smart quizzes, and progress tracking ÔÇö everything you need to ace your management studies.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;">
+                <a href="#subjects" style="display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,#c8c8c8,#d0d0d0);color:#fff;padding:0.85rem 2.25rem;border-radius:60px;font-weight:800;font-size:0.95rem;text-decoration:none;box-shadow:0 8px 30px rgba(200,200,200,0.35),0 0 50px rgba(200,200,200,0.1);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);letter-spacing:0.01em;">Browse Courses <span style="font-size:1.1rem;">ÔåÆ</span></a>
+                <a href="#knowledgeGraph" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);color:rgba(255,255,255,0.7);padding:0.85rem 2.25rem;border-radius:60px;font-weight:800;font-size:0.95rem;text-decoration:none;border:1px solid rgba(255,255,255,0.08);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);letter-spacing:0.01em;">View Knowledge Graph</a>
+            </div>
+        </div>
+
+        <!-- Dashboard Stats -->
+
+        <div class="dashboard-stats">
+
+            <div class="stat-card" style="border-top:2px solid #c8c8c8;">
+
+                <div class="circular-progress" data-progress="0">
+
+                    <svg width="80" height="80" viewBox="0 0 80 80">
+
+                        <circle cx="40" cy="40" r="35" stroke="rgba(255,255,255,0.1)" stroke-width="6" fill="none"></circle>
+
+                        <circle cx="40" cy="40" r="35" stroke="#c8c8c8" stroke-width="6" fill="none" class="progress-ring"></circle>
+
+                        <text x="40" y="45" text-anchor="middle" font-size="14" fill="#f0f0f5" class="progress-text">0%</text>
+
+                    </svg>
+
+                </div>
+
+                <h4>Total Progress</h4>
+
+            </div>
+
+            <div class="stat-card" style="border-top:2px solid #50c878;">
+
+                <div class="stat-number" style="color:#50c878;" id="completedCount">0</div>
+
+                <h4>Completed</h4>
+
+            </div>
+
+            <div class="stat-card" style="border-top:2px solid #b0b0b0;">
+
+                <div class="stat-number" style="color:#b0b0b0;" id="inProgressCount">7</div>
+
+                <h4>In Progress</h4>
+
+            </div>
+
+            <div class="stat-card" style="border-top:2px solid #ffd700;">
+
+                <div class="stat-number" style="color:#ffd700;" id="streakCount">0</div>
+
+                <h4>Day Streak</h4>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Enhanced Search Container -->
+
+        <div class="search-container">
+
+            <div class="search-box">
+
+                <span class="search-icon" aria-hidden="true">­ƒöì</span>
+
+                <input 
+
+                    type="text" 
+
+                    id="globalSearch" 
+
+                    placeholder="Search subjects, topics, keywords... (Ctrl+K)" 
+
+                    aria-label="Search study materials"
+
+                    autocomplete="off"
+
+                >
+
+                <button class="search-clear" id="searchClear" aria-label="Clear search">├ù</button>
+
+                <span class="search-shortcut">Ctrl+K</span>
+
+            </div>
+
+            <div id="searchResults" aria-expanded="false" role="listbox"></div>
+
+        </div>
+
+        
+
+        <div class="quick-links" style="display:flex;gap:0.6rem;flex-wrap:wrap;margin:1.25rem 0;">
+
+            <a href="#graph" aria-label="View knowledge graph" style="border-left:3px solid #b0b0b0;">­ƒò©´©Å Knowledge Graph</a>
+
+            <a href="study-mmpc01.html" aria-label="MMPC-01 study notes" style="border-left:3px solid #c8c8c8;">­ƒôï MMPC-01</a>
+
+            <a href="study-mmpc02.html" aria-label="MMPC-02 study notes" style="border-left:3px solid #50c878;">­ƒæÑ MMPC-02</a>
+
+            <a href="study-mmpc03.html" aria-label="MMPC-03 study notes" style="border-left:3px solid #ffd700;">­ƒîì MMPC-03</a>
+
+            <a href="study-mmpc04.html" aria-label="MMPC-04 study notes" style="border-left:3px solid #ff6b6b;">­ƒÆ░ MMPC-04</a>
+
+            <a href="study-mmpc05.html" aria-label="MMPC-05 study notes" style="border-left:3px solid #9b59b6;">­ƒôè MMPC-05</a>
+
+            <a href="study-mmpc06.html" aria-label="MMPC-06 study notes" style="border-left:3px solid #1abc9c;">­ƒÄ» MMPC-06</a>
+
+            <a href="study-mmpc07.html" aria-label="MMPC-07 study notes" style="border-left:3px solid #e67e22;">­ƒÆ¼ MMPC-07</a>
+
+        </div>
+
+        
+
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <div style="width:4px;height:24px;border-radius:2px;background:linear-gradient(180deg,#c8c8c8,#b0b0b0);"></div>
+            <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#c8c8c8;">­ƒôÜ Course Library</span>
+        </div>
+        <h2 style="font-size:1.8rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;background:linear-gradient(135deg,#c8c8c8,#b0b0b0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">MMPC Courses</h2>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.92rem;margin-bottom:1.5rem;line-height:1.6;">7 courses covering Management, HR, Business, Accounting, Analytics, Marketing & Communication</p>
+
+        <div class="subjects-grid" id="subjects">
+
+            <!-- Progress will be populated via JavaScript from localStorage -->
+
+        </div>
+
+        
+
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <div style="width:4px;height:24px;border-radius:2px;background:linear-gradient(180deg,#b0b0b0,#d0d0d0);"></div>
+            <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#b0b0b0;">­ƒò©´©Å Interactive</span>
+        </div>
+        <h2 id="graph" style="font-size:1.8rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;background:linear-gradient(135deg,#b0b0b0,#d0d0d0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Knowledge Graph</h2>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.92rem;margin-bottom:1.5rem;line-height:1.6;">Interactive visualization of course relationships ÔÇö click any node to start studying</p>
+
+        <div id="graph-container">
+
+            <div class="loading-spinner" id="graphSpinner"></div>
+
+            <svg width="100%" height="500" viewBox="0 0 1200 500" aria-label="MMPC Course Knowledge Graph">
+
+                <g transform="translate(600, 250)">
+
+                    <!-- MMPC-01 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc01.html'" role="link" aria-label="MMPC-01 Management Functions" tabindex="0">
+
+                        <circle cx="-300" cy="-50" r="40" class="node mmpc-01" style="filter:drop-shadow(0 0 12px rgba(200,200,200,0.5));"></circle>
+
+                        <text x="-300" y="-50" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="12" font-weight="bold">Management</text>
+
+                        <text x="-300" y="-35" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="10">Functions</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-02 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc02.html'" role="link" aria-label="MMPC-02 Human Resource Management" tabindex="0">
+
+                        <circle cx="0" cy="0" r="40" class="node mmpc-02" style="filter:drop-shadow(0 0 12px rgba(80,200,120,0.5));"></circle>
+
+                        <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="12" font-weight="bold">HR Management</text>
+
+                        <text x="0" y="15" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="10">People Focus</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-03 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc03.html'" role="link" aria-label="MMPC-03 Business Environment" tabindex="0">
+
+                        <circle cx="300" cy="-80" r="35" class="node mmpc-03" style="filter:drop-shadow(0 0 12px rgba(255,215,0,0.5));"></circle>
+
+                        <text x="300" y="-80" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">Business</text>
+
+                        <text x="300" y="-65" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9">Environment</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-04 Cluster (Fixed: Corrected label from Marketing to Accounting) -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc04.html'" role="link" aria-label="MMPC-04 Accounting for Managers" tabindex="0">
+
+                        <circle cx="300" cy="80" r="35" class="node mmpc-04" style="filter:drop-shadow(0 0 12px rgba(255,107,107,0.5));"></circle>
+
+                        <text x="300" y="80" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">Accounting</text>
+
+                        <text x="300" y="95" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9">Financial Focus</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-05 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc05.html'" role="link" aria-label="MMPC-05 Quantitative Analysis" tabindex="0">
+
+                        <circle cx="0" cy="200" r="35" class="node mmpc-05" style="filter:drop-shadow(0 0 12px rgba(155,89,182,0.5));"></circle>
+
+                        <text x="0" y="200" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">Quantitative</text>
+
+                        <text x="0" y="215" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9">Analysis</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-06 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc06.html'" role="link" aria-label="MMPC-06 Marketing Management" tabindex="0">
+
+                        <circle cx="-200" cy="120" r="35" class="node mmpc-06" style="filter:drop-shadow(0 0 12px rgba(26,188,156,0.5));"></circle>
+
+                        <text x="-200" y="120" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">Marketing</text>
+
+                        <text x="-200" y="135" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9">Strategy</text>
+
+                    </g>
+
+                    
+
+                    <!-- MMPC-07 Cluster -->
+
+                    <g class="node-group" onclick="location.href='study-mmpc07.html'" role="link" aria-label="MMPC-07 Business Communication" tabindex="0">
+
+                        <circle cx="-200" cy="-120" r="35" class="node mmpc-07" style="filter:drop-shadow(0 0 12px rgba(230,126,34,0.5));"></circle>
+
+                        <text x="-200" y="-120" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">Communication</text>
+
+                        <text x="-200" y="-105" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="9">Business</text>
+
+                    </g>
+
+                    
+
+                    <!-- Links -->
+
+                    <line x1="-260" y1="-50" x2="-40" y2="0" class="link" style="stroke:rgba(200,200,200,0.3);"></line>
+
+                    <line x1="40" y1="0" x2="260" y2="-80" class="link" style="stroke:rgba(255,215,0,0.3);"></line>
+
+                    <line x1="40" y1="0" x2="260" y2="80" class="link" style="stroke:rgba(255,107,107,0.3);"></line>
+
+                    <line x1="0" y1="40" x2="0" y2="165" class="link" style="stroke:rgba(155,89,182,0.3);"></line>
+
+                    <line x1="-20" y1="0" x2="-170" y2="120" class="link" style="stroke:rgba(26,188,156,0.3);"></line>
+
+                    <line x1="-20" y1="0" x2="-170" y2="-120" class="link" style="stroke:rgba(230,126,34,0.3);"></line>
+
+                </g>
+
+            </svg>
+
+            <p style="text-align: center; margin-top: 1rem; color: #a0aec0">Click on subject nodes to access study materials</p>
+
+            
+
+            <!-- Tooltip for graph nodes -->
+
+            <div class="node-tooltip" id="nodeTooltip"></div>
+
+            
+
+            <!-- Graph Legend -->
+
+            <div class="graph-legend">
+
+                <div class="legend-item"><div class="legend-color" style="background: #c8c8c8;box-shadow:0 2px 8px rgba(200,200,200,0.4);"></div> MMPC-01: Management</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #50c878;box-shadow:0 2px 8px rgba(80,200,120,0.4);"></div> MMPC-02: HR</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #ffd700;box-shadow:0 2px 8px rgba(255,215,0,0.4);"></div> MMPC-03: Business</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #ff6b6b;box-shadow:0 2px 8px rgba(255,107,107,0.4);"></div> MMPC-04: Accounting</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #9b59b6;box-shadow:0 2px 8px rgba(155,89,182,0.4);"></div> MMPC-05: Quantitative</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #1abc9c;box-shadow:0 2px 8px rgba(26,188,156,0.4);"></div> MMPC-06: Marketing</div>
+
+                <div class="legend-item"><div class="legend-color" style="background: #e67e22;box-shadow:0 2px 8px rgba(230,126,34,0.4);"></div> MMPC-07: Communication</div>
+
+            </div>
+
+        </div>
 
         
 
         <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
             <div style="width:4px;height:24px;border-radius:2px;background:linear-gradient(180deg,#d0d0d0,#fbbf24);"></div>
-            <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#d0d0d0;">🔍 Explore</span>
+            <span style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#d0d0d0;">­ƒöì Explore</span>
         </div>
         <h2 style="font-size:1.8rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;background:linear-gradient(135deg,#d0d0d0,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Explore by Topic</h2>
         <p style="color:rgba(255,255,255,0.45);font-size:0.92rem;margin-bottom:1.5rem;">Jump to key management topics across all courses</p>
@@ -1240,7 +1729,7 @@
         <div class="subjects-grid">
 
             <div class="subject-card" style="border-left:3px solid #c8c8c8;cursor:default;" aria-label="Planning and Strategy topics">
-                <div style="font-size:1.8rem;margin-bottom:0.75rem;">📋</div>
+                <div style="font-size:1.8rem;margin-bottom:0.75rem;">­ƒôï</div>
                 <h4 style="color:#c8c8c8;">Planning & Strategy</h4>
                 <p>Management by Objectives, Strategic Planning, Tactical Planning</p>
                 <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem;">
@@ -1251,18 +1740,18 @@
             </div>
 
             <div class="subject-card" style="border-left:3px solid #b0b0b0;cursor:default;" aria-label="Leadership and Motivation topics">
-                <div style="font-size:1.8rem;margin-bottom:0.75rem;">👑</div>
+                <div style="font-size:1.8rem;margin-bottom:0.75rem;">­ƒææ</div>
                 <h4 style="color:#b0b0b0;">Leadership & Motivation</h4>
                 <p>Leadership Styles, Motivational Theories, Team Management</p>
                 <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem;">
-                    <span style="background:rgba(180,180,180,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Styles</span>
-                    <span style="background:rgba(180,180,180,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Theories</span>
-                    <span style="background:rgba(180,180,180,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Teams</span>
+                    <span style="background:rgba(176,176,176,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Styles</span>
+                    <span style="background:rgba(176,176,176,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Theories</span>
+                    <span style="background:rgba(176,176,176,0.12);color:#b0b0b0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Teams</span>
                 </div>
             </div>
 
             <div class="subject-card" style="border-left:3px solid #50c878;cursor:default;" aria-label="HR Processes topics">
-                <div style="font-size:1.8rem;margin-bottom:0.75rem;">👥</div>
+                <div style="font-size:1.8rem;margin-bottom:0.75rem;">­ƒæÑ</div>
                 <h4 style="color:#50c878;">HR Processes</h4>
                 <p>Recruitment, Selection, Training, Performance Appraisal</p>
                 <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem;">
@@ -1273,13 +1762,13 @@
             </div>
 
             <div class="subject-card" style="border-left:3px solid #d0d0d0;cursor:default;" aria-label="Organization Behavior topics">
-                <div style="font-size:1.8rem;margin-bottom:0.75rem;">🏢</div>
+                <div style="font-size:1.8rem;margin-bottom:0.75rem;">­ƒÅó</div>
                 <h4 style="color:#d0d0d0;">Organization Behavior</h4>
                 <p>Culture, Communication, Change Management</p>
                 <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.75rem;">
-                    <span style="background:rgba(160,160,160,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Culture</span>
-                    <span style="background:rgba(160,160,160,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Comms</span>
-                    <span style="background:rgba(160,160,160,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Change</span>
+                    <span style="background:rgba(244,114,182,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Culture</span>
+                    <span style="background:rgba(244,114,182,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Comms</span>
+                    <span style="background:rgba(244,114,182,0.12);color:#d0d0d0;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.72rem;font-weight:600;">Change</span>
                 </div>
             </div>
 
@@ -1290,26 +1779,26 @@
     
 
     <footer style="background:linear-gradient(180deg,transparent,rgba(200,200,200,0.03));">
-        <p style="font-size:1.2rem;font-weight:800;margin-bottom:0.5rem;background:linear-gradient(135deg,#c8c8c8,#b0b0b0,#d0d0d0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">📚 StudyHub <span style="opacity:0.5;font-weight:400;-webkit-text-fill-color:rgba(255,255,255,0.35);">v3.0</span></p>
+        <p style="font-size:1.2rem;font-weight:800;margin-bottom:0.5rem;background:linear-gradient(135deg,#c8c8c8,#b0b0b0,#d0d0d0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">­ƒôÜ StudyHub <span style="opacity:0.5;font-weight:400;-webkit-text-fill-color:rgba(255,255,255,0.35);">v3.0</span></p>
         <p style="font-weight:500;color:rgba(255,255,255,0.5);">MMPC Course Knowledge Graph &bull; Interactive Learning Platform</p>
         <p style="margin-top:1rem;font-size:.82rem;color:rgba(255,255,255,0.35);">
             <kbd style="background:rgba(200,200,200,0.1);padding:0.2rem 0.55rem;border-radius:6px;font-size:0.72rem;border:1px solid rgba(200,200,200,0.2);font-weight:600;color:#c8c8c8;">T</kbd> Theme
             &nbsp;&bull;&nbsp;
-            <kbd style="background:rgba(180,180,180,0.1);padding:0.2rem 0.55rem;border-radius:6px;font-size:0.72rem;border:1px solid rgba(180,180,180,0.2);font-weight:600;color:#b0b0b0;">?</kbd> Shortcuts
+            <kbd style="background:rgba(176,176,176,0.1);padding:0.2rem 0.55rem;border-radius:6px;font-size:0.72rem;border:1px solid rgba(176,176,176,0.2);font-weight:600;color:#b0b0b0;">?</kbd> Shortcuts
             &nbsp;&bull;&nbsp;
-            <kbd style="background:rgba(160,160,160,0.1);padding:0.2rem 0.55rem;border-radius:6px;font-size:0.72rem;border:1px solid rgba(160,160,160,0.2);font-weight:600;color:#d0d0d0;">Ctrl+K</kbd> Search
+            <kbd style="background:rgba(244,114,182,0.1);padding:0.2rem 0.55rem;border-radius:6px;font-size:0.72rem;border:1px solid rgba(244,114,182,0.2);font-weight:600;color:#d0d0d0;">Ctrl+K</kbd> Search
         </p>
     </footer>
     <script src="api-utils.js"></script>
     <script>
 var courses=[
-{id:'mmpc01',name:'Management Functions',desc:'Planning, Organizing, Staffing, Directing & Controlling — the core POSDC framework',icon:'📋',units:14,href:'study-mmpc01.html',quizHref:'quiz-mmpc01.html',color:'#c8c8c8',glow:'rgba(200,200,200,0.3)'},
-{id:'mmpc02',name:'Human Resource Mgmt',desc:'Recruitment, Training, Performance Appraisal & Employee Relations',icon:'👥',units:14,href:'study-mmpc02.html',quizHref:'quiz-mmpc02.html',color:'#50c878',glow:'rgba(80,200,120,0.3)'},
-{id:'mmpc03',name:'Business Environment',desc:'PESTEL Analysis, Economic Reforms, Globalization & CSR',icon:'🌍',units:14,href:'study-mmpc03.html',quizHref:'quiz-mmpc03.html',color:'#ffd700',glow:'rgba(255,215,0,0.3)'},
-{id:'mmpc04',name:'Accounting & Finance',desc:'Financial Statements, Ratios, Cost Accounting & Capital Budgeting',icon:'💰',units:16,href:'study-mmpc04.html',quizHref:'quiz-mmpc04.html',color:'#ff6b6b',glow:'rgba(255,107,107,0.3)'},
-{id:'mmpc05',name:'Quantitative Analysis',desc:'LPP, Probability, Hypothesis Testing, PERT/CPM & Decision Theory',icon:'📊',units:16,href:'study-mmpc05.html',quizHref:'quiz-mmpc05.html',color:'#9b59b6',glow:'rgba(155,89,182,0.3)'},
-{id:'mmpc06',name:'Marketing Management',desc:'4Ps, Consumer Behavior, Segmentation, Branding & Digital Marketing',icon:'🎯',units:12,href:'study-mmpc06.html',quizHref:'quiz-mmpc06.html',color:'#1abc9c',glow:'rgba(26,188,156,0.3)'},
-{id:'mmpc07',name:'Business Communication',desc:'Written & Oral Communication, Reports, Presentations & Cross-cultural',icon:'💬',units:15,href:'study-mmpc07.html',quizHref:'quiz-mmpc07.html',color:'#e67e22',glow:'rgba(230,126,34,0.3)'}
+{id:'mmpc01',name:'Management Functions',desc:'Planning, Organizing, Staffing, Directing & Controlling ÔÇö the core POSDC framework',icon:'­ƒôï',units:14,href:'study-mmpc01.html',quizHref:'quiz-mmpc01.html',color:'#c8c8c8',glow:'rgba(200,200,200,0.3)'},
+{id:'mmpc02',name:'Human Resource Mgmt',desc:'Recruitment, Training, Performance Appraisal & Employee Relations',icon:'­ƒæÑ',units:14,href:'study-mmpc02.html',quizHref:'quiz-mmpc02.html',color:'#50c878',glow:'rgba(80,200,120,0.3)'},
+{id:'mmpc03',name:'Business Environment',desc:'PESTEL Analysis, Economic Reforms, Globalization & CSR',icon:'­ƒîì',units:14,href:'study-mmpc03.html',quizHref:'quiz-mmpc03.html',color:'#ffd700',glow:'rgba(255,215,0,0.3)'},
+{id:'mmpc04',name:'Accounting & Finance',desc:'Financial Statements, Ratios, Cost Accounting & Capital Budgeting',icon:'­ƒÆ░',units:16,href:'study-mmpc04.html',quizHref:'quiz-mmpc04.html',color:'#ff6b6b',glow:'rgba(255,107,107,0.3)'},
+{id:'mmpc05',name:'Quantitative Analysis',desc:'LPP, Probability, Hypothesis Testing, PERT/CPM & Decision Theory',icon:'­ƒôè',units:16,href:'study-mmpc05.html',quizHref:'quiz-mmpc05.html',color:'#9b59b6',glow:'rgba(155,89,182,0.3)'},
+{id:'mmpc06',name:'Marketing Management',desc:'4Ps, Consumer Behavior, Segmentation, Branding & Digital Marketing',icon:'­ƒÄ»',units:12,href:'study-mmpc06.html',quizHref:'quiz-mmpc06.html',color:'#1abc9c',glow:'rgba(26,188,156,0.3)'},
+{id:'mmpc07',name:'Business Communication',desc:'Written & Oral Communication, Reports, Presentations & Cross-cultural',icon:'­ƒÆ¼',units:15,href:'study-mmpc07.html',quizHref:'quiz-mmpc07.html',color:'#e67e22',glow:'rgba(230,126,34,0.3)'}
 ];
 function getProgress(id){try{var v=localStorage.getItem('studyhub-progress-'+id);return v!==null?parseFloat(v):0;}catch(e){return 0}}
 function setProgress(id,p){try{localStorage.setItem('studyhub-progress-'+id,String(p));}catch(e){}}
@@ -1327,7 +1816,7 @@ function startQuiz(){var o=document.getElementById('fabOptions');var b=document.
 function toggleTheme(){document.body.classList.toggle('light-theme');var isLight=document.body.classList.contains('light-theme');try{localStorage.setItem('studyhub-theme',isLight?'light':'dark');}catch(e){}var btn=document.querySelector('.theme-toggle');if(btn)btn.innerHTML=isLight?'&#9728; Light Mode':'&#9729; Dark Mode';if(typeof announce==='function')announce(isLight?'Light mode on':'Dark mode on');showToast(isLight?'Light theme enabled':'Dark theme enabled')}
 if(localStorage.getItem('studyhub-theme')==='light'){document.body.classList.add('light-theme');var b=document.querySelector('.theme-toggle');if(b)b.innerHTML='&#9728; Light Mode'}
 function handleSearch(q){q=q.toLowerCase().trim();var cards=document.querySelectorAll('.subject-card,.topic-card');var cnt=0;for(var i=0;i<cards.length;i++){var t=cards[i].textContent.toLowerCase();if(!q||t.indexOf(q)>=0){cards[i].style.display='';cnt++}else{cards[i].style.display='none'}}var el=document.getElementById('searchCount');if(el)el.textContent=cnt}
-var graphNodes=[{id:'mmpc01',label:'MMPC-01',full:'Management Functions',icon:'📋',units:14,x:-300,y:-50,color:'#c8c8c8',glow:'rgba(200,200,200,0.4)'},{id:'mmpc02',label:'MMPC-02',full:'Human Resource Mgmt',icon:'👥',units:14,x:0,y:0,color:'#50c878',glow:'rgba(80,200,120,0.4)'},{id:'mmpc03',label:'MMPC-03',full:'Business Environment',icon:'🌍',units:14,x:300,y:-80,color:'#ffd700',glow:'rgba(255,215,0,0.4)'},{id:'mmpc04',label:'MMPC-04',full:'Accounting & Finance',icon:'💰',units:16,x:300,y:80,color:'#ff6b6b',glow:'rgba(255,107,107,0.4)'},{id:'mmpc05',label:'MMPC-05',full:'Quantitative Analysis',icon:'📊',units:16,x:0,y:200,color:'#9b59b6',glow:'rgba(155,89,182,0.4)'},{id:'mmpc06',label:'MMPC-06',full:'Marketing Management',icon:'🎯',units:12,x:-200,y:120,color:'#1abc9c',glow:'rgba(26,188,156,0.4)'},{id:'mmpc07',label:'MMPC-07',full:'Business Communication',icon:'💬',units:15,x:-200,y:-120,color:'#e67e22',glow:'rgba(230,126,34,0.4)'}];
+var graphNodes=[{id:'mmpc01',label:'MMPC-01',full:'Management Functions',icon:'­ƒôï',units:14,x:-300,y:-50,color:'#c8c8c8',glow:'rgba(200,200,200,0.4)'},{id:'mmpc02',label:'MMPC-02',full:'Human Resource Mgmt',icon:'­ƒæÑ',units:14,x:0,y:0,color:'#50c878',glow:'rgba(80,200,120,0.4)'},{id:'mmpc03',label:'MMPC-03',full:'Business Environment',icon:'­ƒîì',units:14,x:300,y:-80,color:'#ffd700',glow:'rgba(255,215,0,0.4)'},{id:'mmpc04',label:'MMPC-04',full:'Accounting & Finance',icon:'­ƒÆ░',units:16,x:300,y:80,color:'#ff6b6b',glow:'rgba(255,107,107,0.4)'},{id:'mmpc05',label:'MMPC-05',full:'Quantitative Analysis',icon:'­ƒôè',units:16,x:0,y:200,color:'#9b59b6',glow:'rgba(155,89,182,0.4)'},{id:'mmpc06',label:'MMPC-06',full:'Marketing Management',icon:'­ƒÄ»',units:12,x:-200,y:120,color:'#1abc9c',glow:'rgba(26,188,156,0.4)'},{id:'mmpc07',label:'MMPC-07',full:'Business Communication',icon:'­ƒÆ¼',units:15,x:-200,y:-120,color:'#e67e22',glow:'rgba(230,126,34,0.4)'}];
 var graphEdges=[{from:'mmpc01',to:'mmpc02'},{from:'mmpc02',to:'mmpc03'},{from:'mmpc01',to:'mmpc04'},{from:'mmpc04',to:'mmpc05'},{from:'mmpc05',to:'mmpc03'},{from:'mmpc05',to:'mmpc06'},{from:'mmpc06',to:'mmpc07'},{from:'mmpc04',to:'mmpc07'},{from:'mmpc01',to:'mmpc07'},{from:'mmpc02',to:'mmpc05'},{from:'mmpc03',to:'mmpc06'},{from:'mmpc07',to:'mmpc03'}];
 function initProgress(){var grid=document.getElementById('dashboardStats');if(!grid)return;grid.innerHTML='';var total=0,started=0,done=0,totalQuiz=0,quizCount=0;for(var i=0;i<courses.length;i++){var c=courses[i],pct=getProgress(c.id),qs=getQuizScore(c.id);if(pct>0)started++;if(pct>=100)done++;total+=pct;if(qs>=0){totalQuiz+=qs;quizCount++}}var avg=courses.length>0?Math.round(total/courses.length):0;var quizAvg=quizCount>0?Math.round(totalQuiz/quizCount):0;var statsData=[{label:'Overall Progress',value:avg+'%',color:'#c8c8c8',sub:started+'/'+courses.length+' started'},{label:'Completed',value:done+'',color:'#50c878',sub:'of '+courses.length+' courses'},{label:'Quiz Average',value:quizAvg+'%',color:'#b0b0b0',sub:quizCount+' quizzes taken'},{label:'Study Streak',value:getStudyStreak?getStudyStreak()+'d':'0d',color:'#ffd700',sub:'consecutive days'}];for(var i=0;i<statsData.length;i++){var s=statsData[i];var rc=28,cc=2*Math.PI*rc,pctVal=parseInt(s.value)||0,off=cc-(pctVal/100)*cc;var card=document.createElement('div');card.className='stat-card';card.setAttribute('tabindex','0');card.innerHTML='<div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.75rem"><svg width="56" height="56" viewBox="0 0 80 80" style="transform:rotate(-90deg);flex-shrink:0"><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="5"/><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="'+s.color+'" stroke-width="5" stroke-dasharray="'+cc+'" stroke-dashoffset="'+off+'" stroke-linecap="round" style="filter:drop-shadow(0 0 6px '+s.color+'40)"/></svg><div><div class="stat-number" style="color:'+s.color+';font-size:1.8rem;line-height:1">'+s.value+'</div><div style="font-size:0.7rem;color:rgba(255,255,255,0.35);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.2rem">'+s.label+'</div></div></div><div style="font-size:0.78rem;color:rgba(255,255,255,0.35)">'+s.sub+'</div>';grid.appendChild(card)}}
 function loadGraph(){var svg=document.getElementById('knowledgeGraph');if(!svg)return;svg.innerHTML='';var defs=document.createElementNS('http://www.w3.org/2000/svg','defs');var mk=document.createElementNS('http://www.w3.org/2000/svg','marker');mk.setAttribute('id','arrowhead');mk.setAttribute('markerWidth','10');mk.setAttribute('markerHeight','7');mk.setAttribute('refX','10');mk.setAttribute('refY','3.5');mk.setAttribute('orient','auto');var p=document.createElementNS('http://www.w3.org/2000/svg','polygon');p.setAttribute('points','0 0, 10 3.5, 0 7');p.setAttribute('fill','rgba(200,200,200,0.5)');mk.appendChild(p);defs.appendChild(mk);var glowFilter=document.createElementNS('http://www.w3.org/2000/svg','filter');glowFilter.setAttribute('id','glow');glowFilter.setAttribute('x','-50%');glowFilter.setAttribute('y','-50%');glowFilter.setAttribute('width','200%');glowFilter.setAttribute('height','200%');var feGaussian=document.createElementNS('http://www.w3.org/2000/svg','feGaussianBlur');feGaussian.setAttribute('stdDeviation','4');feGaussian.setAttribute('result','coloredBlur');var feMerge=document.createElementNS('http://www.w3.org/2000/svg','feMerge');var feMergeNode1=document.createElementNS('http://www.w3.org/2000/svg','feMergeNode');feMergeNode1.setAttribute('in','coloredBlur');var feMergeNode2=document.createElementNS('http://www.w3.org/2000/svg','feMergeNode');feMergeNode2.setAttribute('in','SourceGraphic');feMerge.appendChild(feMergeNode1);feMerge.appendChild(feMergeNode2);glowFilter.appendChild(feGaussian);glowFilter.appendChild(feMerge);defs.appendChild(glowFilter);svg.appendChild(defs);for(var ei=0;ei<graphEdges.length;ei++){var e=graphEdges[ei];var fn=null,tn=null;for(var ni=0;ni<graphNodes.length;ni++){if(graphNodes[ni].id===e.from)fn=graphNodes[ni];if(graphNodes[ni].id===e.to)tn=graphNodes[ni]}if(!fn||!tn)continue;var l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',fn.x);l.setAttribute('y1',fn.y);l.setAttribute('x2',tn.x);l.setAttribute('y2',tn.y);l.setAttribute('stroke','rgba(200,200,200,0.15)');l.setAttribute('stroke-width','2');l.setAttribute('marker-end','url(#arrowhead)');l.style.transition='stroke 0.3s, stroke-width 0.3s';svg.appendChild(l)}for(var ni=0;ni<graphNodes.length;ni++){var node=graphNodes[ni];var g=document.createElementNS('http://www.w3.org/2000/svg','g');var pct=getProgress(node.id);var qs=getQuizScore(node.id);var r=22+(pct/100)*8;g.style.cursor='pointer';g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',node.full);g.setAttribute('data-id',node.id);g.onclick=function(){window.location.href='study-'+this.getAttribute('data-id')+'.html'};var circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('cx',node.x);circle.setAttribute('cy',node.y);circle.setAttribute('r',r);circle.setAttribute('fill',pct>=100?'rgba(80,200,120,0.12)':'rgba(255,255,255,0.03)');circle.setAttribute('stroke',node.color);circle.setAttribute('stroke-width',pct>=100?'3':'2');circle.setAttribute('filter','url(#glow)');circle.style.transition='r 0.3s, stroke-width 0.3s';var t1=document.createElementNS('http://www.w3.org/2000/svg','text');t1.setAttribute('x',node.x);t1.setAttribute('y',node.y-4);t1.setAttribute('text-anchor','middle');t1.setAttribute('fill','#e2e8f0');t1.setAttribute('font-size','11');t1.setAttribute('font-weight','bold');t1.textContent=node.label;var t2=document.createElementNS('http://www.w3.org/2000/svg','text');t2.setAttribute('x',node.x);t2.setAttribute('y',node.y+13);t2.setAttribute('text-anchor','middle');t2.setAttribute('fill','rgba(255,255,255,0.5)');t2.setAttribute('font-size','9');t2.textContent=Math.round(pct)+'%';g.appendChild(circle);g.appendChild(t1);g.appendChild(t2);(function(n,circle,r,pct,qs){n.addEventListener('mouseenter',function(ev){var tt=document.getElementById('nodeTooltip');if(!tt){tt=document.createElement('div');tt.id='nodeTooltip';tt.className='node-tooltip';document.body.appendChild(tt)}tt.innerHTML='<strong>'+n.full+'</strong><br><span style="opacity:0.7">'+n.units+' units</span><br><span style="color:'+n.color+'">Progress: '+Math.round(pct)+'%</span>'+(qs>=0?'<br><span style="color:#b0b0b0">Quiz: '+qs+'%</span>':'');tt.style.display='block';tt.style.left=(ev.clientX+15)+'px';tt.style.top=(ev.clientY-10)+'px';circle.setAttribute('r',r+5);circle.setAttribute('stroke-width','3')});n.addEventListener('mouseleave',function(){var tt=document.getElementById('nodeTooltip');if(tt)tt.style.display='none';circle.setAttribute('r',r);circle.setAttribute('stroke-width',pct>=100?'3':'2')})})(g,circle,r,pct,qs);svg.appendChild(g)}var allCircles=svg.querySelectorAll('circle[stroke]');for(var ai=0;ai<allCircles.length;ai++){(function(idx,circle){setTimeout(function(){circle.style.transition='stroke-opacity .6s ease';circle.style.strokeOpacity='1'},100+idx*80)})(ai,allCircles[ai])}}
@@ -1336,7 +1825,7 @@ function initTooltips(){}
 function trackStudyVisits(){try{var t=new Date().toISOString().split('T')[0],v=JSON.parse(localStorage.getItem('studyhub-visits')||'{}');v[t]=(v[t]||0)+1;localStorage.setItem('studyhub-visits',JSON.stringify(v))}catch(e){}}
 function updateDashboardStats(){var total=0;for(var i=0;i<courses.length;i++)total+=(getProgress(courses[i].id)>0?getProgress(courses[i].id):0);var avg=courses.length>0?Math.round(total/courses.length):0;var sc=document.querySelector('.summary-card');if(sc){var n=sc.querySelector('.stat-number');if(n)n.textContent=avg+'%'}
 function renderSubjectCards(){var grid=document.getElementById('subjects');if(!grid)return;grid.innerHTML='';for(var i=0;i<courses.length;i++){var c=courses[i];var pct=getProgress(c.id);var qs=getQuizScore(c.id);var card=document.createElement('div');card.className='subject-card';card.setAttribute('onclick','window.location.href=\''+c.href+'\';');card.setAttribute('aria-label',c.name);card.setAttribute('tabindex','0');card.setAttribute('role','link');card.onkeydown=function(e){if(e.key==='Enter'||e.key===' ')e.preventDefault(),this.click()};card.style.cssText='border-left:3px solid '+c.color+';position:relative;overflow:hidden;background:rgba(255,255,255,0.04);';var accentBar='<div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,'+c.color+','+c.color+'88,transparent);"></div>';var glowBg='<div style="position:absolute;top:0;left:0;width:120px;height:120px;background:radial-gradient(circle,'+c.glow+' 0%,transparent 70%);pointer-events:none;opacity:0.3;"></div>';var iconBlock='<div style="font-size:2.5rem;margin-bottom:0.85rem;filter:drop-shadow(0 6px 16px '+c.glow+')">'+c.icon+'</div>';var titleBlock='<h4 style="font-size:1.2rem;font-weight:800;color:'+c.color+';margin-bottom:0.3rem;letter-spacing:-0.01em">'+c.name+'</h4>';var descBlock='<p style="color:rgba(255,255,255,0.5);font-size:0.85rem;line-height:1.5;margin-bottom:1rem">'+c.desc+'</p>';var progBar='<div style="background:rgba(255,255,255,.06);border-radius:8px;height:5px;overflow:hidden;margin-bottom:0.75rem"><div style="background:linear-gradient(90deg,'+c.color+','+c.color+'aa);height:100%;border-radius:8px;width:'+Math.round(pct)+'%;transition:width .8s cubic-bezier(.34,1.56,.64,1);box-shadow:0 0 15px '+c.glow+'"></div></div>';var bottomRow='<div style="display:flex;justify-content:space-between;align-items:center"><span style="color:rgba(255,255,255,0.45);font-size:0.78rem;font-weight:600">'+Math.round(pct)+'% complete'+(qs>=0?' &bull; Quiz: '+qs+'%':'')+'</span><span style="color:'+c.color+';font-size:0.82rem;font-weight:800;display:flex;align-items:center;gap:0.3rem;letter-spacing:0.02em;">Study &rarr;</span></div>';var unitsBadge='<div style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:0.3rem 0.7rem;font-size:0.7rem;color:rgba(255,255,255,0.45);font-weight:700;letter-spacing:0.03em;backdrop-filter:blur(8px)">'+c.units+' units</div>';card.innerHTML=accentBar+glowBg+iconBlock+titleBlock+descBlock+progBar+bottomRow+unitsBadge;grid.appendChild(card)}}
-function renderQuickLinks(){var el=document.getElementById('quickLinks');if(!el)return;var colors=['#c8c8c8','#b0b0b0','#50c878','#ffd700','#ff6b6b','#1abc9c','#e67e22'];var glows=['rgba(200,200,200,0.2)','rgba(180,180,180,0.2)','rgba(80,200,120,0.2)','rgba(255,215,0,0.2)','rgba(255,107,107,0.2)','rgba(26,188,156,0.2)','rgba(230,126,34,0.2)'];var t=[{t:'Planning & Strategy',u:'MBO, Strategic Planning, Tactical',i:'📋'},{t:'Leadership & Motivation',u:'Styles, Theories, Team Management',i:'👑'},{t:'HR Management',u:'Recruitment, Training, Appraisal',i:'👥'},{t:'Business Environment',u:'Macro, Micro, SWOT, PESTEL',i:'🌍'},{t:'Accounting & Finance',u:'Financial Statements, Budgeting',i:'💰'},{t:'Marketing Management',u:'4P, Branding, Digital Marketing',i:'🎯'},{t:'Business Communication',u:'Written, Verbal, Reports',i:'💬'}];var h='';for(var i=0;i<t.length;i++){h+='<a href="#" class="topic-card" onclick="announce(\'Topic: '+t[i].t+'\')" style="display:flex;align-items:center;gap:0.85rem;padding:1rem 1.25rem;border-radius:14px;border-left:3px solid '+colors[i]+';background:rgba(255,255,255,0.03);"><span style="font-size:1.6rem;filter:drop-shadow(0 4px 8px '+glows[i]+')">'+t[i].i+'</span><div><strong style="font-size:0.92rem;font-weight:700;letter-spacing:-0.01em;color:'+colors[i]+'">'+t[i].t+'</strong><br><span style="color:rgba(255,255,255,0.45);font-size:0.78rem;line-height:1.4">'+t[i].u+'</span></div></a>'}el.innerHTML=h}
+function renderQuickLinks(){var el=document.getElementById('quickLinks');if(!el)return;var colors=['#c8c8c8','#b0b0b0','#50c878','#ffd700','#ff6b6b','#1abc9c','#e67e22'];var glows=['rgba(200,200,200,0.2)','rgba(176,176,176,0.2)','rgba(80,200,120,0.2)','rgba(255,215,0,0.2)','rgba(255,107,107,0.2)','rgba(26,188,156,0.2)','rgba(230,126,34,0.2)'];var t=[{t:'Planning & Strategy',u:'MBO, Strategic Planning, Tactical',i:'­ƒôï'},{t:'Leadership & Motivation',u:'Styles, Theories, Team Management',i:'­ƒææ'},{t:'HR Management',u:'Recruitment, Training, Appraisal',i:'­ƒæÑ'},{t:'Business Environment',u:'Macro, Micro, SWOT, PESTEL',i:'­ƒîì'},{t:'Accounting & Finance',u:'Financial Statements, Budgeting',i:'­ƒÆ░'},{t:'Marketing Management',u:'4P, Branding, Digital Marketing',i:'­ƒÄ»'},{t:'Business Communication',u:'Written, Verbal, Reports',i:'­ƒÆ¼'}];var h='';for(var i=0;i<t.length;i++){h+='<a href="#" class="topic-card" onclick="announce(\'Topic: '+t[i].t+'\')" style="display:flex;align-items:center;gap:0.85rem;padding:1rem 1.25rem;border-radius:14px;border-left:3px solid '+colors[i]+';background:rgba(255,255,255,0.03);"><span style="font-size:1.6rem;filter:drop-shadow(0 4px 8px '+glows[i]+')">'+t[i].i+'</span><div><strong style="font-size:0.92rem;font-weight:700;letter-spacing:-0.01em;color:'+colors[i]+'">'+t[i].t+'</strong><br><span style="color:rgba(255,255,255,0.45);font-size:0.78rem;line-height:1.4">'+t[i].u+'</span></div></a>'}el.innerHTML=h}
 function initDashboard(){initProgress();renderSubjectCards();renderQuickLinks();loadGraph();initInteractiveGraph();initTooltips();trackStudyVisits();updateDashboardStats();var n=document.querySelectorAll('#knowledgeGraph .node-group');for(var i=0;i<n.length;i++){n[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click()}})}if(typeof initSummarizeButtons==='function')initSummarizeButtons()}
     </script>
     <script src="search.js"></script>
@@ -1345,3 +1834,4 @@ function initDashboard(){initProgress();renderSubjectCards();renderQuickLinks();
 </body>
 
 </html>
+
