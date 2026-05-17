@@ -184,3 +184,147 @@ body.light-theme, body.light-theme * {
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
+
+/* ═══════════ INLINE STYLE OVERRIDES (beat white text) ═══════════ */
+
+/* Override ALL inline white text colors in light mode */
+body.light-theme [style*="color:rgba(255,255,255"],
+body.light-theme [style*="color: rgba(255,255,255"],
+body.light-theme [style*="color:#fff"],
+body.light-theme [style*="color: #fff"],
+body.light-theme [style*="color:#FFF"],
+body.light-theme [style*="color: #FFF"],
+body.light-theme [style*="color:white"],
+body.light-theme [style*="color: white"] {
+  color: #3a3a3c !important;
+}
+
+/* Override inline white backgrounds */
+body.light-theme [style*="background:rgba(255,255,255,0.04)"],
+body.light-theme [style*="background: rgba(255,255,255,0.04)"],
+body.light-theme [style*="background:rgba(255,255,255,0.03)"],
+body.light-theme [style*="background: rgba(255,255,255,0.03)"],
+body.light-theme [style*="background:rgba(255,255,255,0.06)"],
+body.light-theme [style*="background: rgba(255,255,255,0.06)"],
+body.light-theme [style*="background:rgba(255,255,255,0.08)"],
+body.light-theme [style*="background: rgba(255,255,255,0.08)"] {
+  background: rgba(0,0,0,0.03) !important;
+}
+
+/* Override inline white borders */
+body.light-theme [style*="border-color:rgba(255,255,255"],
+body.light-theme [style*="border-color: rgba(255,255,255"],
+body.light-theme [style*="border:1px solid rgba(255,255,255"] {
+  border-color: rgba(0,0,0,0.06) !important;
+}
+
+/* Override inline white box-shadows */
+body.light-theme [style*="box-shadow:0 0 0 1px rgba(255,255,255"],
+body.light-theme [style*="box-shadow: 0 0 0 1px rgba(255,255,255"] {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04) !important;
+}
+
+/* Specific elements that commonly have white text */
+body.light-theme .study-content [style*="color"] {
+  color: #3a3a3c !important;
+}
+
+/* Quick access cards text */
+body.light-theme a[style*="border-radius:16px"] span[style*="color:rgba(255,255,255"] {
+  color: #636366 !important;
+}
+body.light-theme a[style*="border-radius:16px"] span[style*="color:#"] {
+  color: #1c1c1e !important;
+}
+
+/* Section headings and labels */
+body.light-theme span[style*="color:#c8c8c8"],
+body.light-theme span[style*="color: #c8c8c8"],
+body.light-theme span[style*="color:#b0b0b0"],
+body.light-theme span[style*="color: #b0b0b0"],
+body.light-theme span[style*="color:#d0d0d0"],
+body.light-theme span[style*="color: #d0d0d0"] {
+  color: #1c1c1e !important;
+}
+
+/* Gradient text in light mode */
+body.light-theme [style*="background-clip:text"],
+body.light-theme [style*="-webkit-background-clip:text"] {
+  -webkit-text-fill-color: #1c1c1e !important;
+  background: none !important;
+}
+
+/* Button text on gradient backgrounds */
+body.light-theme a[style*="linear-gradient"][style*="color:#fff"],
+body.light-theme a[style*="linear-gradient"][style*="color: #fff"],
+body.light-theme button[style*="linear-gradient"][style*="color:#fff"] {
+  color: #1c1c1e !important;
+}
+
+/* Progress bar text */
+body.light-theme [style*="border-radius:60px"][style*="color:#fff"],
+body.light-theme [style*="border-radius: 60px"][style*="color:#fff"] {
+  color: #1c1c1e !important;
+}
+
+/* Override dark background buttons text to stay readable */
+body.light-theme .btn[style*="background"] {
+  color: #1c1c1e !important;
+}
+
+/* Ensure all h2-h5 in study content are dark */
+body.light-theme .study-content h2,
+body.light-theme .study-content h3,
+body.light-theme .study-content h4,
+body.light-theme .study-content h5,
+body.light-theme .study-content h6 {
+  color: #1c1c1e !important;
+}
+
+/* Ensure all paragraphs and list items are readable */
+body.light-theme .study-content p,
+body.light-theme .study-content li,
+body.light-theme .study-content td,
+body.light-theme .study-content th,
+body.light-theme .study-content span,
+body.light-theme .study-content strong,
+body.light-theme .study-content em {
+  color: #3a3a3c !important;
+}
+
+/* Links */
+body.light-theme .study-content a {
+  color: #007aff !important;
+}
+
+/* Quiz specific */
+body.light-theme .quiz-option[style*="color"] {
+  color: #1c1c1e !important;
+}
+body.light-theme .question-card [style*="color"] {
+  color: #1c1c1e !important;
+}
+
+/* Footer text */
+body.light-theme footer [style*="color"] {
+  color: #8e8e93 !important;
+}
+
+/* Study hub specific - section labels */
+body.light-theme div[style*="text-transform:uppercase"][style*="color"] {
+  color: #636366 !important;
+}
+
+/* Knowledge graph text */
+body.light-theme #knowledgeGraph text {
+  fill: #1c1c1e !important;
+}
+
+/* Hero button on gradient background */
+body.light-theme .hero a[style*="linear-gradient"] {
+  color: #1c1c1e !important;
+}
+body.light-theme .hero a[style*="rgba(255,255,255"] {
+  color: #1c1c1e !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
