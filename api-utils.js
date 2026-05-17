@@ -234,6 +234,12 @@ function renderToolbar(subjectCode) {
 
 // ==================== INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
+    // Inject API settings modal into page
+    if (!document.getElementById('apiSettingsModal')) {
+        const modalContainer = document.createElement('div');
+        modalContainer.innerHTML = renderApiSettingsModal();
+        document.body.appendChild(modalContainer.firstElementChild);
+    }
     loadTheme();
     initSummarizeButtons();
     initAskButtons();
