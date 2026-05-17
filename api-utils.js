@@ -4,22 +4,17 @@
 const DEFAULT_API_KEY_PART1 = 'sk-or-v1-548d5250b839b8cb8abe12';
 const DEFAULT_API_KEY_PART2 = 'cedc387c456b8b3244b72fbccca390d7e0b6170059';
 const DEFAULT_API_KEY = DEFAULT_API_KEY_PART1 + DEFAULT_API_KEY_PART2;
-const DEFAULT_MODEL = 'deepseek/deepseek-v4-flash:free';
+const DEFAULT_MODEL = 'nvidia/nemotron-3-nano-30b-a3b:free';
 
 const FREE_MODELS = [
-    { id: 'deepseek/deepseek-v4-flash:free', name: 'DeepSeek V4 Flash (Default)' },
-    { id: 'google/gemini-2.0-flash-001', name: 'Gemini 2.0 Flash' },
-    { id: 'google/gemini-2.5-flash-preview', name: 'Gemini 2.5 Flash Preview' },
-    { id: 'meta-llama/llama-4-maverick:free', name: 'Llama 4 Maverick' },
-    { id: 'meta-llama/llama-4-scout:free', name: 'Llama 4 Scout' },
-    { id: 'deepseek/deepseek-chat-v3-0324:free', name: 'DeepSeek V3' },
-    { id: 'deepseek/deepseek-r1-0528:free', name: 'DeepSeek R1' },
-    { id: 'qwen/qwen3-235b-a22b:free', name: 'Qwen3 235B' },
-    { id: 'qwen/qwen3-30b-a3b:free', name: 'Qwen3 30B' },
-    { id: 'microsoft/mai-ds-r1:free', name: 'Microsoft MAI DS R1' },
-    { id: 'nvidia/llama-3.1-nemotron-ultra-253b-v1:free', name: 'Nemotron Ultra 253B' },
-    { id: 'moonshotai/kimi-k2:free', name: 'Kimi K2' },
-    { id: 'mistralai/mistral-small-3.2-24b-instruct:free', name: 'Mistral Small 3.2' },
+    { id: 'nvidia/nemotron-3-nano-30b-a3b:free', name: 'Nemotron 3 Nano 30B (Default)' },
+    { id: 'minimax/minimax-m2.5:free', name: 'MiniMax M2.5' },
+    { id: 'deepseek/deepseek-v4-flash:free', name: 'DeepSeek V4 Flash' },
+    { id: 'google/gemma-4-26b-a4b-it:free', name: 'Gemma 4 26B' },
+    { id: 'google/gemma-4-31b-it:free', name: 'Gemma 4 31B' },
+    { id: 'qwen/qwen3-next-80b-a3b-instruct:free', name: 'Qwen3 Next 80B' },
+    { id: 'nvidia/nemotron-3-super-120b-a12b:free', name: 'Nemotron 3 Super 120B' },
+    { id: 'poolside/laguna-m.1:free', name: 'Poolside Laguna M.1' },
 ];
 
 function getApiKey() { return localStorage.getItem('openrouter-api-key') || DEFAULT_API_KEY; }
