@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-01: Management Functions | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+/* ═══════════ MMPC-01 ENHANCED STYLES ═══════════ */
+
+/* --- Background Particles --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(108,99,255,0.2), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+/* --- Richer Background --- */
+body {
+  background: linear-gradient(135deg, #0a0a1a 0%, #0d1117 50%, #0a0f1a 100%) !important;
+  font-weight: 300 !important;
+}
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Section Heading Gradient Underline --- */
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #00D2FF, #FFD700, #6C63FF);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #00D2FF);
+  border-radius: 2px;
+}
+
+/* --- Card Hover Effects --- */
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(108,99,255,0.2) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #6C63FF !important;
+  background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #00D2FF !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+.study-content p, .study-content li {
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+/* --- Study Header Enhancement --- */
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(108,99,255,0.2) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+/* --- Badge/Tag Styling --- */
+.subject-tag {
+  background: linear-gradient(135deg, #6C63FF, #00D2FF) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Visual Diagram Boxes --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(108,99,255,0.08), rgba(0,210,255,0.06));
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6C63FF, #00D2FF, #FFD700);
+}
+.visual-diagram h5 {
+  color: #6C63FF;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.vd-arrow {
+  display: inline-block;
+  color: #6C63FF;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(108,99,255,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Expand/Collapse Toggle --- */
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.expandable-content.expanded {
+  max-height: 5000px;
+}
+.expand-toggle {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 6px;
+  color: #6C63FF;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.expand-toggle:hover {
+  background: linear-gradient(135deg, rgba(108,99,255,0.25), rgba(0,210,255,0.15));
+  box-shadow: 0 2px 10px rgba(108,99,255,0.2);
+}
+
+/* --- Hierarchy Tree Visual --- */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.org-tree .level {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.org-tree .node {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease;
+}
+.org-tree .node:hover { transform: scale(1.05); }
+.org-tree .connector {
+  width: 2px; height: 20px;
+  background: linear-gradient(to bottom, #6C63FF, #00D2FF);
+  margin: 0 auto;
+}
+
+/* --- Flowchart Visual --- */
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.flow-visual .arrow {
+  color: #6C63FF;
+  font-size: 1.4rem;
+}
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(108,99,255,0.08); border: 1px solid rgba(108,99,255,0.2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(108,99,255,0.2); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #6C63FF, #00D2FF); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+</style>
+</head>
+<body class="subject-mmpc01">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-01'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-01</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Management Fundamentals</a>
+<a href="#u1">Unit 1: Management Overview</a>
+<a href="#u2">Unit 2: Evolution of Management</a>
+<a href="#u3">Unit 3: Roles of Managers</a>
+<a href="#u4">Unit 4: Planning</a>
+<a href="#block2">Block-02 Managerial Processes-I</a>
+<a href="#u5">Unit 5: Organizing</a>
+<a href="#u6">Unit 6: Staffing &amp; Directing</a>
+<a href="#block3">Block-03 Managerial Processes-II</a>
+<a href="#u7">Unit 7: Controlling</a>
+<a href="#u8">Unit 8: Leading &amp; Motivating</a>
+<a href="#block4">Block-04 Organizational Processes</a>
+<a href="#u9">Unit 9: Decision Making</a>
+<a href="#u10">Unit 10: Organization Structure</a>
+<a href="#u11">Unit 11: Communication</a>
+<a href="#u12">Unit 12: Org Culture</a>
+<a href="#u13">Unit 13: Managing Change</a>
+<a href="#u14">Unit 14: Ethics &amp; CSR</a>
+<a href="quiz-mmpc01.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-01</span><h1>Management Functions &amp; Organizational Processes</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Management Fundamentals</h2>
+
+<!-- UNIT 1 -->
+<h3 id="u1">Unit 1: Management &#x2014; An Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Management &#x2014; An Overview</div><p>A foundational unit covering what management is, why it matters, and how it functions across every organization.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Management Definition &amp; Concepts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Management Definition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Management Functions &amp; POSDCORB</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Management Functions POSDCORB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Efficiency vs Effectiveness</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Efficiency vs Effectiveness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition of Management</h4>
+<ul>
+<li><strong>Mary Parker Follett:</strong> "The art of getting things done through the efforts of others"</li>
+<li><strong>Harold Koontz:</strong> "Management is the art of getting things done through and with people in formally organized groups"</li>
+<li><strong>Peter Drucker:</strong> "Management is a multi-purpose organ that manages a business, manages managers, and manages workers and work"</li>
+<li>Organized group efforts to achieve organizational objectives efficiently and effectively</li>
+<li>Focuses on managing people, resources, and processes to create value</li>
+</ul>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Always distinguish between <strong>efficiency</strong> (doing things right &#x2014; minimizing resources) and <strong>effectiveness</strong> (doing the right things &#x2014; achieving goals). Management needs BOTH.</p></div>
+
+<h4>Point 2: Nature of Management</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F52C; Management as Science</h5><ul><li>Systematic body of knowledge with principles</li><li>Testable and verifiable in practice</li><li>Cause-and-effect relationships (e.g., motivation &#x2192; productivity)</li><li>Universal principles apply across organizations</li></ul></div>
+<div class="cc"><h5>&#x1F3A8; Management as Art</h5><ul><li>Personal application of skills and intuition</li><li>Creative problem-solving in real situations</li><li>Practice makes perfect &#x2014; experience matters</li><li>Each manager has a unique style</li></ul></div>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys:</strong> Narayana Murthy applied scientific management principles (process metrics, CMM Level 5 certification) while also using artistic leadership (building a culture of integrity). This dual nature made Infosys a global IT giant.</p></div>
+<p><strong>Professional Perspective:</strong> Management is increasingly recognized as a profession with codified knowledge, formal education (MBA programs), ethical codes (like medical or legal professions), and professional associations (AIMA in India).</p>
+
+<h4>Point 3: Characteristics of Management</h4>
+<div class="br"><span class="sb s-b">Group Activity</span><span class="sb s-b">Universal</span><span class="sb s-b">Continuous</span><span class="sb s-p">Integrated</span><span class="sb s-p">Process-driven</span><span class="sb s-p">Objective-driven</span><span class="sb s-g">Skill-based</span><span class="sb s-g">Functional</span><span class="sb s-g">Discipline</span></div>
+<ol>
+<li><strong>Group Activity</strong>: Integrates efforts through organized groups; no management without a group</li>
+<li><strong>Universal</strong>: Applies to ALL organizations &#x2014; business, government, NGOs, hospitals, schools</li>
+<li><strong>Continuous</strong>: Dynamic, ever-changing process; never a one-time activity</li>
+<li><strong>Integrated Effort</strong>: Harmonizes human + material + financial + informational resources</li>
+<li><strong>Process</strong>: Involves planning, organizing, directing, and controlling (P-O-S-D-C)</li>
+<li><strong>Objective-driven</strong>: Every managerial action aims toward specific organizational goals</li>
+<li><strong>Roles &amp; Skills</strong>: Requires technical, human, and conceptual skills at different levels</li>
+<li><strong>Function</strong>: POSDCORB (Planning, Organizing, Staffing, Directing, Coordinating, Reporting, Budgeting)</li>
+<li><strong>Discipline</strong>: Recognized body of knowledge taught in universities worldwide</li>
+</ol>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>POSDCORB</strong> &#x2014; "Please Organize Staff Daily, Coordinate, Report Budgets"<br>Gulick &amp; Urwick (1937) coined this acronym for the 7 functions of management.</p></div>
+
+<h4>Point 4: Management vs Administration</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>British School View</th><th>American School View</th><th>Contemporary View</th></tr></thead>
+<tbody>
+<tr><td><strong>Scope</strong></td><td>Management is wider; includes administration</td><td>Administration is wider; management is subset</td><td>Both are same in practice</td></tr>
+<tr><td><strong>Level</strong></td><td>Administration = policy-making top level</td><td>Administration = top-level thinking</td><td>No real distinction today</td></tr>
+<tr><td><strong>Focus</strong></td><td>Management = operational implementation</td><td>Management = implementing decisions</td><td>Integrated approach</td></tr>
+<tr><td><strong>Application</strong></td><td>Govt, military, public sector</td><td>All organizations</td><td>Universal</td></tr>
+</tbody></table></div>
+<div class="kt"><p><strong>Contemporary View:</strong> In modern practice, there is NO meaningful distinction between management and administration. All managers perform both policy-making and implementation functions. This is the view accepted by most MBA programs in India.</p></div>
+
+<h4>Point 5: Functions of Management (POSDCORB)</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Planning<br><small>Future course of action</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Organizing<br><small>Structure &amp; resources</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Staffing<br><small>Right people, right roles</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Directing<br><small>Lead, motivate, communicate</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Controlling<br><small>Monitor &amp; correct</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>P-O-S-D-C</strong> &#x2014; "Please Organize Staff Daily Carefully"<br>These five functions form a continuous cycle &#x2014; controlling feeds back into planning.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; POSDCORB &#x2014; The 7 Functions of Management (Gulick &amp; Urwick)</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4)"><strong>P</strong>lanning</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>O</strong>rganizing</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>S</strong>taffing</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>D</strong>irecting</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>C</strong>oordinating</div>
+<div class="vd-node" style="background:rgba(167,139,250,0.2);border:1px solid rgba(167,139,250,0.4)"><strong>R</strong>eporting</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4)"><strong>B</strong>udgeting</div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">These 7 functions overlap with the P-O-S-D-C cycle. Budgeting integrates with Planning; Reporting feeds into Controlling.</p>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: How Tata Group Applies All 5 Functions</h5>
+<p><strong>Planning:</strong> Tata's Vision 2025 aimed to become a $150B group &#x2014; strategic planning across 100+ companies.<br>
+<strong>Organizing:</strong> Tata Sons as holding company with autonomous operating companies (TCS, Tata Steel, Tata Motors).<br>
+<strong>Staffing:</strong> Tata Leadership Development Pipeline &#x2014; grooming future CEOs through structured talent programs.<br>
+<strong>Directing:</strong> Ratan Tata's transformational leadership drove global acquisitions (Jaguar Land Rover, Corus Steel).<br>
+<strong>Controlling:</strong> Tata Business Excellence Model (TBEM) based on Baldrige framework ensures quality across all units.</p>
+</div>
+
+<h4>Point 6: Challenges of Modern Management</h4>
+<div class="igl"><div class="cg">
+<div class="cc"><ul><li>&#x1F30D; Globalization &amp; cross-cultural teams</li><li>&#x1F4BB; Technology disruption (AI, automation)</li><li>&#x1F465; Workforce diversity &amp; inclusion</li><li>&#x1F4A1; Innovation &amp; continuous learning</li></ul></div>
+<div class="cc"><ul><li>&#x2696; Ethics &amp; corporate governance</li><li>&#x1F3C6; Quality management (Six Sigma, TQM)</li><li>&#x1F4B0; Cost optimization in competitive markets</li><li>&#x1F504; Change management &amp; agility</li></ul></div>
+</div></div>
+
+<div class="db"><h4>PESTEL Analysis Framework</h4>
+<table class="comparison-table">
+<thead><tr><th>Factor</th><th>Impact on Management</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Political</strong></td><td>Government policy, regulations, stability</td><td>Make in India initiative boosting manufacturing sector</td></tr>
+<tr><td><strong>Economic</strong></td><td>Growth rate, inflation, exchange rates</td><td>GST implementation changing supply chain management</td></tr>
+<tr><td><strong>Social</strong></td><td>Demographics, culture, values, lifestyle</td><td>Gen Z workforce demanding flexible work &amp; purpose-driven orgs</td></tr>
+<tr><td><strong>Technological</strong></td><td>Automation, AI, digital transformation</td><td>UPI revolution changing payment management; Aadhaar enabling digital identity</td></tr>
+<tr><td><strong>Environmental</strong></td><td>Sustainability, climate change, ESG norms</td><td>Tata Steel reducing carbon footprint by 30%; Reliance green energy push</td></tr>
+<tr><td><strong>Legal</strong></td><td>Labor laws, compliance, data protection</td><td>Code on Wages 2019; Personal Data Protection Bill 2023</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples in Practice</div>
+<p><strong>Infosys:</strong> Narayana Murthy built a &#x20B9;10,000+ crore company managing cross-cultural teams across 50+ countries, pioneering the global delivery model with ethical leadership.</p>
+<p><strong>Reliance Industries:</strong> Mukesh Ambani's management of 300+ million Jio subscribers demonstrates large-scale organizational management with 50,000+ employees across telecom, retail, and energy sectors.</p>
+<p><strong>TCS:</strong> With 600,000+ employees globally, TCS uses matrix organizational structure to manage complex IT projects across 50+ countries, exemplifying modern management functions at scale.</p>
+</div>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Management = getting things done through others; needs both efficiency and effectiveness</li>
+<li>Science (systematic knowledge) + Art (practical application) + Profession (ethical codes)</li>
+<li>9 characteristics: universal, continuous, group activity, goal-oriented, integrated, process, skills, function, discipline</li>
+<li>No real distinction between management and administration in modern practice</li>
+<li>5 functions: Planning &#x2192; Organizing &#x2192; Staffing &#x2192; Directing &#x2192; Controlling</li>
+<li>PESTEL framework helps analyze external challenges</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<h3 id="u2">Unit 2: Management and its Evolution</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: Management Evolution</div><p>Traces management thought from classical theories (Taylor, Fayol, Weber) through behavioral and modern approaches.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Evolution of Management Thought</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Evolution of Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Scientific Management - Taylor &amp; Fayol</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Taylor and Fayol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Classical Perspective &#x2014; Three Branches</h4>
+<div class="br"><span class="sb s-b">Scientific Management (Taylor)</span><span class="sb s-p">Administrative Theory (Fayol)</span><span class="sb s-y">Bureaucratic Management (Weber)</span></div>
+
+<h4>Point 2: Taylor's Scientific Management (1911)</h4>
+<ul>
+<li><strong>Father of Scientific Management</strong> &#x2014; Frederick Winslow Taylor</li>
+<li>Focused on improving manufacturing efficiency through scientific methods</li>
+<li><strong>Soldiering Problem:</strong> Workers deliberately work below capacity due to peer pressure and fear of job cuts</li>
+<li><strong>Time &amp; Motion Studies:</strong> Eliminating wasteful movements to find "one best way"</li>
+</ul>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Develop Science<br><small>for each work element</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Select &amp; Train<br><small>workers scientifically</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Cooperate<br><small>with workers</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Divide Work<br><small>equally between mgmt &amp; workers</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>S-S-C-D</strong> &#x2014; "Some Smart Children Dance"<br>Taylor's 4 principles: Science, Selection, Cooperation, Division of work.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Maruti Suzuki:</strong> Uses scientific management on assembly lines &#x2014; time studies for each task, standardized tools, incentive-based pay. Result: One car rolls out every 45 seconds at the Manesar plant.</p></div>
+<p><strong>Criticism:</strong> Treats workers as "economic men" only; ignores social and psychological needs. Led to worker exploitation in some factories.</p>
+
+<h4>Point 3: Fayol's Administrative Theory (1916)</h4>
+<p>Henri Fayol &#x2014; French mining executive who defined management as a universal process applicable to all organizations.</p>
+<div class="igl"><div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Plan</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Organize</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Command</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Coordinate</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Control</div></div>
+</div></div>
+
+<h4>Fayol's 14 Principles of Management</h4>
+<div class="cg">
+<div class="cc"><ul>
+<li><strong>1. Division of Work</strong> &#x2014; Specialization increases efficiency</li>
+<li><strong>2. Authority &amp; Responsibility</strong> &#x2014; Right to give orders + accountability</li>
+<li><strong>3. Discipline</strong> &#x2014; Obedience and respect for agreements</li>
+<li><strong>4. Unity of Command</strong> &#x2014; One subordinate, one boss</li>
+<li><strong>5. Unity of Direction</strong> &#x2014; One plan per group of activities</li>
+<li><strong>6. Subordination of Individual Interest</strong> &#x2014; Group over self</li>
+<li><strong>7. Remuneration</strong> &#x2014; Fair pay for fair work</li>
+</ul></div>
+<div class="cc"><ul>
+<li><strong>8. Centralization</strong> &#x2014; Balance between central and distributed authority</li>
+<li><strong>9. Scalar Chain</strong> &#x2014; Clear line of authority from top to bottom</li>
+<li><strong>10. Order</strong> &#x2014; Right person in right place</li>
+<li><strong>11. Equity</strong> &#x2014; Fair treatment with kindness</li>
+<li><strong>12. Stability of Tenure</strong> &#x2014; Minimize turnover</li>
+<li><strong>13. Initiative</strong> &#x2014; Encourage new ideas</li>
+<li><strong>14. Esprit de Corps</strong> &#x2014; Team spirit and harmony</li>
+</ul></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>D-A-D-U-S-S-R-C-S-O-E-S-I-E</strong> &#x2014; "Dad Uses Smart Rules: Command, Subordinate, Remunerate, Centralize, Scalar, Order, Equity, Stability, Initiative, Esprit"</p></div>
+
+<h4>Point 4: Weber's Bureaucracy (1920s)</h4>
+<p>Max Weber &#x2014; German sociologist who proposed bureaucracy as the most rational form of organization.</p>
+<div class="br"><span class="sb s-b">Formal Rules</span><span class="sb s-p">Hierarchy</span><span class="sb s-y">Impersonal</span><span class="sb s-g">Division of Labor</span><span class="sb s-r">Merit-based</span></div>
+<ul>
+<li><strong>Authority Hierarchy:</strong> Traditional &#x2192; Charismatic &#x2192; Legal-Rational (most modern)</li>
+<li><strong>Formal Rules:</strong> Written procedures ensure consistency and predictability</li>
+<li><strong>Impersonal Relationships:</strong> Decisions based on rules, not personal favoritism</li>
+<li><strong>Career Orientation:</strong> Employment based on qualifications, not connections</li>
+</ul>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Weber's bureaucracy is criticized for <strong>red tape</strong>, <strong>inflexibility</strong>, and <strong>resistance to change</strong>, but it remains the foundation of government organizations (IAS, IPS, Indian Railways) and large corporations.</p></div>
+
+<h4>Point 5: Comparison of Classical Theorists</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Taylor</th><th>Fayol</th><th>Weber</th></tr></thead>
+<tbody>
+<tr><td><strong>Focus</strong></td><td>Shop floor efficiency</td><td>Overall management process</td><td>Organizational structure</td></tr>
+<tr><td><strong>Key Idea</strong></td><td>One best way</td><td>14 universal principles</td><td>Legal-rational authority</td></tr>
+<tr><td><strong>Approach</strong></td><td>Bottom-up</td><td>Top-down</td><td>Structural</td></tr>
+<tr><td><strong>Strength</strong></td><td>Productivity gains</td><td>Universal applicability</td><td>Predictability &amp; fairness</td></tr>
+<tr><td><strong>Weakness</strong></td><td>Ignores human factors</td><td>Rigid, ignores environment</td><td>Red tape, inflexibility</td></tr>
+<tr><td><strong>Indian Application</strong></td><td>Assembly lines (Maruti, Tata Motors)</td><td>Corporate hierarchy (L&amp;T, Infosys)</td><td>Govt bureaucracy (IAS, Railways)</td></tr>
+</tbody></table></div>
+
+<h4>Point 6: Hawthorne Studies (1924-1932)</h4>
+<div class="tl">
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">Phase 1</div><div class="tl-c"><h5>Illumination Experiments</h5><p>Productivity changed regardless of light levels &#x2014; workers responded to being observed (Hawthorne Effect)</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">Phase 2</div><div class="tl-c"><h5>Relay Assembly Test</h5><p>Small group with rest breaks and friendly supervision produced more output</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">Phase 3</div><div class="tl-c"><h5>Bank Wiring Room</h5><p>Informal group norms and social pressure affected output more than financial incentives</p></div></div>
+</div>
+<div class="kt"><p><strong>Key Finding:</strong> Social and psychological factors (group dynamics, attention, feeling valued) influence productivity as much as or more than physical conditions and financial incentives. This birthed the <strong>Human Relations Movement</strong>.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Godrej:</strong> The Godrej Group applies Hawthorne insights through employee welfare programs, open communication, and participative management. Their employee-centric culture has resulted in extremely low attrition rates compared to industry averages.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Maruti Suzuki &#x2014; Blending Classical &amp; Human Relations</h5>
+<p>Maruti Suzuki combines <strong>Taylor's scientific management</strong> (45-second car assembly, time-motion studies, incentive pay) with <strong>Hawthorne-inspired human relations</strong> (worker suggestion schemes, team-based rewards, canteen subsidies, annual family days). Result: India's #1 carmaker with 40%+ market share and among the highest productivity per worker in the global auto industry. The lesson? <em>Neither classical nor behavioral approach alone is sufficient &#x2014; the best companies blend both.</em></p>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Evolution of Management Thought &#x2014; Visual Map</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4)">Classical<br><small>1900s-1930s</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Human Relations<br><small>1930s-1950s</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)">Behavioral Science<br><small>1950s-1970s</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Modern Approaches<br><small>1970s+</small></div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">Each era didn't replace the previous &#x2014; they layered on top. Modern management uses ALL of these perspectives.</p>
+</div>
+
+<h4>Point 7: Modern Management Approaches</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Approach</th><th>Focus</th><th>Key Contributors</th><th>Application</th></tr></thead>
+<tbody>
+<tr><td><strong>Systems Theory</strong></td><td>Organization as open system with inputs-process-outputs</td><td>Bertalanffy, Katz &amp; Kahn</td><td>TCS views IT delivery as system with client input &#x2192; process &#x2192; output</td></tr>
+<tr><td><strong>Contingency Theory</strong></td><td>No one best way; depends on situation</td><td>Fiedler, Lawrence &amp; Lorsch</td><td>Infosys uses different structures for consulting vs. outsourcing units</td></tr>
+<tr><td><strong>Quality Management</strong></td><td>Continuous improvement, zero defects</td><td>Deming, Juran, Ishikawa</td><td>Tata Steel uses TQM and Six Sigma; won Deming Prize</td></tr>
+<tr><td><strong>Learning Organization</strong></td><td>Continuous learning &amp; adaptation</td><td>Peter Senge (The Fifth Discipline)</td><td>Wipro's learning culture with mandatory training hours per employee</td></tr>
+</tbody></table></div>
+
+<div class="timeline">
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1911</div><div class="tl-c"><h5>Taylor &#x2014; Scientific Management</h5><p>Bethlehem Steel: +400% productivity through time studies</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1916</div><div class="tl-c"><h5>Fayol &#x2014; Administrative Theory</h5><p>14 principles from mining executive experience</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1920s</div><div class="tl-c"><h5>Weber &#x2014; Bureaucracy</h5><p>Legal-rational authority as most efficient structure</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1924-32</div><div class="tl-c"><h5>Hawthorne Studies</h5><p>Human relations movement begins</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1960s+</div><div class="tl-c"><h5>Modern Approaches</h5><p>Systems, Contingency, Quality, Learning Organization</p></div></div>
+</div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Classical: Taylor (efficiency), Fayol (principles), Weber (structure)</li>
+<li>Hawthorne Studies proved social/psychological factors matter as much as physical conditions</li>
+<li>Modern: Systems, Contingency, Quality Management, Learning Organization</li>
+<li>Indian companies combine all approaches: scientific methods + human relations + contingency</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<h3 id="u3">Unit 3: Roles of Managers</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Roles of Managers</div><p>What do managers actually DO? This unit covers Mintzberg's roles, Katz's skills, and management levels.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Mintzberg's 10 Managerial Roles</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RWx9ix2HJ-g" title="Mintzberg Roles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Management Skills - Technical, Conceptual, Human</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5Nr3zG8ByNI" title="Management Skills" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Mintzberg's 10 Managerial Roles</h4>
+<p>Henry Mintzberg observed actual managers and identified 10 roles grouped into 3 categories:</p>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#x1F451; Interpersonal Roles (3)</h5><ul>
+<li><strong>Figurehead</strong> &#x2014; Symbolic duties (signing documents, receiving guests, attending ceremonies)</li>
+<li><strong>Leader</strong> &#x2014; Motivating, directing, developing subordinates</li>
+<li><strong>Liaison</strong> &#x2014; Building external contacts and networks</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#x1F441; Informational Roles (3)</h5><ul>
+<li><strong>Monitor</strong> &#x2014; Scanning environment for information</li>
+<li><strong>Disseminator</strong> &#x2014; Sharing information with team</li>
+<li><strong>Spokesperson</strong> &#x2014; Representing org to outsiders</li>
+</ul></div>
+</div>
+<div style="margin-top:.5rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:1rem">
+<h5 style="color:#fbbf24;margin-bottom:.5rem">&#x1F4A1; Decisional Roles (4)</h5>
+<ul>
+<li><strong>Entrepreneur</strong> &#x2014; Initiating change and innovation</li>
+<li><strong>Disturbance Handler</strong> &#x2014; Managing crises and conflicts</li>
+<li><strong>Resource Allocator</strong> &#x2014; Distributing budgets, people, time</li>
+<li><strong>Negotiator</strong> &#x2014; Bargaining with stakeholders</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Sundar Pichai (Google/Alphabet CEO):</strong><br>
+&#x2022; <em>Figurehead:</em> Represents Google at global forums<br>
+&#x2022; <em>Leader:</em> Guides 180,000+ employees worldwide<br>
+&#x2022; <em>Monitor:</em> Tracks AI, cloud, and search trends<br>
+&#x2022; <em>Entrepreneur:</em> Drove Google's AI-first strategy<br>
+&#x2022; <em>Negotiator:</em> Handled EU antitrust cases</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Mintzberg's 10 Managerial Roles &#x2014; Visual Overview</h5>
+<div class="vd-grid">
+<div style="text-align:center"><div style="color:#5e8cf0;font-weight:600;margin-bottom:0.5rem">&#x1F451; Interpersonal</div>
+<div class="vd-node" style="background:rgba(94,140,240,0.15);border:1px solid rgba(94,140,240,0.3);font-size:0.75rem">Figurehead</div>
+<div class="vd-node" style="background:rgba(94,140,240,0.15);border:1px solid rgba(94,140,240,0.3);font-size:0.75rem">Leader</div>
+<div class="vd-node" style="background:rgba(94,140,240,0.15);border:1px solid rgba(94,140,240,0.3);font-size:0.75rem">Liaison</div>
+</div>
+<div style="text-align:center"><div style="color:#34d399;font-weight:600;margin-bottom:0.5rem">&#x1F441; Informational</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);font-size:0.75rem">Monitor</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);font-size:0.75rem">Disseminator</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);font-size:0.75rem">Spokesperson</div>
+</div>
+<div style="text-align:center"><div style="color:#fbbf24;font-weight:600;margin-bottom:0.5rem">&#x1F4A1; Decisional</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.3);font-size:0.75rem">Entrepreneur</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.3);font-size:0.75rem">Disturbance Handler</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.3);font-size:0.75rem">Resource Allocator</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.3);font-size:0.75rem">Negotiator</div>
+</div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: N. R. Narayana Murthy &#x2014; A Manager Who Wore All 10 Hats</h5>
+<p>At Infosys, Narayana Murthy exemplified all 10 Mintzberg roles. As <strong>figurehead</strong>, he became the face of Indian IT globally. As <strong>leader</strong>, he built a culture of meritocracy (no family members in leadership). As <strong>entrepreneur</strong>, he pioneered the Global Delivery Model. As <strong>negotiator</strong>, he secured multi-billion dollar contracts with Fortune 500 companies. His ability to seamlessly switch between roles is what made Infosys from a &#x20B9;10,000 startup to a &#x20B9;6 lakh crore company.</p>
+</div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Mintzberg's roles are <strong>highly examable</strong>. Remember: 3 categories, 10 roles. A common exam question asks you to identify which role a manager is performing in a given scenario. Practice matching scenarios to roles!</p></div>
+
+<h4>Point 2: Katz's Three-Skill Approach</h4>
+<div class="igl"><div class="py">
+<div class="py-l" style="width:28%;background:#f87171"><strong>Conceptual Skills</strong><br><small>Top Management: Vision, strategy, big-picture thinking</small></div>
+<div class="py-l" style="width:46%;background:#fbbf24;color:#333"><strong>Human Skills</strong><br><small>All Levels: Communication, empathy, teamwork, leadership</small></div>
+<div class="py-l" style="width:64%;background:#5e8cf0"><strong>Technical Skills</strong><br><small>Lower Management: Domain expertise, tools, processes</small></div>
+</div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p><strong>Human skills are important at ALL levels.</strong> Even CEOs need empathy and communication. The key difference: lower managers need more technical skills; top managers need more conceptual skills.</p></div>
+
+<h4>Point 3: Levels of Management</h4>
+<div class="py">
+<div class="py-l" style="width:30%;background:#a78bfa"><strong>Top Level</strong><br><small>CEO, MD, BOD &#x2014; Strategic decisions, vision, policy</small></div>
+<div class="py-l" style="width:50%;background:#fbbf24;color:#333"><strong>Middle Level</strong><br><small>Dept heads, GMs &#x2014; Tactical plans, coordination</small></div>
+<div class="py-l" style="width:70%;background:#5e8cf0"><strong>Lower Level</strong><br><small>Supervisors, foremen &#x2014; Operational execution, day-to-day</small></div>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Reliance Industries:</strong> Mukesh Ambani (Top) sets Jio strategy &#x2192; CEOs of Jio, Retail, etc. (Middle) implement &#x2192; Store managers and network engineers (Lower) run daily operations.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Mintzberg: 10 roles in 3 categories &#x2014; Interpersonal (3), Informational (3), Decisional (4)</li>
+<li>Katz: 3 skills &#x2014; Technical (lower), Human (all), Conceptual (top)</li>
+<li>3 levels: Top (strategic), Middle (tactical), Lower (operational)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 4 -->
+<h3 id="u4">Unit 4: Planning</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Planning</div><p>Planning is the first and most fundamental management function &#x2014; it bridges the gap between where you are and where you want to be.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Planning Process in Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/iHeEhnnlPcA" title="Planning Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MBO - Management by Objectives</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NSvGo8mwQKM" title="MBO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition and Importance</h4>
+<ul>
+<li>Preparation for future action bridging present-future gap</li>
+<li>All-pervasive function at all management levels</li>
+<li>Determines direction, reduces uncertainty, minimizes waste, sets standards for control</li>
+<li>"Failing to plan is planning to fail" &#x2014; often attributed to Benjamin Franklin</li>
+</ul>
+
+<h4>Point 2: Types of Plans</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Strategic Plan</th><th>Tactical Plan</th><th>Operational Plan</th></tr></thead>
+<tbody>
+<tr><td><strong>Time Horizon</strong></td><td>3-5 years</td><td>1-2 years</td><td>Daily/Weekly/Monthly</td></tr>
+<tr><td><strong>Scope</strong></td><td>Organization-wide</td><td>Department-level</td><td>Specific tasks/units</td></tr>
+<tr><td><strong>Made By</strong></td><td>Top management</td><td>Middle management</td><td>Lower management</td></tr>
+<tr><td><strong>Focus</strong></td><td>Long-term direction</td><td>Resource allocation</td><td>Daily execution</td></tr>
+<tr><td><strong>Example</strong></td><td>Entering a new market</td><td>Annual marketing budget</td><td>Weekly production schedule</td></tr>
+<tr><td><strong>Indian Example</strong></td><td>Jio's 4G rollout strategy</td><td>Jio's quarterly targets</td><td>Store opening schedule</td></tr>
+</tbody></table></div>
+
+<h4>Point 3: Planning Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Set Objectives<br><small>SMART goals</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Develop Premises<br><small>Assumptions about future</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Identify Alternatives<br><small>Brainstorm options</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Evaluate &amp; Select<br><small>Best alternative</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Implement<br><small>Execute the plan</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Monitor<br><small>Track &amp; correct</small></div></div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Reliance Jio &#x2014; The Greatest Strategic Plan in Indian Business</h5>
+<p>In 2010, Mukesh Ambani began planning what would become India's largest telecom disruption. The <strong>strategic plan</strong> spanned 6 years: acquire spectrum (2010), build fiber network (2011-2014), develop affordable 4G devices (2015), launch with free data (Sept 2016). Each phase had <strong>tactical plans</strong> (quarterly targets for tower installations, dealer network expansion) and <strong>operational plans</strong> (daily SIM activation targets, store opening schedules). The result: 400 million subscribers in 3 years, forcing Vodafone-Idea merger and exit of 6 competitors. This is planning at its most ambitious &#x2014; and most successful.</p>
+</div>
+
+<h4>Point 4: Management by Objectives (MBO) &#x2014; Peter Drucker</h4>
+<div class="igl">
+<h4>MBO Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Set Objectives<br><small>Joint goal-setting</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Action Plans<br><small>How to achieve</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Review<br><small>Periodic check</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Appraise<br><small>Evaluate results</small></div></div>
+</div>
+<ul>
+<li>Goals should be <strong>SMART</strong>: Specific, Measurable, Achievable, Relevant, Time-bound</li>
+<li>Participative goal-setting increases commitment</li>
+<li>Aligns individual goals with organizational goals</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Wipro:</strong> Uses MBO extensively &#x2014; each employee sets quarterly OKRs (Objectives &amp; Key Results) aligned with company strategy. Performance reviews are based on goal achievement, not just effort.</p></div>
+
+<h4>Point 5: Decision Making in Planning</h4>
+<div class="br"><span class="sb s-b">Rational Model</span><span class="sb s-p">Bounded Rationality</span><span class="sb s-y">Intuitive</span><span class="sb s-g">Group Decision</span></div>
+<ul>
+<li><strong>Rational:</strong> Complete information, evaluate all alternatives, choose optimal (ideal but rare)</li>
+<li><strong>Bounded Rationality (Herbert Simon):</strong> Managers "satisfice" &#x2014; find good-enough solutions due to limited info, time, cognitive capacity</li>
+<li><strong>Intuitive:</strong> Based on experience and gut feeling (useful in crisis situations)</li>
+<li><strong>Group Decision:</strong> Brainstorming, Delphi technique, nominal group technique</li>
+</ul>
+<div class="kt"><p><strong>Herbert Simon (Nobel Prize 1978):</strong> Managers do NOT optimize; they <strong>satisfice</strong> because they face bounded rationality &#x2014; limited information, limited time, and limited cognitive ability.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Planning bridges present to future; it's the foundation of all other functions</li>
+<li>3 types: Strategic (top, long-term), Tactical (middle, medium), Operational (lower, short)</li>
+<li>6-step process: Objectives &#x2192; Premises &#x2192; Alternatives &#x2192; Evaluate &#x2192; Implement &#x2192; Monitor</li>
+<li>MBO: Participative goal-setting with SMART goals</li>
+<li>Decision making: Rational, Bounded, Intuitive, Group</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Managerial Processes-I</h2>
+
+<!-- UNIT 5 -->
+<h3 id="u5">Unit 5: Organizing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 5: Organizing</div><p>Organizing creates the structure through which activities are coordinated and resources are deployed to achieve objectives.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organization Structure Types</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mZyL6wEugGQ" title="Organization Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Centralization vs Decentralization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/TGwUurCDZOM" title="Centralization vs Decentralization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition and Purpose</h4>
+<ul>
+<li>Creating a structure with defined lines of authority and responsibility</li>
+<li>Allocation of resources, monitoring progress, coordination across departments</li>
+<li>"Organizing is the process of arranging people and resources to work toward a goal" &#x2014; Chester Barnard</li>
+</ul>
+
+<h4>Point 2: Principles of Organization</h4>
+<div class="igl"><div class="cg">
+<div class="cc"><ul>
+<li><strong>Unity of Command:</strong> One subordinate reports to one boss</li>
+<li><strong>Unity of Objective:</strong> All activities serve common goals</li>
+<li><strong>Scalar Chain:</strong> Clear line of authority from top to bottom</li>
+<li><strong>Span of Control:</strong> Reasonable number of subordinates per manager (5-8 optimal)</li>
+</ul></div>
+<div class="cc"><ul>
+<li><strong>Balance:</strong> Authority must equal Responsibility</li>
+<li><strong>Division of Work:</strong> Specialization increases efficiency</li>
+<li><strong>Delegation:</strong> Authority flows down; accountability stays up</li>
+<li><strong>Coordination:</strong> Integrating activities across departments</li>
+</ul></div>
+</div></div>
+
+<h4>Point 3: Steps in Organizing Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Identify Activities<br><small>What needs to be done?</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Classify / Group<br><small>Departmentalize</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Assign Duties<br><small>Who does what?</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Create Hierarchy<br><small>Reporting relationships</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Allocate Resources<br><small>Budget, tools, people</small></div></div>
+</div>
+
+<h4>Point 4: Delegation and Decentralization</h4>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#x2B07; Delegation</h5><ul>
+<li>Manager assigns authority AND responsibility to subordinate</li>
+<li><strong>Accountability CANNOT be delegated</strong> &#x2014; manager remains answerable</li>
+<li>Three elements: Authority, Responsibility, Accountability</li>
+</ul></div>
+<div class="cc"><h5 style="color:#fbbf24">&#x2B06; Decentralization</h5><ul>
+<li>Systematic delegation to lower levels</li>
+<li>Faster decisions, better local responsiveness</li>
+<li>Develops managerial talent at lower levels</li>
+</ul></div>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Zomato:</strong> Deepinder Goyal delegates to vertical heads (delivery, dining, Hyperpure, Blinkit) with clear authority and KPIs. Each head has autonomy but is accountable for their unit's performance.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Organization Structure Types &#x2014; Visual Comparison</h5>
+<div class="vd-grid">
+<div style="text-align:center;padding:0.8rem;background:rgba(108,99,255,0.08);border-radius:8px;border:1px solid rgba(108,99,255,0.2)">
+<div style="font-weight:600;color:#6C63FF;margin-bottom:0.5rem">Functional</div>
+<div style="font-size:0.75rem;color:var(--text-muted)">CEO</div>
+<div style="font-size:0.7rem">&#x2193; &#x2193; &#x2193;</div>
+<div style="font-size:0.75rem">HR | Finance | Marketing | Ops</div>
+<div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.3rem">Best for: Small-medium firms</div>
+</div>
+<div style="text-align:center;padding:0.8rem;background:rgba(0,210,255,0.08);border-radius:8px;border:1px solid rgba(0,210,255,0.2)">
+<div style="font-weight:600;color:#00D2FF;margin-bottom:0.5rem">Divisional</div>
+<div style="font-size:0.75rem;color:var(--text-muted)">Group CEO</div>
+<div style="font-size:0.7rem">&#x2193; &#x2193; &#x2193;</div>
+<div style="font-size:0.75rem">Foods | Home Care | Beauty</div>
+<div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.3rem">Best for: Multi-product companies</div>
+</div>
+<div style="text-align:center;padding:0.8rem;background:rgba(255,215,0,0.08);border-radius:8px;border:1px solid rgba(255,215,0,0.2)">
+<div style="font-weight:600;color:#FFD700;margin-bottom:0.5rem">Matrix</div>
+<div style="font-size:0.75rem;color:var(--text-muted)">Functional + Project</div>
+<div style="font-size:0.7rem">&#x2193; &#x2197;</div>
+<div style="font-size:0.75rem">Dual reporting lines</div>
+<div style="font-size:0.7rem;color:var(--text-muted);margin-top:0.3rem">Best for: IT, consulting</div>
+</div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: HUL &#x2014; India's Best Organizational Structure</h5>
+<p>Hindustan Unilever uses a <strong>divisional structure</strong> with 3 main divisions: Beauty &amp; Personal Care, Foods &amp; Refreshment, and Home Care. Each division has its own P&amp;L accountability, marketing team, and supply chain. But they share centralized functions (HR, Finance, Legal) for efficiency. This <strong>hybrid model</strong> gives focus AND economies of scale. HUL's structure is studied in every Indian MBA program as a best-practice example of how to organize a large FMCG company.</p>
+</div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Organizing creates structure for coordinated activity</li>
+<li>Key principles: Unity of command, Scalar chain, Span of control, Balance</li>
+<li>5 steps: Identify &#x2192; Classify &#x2192; Assign &#x2192; Hierarchy &#x2192; Resources</li>
+<li>Delegation: Authority + Responsibility (accountability stays with manager)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 6 -->
+<h3 id="u6">Unit 6: Staffing and Directing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 6: Staffing &amp; Directing</div><p>Staffing ensures the right people are in place; Directing guides them toward organizational goals through leadership, motivation, and communication.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Staffing Process &amp; Recruitment</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/BgL0sm0FHLM" title="Staffing Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Directing - Leadership &amp; Motivation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/jiPYQd_EWvU" title="Directing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Staffing Function</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Job Analysis<br><small>Define roles</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Recruitment<br><small>Attract candidates</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Selection<br><small>Choose best fit</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Training<br><small>Develop skills</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Appraisal<br><small>Evaluate performance</small></div></div>
+</div>
+
+<h4>Point 2: Directing Function</h4>
+<div class="br"><span class="sb s-b">Leadership</span><span class="sb s-g">Communication</span><span class="sb s-y">Motivation</span><span class="sb s-p">Supervision</span></div>
+<ul>
+<li><strong>Leadership:</strong> Influencing people to work willingly toward goals</li>
+<li><strong>Communication:</strong> Exchange of information and understanding</li>
+<li><strong>Motivation:</strong> Stimulating people to action toward desired goals</li>
+<li><strong>Supervision:</strong> Overseeing subordinates' work and providing guidance</li>
+</ul>
+
+<h4>Point 3: Leadership Styles</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Style</th><th>Decision Making</th><th>Best For</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Autocratic</strong></td><td>Leader alone decides</td><td>Crisis, unskilled workforce</td><td>Early-stage startups, military operations</td></tr>
+<tr><td><strong>Democratic</strong></td><td>Participative decisions</td><td>Creative teams, skilled workers</td><td>Infosys, Wipro team structures</td></tr>
+<tr><td><strong>Laissez-faire</strong></td><td>Subordinates decide</td><td>Highly skilled experts, R&amp;D</td><td>Google's 20% time policy</td></tr>
+<tr><td><strong>Situational</strong></td><td>Adapts to context</td><td>Dynamic environments</td><td>TCS adapts leadership per project/client</td></tr>
+</tbody></table></div>
+
+<h4>Point 4: Motivation Theories</h4>
+<div class="igl"><div class="cg">
+<div class="cc"><h5 style="color:#f87171">&#x1F53A; Maslow's Hierarchy of Needs</h5>
+<div class="py">
+<div class="py-l" style="width:25%;background:#f87171">Self-Actualization<br><small>Creative fulfillment</small></div>
+<div class="py-l" style="width:36%;background:#fbbf24;color:#333">Esteem<br><small>Recognition, status</small></div>
+<div class="py-l" style="width:47%;background:#34d399">Social<br><small>Belonging, love</small></div>
+<div class="py-l" style="width:58%;background:#5e8cf0">Safety<br><small>Security, stability</small></div>
+<div class="py-l" style="width:70%;background:#a78bfa">Physiological<br><small>Food, water, shelter</small></div>
+</div>
+<p style="font-size:.85rem;margin-top:.5rem">Needs must be satisfied bottom-up. Lower needs dominate until satisfied.</p></div>
+<div class="cc"><h5 style="color:#34d399">&#x1F9E0; Other Key Theories</h5><ul>
+<li><strong>Herzberg (Two-Factor):</strong> Hygiene factors prevent dissatisfaction; Motivators create satisfaction</li>
+<li><strong>McClelland:</strong> Need for Achievement (nAch), Power (nPow), Affiliation (nAff)</li>
+<li><strong>Vroom's Expectancy:</strong> Motivation = Expectancy &#x00D7; Instrumentality &#x00D7; Valence</li>
+<li><strong> McGregor:</strong> Theory X (lazy workers) vs Theory Y (self-motivated workers)</li>
+</ul></div>
+</div></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Theory</th><th>Key Idea</th><th>Manager Implication</th></tr></thead>
+<tbody>
+<tr><td><strong>Maslow</strong></td><td>5 needs in hierarchy</td><td>Identify which need level employee is at</td></tr>
+<tr><td><strong>Herzberg</strong></td><td>Hygiene + Motivators</td><td>Fix hygiene first (salary, conditions), then add motivators (recognition)</td></tr>
+<tr><td><strong>McClelland</strong></td><td>3 acquired needs</td><td>Match tasks to dominant need (achievement-seekers get challenges)</td></tr>
+<tr><td><strong>Vroom</strong></td><td>Expectancy &#x00D7; Value</td><td>Make effort &#x2192; performance &#x2192; reward chain clear</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Marico (Harsh Mariwala):</strong> Built a culture of empowerment &#x2014; employees take initiative (achievement), get stock options (affiliation), celebrate wins publicly (esteem). Combines Maslow + McClelland for triple motivation.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Maslow's Hierarchy &#x2014; Applied to Indian Workplace</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);width:45%;text-align:center">&#x2B06; Self-Actualization <small>&#x2014; Creative projects, leadership roles</small></div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4);width:58%;text-align:center">Esteem <small>&#x2014; Promotions, awards, recognition</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);width:70%;text-align:center">Social <small>&#x2014; Team culture, belonging, mentorship</small></div>
+<div class="vd-node" style="background:rgba(94,140,240,0.2);border:1px solid rgba(94,140,240,0.4);width:82%;text-align:center">Safety <small>&#x2014; Job security, health insurance, PF</small></div>
+<div class="vd-node" style="background:rgba(167,139,250,0.2);border:1px solid rgba(167,139,250,0.4);width:95%;text-align:center">Physiological <small>&#x2014; Salary, canteen, commute, workspace</small></div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Infosys &#x2014; Motivation at Scale</h5>
+<p>Infosys motivates 300,000+ employees using a blend of all motivation theories. <strong>Maslow:</strong> Competitive salary (physiological) + job security (safety) + team outings (social) + promotions (esteem) + innovation labs (self-actualization). <strong>Herzberg:</strong> World-class campuses (hygiene) + stock options and global projects (motivators). <strong>McClelland:</strong> High-achievers get stretch assignments; power-seekers get leadership tracks. <strong>Vroom:</strong> Clear effort &#x2192; performance &#x2192; reward chain through transparent appraisal. This multi-theory approach is why Infosys consistently ranks as one of India's best employers.</p>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Maslow's Hierarchy:</strong> "Please Stop &#x2014; Let's Eat Samosas" &#x2014; Physiological, Safety, Love/Social, Esteem, Self-actualization. Remember: needs go BOTTOM-UP. You can't motivate someone with recognition if they're worried about job security!</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Staffing: Job Analysis &#x2192; Recruitment &#x2192; Selection &#x2192; Training &#x2192; Appraisal</li>
+<li>Directing: Leadership + Communication + Motivation + Supervision</li>
+<li>Leadership styles: Autocratic, Democratic, Laissez-faire, Situational</li>
+<li>Motivation: Maslow (hierarchy), Herzberg (two-factor), McClelland (needs), Vroom (expectancy)</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Managerial Processes-II</h2>
+
+<!-- UNIT 7 -->
+<h3 id="u7">Unit 7: Controlling</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 7: Controlling</div><p>Controlling ensures that organizational activities conform to plans. It's the last function that feeds back into planning, completing the management cycle.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Controlling Process in Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7_NJIh9KhMM" title="Controlling Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Control Techniques &amp; Budgeting</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IFtqzOlYrdg" title="Control Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition and Purpose</h4>
+<ul>
+<li>Systematic activities to measure actual performance against standards and correct deviations</li>
+<li>"Controlling is measuring and correcting performance of subordinates to ensure that enterprise objectives and plans are being accomplished" &#x2014; Koontz</li>
+<li>Ensures plans are implemented; identifies problems early; provides feedback for future planning</li>
+</ul>
+
+<h4>Point 2: Control Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Set Standards<br><small>Measurable benchmarks</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Measure Actual<br><small>Collect performance data</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Compare<br><small>Find deviations</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Corrective Action<br><small>Fix deviations</small></div></div>
+</div>
+
+<h4>Point 3: Types of Control</h4>
+<div class="igl"><div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#x1F6E1; Feedforward Control</h5><p>Preventive control BEFORE action begins. Example: Quality checks on raw materials, training before project launch, pre-employment screening.</p></div>
+<div class="cc"><h5 style="color:#fbbf24">&#x23F1; Concurrent Control</h5><p>Real-time monitoring DURING activities. Example: Manager watching production line, GPS tracking deliveries, live dashboards.</p></div>
+</div>
+<div style="margin-top:.5rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:1rem">
+<h5 style="color:#f87171;margin-bottom:.5rem">&#x1F504; Feedback Control</h5>
+<p>Post-action evaluation AFTER completion. Example: Annual reports, customer surveys, project post-mortems, financial audits. Most widely used type.</p>
+</div></div>
+
+<h4>Point 4: Control Techniques</h4>
+<div class="br"><span class="sb s-b">Budgetary Control</span><span class="sb s-g">Financial Ratios</span><span class="sb s-y">Internal Audit</span><span class="sb s-p">Performance Reports</span><span class="sb s-r">Break-even Analysis</span></div>
+
+<h4>Point 5: Effective Control System Characteristics</h4>
+<div class="br"><span class="sb s-b">Early Warning</span><span class="sb s-p">Forward-Looking</span><span class="sb s-y">Realistic Standards</span><span class="sb s-g">Economical</span><span class="sb s-r">Flexible</span></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Amazon India:</strong> Uses a triple-control system &#x2014; feedforward (pre-shipment quality checks), concurrent (real-time delivery dashboards), and feedback (customer reviews and return data). This ensures 99%+ delivery accuracy.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; The Control Process &#x2014; Continuous Feedback Loop</h5>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4)"><strong>1.</strong> Set Standards</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>2.</strong> Measure Actual</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>3.</strong> Compare</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>4.</strong> Correct</div>
+<div class="vd-arrow">&#x21A9;</div>
+<div style="font-size:0.75rem;color:var(--text-muted);text-align:center">Feedback to<br>Planning</div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Tata Steel &#x2014; World-Class Controlling</h5>
+<p>Tata Steel's Jamshedpur plant uses a <strong>triple-layer control system</strong>. <strong>Feedforward:</strong> Raw material testing before entering the blast furnace (iron ore quality, coal grade). <strong>Concurrent:</strong> Real-time temperature monitoring in furnaces, AI-powered defect detection on the rolling mill. <strong>Feedback:</strong> Monthly quality audits, customer satisfaction surveys, Six Sigma project reviews. This system helped Tata Steel win the <strong>Deming Prize</strong> (2008) and maintain &lt;0.5% defect rate in automotive steel &#x2014; among the best in the world.</p>
+</div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>A common exam question: "Why is controlling called a backward-looking function?" Answer: Because it measures PAST performance against standards. However, <strong>feedforward control</strong> is forward-looking &#x2014; it prevents problems BEFORE they occur. Always mention this distinction!</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Control = Set Standards &#x2192; Measure &#x2192; Compare &#x2192; Correct</li>
+<li>3 types: Feedforward (before), Concurrent (during), Feedback (after)</li>
+<li>Techniques: Budgets, ratios, audits, reports, break-even</li>
+<li>Good controls are: timely, forward-looking, realistic, economical, flexible</li>
+</ul></div>
+</div>
+
+<!-- UNIT 8 -->
+<h3 id="u8">Unit 8: Leading and Motivating</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 8: Leading &amp; Motivating</div><p>Leadership is the ability to influence others. Motivation is the internal drive to act. Together they form the directing function.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Leadership Styles &amp; Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aINJsq3UT74" title="Leadership Styles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Maslow &amp; Herzberg Motivation Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yM44Y312LR4" title="Motivation Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Leadership Process</h4>
+<div class="igl"><div class="cg">
+<div class="cc"><ul><li><strong>Leader:</strong> Influences others toward goals</li><li><strong>Followers:</strong> Accept and respond to influence</li></ul></div>
+<div class="cc"><ul><li><strong>Communication:</strong> Transmits vision and expectations</li><li><strong>Goals:</strong> Shared desired outcomes</li></ul></div>
+</div></div>
+
+<h4>Point 2: Contemporary Leadership Approaches</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Style</th><th>Key Trait</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Transformational</strong></td><td>Inspires beyond self-interest; creates vision</td><td>Ratan Tata (Tata Nano vision, global acquisitions)</td></tr>
+<tr><td><strong>Transactional</strong></td><td>Exchange-based: reward for performance</td><td>Sales commission systems at HDFC, ICICI</td></tr>
+<tr><td><strong>Charismatic</strong></td><td>Charm, personality, personal magnetism</td><td>Steve Jobs (Apple), Mukesh Ambani (Jio launch)</td></tr>
+<tr><td><strong>Servant Leadership</strong></td><td>Serves followers first; humility</td><td>Tata Group's employee-first culture</td></tr>
+</tbody></table></div>
+
+<h4>Point 3: Motivation Strategies</h4>
+<div class="br"><span class="sb s-g">Financial (bonus, ESOP)</span><span class="sb s-b">Non-financial (recognition)</span><span class="sb s-p">Job Design (enrichment)</span><span class="sb s-y">Participation (empowerment)</span></div>
+
+<h4>Point 4: Communication Directions</h4>
+<div class="cg">
+<div class="cc"><ul>
+<li><strong>Downward (&#x2193;):</strong> Instructions, policies, orders from top to bottom</li>
+<li><strong>Upward (&#x2191;):</strong> Reports, suggestions, feedback from bottom to top</li>
+</ul></div>
+<div class="cc"><ul>
+<li><strong>Lateral (&#x2194;):</strong> Peer coordination between departments</li>
+<li><strong>Diagonal (&#x2198;):</strong> Cross-functional communication across levels</li>
+</ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>TCS:</strong> Uses transformational leadership at project level &#x2014; project managers inspire teams to deliver beyond expectations. Transactional at operations level &#x2014; clear KPIs linked to appraisals. Communication flows through town halls (downward), skip-level meetings (upward), and cross-functional teams (diagonal).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Leadership Styles &#x2014; Decision Control Spectrum</h5>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);flex:1;text-align:center"><strong>Autocratic</strong><br><small>Leader decides all</small></div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4);flex:1;text-align:center"><strong>Democratic</strong><br><small>Shared decisions</small></div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);flex:1;text-align:center"><strong>Laissez-faire</strong><br><small>Team decides</small></div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4);flex:1;text-align:center"><strong>Situational</strong><br><small>Adapts to context</small></div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Ratan Tata vs. Mukesh Ambani &#x2014; Two Leadership Styles</h5>
+<p><strong>Ratan Tata (Transformational + Servant):</strong> Led with vision and humility. Acquired Jaguar Land Rover and Corus Steel to make Tata a global brand. Known for quiet dignity, ethical leadership, and putting the group's reputation above personal gain. Retired at 75, handing over to a non-family successor (Cyrus Mistry) &#x2014; rare in Indian business.</p>
+<p><strong>Mukesh Ambani (Charismatic + Transactional):</strong> Led Jio with bold vision and aggressive execution. Personally drove the free-data strategy that disrupted telecom. Combines charismatic storytelling (Jio launch events) with transactional rigor (clear KPIs, performance-linked pay for 300,000+ Reliance employees). Both styles work &#x2014; the key is matching style to context.</p>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Transformational = Inspire change</strong> (think: visionary founders). <strong>Transactional = Exchange rewards</strong> (think: sales commissions). Most effective leaders use BOTH &#x2014; transformational for vision, transactional for daily execution.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>Leadership = influencing others; styles: Transformational, Transactional, Charismatic, Servant</li>
+<li>Motivation strategies: Financial, Non-financial, Job Design, Participation</li>
+<li>Communication: 4 directions (downward, upward, lateral, diagonal)</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Organizational Processes</h2>
+
+<!-- UNIT 9 -->
+<h3 id="u9">Unit 9: Decision Making</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 9: Decision Making</div><p>Decision making is the core of managerial activity &#x2014; selecting a course of action from available alternatives to solve problems or exploit opportunities.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Decision Making Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fno8rQuJUNo" title="Decision Making" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Rational Decision Making Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MgwqQLPnch8" title="Rational Decision Making" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition and Scope</h4>
+<ul>
+<li>Selecting a course of action from two or more alternatives</li>
+<li>Present at ALL organizational levels and across ALL functions</li>
+<li>"Management is a bundle of decision-making processes" &#x2014; Herbert Simon</li>
+</ul>
+
+<h4>Point 2: Types of Decisions</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Scope</th><th>Time</th><th>Level</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Strategic</strong></td><td>Org-wide impact</td><td>Long-term (3-5 yrs)</td><td>Top management</td><td>Reliance entering telecom with Jio</td></tr>
+<tr><td><strong>Tactical</strong></td><td>Departmental</td><td>Mid-term (1-2 yrs)</td><td>Middle management</td><td>Marketing budget allocation for festive season</td></tr>
+<tr><td><strong>Operational</strong></td><td>Day-to-day</td><td>Short-term</td><td>Lower management</td><td>Shift scheduling at Tata Steel plant</td></tr>
+</tbody></table></div>
+
+<h4>Point 3: Decision Making Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Identify Problem<br><small>Recognize gap</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Gather Info<br><small>Collect data</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Generate Alternatives<br><small>Brainstorm</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Evaluate Options<br><small>Pros &amp; cons</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Choose &amp; Implement<br><small>Act decisively</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Follow-up<br><small>Monitor results</small></div></div>
+</div>
+
+<h4>Point 4: Decision Making Models</h4>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">Classical Model</h5><p>Rational, complete information, all alternatives evaluated, optimal solution chosen. Rarely possible in reality.</p></div>
+<div class="cc"><h5 style="color:#fbbf24">Behavioral Model (Simon)</h5><p>Bounded rationality &#x2014; limited info, time, cognitive capacity. Managers "satisfice" (good-enough solutions).</p></div>
+</div>
+
+<h4>Point 5: Barriers to Effective Decisions</h4>
+<div class="br"><span class="sb s-r">Cognitive Biases</span><span class="sb s-y">Organizational Pressure</span><span class="sb s-b">Information Gaps</span><span class="sb s-p">Risk Aversion</span><span class="sb s-g">Time Constraints</span></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Herbert Simon won the Nobel Prize (1978) for his work on decision making. Key concepts: <strong>Bounded Rationality</strong>, <strong>Satisficing</strong>, and the distinction between <strong>Programmed</strong> (routine) and <strong>Non-programmed</strong> (novel) decisions.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Byju's &#x2014; A Decision-Making Disaster</h5>
+<p>Byju Raveendran's decision-making illustrates every barrier discussed above. <strong>Cognitive bias:</strong> Overconfidence bias led to aggressive expansion without validating unit economics. <strong>Groupthink:</strong> Board failed to challenge the founder's decisions. <strong>Information gaps:</strong> Rapid growth masked poor retention rates. <strong>Risk aversion (paradoxically):</strong> Reluctance to pivot from the high-burn model until it was too late. Result: Valuation crashed from $22B to under $1B. Lesson: <em>Even brilliant founders can make catastrophic decisions without proper decision-making processes.</em></p>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Decision Making Process &#x2014; Step by Step</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Identify<br>Problem</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4)">Gather<br>Info</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Generate<br>Options</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(94,140,240,0.2);border:1px solid rgba(94,140,240,0.4)">Evaluate<br>&amp; Choose</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4)">Implement<br>&amp; Monitor</div>
+</div>
+</div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>Decision making = choosing from alternatives; it's the core of management</li>
+<li>Types: Strategic (top), Tactical (middle), Operational (lower)</li>
+<li>6-step process: Problem &#x2192; Info &#x2192; Alternatives &#x2192; Evaluate &#x2192; Choose &#x2192; Follow-up</li>
+<li>Simon: Bounded rationality + satisficing (not optimizing)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 10 -->
+<h3 id="u10">Unit 10: Organization Structure &amp; Design</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 10: Organization Structure</div><p>Structure defines reporting relationships, communication channels, and the formal arrangement of work. Good structure aligns with strategy.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organizational Design</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/C0MC_bONjy4" title="Org Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Matrix &amp; Functional Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/-fcgKuNTFLo" title="Matrix Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Types of Structures</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Structure</th><th>Basis</th><th>Pros</th><th>Cons</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Functional</strong></td><td>Similar functions</td><td>Specialization, efficiency</td><td>Poor coordination</td><td>Small firms, hospitals (Apollo)</td></tr>
+<tr><td><strong>Divisional</strong></td><td>Product/Geo/Customer</td><td>Accountability, focus</td><td>Duplication of resources</td><td>HUL (product divisions: Foods, Home Care, Beauty)</td></tr>
+<tr><td><strong>Matrix</strong></td><td>Function + Project</td><td>Flexible, resource-efficient</td><td>Dual authority conflict</td><td>TCS, Infosys (project + functional reporting)</td></tr>
+<tr><td><strong>Network</strong></td><td>Outsourcing hubs</td><td>Lean, scalable</td><td>Control challenges</td><td>Uber, Ola (driver network)</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Centralization vs Decentralization</h4>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#x2B07; Centralization</h5><p>Authority concentrated at top levels. Unified control, consistent decisions. May limit responsiveness and innovation.</p><p><strong>Indian Example:</strong> Indian Railways &#x2014; centralized decision-making from Rail Bhavan, Delhi.</p></div>
+<div class="cc"><h5 style="color:#fbbf24">&#x2B06; Decentralization</h5><p>Authority distributed to lower levels. Better for local conditions, faster decisions, develops talent. May create inconsistency.</p><p><strong>Indian Example:</strong> Godrej Group &#x2014; each business unit (consumer products, agri, real estate) operates semi-autonomously.</p></div>
+</div>
+
+<h4>Point 3: Span of Control</h4>
+<div class="br"><span class="sb s-b">Broad Span: fewer levels, more delegation, flatter org</span><span class="sb s-r">Narrow Span: more levels, closer supervision, taller org</span></div>
+<ul>
+<li><strong>Factors affecting span:</strong> Complexity of work, competence of subordinates, manager's ability, geographic dispersion</li>
+<li><strong>Optimal span:</strong> Research suggests 5-8 direct reports for most situations</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Flipkart:</strong> Uses a hybrid structure &#x2014; functional departments (engineering, marketing, finance) + divisional units (marketplace, logistics, PhonePe before spin-off). This combines specialization with product focus.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: TCS &#x2014; Matrix Structure at Massive Scale</h5>
+<p>TCS manages 600,000+ employees across 50+ countries using a sophisticated <strong>matrix structure</strong>. An employee reports to both a <strong>functional head</strong> (e.g., Java Practice Lead) AND a <strong>project head</strong> (e.g., Bank of America engagement manager). This dual reporting ensures both skill development (functional) and client delivery (project). The challenge? Conflict between functional and project priorities. TCS resolves this through clear escalation paths and a robust PMO (Project Management Office). This structure allows TCS to deploy the right skills to the right projects at the right time &#x2014; a key competitive advantage in IT services.</p>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Span of Control &#x2014; Flat vs. Tall Organizations</h5>
+<div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;padding:0.5rem">
+<div style="text-align:center;flex:1;min-width:180px">
+<div style="font-weight:600;color:#00D2FF;margin-bottom:0.5rem">Broad Span (Flat)</div>
+<div style="font-size:0.75rem;border:1px solid rgba(0,210,255,0.3);border-radius:8px;padding:0.8rem;background:rgba(0,210,255,0.05)">
+<div>Manager</div>
+<div style="margin:0.3rem 0">&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;&#x2193;</div>
+<div>6-10 reports</div>
+<div style="color:var(--text-muted);margin-top:0.3rem">Fewer levels, faster decisions</div>
+<div style="color:var(--text-muted)">Example: Startups, Google</div>
+</div>
+</div>
+<div style="text-align:center;flex:1;min-width:180px">
+<div style="font-weight:600;color:#FFD700;margin-bottom:0.5rem">Narrow Span (Tall)</div>
+<div style="font-size:0.75rem;border:1px solid rgba(255,215,0,0.3);border-radius:8px;padding:0.8rem;background:rgba(255,215,0,0.05)">
+<div>Manager</div>
+<div style="margin:0.3rem 0">&#x2193;&#x2193;</div>
+<div>2-4 reports</div>
+<div style="color:var(--text-muted);margin-top:0.3rem">More levels, closer supervision</div>
+<div style="color:var(--text-muted)">Example: Military, Banks</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>A frequent exam question: "Compare centralization and decentralization." Use the <strong>Reliance vs. Godrej</strong> example: Reliance (especially under Dhirubhai) was highly centralized &#x2014; all major decisions from one person. Godrej is decentralized &#x2014; each business unit (consumer products, agri, real estate) operates semi-autonomously. Both work &#x2014; it depends on the company's size, industry, and leadership.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Structures: Functional, Divisional, Matrix, Network</li>
+<li>Centralization vs Decentralization: trade-off between control and responsiveness</li>
+<li>Span of control: Broad (flat) vs Narrow (tall); optimal is 5-8 direct reports</li>
+<li>Line (direct contribution) vs Staff (specialized support) positions</li>
+</ul></div>
+</div>
+
+<!-- UNIT 11 -->
+<h3 id="u11">Unit 11: Organizational Communication</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 11: Communication</div><p>Communication is the process of transmitting information and understanding from one person to another. It's the lifeblood of every organization.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Communication Process in Business</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0PnpiZeiMlI" title="Communication Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Barriers to Effective Communication</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FxIwXNmijJw" title="Communication Barriers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Communication Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">S</div><div class="fc-l">Sender<br><small>Encodes message</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">M</div><div class="fc-l">Message<br><small>Through channel</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">R</div><div class="fc-l">Receiver<br><small>Decodes message</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">F</div><div class="fc-l">Feedback<br><small>Response loop</small></div></div>
+</div>
+<p style="text-align:center;color:var(--text-muted);font-size:.85rem;margin-top:.5rem">&#x26A0; <strong>Noise</strong> can interfere at any stage &#x2014; distraction, jargon, language barriers, cultural differences, technology failures</p>
+
+<h4>Point 2: Types of Communication</h4>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#x1F4CB; Formal Communication</h5><ul>
+<li><strong>Downward:</strong> Instructions, policies, orders</li>
+<li><strong>Upward:</strong> Reports, suggestions, feedback</li>
+<li><strong>Lateral:</strong> Peer coordination across departments</li>
+<li><strong>Diagonal:</strong> Cross-functional, cross-level communication</li>
+</ul></div>
+<div class="cc"><h5 style="color:#a78bfa">&#x1F34C; Informal (Grapevine)</h5><ul>
+<li>Spontaneous, crosses hierarchy levels</li>
+<li>Faster than formal channels</li>
+<li>Can carry accurate info AND rumors</li>
+<li>CANNOT be eliminated, only managed</li>
+<li>Types: Single strand, Gossip, Cluster, Probability</li>
+</ul></div>
+</div>
+
+<h4>Point 3: Non-Verbal Communication (Mehrabian's Rule)</h4>
+<div class="igl"><div class="py">
+<div class="py-l" style="width:20%;background:#f87171">Words 7%</div>
+<div class="py-l" style="width:38%;background:#fbbf24;color:#333">Tone 38%</div>
+<div class="py-l" style="width:55%;background:#5e8cf0">Body Language 55%</div>
+</div>
+<p style="margin-top:.75rem">Albert Mehrabian's research shows that in face-to-face communication about feelings and attitudes, <strong>body language dominates</strong>. Non-verbal cues often carry more weight than words alone.</p></div>
+
+<h4>Point 4: Barriers to Effective Communication</h4>
+<div class="br"><span class="sb s-r">Semantic (jargon, language)</span><span class="sb s-y">Psychological (bias, emotions)</span><span class="sb s-b">Organizational (hierarchy, distance)</span><span class="sb s-p">Physical (noise, technology)</span></div>
+
+<h4>Point 5: Making Communication Effective</h4>
+<ul>
+<li>Use simple, direct language appropriate to audience</li>
+<li>Choose the right channel (face-to-face for sensitive topics, email for documentation)</li>
+<li>Actively seek and provide feedback</li>
+<li>Practice empathetic listening</li>
+<li>Align non-verbal behavior with verbal messages</li>
+<li>Reduce noise at every stage of the process</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>TVS Motor:</strong> Communicates through multiple channels &#x2014; town halls (downward), suggestion boxes (upward), cross-functional teams (diagonal), and an open-door policy to flatten hierarchical barriers. This multi-channel approach ensures information reaches all levels.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Communication Process &#x2014; Visual Model</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4)">&#x1F464; Sender<br><small>Encodes</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">&#x1F4E8; Message<br><small>Channel</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)">&#x1F464; Receiver<br><small>Decodes</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">&#x1F4AC; Feedback<br><small>Response</small></div>
+</div>
+<div style="text-align:center;margin-top:0.5rem"><span style="background:rgba(248,113,113,0.15);border:1px solid rgba(248,113,113,0.3);padding:0.3rem 0.8rem;border-radius:6px;font-size:0.8rem;color:#f87171">&#x26A0; Noise can interfere at ANY stage</span></div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Wipro &#x2014; Communication During Crisis (2017 Data Breach)</h5>
+<p>When Wipro discovered a data breach in 2017, CEO Abidali Neemuchwala's communication strategy became a case study in crisis communication. <strong>Downward:</strong> Immediate all-hands meeting to inform employees. <strong>Upward:</strong> IT team escalated details to leadership within hours. <strong>Lateral:</strong> Cross-functional teams (legal, IT, HR, PR) coordinated response. <strong>External:</strong> Transparent disclosure to clients and media. The key lesson? <em>In crisis, over-communicate. Silence breeds rumors and destroys trust.</em> Wipro's transparent approach actually strengthened client relationships long-term.</p>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Mehrabian's Rule (7-38-55):</strong> "Words are Tiny, Tone is Medium, Body is HUGE" &#x2014; In face-to-face communication about feelings: Words 7%, Tone 38%, Body Language 55%. This applies ONLY to emotional/attitudinal messages, not factual information!</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>Process: Sender &#x2192; Message &#x2192; Channel &#x2192; Receiver &#x2192; Feedback (noise at any stage)</li>
+<li>Formal: Downward, Upward, Lateral, Diagonal; Informal: Grapevine</li>
+<li>Mehrabian: Words 7%, Tone 38%, Body Language 55%</li>
+<li>Barriers: Semantic, Psychological, Organizational, Physical</li>
+</ul></div>
+</div>
+
+<!-- UNIT 12 -->
+<h3 id="u12">Unit 12: Organizational Culture</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 12: Organizational Culture</div><p>Culture is the set of shared values, beliefs, assumptions, and behavioral patterns that distinguish one organization from another.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organizational Culture</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SmlD6jpM73I" title="Org Culture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Creating Strong Culture</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/BsVqqAKptvU" title="Strong Culture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Definition and Functions</h4>
+<ul>
+<li><strong>Edgar Schein:</strong> Culture = basic assumptions learned by a group as it solves problems</li>
+<li><strong>Functions:</strong> Creates identity, provides behavioral control, generates commitment, makes sense of events</li>
+<li><strong>Culture eats strategy for breakfast</strong> &#x2014; Peter Drucker (the most famous management quote)</li>
+</ul>
+
+<h4>Point 2: Handy's Four Types of Culture</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Metaphor</th><th>Power Center</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Power Culture</strong></td><td>Spider's web</td><td>Central individual</td><td>Early Reliance (Dhirubhai), Adani Group</td></tr>
+<tr><td><strong>Role Culture</strong></td><td>Greek temple</td><td>Rules &amp; procedures</td><td>Government (IAS, Railways), Banks (SBI)</td></tr>
+<tr><td><strong>Task Culture</strong></td><td>Matrix/net</td><td>Expertise &amp; project teams</td><td>Consulting (McKinsey), IT projects (TCS)</td></tr>
+<tr><td><strong>Person Culture</strong></td><td>Star/loose</td><td>Individual freedom</td><td>Law firms, medical practitioners</td></tr>
+</tbody></table></div>
+
+<h4>Point 3: Cameron &amp; Quinn's Competing Values Framework</h4>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">Clan Culture</h5><p>Collaborative, family-like, mentoring. <strong>Example:</strong> Tata Steel's employee-first approach.</p></div>
+<div class="cc"><h5 style="color:#a78bfa">Adhocracy Culture</h5><p>Innovative, risk-taking, entrepreneurial. <strong>Example:</strong> Amazon, Flipkart's startup culture.</p></div>
+<div class="cc"><h5 style="color:#fbbf24">Market Culture</h5><p>Competitive, results-oriented, achievement. <strong>Example:</strong> Apple, Samsung rivalry.</p></div>
+<div class="cc"><h5 style="color:#5e8cf0">Hierarchy Culture</h5><p>Controlled, process-focused, stability. <strong>Example:</strong> Indian Railways, Defense establishments.</p></div>
+</div>
+
+<h4>Point 4: 9 Traits of Great Organizational Culture</h4>
+<div class="br"><span class="sb s-b">Alignment</span><span class="sb s-g">Appreciation</span><span class="sb s-y">Trust</span><span class="sb s-p">Performance</span><span class="sb s-r">Resilience</span><span class="sb s-pk">Teamwork</span><span class="sb s-b">Integrity</span><span class="sb s-g">Innovation</span><span class="sb s-y">Safety</span></div>
+<div class="kt"><p>Great culture = Values that match employee motivation. When employees feel valued and aligned with organizational purpose, performance and retention improve dramatically.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Zappos vs. Amazon &#x2014; When Cultures Collide</h5>
+<p>Zappos built a legendary culture around "Delivering WOW through service" &#x2014; employees could spend unlimited time on customer calls, the office had a fun/zany vibe, and new hires were offered $2000 to quit (testing cultural fit). When Amazon acquired Zappos in 2009 for $1.2B, the clash was immediate. Amazon's data-driven, process-heavy culture conflicted with Zappos' people-first, intuition-driven approach. Tony Hsieh (Zappos CEO) fought to maintain independence. Lesson: <em>Culture is the hardest thing to change in an acquisition. Companies with strong cultures resist external control.</em></p>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Group Culture:</strong> The Tata name is synonymous with trust, ethics, and nation-building. This culture dates back to Jamsetji Tata (1868) and has been maintained through 150+ years. New Tata employees undergo "Tata Induction" which covers the group's history, values (integrity, understanding, excellence, unity, responsibility), and the expectation that business must serve society. This is India's strongest example of organizational culture as a competitive advantage.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Culture = shared values, beliefs, assumptions; "Culture eats strategy for breakfast"</li>
+<li>Handy: Power, Role, Task, Person cultures</li>
+<li>Cameron &amp; Quinn: Clan, Adhocracy, Market, Hierarchy</li>
+<li>9 traits: Alignment, Appreciation, Trust, Performance, Resilience, Teamwork, Integrity, Innovation, Safety</li>
+</ul></div>
+</div>
+
+<!-- UNIT 13 -->
+<h3 id="u13">Unit 13: Managing Change</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 13: Managing Change</div><p>Change is inevitable. Organizations that manage change effectively survive and thrive; those that resist it become obsolete.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Kurt Lewin Change Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/p5pe7EGtjMw" title="Lewin Change Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Managing Organizational Change</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SmlD6jpM73I" title="Managing Change" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Fundamentals</h4>
+<ul>
+<li><strong>Nature:</strong> Incremental (gradual) or Transformational (radical/disruptive)</li>
+<li><strong>Sources:</strong> Technology, competition, regulation, demographics, globalization</li>
+<li><strong>Resistance:</strong> Natural human response &#x2014; fear of unknown, loss of control, competency threat</li>
+</ul>
+
+<h4>Point 2: Models of Change</h4>
+<div class="igl"><h4 style="margin-bottom:1rem">&#x1F9F1; Three Major Change Models</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Lewin (3 Steps)</th><th>Kotter (8 Steps)</th><th>ADKAR (5 Elements)</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Unfreeze</strong></td><td>1. Create urgency</td><td><strong>A</strong>wareness</td></tr>
+<tr><td>&#xA0;</td><td>2. Form coalition</td><td>&#xA0;</td></tr>
+<tr><td>&#xA0;</td><td>3. Create vision</td><td><strong>D</strong>esire</td></tr>
+<tr><td><strong>2. Change</strong></td><td>4. Communicate vision</td><td>&#xA0;</td></tr>
+<tr><td>&#xA0;</td><td>5. Remove obstacles</td><td><strong>K</strong>nowledge</td></tr>
+<tr><td>&#xA0;</td><td>6. Short-term wins</td><td><strong>A</strong>bility</td></tr>
+<tr><td><strong>3. Refreeze</strong></td><td>7. Build momentum</td><td>&#xA0;</td></tr>
+<tr><td>&#xA0;</td><td>8. Anchor in culture</td><td><strong>R</strong>einforcement</td></tr>
+</tbody></table></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Lewin</strong> = Big picture (3 steps). <strong>Kotter</strong> = Detailed roadmap (8 steps). <strong>ADKAR</strong> = Individual focus (5 elements). Use them together for comprehensive change management!</p></div>
+
+<h4>Point 3: Sources of Resistance to Change</h4>
+<div class="cg">
+<div class="cc"><ul>
+<li>Fear of the unknown</li>
+<li>Loss of control or power</li>
+<li>Loss of face (ego threat)</li>
+<li>Competency threat (skills becoming obsolete)</li>
+</ul></div>
+<div class="cc"><ul>
+<li>Need for security and stability</li>
+<li>Poor timing of change initiative</li>
+<li>Lack of support or resources</li>
+<li>Failed past changes (cynicism)</li>
+</ul></div>
+</div>
+
+<h4>Point 4: Forms of Organizational Change</h4>
+<div class="br"><span class="sb s-b">Restructuring</span><span class="sb s-g">Turnaround</span><span class="sb s-y">M&amp;A</span><span class="sb s-p">BPR</span><span class="sb s-r">TQM</span><span class="sb s-pk">Outsourcing</span></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Jio's Disruption (2016):</strong> Reliance's Jio entry forced the entire Indian telecom industry to undergo transformative change. Airtel, Vodafone-Idea had to restructure, cut costs, adopt new technology, or face extinction. Result: Vodafone-Idea merged; smaller players exited; tariffs dropped 90%.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Lewin's 3-Step Change Model &#x2014; Visual</h5>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);flex:1;text-align:center"><strong>1. Unfreeze</strong><br><small>Break the status quo<br>Create urgency</small></div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4);flex:1;text-align:center"><strong>2. Change</strong><br><small>Implement new ways<br>Support &amp; train</small></div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);flex:1;text-align:center"><strong>3. Refreeze</strong><br><small>Anchor new behavior<br>Make it stick</small></div>
+</div>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: ICICI Bank's Digital Transformation</h5>
+<p>Under CEO Chanda Kochhar (2009-2018), ICICI Bank underwent massive digital change. <strong>Unfreeze:</strong> Customer complaints about branch wait times; fintech competitors emerging. <strong>Change:</strong> Launched iMobile app, digital wallets, paperless account opening, AI chatbot (iPal). Retrained 50,000+ employees on digital tools. <strong>Refreeze:</strong> Digital transactions grew from 30% to 90%+; branches transformed from transaction centers to advisory hubs. <strong>Resistance:</strong> Senior employees feared technology would replace them &#x2014; addressed through reskilling programs and showing how tech freed them for higher-value work. Today, ICICI is India's most digitally advanced bank.</p>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Lewin = Simple (3 steps). Kotter = Detailed (8 steps). ADKAR = Individual focus (5 letters).</strong><br>A common exam question asks you to compare these three models. Remember: Lewin gives the big picture, Kotter gives the roadmap, ADKAR focuses on individual change readiness.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Change is incremental or transformational; resistance is natural</li>
+<li>3 models: Lewin (Unfreeze-Change-Refreeze), Kotter (8 steps), ADKAR (5 elements)</li>
+<li>Resistance sources: Fear, control loss, ego, security, timing</li>
+<li>Forms: Restructuring, turnaround, M&amp;A, BPR, TQM, outsourcing</li>
+</ul></div>
+</div>
+
+<!-- UNIT 14 -->
+<h3 id="u14">Unit 14: Ethics and Corporate Social Responsibility</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 14: Ethics &amp; CSR</div><p>Ethics = moral principles guiding behavior. CSR = obligation to society beyond profit. India is one of few countries with MANDATORY CSR spending.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">▶ Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics in Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PB0rkltJx0w" title="Business Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Social Responsibility India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/AzHaDKZ-iiI" title="CSR India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Point 1: Evolution of CSR</h4>
+<div class="tl">
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1950s</div><div class="tl-c"><h5>Howard Bowen</h5><p>"Social Responsibilities of the Businessman" &#x2014; obligations beyond profit</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1960s</div><div class="tl-c"><h5>Keith Davis</h5><p>Business actions that are partially social in nature</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">1970s</div><div class="tl-c"><h5>Archie Carroll</h5><p>CSR Pyramid: Economic, Legal, Ethical, Discretionary</p></div></div>
+<div class="tl-i"><div class="tl-d"></div><div class="tl-y">2013</div><div class="tl-c"><h5>Companies Act 2013 (India)</h5><p>Section 135: Mandatory CSR spending of 2% of average net profits</p></div></div>
+</div>
+
+<h4>Point 2: CSR in India (Companies Act 2013, Section 135)</h4>
+<div class="igl">
+<h4>&#x1F4CA; Applicability Criteria (ANY one)</h4>
+<div class="br"><span class="sb s-b">Turnover &#x2265; &#x20B9;1,000 Cr</span><span class="sb s-g">Net Worth &#x2265; &#x20B9;500 Cr</span><span class="sb s-y">Net Profit &#x2265; &#x20B9;5 Cr</span></div>
+<h4 style="margin-top:1rem">Key Requirements</h4>
+<ul>
+<li>CSR Committee: minimum 3 directors (including at least 1 independent director)</li>
+<li>Spend 2% of average net profits of preceding 3 years on CSR activities</li>
+<li>Priority to local areas where company operates</li>
+<li>Activities as per Schedule VII (education, health, environment, rural development, etc.)</li>
+<li>Unspent amount must be transferred to specified funds</li>
+</ul>
+</div>
+
+<h4>Point 3: Carroll's CSR Pyramid</h4>
+<div class="py">
+<div class="py-l" style="width:25%;background:#f87171">Philanthropic<br><small>Be a good corporate citizen</small></div>
+<div class="py-l" style="width:42%;background:#fbbf24;color:#333">Ethical<br><small>Do what is right and just</small></div>
+<div class="py-l" style="width:58%;background:#34d399">Legal<br><small>Obey the law</small></div>
+<div class="py-l" style="width:74%;background:#5e8cf0">Economic<br><small>Be profitable (foundation)</small></div>
+</div>
+
+<h4>Point 4: Ethical Theories Applied to Business</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Theory</th><th>Principle</th><th>Application</th></tr></thead>
+<tbody>
+<tr><td><strong>Utilitarianism</strong></td><td>Maximize overall good for greatest number</td><td>Unilever's rural sales program benefiting millions</td></tr>
+<tr><td><strong>Deontology</strong></td><td>Moral rules regardless of consequences</td><td>Equal pay policies even when costly</td></tr>
+<tr><td><strong>Contractarian</strong></td><td>Mutual agreements serve self-interest</td><td>Suguna Foods contract farming model</td></tr>
+<tr><td><strong>Virtue Ethics</strong></td><td>Character-based; what a good person would do</td><td>Tata Group's integrity-first approach</td></tr>
+</tbody></table></div>
+
+<h4>Point 5: Benefits of CSR</h4>
+<div class="br"><span class="sb s-b">License to Operate</span><span class="sb s-g">Employee Attraction</span><span class="sb s-y">Reputation</span><span class="sb s-p">Risk Mitigation</span><span class="sb s-r">Supply Chain Security</span></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Case Studies</div>
+<p><strong>Tata Motors CSR:</strong> Tribal Transformation Project &#x2014; formed Farmers Producer Organizations with 26 SHGs. Result: &#x20B9;50L revenue, &#x20B9;5,000/quarter per farmer. Philosophy: "More from Less for More."</p>
+<p><strong>Narayana Health (Dr. Devi Shetty):</strong> Revolutionized cardiac care by making operations 1/10th the world cost &#x2014; affordable pricing (economic saving + social good) is utilitarian CSR at its best.</p>
+<p><strong>Infosys Foundation:</strong> Sudha Murty's work in education, healthcare, and rural development across Karnataka and other states. Built libraries, hospitals, and schools serving millions.</p>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Carroll's CSR Pyramid &#x2014; Visual Representation</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);width:35%;text-align:center">&#x1F91D; <strong>Philanthropic</strong><br><small>Be a good corporate citizen</small></div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4);width:50%;text-align:center">&#x2696; <strong>Ethical</strong><br><small>Do what is right and just</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);width:65%;text-align:center">&#x1F4DC; <strong>Legal</strong><br><small>Obey the law</small></div>
+<div class="vd-node" style="background:rgba(94,140,240,0.2);border:1px solid rgba(94,140,240,0.4);width:80%;text-align:center">&#x1F4B0; <strong>Economic</strong><br><small>Be profitable (foundation)</small></div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">A company must be profitable FIRST (economic) before it can fulfill higher responsibilities. The pyramid builds from bottom to top.</p>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Amul &#x2014; India's Greatest CSR Story</h5>
+<p>Amul (GCMMF) is arguably India's most impactful CSR success, though it wasn't called "CSR" when it started in 1946. <strong>Economic:</strong> 3.6 million dairy farmers earn livelihood through the cooperative model. <strong>Legal:</strong> Follows FSSAI standards, cooperative laws, and fair trade practices. <strong>Ethical:</strong> Pays farmers 80% of consumer price (vs. 40-50% in private dairies). No middlemen exploitation. <strong>Philanthropic:</strong> Dr. Verghese Kurien's "White Revolution" made India the world's largest milk producer, lifting millions out of poverty. Amul proves that a business can be supremely profitable AND deeply ethical. It's the living embodiment of Carroll's CSR Pyramid.</p>
+</div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>India's <strong>Section 135 of Companies Act 2013</strong> is the most examable topic in CSR. Remember: 2% of average net profits of preceding 3 years. Applicability: &#x20B9;1,000 Cr turnover OR &#x20B9;500 Cr net worth OR &#x20B9;5 Cr net profit. India is one of ONLY 3 countries with mandatory CSR (along with Mauritius and one other). This makes it a uniquely Indian management concept!</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Carroll's Pyramid:</strong> "Every Person Loves Eating Pizza" &#x2014; Economic, Philanthropic, Legal, Ethical. But remember the order from BOTTOM to TOP: Economic &#x2192; Legal &#x2192; Ethical &#x2192; Philanthropic. The foundation is profit; the pinnacle is giving back.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>CSR evolved from voluntary (Bowen, 1950s) to mandatory (India, 2013)</li>
+<li>India's Section 135: 2% of avg net profits for companies meeting thresholds</li>
+<li>Carroll's Pyramid: Economic &#x2192; Legal &#x2192; Ethical &#x2192; Philanthropic</li>
+<li>Ethical theories: Utilitarian, Deontological, Contractarian, Virtue</li>
+<li>Key examples: Tata Group, Narayana Health, Infosys Foundation</li>
+</ul></div>
+</div>
+
+</div><!-- /study-content -->
+</div><!-- /study-layout -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
+
+# Source materials (large, not needed for live site)
+mmpc 01/
+mmpc 02/
+mmpc 03/
+mmpc 04/
+mmpc 05/
+mmpc 06/
+mmpc 07/
+subject merged files/
+
+# Other
+.aionrs/
+.gemini/
+_cleanup/
+run.bat
+start-server.bat

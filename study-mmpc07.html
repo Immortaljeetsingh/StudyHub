@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-07: Business Communication | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+/* ===== MMPC-07 ENHANCED STYLES ===== */
+:root {
+    --mmpc07-accent: #E63946;
+    --mmpc07-ice: #A8DADC;
+    --mmpc07-steel: #457B9D;
+    --mmpc07-dark: #1D3557;
+    --mmpc07-gold: #F4A261;
+}
+
+body.subject-mmpc07 {
+    background: linear-gradient(135deg, #0a0a1a 0%, #0d1117 50%, #0a0f1a 100%) !important;
+    font-weight: 300;
+}
+
+/* Floating particles */
+body.subject-mmpc07::before,
+body.subject-mmpc07::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.3;
+}
+body.subject-mmpc07::before {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(168,218,220,0.12) 0%, transparent 70%);
+    top: 10%; left: 5%;
+    animation: floatParticle1 25s ease-in-out infinite;
+}
+body.subject-mmpc07::after {
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(230,57,70,0.08) 0%, transparent 70%);
+    bottom: 10%; right: 10%;
+    animation: floatParticle2 30s ease-in-out infinite;
+}
+@keyframes floatParticle1 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(60px,40px) scale(1.1); }
+    66% { transform: translate(-30px,80px) scale(0.9); }
+}
+@keyframes floatParticle2 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(-50px,-60px) scale(1.15); }
+}
+
+/* Fade-in on scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+/* Gradient underline on h3 */
+body.subject-mmpc07 h3 {
+    position: relative;
+    letter-spacing: -0.02em;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+body.subject-mmpc07 h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--mmpc07-accent), var(--mmpc07-ice), var(--mmpc07-steel), var(--mmpc07-accent));
+    background-size: 300% 100%;
+    border-radius: 2px;
+    animation: gradientShift 4s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Card hover effects */
+body.subject-mmpc07 .cc,
+body.subject-mmpc07 .callout {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.subject-mmpc07 .cc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(168,218,220,0.15);
+}
+body.subject-mmpc07 .callout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(69,123,157,0.12);
+}
+
+/* Heading accent color */
+body.subject-mmpc07 h1 {
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #f0f0f5 0%, var(--mmpc07-ice) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+body.subject-mmpc07 h2 {
+    color: var(--mmpc07-ice) !important;
+    letter-spacing: -0.02em;
+    border-left: 4px solid var(--mmpc07-accent);
+    padding-left: 1rem;
+}
+
+/* Visual diagram boxes */
+.visual-diagram {
+    background: linear-gradient(135deg, rgba(29,53,87,0.4) 0%, rgba(13,17,23,0.6) 100%);
+    border: 1px solid rgba(168,218,220,0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+.visual-diagram .diagram-title {
+    color: var(--mmpc07-ice);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+.visual-diagram svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flow diagram enhanced */
+body.subject-mmpc07 .fc-s {
+    background: linear-gradient(135deg, rgba(69,123,157,0.3), rgba(29,53,87,0.3)) !important;
+    border: 1px solid rgba(168,218,220,0.2) !important;
+    transition: all 0.3s ease;
+}
+body.subject-mmpc07 .fc-s:hover {
+    border-color: var(--mmpc07-ice) !important;
+    box-shadow: 0 0 15px rgba(168,218,220,0.2);
+}
+
+/* Callout color overrides */
+body.subject-mmpc07 .callout-definition {
+    border-left-color: var(--mmpc07-steel) !important;
+}
+body.subject-mmpc07 .callout-important {
+    border-left-color: var(--mmpc07-accent) !important;
+}
+body.subject-mmpc07 .callout-example {
+    border-left-color: var(--mmpc07-gold) !important;
+}
+body.subject-mmpc07 .callout-mnemonic {
+    border-left-color: #a78bfa !important;
+}
+
+/* Enhanced table */
+body.subject-mmpc07 .comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+body.subject-mmpc07 .comparison-table thead th {
+    background: linear-gradient(135deg, var(--mmpc07-dark), var(--mmpc07-steel)) !important;
+    color: var(--mmpc07-ice) !important;
+}
+
+/* Study header enhanced */
+body.subject-mmpc07 .study-header {
+    background: linear-gradient(135deg, rgba(29,53,87,0.6), rgba(13,17,23,0.8)) !important;
+    border-bottom: 2px solid var(--mmpc07-accent);
+}
+body.subject-mmpc07 .subject-tag {
+    background: var(--mmpc07-accent) !important;
+}
+
+/* Video section styles */
+.video-section { margin: 2rem 0; }
+.video-section h4 { color: #E63946; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
+.video-section h4::before { content: '\1F3AC'; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(230,57,70,0.08); border: 1px solid rgba(230,57,70,0.2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(230,57,70,0.2); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(230,57,70,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #ffe0e0; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #111; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.video-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(230,57,70,0.1), rgba(29,53,87,0.3)); cursor: pointer; }
+.video-placeholder::after { content: '\25B6'; font-size: 3rem; color: rgba(255,255,255,0.7); transition: transform 0.2s; }
+.video-placeholder:hover::after { transform: scale(1.2); color: #fff; }
+.video-toggle { background: linear-gradient(135deg, #E63946, #457B9D); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+</style>
+</head>
+<body class="subject-mmpc07">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-07'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#128214; MMPC-07</span></div>
+<nav class="sidebar-nav">
+<a href="#unit1">Unit 1: Basics of Communication</a>
+<a href="#unit2">Unit 2: Process of Communication</a>
+<a href="#unit3">Unit 3: Types of Communication</a>
+<a href="#unit4">Unit 4: Workplace Communication</a>
+<a href="#unit5">Unit 5: Listening & Reading Skills</a>
+<a href="#unit6">Unit 6: Interpersonal Communication</a>
+<a href="#unit7">Unit 7: Communication in Meetings</a>
+<a href="#unit8">Unit 8: Presentation Skills</a>
+<a href="#unit9">Unit 9: Written Business Communication</a>
+<a href="#unit10">Unit 10: Short Business Correspondence</a>
+<a href="#unit11">Unit 11: Long Business Correspondence</a>
+<a href="#unit12">Unit 12: Communication for Employment</a>
+<a href="#unit13">Unit 13: Technology & Communication</a>
+<a href="#unit14">Unit 14: Cross-Cultural Communication</a>
+<a href="#unit15">Unit 15: Ethics in Communication</a>
+<a href="quiz-mmpc07.html" class="back-link">&#128221; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#8592; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-07</span><h1>Business Communication</h1><p>Comprehensive Study Notes &bull; Diagrams &bull; Examples &bull; Mnemonics</p></div>
+
+<!-- ===== UNIT 1 ===== -->
+<h2 id="unit1">Unit 1: Basics of Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#128172; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Communication is the process of exchanging information, ideas, thoughts, feelings, and emotions between two or more persons through verbal, written, or non-verbal means to achieve mutual understanding.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/0PnpiZeiMlI"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Communication - Verbal & Non-Verbal</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/ykTuooKDVRU"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>7 C's of Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/cgfvMWq8WV8"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Communication Models - Shannon Weaver, Berlo</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/-IEqmozmJ1U"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Nature and Importance of Communication</h3>
+<p>Communication is the lifeblood of any organization. It serves as the foundation for all managerial functions — planning, organizing, staffing, directing, and controlling cannot exist without effective communication.</p>
+<ul>
+<li><strong>Coordination</strong>: Aligns efforts of individuals toward common organizational goals</li>
+<li><strong>Decision-Making</strong>: Provides the information base for sound decisions</li>
+<li><strong>Motivation</strong>: Clarifies roles, expectations, and feedback to employees</li>
+<li><strong>Relationship Building</strong>: Fosters trust between management and workforce</li>
+<li><strong>Change Management</strong>: Facilitates smooth implementation of organizational changes</li>
+</ul>
+
+<h3>Point 2: Evolution of Communication</h3>
+<table class="comparison-table">
+<thead><tr><th>Era</th><th>Method</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td><strong>Prehistoric</strong></td><td>Cave paintings, symbols</td><td>Earliest recorded expression of ideas</td></tr>
+<tr><td><strong>Ancient</strong></td><td>Smoke signals, carrier pigeons</td><td>Long-distance messaging without written language</td></tr>
+<tr><td><strong>Medieval</strong></td><td>Postal systems (Egypt, Rome, Persia)</td><td>Organized institutional communication</td></tr>
+<tr><td><strong>15th Century</strong></td><td>Gutenberg's printing press (1440)</td><td>Mass dissemination of knowledge</td></tr>
+<tr><td><strong>19th Century</strong></td><td>Telegraph, telephone</td><td>Instantaneous long-distance communication</td></tr>
+<tr><td><strong>20th Century</strong></td><td>Radio, television, internet</td><td>Mass media and global connectivity</td></tr>
+<tr><td><strong>21st Century</strong></td><td>Social media, AI, VR</td><td>Interactive, personalized, real-time communication</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: Elements of Communication</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Sender<br><small>Encodes idea</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Message<br><small>Content</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Channel<br><small>Medium</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Receiver<br><small>Decodes</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Feedback<br><small>Response</small></div></div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p><strong>Noise</strong> is any interference that distorts the message during transmission. Types: Physical (loud sounds), Psychological (prejudice), Semantic (jargon), Technical (poor internet).</p></div>
+
+<h3>Point 4: General vs Business Communication</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#127793; General Communication</h5><ul>
+<li>Personal and informal in nature</li>
+<li>Flexible format and structure</li>
+<li>No specific rules or conventions</li>
+<li>Emotional expression is common</li>
+<li>Example: Chatting with friends about weekend plans</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#128188; Business Communication</h5><ul>
+<li>Professional and formal tone</li>
+<li>Goal-oriented and task-focused</li>
+<li>Follows specific conventions and protocols</li>
+<li>Concise, clear, and documented</li>
+<li>Example: Sending a quarterly sales report to management</li>
+</ul></div>
+</div>
+
+<h3>Point 5: 7C's of Communication</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Clarity<br><small>Clear message</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Conciseness<br><small>Brief</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Concreteness<br><small>Specific</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Correctness<br><small>Accurate</small></div></div>
+</div>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Coherence<br><small>Logical flow</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Completeness<br><small>All info</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Courtesy<br><small>Polite</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"7 C's"</strong> — Clarity, Conciseness, Concreteness, Correctness, Coherence, Completeness, Courtesy. Remember: <strong>"C-Cubed-4C"</strong> — first 3 C's (CCC) + next 4 C's (CCCC).</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Tata Group</strong> follows the 7C's principle in all internal communication. Ratan Tata's letter to employees during the Nano project setback exemplified Clarity ("We will overcome"), Conciseness (one page), and Courtesy (acknowledging team effort).</p></div>
+
+<h3>Point 6: Communication Models &#8212; Quick Reference</h3>
+<table class="comparison-table">
+<thead><tr><th>Model</th><th>Year</th><th>Key Feature</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>Shannon-Weaver</strong></td><td>1948</td><td>Linear, introduced noise concept</td><td>No feedback; one-way</td></tr>
+<tr><td><strong>Berlo's SMCR</strong></td><td>1960</td><td>Source-Message-Channel-Receiver</td><td>Assumes communication skills are innate</td></tr>
+<tr><td><strong>Schramm's Model</strong></td><td>1954</td><td>Added feedback loop; field of experience</td><td>Overly simplified</td></tr>
+<tr><td><strong>Osgood-Schramm</strong></td><td>1954</td><td>Circular model; both parties encode/decode</td><td>Best for interpersonal, not mass</td></tr>
+<tr><td><strong>Transactional Model</strong></td><td>1970s</td><td>Simultaneous sending/receiving; context matters</td><td>Complex to analyze</td></tr>
+</tbody>
+</table>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"BS-SOT"</strong> for communication models in order — <strong>B</strong>erlo (1960), <strong>S</strong>chramm (1954), <strong>S</strong>hannon (1948), <strong>O</strong>sgood (1954), <strong>T</strong>ransactional (1970s). Remember: <strong>"Big Studios Shoot On Tuesday"</strong>.</p></div>
+
+<h3>Point 7: Case Study &#8212; Infosys Communication Transformation</h3>
+<div class="callout callout-example"><div class="callout-label">&#128218; Case Study</div><p><strong>Problem:</strong> In 2015, Infosys faced communication challenges with 200,000+ employees across 46 countries. Email overload, cultural miscommunication, and delayed decision-making were costing projects.</p>
+<p><strong>Solution:</strong> They implemented a unified communication platform (collaboration tools + video conferencing), introduced "Communication Champions" in each unit, and trained managers in cross-cultural communication.</p>
+<p><strong>Result:</strong> 35% reduction in email volume, 40% faster decision-making, and employee satisfaction scores improved by 22%. This case demonstrates how organizational communication directly impacts business outcomes.</p></div>
+</div>
+
+<!-- ===== UNIT 2 ===== -->
+<h2 id="unit2">Unit 2: Process of Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#128172; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>The communication process is a systematic, cyclical sequence of events where a sender encodes a message, transmits it through a channel, the receiver decodes it, and provides feedback — all subject to potential noise interference.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Communication Process Explained</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/0PnpiZeiMlI"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Shannon Weaver Model in Detail</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/IxcCovSPbRI"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Barriers to Effective Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/FxIwXNmijJw"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Overcoming Communication Barriers</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/XDCalNfW090"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Shannon-Weaver Model of Communication</h3>
+<div class="visual-diagram">
+<div class="diagram-title">&#128225; Communication Process Model</div>
+<svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<!-- Sender -->
+<rect x="10" y="60" width="110" height="60" rx="10" fill="#1D3557" stroke="#A8DADC" stroke-width="2" filter="url(#glow)"/>
+<text x="65" y="85" text-anchor="middle" fill="#A8DADC" font-size="13" font-weight="600">Sender</text>
+<text x="65" y="103" text-anchor="middle" fill="#8899aa" font-size="10">Encodes Idea</text>
+<!-- Arrow 1 -->
+<line x1="125" y1="90" x2="175" y2="90" stroke="#E63946" stroke-width="2" marker-end="url(#arrowR)"/>
+<!-- Message -->
+<rect x="180" y="60" width="110" height="60" rx="10" fill="#1D3557" stroke="#F4A261" stroke-width="2"/>
+<text x="235" y="85" text-anchor="middle" fill="#F4A261" font-size="13" font-weight="600">Message</text>
+<text x="235" y="103" text-anchor="middle" fill="#8899aa" font-size="10">Content + Symbols</text>
+<!-- Arrow 2 -->
+<line x1="295" y1="90" x2="345" y2="90" stroke="#E63946" stroke-width="2"/>
+<defs><marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#E63946"/></marker></defs>
+<!-- Channel -->
+<rect x="350" y="60" width="110" height="60" rx="10" fill="#1D3557" stroke="#457B9D" stroke-width="2"/>
+<text x="405" y="85" text-anchor="middle" fill="#457B9D" font-size="13" font-weight="600">Channel</text>
+<text x="405" y="103" text-anchor="middle" fill="#8899aa" font-size="10">Medium of Transfer</text>
+<!-- Arrow 3 -->
+<line x1="465" y1="90" x2="515" y2="90" stroke="#E63946" stroke-width="2"/>
+<!-- Receiver -->
+<rect x="520" y="60" width="110" height="60" rx="10" fill="#1D3557" stroke="#A8DADC" stroke-width="2" filter="url(#glow)"/>
+<text x="575" y="85" text-anchor="middle" fill="#A8DADC" font-size="13" font-weight="600">Receiver</text>
+<text x="575" y="103" text-anchor="middle" fill="#8899aa" font-size="10">Decodes Message</text>
+<!-- Feedback arrow -->
+<path d="M 575 130 Q 405 165 65 130" stroke="#34d399" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+<text x="320" y="160" text-anchor="middle" fill="#34d399" font-size="11" font-weight="600">Feedback Loop</text>
+<!-- Noise -->
+<rect x="320" y="10" width="170" height="35" rx="8" fill="rgba(230,57,70,0.15)" stroke="#E63946" stroke-width="1.5"/>
+<text x="405" y="33" text-anchor="middle" fill="#E63946" font-size="11" font-weight="600">&#9888; Noise / Interference</text>
+<line x1="380" y1="45" x2="405" y2="60" stroke="#E63946" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
+</div>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Information Source<br><small>Sender's idea</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Transmitter<br><small>Encodes</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Channel<br><small>Medium</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Receiver<br><small>Decodes</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Destination<br><small>Understands</small></div></div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p><strong>Noise</strong> enters at ANY point in the process. It is the single biggest reason for communication failure. The model emphasizes that communication is NOT complete until <strong>feedback</strong> is received.</p></div>
+
+<h3>Point 2: Encoding and Decoding</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#128273; Encoding</h5><ul>
+<li>Converting thoughts into symbols (words, images, gestures)</li>
+<li>Sender's vocabulary, education, and culture influence encoding</li>
+<li>Poor encoding = misunderstood message</li>
+<li>Example: A manager using technical jargon with non-technical staff</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#128274; Decoding</h5><ul>
+<li>Interpreting symbols back into meaningful ideas</li>
+<li>Receiver's background affects interpretation</li>
+<li>Requires active listening and attention</li>
+<li>Example: Employee misunderstanding "ASAP" as "by end of day" vs "immediately"</li>
+</ul></div>
+</div>
+
+<h3>Point 3: Types of Noise (Barriers)</h3>
+<table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Indian Workplace Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Physical</strong></td><td>External environmental interference</td><td>Construction noise outside office during client call</td></tr>
+<tr><td><strong>Psychological</strong></td><td>Internal mental barriers</td><td>Employee's prejudice against new manager's ideas</td></tr>
+<tr><td><strong>Semantic</strong></td><td>Language and meaning differences</td><td>Using "table the discussion" (means opposite in US vs UK)</td></tr>
+<tr><td><strong>Technical</strong></td><td>Equipment or technology failures</td><td>Zoom call dropping during quarterly review presentation</td></tr>
+<tr><td><strong>Organizational</strong></td><td>Structural barriers</td><td>Information passing through 5 hierarchy levels at Indian Railways</td></tr>
+<tr><td><strong>Cultural</strong></td><td>Different norms and values</td><td>Indian nodding head (meaning "I hear you") vs Western "I agree"</td></tr>
+</tbody>
+</table>
+
+<h3>Point 4: Feedback — The Critical Loop</h3>
+<p>Feedback transforms one-way transmission into two-way communication. Without feedback, the sender cannot confirm understanding.</p>
+<ul>
+<li><strong>Positive Feedback</strong>: Confirmation of understanding ("Got it, will proceed")</li>
+<li><strong>Negative Feedback</strong>: Signals misunderstanding ("Can you clarify what you mean?")</li>
+<li><strong>Delayed Feedback</strong>: Response after time gap (email reply after 2 days)</li>
+<li><strong>Immediate Feedback</strong>: Real-time response (nodding during face-to-face meeting)</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Infosys</strong> implemented a "Feedback Friday" system where every team member gives structured feedback to peers weekly. This improved communication effectiveness by 40% and reduced project rework by 25%.</p></div>
+
+<h3>Point 5: Overcoming Communication Barriers</h3>
+<ol>
+<li><strong>Simplify Language</strong>: Avoid jargon; use words the receiver understands</li>
+<li><strong>Active Listening</strong>: Focus completely on the speaker; don't plan your response while they talk</li>
+<li><strong>Choose the Right Channel</strong>: Sensitive news in person, not over email</li>
+<li><strong>Encourage Feedback</strong>: Ask "Do you have any questions?" genuinely</li>
+<li><strong>Be Aware of Cultural Context</strong>: Adapt style to audience background</li>
+<li><strong>Use Multiple Channels</strong>: Follow up verbal instructions with written summary</li>
+</ol>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"SCALe"</strong> for overcoming barriers — <strong>S</strong>implify language, <strong>C</strong>hoose right channel, <strong>A</strong>ctive listening, <strong>L</strong>oop feedback.</p></div>
+</div>
+
+<!-- ===== UNIT 3 ===== -->
+<h2 id="unit3">Unit 3: Types of Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#128172; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Communication can be classified along multiple dimensions: verbal vs non-verbal, oral vs written, formal vs informal, and internal vs external. Each type serves different purposes and has distinct advantages.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Verbal vs Non-Verbal Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/FHjuNqGu8BM"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Nonverbal Communication & Body Language</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/l43YbdbslQs"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Formal vs Informal Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/Z1IyazuG0ag"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Oral vs Written Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/anhUDrxOu0A"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Verbal vs Non-Verbal Communication</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#128172; Verbal Communication</h5><ul>
+<li>Uses spoken or written words</li>
+<li>Direct and explicit meaning</li>
+<li>Can be recorded and referenced later</li>
+<li>Accounts for only <strong>7%</strong> of emotional impact (Mehrabian's rule)</li>
+<li>Examples: speeches, letters, emails, reports, phone calls</li>
+</ul></div>
+<div class="cc"><h5 style="color:#f472b6">&#128173; Non-Verbal Communication</h5><ul>
+<li>Uses body language, facial expressions, gestures, tone</li>
+<li>Subtle and often unconscious</li>
+<li>Accounts for <strong>55%</strong> body language + <strong>38%</strong> tone of voice</li>
+<li>Culture-specific interpretations</li>
+<li>Examples: eye contact, posture, handshake, dress, silence</li>
+</ul></div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p><strong>Mehrabian's 7-38-55 Rule</strong>: In face-to-face communication of feelings and attitudes, 7% is verbal, 38% is vocal (tone), and 55% is visual (body language). This means <strong>93% of emotional communication is non-verbal</strong>.</p></div>
+<div class="visual-diagram">
+<div class="diagram-title">&#128065; Mehrabian's Communication Breakdown</div>
+<svg viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Bar chart -->
+<rect x="50" y="20" width="80" height="90" rx="6" fill="#457B9D" opacity="0.9"/>
+<text x="90" y="75" text-anchor="middle" fill="white" font-size="22" font-weight="700">7%</text>
+<text x="90" y="130" text-anchor="middle" fill="#A8DADC" font-size="11">Verbal</text>
+<text x="90" y="10" text-anchor="middle" fill="#8899aa" font-size="10">Words</text>
+<rect x="170" y="20" width="80" height="90" rx="6" fill="#E63946" opacity="0.85"/>
+<text x="210" y="75" text-anchor="middle" fill="white" font-size="22" font-weight="700">38%</text>
+<text x="210" y="130" text-anchor="middle" fill="#A8DADC" font-size="11">Vocal</text>
+<text x="210" y="10" text-anchor="middle" fill="#8899aa" font-size="10">Tone of Voice</text>
+<rect x="290" y="20" width="80" height="90" rx="6" fill="#F4A261" opacity="0.85"/>
+<text x="330" y="75" text-anchor="middle" fill="white" font-size="22" font-weight="700">55%</text>
+<text x="330" y="130" text-anchor="middle" fill="#A8DADC" font-size="11">Visual</text>
+<text x="330" y="10" text-anchor="middle" fill="#8899aa" font-size="10">Body Language</text>
+<!-- Highlight -->
+<rect x="270" y="5" width="120" height="125" rx="8" fill="none" stroke="#F4A261" stroke-width="2" stroke-dasharray="5,3"/>
+<text x="440" y="65" text-anchor="middle" fill="#F4A261" font-size="12" font-weight="600">93% is</text>
+<text x="440" y="82" text-anchor="middle" fill="#F4A261" font-size="12" font-weight="600">NON-VERBAL</text>
+</svg>
+</div>
+
+<div class="visual-diagram">
+<div class="diagram-title">&#128173; Non-Verbal Communication Dimensions</div>
+<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
+<circle cx="80" cy="50" r="35" fill="#1D3557" stroke="#A8DADC" stroke-width="2"/>
+<text x="80" y="45" text-anchor="middle" fill="#A8DADC" font-size="9" font-weight="600">Kinesics</text>
+<text x="80" y="58" text-anchor="middle" fill="#8899aa" font-size="8">Gestures</text>
+<circle cx="200" cy="50" r="35" fill="#1D3557" stroke="#E63946" stroke-width="2"/>
+<text x="200" y="45" text-anchor="middle" fill="#E63946" font-size="9" font-weight="600">Proxemics</text>
+<text x="200" y="58" text-anchor="middle" fill="#8899aa" font-size="8">Space</text>
+<circle cx="320" cy="50" r="35" fill="#1D3557" stroke="#F4A261" stroke-width="2"/>
+<text x="320" y="45" text-anchor="middle" fill="#F4A261" font-size="9" font-weight="600">Haptics</text>
+<text x="320" y="58" text-anchor="middle" fill="#8899aa" font-size="8">Touch</text>
+<circle cx="440" cy="50" r="35" fill="#1D3557" stroke="#a78bfa" stroke-width="2"/>
+<text x="440" y="45" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="600">Chronemics</text>
+<text x="440" y="58" text-anchor="middle" fill="#8899aa" font-size="8">Time</text>
+<circle cx="550" cy="50" r="35" fill="#1D3557" stroke="#34d399" stroke-width="2"/>
+<text x="550" y="45" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">Paralanguage</text>
+<text x="550" y="58" text-anchor="middle" fill="#8899aa" font-size="8">Voice</text>
+<text x="320" y="110" text-anchor="middle" fill="#8899aa" font-size="10" font-style="italic">Culture-specific interpretations apply to all dimensions</text>
+</svg>
+</div>
+
+<h3>Point 2: Formal vs Informal Communication</h3>
+<table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Formal</th><th>Informal (Grapevine)</th></tr></thead>
+<tbody>
+<tr><td><strong>Channel</strong></td><td>Official hierarchy</td><td>Personal networks</td></tr>
+<tr><td><strong>Speed</strong></td><td>Slower (follows protocol)</td><td>Faster (no chain)</td></tr>
+<tr><td><strong>Accuracy</strong></td><td>High (documented)</td><td>Variable (distortion risk)</td></tr>
+<tr><td><strong>Flexibility</strong></td><td>Rigid structure</td><td>Highly flexible</td></tr>
+<tr><td><strong>Record</strong></td><td>Written documentation</td><td>No formal record</td></tr>
+<tr><td><strong>Example</strong></td><td>Board meeting minutes</td><td>Tea-break gossip about promotions</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: Oral vs Written Communication</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#127908; Oral Communication</h5><ul>
+<li>Immediate feedback possible</li>
+<li>Personal touch and emotional expression</li>
+<li>Tone and body language add meaning</li>
+<li>Difficult to retract once spoken</li>
+<li>Suitable for: discussions, negotiations, interviews</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#128221; Written Communication</h5><ul>
+<li>Creates permanent record</li>
+<li>Precise, detailed, and legal evidence</li>
+<li>Time to think, revise, and perfect</li>
+<li>No immediate feedback</li>
+<li>Suitable for: contracts, policies, formal reports</li>
+</ul></div>
+</div>
+
+<h3>Point 4: Internal vs External Communication</h3>
+<ul>
+<li><strong>Internal</strong>: Within organization — memos, notices, team meetings, intranet, circulars</li>
+<li><strong>External</strong>: With outside parties — press releases, advertisements, annual reports, proposals</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Reliance Jio</strong> uses internal communication via their employee app "MyJio" for 50,000+ employees, while external communication includes massive advertising campaigns and investor presentations.</p></div>
+</div>
+
+<!-- ===== UNIT 4 ===== -->
+<h2 id="unit4">Unit 4: Forms of Communication at Workplace</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#128172; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Workplace communication flows through formal channels (downward, upward, horizontal, diagonal) and informal channels (grapevine). The direction, tone, and medium depend on the organizational structure and culture.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Workplace Communication Channels</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/7RqPQlk8vic"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Grapevine Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/alGby-V4qGw"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Team Communication Skills</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/vULoIGxBYA4"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Directional Communication Flow</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">&#8595;</div><div class="fc-l">Downward<br><small>Superior &#8594; Subordinate</small></div></div>
+<div class="fc-a">&nbsp;</div>
+<div class="fc-s"><div class="fc-n">&#8593;</div><div class="fc-l">Upward<br><small>Subordinate &#8594; Superior</small></div></div>
+<div class="fc-a">&nbsp;</div>
+<div class="fc-s"><div class="fc-n">&#8596;</div><div class="fc-l">Horizontal<br><small>Peer &#8594; Peer</small></div></div>
+<div class="fc-a">&nbsp;</div>
+<div class="fc-s"><div class="fc-n">&#8600;</div><div class="fc-l">Diagonal<br><small>Cross-level/Dept</small></div></div>
+</div>
+
+<table class="comparison-table">
+<thead><tr><th>Direction</th><th>Purpose</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td><strong>Downward</strong></td><td>Instructions, policies, feedback</td><td>CEO's email to all staff; manager giving targets</td></tr>
+<tr><td><strong>Upward</strong></td><td>Reports, suggestions, grievances</td><td>Employee feedback form; monthly status report</td></tr>
+<tr><td><strong>Horizontal</strong></td><td>Coordination, cooperation</td><td>Marketing and Sales discussing campaign launch</td></tr>
+<tr><td><strong>Diagonal</strong></td><td>Cross-functional coordination</td><td>IT support person contacting Finance head directly</td></tr>
+</tbody>
+</table>
+
+<h3>Point 2: Grapevine (Informal Communication)</h3>
+<p>Keith Davis identified 4 types of grapevine:</p>
+<ul>
+<li><strong>Single Strand</strong>: A tells B, B tells C, C tells D (serial chain)</li>
+<li><strong>Gossip Chain</strong>: One person tells everyone (A &#8594; B, C, D, E)</li>
+<li><strong>Probability Chain</strong>: Random sharing (each tells random others)</li>
+<li><strong>Cluster Chain</strong>: Most common — A tells selected friends, who tell their friends</li>
+</ul>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p>Grapevine is <strong>NOT always inaccurate</strong>. Research shows it is 75-90% accurate. Managers should use it strategically to gauge employee sentiment and disseminate information that doesn't need formal documentation.</p></div>
+<div class="visual-diagram">
+<div class="diagram-title">&#128101; Grapevine Communication Networks (Keith Davis)</div>
+<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Single Strand -->
+<g transform="translate(30,10)">
+<text x="45" y="0" text-anchor="middle" fill="#A8DADC" font-size="9" font-weight="600">Single Strand</text>
+<circle cx="10" cy="30" r="10" fill="#457B9D"/><circle cx="45" cy="30" r="10" fill="#457B9D"/><circle cx="80" cy="30" r="10" fill="#457B9D"/>
+<line x1="20" y1="30" x2="35" y2="30" stroke="#A8DADC" stroke-width="1.5"/><line x1="55" y1="30" x2="70" y2="30" stroke="#A8DADC" stroke-width="1.5"/>
+<text x="10" y="34" text-anchor="middle" fill="white" font-size="8">A</text><text x="45" y="34" text-anchor="middle" fill="white" font-size="8">B</text><text x="80" y="34" text-anchor="middle" fill="white" font-size="8">C</text>
+<text x="45" y="65" text-anchor="middle" fill="#667788" font-size="8">A&#8594;B&#8594;C&#8594;D</text>
+</g>
+<!-- Gossip Chain -->
+<g transform="translate(180,10)">
+<text x="45" y="0" text-anchor="middle" fill="#A8DADC" font-size="9" font-weight="600">Gossip Chain</text>
+<circle cx="45" cy="25" r="10" fill="#E63946"/>
+<text x="45" y="29" text-anchor="middle" fill="white" font-size="8">A</text>
+<circle cx="15" cy="55" r="8" fill="#457B9D"/><circle cx="45" cy="55" r="8" fill="#457B9D"/><circle cx="75" cy="55" r="8" fill="#457B9D"/>
+<line x1="38" y1="35" x2="18" y2="47" stroke="#E63946" stroke-width="1"/><line x1="45" y1="35" x2="45" y2="47" stroke="#E63946" stroke-width="1"/><line x1="52" y1="35" x2="72" y2="47" stroke="#E63946" stroke-width="1"/>
+<text x="15" y="59" text-anchor="middle" fill="white" font-size="7">B</text><text x="45" y="59" text-anchor="middle" fill="white" font-size="7">C</text><text x="75" y="59" text-anchor="middle" fill="white" font-size="7">D</text>
+<text x="45" y="82" text-anchor="middle" fill="#667788" font-size="8">A tells everyone</text>
+</g>
+<!-- Cluster Chain -->
+<g transform="translate(340,10)">
+<text x="55" y="0" text-anchor="middle" fill="#A8DADC" font-size="9" font-weight="600">Cluster Chain</text>
+<circle cx="55" cy="25" r="10" fill="#34d399"/>
+<text x="55" y="29" text-anchor="middle" fill="white" font-size="8">A</text>
+<circle cx="25" cy="55" r="8" fill="#457B9D"/><circle cx="85" cy="55" r="8" fill="#457B9D"/>
+<line x1="48" y1="35" x2="28" y2="47" stroke="#34d399" stroke-width="1.5"/><line x1="62" y1="35" x2="82" y2="47" stroke="#34d399" stroke-width="1.5"/>
+<text x="25" y="59" text-anchor="middle" fill="white" font-size="7">B</text><text x="85" y="59" text-anchor="middle" fill="white" font-size="7">C</text>
+<circle cx="5" cy="85" r="6" fill="#1D3557" stroke="#457B9D" stroke-width="1"/><circle cx="45" cy="85" r="6" fill="#1D3557" stroke="#457B9D" stroke-width="1"/>
+<line x1="22" y1="63" x2="8" y2="79" stroke="#457B9D" stroke-width="1"/><line x1="28" y1="63" x2="42" y2="79" stroke="#457B9D" stroke-width="1"/>
+<text x="55" y="100" text-anchor="middle" fill="#34d399" font-size="8" font-weight="600">Most Common &#9733;</text>
+</g>
+<!-- Probability -->
+<g transform="translate(510,10)">
+<text x="40" y="0" text-anchor="middle" fill="#A8DADC" font-size="9" font-weight="600">Probability</text>
+<circle cx="40" cy="30" r="10" fill="#F4A261"/>
+<text x="40" y="34" text-anchor="middle" fill="white" font-size="8">A</text>
+<circle cx="10" cy="60" r="7" fill="#457B9D"/><circle cx="40" cy="60" r="7" fill="#457B9D"/><circle cx="70" cy="60" r="7" fill="#457B9D"/>
+<line x1="35" y1="40" x2="13" y2="53" stroke="#F4A261" stroke-width="1" stroke-dasharray="3,2"/><line x1="40" y1="40" x2="40" y2="53" stroke="#F4A261" stroke-width="1" stroke-dasharray="3,2"/><line x1="45" y1="40" x2="67" y2="53" stroke="#F4A261" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="40" y="85" text-anchor="middle" fill="#667788" font-size="8">Random sharing</text>
+</g>
+</svg>
+</div>
+
+<h3>Point 3: Levels of Formality</h3>
+<table class="comparison-table">
+<thead><tr><th>Level</th><th>Examples</th><th>Language</th></tr></thead>
+<tbody>
+<tr><td><strong>Highly Formal</strong></td><td>Legal contracts, board resolutions</td><td>Legal/technical terminology</td></tr>
+<tr><td><strong>Moderately Formal</strong></td><td>Business letters, meeting minutes</td><td>Professional but accessible</td></tr>
+<tr><td><strong>Informal</strong></td><td>Office chats, team Slack messages</td><td>Conversational, abbreviations OK</td></tr>
+<tr><td><strong>Highly Informal</strong></td><td>Personal conversations, jokes</td><td>Slang, colloquial language</td></tr>
+</tbody>
+</table>
+
+<h3>Point 4: Effective Workplace Communication Skills</h3>
+<ol>
+<li><strong>Professional Language</strong>: Appropriate vocabulary and tone for the audience</li>
+<li><strong>Active Listening</strong>: Full attention without interruption</li>
+<li><strong>Clarity and Conciseness</strong>: Say more with fewer words</li>
+<li><strong>Respect and Courtesy</strong>: Even during disagreements</li>
+<li><strong>Cultural Sensitivity</strong>: India's diversity demands awareness of regional differences</li>
+<li><strong>Adaptability</strong>: Shift from formal to informal based on context</li>
+</ol>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>TCS</strong> trains all new hires in "Communication Excellence" covering email etiquette, meeting behavior, and cross-cultural awareness — recognizing that 80% of their workforce interacts with global clients.</p></div>
+</div>
+
+<!-- ===== UNIT 5 ===== -->
+<h2 id="unit5">Unit 5: Listening and Reading Skills</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#128172; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Listening is the active process of receiving, constructing meaning from, and responding to spoken messages. It is NOT the same as hearing — hearing is passive, listening is active and requires effort.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Active Listening Skills</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/MRX0yV_jkyA"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Listening</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/6imv5-2ZxCA"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Reading Skills - Skimming & Scanning</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/LaIOy2NQnkk"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: The Listening Gap</h3>
+<ul>
+<li>We spend <strong>45%</strong> of communication time listening (more than any other activity)</li>
+<li>Immediately after hearing, we retain only <strong>50%</strong> of the message</li>
+<li>After 48 hours, retention drops to <strong>25%</strong> — and half of that is wrong</li>
+<li>Most managers listen at only <strong>25% efficiency</strong></li>
+</ul>
+
+<h3>Point 2: Types of Listening</h3>
+<table class="comparison-table">
+<thead><tr><th>Type</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Active Listening</strong></td><td>Full engagement, feedback</td><td>Manager listening to employee's problem with full attention</td></tr>
+<tr><td><strong>Passive Listening</strong></td><td>Minimal engagement</td><td>Hearing background music while working</td></tr>
+<tr><td><strong>Empathic Listening</strong></td><td>Understanding feelings</td><td>Counselor listening to stressed employee</td></tr>
+<tr><td><strong>Critical Listening</strong></td><td>Evaluating content</td><td>Investor analyzing quarterly earnings call</td></tr>
+<tr><td><strong>Appreciative Listening</strong></td><td>Enjoyment</td><td>Listening to motivational speaker at conference</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: Barriers to Effective Listening</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#f87171">&#128683; External Barriers</h5><ul>
+<li>Noise, distractions, poor acoustics</li>
+<li>Uncomfortable room temperature</li>
+<li>Technology interruptions (phone notifications)</li>
+</ul></div>
+<div class="cc"><h5 style="color:#fbbf24">&#129504; Internal Barriers</h5><ul>
+<li>Prejudices and biases</li>
+<li>Emotional state (anger, anxiety)</li>
+<li>Fatigue and information overload</li>
+<li>Rehearsing response instead of listening</li>
+</ul></div>
+</div>
+
+<h3>Point 4: Active Listening Techniques (SOLER Model)</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">S</div><div class="fc-l">Sit squarely<br><small>Face the speaker</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">O</div><div class="fc-l">Open posture<br><small>No crossed arms</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">L</div><div class="fc-l">Lean forward<br><small>Show interest</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">E</div><div class="fc-l">Eye contact<br><small>Engaged</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">R</div><div class="fc-l">Respond<br><small>Feedback</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"SOLER"</strong> — Sit squarely, Open posture, Lean forward, Eye contact, Respond. Remember: <strong>"SOLER = Solar energy for communication"</strong> — it lights up the conversation.</p></div>
+
+<h3>Point 5: Reading Skills for Business</h3>
+<ul>
+<li><strong>Skimming</strong>: Reading quickly for main ideas (scanning a report's executive summary)</li>
+<li><strong>Scanning</strong>: Looking for specific information (finding a date in a contract)</li>
+<li><strong>Critical Reading</strong>: Analyzing arguments and evidence (evaluating a proposal)</li>
+<li><strong>SQ3R Method</strong>: Survey, Question, Read, Recite, Review (for textbooks and manuals)</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Indian Administrative Service (IAS)</strong> officers are trained in speed reading and active listening during their probation at LBSNAA, Mussoorie — processing 200+ files daily requires both skills.</p></div>
+</div>
+
+<!-- ===== UNIT 6 ===== -->
+<h2 id="unit6">Unit 6: Interpersonal Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#128172; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Interpersonal communication is the direct, face-to-face exchange of information, feelings, and meaning between two or more individuals. It forms the foundation of all workplace relationships and organizational effectiveness.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Johari Window Model Explained</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/pQeHyIZxyEk"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Emotional Intelligence at Workplace</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/K_mv715gOMI"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Building Rapport & Trust</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/tDcwWo4WP6w"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Johari Window Model</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#128065; Open Area</h5><p>Known to self AND others. Builds through disclosure and feedback. The larger this area, the better the communication.</p></div>
+<div class="cc"><h5 style="color:#5e8cf0">&#128064; Blind Spot</h5><p>Unknown to self but known to others. Reduced through seeking feedback. Example: You don't realize you interrupt others frequently.</p></div>
+</div>
+<div class="cg">
+<div class="cc"><h5 style="color:#fbbf24">&#128274; Hidden Area</h5><p>Known to self but unknown to others. Reduced through voluntary disclosure. Example: You know you're job-hunting but haven't told anyone.</p></div>
+<div class="cc"><h5 style="color:#f87171">&#10067; Unknown</h5><p>Unknown to both. Represents untapped potential or deep unconscious factors. Reduced through self-discovery and observation.</p></div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p>The <strong>Johari Window</strong> (Joseph Luft & Harry Ingham) emphasizes that effective interpersonal communication requires BOTH self-disclosure (reducing Hidden Area) AND seeking feedback (reducing Blind Spot).</p></div>
+<div class="visual-diagram">
+<div class="diagram-title">&#128064; Johari Window Model</div>
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Quadrants -->
+<rect x="20" y="20" width="175" height="120" rx="6" fill="rgba(52,211,153,0.2)" stroke="#34d399" stroke-width="2"/>
+<text x="107" y="70" text-anchor="middle" fill="#34d399" font-size="13" font-weight="700">OPEN</text>
+<text x="107" y="90" text-anchor="middle" fill="#8899aa" font-size="10">Known to Self &amp; Others</text>
+<text x="107" y="108" text-anchor="middle" fill="#667788" font-size="9">Arena / Public</text>
+<rect x="200" y="20" width="175" height="120" rx="6" fill="rgba(94,140,240,0.2)" stroke="#5e8cf0" stroke-width="2"/>
+<text x="287" y="70" text-anchor="middle" fill="#5e8cf0" font-size="13" font-weight="700">BLIND SPOT</text>
+<text x="287" y="90" text-anchor="middle" fill="#8899aa" font-size="10">Unknown to Self</text>
+<text x="287" y="108" text-anchor="middle" fill="#667788" font-size="9">Known to Others</text>
+<rect x="20" y="145" width="175" height="120" rx="6" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="2"/>
+<text x="107" y="195" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700">HIDDEN</text>
+<text x="107" y="215" text-anchor="middle" fill="#8899aa" font-size="10">Known to Self</text>
+<text x="107" y="233" text-anchor="middle" fill="#667788" font-size="9">Facade / Private</text>
+<rect x="200" y="145" width="175" height="120" rx="6" fill="rgba(248,113,113,0.2)" stroke="#f87171" stroke-width="2"/>
+<text x="287" y="195" text-anchor="middle" fill="#f87171" font-size="13" font-weight="700">UNKNOWN</text>
+<text x="287" y="215" text-anchor="middle" fill="#8899aa" font-size="10">Unknown to Both</text>
+<text x="287" y="233" text-anchor="middle" fill="#667788" font-size="9">Untapped Potential</text>
+<!-- Axis labels -->
+<text x="200" y="15" text-anchor="middle" fill="#A8DADC" font-size="10" font-weight="600">&#8592; Self &#8594;</text>
+<text x="5" y="85" fill="#A8DADC" font-size="10" font-weight="600" transform="rotate(-90,5,85)">&#8592; Others &#8594;</text>
+<!-- Arrows showing growth -->
+<line x1="200" y1="145" x2="200" y2="20" stroke="#E63946" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+<text x="215" y="140" fill="#E63946" font-size="8">Feedback &#8593;</text>
+<line x1="20" y1="145" x2="200" y2="145" stroke="#E63946" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+<text x="100" y="160" fill="#E63946" font-size="8">&#8594; Self-Disclosure</text>
+</svg>
+</div>
+
+<h3>Point 2: Emotional Intelligence (Goleman's Model)</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Self-Awareness<br><small>Know your emotions</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Self-Regulation<br><small>Manage emotions</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Motivation<br><small>Inner drive</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Empathy<br><small>Understand others</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Social Skills<br><small>Manage relationships</small></div></div>
+</div>
+
+<h3>Point 3: Non-Verbal Communication Dimensions</h3>
+<table class="comparison-table">
+<thead><tr><th>Dimension</th><th>Description</th><th>Business Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Kinesics</strong></td><td>Body movements, gestures</td><td>Thumbs up to signal approval in a meeting</td></tr>
+<tr><td><strong>Proxemics</strong></td><td>Personal space and distance</td><td>Maintaining 4-foot distance with clients (formal zone)</td></tr>
+<tr><td><strong>Haptics</strong></td><td>Touch communication</td><td>Firm handshake conveying confidence</td></tr>
+<tr><td><strong>Chronemics</strong></td><td>Use of time</td><td>Arriving late signals disrespect in Indian business culture</td></tr>
+<tr><td><strong>Paralanguage</strong></td><td>Voice qualities (pitch, rate)</td><td>Speaking slowly and clearly during presentations</td></tr>
+<tr><td><strong>Artifacts</strong></td><td>Objects/appearance</td><td>Wearing formal attire to a board meeting</td></tr>
+</tbody>
+</table>
+
+<h3>Point 4: Building Rapport</h3>
+<ul>
+<li><strong>Matching and Mirroring</strong>: Subtly adopting the other person's posture and speech patterns</li>
+<li><strong>Finding Common Ground</strong>: Shared interests, experiences, or goals</li>
+<li><strong>Active Engagement</strong>: Nodding, paraphrasing, asking follow-up questions</li>
+<li><strong>Genuine Interest</strong>: Remembering details from previous conversations</li>
+</ul>
+
+<h3>Point 5: Handling Difficult Interactions</h3>
+<ol>
+<li><strong>Stay Calm</strong>: Deep breath before responding to provocations</li>
+<li><strong>Listen First</strong>: Understand the other person's perspective fully</li>
+<li><strong>Acknowledge Feelings</strong>: "I understand you're frustrated" without necessarily agreeing</li>
+<li><strong>Focus on Interests, Not Positions</strong>: "What outcome works for both of us?"</li>
+<li><strong>Seek Win-Win</strong>: Collaborative problem-solving over adversarial negotiation</li>
+</ol>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Ratan Tata's</strong> handling of the Jaguar-Land Rover acquisition negotiation exemplifies excellent interpersonal communication — maintaining respectful relationships with Ford executives who had earlier humiliated Tata, and closing the deal with dignity.</p></div>
+</div>
+
+<!-- ===== UNIT 7 ===== -->
+<h2 id="unit7">Unit 7: Communication in Meetings</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#128172; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>A meeting is a planned gathering of two or more people for the purpose of sharing information, making decisions, solving problems, or coordinating activities. Effective meetings require preparation, facilitation, and follow-up.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Conducting Effective Meetings</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/B6HuENuUEVg"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Meeting Management & Etiquette</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/jY5XjoMBFoA"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Minutes of Meeting (MoM) Format</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/Q6o4fCzNt7Q"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Types of Meetings</h3>
+<table class="comparison-table">
+<thead><tr><th>Type</th><th>Purpose</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Board Meeting</strong></td><td>Strategic decisions, governance</td><td>Quarterly</td></tr>
+<tr><td><strong>Committee Meeting</strong></td><td>Specific project/task review</td><td>As needed</td></tr>
+<tr><td><strong>Team Meeting</strong></td><td>Coordination, status updates</td><td>Weekly/Daily</td></tr>
+<tr><td><strong>Brainstorming</strong></td><td>Idea generation</td><td>As needed</td></tr>
+<tr><td><strong>One-on-One</strong></td><td>Performance, feedback, mentoring</td><td>Weekly/Monthly</td></tr>
+<tr><td><strong>Annual General Meeting</strong></td><td>Shareholder communication (legally required)</td><td>Annually</td></tr>
+</tbody>
+</table>
+
+<h3>Point 2: Pre-Meeting Planning</h3>
+<ul>
+<li><strong>Agenda</strong>: List topics with time allocations, prioritize, distribute 24-48 hours in advance</li>
+<li><strong>Participants</strong>: Invite only essential attendees (Amazon's "two-pizza rule")</li>
+<li><strong>Preparation</strong>: Share background materials, specify required pre-reading</li>
+<li><strong>Logistics</strong>: Book room, test technology, arrange seating</li>
+</ul>
+
+<h3>Point 3: Conducting Effective Meetings</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#9989; Chairperson's Dos</h5><ul>
+<li>Start and end on time</li>
+<li>Keep discussion focused on agenda</li>
+<li>Encourage quiet members to speak</li>
+<li>Manage conflicts diplomatically</li>
+<li>Summarize decisions and action items</li>
+</ul></div>
+<div class="cc"><h5 style="color:#f87171">&#10060; Common Mistakes</h5><ul>
+<li>No agenda (meeting drifts)</li>
+<li>Too many participants (decision paralysis)</li>
+<li>Allowing side conversations</li>
+<li>No follow-up on action items</li>
+<li>Running over scheduled time</li>
+</ul></div>
+</div>
+
+<h3>Point 4: Meeting Etiquette</h3>
+<ul>
+<li>Arrive 2-3 minutes early</li>
+<li>Silence mobile devices</li>
+<li>Listen actively — don't prepare your response while others speak</li>
+<li>Speak concisely — respect everyone's time</li>
+<li>Don't interrupt — raise hand or use chat function in virtual meetings</li>
+<li>Stay for the entire meeting — leaving early signals disrespect</li>
+</ul>
+
+<h3>Point 5: Minutes of Meeting (MoM)</h3>
+<p>Essential components:</p>
+<ul>
+<li>Date, time, venue</li>
+<li>Attendees (present, absent, apologies)</li>
+<li>Agenda items discussed</li>
+<li>Decisions made (with voting results if applicable)</li>
+<li>Action items with responsible person and deadline</li>
+<li>Date of next meeting</li>
+</ul>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"ADAP"</strong> for effective meetings — <strong>A</strong>genda (prepare), <strong>D</strong>ecisions (make), <strong>A</strong>ction items (assign), <strong>P</strong>rogress (follow up).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Amazon India</strong> follows the "6-page memo" format — no PowerPoint slides. Participants read a narrative memo in silence for the first 20 minutes, then discuss. This ensures deep thinking and eliminates superficial presentations.</p></div>
+</div>
+
+<!-- ===== UNIT 8 ===== -->
+<h2 id="unit8">Unit 8: Presentation Skills</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#128172; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>A presentation is a structured, formal talk to an audience that aims to inform, persuade, entertain, or inspire action. It combines verbal delivery, visual aids, and non-verbal communication to convey a message effectively.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Presentation Skills & Public Speaking</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/zwjmbQ9Z2lY"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Effective Presentation Techniques</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/OXEhCRmRErU"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Body Language During Presentations</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/GIm7pvSmLPU"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Planning Your Presentation</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Analyze Audience<br><small>Who are they?</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Set Objective<br><small>What's the goal?</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Research<br><small>Gather content</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Organize<br><small>Structure</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Design Slides<br><small>Visual aids</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Rehearse<br><small>Practice</small></div></div>
+</div>
+
+<h3>Point 2: Presentation Structure (Tell-Show-Tell)</h3>
+<div class="visual-diagram">
+<div class="diagram-title">&#127919; Presentation Flow Structure</div>
+<svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Intro -->
+<rect x="10" y="30" width="130" height="70" rx="10" fill="#457B9D" opacity="0.85"/>
+<text x="75" y="60" text-anchor="middle" fill="white" font-size="12" font-weight="700">Introduction</text>
+<text x="75" y="78" text-anchor="middle" fill="#A8DADC" font-size="10">10% - Hook</text>
+<!-- Arrow -->
+<path d="M145 65 L180 65" stroke="#E63946" stroke-width="2" marker-end="url(#ah)"/>
+<defs><marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#E63946"/></marker></defs>
+<!-- Main points -->
+<rect x="185" y="15" width="130" height="40" rx="8" fill="#1D3557" stroke="#F4A261" stroke-width="1.5"/>
+<text x="250" y="40" text-anchor="middle" fill="#F4A261" font-size="10" font-weight="600">Point 1 + Evidence</text>
+<rect x="185" y="60" width="130" height="40" rx="8" fill="#1D3557" stroke="#F4A261" stroke-width="1.5"/>
+<text x="250" y="85" text-anchor="middle" fill="#F4A261" font-size="10" font-weight="600">Point 2 + Evidence</text>
+<rect x="185" y="105" width="130" height="30" rx="8" fill="#1D3557" stroke="#F4A261" stroke-width="1.5"/>
+<text x="250" y="125" text-anchor="middle" fill="#F4A261" font-size="10" font-weight="600">Point 3 + Evidence</text>
+<rect x="170" y="10" width="160" height="130" rx="10" fill="none" stroke="#F4A261" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+<text x="250" y="8" text-anchor="middle" fill="#F4A261" font-size="9">Body (80%)</text>
+<!-- Arrow -->
+<path d="M320 65 L355 65" stroke="#E63946" stroke-width="2" marker-end="url(#ah)"/>
+<!-- Conclusion -->
+<rect x="360" y="30" width="130" height="70" rx="10" fill="#457B9D" opacity="0.85"/>
+<text x="425" y="60" text-anchor="middle" fill="white" font-size="12" font-weight="700">Conclusion</text>
+<text x="425" y="78" text-anchor="middle" fill="#A8DADC" font-size="10">10% - CTA</text>
+<!-- Q&A -->
+<rect x="510" y="30" width="80" height="70" rx="10" fill="#E63946" opacity="0.75"/>
+<text x="550" y="60" text-anchor="middle" fill="white" font-size="12" font-weight="700">Q&amp;A</text>
+<text x="550" y="78" text-anchor="middle" fill="#fca5a5" font-size="10">Engage</text>
+<path d="M495 65 L505 65" stroke="#E63946" stroke-width="2" marker-end="url(#ah)"/>
+</svg>
+</div>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#127381; Introduction (10%)</h5><ul>
+<li>Hook the audience (question, story, statistic)</li>
+<li>State the purpose clearly</li>
+<li>Preview main points</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#128230; Body (80%)</h5><ul>
+<li>3-5 main points maximum</li>
+<li>Support each with evidence</li>
+<li>Use transitions between points</li>
+</ul></div>
+</div>
+<div style="margin-top:0.5rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:1rem;text-align:center">
+<h5 style="color:#fbbf24;margin-bottom:.5rem">&#127381; Conclusion (10%)</h5>
+<p>Summarize key points, state call to action, end with memorable closing statement</p>
+</div>
+
+<h3>Point 3: Visual Aids Best Practices</h3>
+<ul>
+<li><strong>6x6 Rule</strong>: Maximum 6 bullet points per slide, 6 words per bullet</li>
+<li><strong>Font Size</strong>: Minimum 24pt for body text, 36pt for headings</li>
+<li><strong>Contrast</strong>: Dark text on light background or vice versa</li>
+<li><strong>Images</strong>: Use high-quality, relevant images (not clip art)</li>
+<li><strong>Charts</strong>: Use bar charts for comparison, pie charts for proportions, line charts for trends</li>
+<li><strong>Consistency</strong>: Same font, color scheme, and layout throughout</li>
+</ul>
+
+<h3>Point 4: Delivery Skills</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#127908; Voice</h5><ul>
+<li><strong>Volume</strong>: Loud enough for back row</li>
+<li><strong>Pace</strong>: 130-150 words per minute</li>
+<li><strong>Pause</strong>: 3-5 seconds for emphasis</li>
+<li><strong>Variety</strong>: Change tone to maintain interest</li>
+</ul></div>
+<div class="cc"><h5 style="color:#f472b6">&#128170; Body Language</h5><ul>
+<li><strong>Posture</strong>: Stand straight, shoulders back</li>
+<li><strong>Gestures</strong>: Open palms, purposeful hand movements</li>
+<li><strong>Eye Contact</strong>: 3-5 seconds per person/section</li>
+<li><strong>Movement</strong>: Walk purposefully, don't pace</li>
+</ul></div>
+</div>
+
+<h3>Point 5: Handling Q&A and Nervousness</h3>
+<ul>
+<li><strong>Before Q&A</strong>: Anticipate likely questions, prepare answers</li>
+<li><strong>During Q&A</strong>: Listen completely, pause before answering, be honest if you don't know</li>
+<li><strong>Managing Nerves</strong>: Deep breathing, positive visualization, arrive early to test equipment</li>
+<li><strong>Power Pose</strong>: Stand in a confident pose for 2 minutes before presenting (Amy Cuddy research)</li>
+</ul>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"SOAP"</strong> for presentation delivery — <strong>S</strong>mile, <strong>O</strong>pen posture, <strong>A</strong>udience eye contact, <strong>P</strong>ause for effect.</p></div>
+</div>
+
+<!-- ===== UNIT 9 ===== -->
+<h2 id="unit9">Unit 9: Basics of Written Business Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#128172; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Written business communication encompasses all formal and informal documents exchanged within and outside an organization. It serves as a permanent record and requires clarity, accuracy, and professionalism.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Letter Writing</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/qXZfbCrl27U"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Email Writing - Professional</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/VE9wAMP3jWo"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Writing Principles</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/YN0ie2-X-9I"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Characteristics of Effective Business Writing</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Clarity<br><small>Unambiguous</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Conciseness<br><small>Brief</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Completeness<br><small>All info</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Correctness<br><small>Error-free</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Courtesy<br><small>Polite</small></div></div>
+</div>
+
+<h3>Point 2: Planning Written Communication</h3>
+<table class="comparison-table">
+<thead><tr><th>Step</th><th>Questions to Ask</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><strong>Purpose</strong></td><td>Why am I writing?</td><td>Inform, request, persuade, or acknowledge</td></tr>
+<tr><td><strong>Audience</strong></td><td>Who will read this?</td><td>Adjust tone, vocabulary, detail level</td></tr>
+<tr><td><strong>Content</strong></td><td>What must be included?</td><td>List all key points, supporting data</td></tr>
+<tr><td><strong>Structure</strong></td><td>How to organize?</td><td>Direct (good news) or indirect (bad news)</td></tr>
+<tr><td><strong>Channel</strong></td><td>Which medium?</td><td>Email, letter, memo, report</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: Principles of Good Writing</h3>
+<ul>
+<li><strong>Use Active Voice</strong>: "We completed the project" (active) vs "The project was completed" (passive)</li>
+<li><strong>Short Paragraphs</strong>: 3-5 sentences maximum</li>
+<li><strong>Simple Words</strong>: "Use" not "utilize"; "start" not "commence"</li>
+<li><strong>Be Specific</strong>: "Submit by 5 PM Friday" not "Submit soon"</li>
+<li><strong>One Idea Per Sentence</strong>: Avoid compound-complex sentences</li>
+<li><strong>Use Bullet Points</strong>: For lists of 3+ items</li>
+</ul>
+
+<h3>Point 4: Direct vs Indirect Approach</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#34d399">&#9989; Direct Approach</h5><p><strong>Use when</strong>: Good news, routine requests, positive responses</p><p><strong>Structure</strong>: Main point &#8594; Details &#8594; Courteous close</p><p><strong>Example</strong>: "Your leave has been approved for Dec 20-25."</p></div>
+<div class="cc"><h5 style="color:#fbbf24">&#9888; Indirect Approach</h5><p><strong>Use when</strong>: Bad news, sensitive topics, persuasive messages</p><p><strong>Structure</strong>: Buffer &#8594; Reasons &#8594; Bad news &#8594; Positive close</p><p><strong>Example</strong>: "We appreciate your application. Due to current requirements..."</p></div>
+</div>
+
+<h3>Point 5: Editing and Proofreading Checklist</h3>
+<ol>
+<li>Have I answered What, Why, When, How?</li>
+<li>Is the most important information first?</li>
+<li>Are sentences concise (under 20 words average)?</li>
+<li>Is the tone appropriate for the audience?</li>
+<li>Are there spelling or grammatical errors?</li>
+<li>Is the formatting consistent?</li>
+<li>Have I included a clear call to action?</li>
+</ol>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"WRITE"</strong> for good business writing — <strong>W</strong>ho is the audience? <strong>R</strong>eason for writing? <strong>I</strong>nformation to include? <strong>T</strong>one to use? <strong>E</strong>rror-free?</p></div>
+</div>
+
+<!-- ===== UNIT 10 ===== -->
+<h2 id="unit10">Unit 10: Short Business Correspondence</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#128172; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Short business correspondence includes emails, memos, notices, and brief letters — all forms of concise written communication used for routine business operations.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Email Etiquette & Best Practices</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/VE9wAMP3jWo"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Memorandum (Memo) Writing</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/j7L5j48wwIY"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resume & Cover Letter Writing</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/UdUpfn_6Rqg"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Email Communication</h3>
+<table class="comparison-table">
+<thead><tr><th>Component</th><th>Best Practice</th><th>Poor Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Subject Line</strong></td><td>Specific and actionable</td><td>"Important" (vague)</td></tr>
+<tr><td><strong>Salutation</strong></td><td>Match formality to relationship</td><td>"Hey" to CEO</td></tr>
+<tr><td><strong>Body</strong></td><td>One topic, short paragraphs</td><td>5 topics in one email</td></tr>
+<tr><td><strong>Call to Action</strong></td><td>Clear next step and deadline</td><td>"Let me know" (no deadline)</td></tr>
+<tr><td><strong>Closing</strong></td><td>Professional sign-off</td><td>No signature block</td></tr>
+</tbody>
+</table>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p><strong>Email Etiquette Rules</strong>: Respond within 24 hours, use BCC for mass emails, never use ALL CAPS (shouting), avoid Reply All unless necessary, proofread before sending, keep attachments under 5MB.</p></div>
+
+<h3>Point 2: Memorandums (Memos)</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">To</div><div class="fc-l">Recipient(s)</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">From</div><div class="fc-l">Sender</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">Date</div><div class="fc-l">Date sent</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">Sub</div><div class="fc-l">Topic</div></div>
+</div>
+<p><strong>When to use memos</strong>: Policy changes, internal announcements, meeting notices, procedural updates, information sharing within the organization.</p>
+
+<h3>Point 3: Business Letters (Full Block Format)</h3>
+<ol>
+<li>Sender's address and date</li>
+<li>Recipient's name, title, and address</li>
+<li>Salutation (Dear Mr./Ms./Dr.)</li>
+<li>Subject line</li>
+<li>Body paragraphs</li>
+<li>Complimentary close (Yours sincerely/truly)</li>
+<li>Signature and designation</li>
+</ol>
+
+<h3>Point 4: Types of Business Letters</h3>
+<table class="comparison-table">
+<thead><tr><th>Type</th><th>Purpose</th><th>Tone</th></tr></thead>
+<tbody>
+<tr><td><strong>Inquiry</strong></td><td>Request information</td><td>Polite, specific</td></tr>
+<tr><td><strong>Order</strong></td><td>Place purchase order</td><td>Clear, precise</td></tr>
+<tr><td><strong>Complaint</strong></td><td>Report problem</td><td>Firm but professional</td></tr>
+<tr><td><strong>Adjustment</strong></td><td>Respond to complaint</td><td>Empathetic, solution-oriented</td></tr>
+<tr><td><strong>Sales</strong></td><td>Promote product/service</td><td>Persuasive, enthusiastic</td></tr>
+<tr><td><strong>Cover Letter</strong></td><td>Job application</td><td>Confident, tailored</td></tr>
+</tbody>
+</table>
+
+<h3>Point 5: Resume and Cover Letter</h3>
+<ul>
+<li><strong>Resume</strong>: Reverse chronological, 1-2 pages, quantify achievements ("Increased sales by 30%")</li>
+<li><strong>Cover Letter</strong>: 3-4 paragraphs, match qualifications to job requirements, show company knowledge</li>
+<li><strong>Common Mistake</strong>: Generic cover letters — always customize for each application</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p>In Indian business letters, the <strong>"Yours faithfully"</strong> is used when the salutation is "Dear Sir/Madam" (no name), while <strong>"Yours sincerely"</strong> is used when addressing by name (Dear Mr. Sharma).</p></div>
+</div>
+
+<!-- ===== UNIT 11 ===== -->
+<h2 id="unit11">Unit 11: Long Business Correspondence</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#128172; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Long business correspondence includes formal reports, proposals, manuals, and comprehensive documents that require structured organization, detailed analysis, and thorough documentation.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Report Writing Format</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/-ZRombUgRs4"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Business Reports</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/bWxZreCb3D4"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Proposal Writing Skills</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/4jy2KkB75Xg"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Types of Business Reports</h3>
+<table class="comparison-table">
+<thead><tr><th>Type</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Informational</strong></td><td>Present facts objectively</td><td>Monthly sales report, annual financial statement</td></tr>
+<tr><td><strong>Analytical</strong></td><td>Analyze and recommend</td><td>Market research report, feasibility study</td></tr>
+<tr><td><strong>Proposal</strong></td><td>Persuade to take action</td><td>Project proposal, funding request</td></tr>
+<tr><td><strong>Compliance</strong></td><td>Meet regulatory requirements</td><td>Audit report, safety inspection report</td></tr>
+</tbody>
+</table>
+
+<h3>Point 2: Report Structure</h3>
+<div class="visual-diagram">
+<div class="diagram-title">&#128209; Report Structure Hierarchy</div>
+<svg viewBox="0 0 550 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Title Page -->
+<rect x="185" y="5" width="180" height="32" rx="6" fill="#E63946" opacity="0.9"/>
+<text x="275" y="26" text-anchor="middle" fill="white" font-size="11" font-weight="700">Title Page</text>
+<line x1="275" y1="37" x2="275" y2="50" stroke="#457B9D" stroke-width="1.5"/>
+<!-- Exec Summary -->
+<rect x="185" y="50" width="180" height="32" rx="6" fill="#F4A261" opacity="0.9"/>
+<text x="275" y="71" text-anchor="middle" fill="white" font-size="11" font-weight="700">Executive Summary &#9733;</text>
+<line x1="275" y1="82" x2="275" y2="95" stroke="#457B9D" stroke-width="1.5"/>
+<!-- TOC + Intro -->
+<rect x="70" y="95" width="160" height="32" rx="6" fill="#1D3557" stroke="#A8DADC" stroke-width="1.5"/>
+<text x="150" y="116" text-anchor="middle" fill="#A8DADC" font-size="10" font-weight="600">Table of Contents</text>
+<rect x="320" y="95" width="160" height="32" rx="6" fill="#1D3557" stroke="#A8DADC" stroke-width="1.5"/>
+<text x="400" y="116" text-anchor="middle" fill="#A8DADC" font-size="10" font-weight="600">Introduction</text>
+<line x1="275" y1="95" x2="150" y2="95" stroke="#457B9D" stroke-width="1"/>
+<line x1="275" y1="95" x2="400" y2="95" stroke="#457B9D" stroke-width="1"/>
+<line x1="275" y1="82" x2="275" y2="95" stroke="#457B9D" stroke-width="1.5"/>
+<!-- Findings -->
+<rect x="135" y="145" width="280" height="35" rx="6" fill="rgba(69,123,157,0.3)" stroke="#457B9D" stroke-width="2"/>
+<text x="275" y="168" text-anchor="middle" fill="#457B9D" font-size="12" font-weight="700">Findings / Analysis (Largest Section)</text>
+<line x1="275" y1="127" x2="275" y2="145" stroke="#457B9D" stroke-width="1.5"/>
+<!-- Conclusions + Recs -->
+<rect x="70" y="200" width="190" height="32" rx="6" fill="#1D3557" stroke="#34d399" stroke-width="1.5"/>
+<text x="165" y="221" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">Conclusions</text>
+<rect x="290" y="200" width="190" height="32" rx="6" fill="#1D3557" stroke="#34d399" stroke-width="1.5"/>
+<text x="385" y="221" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">Recommendations</text>
+<line x1="275" y1="180" x2="165" y2="200" stroke="#457B9D" stroke-width="1"/>
+<line x1="275" y1="180" x2="385" y2="200" stroke="#457B9D" stroke-width="1"/>
+<!-- Appendices -->
+<rect x="185" y="250" width="180" height="28" rx="6" fill="#1D3557" stroke="#8899aa" stroke-width="1"/>
+<text x="275" y="269" text-anchor="middle" fill="#8899aa" font-size="10">Appendices &amp; References</text>
+<line x1="275" y1="232" x2="275" y2="250" stroke="#457B9D" stroke-width="1"/>
+</svg>
+</div>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Title Page</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Executive Summary</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Table of Contents</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Introduction</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Findings</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Conclusions</div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Recommendations</div></div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p>The <strong>Executive Summary</strong> is the most critical part — many senior executives ONLY read this section. It should be 1-2 pages, standalone, and cover the problem, methodology, key findings, and recommendations.</p></div>
+
+<h3>Point 3: Proposal Writing</h3>
+<ul>
+<li><strong>Solicited</strong>: Response to RFP (Request for Proposal) — follow the RFP format exactly</li>
+<li><strong>Unsolicited</strong>: Initiated by sender — must convince the reader a problem exists</li>
+<li><strong>Internal</strong>: To management — focus on ROI and resource requirements</li>
+</ul>
+<p>Key elements: Problem statement, proposed solution, benefits, timeline, budget, qualifications.</p>
+
+<h3>Point 4: Documentation Standards</h3>
+<ul>
+<li><strong>Consistency</strong>: Same fonts, headings, numbering system throughout</li>
+<li><strong>Version Control</strong>: Date and version number on every document</li>
+<li><strong>Accessibility</strong>: Table of contents, index, cross-references</li>
+<li><strong>Visual Hierarchy</strong>: Use headings (H1, H2, H3), bullet points, tables, charts</li>
+</ul>
+
+<h3>Point 5: Review and Approval Process</h3>
+<ol>
+<li><strong>Draft Review</strong>: Internal team checks content accuracy</li>
+<li><strong>Technical Review</strong>: Subject matter experts verify facts</li>
+<li><strong>Legal Review</strong>: Compliance and liability checks</li>
+<li><strong>Management Approval</strong>: Authorized sign-off</li>
+<li><strong>Final Proofread</strong>: Last check before distribution</li>
+</ol>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>SEBI</strong> mandates specific report formats for listed companies. The Annual Report must follow Companies Act 2013 format, include Director's Report, Auditor's Report, and financial statements — all with prescribed structure.</p></div>
+</div>
+
+<!-- ===== UNIT 12 ===== -->
+<h2 id="unit12">Unit 12: Communication for Employment</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#128172; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Employment communication covers all written and oral exchanges during the job search process — from application materials through interviews, salary negotiation, and professional development.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Interview Skills & Preparation</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/eyI5WkbSckI"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Group Discussion Skills</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/dDlyfBS96S4"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Salary Negotiation Tips</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/vLbrwSzXUro"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Job Application Materials</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#5e8cf0">&#128196; Resume/CV</h5><ul>
+<li>Contact information (professional email)</li>
+<li>Professional summary (3-4 lines)</li>
+<li>Work experience (reverse chronological)</li>
+<li>Education and certifications</li>
+<li>Skills (technical + soft skills)</li>
+<li>Achievements (quantified: "Increased revenue by 25%")</li>
+</ul></div>
+<div class="cc"><h5 style="color:#34d399">&#128231; Cover Letter</h5><ul>
+<li>Why this company? (show research)</li>
+<li>Why this role? (match skills)</li>
+<li>What value do you bring? (specific examples)</li>
+<li>Call to action (request interview)</li>
+<li>Keep to 1 page, 3-4 paragraphs</li>
+</ul></div>
+</div>
+
+<h3>Point 2: Interview Communication</h3>
+<table class="comparison-table">
+<thead><tr><th>Interview Type</th><th>Format</th><th>Preparation Tips</th></tr></thead>
+<tbody>
+<tr><td><strong>Face-to-Face</strong></td><td>Traditional one-on-one</td><td>Research company, practice STAR method</td></tr>
+<tr><td><strong>Video/Virtual</strong></td><td>Zoom, Teams, Google Meet</td><td>Test tech, neutral background, dress fully</td></tr>
+<tr><td><strong>Panel</strong></td><td>Multiple interviewers</td><td>Make eye contact with all, address each questioner</td></tr>
+<tr><td><strong>Group Discussion</strong></td><td>Multiple candidates, one topic</td><td>Initiate, listen, summarize, don't dominate</td></tr>
+<tr><td><strong>Behavioral</strong></td><td>Past experience questions</td><td>Use STAR: Situation, Task, Action, Result</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: STAR Method for Interview Answers</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">S</div><div class="fc-l">Situation<br><small>Context</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">T</div><div class="fc-l">Task<br><small>Your role</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">A</div><div class="fc-l">Action<br><small>What you did</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">R</div><div class="fc-l">Result<br><small>Outcome</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"STAR"</strong> — Situation, Task, Action, Result. Remember: <strong>"Every STAR shines with a story"</strong> — your answer should tell a compelling story with measurable results.</p></div>
+
+<h3>Point 4: Salary Negotiation Communication</h3>
+<ul>
+<li><strong>Research First</strong>: Know market rates (Glassdoor, Naukri, LinkedIn salary insights)</li>
+<li><strong>Let Them Go First</strong>: Don't state expected salary prematurely</li>
+<li><strong>Justify Your Ask</strong>: "Based on my 5 years of experience and market data, I'm looking at X-Y range"</li>
+<li><strong>Consider Total Package</strong>: Base salary + bonus + ESOP + benefits</li>
+<li><strong>Get It in Writing</strong>: Offer letter should include all agreed terms</li>
+</ul>
+
+<h3>Point 5: Professional Development Communication</h3>
+<ul>
+<li><strong>Performance Reviews</strong>: Prepare self-assessment with specific achievements</li>
+<li><strong>Promotion Requests</strong>: Document your contributions, get manager's support</li>
+<li><strong>Networking</strong>: LinkedIn messages, industry events, alumni connections</li>
+<li><strong>Thought Leadership</strong>: Write articles, give talks, contribute to industry forums</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>IIM graduates</strong> spend significant time preparing for placement interviews — including mock GDs, case study discussions, and personal interview practice. The "Tell me about yourself" answer is rehearsed to be exactly 90 seconds, covering background, strengths, and career goals.</p></div>
+</div>
+
+<!-- ===== UNIT 13 ===== -->
+<h2 id="unit13">Unit 13: Technology and Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#128172; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Technology-mediated communication uses digital tools and platforms to exchange information. It has transformed business communication by enabling instant, global, and asynchronous interactions.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Communication Tools</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/9qUQdvNjRZ8"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Virtual Team Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/WIc8Z7iUJ4Q"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Social Media in Business</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/5ont44v4Gdw"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Digital Communication Tools</h3>
+<table class="comparison-table">
+<thead><tr><th>Tool</th><th>Best For</th><th>Indian Business Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Email</strong></td><td>Formal, documented communication</td><td>TCS client project updates</td></tr>
+<tr><td><strong>Instant Messaging</strong></td><td>Quick questions, team coordination</td><td>Flipkart using Slack for product teams</td></tr>
+<tr><td><strong>Video Conferencing</strong></td><td>Remote meetings, interviews</td><td>Infosys conducting global client reviews on Zoom</td></tr>
+<tr><td><strong>Project Management</strong></td><td>Task tracking, collaboration</td><td>Wipro using Jira for sprint planning</td></tr>
+<tr><td><strong>Document Sharing</strong></td><td>Collaborative editing</td><td>HCL using Google Workspace for co-authoring</td></tr>
+</tbody>
+</table>
+
+<h3>Point 2: Social Media in Business</h3>
+<ul>
+<li><strong>LinkedIn</strong>: Professional networking, recruitment, thought leadership</li>
+<li><strong>Twitter/X</strong>: Customer service, brand voice, real-time updates</li>
+<li><strong>Instagram</strong>: Visual branding, behind-the-scenes content</li>
+<li><strong>YouTube</strong>: Training videos, product demos, corporate communication</li>
+<li><strong>Internal Platforms</strong>: Yammer, Workplace by Facebook for employee engagement</li>
+</ul>
+
+<h3>Point 3: Emerging Technologies</h3>
+<ul>
+<li><strong>AI Chatbots</strong>: 24/7 customer service (HDFC Bank's EVA chatbot handles 5M+ queries)</li>
+<li><strong>Generative AI</strong>: Drafting emails, reports, presentations (ChatGPT, Copilot)</li>
+<li><strong>Voice Assistants</strong>: Alexa for Business, Google Assistant for scheduling</li>
+<li><strong>Virtual Reality</strong>: Immersive training (Walmart uses VR for employee training)</li>
+<li><strong>Blockchain</strong>: Secure document verification, smart contracts</li>
+</ul>
+
+<h3>Point 4: Digital Communication Best Practices</h3>
+<ul>
+<li><strong>Security</strong>: Use encrypted channels for sensitive data, strong passwords, 2FA</li>
+<li><strong>Professionalism</strong>: Same standards as face-to-face — polite, clear, respectful</li>
+<li><strong>Accessibility</strong>: Alt text for images, captions for videos, readable fonts</li>
+<li><strong>Netiquette</strong>: Don't SHOUT (caps), respect time zones, avoid sarcasm in text</li>
+</ul>
+
+<h3>Point 5: Managing Digital Overload</h3>
+<ul>
+<li><strong>Batch Processing</strong>: Check emails at set times, not constantly</li>
+<li><strong>Channel Selection</strong>: Urgent = phone/IM; Information = email; Discussion = meeting</li>
+<li><strong>Digital Detox</strong>: No-screen periods, notification management</li>
+<li><strong>Documentation</strong>: Summarize decisions from chats in formal notes</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>BYJU'S</strong> revolutionized education communication in India by using technology for personalized learning — AI-driven content delivery, video lessons, and interactive assessments reaching 100M+ students.</p></div>
+</div>
+
+<!-- ===== UNIT 14 ===== -->
+<h2 id="unit14">Unit 14: Cross-Cultural Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#128172; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Cross-cultural communication is the process of recognizing and understanding differences in communication styles, values, and norms across cultures, and adapting one's approach to achieve effective interaction.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cross-Cultural Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/WVS8moTr6oM"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Hofstede's Cultural Dimensions</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/s5zdTOvuFf0"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Intercultural Business Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/3VC3tOda84A"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Hofstede's Cultural Dimensions</h3>
+<table class="comparison-table">
+<thead><tr><th>Dimension</th><th>India</th><th>USA</th><th>Japan</th></tr></thead>
+<tbody>
+<tr><td><strong>Power Distance</strong></td><td>High (77) — respect for hierarchy</td><td>Low (40) — egalitarian</td><td>High (54) — seniority matters</td></tr>
+<tr><td><strong>Individualism</strong></td><td>Collective (48) — family/group focus</td><td>Individual (91) — self-reliance</td><td>Collective (46) — group harmony</td></tr>
+<tr><td><strong>Uncertainty Avoidance</strong></td><td>Low (40) — comfortable with ambiguity</td><td>Low (46) — risk-taking</td><td>High (92) — need rules/structure</td></tr>
+<tr><td><strong>Long-Term Orientation</strong></td><td>High (51) — pragmatic</td><td>Short-term (26) — quick results</td><td>High (88) — long planning</td></tr>
+</tbody>
+</table>
+
+<h3>Point 2: High-Context vs Low-Context Cultures</h3>
+<div class="cg">
+<div class="cc"><h5 style="color:#f472b6">&#127796; High-Context</h5><ul>
+<li>Meaning is in context, not just words</li>
+<li>Non-verbal cues are critical</li>
+<li>Indirect communication preferred</li>
+<li>Relationships before business</li>
+<li>Examples: Japan, China, India, Arab countries</li>
+</ul></div>
+<div class="cc"><h5 style="color:#5e8cf0">&#128196; Low-Context</h5><ul>
+<li>Meaning is explicit in words</li>
+<li>Direct, clear communication</li>
+<li>Written contracts are binding</li>
+<li>Business before relationships</li>
+<li>Examples: USA, Germany, Scandinavia</li>
+</ul></div>
+</div>
+
+<h3>Point 3: Communication Style Differences</h3>
+<ul>
+<li><strong>Direct vs Indirect</strong>: Germans say "No" directly; Japanese say "That would be difficult"</li>
+<li><strong>Formal vs Informal</strong>: Use titles in Germany/Japan; first names in Australia/USA</li>
+<li><strong>Silence</strong>: Comfortable in Japan/Finland; uncomfortable in USA/Brazil</li>
+<li><strong>Gesture</strong>: "OK" sign is positive in USA, offensive in Brazil, money in Japan</li>
+<li><strong>Time</strong>: Monochronic (one thing at a time — Germany) vs Polychronic (flexible — India, Latin America)</li>
+</ul>
+
+<h3>Point 4: Building Cross-Cultural Competence</h3>
+<ol>
+<li><strong>Cultural Self-Awareness</strong>: Understand your own cultural biases first</li>
+<li><strong>Research</strong>: Learn about the other culture's norms before interacting</li>
+<li><strong>Active Listening</strong>: Listen for meaning, not just words</li>
+<li><strong>Flexibility</strong>: Adapt your style — don't expect others to adapt to you</li>
+<li><strong>Patience</strong>: Allow extra time for cross-cultural understanding</li>
+<li><strong>Avoid Stereotypes</strong>: Individuals vary within cultures</li>
+</ol>
+
+<h3>Point 5: Global Virtual Teams</h3>
+<ul>
+<li><strong>Time Zones</strong>: Rotate meeting times to share inconvenience equally</li>
+<li><strong>Technology</strong>: Choose tools accessible to all (not everyone has Zoom)</li>
+<li><strong>Documentation</strong>: Write decisions down — verbal agreements get lost across cultures</li>
+<li><strong>Check Understanding</strong>: Ask "Can you summarize what we agreed?" instead of "Do you understand?"</li>
+<li><strong>Build Relationships</strong>: Start meetings with personal check-ins, not just business</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Indian IT companies</strong> (TCS, Infosys, Wipro) train employees in cross-cultural communication before sending them onsite. Key training: understanding American directness, Japanese formality, German punctuality, and Arab relationship-building preferences.</p></div>
+
+<h3>Point 6: Case Study &#8212; Tata-JLR Cross-Cultural Integration</h3>
+<div class="callout callout-example"><div class="callout-label">&#128218; Case Study</div><p><strong>Challenge:</strong> When Tata acquired Jaguar-Land Rover in 2008, they faced a massive cultural gap &#8212; Indian management style (hierarchical, relationship-driven) vs British workforce (egalitarian, task-driven).</p>
+<p><strong>Approach:</strong> Tata preserved JLR's British identity and management autonomy. Ratan Tata personally visited UK plants, listened to worker concerns, and respected existing communication norms. They didn't impose Indian corporate culture.</p>
+<p><strong>Lesson:</strong> Successful cross-cultural communication requires <strong>adaptation, not assimilation</strong>. Tata's respectful approach turned a potential cultural clash into a $3B+ success story. JLR became profitable within 3 years of acquisition.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p><strong>Edward T. Hall's Context Theory</strong>: High-context cultures (India, Japan, China) rely on implicit messages, relationships, and non-verbal cues. Low-context cultures (USA, Germany, Scandinavia) prefer explicit, direct, written communication. Misunderstanding this distinction is the #1 cause of cross-cultural business failures.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"HALL"</strong> for cross-cultural success &#8212; <strong>H</strong>igh/Low context awareness, <strong>A</strong>dapt your style, <strong>L</strong>earn the culture, <strong>L</strong>isten actively. Remember: <strong>"Edward HALL opened the door to cultural understanding."</strong></p></div>
+</div>
+
+<!-- ===== UNIT 15 ===== -->
+<h2 id="unit15">Unit 15: Ethics in Communication</h2>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#128221; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#128172; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#128218; Definition</div><p>Ethical communication involves honest, responsible, fair, and respectful exchange of information. It requires transparency, accountability, and consideration of the impact of communication on all stakeholders.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">\u25B6 Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ethics in Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/TGQ0qIo-HyU"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Crisis Communication Ethics</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/qn9xhDLDYDY"></div></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CSR Communication</h5></div><div class="video-wrapper"><div class="video-placeholder" data-src="https://www.youtube-nocookie.com/embed/AzHaDKZ-iiI"></div></div></div>
+</div>
+</div>
+</div>
+
+<h3>Point 1: Principles of Ethical Communication</h3>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Truthfulness<br><small>Honest information</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Respect<br><small>Dignity of others</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Responsibility<br><small>Accountability</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Fairness<br><small>Unbiased</small></div></div>
+<div class="fc-a">&#8594;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Transparency<br><small>Open and clear</small></div></div>
+</div>
+
+<h3>Point 2: Unethical Communication Practices</h3>
+<table class="comparison-table">
+<thead><tr><th>Practice</th><th>Description</th><th>Business Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Lying</strong></td><td>Deliberate falsehoods</td><td>Overstating product capabilities to customers</td></tr>
+<tr><td><strong>Exaggeration</strong></td><td>Overstating facts</td><td>"Best in class" without evidence</td></tr>
+<tr><td><strong>Omission</strong></td><td>Withholding key information</td><td>Not disclosing side effects of a product</td></tr>
+<tr><td><strong>Manipulation</strong></td><td>Misleading influence</td><td>Using fake urgency ("Only 2 left!") in sales</td></tr>
+<tr><td><strong>Plagiarism</strong></td><td>Using others' work without credit</td><td>Copying competitor's marketing content</td></tr>
+<tr><td><strong>Spin</strong></td><td>Biased framing of facts</td><td>Calling layoffs "right-sizing" in press releases</td></tr>
+</tbody>
+</table>
+
+<h3>Point 3: Privacy and Confidentiality</h3>
+<ul>
+<li><strong>Personal Data</strong>: Protect employee and customer information (GDPR, IT Act 2000)</li>
+<li><strong>Trade Secrets</strong>: Safeguard proprietary information (NDAs, confidentiality agreements)</li>
+<li><strong>Whistleblowing</strong>: Ethical obligation to report wrongdoing (Companies Act 2013 provisions)</li>
+<li><strong>Informed Consent</strong>: Get permission before sharing someone's information</li>
+</ul>
+
+<h3>Point 4: Crisis Communication Ethics</h3>
+<ul>
+<li><strong>Transparency</strong>: Share what you know, acknowledge what you don't</li>
+<li><strong>Timeliness</strong>: Communicate promptly — silence breeds speculation</li>
+<li><strong>Consistency</strong>: Unified message across all channels and spokespersons</li>
+<li><strong>Empathy</strong>: Acknowledge impact on affected parties</li>
+<li><strong>Accountability</strong>: Take responsibility; don't blame others</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">&#128161; Indian Example</div><p><strong>Johnson & Johnson's Tylenol crisis (1982)</strong> is the gold standard of ethical crisis communication — immediate recall, full transparency, and putting consumer safety above profits. Contrast with <strong>Boeing's 737 MAX crisis</strong> where delayed and defensive communication worsened the situation.</p></div>
+
+<h3>Point 5: Corporate Social Responsibility (CSR) in Communication</h3>
+<ul>
+<li><strong>Stakeholder Engagement</strong>: Communicate with all affected parties, not just shareholders</li>
+<li><strong>Green Communication</strong>: Avoid "greenwashing" — environmental claims must be substantiated</li>
+<li><strong>Inclusive Language</strong>: Gender-neutral, non-discriminatory communication</li>
+<li><strong>Community Impact</strong>: Consider how communication affects local communities</li>
+</ul>
+<div class="callout callout-important"><div class="callout-label">&#9888;&#65039; Exam Important</div><p>India's <strong>Companies Act 2013</strong> mandates CSR spending (2% of average net profit) for qualifying companies. Ethical communication about CSR activities must be accurate, verifiable, and not misleading — violating this can attract SEBI penalties.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#129504; Mnemonic</div><p><strong>"TRRF-T"</strong> for ethical communication principles — <strong>T</strong>ruthfulness, <strong>R</strong>espect, <strong>R</strong>esponsibility, <strong>F</strong>airness, <strong>T</strong>ransparency.</p></div>
+</div>
+
+<div class="study-footer">
+<p><a href="study-hub.html">&#8592; Back to Study Hub</a> | <a href="quiz-mmpc07.html">&#128221; Take MMPC-07 Quiz</a></p>
+<p>MMPC-07: Business Communication &bull; StudyHub v3.0</p>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function() {
+    // Add animate-on-scroll class to all content sections
+    const sections = document.querySelectorAll('#sU1, #sU2, #sU3, #sU4, #sU5, #sU6, #sU7, #sU8, #sU9, #sU10, #sU11, #sU12, #sU13, #sU14, #sU15');
+    sections.forEach(function(s) { s.classList.add('animate-on-scroll'); });
+
+    // Also add to visual diagrams and comparison tables
+    document.querySelectorAll('.visual-diagram, .comparison-table').forEach(function(el) {
+        el.classList.add('animate-on-scroll');
+    });
+
+    // IntersectionObserver for scroll-triggered animations
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+        observer.observe(el);
+    });
+
+    // Lazy-load YouTube videos on placeholder click
+    document.querySelectorAll('.video-placeholder').forEach(function(placeholder) {
+        placeholder.addEventListener('click', function() {
+            var src = this.getAttribute('data-src');
+            if (src) {
+                var iframe = document.createElement('iframe');
+                iframe.src = src + (src.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1';
+                iframe.title = this.closest('.video-card').querySelector('h5').textContent;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                iframe.loading = 'lazy';
+                this.parentNode.replaceChild(iframe, this);
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>

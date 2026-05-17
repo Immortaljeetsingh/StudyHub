@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-03: Business Environment</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+/* ===== MMPC-03 ENHANCED STYLES ===== */
+
+/* --- Background particles --- */
+body.subject-mmpc03 {
+    background: linear-gradient(135deg, #0a0a1a 0%, #0d1117 50%, #0a0a1a 100%) !important;
+    font-weight: 300;
+    position: relative;
+    overflow-x: hidden;
+}
+body.subject-mmpc03::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background:
+        radial-gradient(2px 2px at 10% 20%, rgba(0,180,216,0.3), transparent),
+        radial-gradient(2px 2px at 30% 60%, rgba(144,224,239,0.2), transparent),
+        radial-gradient(1px 1px at 50% 10%, rgba(247,127,0,0.25), transparent),
+        radial-gradient(2px 2px at 70% 40%, rgba(0,180,216,0.2), transparent),
+        radial-gradient(1px 1px at 90% 80%, rgba(144,224,239,0.15), transparent),
+        radial-gradient(2px 2px at 15% 90%, rgba(0,180,216,0.2), transparent),
+        radial-gradient(1px 1px at 85% 15%, rgba(247,127,0,0.2), transparent),
+        radial-gradient(2px 2px at 45% 75%, rgba(144,224,239,0.15), transparent),
+        radial-gradient(1px 1px at 60% 30%, rgba(0,180,216,0.25), transparent),
+        radial-gradient(2px 2px at 25% 45%, rgba(247,127,0,0.15), transparent);
+    pointer-events: none;
+    z-index: 0;
+    animation: particleDrift 30s ease-in-out infinite alternate;
+}
+body.subject-mmpc03::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background:
+        radial-gradient(1px 1px at 5% 50%, rgba(0,180,216,0.2), transparent),
+        radial-gradient(2px 2px at 40% 20%, rgba(144,224,239,0.15), transparent),
+        radial-gradient(1px 1px at 75% 65%, rgba(247,127,0,0.2), transparent),
+        radial-gradient(2px 2px at 55% 85%, rgba(0,180,216,0.15), transparent),
+        radial-gradient(1px 1px at 95% 35%, rgba(144,224,239,0.2), transparent);
+    pointer-events: none;
+    z-index: 0;
+    animation: particleDrift2 25s ease-in-out infinite alternate;
+}
+@keyframes particleDrift {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(15px, -10px); }
+    100% { transform: translate(-10px, 15px); }
+}
+@keyframes particleDrift2 {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-12px, 8px); }
+    100% { transform: translate(8px, -12px); }
+}
+
+/* --- Typography --- */
+.subject-mmpc03 h1, .subject-mmpc03 h2, .subject-mmpc03 h3,
+.subject-mmpc03 h4, .subject-mmpc03 h5 {
+    letter-spacing: -0.02em;
+}
+.subject-mmpc03 .study-content {
+    position: relative;
+    z-index: 1;
+}
+.subject-mmpc03 .study-sidebar {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Fade-in-up scroll animation --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.05s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.15s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.2s; }
+
+/* --- Animated gradient underline on h3 --- */
+.subject-mmpc03 h3 {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+.subject-mmpc03 h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00B4D8, #F77F00, #90E0EF, #00B4D8);
+    background-size: 300% 100%;
+    border-radius: 2px;
+    animation: gradientShift 4s linear infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* --- Card hover effects --- */
+.subject-mmpc03 .cc {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,180,216,0.15);
+}
+.subject-mmpc03 .cc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,180,216,0.2), 0 0 20px rgba(0,180,216,0.1);
+}
+.subject-mmpc03 .callout {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.subject-mmpc03 .callout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+/* --- Enhanced callout colors --- */
+.subject-mmpc03 .callout-important {
+    border-left-color: #F77F00 !important;
+    background: linear-gradient(135deg, rgba(247,127,0,0.08), rgba(247,127,0,0.02)) !important;
+}
+.subject-mmpc03 .callout-definition {
+    border-left-color: #00B4D8 !important;
+    background: linear-gradient(135deg, rgba(0,180,216,0.08), rgba(0,180,216,0.02)) !important;
+}
+.subject-mmpc03 .callout-example {
+    border-left-color: #90E0EF !important;
+    background: linear-gradient(135deg, rgba(144,224,239,0.08), rgba(144,224,239,0.02)) !important;
+}
+
+/* --- Visual diagram boxes --- */
+.visual-diagram {
+    background: linear-gradient(135deg, rgba(0,180,216,0.06), rgba(13,17,23,0.9));
+    border: 1px solid rgba(0,180,216,0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.visual-diagram::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(0,180,216,0.05), transparent 50%);
+    animation: diagramGlow 6s ease-in-out infinite alternate;
+}
+@keyframes diagramGlow {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.visual-diagram .diagram-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #90E0EF;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    position: relative;
+}
+.visual-diagram svg {
+    position: relative;
+    max-width: 100%;
+}
+
+/* --- Mnemonic box --- */
+.mnemonic-box {
+    background: linear-gradient(135deg, rgba(247,127,0,0.1), rgba(247,127,0,0.03));
+    border: 1px solid rgba(247,127,0,0.3);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    position: relative;
+}
+.mnemonic-box .mnemonic-title {
+    font-weight: 700;
+    color: #F77F00;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+.mnemonic-box .mnemonic-text {
+    color: #e0d0c0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Exam tip enhanced --- */
+.exam-tip {
+    background: linear-gradient(135deg, rgba(247,127,0,0.12), rgba(247,127,0,0.04));
+    border-left: 4px solid #F77F00;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+}
+.exam-tip .tip-label {
+    font-weight: 700;
+    color: #F77F00;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* --- Indian example box --- */
+.indian-example {
+    background: linear-gradient(135deg, rgba(144,224,239,0.08), rgba(144,224,239,0.02));
+    border-left: 4px solid #90E0EF;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+}
+.indian-example .example-label {
+    font-weight: 700;
+    color: #90E0EF;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* --- Badge row enhancements --- */
+.subject-mmpc03 .br .sb {
+    transition: transform 0.2s ease;
+}
+.subject-mmpc03 .br .sb:hover {
+    transform: scale(1.08);
+}
+
+/* --- Process flow diagram --- */
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+.process-step {
+    background: linear-gradient(135deg, rgba(0,180,216,0.15), rgba(0,180,216,0.05));
+    border: 1px solid rgba(0,180,216,0.3);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #90E0EF;
+    text-align: center;
+    min-width: 100px;
+}
+.process-arrow {
+    color: #F77F00;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* --- Comparison table --- */
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px 0;
+    border: 1px solid rgba(0,180,216,0.2);
+}
+.comparison-table th {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    color: #90E0EF;
+    padding: 12px 16px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.comparison-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    color: #d0d0d5;
+}
+.comparison-table tr:nth-child(even) td {
+    background: rgba(0,180,216,0.03);
+}
+.comparison-table tr:hover td {
+    background: rgba(0,180,216,0.08);
+}
+
+/* --- Video section --- */
+.video-section { margin: 2rem 0; }
+.video-section h4 { color: #00B4D8; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
+.video-section h4::before { content: '🎬'; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(0,180,216,0.08); border: 1px solid rgba(0,180,216,0.2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,180,216,0.2); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(0,180,216,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0f7ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #00B4D8, #F77F00); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+</style>
+</head>
+<body class="subject-mmpc03">
+<div class="study-layout">
+<aside class="study-sidebar">
+  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">📘 MMPC-03</span></div>
+  <nav class="sidebar-nav">
+    <a href="#unit1">Unit 1: Introduction to Business and Environment</a>
+    <a href="#unit2">Unit 2: Economic Growth and Development</a>
+    <a href="#unit3">Unit 3: Socio-Cultural and Politico Legal Environment</a>
+    <a href="#unit4">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</a>
+    <a href="#unit5">Unit 5: Indian Financial System</a>
+    <a href="#unit6">Unit 6: Industrial Policy Framework</a>
+    <a href="#unit7">Unit 7: Agri-business Environment</a>
+    <a href="#unit8">Unit 8: New Economic Policy</a>
+    <a href="#unit9">Unit 9: Financial Sector and Fiscal Sector Reforms</a>
+    <a href="#unit10">Unit 10: International Financial System</a>
+    <a href="#unit11">Unit 11: Balance of Payments (BoP)</a>
+    <a href="#unit12">Unit 12: Foreign Trade</a>
+    <a href="#unit13">Unit 13: Sources of Global Financing</a>
+    <a href="#unit14">Unit 14: Technological Environment</a>
+    <a href="quiz-mmpc03.html" class="back-link">📝 Take Quiz</a>
+    <a href="study-hub.html" class="back-link">← Back to Hub</a>
+  </nav>
+</aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-03</span><h1>Business Environment</h1><p>Enhanced Study Notes</p></div>
+
+<h3 class="animate-on-scroll">Unit 1: Introduction to Business and Environment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">💬 Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 1: Introduction to Business and Environment</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Environment Introduction</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8F2E3D0g6no" title="Business Environment Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Internal vs External Business Environment</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ClnJv69ws2o" title="Internal External Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Micro and Macro Environment Factors</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RPrtQWGch5o" title="Micro Macro Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Business Environment Framework</div>
+<svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="max-width:460px">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00B4D8" stop-opacity="0.3"/><stop offset="100%" stop-color="#00B4D8" stop-opacity="0.1"/></linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F77F00" stop-opacity="0.3"/><stop offset="100%" stop-color="#F77F00" stop-opacity="0.1"/></linearGradient>
+  </defs>
+  <!-- Central circle -->
+  <circle cx="250" cy="140" r="55" fill="url(#g1)" stroke="#00B4D8" stroke-width="2"/>
+  <text x="250" y="135" text-anchor="middle" fill="#90E0EF" font-size="12" font-weight="600">Business</text>
+  <text x="250" y="152" text-anchor="middle" fill="#90E0EF" font-size="12" font-weight="600">Enterprise</text>
+  <!-- Internal ring -->
+  <circle cx="250" cy="140" r="90" fill="none" stroke="#90E0EF" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+  <text x="250" y="58" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600" opacity="0.7">INTERNAL ENVIRONMENT</text>
+  <!-- Internal factors -->
+  <rect x="165" y="65" width="70" height="24" rx="5" fill="url(#g2)" stroke="#F77F00" stroke-width="1"/>
+  <text x="200" y="81" text-anchor="middle" fill="#F77F00" font-size="9">Resources</text>
+  <rect x="265" y="65" width="70" height="24" rx="5" fill="url(#g2)" stroke="#F77F00" stroke-width="1"/>
+  <text x="300" y="81" text-anchor="middle" fill="#F77F00" font-size="9">Culture</text>
+  <rect x="155" y="195" width="70" height="24" rx="5" fill="url(#g2)" stroke="#F77F00" stroke-width="1"/>
+  <text x="190" y="211" text-anchor="middle" fill="#F77F00" font-size="9">People</text>
+  <rect x="275" y="195" width="70" height="24" rx="5" fill="url(#g2)" stroke="#F77F00" stroke-width="1"/>
+  <text x="310" y="211" text-anchor="middle" fill="#F77F00" font-size="9">Processes</text>
+  <!-- External ring -->
+  <circle cx="250" cy="140" r="130" fill="none" stroke="#00B4D8" stroke-width="1" stroke-dasharray="4,6" opacity="0.3"/>
+  <text x="250" y="12" text-anchor="middle" fill="#00B4D8" font-size="9" font-weight="600" opacity="0.7">EXTERNAL ENVIRONMENT</text>
+  <!-- External factors -->
+  <rect x="70" y="30" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="107" y="46" text-anchor="middle" fill="#00B4D8" font-size="9">Political</text>
+  <rect x="355" y="30" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="392" y="46" text-anchor="middle" fill="#00B4D8" font-size="9">Economic</text>
+  <rect x="45" y="130" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="82" y="146" text-anchor="middle" fill="#00B4D8" font-size="9">Social</text>
+  <rect x="380" y="130" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="417" y="146" text-anchor="middle" fill="#00B4D8" font-size="9">Technological</text>
+  <rect x="80" y="230" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="117" y="246" text-anchor="middle" fill="#00B4D8" font-size="9">Legal</text>
+  <rect x="345" y="230" width="75" height="24" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="382" y="246" text-anchor="middle" fill="#00B4D8" font-size="9">Environmental</text>
+</svg>
+</div>
+
+<div class="process-flow animate-on-scroll">
+<div class="process-step">Scanning</div><span class="process-arrow">→</span>
+<div class="process-step">Monitoring</div><span class="process-arrow">→</span>
+<div class="process-step">Forecasting</div><span class="process-arrow">→</span>
+<div class="process-step">Assessment</div><span class="process-arrow">→</span>
+<div class="process-step">Strategy</div>
+</div>
+
+<h4>Point 1: Definition of Business Environment</h4>
+<p>Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as:</p>
+<ul>
+  <li>Value system of society</li>
+  <li>Rules and regulations laid down by Government</li>
+  <li>Monetary policies of the central bank</li>
+  <li>Institutional setup of the country</li>
+  <li>Ideological beliefs of the leaders</li>
+  <li>Attitude towards foreign capital and enterprise</li>
+</ul>
+<h4>Point 2: Characteristics of Business Environment</h4>
+<ol>
+  <li><strong>Dynamic</strong>: Business environments are highly flexible and keep on changing due to factors like customer preferences, new competitors, novel technology, new marketing channels, government policies, and changing demography.</li>
+</ol>
+<ol>
+  <li><strong>Uncertain</strong>: It is very difficult to assume with certainty about the factors influencing business environment because they fluctuate quickly.</li>
+</ol>
+<ol>
+  <li><strong>Complex</strong>: The business environment is continuously exposed to uncertain challenges such as technological disruptions, global competition, leadership changes, shifting economic, social, and regulatory conditions.</li>
+</ol>
+<ol>
+  <li><strong>Relativity</strong>: Business environment varies from country to country, region to region due to societal norms and local conditions.</li>
+</ol>
+<ol>
+  <li><strong>Interrelation</strong>: All factors and forces of business environment are related - for example, youth proclivity towards western culture leads to rising demand for fast food.</li>
+</ol>
+<h4>Point 3: Types of Business Environment</h4>
+<ol>
+  <li><strong>Internal and External Environment</strong>:</li>
+</ol>
+<ul>
+  <li><strong>Internal</strong>: Factors within organization influencing strengths/weaknesses (raw materials, human resources)</li>
+  <li><strong>External</strong>: Factors beyond control providing opportunities/threats (political conditions, technology)</li>
+</ul>
+<ol>
+  <li><strong>Micro and Macro Environment</strong>:</li>
+</ol>
+<ul>
+  <li><strong>Micro</strong>: Factors directly affecting particular business (customers, suppliers, competitors)</li>
+  <li><strong>Macro</strong>: General environment affecting all businesses (political, economic, technological)</li>
+</ul>
+<ol>
+  <li><strong>Controllable and Uncontrollable</strong>:</li>
+</ol>
+<ul>
+  <li><strong>Controllable</strong>: Internal factors governed by business (money, men, materials, machines)</li>
+  <li><strong>Uncontrollable</strong>: External factors beyond management influence</li>
+</ul>
+<h4>Point 4: Importance of Studying Business Environment</h4>
+<p>Managers must understand environment because:</p>
+<ul>
+  <li>Decisions must consider possible environmental reactions</li>
+  <li>Marketing managers study market environment before product launches</li>
+  <li>Finance managers study capital and money market structures</li>
+  <li>Personnel managers must understand government rules on reservations</li>
+  <li>Environmental analysis helps identify opportunities and threats</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example</div>
+<p><strong>Reliance Jio (2016):</strong> Mukesh Ambani studied the Indian telecom environment — high data prices, limited smartphone penetration, and a young population hungry for digital content. Jio launched with free voice and ultra-cheap data, disrupting the entire industry. Within 3 years, Jio had 370 million subscribers. This is a textbook case of environmental scanning creating massive opportunity.</p>
+</div>
+
+<h4>Point 5: PESTEL Analysis Framework</h4>
+<p>PESTEL is a strategic tool to analyze the macro-environment across six dimensions:</p>
+<div class="comparison-table animate-on-scroll">
+<table class="comparison-table">
+<tr><th>Factor</th><th>Description</th><th>Indian Example</th></tr>
+<tr><td><strong>Political</strong></td><td>Government policies, stability, trade regulations</td><td>Make in India policy boosting manufacturing FDI</td></tr>
+<tr><td><strong>Economic</strong></td><td>GDP growth, inflation, interest rates, exchange rates</td><td>RBI repo rate cuts stimulating borrowing</td></tr>
+<tr><td><strong>Social</strong></td><td>Demographics, cultural trends, lifestyle changes</td><td>Youth population driving e-commerce growth</td></tr>
+<tr><td><strong>Technological</strong></td><td>Innovation, R&D, automation, digital disruption</td><td>UPI transforming digital payments (10B+ txns/month)</td></tr>
+<tr><td><strong>Environmental</strong></td><td>Climate, sustainability, ecological regulations</td><td>BS-VI emission norms forcing auto industry changes</td></tr>
+<tr><td><strong>Legal</strong></td><td>Labor laws, consumer protection, competition law</td><td>Companies Act 2013 CSR mandates</td></tr>
+</table>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip</div>
+<p>PESTEL questions are very common in exams. Always give the framework definition AND one Indian example per factor. Remember: <strong>P-E-S-T-E-L</strong> — "Politicians Eat Samosas To Earn Loyalty" is a popular mnemonic among MBA students.</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Characteristics of Business Environment</div>
+<div class="mnemonic-text"><strong>D-C-I-R-I</strong> — "Delhi Companies Invest Rapidly Internationally"<br>
+<strong>D</strong>ynamic, <strong>C</strong>omplex, <strong>I</strong>nterrelated, <strong>R</strong>elativity, <strong>I</strong>ncertain (Uncertain)</div>
+</div>
+
+<h4>Point 6: SWOT vs Environmental Analysis</h4>
+<p><strong>SWOT</strong> examines internal Strengths &amp; Weaknesses and external Opportunities &amp; Threats. It is firm-specific, while PESTEL is industry/macro-level. Best practice: conduct PESTEL first, then derive SWOT from findings.</p>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Introduction to Business and Environment</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors ar...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>nagements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as: Value system of society Rules and regulations laid down by Government Monetary policies of the central bank Institu...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Tata Motors:</strong> Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as: Value system o...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Dynamic: Business environments are highly flexible and keep on changing due to factors like customer preferences, new competitors, novel technology, new marketing channels, government policies, and changing demography.; Uncertain: It is very difficult to assume with certainty about the factors influencing business environment because they fluctuate quickly.; Complex: The business environment is continuously exposed to uncertain challenges such as technological disruptions, global competition, leadership changes, shifting economic, social, and regulatory conditions.</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 1.</p></div>
+<div class="br"><span class="sb s-b">Unit 1</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Introduction to Business and Environment</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 2: Economic Growth and Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">💬 Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 2: Economic Growth and Development</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Indian Economic Growth and Development</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ZSam1BBJ0lo" title="Economic Growth India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Five Year Plans of India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uvM2zIFmM_o" title="Five Year Plans India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>GDP, HDI and Economic Indicators</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/wmjvCvqNMOA" title="GDP HDI India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">India Economic Indicators Dashboard</div>
+<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="max-width:460px">
+  <!-- GDP Card -->
+  <rect x="10" y="10" width="110" height="90" rx="10" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="65" y="35" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">GDP Growth</text>
+  <text x="65" y="65" text-anchor="middle" fill="#00B4D8" font-size="26" font-weight="700">7.2%</text>
+  <text x="65" y="85" text-anchor="middle" fill="#666" font-size="9">FY 2024-25</text>
+  <!-- HDI Card -->
+  <rect x="130" y="10" width="110" height="90" rx="10" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="185" y="35" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">HDI Rank</text>
+  <text x="185" y="65" text-anchor="middle" fill="#F77F00" font-size="26" font-weight="700">134</text>
+  <text x="185" y="85" text-anchor="middle" fill="#666" font-size="9">of 193 countries</text>
+  <!-- Inflation Card -->
+  <rect x="250" y="10" width="110" height="90" rx="10" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="305" y="35" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">CPI Inflation</text>
+  <text x="305" y="65" text-anchor="middle" fill="#90E0EF" font-size="26" font-weight="700">4.8%</text>
+  <text x="305" y="85" text-anchor="middle" fill="#666" font-size="9">RBI Target: 4%</text>
+  <!-- Poverty Card -->
+  <rect x="370" y="10" width="120" height="90" rx="10" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="430" y="35" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Poverty Rate</text>
+  <text x="430" y="65" text-anchor="middle" fill="#00B4D8" font-size="26" font-weight="700">11.9%</text>
+  <text x="430" y="85" text-anchor="middle" fill="#666" font-size="9">NITI Aayog 2024</text>
+  <!-- Growth bar chart -->
+  <text x="250" y="125" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">GDP Growth Trend (%)</text>
+  <rect x="40" y="180" width="50" height="20" rx="3" fill="#00B4D8" opacity="0.4"/><text x="65" y="175" text-anchor="middle" fill="#90E0EF" font-size="9">FY21: -5.8</text>
+  <rect x="110" y="155" width="50" height="45" rx="3" fill="#00B4D8" opacity="0.6"/><text x="135" y="150" text-anchor="middle" fill="#90E0EF" font-size="9">FY22: 9.1</text>
+  <rect x="180" y="158" width="50" height="42" rx="3" fill="#00B4D8" opacity="0.7"/><text x="205" y="153" text-anchor="middle" fill="#90E0EF" font-size="9">FY23: 7.2</text>
+  <rect x="250" y="160" width="50" height="40" rx="3" fill="#00B4D8" opacity="0.8"/><text x="275" y="155" text-anchor="middle" fill="#90E0EF" font-size="9">FY24: 8.2</text>
+  <rect x="320" y="158" width="50" height="42" rx="3" fill="#00B4D8" opacity="0.9"/><text x="345" y="153" text-anchor="middle" fill="#90E0EF" font-size="9">FY25: 7.2</text>
+  <!-- Baseline -->
+  <line x1="30" y1="200" x2="470" y2="200" stroke="#333" stroke-width="1"/>
+</svg>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Economic Development Indicators</div>
+<div class="mnemonic-text"><strong>"G-P-L-G-I-H"</strong> — "Good People Love Great Indian Halwa"<br>
+<strong>G</strong>DP per capita, <strong>P</strong>overty ratio, <strong>L</strong>iteracy rate, <strong>G</strong>ini coefficient, <strong>I</strong>nfant mortality, <strong>H</strong>DI</div>
+</div>
+
+<h4>Point 1: Economic Growth vs Development</h4>
+<p><strong>Economic Growth</strong> refers to increase in real output of goods and services over time, typically measured by GDP growth rate.</p>
+<p><strong>Economic Development</strong> encompasses broader improvements in living standards including:</p>
+<ul>
+  <li>Income distribution</li>
+  <li>Health and education outcomes</li>
+  <li>Infrastructure development</li>
+  <li>Reduction in poverty levels</li>
+</ul>
+<h4>Point 2: Determinants of Economic Growth</h4>
+<ol>
+  <li><strong>Physical Capital</strong>: Infrastructure, machinery, and equipment investment</li>
+  <li><strong>Human Capital</strong>: Education, training, and skill development of workforce</li>
+  <li><strong>Natural Resources</strong>: Availability of land, minerals, water, and other resources</li>
+  <li><strong>Technology</strong>: Innovation and adoption of new production methods</li>
+  <li><strong>Institutional Factors</strong>: Property rights, rule of law, political stability</li>
+</ol>
+<h4>Point 3: Economic Development Indicators</h4>
+<ol>
+  <li><strong>GDP Per Capita</strong>: Measure of average economic output per person</li>
+  <li><strong>HDI (Human Development Index)</strong>: Composite index of life expectancy, education, and per capita income</li>
+  <li><strong>Poverty Ratio</strong>: Percentage of population below poverty line</li>
+  <li><strong>Gini Coefficient</strong>: Measure of income inequality (0 = perfect equality, 1 = perfect inequality)</li>
+  <li><strong>Infant Mortality Rate</strong>: Indicator of healthcare system effectiveness</li>
+  <li><strong>Literacy Rate</strong>: Measure of educational achievement</li>
+</ol>
+<h4>Point 4: Economic Development Strategies</h4>
+<ol>
+  <li><strong>Industrialization</strong>: Shift from agriculture to manufacturing sector</li>
+  <li><strong>Infrastructure Development</strong>: Transport, power, telecommunications networks</li>
+  <li><strong>Human Resource Development</strong>: Education and health sector investments</li>
+  <li><strong>Technology Transfer</strong>: Adoption of modern technologies and practices</li>
+  <li><strong>Institution Building</strong>: Strengthening legal and regulatory frameworks</li>
+</ol>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example</div>
+<p><strong>Gujarat vs Kerala Growth Model:</strong> Gujarat focuses on industrialization and infrastructure (high GDP growth ~10%), while Kerala prioritizes human development (highest literacy 96%, best HDI in India). This illustrates that economic growth and economic development can follow different paths. Gujarat has higher GDP; Kerala has better social indicators. The ideal strategy combines both approaches.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip</div>
+<p>Always distinguish between <strong>Growth</strong> (quantitative — GDP increase) and <strong>Development</strong> (qualitative — HDI, poverty reduction, equality). A common exam question: "Can a country have growth without development?" Answer: Yes — Nigeria has oil-driven GDP growth but poor HDI. India's post-1991 reforms achieved both in varying degrees.</p>
+</div>
+
+<h4>Point 5: NITI Aayog and Planning Evolution</h4>
+<p>India replaced the Planning Commission with NITI Aayog (2015) to shift from centralized planning to cooperative federalism:</p>
+<ul>
+  <li><strong>Three-year action agenda</strong> replacing five-year plans</li>
+  <li><strong>Seven-year strategy</strong> and <strong>15-year vision</strong> documents</li>
+  <li><strong>Bottom-up approach</strong> involving states as partners</li>
+  <li><strong>SDG India Index</strong> tracking sustainable development goals</li>
+</ul>
+
+<div class="comparison-table animate-on-scroll">
+<table class="comparison-table">
+<tr><th>Parameter</th><th>Planning Commission</th><th>NITI Aayog</th></tr>
+<tr><td>Approach</td><td>Top-down, centralized</td><td>Bottom-up, cooperative federalism</td></tr>
+<tr><td>Role</td><td>Resource allocation</td><td>Think tank and advisory</td></tr>
+<tr><td>State Role</strong></td><td>Passive recipients</td><td>Active partners</td></tr>
+<tr><td>Focus</td><td>Five-year plans</td><td>Flexible, outcome-based agendas</td></tr>
+</table>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Economic Growth and Development</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Economic Growth refers to increase in real output of goods and services over time, typically measured by GDP growth rate. Economic Development encompasses broader improvements in living standards including: Income distribution Health and education ou...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>ncompasses broader improvements in living standards including: Income distribution Health and education outcomes Infrastructure development Reduction in poverty levels Physical Capital: Infrastructure, machinery, and equipment investment Human Capita...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Reliance Industries:</strong> Economic Growth refers to increase in real output of goods and services over time, typically measured by GDP growth rate. Economic Development encompasses broader improvements in living standards including: Income distribution Health and education outcomes Infrastructure development Reduction in pov...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Physical Capital: Infrastructure, machinery, and equipment investment; Human Capital: Education, training, and skill development of workforce; Natural Resources: Availability of land, minerals, water, and other resources</p></div>
+<div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
+<div class="br"><span class="sb s-b">Unit 2</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Economic Growth and Development</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 3: Socio-Cultural and Politico Legal Environment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">💬 Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 3: Socio-Cultural and Politico Legal Environment</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Socio-Cultural Environment of Business</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9LlollM1coc" title="Socio-Cultural Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Indian Legal Environment and Companies Act 2013</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/03e2EmUB0pM" title="Legal Environment India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Political Environment and Government Policies</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Nse3x8Bxibc" title="Political Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Legal Framework Hierarchy — India</div>
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
+  <!-- Constitution -->
+  <rect x="160" y="10" width="160" height="36" rx="8" fill="rgba(247,127,0,0.2)" stroke="#F77F00" stroke-width="2"/>
+  <text x="240" y="33" text-anchor="middle" fill="#F77F00" font-size="12" font-weight="700">Constitution of India</text>
+  <!-- Lines down -->
+  <line x1="200" y1="46" x2="120" y2="70" stroke="#555" stroke-width="1"/>
+  <line x1="240" y1="46" x2="240" y2="70" stroke="#555" stroke-width="1"/>
+  <line x1="280" y1="46" x2="360" y2="70" stroke="#555" stroke-width="1"/>
+  <!-- Level 2 -->
+  <rect x="40" y="70" width="160" height="32" rx="6" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="120" y="91" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Acts of Parliament</text>
+  <rect x="160" y="115" width="160" height="32" rx="6" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="240" y="136" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">State Legislations</text>
+  <rect x="280" y="70" width="160" height="32" rx="6" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="360" y="91" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Judicial Precedents</text>
+  <!-- Level 3 -->
+  <line x1="120" y1="102" x2="120" y2="160" stroke="#555" stroke-width="1"/>
+  <line x1="360" y1="102" x2="360" y2="160" stroke="#555" stroke-width="1"/>
+  <rect x="40" y="160" width="160" height="28" rx="5" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="120" y="179" text-anchor="middle" fill="#90E0EF" font-size="9">Companies Act 2013</text>
+  <rect x="40" y="195" width="160" height="28" rx="5" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="120" y="214" text-anchor="middle" fill="#90E0EF" font-size="9">Consumer Protection Act</text>
+  <rect x="280" y="160" width="160" height="28" rx="5" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="360" y="179" text-anchor="middle" fill="#90E0EF" font-size="9">SEBI Regulations</text>
+  <rect x="280" y="195" width="160" height="28" rx="5" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="360" y="214" text-anchor="middle" fill="#90E0EF" font-size="9">RBI Guidelines</text>
+  <!-- Level 4 -->
+  <rect x="120" y="235" width="240" height="24" rx="5" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="240" y="251" text-anchor="middle" fill="#F77F00" font-size="9">Notifications, Circulars, Orders (Executive)</text>
+</svg>
+</div>
+<h4>Point 1: Socio-Cultural Environment</h4>
+<p><strong>Cultural Values</strong>: Beliefs, customs, traditions, and social norms that influence business behavior and expectations.</p>
+<p><strong>Social Structure</strong>: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition.</p>
+<p><strong>Religious Influences</strong>: Religious beliefs and practices that shape business conduct and consumer preferences.</p>
+<p><strong>Language and Communication</strong>: Languages spoken and communication styles affecting business interactions.</p>
+<h4>Point 2: Politico-Legal Environment</h4>
+<p><strong>Political System</strong>: Type of government and political stability affecting business operations.</p>
+<p><strong>Legal Framework</strong>: Laws governing business activities including:</p>
+<ul>
+  <li>Company law</li>
+  <li>Contract law</li>
+  <li>Labor law</li>
+  <li>Consumer protection law</li>
+  <li>Environmental regulations</li>
+</ul>
+<p><strong>Regulatory Agencies</strong>: Government bodies overseeing business conduct and compliance.</p>
+<p><strong>Taxation Policy</strong>: Direct and indirect tax structures affecting business costs.</p>
+<h4>Point 3: Impact on Business Operations</h4>
+<ol>
+  <li><strong>Operational Decisions</strong>: Cultural preferences influence product design and marketing strategies</li>
+  <li><strong>Employment Practices</strong>: Legal requirements for working conditions, wages, and benefits</li>
+  <li><strong>Market Entry Strategies</strong>: Political climate affects foreign investment decisions</li>
+  <li><strong>Risk Management</strong>: Political instability creates uncertainty and risk exposure</li>
+</ol>
+<h4>Point 4: Environmental Scanning</h4>
+<p>Businesses must continuously monitor:</p>
+<ul>
+  <li>Changes in consumer preferences and lifestyles</li>
+  <li>Shifts in demographic patterns</li>
+  <li>New legislation and regulatory changes</li>
+  <li>Political developments affecting business climate</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example</div>
+<p><strong>Haldiram's Cultural Adaptation:</strong> Haldiram's studied the socio-cultural environment across Indian states and customized its product range — Raj kachori in North, bhujia variants in Rajasthan, South Indian snacks in southern markets. They also adapted to the vegetarian preference in Gujarat and Jain communities by offering onion-garlic-free products. Cultural sensitivity helped them become a ₹5,000 crore brand.</p>
+</div>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — Political-Legal</div>
+<p><strong>GST Impact (2017):</strong> The Goods and Services Tax transformed India's indirect tax landscape. It subsumed 17 central and state taxes into one unified tax. Businesses had to completely restructure their supply chains — earlier they optimized for tax arbitrage between states; now they optimize for logistics efficiency. E-way bills, GSTN compliance, and input tax credits became new business imperatives.</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Socio-Cultural Factors</div>
+<div class="mnemonic-text"><strong>"C-S-R-L-D"</strong> — "Cool Students Read Lots Daily"<br>
+<strong>C</strong>ultural values, <strong>S</strong>ocial structure, <strong>R</strong>eligious influences, <strong>L</strong>anguage &amp; communication, <strong>D</strong>emographics</div>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip</div>
+<p>For politico-legal environment questions, always mention <strong>FEMA 1999</strong> (replaced FERA), <strong>Companies Act 2013</strong> (replaced 1956 Act), and <strong>Consumer Protection Act 2019</strong> (replaced 1986 Act). These three reforms are examiner favorites and show you understand legislative evolution.</p>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Socio-Cultural and Politico Legal Environment</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Cultural Values: Beliefs, customs, traditions, and social norms that influence business behavior and expectations. Social Structure: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition. Reli...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>family structures, demographic patterns affecting consumption patterns and workforce composition. Religious Influences: Religious beliefs and practices that shape business conduct and consumer preferences. Language and Communication: Languages spoken...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Infosys:</strong> Cultural Values: Beliefs, customs, traditions, and social norms that influence business behavior and expectations. Social Structure: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition. Religious Influences: Religious beliefs and practices ...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Operational Decisions: Cultural preferences influence product design and marketing strategies; Employment Practices: Legal requirements for working conditions, wages, and benefits; Market Entry Strategies: Political climate affects foreign investment decisions</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 3.</p></div>
+<div class="br"><span class="sb s-b">Unit 3</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Socio-Cultural and Politico Legal Environment</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">💬 Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics Concepts</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ltW7KVYJ1go" title="Business Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Social Responsibility in India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tOZl-dB-8zg" title="CSR India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Carroll's CSR Pyramid Explained</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PcAPpWMfbNI" title="Carroll CSR Pyramid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Carroll's CSR Pyramid</div>
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
+  <!-- Pyramid layers (bottom to top) -->
+  <polygon points="200,220 50,220 115,170 285,170" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="1.5"/>
+  <text x="200" y="205" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="600">ECONOMIC (Be Profitable)</text>
+  <text x="200" y="218" text-anchor="middle" fill="#666" font-size="8">Foundation — generate profits for shareholders</text>
+
+  <polygon points="115,170 285,170 170,120 230,120" fill="rgba(144,224,239,0.2)" stroke="#90E0EF" stroke-width="1.5"/>
+  <text x="200" y="155" text-anchor="middle" fill="#90E0EF" font-size="11" font-weight="600">LEGAL (Obey Laws)</text>
+  <text x="200" y="168" text-anchor="middle" fill="#666" font-size="8">Comply with rules and regulations</text>
+
+  <polygon points="170,120 230,120 185,70 215,70" fill="rgba(247,127,0,0.2)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="200" y="105" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">ETHICAL</text>
+  <text x="200" y="117" text-anchor="middle" fill="#666" font-size="8">Do what is right and fair</text>
+
+  <polygon points="185,70 215,70 195,30 205,30" fill="rgba(0,180,216,0.3)" stroke="#00B4D8" stroke-width="2"/>
+  <text x="200" y="55" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">PHILANTHROPIC</text>
+  <text x="200" y="67" text-anchor="middle" fill="#666" font-size="7">Be a good corporate citizen</text>
+</svg>
+</div>
+<h4>Point 1: Business Ethics</h4>
+<p>Business ethics refers to moral principles and standards governing business conduct and decision-making.</p>
+<p><strong>Key Ethical Issues</strong>:</p>
+<ul>
+  <li>Honesty in advertising and communication</li>
+  <li>Fair treatment of employees and customers</li>
+  <li>Environmental responsibility</li>
+  <li>Truthful financial reporting</li>
+  <li>Conflict of interest management</li>
+</ul>
+<h4>Point 2: Corporate Social Responsibility (CSR)</h4>
+<p>CSR involves businesses going beyond legal compliance to address social and environmental concerns.</p>
+<p><strong>Dimensions</strong>:</p>
+<ol>
+  <li><strong>Economic Responsibility</strong>: Be profitable and sustainable</li>
+  <li><strong>Legal Responsibility</strong>: Obey laws and regulations</li>
+  <li><strong>Ethical Responsibility</strong>: Do what is right and fair</li>
+  <li><strong>Philanthropic Responsibility</strong>: Contribute to community welfare</li>
+</ol>
+<h4>Point 3: CSR in India</h4>
+<p><strong>Legal Framework (Section 135, Companies Act 2013)</strong>:</p>
+<ul>
+  <li>Companies with net worth ≥ ₹500 crore OR</li>
+  <li>Turnover ≥ ₹1,000 crore OR</li>
+  <li>Net profit ≥ ₹5 crore</li>
+  <li>Must spend 2% of average net profits on CSR</li>
+</ul>
+<p><strong>Eligible Activities</strong>:</p>
+<ul>
+  <li>Education promotion</li>
+  <li>Healthcare and sanitation</li>
+  <li>Rural development</li>
+  <li>Environmental sustainability</li>
+  <li>Women empowerment</li>
+  <li>Skill development</li>
+</ul>
+<h4>Point 4: Benefits of Ethical Business Practices</h4>
+<ol>
+  <li><strong>Reputation Enhancement</strong>: Builds trust and positive brand image</li>
+  <li><strong>Employee Attraction</strong>: Appeals to values-conscious talent</li>
+  <li><strong>Customer Loyalty</strong>: Increases retention among conscious consumers</li>
+  <li><strong>Risk Reduction</strong>: Minimizes legal and regulatory violations</li>
+  <li><strong>Long-term Sustainability</strong>: Creates enduring competitive advantage</li>
+</ol>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — CSR Leaders</div>
+<p><strong>Tata Group:</strong> India's gold standard in CSR. Tata Trusts hold 66% of Tata Sons' equity — profits flow to philanthropy. Major initiatives: Tata Memorial Hospital (cancer care), TCS rural education programs, Tata Water Mission (clean water for 3M+ people). Annual CSR spend: ₹1,000+ crore. Ratan Tata's philosophy: "I don't believe in wealth creation for personal gain."</p>
+<p><strong>Infosys Foundation:</strong> Spent ₹322 crore on CSR in FY2023. Focus areas: education (1,50,000+ scholarships), healthcare (rural hospitals), rural development (digital literacy). Sudha Murthy personally oversees projects across Karnataka and other states.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — Section 135 CSR Mandate</div>
+<p>Memorize the thresholds: Net worth ≥ ₹500 crore <strong>OR</strong> Turnover ≥ ₹1,000 crore <strong>OR</strong> Net profit ≥ ₹5 crore → must spend <strong>2% of average net profits</strong> on CSR. Failure to spend requires explanation in board report (comply-or-explain). India is the <strong>first country</strong> to mandate CSR by law — this is a common exam fact.</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: CSR Pyramid (Carroll)</div>
+<div class="mnemonic-text"><strong>"E-L-E-P from bottom to top"</strong> — "Elephants Love Eating Peanuts"<br>
+<strong>E</strong>conomic → <strong>L</strong>egal → <strong>E</strong>thical → <strong>P</strong>hilanthropic<br>
+You must be profitable first (economic), then obey laws, then be ethical, then give back.</div>
+</div>
+
+<h4>Point 5: Whistleblower Protection and Corporate Governance</h4>
+<p><strong>Whistleblower Protection Act 2014</strong> protects persons reporting corruption or willful misuse of power. Key provisions: anonymity, protection from victimization, competent authority for inquiry.</p>
+<p><strong>Corporate Governance Reforms (SEBI):</strong> Mandatory independent directors (50% for top 500 companies), audit committees, related-party transaction approvals, board diversity requirements.</p>
+
+<ul>
+  <li>--</li>
+</ul>
+<p># MMPC03 Business Environment</p>
+<p>## Part 2: Units 5-7 - Indian Economy</p>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Business Ethics and Corporate Social Responsibility (CSR)</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Business ethics refers to moral principles and standards governing business conduct and decision-making. Key Ethical Issues: Honesty in advertising and communication Fair treatment of employees and customers Environmental responsibility Truthful fina...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>ation Fair treatment of employees and customers Environmental responsibility Truthful financial reporting Conflict of interest management CSR involves businesses going beyond legal compliance to address social and environmental concerns. Dimensions: ...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Wipro:</strong> Business ethics refers to moral principles and standards governing business conduct and decision-making. Key Ethical Issues: Honesty in advertising and communication Fair treatment of employees and customers Environmental responsibility Truthful financial reporting Conflict of interest management CS...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Economic Responsibility: Be profitable and sustainable; Legal Responsibility: Obey laws and regulations; Ethical Responsibility: Do what is right and fair</p></div>
+<div class="br"><span class="sb s-b">Unit 4</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Business Ethics and Corporate Social Responsibility (CSR)</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 5: Indian Financial System</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">💬 Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 5: Indian Financial System</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Indian Financial System Overview</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/I0nC_wwRVMg" title="Indian Financial System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>RBI and Its Role in Indian Economy</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/r6ya0p5A8tQ" title="RBI Role" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Capital Market and Money Market</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4PsHrkth6VU" title="Capital Money Market" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Indian Financial System Structure</div>
+<svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
+  <!-- Top: Financial System -->
+  <rect x="160" y="5" width="160" height="30" rx="6" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="2"/>
+  <text x="240" y="25" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">Financial System</text>
+  <!-- Two branches -->
+  <line x1="200" y1="35" x2="120" y2="55" stroke="#555" stroke-width="1"/>
+  <line x1="280" y1="35" x2="360" y2="55" stroke="#555" stroke-width="1"/>
+  <rect x="30" y="55" width="180" height="28" rx="5" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1"/>
+  <text x="120" y="74" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">Financial Institutions</text>
+  <rect x="270" y="55" width="180" height="28" rx="5" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1"/>
+  <text x="360" y="74" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">Financial Markets</text>
+  <!-- Sub-institutions -->
+  <line x1="80" y1="83" x2="50" y2="105" stroke="#555" stroke-width="1"/>
+  <line x1="120" y1="83" x2="120" y2="105" stroke="#555" stroke-width="1"/>
+  <line x1="160" y1="83" x2="190" y2="105" stroke="#555" stroke-width="1"/>
+  <rect x="5" y="105" width="90" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="50" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">Banks (RBI)</text>
+  <rect x="75" y="105" width="90" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="120" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">NBFCs</text>
+  <rect x="145" y="105" width="90" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="190" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">Insurance (IRDA)</text>
+  <!-- Sub-markets -->
+  <line x1="320" y1="83" x2="300" y2="105" stroke="#555" stroke-width="1"/>
+  <line x1="360" y1="83" x2="380" y2="105" stroke="#555" stroke-width="1"/>
+  <line x1="400" y1="83" x2="450" y2="105" stroke="#555" stroke-width="1"/>
+  <rect x="255" y="105" width="90" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="300" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">Money Market</text>
+  <rect x="335" y="105" width="90" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="380" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">Capital Market</text>
+  <rect x="405" y="105" width="70" height="24" rx="4" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="440" y="121" text-anchor="middle" fill="#90E0EF" font-size="8">Forex</text>
+  <!-- Regulators row -->
+  <text x="240" y="155" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">REGULATORS</text>
+  <rect x="20" y="165" width="95" height="24" rx="4" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="67" y="181" text-anchor="middle" fill="#F77F00" font-size="8">RBI (Banking)</text>
+  <rect x="125" y="165" width="80" height="24" rx="4" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="165" y="181" text-anchor="middle" fill="#F77F00" font-size="8">SEBI (Securities)</text>
+  <rect x="215" y="165" width="80" height="24" rx="4" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="255" y="181" text-anchor="middle" fill="#F77F00" font-size="8">IRDA (Insurance)</text>
+  <rect x="305" y="165" width="80" height="24" rx="4" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="345" y="181" text-anchor="middle" fill="#F77F00" font-size="8">PFRDA (Pension)</text>
+  <rect x="395" y="165" width="80" height="24" rx="4" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="435" y="181" text-anchor="middle" fill="#F77F00" font-size="8">FMC (Commodity)</text>
+  <!-- Key stats -->
+  <text x="240" y="210" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Key Numbers (2024)</text>
+  <text x="80" y="230" text-anchor="middle" fill="#00B4D8" font-size="9">12 Public Banks</text>
+  <text x="200" y="230" text-anchor="middle" fill="#00B4D8" font-size="9">21 Private Banks</text>
+  <text x="320" y="230" text-anchor="middle" fill="#00B4D8" font-size="9">430+ NBFCs</text>
+  <text x="440" y="230" text-anchor="middle" fill="#00B4D8" font-size="9">$650B Forex</text>
+</svg>
+</div>
+<h4>Point 1: Structure of Indian Financial System</h4>
+<p>The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through:</p>
+<p><strong>Institutional Components</strong>:</p>
+<ul>
+  <li><strong>Commercial Banks</strong>: Scheduled and non-scheduled banks providing deposit and credit services</li>
+  <li><strong>Cooperative Banks</strong>: Member-owned financial institutions at urban and rural levels</li>
+  <li><strong>Regional Rural Banks</strong>: Focused on agricultural and rural sector financing</li>
+  <li><strong>Development Financial Institutions</strong>: Specialized institutions for term lending (ex: IDBI, SIDBI)</li>
+  <li><strong>Non-Banking Financial Companies</strong>: NBFCs providing various financial services</li>
+  <li><strong>Insurance Companies</strong>: Life and general insurance providers</li>
+  <li><strong>Pension Funds</strong>: Retirement and provident fund institutions</li>
+</ul>
+<p><strong>Market Components</strong>:</p>
+<ul>
+  <li><strong>Money Market</strong>: Short-term funds (up to 1 year)</li>
+  <li><strong>Capital Market</strong>: Long-term funds and securities</li>
+  <li><strong>Forex Market</strong>: Foreign exchange transactions</li>
+  <li><strong>Debt Market</strong>: Government and corporate bonds</li>
+  <li><strong>Derivatives Market</strong>: Futures and options trading</li>
+</ul>
+<h4>Point 2: Reserve Bank of India (RBI) - Key Functions</h4>
+<ol>
+  <li><strong>Monetary Authority</strong>: Regulates money supply and interest rates</li>
+  <li><strong>Banker to Banks</strong>: Maintains accounts of scheduled commercial banks</li>
+  <li><strong>Banker to Government</strong>: Manages government accounts and public debt</li>
+  <li><strong>Lender of Last Resort</strong>: Provides emergency funding to banks</li>
+  <li><strong>Regulator and Supervisor</strong>: Oversees functioning of financial institutions</li>
+  <li><strong>Foreign Exchange Manager</strong>: Manages foreign exchange reserves and exchange rates</li>
+</ol>
+<h4>Point 3: Commercial Banking in India</h4>
+<p><strong>Types of Banks</strong>:</p>
+<ul>
+  <li><strong>Public Sector Banks</strong>: Government-owned majority stakes</li>
+  <li><strong>Private Sector Banks</strong>: Private ownership and management</li>
+  <li><strong>Foreign Banks</strong>: Branch operations of international banks</li>
+  <li><strong>Cooperative Banks</strong>: Member-based ownership structure</li>
+  <li><strong>Regional Rural Banks</strong>: Serving specific rural areas</li>
+</ul>
+<p><strong>Banking Functions</strong>:</p>
+<ul>
+  <li>Accepting deposits (savings, current, fixed deposits)</li>
+  <li>Providing credit (working capital, term loans)</li>
+  <li>Underwriting and underwriting services</li>
+  <li>Foreign exchange services</li>
+  <li>Agency services (collections, remittances)</li>
+</ul>
+<h4>Point 4: Capital Market in India</h4>
+<p><strong>Primary Market</strong>: Where new securities are issued and sold for the first time</p>
+<ul>
+  <li>Initial Public Offering (IPO)</li>
+  <li>Follow-on Public Offering (FPO)</li>
+  <li>Rights Issue</li>
+  <li>Preferential Issue</li>
+</ul>
+<p><strong>Secondary Market</strong>: Trading of existing securities</p>
+<ul>
+  <li>Stock exchanges (BSE, NSE)</li>
+  <li>Over-the-counter markets</li>
+  <li>Depository participants and demat accounts</li>
+</ul>
+<h4>Point 5: Regulatory Framework</h4>
+<p><strong>Primary Regulators</strong>:</p>
+<ul>
+  <li>Reserve Bank of India (Banking Regulation Act)</li>
+  <li>Securities and Exchange Board of India (SEBI)</li>
+  <li>Insurance Regulatory and Development Authority (IRDA)</li>
+  <li>Pension Fund Regulatory and Development Authority (PFRDA)</li>
+</ul>
+<p><strong>Key Regulations</strong>:</p>
+<ul>
+  <li>Banking Regulation Act, 1949</li>
+  <li>Companies Act, 2013</li>
+  <li>Securities Contracts (Regulation) Act, 1956</li>
+  <li>Foreign Exchange Management Act, 1999</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — UPI Revolution</div>
+<p><strong>UPI (Unified Payments Interface):</strong> Launched by NPCI in 2016, UPI processed <strong>13.4 billion transactions in January 2024</strong> worth ₹18.4 lakh crore. It transformed India from a cash-dominant economy to a digital payment leader. Google Pay, PhonePe, and Paytm process 95%+ of UPI volumes. UPI is now being adopted by Singapore, UAE, France, and Sri Lanka — India's biggest fintech export.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — RBI Functions</div>
+<p>Remember RBI's 6 functions using mnemonic <strong>"M-B-B-L-R-F"</strong>: <strong>M</strong>onetary authority, <strong>B</strong>anker to banks, <strong>B</strong>anker to govt, <strong>L</strong>ender of last resort, <strong>R</strong>egulator, <strong>F</strong>oreign exchange manager. A common trick question: "Is RBI the regulator of stock markets?" No — that's SEBI. RBI regulates banking; SEBI regulates securities markets.</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Financial Market Types</div>
+<div class="mnemonic-text"><strong>"Money Capital Debt Forex Derivatives"</strong> — "Many Citizens Don't Find it Difficult"<br>
+Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bonds) → Forex Market → Derivatives Market</div>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Indian Financial System</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through: Institutional Components: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>Institutional Components**: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit services Cooperative Banks: Member-owned financial institutions at urban and rural levels Regional Rural Banks: Focused on agricultural and r...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>HDFC Bank:</strong> The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through: Institutional Components: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit services Cooperative Banks: Member-owned financia...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Monetary Authority: Regulates money supply and interest rates; Banker to Banks: Maintains accounts of scheduled commercial banks; Banker to Government: Manages government accounts and public debt</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 5.</p></div>
+<div class="br"><span class="sb s-b">Unit 5</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Indian Financial System</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 6: Industrial Policy Framework</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">💬 Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 6: Industrial Policy Framework</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Industrial Policy of India 1991</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ZeD-XLmCXUg" title="Industrial Policy 1991" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Make in India and Industrial Reforms</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ZeD-XLmCXUg" title="Make in India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>FDI Policy and Industrial Growth</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kdcmhVh1eJc" title="FDI Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Industrial Policy Evolution Timeline</div>
+<svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
+  <!-- Timeline line -->
+  <line x1="40" y1="80" x2="460" y2="80" stroke="#00B4D8" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- 1951 -->
+  <circle cx="80" cy="80" r="8" fill="#F77F00" stroke="#F77F00" stroke-width="2"/>
+  <text x="80" y="70" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">1951</text>
+  <text x="80" y="105" text-anchor="middle" fill="#d0d0d5" font-size="8">IDR Act</text>
+  <text x="80" y="117" text-anchor="middle" fill="#666" font-size="7">License Raj</text>
+  <!-- 1969 -->
+  <circle cx="160" cy="80" r="8" fill="#F77F00" stroke="#F77F00" stroke-width="2"/>
+  <text x="160" y="70" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">1969</text>
+  <text x="160" y="105" text-anchor="middle" fill="#d0d0d5" font-size="8">Bank</text>
+  <text x="160" y="117" text-anchor="middle" fill="#666" font-size="7">Nationalization</text>
+  <!-- 1991 -->
+  <circle cx="260" cy="80" r="12" fill="#00B4D8" stroke="#00B4D8" stroke-width="3"/>
+  <text x="260" y="55" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">1991</text>
+  <text x="260" y="105" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">LPG Reforms</text>
+  <text x="260" y="117" text-anchor="middle" fill="#666" font-size="7">Liberalization</text>
+  <!-- 2014 -->
+  <circle cx="360" cy="80" r="8" fill="#F77F00" stroke="#F77F00" stroke-width="2"/>
+  <text x="360" y="70" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">2014</text>
+  <text x="360" y="105" text-anchor="middle" fill="#d0d0d5" font-size="8">Make in</text>
+  <text x="360" y="117" text-anchor="middle" fill="#666" font-size="7">India</text>
+  <!-- 2020 -->
+  <circle cx="430" cy="80" r="8" fill="#F77F00" stroke="#F77F00" stroke-width="2"/>
+  <text x="430" y="70" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">2020</text>
+  <text x="430" y="105" text-anchor="middle" fill="#d0d0d5" font-size="8">Atmanirbhar</text>
+  <text x="430" y="117" text-anchor="middle" fill="#666" font-size="7">Bharat</text>
+  <!-- Direction arrow -->
+  <text x="250" y="30" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Control → Liberalization → Self-Reliance</text>
+</svg>
+</div>
+<h4>Point 1: Evolution of Industrial Policy</h4>
+<p><strong>Pre-1991 Era (License Raj)</strong>:</p>
+<ul>
+  <li>Industrial Licensing under Industries (Development and Regulation) Act, 1951</li>
+  <li>Reservation of industries for public sector</li>
+  <li>MRTP Act restrictions on large business houses</li>
+  <li>Import substitution strategy</li>
+  <li>High tariff protection</li>
+</ul>
+<p><strong>Post-1991 Era (Liberalization)</strong>:</p>
+<ul>
+  <li>Abolition of industrial licensing (except few industries)</li>
+  <li>Opening up to foreign investment</li>
+  <li>Reduction in import tariffs</li>
+  <li>Privatization of public sector enterprises</li>
+  <li>Foreign exchange liberalization</li>
+</ul>
+<h4>Point 2: Industrial Policy Statements</h4>
+<p><strong>Industrial Policy 1991</strong>:</p>
+<ul>
+  <li>Abolished industrial licensing for all except 18 industries</li>
+  <li>Opened up industries to private sector participation</li>
+  <li>Allowed foreign investment up to 51% under automatic route</li>
+  <li>Reduced monopoly restrictions under MRTP Act</li>
+</ul>
+<p><strong>Industrial Policy 2014-2020</strong>:</p>
+<ul>
+  <li>"Make in India" initiative focus</li>
+  <li>Emphasis on manufacturing competitiveness</li>
+  <li>Ease of doing business improvements</li>
+  <li>Digital India integration</li>
+  <li>Startup India promotion</li>
+</ul>
+<h4>Point 3: Current Industrial Classification</h4>
+<p><strong>Strategic Industries</strong>:</p>
+<ul>
+  <li>Defense equipment manufacturing</li>
+  <li>Nuclear energy projects</li>
+  <li>Atomic minerals</li>
+  <li>Railways transport (excluding coaching and wagon manufacturing)</li>
+</ul>
+<p><strong>Reserved for Public Sector</strong>:</p>
+<ul>
+  <li>Atomic energy</li>
+  <li>Mineral oils and gases</li>
+  <li>Mining and processing of radioactive minerals</li>
+  <li>Rail transport (core infrastructure)</li>
+</ul>
+<p><strong>Open to Private Sector</strong>:</p>
+<ul>
+  <li>Most manufacturing industries</li>
+  <li>Service sectors</li>
+  <li>Small-scale industries</li>
+  <li>Technology and innovation sectors</li>
+</ul>
+<h4>Point 4: Foreign Investment Policy</h4>
+<p><strong>Automatic Route</strong>: FDI allowed without prior approval</p>
+<ul>
+  <li>100% FDI in many sectors including defense, telecom, insurance</li>
+  <li>Government route for sensitive sectors requiring approval</li>
+</ul>
+<p><strong>Foreign Exchange Management</strong>:</p>
+<ul>
+  <li>Current account convertibility since 1994</li>
+  <li>Capital account partially liberalized</li>
+  <li>External Commercial Borrowing (ECB) framework</li>
+  <li>Portfolio investment through stock exchanges</li>
+</ul>
+<h4>Point 5: Make in India Initiative</h4>
+<p><strong>Objectives</strong>:</p>
+<ul>
+  <li>Increase manufacturing sector growth to 12-14%</li>
+  <li>Create 100 million additional jobs by 2022</li>
+  <li>Increase manufacturing sector share in GDP to 25%</li>
+  <li>Reduce dependency on imports for critical goods</li>
+</ul>
+<p><strong>Key Sectors</strong>:</p>
+<ul>
+  <li>Manufacturing and engineering</li>
+  <li>Pharmaceuticals and biotechnology</li>
+  <li>Electronics and IT hardware</li>
+  <li>Automotive and textiles</li>
+  <li>Defense manufacturing</li>
+  <li>Renewable energy</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — PLI Scheme Success</div>
+<p><strong>Production-Linked Incentive (PLI) Scheme:</strong> Launched in 2020 for 14 sectors with ₹1.97 lakh crore outlay. Results: Apple suppliers (Foxconn, Wistron) now manufacture iPhones in India. Mobile phone exports surged from ₹11,000 crore (2017) to ₹1.2 lakh crore (2023). India is now the world's second-largest mobile phone manufacturer. PLI also covers semiconductors (₹76,000 crore), EV batteries, and white goods.</p>
+</div>
+
+<div class="comparison-table animate-on-scroll">
+<table class="comparison-table">
+<tr><th>Feature</th><th>Pre-1991 (License Raj)</th><th>Post-1991 (Liberalization)</th></tr>
+<tr><td>Licensing</td><td>Mandatory for all industries</td><td>Abolished except 5 sectors</td></tr>
+<tr><td>FDI</td><td>Restricted, MRTP limits</td><td>Automatic route up to 100%</td></tr>
+<tr><td>Public Sector</td><td>18 reserved industries</td><td>Only 3 reserved (defense, atomic, railways)</td></tr>
+<tr><td>Import Tariffs</td><td>Up to 300%</td><td>Reduced to 10-15% average</td></tr>
+<tr><td>Foreign Exchange</td><td>FERA controls</td><td>FEMA liberalization</td></tr>
+</table>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip</div>
+<p>The 1991 Industrial Policy is the most frequently examined topic. Remember the <strong>3 reforms</strong>: De-licensing (abolished licensing), Dereservation (reduced public sector reservation from 17 to 3), and Decontrol (removed MRTP restrictions). Always cite Manmohan Singh as the architect and PV Narasimha Rao as the political enabler.</p>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Industrial Policy Framework</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Pre-1991 Era (License Raj): Industrial Licensing under Industries (Development and Regulation) Act, 1951 Reservation of industries for public sector MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Po...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>tor MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Post-1991 Era (Liberalization): Abolition of industrial licensing (except few industries) Opening up to foreign investment Reduction in import tari...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>ICICI Bank:</strong> Pre-1991 Era (License Raj): Industrial Licensing under Industries (Development and Regulation) Act, 1951 Reservation of industries for public sector MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Post-1991 Era (Liberalization): Abolition of industr...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 6</p></div>
+<div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
+<div class="br"><span class="sb s-b">Unit 6</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Industrial Policy Framework</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 7: Agri-business Environment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">💬 Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 7: Agri-business Environment</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Indian Agriculture Economy</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OTfupG4j-LQ" title="Indian Agriculture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Green Revolution and Food Security</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JpKo_WNRtfQ" title="Green Revolution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Agricultural Reforms and MSP</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yUh-qRr0h-M" title="Agricultural Reforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Agricultural Revolutions in India</div>
+<svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
+  <rect x="10" y="10" width="100" height="70" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
+  <text x="60" y="35" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Green</text>
+  <text x="60" y="50" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Revolution</text>
+  <text x="60" y="68" text-anchor="middle" fill="#666" font-size="7">1960s · HYV Seeds</text>
+
+  <rect x="120" y="10" width="100" height="70" rx="8" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="170" y="35" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="700">White</text>
+  <text x="170" y="50" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="700">Revolution</text>
+  <text x="170" y="68" text-anchor="middle" fill="#666" font-size="7">1970s · Operation Flood</text>
+
+  <rect x="230" y="10" width="100" height="70" rx="8" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
+  <text x="280" y="35" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="700">Yellow</text>
+  <text x="280" y="50" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="700">Revolution</text>
+  <text x="280" y="68" text-anchor="middle" fill="#666" font-size="7">1980s · Oilseeds</text>
+
+  <rect x="340" y="10" width="130" height="70" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
+  <text x="405" y="35" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Evergreen</text>
+  <text x="405" y="50" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Revolution</text>
+  <text x="405" y="68" text-anchor="middle" fill="#666" font-size="7">Sustainable Agriculture</text>
+
+  <rect x="60" y="100" width="150" height="60" rx="8" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="135" y="120" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">Blue Revolution</text>
+  <text x="135" y="135" text-anchor="middle" fill="#666" font-size="8">Fisheries · Dr. Kurien</text>
+  <text x="135" y="150" text-anchor="middle" fill="#666" font-size="7">India = 2nd largest fish producer</text>
+
+  <rect x="270" y="100" width="150" height="60" rx="8" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="345" y="120" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">Digital Revolution</text>
+  <text x="345" y="135" text-anchor="middle" fill="#666" font-size="8">e-NAM · PM-KISAN · AgriStack</text>
+  <text x="345" y="150" text-anchor="middle" fill="#666" font-size="7">Precision farming · Drone surveys</text>
+</svg>
+</div>
+<h4>Point 1: Agricultural Sector Overview</h4>
+<p>Agriculture remains the backbone of Indian economy despite declining share in GDP:</p>
+<ul>
+  <li>Employs about 50% of workforce</li>
+  <li>Contributes approximately 17% to GDP</li>
+  <li>Largest producer of milk, pulses, and spices globally</li>
+  <li>Second largest producer of wheat, rice, cotton</li>
+</ul>
+<h4>Point 2: Agricultural Inputs and Infrastructure</h4>
+<p><strong>Land Resources</strong>:</p>
+<ul>
+  <li>Net sown area: ~141 million hectares</li>
+  <li>Gross cropped area: ~260 million hectares (multiple cropping)</li>
+  <li>Soil types: Alluvial, black cotton, red and yellow, laterite, mountain soils</li>
+</ul>
+<p><strong>Irrigation</strong>:</p>
+<ul>
+  <li>Canal irrigation: 40% of irrigated area</li>
+  <li>Groundwater: 60% of irrigated area</li>
+  <li>Major dams and multipurpose projects</li>
+  <li>Micro-irrigation (drip and sprinkler) promotion</li>
+</ul>
+<p><strong>Credit and Finance</strong>:</p>
+<ul>
+  <li>Cooperative banks and RRBs</li>
+  <li>Commercial banks agricultural advances</li>
+  <li>Kisan Credit Cards (KCC)</li>
+  <li>Agricultural term loans and crop loans</li>
+</ul>
+<h4>Point 3: Agricultural Marketing and Value Chains</h4>
+<p><strong>APMC Act</strong>: Agricultural Produce Market Committee regulation of wholesale markets</p>
+<p><strong>Challenges</strong>:</p>
+<ul>
+  <li>Multiple intermediaries reducing farmer incomes</li>
+  <li>Lack of storage and cold chain infrastructure</li>
+  <li>Price volatility and market risks</li>
+  <li>Limited access to modern retail channels</li>
+</ul>
+<p><strong>Reforms</strong>:</p>
+<ul>
+  <li>Model APMC Act for states</li>
+  <li>Electronic trading platforms</li>
+  <li>Farmer Producer Organizations (FPOs)</li>
+  <li>Contract farming frameworks</li>
+</ul>
+<h4>Point 4: Agricultural Technology and Innovation</h4>
+<p><strong>Green Revolution</strong>: Introduction of HYV seeds, fertilizers, and irrigation</p>
+<p><strong>White Revolution</strong>: Operation Flood dairy development program</p>
+<p><strong>Yellow Revolution</strong>: Oilseed production enhancement</p>
+<p><strong>Evergreen Revolution</strong>: Sustainable agriculture practices</p>
+<p><strong>Modern Technologies</strong>:</p>
+<ul>
+  <li>Precision farming and IoT applications</li>
+  <li>GM crop adoption (Bt cotton primarily)</li>
+  <li>Organic farming initiatives</li>
+  <li>Digital platforms for market linkages</li>
+</ul>
+<h4>Point 5: Government Support and Schemes</h4>
+<p><strong>Price Support</strong>: MSP (Minimum Support Price) for major crops</p>
+<p><strong>Subsidy Programs</strong>: Fertilizer, power, irrigation subsidies</p>
+<p><strong>Insurance</strong>: Pradhan Mantri Fasal Bima Yojana</p>
+<p><strong>Infrastructure</strong>: National Agriculture Market (e-NAM), agricultural roads</p>
+<p><strong>Investment</strong>: Agricultural investment funds and credit guarantee schemes</p>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — Amul Model</div>
+<p><strong>Amul (GCMMF):</strong> The White Revolution's crown jewel. Founded by Tribhuvandas Patel and led by Verghese Kurien, Amul pioneered the cooperative model — 3.6 million milk producers across 18,600 villages. Daily procurement: 27 million liters. Revenue: ₹72,000 crore (FY2023). The Amul model bypassed middlemen, ensuring 80% of the consumer price goes to farmers. It's studied at Harvard Business School as a masterclass in rural supply chain management.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — Farm Laws 2020</div>
+<p>The three farm laws (repealed 2021) are a hot exam topic. They aimed to: (1) Allow farmers to sell outside APMC mandis, (2) Enable contract farming, (3) Remove essential commodities from stock limits. They were repealed due to farmer protests. In exams, present both sides: the reform rationale (market freedom, better prices) vs. farmer concerns (loss of MSP guarantee, corporate exploitation).</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Agricultural Revolutions</div>
+<div class="mnemonic-text"><strong>"Green White Yellow Blue Golden Silver"</strong> — "Good Workers Yield Big Gold Silver"<br>
+<strong>Green</strong> = Food grains (HYV), <strong>White</strong> = Milk (Operation Flood), <strong>Yellow</strong> = Oilseeds, <strong>Blue</strong> = Fish, <strong>Golden</strong> = Horticulture, <strong>Silver</strong> = Eggs/Poultry</div>
+</div>
+
+<p># MMPC03 Business Environment</p>
+<p>## Part 3: Units 8-14 - Structural Reforms to Technological Environment</p>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Agri-business Environment</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Agriculture remains the backbone of Indian economy despite declining share in GDP: Employs about 50% of workforce Contributes approximately 17% to GDP Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotto...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotton Land Resources: Net sown area: ~141 million hectares Gross cropped area: ~260 million hectares (multiple cropping) Soil types: Alluvial, black cotton...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Larsen & Toubro:</strong> Agriculture remains the backbone of Indian economy despite declining share in GDP: Employs about 50% of workforce Contributes approximately 17% to GDP Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotton Land Resources: Net sown area: ~141 million hect...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 7</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 7.</p></div>
+<div class="br"><span class="sb s-b">Unit 7</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Agri-business Environment</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 8: New Economic Policy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">💬 Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 8: New Economic Policy</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>LPG Reforms India 1991</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2CmsA9nLfd4" title="LPG Reforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>New Economic Policy India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2CmsA9nLfd4" title="New Economic Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Disinvestment and Privatization</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YfjzmjwqDCs" title="Disinvestment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="process-flow animate-on-scroll">
+<div class="process-step">1991 Crisis</div><span class="process-arrow">→</span>
+<div class="process-step">Stabilization</div><span class="process-arrow">→</span>
+<div class="process-step">Liberalization</div><span class="process-arrow">→</span>
+<div class="process-step">Privatization</div><span class="process-arrow">→</span>
+<div class="process-step">Globalization</div>
+</div>
+<h4>Point 1: Background and Objectives (1991)</h4>
+<p>The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis:</p>
+<ul>
+  <li>Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports)</li>
+  <li>Fiscal deficit exceeded 8% of GDP</li>
+  <li>Public sector inefficiency and mounting losses</li>
+  <li>External debt servicing difficulties</li>
+</ul>
+<p><strong>Objectives</strong>:</p>
+<ol>
+  <li><strong>Stabilization</strong>: Correct external sector imbalances and fiscal deficit</li>
+  <li><strong>Liberalization</strong>: Remove restrictions on business and industry</li>
+  <li><strong>Globalization</strong>: Integrate with world economy and attract foreign investment</li>
+</ol>
+<h4>Point 2: Key Reforms Introduced</h4>
+<p><strong>Trade Liberalization</strong>:</p>
+<ul>
+  <li>Reduction in import tariffs from 300% to 50%</li>
+  <li>Removal of quantitative restrictions on imports</li>
+  <li>Export promotion through duty-free imports</li>
+  <li>Introduction of Export Promotion Capital Goods scheme</li>
+</ul>
+<p><strong>Industrial De-licensing</strong>:</p>
+<ul>
+  <li>Abolition of industrial licensing for most industries</li>
+  <li>Reduction of reserved sectors for public sector</li>
+  <li>Entry of private sector in previously restricted areas</li>
+  <li>MRTP Act threshold increased and simplified</li>
+</ul>
+<p><strong>Financial Sector Reforms</strong>:</p>
+<ul>
+  <li>Establishment of Debt Recovery Tribunals</li>
+  <li>Introduction of SARFAESI Act for asset recovery</li>
+  <li>Banking sector reforms and technology adoption</li>
+  <li>Capital market development and investor protection</li>
+</ul>
+<h4>Point 3: Foreign Investment Policy</h4>
+<p><strong>FDI Liberalization</strong>:</p>
+<ul>
+  <li>Automatic approval route for FDI up to 51% in many sectors</li>
+  <li>100% FDI in sectors like pharmaceuticals, hotels, tourism</li>
+  <li>Bilateral investment protection agreements</li>
+  <li>Portfolio investment deregulation</li>
+</ul>
+<p><strong>Foreign Exchange Reforms</strong>:</p>
+<ul>
+  <li>Current account convertibility achieved in 1994</li>
+  <li>Dual exchange rate system eliminated</li>
+  <li>Market-determined exchange rate regime</li>
+  <li>Capital account convertibility initiated gradually</li>
+</ul>
+<h4>Point 4: Impact of NEP</h4>
+<p><strong>Positive Outcomes</strong>:</p>
+<ul>
+  <li>GDP growth accelerated to 6-8% range</li>
+  <li>Foreign investment inflows increased significantly</li>
+  <li>Sectoral efficiency improvements</li>
+  <li>Technology transfer and skill development</li>
+  <li>Integration with global value chains</li>
+</ul>
+<p><strong>Challenges</strong>:</p>
+<ul>
+  <li>Regional disparities in growth benefits</li>
+  <li>Employment generation in organized sector</li>
+  <li>Agricultural sector lagging behind</li>
+  <li>Infrastructure bottlenecks</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — 1991 Gold Pledge</div>
+<p><strong>The Crisis that Changed India:</strong> In June 1991, India pledged 47 tonnes of gold to the Bank of England and Union Bank of Switzerland to raise $600 million. Foreign reserves had dropped to just $1.2 billion — barely enough for 2 weeks of imports. RBI Governor S. Venkitaramnan personally flew the gold to London. This humiliation catalyzed the LPG reforms under Finance Minister Manmohan Singh. Within a decade, India's reserves crossed $100 billion.</p>
+</div>
+
+<div class="comparison-table animate-on-scroll">
+<table class="comparison-table">
+<tr><th>Reform Area</th><th>Key Change</th><th>Impact</th></tr>
+<tr><td>Industrial</td><td>Licensing abolished</td><td>Private sector boom, new industries</td></tr>
+<tr><td>Trade</td><td>Tariffs cut from 300% to 50%</td><td>Import efficiency, export growth</td></tr>
+<tr><td>FDI</td><td>Automatic approval route</td><td>$84B FDI inflows (2021-23)</td></tr>
+<tr><td>Financial</td><td>SEBI empowered, DRTs set up</td><td>Capital market depth, NPAs addressed</td></tr>
+<tr><td>Forex</td><td>Market-determined rates</td><td>Reserves grew to $650B+</td></tr>
+</table>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: LPG Reforms</div>
+<div class="mnemonic-text"><strong>"L-P-G"</strong> — "Let People Grow"<br>
+<strong>L</strong>iberalization (remove government controls) → <strong>P</strong>rivatization (transfer ownership to private sector) → <strong>G</strong>lobalization (integrate with world economy)<br>
+Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalization &amp; Globalization</div>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">8</div><div class="fc-l">New Economic Policy</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis: Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losse...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>r 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losses External debt servicing difficulties Objectives: Stabilization: Correct external sector imbalances and fiscal deficit Liberalization: Remove restric...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Bajaj Auto:</strong> The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis: Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losses External debt servicing difficulties Objectives:...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Stabilization: Correct external sector imbalances and fiscal deficit; Liberalization: Remove restrictions on business and industry; Globalization: Integrate with world economy and attract foreign investment</p></div>
+<div class="br"><span class="sb s-b">Unit 8</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>New Economic Policy</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 9: Financial Sector and Fiscal Sector Reforms</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">💬 Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 9: Financial Sector and Fiscal Sector Reforms</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Financial Sector Reforms India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PkRaMQixeF4" title="Financial Sector Reforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>GST Explained — One Nation One Tax</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/UlFjXvhxitA" title="GST India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Fiscal Policy and Budget</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Q4sXx3H-UlY" title="Fiscal Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">GST Structure — One Nation One Tax</div>
+<svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
+  <!-- Central GST -->
+  <rect x="130" y="10" width="140" height="40" rx="8" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="2"/>
+  <text x="200" y="35" text-anchor="middle" fill="#00B4D8" font-size="12" font-weight="700">GST Council</text>
+  <!-- CGST and SGST -->
+  <line x1="170" y1="50" x2="80" y2="75" stroke="#555" stroke-width="1"/>
+  <line x1="230" y1="50" x2="320" y2="75" stroke="#555" stroke-width="1"/>
+  <rect x="15" y="75" width="130" height="36" rx="6" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="80" y="93" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">CGST (Central)</text>
+  <text x="80" y="106" text-anchor="middle" fill="#666" font-size="7">Goes to Central Govt</text>
+  <rect x="255" y="75" width="130" height="36" rx="6" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="320" y="93" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">SGST (State)</text>
+  <text x="320" y="106" text-anchor="middle" fill="#666" font-size="7">Goes to State Govt</text>
+  <!-- IGST -->
+  <rect x="110" y="130" width="180" height="36" rx="6" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
+  <text x="200" y="148" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">IGST (Inter-State)</text>
+  <text x="200" y="161" text-anchor="middle" fill="#666" font-size="7">Collected by Centre, shared with states</text>
+  <!-- Rates -->
+  <text x="200" y="180" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">Rates: 0% | 5% | 12% | 18% | 28%</text>
+</svg>
+</div>
+<h4>Point 1: Financial Sector Reforms</h4>
+<p><strong>Banking Sector</strong>:</p>
+<ul>
+  <li>Narasimham Committee recommendations (1991, 1998)</li>
+  <li>Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR)</li>
+  <li>Deregulation of interest rates on deposits and advances</li>
+  <li>Introduction of prudential norms for income recognition and asset classification</li>
+  <li>Technology upgradation and computerization</li>
+</ul>
+<p><strong>Capital Markets</strong>:</p>
+<ul>
+  <li>Establishment of SEBI as statutory regulator</li>
+  <li>Dematerialization and electronic trading systems</li>
+  <li>Introduction of screen-based trading</li>
+  <li>Derivatives trading introduction</li>
+  <li>Corporate governance code implementation</li>
+</ul>
+<p><strong>Insurance Sector</strong>:</p>
+<ul>
+  <li>IRDA Act 2000 allowing private sector entry</li>
+  <li>Foreign equity participation up to 26%</li>
+  <li>health insurance and pension fund regulations</li>
+  <li>Microinsurance and customized products</li>
+</ul>
+<h4>Point 2: Fiscal Sector Reforms</h4>
+<p><strong>Tax Reform</strong>:</p>
+<ul>
+  <li>Introduction of Goods and Services Tax (GST)</li>
+  <li>Direct tax reforms and faceless assessment</li>
+  <li>Rationalization of tax rates and exemptions</li>
+  <li>Digital tax administration platforms</li>
+</ul>
+<p><strong>Expenditure Management</strong>:</p>
+<ul>
+  <li>Fiscal Responsibility and Budget Management Act (FRBM)</li>
+  <li>Medium-term fiscal framework</li>
+  <li>Outcome budgeting initiatives</li>
+  <li>Subsidy reforms and direct benefit transfers</li>
+</ul>
+<h4>Point 3: FRBM Act 2003</h4>
+<p><strong>Fiscal Targets</strong>:</p>
+<ul>
+  <li>Revenue deficit: 0% by 2008-09 (not achieved)</li>
+  <li>Fiscal deficit: 3% of GDP</li>
+  <li>Effective Revenue Deficit: 2.2% of GDP (new target)</li>
+  <li>Debt-to-GDP ratio: 60% for center and states combined</li>
+</ul>
+<p><strong>Deficit Consolidation Path</strong>:</p>
+<ul>
+  <li>General government deficit reduction</li>
+  <li>Improved quality of fiscal adjustment</li>
+  <li>Contingent liability management</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — GST Impact</div>
+<p><strong>GST (July 1, 2017):</strong> India's biggest tax reform since independence. Subsumed 17 indirect taxes (Excise, VAT, Service Tax, etc.) into one unified tax. Impact: Eliminated cascading effect of "tax on tax," reduced logistics costs by 20% (no more state border checkposts), formalized the economy (GSTN tracks every transaction). Challenges: Multiple rate slabs (5/12/18/28%), compliance burden for SMEs, initial IT glitches. Revenue: ₹1.68 lakh crore monthly collection (April 2023 record).</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — Narasimham Committee</div>
+<p>Two committees (1991 and 1998) are exam favorites. Key recommendations: Reduce SLR and CRR, allow private banks, recapitalize PSU banks, adopt Basel norms, set up ARCs for bad loans. In 2024 context: many recommendations were implemented (Bandhan Bank, IDFC First Bank are new private banks), but full privatization of PSU banks remains politically sensitive.</p>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">9</div><div class="fc-l">Financial Sector and Fiscal Sector Reforms</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Banking Sector: Narasimham Committee recommendations (1991, 1998) Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR) Deregulation of interest rates on deposits and advances Introduction of prudential norms for income recognitio...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>tion of interest rates on deposits and advances Introduction of prudential norms for income recognition and asset classification Technology upgradation and computerization Capital Markets: Establishment of SEBI as statutory regulator Dematerializatio...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Maruti Suzuki:</strong> Banking Sector: Narasimham Committee recommendations (1991, 1998) Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR) Deregulation of interest rates on deposits and advances Introduction of prudential norms for income recognition and asset classification Technology upgradation ...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 9</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 9.</p></div>
+<div class="br"><span class="sb s-b">Unit 9</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+<div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Financial Sector and Fiscal Sector Reforms</td><td>Details</td></tr></table></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 10: International Financial System</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">💬 Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 10: International Financial System</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>IMF, World Bank and Global Institutions</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uYU-jEUwYNc" title="IMF World Bank" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>WTO and India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uqnTu7yfhSQ" title="WTO India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Globalization and Liberalization</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ok8lJ_Pvvmc" title="Globalization India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Global Financial Architecture</div>
+<svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
+  <!-- IMF -->
+  <rect x="10" y="20" width="140" height="55" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
+  <text x="80" y="42" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">IMF</text>
+  <text x="80" y="58" text-anchor="middle" fill="#666" font-size="8">Monetary Stability</text>
+  <text x="80" y="70" text-anchor="middle" fill="#666" font-size="7">190 members · $1T resources</text>
+  <!-- World Bank -->
+  <rect x="170" y="20" width="140" height="55" rx="8" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="240" y="42" text-anchor="middle" fill="#F77F00" font-size="11" font-weight="700">World Bank</text>
+  <text x="240" y="58" text-anchor="middle" fill="#666" font-size="8">Development Finance</text>
+  <text x="240" y="70" text-anchor="middle" fill="#666" font-size="7">IBRD · IDA · IFC · MIGA</text>
+  <!-- ADB -->
+  <rect x="330" y="20" width="140" height="55" rx="8" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
+  <text x="400" y="42" text-anchor="middle" fill="#90E0EF" font-size="11" font-weight="700">ADB</text>
+  <text x="400" y="58" text-anchor="middle" fill="#666" font-size="8">Asia-Pacific Development</text>
+  <text x="400" y="70" text-anchor="middle" fill="#666" font-size="7">68 members · HQ Manila</text>
+  <!-- WTO -->
+  <rect x="100" y="100" width="120" height="45" rx="8" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="160" y="122" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">WTO</text>
+  <text x="160" y="138" text-anchor="middle" fill="#666" font-size="7">Trade Rules · Disputes</text>
+  <!-- BIS -->
+  <rect x="260" y="100" width="120" height="45" rx="8" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
+  <text x="320" y="122" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">BIS / Basel</text>
+  <text x="320" y="138" text-anchor="middle" fill="#666" font-size="7">Banking Standards</text>
+</svg>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: Bretton Woods Twins</div>
+<div class="mnemonic-text"><strong>"IMF = Short-term, World Bank = Long-term"</strong><br>
+IMF = International Monetary Fund = Money for <strong>stabilization</strong> (balance of payments crises)<br>
+World Bank = Money for <strong>development</strong> (poverty reduction, infrastructure)<br>
+Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
+</div>
+<h4>Point 1: International Monetary Fund (IMF)</h4>
+<p><strong>Functions</strong>:</p>
+<ul>
+  <li>Surveillance of international monetary system</li>
+  <li>Financial assistance to member countries</li>
+  <li>Technical assistance and training programs</li>
+  <li>Research and data dissemination</li>
+</ul>
+<p><strong>Quotas and Resources</strong>:</p>
+<ul>
+  <li>Based on relative size of member economies</li>
+  <li>Total quota resources: ~$1 trillion</li>
+  <li>Special Drawing Rights (SDRs) as international reserve asset</li>
+</ul>
+<h4>Point 2: World Bank Group</h4>
+<p><strong>Components</strong>:</p>
+<ul>
+  <li>International Bank for Reconstruction and Development (IBRD)</li>
+  <li>International Development Association (IDA)</li>
+  <li>International Finance Corporation (IFC)</li>
+  <li>Multilateral Investment Guarantee Agency (MIGA)</li>
+</ul>
+<p><strong>Functions</strong>:</p>
+<ul>
+  <li>Long-term development financing</li>
+  <li>Poverty reduction initiatives</li>
+  <li>Private sector investment promotion</li>
+  <li>Risk mitigation for investments</li>
+</ul>
+<h4>Point 3: Asian Development Bank (ADB)</h4>
+<p><strong>Regional Focus</strong>: Asia and Pacific region development</p>
+<p><strong>Membership</strong>: 68 countries including India</p>
+<p><strong>Operations</strong>: Infrastructure financing, social development, regional cooperation</p>
+<p><strong>India's Role</strong>: Fourth largest shareholder and borrower</p>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">10</div><div class="fc-l">International Financial System</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Functions: Surveillance of international monetary system Financial assistance to member countries Technical assistance and training programs Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota ...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>s Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota resources: ~$1 trillion Special Drawing Rights (SDRs) as international reserve asset Components: International Bank for Reconstruction and ...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Asian Paints:</strong> Functions: Surveillance of international monetary system Financial assistance to member countries Technical assistance and training programs Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota resources: ~$1 trillion Special Drawing Rights (SD...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 10</p></div>
+<div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
+<div class="br"><span class="sb s-b">Unit 10</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 11: Balance of Payments (BoP)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">💬 Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 11: Balance of Payments (BoP)</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Balance of Payments Explained</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vKL82UChmY8" title="Balance of Payments" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Current Account and Capital Account</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aTU_l0rSDp8" title="Current Capital Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Foreign Exchange Reserves India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/_iWZp-tNLno" title="Forex Reserves" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">Balance of Payments Structure</div>
+<svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
+  <!-- BoP -->
+  <rect x="130" y="5" width="140" height="30" rx="6" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="2"/>
+  <text x="200" y="25" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">Balance of Payments</text>
+  <!-- Current Account -->
+  <line x1="170" y1="35" x2="80" y2="55" stroke="#555" stroke-width="1"/>
+  <rect x="5" y="55" width="150" height="30" rx="5" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1"/>
+  <text x="80" y="75" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">Current Account</text>
+  <text x="80" y="100" text-anchor="middle" fill="#666" font-size="7">Trade · Services · Income · Transfers</text>
+  <!-- Capital Account -->
+  <line x1="200" y1="35" x2="200" y2="55" stroke="#555" stroke-width="1"/>
+  <rect x="130" y="55" width="140" height="30" rx="5" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1"/>
+  <text x="200" y="75" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">Capital Account</text>
+  <text x="200" y="100" text-anchor="middle" fill="#666" font-size="7">FDI · FPI · Loans · ECB</text>
+  <!-- Financial Account -->
+  <line x1="230" y1="35" x2="320" y2="55" stroke="#555" stroke-width="1"/>
+  <rect x="245" y="55" width="150" height="30" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="320" y="75" text-anchor="middle" fill="#00B4D8" font-size="9" font-weight="600">Financial Account</text>
+  <text x="320" y="100" text-anchor="middle" fill="#666" font-size="7">Direct · Portfolio · Other</text>
+  <!-- Errors -->
+  <rect x="100" y="125" width="200" height="25" rx="5" fill="rgba(247,127,0,0.08)" stroke="#F77F00" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="200" y="142" text-anchor="middle" fill="#F77F00" font-size="8">Errors & Omissions (balancing item)</text>
+</svg>
+</div>
+<h4>Point 1: Components of Balance of Payments</h4>
+<p><strong>Current Account</strong>:</p>
+<ul>
+  <li>Trade in goods (visible exports and imports)</li>
+  <li>Trade in services (invisible exports and imports)</li>
+  <li>Income receipts and payments</li>
+  <li>Current transfers</li>
+</ul>
+<p><strong>Capital Account</strong>:</p>
+<ul>
+  <li>Capital transfers (debt forgiveness, migrants' transfers)</li>
+  <li>Non-resident investments in domestic assets</li>
+  <li>Reserve assets transactions</li>
+</ul>
+<p><strong>Financial Account</strong>:</p>
+<ul>
+  <li>Direct investment flows</li>
+  <li>Portfolio investment flows</li>
+  <li>Other investment flows</li>
+  <li>Reserve assets</li>
+</ul>
+<h4>Point 2: BoP Crisis Indicators</h4>
+<p><strong>Warning Signs</strong>:</p>
+<ul>
+  <li>Continuous current account deficit</li>
+  <li>Depleting foreign exchange reserves</li>
+  <li>Widening fiscal deficit</li>
+  <li>Rising external debt</li>
+  <li>Currency depreciation pressures</li>
+</ul>
+<h4>Point 3: BoP Management Tools</h4>
+<p><strong>Expenditure Switching</strong>:</p>
+<ul>
+  <li>Exchange rate devaluation</li>
+  <li>Import substitution policies</li>
+  <li>Export promotion incentives</li>
+</ul>
+<p><strong>Expenditure Reducing</strong>:</p>
+<ul>
+  <li>Fiscal consolidation</li>
+  <li>Monetary tightening</li>
+  <li>Structural reforms</li>
+</ul>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — 1991 BoP Crisis</div>
+<p><strong>The 1991 Crisis:</strong> India's current account deficit ballooned to $10 billion, forex reserves fell to $1.2 billion (2 weeks of imports), and India had to pledge 47 tonnes of gold to Bank of England. The crisis forced India to adopt LPG reforms. Fast forward to 2024: India's forex reserves are $650+ billion (10+ months of imports), and India is the world's 5th largest economy. The 1991 crisis was the best thing that happened to India's economy — it forced reform.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip</div>
+<p>A common exam question: "Differentiate between Current Account Deficit (CAD) and Fiscal Deficit." CAD = imports > exports (external imbalance), Fiscal Deficit = government spending > revenue (internal imbalance). Both can be related: high fiscal deficit → higher imports → higher CAD. India targets CAD < 2.5% of GDP and fiscal deficit < 4.5% of GDP (FY2026 target).</p>
+</div>
+
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">11</div><div class="fc-l">Balance of Payments (BoP)</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Current Account: Trade in goods (visible exports and imports) Trade in services (invisible exports and imports) Income receipts and payments Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident inv...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>s Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident investments in domestic assets Reserve assets transactions Financial Account: Direct investment flows Portfolio investment flows Other investm...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Bharat Petroleum:</strong> Current Account: Trade in goods (visible exports and imports) Trade in services (invisible exports and imports) Income receipts and payments Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident investments in domestic assets Reserve assets transac...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 11</p></div>
+<div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 11.</p></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 12: Foreign Trade</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">💬 Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 12: Foreign Trade</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Foreign Trade Policy India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0lpjDqviQoQ" title="Foreign Trade Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Trade Agreements and FTAs</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ee764-bX_a4" title="Trade Agreements" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Export Promotion and SEZ</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Db3BP298S_Y" title="Export Promotion SEZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — Trade Agreements</div>
+<p><strong>India's FTA Network:</strong> India has signed FTAs with ASEAN (2010), Japan (2011), South Korea (2010), and the UAE (2022). The India-UAE CEPA boosted bilateral trade by 16% in the first year. India is negotiating FTAs with EU, UK, Canada, and Israel. However, India walked out of RCEP (2020) citing concerns about Chinese goods flooding Indian markets — a protectionist stance to safeguard domestic manufacturing.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — India's Export Composition</div>
+<p>India's top exports: (1) Petroleum products (refinery), (2) Gems &amp; jewelry, (3) Pharmaceuticals, (4) IT services, (5) Chemicals. Top imports: (1) Crude oil, (2) Gold, (3) Electronics, (4) Coal, (5) Machinery. India has a structural trade deficit because oil and gold imports are massive and non-negotiable. Key exam fact: India's services exports ($325B) are stronger than merchandise exports — the "IT dividend."</p>
+</div>
+<h4>Point 1: Foreign Trade Policy</h4>
+<p><strong>Export Promotion</strong>:</p>
+<ul>
+  <li>Merchandise Exports from India Scheme (MEIS)</li>
+  <li>Service Exports from India Scheme (SEIS)</li>
+  <li>Duty-free credit scrips for exporters</li>
+  <li>Infrastructure development for exports</li>
+</ul>
+<p><strong>Import Policy</strong>:</p>
+<ul>
+  <li>Import licensing largely abolished</li>
+  <li>Tariff liberalization and rationalization</li>
+  <li>Free Trade Agreement utilization</li>
+  <li>Preferential import arrangements</li>
+</ul>
+<h4>Point 2: Major Trading Partners</h4>
+<p><strong>Export Destinations</strong>:</p>
+<ul>
+  <li>USA, UAE, China, UK, Germany</li>
+  <li>IT services to USA and UK</li>
+  <li>Pharma products to regulated markets</li>
+  <li>Gems and jewelry to Gulf countries</li>
+</ul>
+<p><strong>Import Sources</strong>:</p>
+<ul>
+  <li>China, USA, UAE, Saudi Arabia, South Korea</li>
+  <li>Crude oil from Middle East</li>
+  <li>Gold and electronics from various countries</li>
+  <li>Machinery and raw materials</li>
+</ul>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">12</div><div class="fc-l">Foreign Trade</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Export Promotion: Merchandise Exports from India Scheme (MEIS) Service Exports from India Scheme (SEIS) Duty-free credit scrips for exporters Infrastructure development for exports Import Policy: Import licensing largely abolished Tariff liberalizati...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>ructure development for exports Import Policy: Import licensing largely abolished Tariff liberalization and rationalization Free Trade Agreement utilization Preferential import arrangements Export Destinations: USA, UAE, China, UK, Germany IT service...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Hindustan Unilever:</strong> Export Promotion: Merchandise Exports from India Scheme (MEIS) Service Exports from India Scheme (SEIS) Duty-free credit scrips for exporters Infrastructure development for exports Import Policy: Import licensing largely abolished Tariff liberalization and rationalization Free Trade Agreement utiliz...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 12</p></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 13: Sources of Global Financing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">💬 Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 13: Sources of Global Financing</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>FDI and FPI in India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/P3IPw7ijhxA" title="FDI FPI India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Global Financing Sources</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/DctcdhyUvY0" title="Global Financing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>GIFT City and International Finance</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/BMWnkVbl_8w" title="GIFT City" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">FDI Inflows to India (Top Sources, FY2023)</div>
+<svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
+  <text x="200" y="15" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">FDI Equity Inflows ($ Billion)</text>
+  <rect x="20" y="30" width="180" height="18" rx="4" fill="#00B4D8" opacity="0.8"/><text x="210" y="43" fill="#00B4D8" font-size="9">Singapore: $17.2B</text>
+  <rect x="20" y="52" width="150" height="18" rx="4" fill="#F77F00" opacity="0.8"/><text x="180" y="65" fill="#F77F00" font-size="9">Mauritius: $14.3B</text>
+  <rect x="20" y="74" width="100" height="18" rx="4" fill="#90E0EF" opacity="0.8"/><text x="130" y="87" fill="#90E0EF" font-size="9">USA: $6.0B</text>
+  <rect x="20" y="96" width="70" height="18" rx="4" fill="#00B4D8" opacity="0.6"/><text x="100" y="109" fill="#00B4D8" font-size="9">Netherlands: $4.6B</text>
+  <rect x="20" y="118" width="55" height="18" rx="4" fill="#F77F00" opacity="0.6"/><text x="85" y="131" fill="#F77F00" font-size="9">Japan: $3.5B</text>
+</svg>
+</div>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — FDI Success Story</div>
+<p><strong>Gujarat's GIFT City:</strong> India's first International Financial Services Centre (IFSC) in Gandhinagar. Attracted $26B+ in cumulative transactions. Features: tax holidays, relaxed regulations, global banking licenses. Major occupiers: Standard Chartered, Deutsche Bank, JP Morgan. GIFT City aims to compete with Singapore and Dubai as Asia's financial hub. It shows how infrastructure + regulatory reform = FDI magnet.</p>
+</div>
+<h4>Point 1: International Capital Flows</h4>
+<p><strong>Foreign Direct Investment (FDI)</strong>:</p>
+<ul>
+  <li>Long-term investment for business control</li>
+  <li>Technology transfer and employment generation</li>
+  <li>Linkage with global production networks</li>
+</ul>
+<p><strong>Portfolio Investment</strong>:</p>
+<ul>
+  <li>Short-term capital flows for financial returns</li>
+  <li>Stock and bond market investments</li>
+  <li>Higher volatility and speculative nature</li>
+</ul>
+<p><strong>Loan Capital</strong>:</p>
+<ul>
+  <li>Commercial borrowings abroad (ECB)</li>
+  <li>Official development finance</li>
+  <li>Multilateral agency funding</li>
+</ul>
+<h4>Point 2: External Commercial Borrowings (ECB)</h4>
+<p><strong>Eligible Borrowers</strong>:</p>
+<ul>
+  <li>Infrastructure companies</li>
+  <li>Manufacturing companies</li>
+  <li>DFIs and banks for refinancing</li>
+</ul>
+<p><strong>Framework</strong>:</p>
+<ul>
+  <li>Minimum average maturity of 3 years</li>
+  <li>End-use restrictions for infrastructure sectors</li>
+  <li>Reporting and disclosure requirements</li>
+  <li>All-in-cost ceiling framework</li>
+</ul>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">13</div><div class="fc-l">Sources of Global Financing</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Foreign Direct Investment (FDI): Long-term investment for business control Technology transfer and employment generation Linkage with global production networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond marke...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>uction networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond market investments Higher volatility and speculative nature Loan Capital: Commercial borrowings abroad (ECB) Official development finance Multilateral...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>ITC:</strong> Foreign Direct Investment (FDI): Long-term investment for business control Technology transfer and employment generation Linkage with global production networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond market investments Higher volatility and speculative na...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 13</p></div>
+</div>
+
+<h3 class="animate-on-scroll">Unit 14: Technological Environment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">💬 Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">📖 Unit 14: Technological Environment</div></div>
+
+<div class="video-section animate-on-scroll">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Technological Environment in India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vdrjCtvlhYQ" title="Technological Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>India Stack and Digital India</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6GlJN6-dkKU" title="India Stack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="video-card">
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>Startup Ecosystem and Innovation</h5></div>
+        <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vKwogp6HtXs" title="Startup Ecosystem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="visual-diagram animate-on-scroll">
+<div class="diagram-title">India's Digital Stack — The India Stack</div>
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
+  <!-- Stack layers -->
+  <rect x="50" y="10" width="300" height="35" rx="6" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="1.5"/>
+  <text x="200" y="32" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">Presenceless · Paperless · Cashless Layer</text>
+
+  <rect x="50" y="50" width="300" height="35" rx="6" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
+  <text x="200" y="72" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">UPI · DigiLocker · eSign · GSTN</text>
+
+  <rect x="50" y="90" width="300" height="35" rx="6" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
+  <text x="200" y="112" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Account Aggregator · ONDC · CoWIN</text>
+
+  <rect x="50" y="130" width="300" height="35" rx="6" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
+  <text x="200" y="152" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Aadhaar (1.4B identities) · Jan Dhan</text>
+
+  <rect x="50" y="170" width="300" height="25" rx="5" fill="rgba(247,127,0,0.08)" stroke="#F77F00" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="200" y="187" text-anchor="middle" fill="#F77F00" font-size="8">Open Network for Digital Commerce (ONDC) — Breaking platform monopoly</text>
+</svg>
+</div>
+
+<div class="indian-example animate-on-scroll">
+<div class="example-label">Indian Example — Digital India Success</div>
+<p><strong>India's UPI Global Expansion:</strong> UPI is now accepted in 7 countries — Singapore, UAE, France, Sri Lanka, Bhutan, Nepal, and Mauritius. Google recommended India's UPI model to the US Federal Reserve. India processes more digital transactions than the US and China combined. The India Stack (Aadhaar + UPI + DigiLocker) is being studied by 30+ countries as a model for digital public infrastructure.</p>
+</div>
+
+<div class="exam-tip animate-on-scroll">
+<div class="tip-label">Exam Tip — Technology & Business</div>
+<p>For technology environment questions, always connect technology to <strong>business impact</strong>: (1) AI → automation + job displacement concerns, (2) UPI → financial inclusion + cashless economy, (3) Aadhaar → identity verification + subsidy targeting (JAM trinity), (4) 5G → IoT + smart manufacturing. The examiner wants to see you link technology to economic outcomes, not just list technologies.</p>
+</div>
+
+<div class="mnemonic-box animate-on-scroll">
+<div class="mnemonic-title">Mnemonic: India's Digital Initiatives</div>
+<div class="mnemonic-text"><strong>"D-A-B-U-S-D"</strong> — "Digital Aadhaar Brings UPI Smartly Daily"<br>
+<strong>D</strong>igital India → <strong>A</strong>adhaar → <strong>B</strong>haratNet → <strong>U</strong>PI → <strong>S</strong>tartup India → <strong>D</strong>igiLocker<br>
+These form the backbone of India's digital economy.</div>
+</div>
+<h4>Point 1: Digital Revolution Impact</h4>
+<p><strong>Transformation Areas</strong>:</p>
+<ul>
+  <li>E-commerce and digital payments</li>
+  <li>Artificial Intelligence and automation</li>
+  <li>Internet of Things (IoT) applications</li>
+  <li>Blockchain and distributed ledger technology</li>
+  <li>Big data analytics and cloud computing</li>
+</ul>
+<h4>Point 2: Indian Digital Initiatives</h4>
+<p><strong>Startup Ecosystem</strong>:</p>
+<ul>
+  <li>Startup India program</li>
+  <li>Atmanirbhar Bharat digital initiatives</li>
+  <li>Digital India program</li>
+  <li>BharatNet connectivity project</li>
+</ul>
+<p><strong>Technology Adoption</strong>:</p>
+<ul>
+  <li>Aadhaar biometric identity system</li>
+  <li>Unified Payment Interface (UPI)</li>
+  <li>Digital locker and e-signatures</li>
+  <li>Online education and healthcare platforms</li>
+</ul>
+<h4>Point 3: Future Technology Trends</h4>
+<p><strong>Emerging Technologies</strong>:</p>
+<ul>
+  <li>5G telecommunications</li>
+  <li>Quantum computing research</li>
+  <li>Electric vehicle ecosystem</li>
+  <li>Space technology and satellite communications</li>
+  <li>Green energy and sustainability technologies</li>
+</ul>
+<p><strong>Business Implications</strong>:</p>
+<ul>
+  <li>Disruption of traditional business models</li>
+  <li>Need for continuous skill upgrading</li>
+  <li>Investment in R&D and innovation</li>
+  <li>Cybersecurity and data privacy concerns</li>
+</ul>
+<ul>
+  <li>--</li>
+</ul>
+
+<div class="fc">
+  <div class="fc-s"><div class="fc-n">14</div><div class="fc-l">Technological Environment</div></div>
+</div>
+<div class="cg">
+  <div class="cc"><h5>Key Concepts</h5>
+  <p>Transformation Areas: E-commerce and digital payments Artificial Intelligence and automation Internet of Things (IoT) applications Blockchain and distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India pr...</p>
+  </div>
+  <div class="cc"><h5>Summary</h5>
+  <p>d distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India program Atmanirbhar Bharat digital initiatives Digital India program BharatNet connectivity project Technology Adoption: Aadhaar biometric identit...</p>
+  </div>
+</div>
+<div class="eb"><p><strong>Dabur:</strong> Transformation Areas: E-commerce and digital payments Artificial Intelligence and automation Internet of Things (IoT) applications Blockchain and distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India program Atmanirbhar Bharat digital initiatives Digit...</p></div>
+<div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 14</p></div>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+
+    <script src="pomodoro.js"></script>
+    <script src="bookmark-notes.js"></script>
+    <script src="flashcards.js"></script>
+    <script>
+    // Scroll-triggered fade-in animations
+    (function() {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+    </script>
+</body>
+</html>

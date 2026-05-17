@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-01 Quiz - Management Functions | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-enhanced.css">
+    <style>
+        body {
+            background: #06060f !important;
+        }
+        .option-input {
+            display: none;
+        }
+        .option-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1.5px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            margin: 0.5rem 0;
+        }
+        .option-label:hover {
+            border-color: rgba(94,140,240,0.25);
+            background: rgba(94,140,240,0.04);
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(94,140,240,0.08);
+        }
+        .option-input:checked + .option-label {
+            border-color: rgba(94,140,240,0.5);
+            background: rgba(94, 140, 240, 0.06);
+            box-shadow: 0 0 20px rgba(94,140,240,0.1);
+        }
+        .option-input:disabled + .option-label {
+            cursor: default;
+            opacity: 0.8;
+        }
+        .option-input:checked:disabled + .option-label {
+            cursor: default;
+        }
+        .option-prefix {
+            font-size: 1.25rem;
+            font-weight: 800;
+            min-width: 24px;
+            color: rgba(255,255,255,0.3);
+            margin-top: 0.125rem;
+            transition: color 0.3s;
+        }
+        .option-input:checked ~ .option-label .option-prefix {
+            color: var(--accent);
+        }
+        .option-text {
+            flex: 1;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.93rem;
+        }
+        .option-input:disabled ~ .option-label .option-text {
+            color: rgba(255,255,255,0.35);
+        }
+        .correct-answer .option-prefix {
+            color: var(--success) !important;
+        }
+        .correct-answer .option-label {
+            border-color: rgba(52,211,153,0.4) !important;
+            background: rgba(52, 211, 153, 0.06) !important;
+            box-shadow: 0 0 20px rgba(52,211,153,0.08) !important;
+        }
+        .incorrect-answer .option-prefix {
+            color: var(--danger) !important;
+        }
+        .incorrect-answer .option-label {
+            border-color: rgba(248,113,113,0.4) !important;
+            background: rgba(248, 113, 113, 0.06) !important;
+        }
+        .explanation-box {
+            background: rgba(94, 140, 240, 0.04);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem;
+            margin-top: 1rem;
+            border-radius: 0 16px 16px 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .explanation-box p { margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+        .quiz-header {
+            background: linear-gradient(135deg, rgba(94,140,240,0.08), rgba(167,139,250,0.05));
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .quiz-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #7ba4f7, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+        }
+        .quiz-header p {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.95rem;
+        }
+        .quiz-stat .stat-value {
+            background: linear-gradient(135deg, #7ba4f7, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+        .quiz-stat .stat-label {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+        .question-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        }
+        .question-card h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+        .quiz-timer {
+            background: rgba(10,10,25,0.9);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .btn {
+            border-radius: 60px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #5e8cf0, #7b6cf0);
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 16px rgba(94,140,240,0.3);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 28px rgba(94,140,240,0.4);
+        }
+        .btn-outline {
+            background: rgba(255,255,255,0.03);
+            color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.06);
+            color: var(--accent);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.08);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>📊 MMPC-01: Management Functions Quiz</h1>
+        <p>Test your knowledge of planning, organizing, directing, and controlling</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn" style="display:none;">
+            <span class="icon">📋</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">📍</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">⏱</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">🔍</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">←</span> Previous
+            </button>
+            <div>
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">🔀</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">🔖</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">→</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">⏱</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which function of management involves setting objectives and determining appropriate actions to achieve them?",
+                options: [
+                    "Directing",
+                    "Organizing",
+                    "Planning",
+                    "Controlling"
+                ],
+                answer: 2,
+                explanation: "Planning is the primary function of management where managers set objectives, determine strategies, and develop plans to coordinate activities. It provides direction, reduces risks of uncertainty, promotes innovative ideas, and facilitates decision-making. Planning is done at all levels of management and all departments."
+            },
+            {
+                question: "The primary reason organizations develop formal plans is to:",
+                options: [
+                    "Eliminate all possible errors",
+                    "Define goals and establish overall strategy",
+                    "Increase the workload of employees",
+                    "Make work more complex"
+                ],
+                answer: 1,
+                explanation: "Organizations develop formal plans primarily to define goals and establish overall strategy. Planning provides direction to activities, ensures goal achievement, and coordinates various departments and activities within the organization."
+            },
+            {
+                question: "Which of the following is NOT a characteristic of planning?",
+                options: [
+                    "Planning is goal-oriented",
+                    "Planning is looking ahead",
+                    "Planning is a one-time process",
+                    "Planning is an intellectual process"
+                ],
+                answer: 2,
+                explanation: "Planning is not a one-time process. It is a continuous and ongoing process that needs to be reviewed and revised as circumstances change, goals are accomplished, or new opportunities arise. Plans are made for future periods and need periodic revision."
+            },
+            {
+                question: "Strategic planning is typically done by:",
+                options: [
+                    "Middle-level management",
+                    "Lower-level management",
+                    "Top-level management",
+                    "All levels equally"
+                ],
+                answer: 2,
+                explanation: "Strategic planning is typically done by top-level management. This involves making long-term decisions about the overall direction of the organization, establishing policies, goals, and objectives that will guide the organization's future."
+            },
+            {
+                question: "Which type of plan sets long-term objectives for the entire organization?",
+                options: [
+                    "Operational plan",
+                    "Strategic plan",
+                    "Tactical plan",
+                    "Standing plan"
+                ],
+                answer: 1,
+                explanation: "A strategic plan sets long-term objectives for the entire organization. It deals with the overall mission, vision, and long-term goals. Strategic plans are comprehensive plans made by top-level management for a period of 5 years or more."
+            },
+            {
+                question: "The process of establishing a formal structure of authority is called:",
+                options: [
+                    "Directing",
+                    "Organizing",
+                    "Planning",
+                    "Staffing"
+                ],
+                answer: 1,
+                explanation: "Organizing is the process of establishing a formal structure of authority where work is subdivided, grouped, and coordinated. It involves identifying and grouping work to be performed, defining roles and responsibilities, delegating authority, and establishing relationships to enable people to work together efficiently."
+            },
+            {
+                question: "Span of control refers to:",
+                options: [
+                    "The area a manager can physically see",
+                    "The geographical area of operations",
+                    "The number of subordinates a manager can effectively supervise",
+                    "The financial resources available to a manager"
+                ],
+                answer: 2,
+                explanation: "Span of control refers to the number of subordinates a supervisor or manager can effectively supervise. It determines the levels of management in the organization. A wider span means fewer levels, while a narrow span results in more levels of management."
+            },
+            {
+                question: "Departmentalization based on product lines is called:",
+                options: [
+                    "Functional departmentalization",
+                    "Geographical departmentalization",
+                    "Product departmentalization",
+                    "Customer departmentalization"
+                ],
+                answer: 2,
+                explanation: "Product departmentalization occurs when an organization creates separate divisions for each major product line or service. Each department contains the functional specialists needed to produce and sell the product, giving product managers autonomy and responsibility."
+            },
+            {
+                question: "Authority flows downward while accountability flows:",
+                options: [
+                    "Sideways",
+                    "Upward",
+                    "In all directions",
+                    "Does not flow"
+                ],
+                answer: 1,
+                explanation: "In an organization, authority flows downward from superiors to subordinates through the chain of command. However, accountability flows upward - subordinates are accountable to their superiors for the tasks assigned. Authority is delegated but responsibility is absolute and cannot be delegated."
+            },
+            {
+                question: "Centralization in organization structure means:",
+                options: [
+                    "Power is distributed to all levels",
+                    "Decision-making authority is concentrated at the top",
+                    "Departments operate independently",
+                    "Managers have no authority"
+                ],
+                answer: 1,
+                explanation: "Centralization refers to the concentration of decision-making authority at the top level of management. In a centralized organization, top management retains most decision-making power, while in a decentralized organization, authority is pushed down to lower levels. Centralization can lead to uniformity but may reduce flexibility."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc-01', 'MMPC-01', questions);
+        quizEngine.init();
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            
+            switch(e.key) {
+                case 'ArrowLeft':
+                case 'a':
+                case 'A':
+                    e.preventDefault();
+                    quizEngine.prev();
+                    break;
+                case 'ArrowRight':
+                case 'd':
+                case 'D':
+                    e.preventDefault();
+                    quizEngine.next();
+                    break;
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                    if (quizEngine.currentState === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
