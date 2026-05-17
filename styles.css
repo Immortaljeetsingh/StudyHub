@@ -816,6 +816,40 @@ img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
   footer p { font-size: 0.82rem !important; }
 }
 
+/* ═══════════ VIDEO SECTIONS ═══════════ */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.06); border: 1px solid rgba(200,200,200,0.12); border-radius: 14px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1rem; }
+.video-icon { color: var(--accent); font-size: 1rem; }
+.video-header h5 { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: #0a0a1a; border: none; padding: 0.6rem 1.25rem; border-radius: 60px; font-size: 0.85rem; font-weight: 700; cursor: pointer; margin: 1rem 0; transition: all 0.3s; }
+.video-toggle:hover { opacity: 0.85; transform: scale(1.03); }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; animation: fadeSlideIn 0.3s ease; }
+
+/* ═══════════ MOBILE VIDEO FIXES ═══════════ */
+@media (max-width: 600px) {
+  .video-grid { grid-template-columns: 1fr !important; gap: 0.8rem !important; }
+  .video-card { border-radius: 12px; }
+  .video-header { padding: 0.7rem 0.85rem; }
+  .video-header h5 { font-size: 0.8rem; }
+  .video-toggle { padding: 0.5rem 1rem; font-size: 0.8rem; width: 100%; text-align: center; justify-content: center; }
+  .video-wrapper { padding-bottom: 56.25%; }
+}
+
 /* Prevent horizontal overflow globally */
 body { overflow-x: hidden; }
 .study-content { overflow-wrap: break-word; word-wrap: break-word; }
+
+/* ═══════════ MOBILE ACTION BAR + AI ═══════════ */
+@media (max-width: 600px) {
+  .action-bar { gap: 0.5rem; margin: 1rem 0; }
+  .action-bar .btn { padding: 0.5rem 1rem; font-size: 0.8rem; flex: 1 1 auto; text-align: center; justify-content: center; min-width: 0; }
+  .ai-output { padding: 1rem !important; font-size: 0.85rem !important; margin: 0.75rem 0 !important; white-space: pre-wrap !important; overflow-wrap: break-word; word-break: break-word; }
+  .callout { padding: 0.85rem 1rem !important; font-size: 0.85rem !important; }
+  .callout p, .callout li { font-size: 0.85rem !important; }
+}
