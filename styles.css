@@ -247,7 +247,7 @@ body.light-theme::before { opacity: 0.5; }
 .study-header h1 {
   font-size: 2.4rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #7ba4f7 0%, #b0b0b0 40%, #d0d0d0 100%);
+  background: linear-gradient(135deg, #b0b0b0 0%, #b0b0b0 40%, #d0d0d0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -544,7 +544,7 @@ body.light-theme::before { opacity: 0.5; }
 .quiz-header h1 {
   font-size: 1.8rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #7ba4f7 0%, #b0b0b0 40%, #d0d0d0 100%);
+  background: linear-gradient(135deg, #b0b0b0 0%, #b0b0b0 40%, #d0d0d0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -556,7 +556,7 @@ body.light-theme::before { opacity: 0.5; }
 .quiz-stat .stat-value {
   font-size: 2.2rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #7ba4f7, #b0b0b0);
+  background: linear-gradient(135deg, #b0b0b0, #b0b0b0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -657,7 +657,7 @@ body.light-theme::before { opacity: 0.5; }
   position: relative;
 }
 .study-footer a { color: var(--accent); text-decoration: none; margin: 0 0.5rem; transition: all 0.3s ease; font-weight: 600; }
-.study-footer a:hover { color: #7ba4f7; text-decoration: underline; }
+.study-footer a:hover { color: #b0b0b0; text-decoration: underline; }
 
 /* Accessibility */
 .sr-only {
