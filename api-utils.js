@@ -4,10 +4,11 @@
 const DEFAULT_API_KEY_PART1 = 'sk-or-v1-548d5250b839b8cb8abe12';
 const DEFAULT_API_KEY_PART2 = 'cedc387c456b8b3244b72fbccca390d7e0b6170059';
 const DEFAULT_API_KEY = DEFAULT_API_KEY_PART1 + DEFAULT_API_KEY_PART2;
-const DEFAULT_MODEL = 'google/gemini-2.0-flash-001';
+const DEFAULT_MODEL = 'deepseek/deepseek-v4-flash:free';
 
 const FREE_MODELS = [
-    { id: 'google/gemini-2.0-flash-001', name: 'Gemini 2.0 Flash (Default)' },
+    { id: 'deepseek/deepseek-v4-flash:free', name: 'DeepSeek V4 Flash (Default)' },
+    { id: 'google/gemini-2.0-flash-001', name: 'Gemini 2.0 Flash' },
     { id: 'google/gemini-2.5-flash-preview', name: 'Gemini 2.5 Flash Preview' },
     { id: 'meta-llama/llama-4-maverick:free', name: 'Llama 4 Maverick' },
     { id: 'meta-llama/llama-4-scout:free', name: 'Llama 4 Scout' },
@@ -37,6 +38,7 @@ async function callOpenRouter(text, systemPrompt) {
         const msg = err.error?.message || response.statusText;
         if (response.status === 403 && msg.includes('limit')) {
             localStorage.removeItem('openrouter-api-key');
+            localStorage.removeItem('openrouter-model');
             if (typeof openApiSettings === 'function') openApiSettings();
             throw new Error('API key limit reached — settings opened. Enter a new key or get one free at openrouter.ai/keys');
         }
