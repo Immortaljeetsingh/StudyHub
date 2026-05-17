@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -151,6 +151,7 @@
     <link rel="stylesheet" href="revision-mode.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
 </head>
 <body>
     <div class="results-container">
@@ -176,7 +177,7 @@
         </div>
 
         <div style="margin: 2rem 0;">
-            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">📊 Progress Overview</h3>
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">ðŸ“Š Progress Overview</h3>
             <div class="igl" id="progressOverview">
                 <h4>Course Progress</h4>
                 <p id="courseProgressText">Loading...</p>
@@ -184,19 +185,19 @@
         </div>
 
         <div style="margin: 2rem 0;">
-            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">📝 Question Review</h3>
+            <h3 style="color: var(--text-primary); margin-bottom: 1rem;">ðŸ“ Question Review</h3>
             <div class="question-review-list" id="questionReviewList"></div>
         </div>
 
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
             <button class="btn btn-primary btn-lg" onclick="retakeQuiz()">
-                <span class="icon">🔄</span> Retake Quiz
+                <span class="icon">ðŸ”„</span> Retake Quiz
             </button>
             <button class="btn btn-success btn-lg" onclick="goToStudy()">
-                <span class="icon">📚</span> Review Materials
+                <span class="icon">ðŸ“š</span> Review Materials
             </button>
             <button class="btn btn-secondary btn-lg" onclick="goToHub()">
-                <span class="icon">🏠</span> Return to Hub
+                <span class="icon">ðŸ </span> Return to Hub
             </button>
         </div>
     </div>
@@ -332,7 +333,7 @@
                     item.innerHTML = `
                         <div class="review-qnum">Q${i + 1}</div>
                         <div class="review-content">
-                            <strong>${isCorrect ? '✓ Correct' : '✗ Incorrect'}</strong>
+                            <strong>${isCorrect ? 'âœ“ Correct' : 'âœ— Incorrect'}</strong>
                             <div><strong>Question:</strong> ${q.question}</div>
                             ${userAnswer !== undefined ? `<div><strong>Your answer:</strong> ${q.options[userAnswer]}</div>` : ''}
                             ${!isCorrect ? `<div><strong>Correct answer:</strong> ${q.options[q.answer]}</div>` : ''}

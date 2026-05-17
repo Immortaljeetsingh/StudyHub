@@ -1,13 +1,18 @@
-const CACHE_NAME = 'studyhub-v1';
+﻿const CACHE_NAME = 'studyhub-v1';
 
 const STATIC_ASSETS = [
   'study-hub.html',
   'styles.css',
   'styles-enhanced.css',
   'study-hub-enhanced.css',
+  'enhancements.css',
+  'revision-mode.css',
+  'light-theme.css',
   'api-utils.js',
   'search.js',
   'sidebar.js',
+  'enhancements.js',
+  'revision-mode.js',
   'manifest.json'
 ];
 
@@ -55,3 +60,4 @@ self.addEventListener('fetch', event => {
       .catch(() => caches.match(event.request))
   );
 });
+

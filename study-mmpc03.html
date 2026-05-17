@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -303,7 +303,7 @@ body.subject-mmpc03::after {
 /* --- Video section --- */
 .video-section { margin: 2rem 0; }
 .video-section h4 { color: #00B4D8; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
-.video-section h4::before { content: '🎬'; }
+.video-section h4::before { content: 'ðŸŽ¬'; }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
 .video-card { background: rgba(0,180,216,0.08); border: 1px solid rgba(0,180,216,0.2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
 .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,180,216,0.2); }
@@ -321,11 +321,18 @@ body.subject-mmpc03::after {
     <link rel="stylesheet" href="revision-mode.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
 </head>
 <body class="subject-mmpc03">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-03'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
 <aside class="study-sidebar">
-  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">📘 MMPC-03</span></div>
+  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">ðŸ“˜ MMPC-03</span></div>
   <nav class="sidebar-nav">
     <a href="#unit1">Unit 1: Introduction to Business and Environment</a>
     <a href="#unit2">Unit 2: Economic Growth and Development</a>
@@ -341,20 +348,20 @@ body.subject-mmpc03::after {
     <a href="#unit12">Unit 12: Foreign Trade</a>
     <a href="#unit13">Unit 13: Sources of Global Financing</a>
     <a href="#unit14">Unit 14: Technological Environment</a>
-    <a href="quiz-mmpc03.html" class="back-link">📝 Take Quiz</a>
-    <a href="study-hub.html" class="back-link">← Back to Hub</a>
+    <a href="quiz-mmpc03.html" class="back-link">ðŸ“ Take Quiz</a>
+    <a href="study-hub.html" class="back-link">â† Back to Hub</a>
   </nav>
 </aside>
 <main id="main-content" class="study-content">
 <div class="study-header"><span class="subject-tag">MMPC-03</span><h1>Business Environment</h1><p>Enhanced Study Notes</p></div>
 
 <h3 class="animate-on-scroll">Unit 1: Introduction to Business and Environment</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">ðŸ’¬ Ask AI</button></div>
 <div id="sU1">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 1: Introduction to Business and Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 1: Introduction to Business and Environment</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -416,10 +423,10 @@ body.subject-mmpc03::after {
 </div>
 
 <div class="process-flow animate-on-scroll">
-<div class="process-step">Scanning</div><span class="process-arrow">→</span>
-<div class="process-step">Monitoring</div><span class="process-arrow">→</span>
-<div class="process-step">Forecasting</div><span class="process-arrow">→</span>
-<div class="process-step">Assessment</div><span class="process-arrow">→</span>
+<div class="process-step">Scanning</div><span class="process-arrow">â†’</span>
+<div class="process-step">Monitoring</div><span class="process-arrow">â†’</span>
+<div class="process-step">Forecasting</div><span class="process-arrow">â†’</span>
+<div class="process-step">Assessment</div><span class="process-arrow">â†’</span>
 <div class="process-step">Strategy</div>
 </div>
 
@@ -483,7 +490,7 @@ body.subject-mmpc03::after {
 
 <div class="indian-example animate-on-scroll">
 <div class="example-label">Indian Example</div>
-<p><strong>Reliance Jio (2016):</strong> Mukesh Ambani studied the Indian telecom environment — high data prices, limited smartphone penetration, and a young population hungry for digital content. Jio launched with free voice and ultra-cheap data, disrupting the entire industry. Within 3 years, Jio had 370 million subscribers. This is a textbook case of environmental scanning creating massive opportunity.</p>
+<p><strong>Reliance Jio (2016):</strong> Mukesh Ambani studied the Indian telecom environment â€” high data prices, limited smartphone penetration, and a young population hungry for digital content. Jio launched with free voice and ultra-cheap data, disrupting the entire industry. Within 3 years, Jio had 370 million subscribers. This is a textbook case of environmental scanning creating massive opportunity.</p>
 </div>
 
 <h4>Point 5: PESTEL Analysis Framework</h4>
@@ -502,12 +509,12 @@ body.subject-mmpc03::after {
 
 <div class="exam-tip animate-on-scroll">
 <div class="tip-label">Exam Tip</div>
-<p>PESTEL questions are very common in exams. Always give the framework definition AND one Indian example per factor. Remember: <strong>P-E-S-T-E-L</strong> — "Politicians Eat Samosas To Earn Loyalty" is a popular mnemonic among MBA students.</p>
+<p>PESTEL questions are very common in exams. Always give the framework definition AND one Indian example per factor. Remember: <strong>P-E-S-T-E-L</strong> â€” "Politicians Eat Samosas To Earn Loyalty" is a popular mnemonic among MBA students.</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: Characteristics of Business Environment</div>
-<div class="mnemonic-text"><strong>D-C-I-R-I</strong> — "Delhi Companies Invest Rapidly Internationally"<br>
+<div class="mnemonic-text"><strong>D-C-I-R-I</strong> â€” "Delhi Companies Invest Rapidly Internationally"<br>
 <strong>D</strong>ynamic, <strong>C</strong>omplex, <strong>I</strong>nterrelated, <strong>R</strong>elativity, <strong>I</strong>ncertain (Uncertain)</div>
 </div>
 
@@ -536,12 +543,12 @@ body.subject-mmpc03::after {
 </div>
 
 <h3 class="animate-on-scroll">Unit 2: Economic Growth and Development</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">ðŸ’¬ Ask AI</button></div>
 <div id="sU2">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 2: Economic Growth and Development</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 2: Economic Growth and Development</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -597,7 +604,7 @@ body.subject-mmpc03::after {
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: Economic Development Indicators</div>
-<div class="mnemonic-text"><strong>"G-P-L-G-I-H"</strong> — "Good People Love Great Indian Halwa"<br>
+<div class="mnemonic-text"><strong>"G-P-L-G-I-H"</strong> â€” "Good People Love Great Indian Halwa"<br>
 <strong>G</strong>DP per capita, <strong>P</strong>overty ratio, <strong>L</strong>iteracy rate, <strong>G</strong>ini coefficient, <strong>I</strong>nfant mortality, <strong>H</strong>DI</div>
 </div>
 
@@ -643,7 +650,7 @@ body.subject-mmpc03::after {
 
 <div class="exam-tip animate-on-scroll">
 <div class="tip-label">Exam Tip</div>
-<p>Always distinguish between <strong>Growth</strong> (quantitative — GDP increase) and <strong>Development</strong> (qualitative — HDI, poverty reduction, equality). A common exam question: "Can a country have growth without development?" Answer: Yes — Nigeria has oil-driven GDP growth but poor HDI. India's post-1991 reforms achieved both in varying degrees.</p>
+<p>Always distinguish between <strong>Growth</strong> (quantitative â€” GDP increase) and <strong>Development</strong> (qualitative â€” HDI, poverty reduction, equality). A common exam question: "Can a country have growth without development?" Answer: Yes â€” Nigeria has oil-driven GDP growth but poor HDI. India's post-1991 reforms achieved both in varying degrees.</p>
 </div>
 
 <h4>Point 5: NITI Aayog and Planning Evolution</h4>
@@ -688,12 +695,12 @@ body.subject-mmpc03::after {
 </div>
 
 <h3 class="animate-on-scroll">Unit 3: Socio-Cultural and Politico Legal Environment</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">ðŸ’¬ Ask AI</button></div>
 <div id="sU3">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 3: Socio-Cultural and Politico Legal Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 3: Socio-Cultural and Politico Legal Environment</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -713,7 +720,7 @@ body.subject-mmpc03::after {
 </div>
 
 <div class="visual-diagram animate-on-scroll">
-<div class="diagram-title">Legal Framework Hierarchy — India</div>
+<div class="diagram-title">Legal Framework Hierarchy â€” India</div>
 <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="max-width:440px">
   <!-- Constitution -->
   <rect x="160" y="10" width="160" height="36" rx="8" fill="rgba(247,127,0,0.2)" stroke="#F77F00" stroke-width="2"/>
@@ -780,17 +787,17 @@ body.subject-mmpc03::after {
 
 <div class="indian-example animate-on-scroll">
 <div class="example-label">Indian Example</div>
-<p><strong>Haldiram's Cultural Adaptation:</strong> Haldiram's studied the socio-cultural environment across Indian states and customized its product range — Raj kachori in North, bhujia variants in Rajasthan, South Indian snacks in southern markets. They also adapted to the vegetarian preference in Gujarat and Jain communities by offering onion-garlic-free products. Cultural sensitivity helped them become a ₹5,000 crore brand.</p>
+<p><strong>Haldiram's Cultural Adaptation:</strong> Haldiram's studied the socio-cultural environment across Indian states and customized its product range â€” Raj kachori in North, bhujia variants in Rajasthan, South Indian snacks in southern markets. They also adapted to the vegetarian preference in Gujarat and Jain communities by offering onion-garlic-free products. Cultural sensitivity helped them become a â‚¹5,000 crore brand.</p>
 </div>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — Political-Legal</div>
-<p><strong>GST Impact (2017):</strong> The Goods and Services Tax transformed India's indirect tax landscape. It subsumed 17 central and state taxes into one unified tax. Businesses had to completely restructure their supply chains — earlier they optimized for tax arbitrage between states; now they optimize for logistics efficiency. E-way bills, GSTN compliance, and input tax credits became new business imperatives.</p>
+<div class="example-label">Indian Example â€” Political-Legal</div>
+<p><strong>GST Impact (2017):</strong> The Goods and Services Tax transformed India's indirect tax landscape. It subsumed 17 central and state taxes into one unified tax. Businesses had to completely restructure their supply chains â€” earlier they optimized for tax arbitrage between states; now they optimize for logistics efficiency. E-way bills, GSTN compliance, and input tax credits became new business imperatives.</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: Socio-Cultural Factors</div>
-<div class="mnemonic-text"><strong>"C-S-R-L-D"</strong> — "Cool Students Read Lots Daily"<br>
+<div class="mnemonic-text"><strong>"C-S-R-L-D"</strong> â€” "Cool Students Read Lots Daily"<br>
 <strong>C</strong>ultural values, <strong>S</strong>ocial structure, <strong>R</strong>eligious influences, <strong>L</strong>anguage &amp; communication, <strong>D</strong>emographics</div>
 </div>
 
@@ -822,12 +829,12 @@ body.subject-mmpc03::after {
 </div>
 
 <h3 class="animate-on-scroll">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">ðŸ’¬ Ask AI</button></div>
 <div id="sU4">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -852,7 +859,7 @@ body.subject-mmpc03::after {
   <!-- Pyramid layers (bottom to top) -->
   <polygon points="200,220 50,220 115,170 285,170" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="1.5"/>
   <text x="200" y="205" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="600">ECONOMIC (Be Profitable)</text>
-  <text x="200" y="218" text-anchor="middle" fill="#666" font-size="8">Foundation — generate profits for shareholders</text>
+  <text x="200" y="218" text-anchor="middle" fill="#666" font-size="8">Foundation â€” generate profits for shareholders</text>
 
   <polygon points="115,170 285,170 170,120 230,120" fill="rgba(144,224,239,0.2)" stroke="#90E0EF" stroke-width="1.5"/>
   <text x="200" y="155" text-anchor="middle" fill="#90E0EF" font-size="11" font-weight="600">LEGAL (Obey Laws)</text>
@@ -889,9 +896,9 @@ body.subject-mmpc03::after {
 <h4>Point 3: CSR in India</h4>
 <p><strong>Legal Framework (Section 135, Companies Act 2013)</strong>:</p>
 <ul>
-  <li>Companies with net worth ≥ ₹500 crore OR</li>
-  <li>Turnover ≥ ₹1,000 crore OR</li>
-  <li>Net profit ≥ ₹5 crore</li>
+  <li>Companies with net worth â‰¥ â‚¹500 crore OR</li>
+  <li>Turnover â‰¥ â‚¹1,000 crore OR</li>
+  <li>Net profit â‰¥ â‚¹5 crore</li>
   <li>Must spend 2% of average net profits on CSR</li>
 </ul>
 <p><strong>Eligible Activities</strong>:</p>
@@ -913,20 +920,20 @@ body.subject-mmpc03::after {
 </ol>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — CSR Leaders</div>
-<p><strong>Tata Group:</strong> India's gold standard in CSR. Tata Trusts hold 66% of Tata Sons' equity — profits flow to philanthropy. Major initiatives: Tata Memorial Hospital (cancer care), TCS rural education programs, Tata Water Mission (clean water for 3M+ people). Annual CSR spend: ₹1,000+ crore. Ratan Tata's philosophy: "I don't believe in wealth creation for personal gain."</p>
-<p><strong>Infosys Foundation:</strong> Spent ₹322 crore on CSR in FY2023. Focus areas: education (1,50,000+ scholarships), healthcare (rural hospitals), rural development (digital literacy). Sudha Murthy personally oversees projects across Karnataka and other states.</p>
+<div class="example-label">Indian Example â€” CSR Leaders</div>
+<p><strong>Tata Group:</strong> India's gold standard in CSR. Tata Trusts hold 66% of Tata Sons' equity â€” profits flow to philanthropy. Major initiatives: Tata Memorial Hospital (cancer care), TCS rural education programs, Tata Water Mission (clean water for 3M+ people). Annual CSR spend: â‚¹1,000+ crore. Ratan Tata's philosophy: "I don't believe in wealth creation for personal gain."</p>
+<p><strong>Infosys Foundation:</strong> Spent â‚¹322 crore on CSR in FY2023. Focus areas: education (1,50,000+ scholarships), healthcare (rural hospitals), rural development (digital literacy). Sudha Murthy personally oversees projects across Karnataka and other states.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — Section 135 CSR Mandate</div>
-<p>Memorize the thresholds: Net worth ≥ ₹500 crore <strong>OR</strong> Turnover ≥ ₹1,000 crore <strong>OR</strong> Net profit ≥ ₹5 crore → must spend <strong>2% of average net profits</strong> on CSR. Failure to spend requires explanation in board report (comply-or-explain). India is the <strong>first country</strong> to mandate CSR by law — this is a common exam fact.</p>
+<div class="tip-label">Exam Tip â€” Section 135 CSR Mandate</div>
+<p>Memorize the thresholds: Net worth â‰¥ â‚¹500 crore <strong>OR</strong> Turnover â‰¥ â‚¹1,000 crore <strong>OR</strong> Net profit â‰¥ â‚¹5 crore â†’ must spend <strong>2% of average net profits</strong> on CSR. Failure to spend requires explanation in board report (comply-or-explain). India is the <strong>first country</strong> to mandate CSR by law â€” this is a common exam fact.</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: CSR Pyramid (Carroll)</div>
-<div class="mnemonic-text"><strong>"E-L-E-P from bottom to top"</strong> — "Elephants Love Eating Peanuts"<br>
-<strong>E</strong>conomic → <strong>L</strong>egal → <strong>E</strong>thical → <strong>P</strong>hilanthropic<br>
+<div class="mnemonic-text"><strong>"E-L-E-P from bottom to top"</strong> â€” "Elephants Love Eating Peanuts"<br>
+<strong>E</strong>conomic â†’ <strong>L</strong>egal â†’ <strong>E</strong>thical â†’ <strong>P</strong>hilanthropic<br>
 You must be profitable first (economic), then obey laws, then be ethical, then give back.</div>
 </div>
 
@@ -961,12 +968,12 @@ You must be profitable first (economic), then obey laws, then be ethical, then g
 </div>
 
 <h3 class="animate-on-scroll">Unit 5: Indian Financial System</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">ðŸ’¬ Ask AI</button></div>
 <div id="sU5">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 5: Indian Financial System</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 5: Indian Financial System</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1115,19 +1122,19 @@ You must be profitable first (economic), then obey laws, then be ethical, then g
 </ul>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — UPI Revolution</div>
-<p><strong>UPI (Unified Payments Interface):</strong> Launched by NPCI in 2016, UPI processed <strong>13.4 billion transactions in January 2024</strong> worth ₹18.4 lakh crore. It transformed India from a cash-dominant economy to a digital payment leader. Google Pay, PhonePe, and Paytm process 95%+ of UPI volumes. UPI is now being adopted by Singapore, UAE, France, and Sri Lanka — India's biggest fintech export.</p>
+<div class="example-label">Indian Example â€” UPI Revolution</div>
+<p><strong>UPI (Unified Payments Interface):</strong> Launched by NPCI in 2016, UPI processed <strong>13.4 billion transactions in January 2024</strong> worth â‚¹18.4 lakh crore. It transformed India from a cash-dominant economy to a digital payment leader. Google Pay, PhonePe, and Paytm process 95%+ of UPI volumes. UPI is now being adopted by Singapore, UAE, France, and Sri Lanka â€” India's biggest fintech export.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — RBI Functions</div>
-<p>Remember RBI's 6 functions using mnemonic <strong>"M-B-B-L-R-F"</strong>: <strong>M</strong>onetary authority, <strong>B</strong>anker to banks, <strong>B</strong>anker to govt, <strong>L</strong>ender of last resort, <strong>R</strong>egulator, <strong>F</strong>oreign exchange manager. A common trick question: "Is RBI the regulator of stock markets?" No — that's SEBI. RBI regulates banking; SEBI regulates securities markets.</p>
+<div class="tip-label">Exam Tip â€” RBI Functions</div>
+<p>Remember RBI's 6 functions using mnemonic <strong>"M-B-B-L-R-F"</strong>: <strong>M</strong>onetary authority, <strong>B</strong>anker to banks, <strong>B</strong>anker to govt, <strong>L</strong>ender of last resort, <strong>R</strong>egulator, <strong>F</strong>oreign exchange manager. A common trick question: "Is RBI the regulator of stock markets?" No â€” that's SEBI. RBI regulates banking; SEBI regulates securities markets.</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: Financial Market Types</div>
-<div class="mnemonic-text"><strong>"Money Capital Debt Forex Derivatives"</strong> — "Many Citizens Don't Find it Difficult"<br>
-Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bonds) → Forex Market → Derivatives Market</div>
+<div class="mnemonic-text"><strong>"Money Capital Debt Forex Derivatives"</strong> â€” "Many Citizens Don't Find it Difficult"<br>
+Money Market (short-term) â†’ Capital Market (equity/debt) â†’ Debt Market (bonds) â†’ Forex Market â†’ Derivatives Market</div>
 </div>
 
 <ul>
@@ -1153,12 +1160,12 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </div>
 
 <h3 class="animate-on-scroll">Unit 6: Industrial Policy Framework</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">ðŸ’¬ Ask AI</button></div>
 <div id="sU6">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 6: Industrial Policy Framework</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 6: Industrial Policy Framework</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1208,7 +1215,7 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
   <text x="430" y="105" text-anchor="middle" fill="#d0d0d5" font-size="8">Atmanirbhar</text>
   <text x="430" y="117" text-anchor="middle" fill="#666" font-size="7">Bharat</text>
   <!-- Direction arrow -->
-  <text x="250" y="30" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Control → Liberalization → Self-Reliance</text>
+  <text x="250" y="30" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Control â†’ Liberalization â†’ Self-Reliance</text>
 </svg>
 </div>
 <h4>Point 1: Evolution of Industrial Policy</h4>
@@ -1298,8 +1305,8 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </ul>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — PLI Scheme Success</div>
-<p><strong>Production-Linked Incentive (PLI) Scheme:</strong> Launched in 2020 for 14 sectors with ₹1.97 lakh crore outlay. Results: Apple suppliers (Foxconn, Wistron) now manufacture iPhones in India. Mobile phone exports surged from ₹11,000 crore (2017) to ₹1.2 lakh crore (2023). India is now the world's second-largest mobile phone manufacturer. PLI also covers semiconductors (₹76,000 crore), EV batteries, and white goods.</p>
+<div class="example-label">Indian Example â€” PLI Scheme Success</div>
+<p><strong>Production-Linked Incentive (PLI) Scheme:</strong> Launched in 2020 for 14 sectors with â‚¹1.97 lakh crore outlay. Results: Apple suppliers (Foxconn, Wistron) now manufacture iPhones in India. Mobile phone exports surged from â‚¹11,000 crore (2017) to â‚¹1.2 lakh crore (2023). India is now the world's second-largest mobile phone manufacturer. PLI also covers semiconductors (â‚¹76,000 crore), EV batteries, and white goods.</p>
 </div>
 
 <div class="comparison-table animate-on-scroll">
@@ -1341,12 +1348,12 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </div>
 
 <h3 class="animate-on-scroll">Unit 7: Agri-business Environment</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">ðŸ’¬ Ask AI</button></div>
 <div id="sU7">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 7: Agri-business Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 7: Agri-business Environment</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1371,17 +1378,17 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
   <rect x="10" y="10" width="100" height="70" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
   <text x="60" y="35" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Green</text>
   <text x="60" y="50" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Revolution</text>
-  <text x="60" y="68" text-anchor="middle" fill="#666" font-size="7">1960s · HYV Seeds</text>
+  <text x="60" y="68" text-anchor="middle" fill="#666" font-size="7">1960s Â· HYV Seeds</text>
 
   <rect x="120" y="10" width="100" height="70" rx="8" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
   <text x="170" y="35" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="700">White</text>
   <text x="170" y="50" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="700">Revolution</text>
-  <text x="170" y="68" text-anchor="middle" fill="#666" font-size="7">1970s · Operation Flood</text>
+  <text x="170" y="68" text-anchor="middle" fill="#666" font-size="7">1970s Â· Operation Flood</text>
 
   <rect x="230" y="10" width="100" height="70" rx="8" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
   <text x="280" y="35" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="700">Yellow</text>
   <text x="280" y="50" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="700">Revolution</text>
-  <text x="280" y="68" text-anchor="middle" fill="#666" font-size="7">1980s · Oilseeds</text>
+  <text x="280" y="68" text-anchor="middle" fill="#666" font-size="7">1980s Â· Oilseeds</text>
 
   <rect x="340" y="10" width="130" height="70" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
   <text x="405" y="35" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="700">Evergreen</text>
@@ -1390,13 +1397,13 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 
   <rect x="60" y="100" width="150" height="60" rx="8" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
   <text x="135" y="120" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">Blue Revolution</text>
-  <text x="135" y="135" text-anchor="middle" fill="#666" font-size="8">Fisheries · Dr. Kurien</text>
+  <text x="135" y="135" text-anchor="middle" fill="#666" font-size="8">Fisheries Â· Dr. Kurien</text>
   <text x="135" y="150" text-anchor="middle" fill="#666" font-size="7">India = 2nd largest fish producer</text>
 
   <rect x="270" y="100" width="150" height="60" rx="8" fill="rgba(144,224,239,0.1)" stroke="#90E0EF" stroke-width="1"/>
   <text x="345" y="120" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">Digital Revolution</text>
-  <text x="345" y="135" text-anchor="middle" fill="#666" font-size="8">e-NAM · PM-KISAN · AgriStack</text>
-  <text x="345" y="150" text-anchor="middle" fill="#666" font-size="7">Precision farming · Drone surveys</text>
+  <text x="345" y="135" text-anchor="middle" fill="#666" font-size="8">e-NAM Â· PM-KISAN Â· AgriStack</text>
+  <text x="345" y="150" text-anchor="middle" fill="#666" font-size="7">Precision farming Â· Drone surveys</text>
 </svg>
 </div>
 <h4>Point 1: Agricultural Sector Overview</h4>
@@ -1464,18 +1471,18 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 <p><strong>Investment</strong>: Agricultural investment funds and credit guarantee schemes</p>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — Amul Model</div>
-<p><strong>Amul (GCMMF):</strong> The White Revolution's crown jewel. Founded by Tribhuvandas Patel and led by Verghese Kurien, Amul pioneered the cooperative model — 3.6 million milk producers across 18,600 villages. Daily procurement: 27 million liters. Revenue: ₹72,000 crore (FY2023). The Amul model bypassed middlemen, ensuring 80% of the consumer price goes to farmers. It's studied at Harvard Business School as a masterclass in rural supply chain management.</p>
+<div class="example-label">Indian Example â€” Amul Model</div>
+<p><strong>Amul (GCMMF):</strong> The White Revolution's crown jewel. Founded by Tribhuvandas Patel and led by Verghese Kurien, Amul pioneered the cooperative model â€” 3.6 million milk producers across 18,600 villages. Daily procurement: 27 million liters. Revenue: â‚¹72,000 crore (FY2023). The Amul model bypassed middlemen, ensuring 80% of the consumer price goes to farmers. It's studied at Harvard Business School as a masterclass in rural supply chain management.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — Farm Laws 2020</div>
+<div class="tip-label">Exam Tip â€” Farm Laws 2020</div>
 <p>The three farm laws (repealed 2021) are a hot exam topic. They aimed to: (1) Allow farmers to sell outside APMC mandis, (2) Enable contract farming, (3) Remove essential commodities from stock limits. They were repealed due to farmer protests. In exams, present both sides: the reform rationale (market freedom, better prices) vs. farmer concerns (loss of MSP guarantee, corporate exploitation).</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: Agricultural Revolutions</div>
-<div class="mnemonic-text"><strong>"Green White Yellow Blue Golden Silver"</strong> — "Good Workers Yield Big Gold Silver"<br>
+<div class="mnemonic-text"><strong>"Green White Yellow Blue Golden Silver"</strong> â€” "Good Workers Yield Big Gold Silver"<br>
 <strong>Green</strong> = Food grains (HYV), <strong>White</strong> = Milk (Operation Flood), <strong>Yellow</strong> = Oilseeds, <strong>Blue</strong> = Fish, <strong>Golden</strong> = Horticulture, <strong>Silver</strong> = Eggs/Poultry</div>
 </div>
 
@@ -1504,12 +1511,12 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </div>
 
 <h3 class="animate-on-scroll">Unit 8: New Economic Policy</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">ðŸ’¬ Ask AI</button></div>
 <div id="sU8">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 8: New Economic Policy</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 8: New Economic Policy</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1529,10 +1536,10 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </div>
 
 <div class="process-flow animate-on-scroll">
-<div class="process-step">1991 Crisis</div><span class="process-arrow">→</span>
-<div class="process-step">Stabilization</div><span class="process-arrow">→</span>
-<div class="process-step">Liberalization</div><span class="process-arrow">→</span>
-<div class="process-step">Privatization</div><span class="process-arrow">→</span>
+<div class="process-step">1991 Crisis</div><span class="process-arrow">â†’</span>
+<div class="process-step">Stabilization</div><span class="process-arrow">â†’</span>
+<div class="process-step">Liberalization</div><span class="process-arrow">â†’</span>
+<div class="process-step">Privatization</div><span class="process-arrow">â†’</span>
 <div class="process-step">Globalization</div>
 </div>
 <h4>Point 1: Background and Objectives (1991)</h4>
@@ -1604,8 +1611,8 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 </ul>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — 1991 Gold Pledge</div>
-<p><strong>The Crisis that Changed India:</strong> In June 1991, India pledged 47 tonnes of gold to the Bank of England and Union Bank of Switzerland to raise $600 million. Foreign reserves had dropped to just $1.2 billion — barely enough for 2 weeks of imports. RBI Governor S. Venkitaramnan personally flew the gold to London. This humiliation catalyzed the LPG reforms under Finance Minister Manmohan Singh. Within a decade, India's reserves crossed $100 billion.</p>
+<div class="example-label">Indian Example â€” 1991 Gold Pledge</div>
+<p><strong>The Crisis that Changed India:</strong> In June 1991, India pledged 47 tonnes of gold to the Bank of England and Union Bank of Switzerland to raise $600 million. Foreign reserves had dropped to just $1.2 billion â€” barely enough for 2 weeks of imports. RBI Governor S. Venkitaramnan personally flew the gold to London. This humiliation catalyzed the LPG reforms under Finance Minister Manmohan Singh. Within a decade, India's reserves crossed $100 billion.</p>
 </div>
 
 <div class="comparison-table animate-on-scroll">
@@ -1621,9 +1628,9 @@ Money Market (short-term) → Capital Market (equity/debt) → Debt Market (bond
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: LPG Reforms</div>
-<div class="mnemonic-text"><strong>"L-P-G"</strong> — "Let People Grow"<br>
-<strong>L</strong>iberalization (remove government controls) → <strong>P</strong>rivatization (transfer ownership to private sector) → <strong>G</strong>lobalization (integrate with world economy)<br>
-Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalization &amp; Globalization</div>
+<div class="mnemonic-text"><strong>"L-P-G"</strong> â€” "Let People Grow"<br>
+<strong>L</strong>iberalization (remove government controls) â†’ <strong>P</strong>rivatization (transfer ownership to private sector) â†’ <strong>G</strong>lobalization (integrate with world economy)<br>
+Also remember: <strong>"SLG"</strong> â€” Stabilization first, then Liberalization &amp; Globalization</div>
 </div>
 
 <ul>
@@ -1648,12 +1655,12 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
 </div>
 
 <h3 class="animate-on-scroll">Unit 9: Financial Sector and Fiscal Sector Reforms</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">ðŸ’¬ Ask AI</button></div>
 <div id="sU9">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 9: Financial Sector and Fiscal Sector Reforms</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 9: Financial Sector and Fiscal Sector Reforms</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1661,7 +1668,7 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
         <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PkRaMQixeF4" title="Financial Sector Reforms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
       </div>
       <div class="video-card">
-        <div class="video-header"><span class="video-icon">&#9654;</span><h5>GST Explained — One Nation One Tax</h5></div>
+        <div class="video-header"><span class="video-icon">&#9654;</span><h5>GST Explained â€” One Nation One Tax</h5></div>
         <div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/UlFjXvhxitA" title="GST India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
       </div>
       <div class="video-card">
@@ -1673,7 +1680,7 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
 </div>
 
 <div class="visual-diagram animate-on-scroll">
-<div class="diagram-title">GST Structure — One Nation One Tax</div>
+<div class="diagram-title">GST Structure â€” One Nation One Tax</div>
 <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
   <!-- Central GST -->
   <rect x="130" y="10" width="140" height="40" rx="8" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="2"/>
@@ -1750,12 +1757,12 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
 </ul>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — GST Impact</div>
-<p><strong>GST (July 1, 2017):</strong> India's biggest tax reform since independence. Subsumed 17 indirect taxes (Excise, VAT, Service Tax, etc.) into one unified tax. Impact: Eliminated cascading effect of "tax on tax," reduced logistics costs by 20% (no more state border checkposts), formalized the economy (GSTN tracks every transaction). Challenges: Multiple rate slabs (5/12/18/28%), compliance burden for SMEs, initial IT glitches. Revenue: ₹1.68 lakh crore monthly collection (April 2023 record).</p>
+<div class="example-label">Indian Example â€” GST Impact</div>
+<p><strong>GST (July 1, 2017):</strong> India's biggest tax reform since independence. Subsumed 17 indirect taxes (Excise, VAT, Service Tax, etc.) into one unified tax. Impact: Eliminated cascading effect of "tax on tax," reduced logistics costs by 20% (no more state border checkposts), formalized the economy (GSTN tracks every transaction). Challenges: Multiple rate slabs (5/12/18/28%), compliance burden for SMEs, initial IT glitches. Revenue: â‚¹1.68 lakh crore monthly collection (April 2023 record).</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — Narasimham Committee</div>
+<div class="tip-label">Exam Tip â€” Narasimham Committee</div>
 <p>Two committees (1991 and 1998) are exam favorites. Key recommendations: Reduce SLR and CRR, allow private banks, recapitalize PSU banks, adopt Basel norms, set up ARCs for bad loans. In 2024 context: many recommendations were implemented (Bandhan Bank, IDFC First Bank are new private banks), but full privatization of PSU banks remains politically sensitive.</p>
 </div>
 
@@ -1782,12 +1789,12 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
 </div>
 
 <h3 class="animate-on-scroll">Unit 10: International Financial System</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">ðŸ’¬ Ask AI</button></div>
 <div id="sU10">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 10: International Financial System</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 10: International Financial System</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1813,21 +1820,21 @@ Also remember: <strong>"SLG"</strong> — Stabilization first, then Liberalizati
   <rect x="10" y="20" width="140" height="55" rx="8" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1.5"/>
   <text x="80" y="42" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">IMF</text>
   <text x="80" y="58" text-anchor="middle" fill="#666" font-size="8">Monetary Stability</text>
-  <text x="80" y="70" text-anchor="middle" fill="#666" font-size="7">190 members · $1T resources</text>
+  <text x="80" y="70" text-anchor="middle" fill="#666" font-size="7">190 members Â· $1T resources</text>
   <!-- World Bank -->
   <rect x="170" y="20" width="140" height="55" rx="8" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
   <text x="240" y="42" text-anchor="middle" fill="#F77F00" font-size="11" font-weight="700">World Bank</text>
   <text x="240" y="58" text-anchor="middle" fill="#666" font-size="8">Development Finance</text>
-  <text x="240" y="70" text-anchor="middle" fill="#666" font-size="7">IBRD · IDA · IFC · MIGA</text>
+  <text x="240" y="70" text-anchor="middle" fill="#666" font-size="7">IBRD Â· IDA Â· IFC Â· MIGA</text>
   <!-- ADB -->
   <rect x="330" y="20" width="140" height="55" rx="8" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
   <text x="400" y="42" text-anchor="middle" fill="#90E0EF" font-size="11" font-weight="700">ADB</text>
   <text x="400" y="58" text-anchor="middle" fill="#666" font-size="8">Asia-Pacific Development</text>
-  <text x="400" y="70" text-anchor="middle" fill="#666" font-size="7">68 members · HQ Manila</text>
+  <text x="400" y="70" text-anchor="middle" fill="#666" font-size="7">68 members Â· HQ Manila</text>
   <!-- WTO -->
   <rect x="100" y="100" width="120" height="45" rx="8" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
   <text x="160" y="122" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">WTO</text>
-  <text x="160" y="138" text-anchor="middle" fill="#666" font-size="7">Trade Rules · Disputes</text>
+  <text x="160" y="138" text-anchor="middle" fill="#666" font-size="7">Trade Rules Â· Disputes</text>
   <!-- BIS -->
   <rect x="260" y="100" width="120" height="45" rx="8" fill="rgba(247,127,0,0.1)" stroke="#F77F00" stroke-width="1"/>
   <text x="320" y="122" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">BIS / Basel</text>
@@ -1898,12 +1905,12 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <h3 class="animate-on-scroll">Unit 11: Balance of Payments (BoP)</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">ðŸ’¬ Ask AI</button></div>
 <div id="sU11">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 11: Balance of Payments (BoP)</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 11: Balance of Payments (BoP)</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -1932,17 +1939,17 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
   <line x1="170" y1="35" x2="80" y2="55" stroke="#555" stroke-width="1"/>
   <rect x="5" y="55" width="150" height="30" rx="5" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1"/>
   <text x="80" y="75" text-anchor="middle" fill="#F77F00" font-size="9" font-weight="600">Current Account</text>
-  <text x="80" y="100" text-anchor="middle" fill="#666" font-size="7">Trade · Services · Income · Transfers</text>
+  <text x="80" y="100" text-anchor="middle" fill="#666" font-size="7">Trade Â· Services Â· Income Â· Transfers</text>
   <!-- Capital Account -->
   <line x1="200" y1="35" x2="200" y2="55" stroke="#555" stroke-width="1"/>
   <rect x="130" y="55" width="140" height="30" rx="5" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1"/>
   <text x="200" y="75" text-anchor="middle" fill="#90E0EF" font-size="9" font-weight="600">Capital Account</text>
-  <text x="200" y="100" text-anchor="middle" fill="#666" font-size="7">FDI · FPI · Loans · ECB</text>
+  <text x="200" y="100" text-anchor="middle" fill="#666" font-size="7">FDI Â· FPI Â· Loans Â· ECB</text>
   <!-- Financial Account -->
   <line x1="230" y1="35" x2="320" y2="55" stroke="#555" stroke-width="1"/>
   <rect x="245" y="55" width="150" height="30" rx="5" fill="rgba(0,180,216,0.15)" stroke="#00B4D8" stroke-width="1"/>
   <text x="320" y="75" text-anchor="middle" fill="#00B4D8" font-size="9" font-weight="600">Financial Account</text>
-  <text x="320" y="100" text-anchor="middle" fill="#666" font-size="7">Direct · Portfolio · Other</text>
+  <text x="320" y="100" text-anchor="middle" fill="#666" font-size="7">Direct Â· Portfolio Â· Other</text>
   <!-- Errors -->
   <rect x="100" y="125" width="200" height="25" rx="5" fill="rgba(247,127,0,0.08)" stroke="#F77F00" stroke-width="1" stroke-dasharray="4,2"/>
   <text x="200" y="142" text-anchor="middle" fill="#F77F00" font-size="8">Errors & Omissions (balancing item)</text>
@@ -1993,13 +2000,13 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </ul>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — 1991 BoP Crisis</div>
-<p><strong>The 1991 Crisis:</strong> India's current account deficit ballooned to $10 billion, forex reserves fell to $1.2 billion (2 weeks of imports), and India had to pledge 47 tonnes of gold to Bank of England. The crisis forced India to adopt LPG reforms. Fast forward to 2024: India's forex reserves are $650+ billion (10+ months of imports), and India is the world's 5th largest economy. The 1991 crisis was the best thing that happened to India's economy — it forced reform.</p>
+<div class="example-label">Indian Example â€” 1991 BoP Crisis</div>
+<p><strong>The 1991 Crisis:</strong> India's current account deficit ballooned to $10 billion, forex reserves fell to $1.2 billion (2 weeks of imports), and India had to pledge 47 tonnes of gold to Bank of England. The crisis forced India to adopt LPG reforms. Fast forward to 2024: India's forex reserves are $650+ billion (10+ months of imports), and India is the world's 5th largest economy. The 1991 crisis was the best thing that happened to India's economy â€” it forced reform.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
 <div class="tip-label">Exam Tip</div>
-<p>A common exam question: "Differentiate between Current Account Deficit (CAD) and Fiscal Deficit." CAD = imports > exports (external imbalance), Fiscal Deficit = government spending > revenue (internal imbalance). Both can be related: high fiscal deficit → higher imports → higher CAD. India targets CAD < 2.5% of GDP and fiscal deficit < 4.5% of GDP (FY2026 target).</p>
+<p>A common exam question: "Differentiate between Current Account Deficit (CAD) and Fiscal Deficit." CAD = imports > exports (external imbalance), Fiscal Deficit = government spending > revenue (internal imbalance). Both can be related: high fiscal deficit â†’ higher imports â†’ higher CAD. India targets CAD < 2.5% of GDP and fiscal deficit < 4.5% of GDP (FY2026 target).</p>
 </div>
 
 <ul>
@@ -2023,12 +2030,12 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <h3 class="animate-on-scroll">Unit 12: Foreign Trade</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">ðŸ’¬ Ask AI</button></div>
 <div id="sU12">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 12: Foreign Trade</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 12: Foreign Trade</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -2048,13 +2055,13 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — Trade Agreements</div>
-<p><strong>India's FTA Network:</strong> India has signed FTAs with ASEAN (2010), Japan (2011), South Korea (2010), and the UAE (2022). The India-UAE CEPA boosted bilateral trade by 16% in the first year. India is negotiating FTAs with EU, UK, Canada, and Israel. However, India walked out of RCEP (2020) citing concerns about Chinese goods flooding Indian markets — a protectionist stance to safeguard domestic manufacturing.</p>
+<div class="example-label">Indian Example â€” Trade Agreements</div>
+<p><strong>India's FTA Network:</strong> India has signed FTAs with ASEAN (2010), Japan (2011), South Korea (2010), and the UAE (2022). The India-UAE CEPA boosted bilateral trade by 16% in the first year. India is negotiating FTAs with EU, UK, Canada, and Israel. However, India walked out of RCEP (2020) citing concerns about Chinese goods flooding Indian markets â€” a protectionist stance to safeguard domestic manufacturing.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — India's Export Composition</div>
-<p>India's top exports: (1) Petroleum products (refinery), (2) Gems &amp; jewelry, (3) Pharmaceuticals, (4) IT services, (5) Chemicals. Top imports: (1) Crude oil, (2) Gold, (3) Electronics, (4) Coal, (5) Machinery. India has a structural trade deficit because oil and gold imports are massive and non-negotiable. Key exam fact: India's services exports ($325B) are stronger than merchandise exports — the "IT dividend."</p>
+<div class="tip-label">Exam Tip â€” India's Export Composition</div>
+<p>India's top exports: (1) Petroleum products (refinery), (2) Gems &amp; jewelry, (3) Pharmaceuticals, (4) IT services, (5) Chemicals. Top imports: (1) Crude oil, (2) Gold, (3) Electronics, (4) Coal, (5) Machinery. India has a structural trade deficit because oil and gold imports are massive and non-negotiable. Key exam fact: India's services exports ($325B) are stronger than merchandise exports â€” the "IT dividend."</p>
 </div>
 <h4>Point 1: Foreign Trade Policy</h4>
 <p><strong>Export Promotion</strong>:</p>
@@ -2106,12 +2113,12 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <h3 class="animate-on-scroll">Unit 13: Sources of Global Financing</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">ðŸ’¬ Ask AI</button></div>
 <div id="sU13">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 13: Sources of Global Financing</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 13: Sources of Global Financing</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -2143,7 +2150,7 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — FDI Success Story</div>
+<div class="example-label">Indian Example â€” FDI Success Story</div>
 <p><strong>Gujarat's GIFT City:</strong> India's first International Financial Services Centre (IFSC) in Gandhinagar. Attracted $26B+ in cumulative transactions. Features: tax holidays, relaxed regulations, global banking licenses. Major occupiers: Standard Chartered, Deutsche Bank, JP Morgan. GIFT City aims to compete with Singapore and Dubai as Asia's financial hub. It shows how infrastructure + regulatory reform = FDI magnet.</p>
 </div>
 <h4>Point 1: International Capital Flows</h4>
@@ -2199,12 +2206,12 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <h3 class="animate-on-scroll">Unit 14: Technological Environment</h3>
-<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">💬 Ask AI</button></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">ðŸ“ Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">ðŸ’¬ Ask AI</button></div>
 <div id="sU14">
-<div class="callout callout-definition"><div class="callout-label">📖 Unit 14: Technological Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">ðŸ“– Unit 14: Technological Environment</div></div>
 
 <div class="video-section animate-on-scroll">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button>
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='â–¶ Watch Videos'?'â–¼ Hide Videos':'â–¶ Watch Videos'">â–¶ Watch Videos</button>
   <div class="video-section-content">
     <div class="video-grid">
       <div class="video-card">
@@ -2224,40 +2231,40 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </div>
 
 <div class="visual-diagram animate-on-scroll">
-<div class="diagram-title">India's Digital Stack — The India Stack</div>
+<div class="diagram-title">India's Digital Stack â€” The India Stack</div>
 <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width:380px">
   <!-- Stack layers -->
   <rect x="50" y="10" width="300" height="35" rx="6" fill="rgba(0,180,216,0.2)" stroke="#00B4D8" stroke-width="1.5"/>
-  <text x="200" y="32" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">Presenceless · Paperless · Cashless Layer</text>
+  <text x="200" y="32" text-anchor="middle" fill="#00B4D8" font-size="11" font-weight="700">Presenceless Â· Paperless Â· Cashless Layer</text>
 
   <rect x="50" y="50" width="300" height="35" rx="6" fill="rgba(247,127,0,0.15)" stroke="#F77F00" stroke-width="1.5"/>
-  <text x="200" y="72" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">UPI · DigiLocker · eSign · GSTN</text>
+  <text x="200" y="72" text-anchor="middle" fill="#F77F00" font-size="10" font-weight="600">UPI Â· DigiLocker Â· eSign Â· GSTN</text>
 
   <rect x="50" y="90" width="300" height="35" rx="6" fill="rgba(144,224,239,0.15)" stroke="#90E0EF" stroke-width="1.5"/>
-  <text x="200" y="112" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Account Aggregator · ONDC · CoWIN</text>
+  <text x="200" y="112" text-anchor="middle" fill="#90E0EF" font-size="10" font-weight="600">Account Aggregator Â· ONDC Â· CoWIN</text>
 
   <rect x="50" y="130" width="300" height="35" rx="6" fill="rgba(0,180,216,0.1)" stroke="#00B4D8" stroke-width="1"/>
-  <text x="200" y="152" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Aadhaar (1.4B identities) · Jan Dhan</text>
+  <text x="200" y="152" text-anchor="middle" fill="#00B4D8" font-size="10" font-weight="600">Aadhaar (1.4B identities) Â· Jan Dhan</text>
 
   <rect x="50" y="170" width="300" height="25" rx="5" fill="rgba(247,127,0,0.08)" stroke="#F77F00" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="200" y="187" text-anchor="middle" fill="#F77F00" font-size="8">Open Network for Digital Commerce (ONDC) — Breaking platform monopoly</text>
+  <text x="200" y="187" text-anchor="middle" fill="#F77F00" font-size="8">Open Network for Digital Commerce (ONDC) â€” Breaking platform monopoly</text>
 </svg>
 </div>
 
 <div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example — Digital India Success</div>
-<p><strong>India's UPI Global Expansion:</strong> UPI is now accepted in 7 countries — Singapore, UAE, France, Sri Lanka, Bhutan, Nepal, and Mauritius. Google recommended India's UPI model to the US Federal Reserve. India processes more digital transactions than the US and China combined. The India Stack (Aadhaar + UPI + DigiLocker) is being studied by 30+ countries as a model for digital public infrastructure.</p>
+<div class="example-label">Indian Example â€” Digital India Success</div>
+<p><strong>India's UPI Global Expansion:</strong> UPI is now accepted in 7 countries â€” Singapore, UAE, France, Sri Lanka, Bhutan, Nepal, and Mauritius. Google recommended India's UPI model to the US Federal Reserve. India processes more digital transactions than the US and China combined. The India Stack (Aadhaar + UPI + DigiLocker) is being studied by 30+ countries as a model for digital public infrastructure.</p>
 </div>
 
 <div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip — Technology & Business</div>
-<p>For technology environment questions, always connect technology to <strong>business impact</strong>: (1) AI → automation + job displacement concerns, (2) UPI → financial inclusion + cashless economy, (3) Aadhaar → identity verification + subsidy targeting (JAM trinity), (4) 5G → IoT + smart manufacturing. The examiner wants to see you link technology to economic outcomes, not just list technologies.</p>
+<div class="tip-label">Exam Tip â€” Technology & Business</div>
+<p>For technology environment questions, always connect technology to <strong>business impact</strong>: (1) AI â†’ automation + job displacement concerns, (2) UPI â†’ financial inclusion + cashless economy, (3) Aadhaar â†’ identity verification + subsidy targeting (JAM trinity), (4) 5G â†’ IoT + smart manufacturing. The examiner wants to see you link technology to economic outcomes, not just list technologies.</p>
 </div>
 
 <div class="mnemonic-box animate-on-scroll">
 <div class="mnemonic-title">Mnemonic: India's Digital Initiatives</div>
-<div class="mnemonic-text"><strong>"D-A-B-U-S-D"</strong> — "Digital Aadhaar Brings UPI Smartly Daily"<br>
-<strong>D</strong>igital India → <strong>A</strong>adhaar → <strong>B</strong>haratNet → <strong>U</strong>PI → <strong>S</strong>tartup India → <strong>D</strong>igiLocker<br>
+<div class="mnemonic-text"><strong>"D-A-B-U-S-D"</strong> â€” "Digital Aadhaar Brings UPI Smartly Daily"<br>
+<strong>D</strong>igital India â†’ <strong>A</strong>adhaar â†’ <strong>B</strong>haratNet â†’ <strong>U</strong>PI â†’ <strong>S</strong>tartup India â†’ <strong>D</strong>igiLocker<br>
 These form the backbone of India's digital economy.</div>
 </div>
 <h4>Point 1: Digital Revolution Impact</h4>
@@ -2348,3 +2355,4 @@ These form the backbone of India's digital economy.</div>
     <script src="pwa-register.js"></script>
 </body>
 </html>
+
