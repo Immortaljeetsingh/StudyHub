@@ -711,3 +711,111 @@ body.light-theme::before { opacity: 0.5; }
 
 /* Smooth image rendering */
 img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+/* ═══════════ COMPREHENSIVE MOBILE RESPONSIVE ═══════════ */
+
+/* Scrollable tables on mobile */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1rem 0; border-radius: var(--radius); }
+.comparison-table { min-width: 500px; }
+
+/* Toolbar wraps on small screens */
+@media (max-width: 600px) {
+  .top-toolbar {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .top-toolbar .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 0;
+  }
+  .top-toolbar .btn:first-child { flex: 0 0 auto; }
+}
+
+/* Study content mobile fixes */
+@media (max-width: 600px) {
+  .study-content { padding: 1rem !important; }
+  .study-content h2 { font-size: 1.3rem !important; }
+  .study-content h3 { font-size: 1.1rem !important; }
+  .study-content p, .study-content li { font-size: 0.88rem !important; line-height: 1.7 !important; }
+
+  /* Flowcharts stack vertically */
+  .fc { flex-direction: column !important; align-items: center !important; }
+  .fc-s { max-width: 100% !important; width: 100% !important; }
+  .fc-a { transform: rotate(90deg) !important; padding: 0.1rem 0 !important; }
+
+  /* Comparison grids single column */
+  .cg { grid-template-columns: 1fr !important; }
+
+  /* Badge rows wrap */
+  .br { flex-wrap: wrap !important; }
+
+  /* Diagram boxes smaller text */
+  .db { font-size: 0.8rem !important; padding: 0.8rem !important; }
+
+  /* Infographics smaller */
+  .igl { padding: 0.8rem 1rem !important; font-size: 0.85rem !important; }
+
+  /* Example boxes */
+  .eb { padding: 0.8rem 1rem !important; font-size: 0.85rem !important; }
+
+  /* Key takeaways */
+  .kt { padding: 0.8rem 1rem !important; font-size: 0.85rem !important; }
+
+  /* Video wrappers */
+  .vw { margin: 0.75rem 0 !important; }
+
+  /* Pyramids */
+  .py-l { font-size: 0.8rem !important; padding: 0.5rem !important; }
+
+  /* Sidebar overlay */
+  .study-sidebar.mobile-open { width: 85vw !important; max-width: 300px !important; }
+
+  /* Mobile nav toggle */
+  .mobile-nav-toggle { width: 46px !important; height: 46px !important; font-size: 1.1rem !important; bottom: 1rem !important; left: 1rem !important; }
+
+  /* Code blocks scroll */
+  pre { overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; font-size: 0.8rem !important; }
+  code { font-size: 0.82rem !important; word-break: break-all; }
+
+  /* Quiz */
+  .quiz-container { padding: 1rem !important; }
+  .question-card { padding: 1rem !important; }
+
+  /* Modals */
+  .modal-box { padding: 1.25rem !important; width: 95% !important; border-radius: 16px !important; }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .study-content { padding: 1.5rem !important; }
+  .comparison-table { min-width: 100%; }
+  .top-toolbar { flex-wrap: wrap; gap: 0.4rem; }
+}
+
+/* Hub page mobile fixes */
+@media (max-width: 600px) {
+  .dashboard-stats { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+  .stat-card { padding: 0.85rem !important; }
+  .stat-card .stat-number { font-size: 1.4rem !important; }
+  .stat-card h4 { font-size: 0.7rem !important; }
+  .subjects-grid { grid-template-columns: 1fr !important; }
+  .subject-card { padding: 1.25rem !important; }
+  .subject-card h3, .subject-card h4 { font-size: 1rem !important; }
+  .subject-card p { font-size: 0.82rem !important; }
+  .quick-links { gap: 0.4rem !important; }
+  .quick-links a { padding: 0.6rem 0.85rem !important; font-size: 0.78rem !important; }
+  .hero h2 { font-size: 1.8rem !important; }
+  .hero p { font-size: 0.88rem !important; }
+  .hero > div { flex-direction: column !important; align-items: center !important; }
+  .hero a { width: 100% !important; text-align: center !important; justify-content: center !important; }
+  footer { padding: 2rem 1rem 1.5rem !important; }
+  footer p { font-size: 0.82rem !important; }
+}
+
+/* Prevent horizontal overflow globally */
+body { overflow-x: hidden; }
+.study-content { overflow-wrap: break-word; word-wrap: break-word; }

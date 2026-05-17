@@ -32,7 +32,16 @@ async function callOpenRouter(text, systemPrompt) {
         headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ model, messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: text }], temperature: 0.4, max_tokens: 1500 })
     });
-    if (!response.ok) { const err = await response.json().catch(() => ({})); throw new Error(err.error?.message || response.statusText); }
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        const msg = err.error?.message || response.statusText;
+        if (response.status === 403 && msg.includes('limit')) {
+            localStorage.removeItem('openrouter-api-key');
+            if (typeof openApiSettings === 'function') openApiSettings();
+            throw new Error('API key limit reached — settings opened. Enter a new key or get one free at openrouter.ai/keys');
+        }
+        throw new Error(msg);
+    }
     return (await response.json()).choices[0].message.content;
 }
 
@@ -135,4 +144,24 @@ function renderToolbar(subjectCode) {
 document.addEventListener('DOMContentLoaded', () => {
     if (!document.getElementById('apiSettingsModal')) { const c = document.createElement('div'); c.innerHTML = renderApiSettingsModal(); document.body.appendChild(c.firstElementChild); }
     loadTheme(); initSummarizeButtons(); initAskButtons(); initReadingProgress();
+
+    // Mobile: wrap tables in scrollable containers
+    document.querySelectorAll('.comparison-table, table').forEach(t => {
+        if (t.parentElement && t.parentElement.classList.contains('table-wrap')) return;
+        const wrap = document.createElement('div'); wrap.className = 'table-wrap';
+        t.parentNode.insertBefore(wrap, t); wrap.appendChild(t);
+    });
+
+    // Mobile: improve API error display
+    const origToast = window.showToast;
+    window.showToast = function(msg, type) {
+        if (typeof origToast === 'function') origToast(msg, type);
+        else {
+            const t = document.createElement('div');
+            t.style.cssText = 'position:fixed;bottom:2rem;right:2rem;left:2rem;padding:1rem 1.25rem;border-radius:12px;font-family:Inter,sans-serif;font-size:0.88rem;z-index:99999;color:white;box-shadow:0 8px 30px rgba(0,0,0,0.3);text-align:center;';
+            t.style.background = type === 'error' ? '#e53e3e' : type === 'success' ? '#48bb78' : '#667eea';
+            t.textContent = msg; document.body.appendChild(t);
+            setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity 0.3s'; setTimeout(() => t.remove(), 300); }, 4000);
+        }
+    };
 });
