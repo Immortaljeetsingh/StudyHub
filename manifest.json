@@ -1,0 +1,24 @@
+{
+  "name": "StudyHub - MMPC Courses",
+  "short_name": "StudyHub",
+  "description": "Study materials and quizzes for MMPC courses",
+  "start_url": "study-hub.html",
+  "display": "standalone",
+  "background_color": "#06060f",
+  "theme_color": "#06060f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='80' fill='%2306060f'/%3E%3Ctext x='256' y='200' text-anchor='middle' font-family='Arial,sans-serif' font-size='120' font-weight='bold' fill='%236c5ce7'%3E%F0%9F%93%96%3C/text%3E%3Ctext x='256' y='340' text-anchor='middle' font-family='Arial,sans-serif' font-size='80' font-weight='bold' fill='%23ffffff'%3ESH%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='80' fill='%2306060f'/%3E%3Ctext x='256' y='200' text-anchor='middle' font-family='Arial,sans-serif' font-size='120' font-weight='bold' fill='%236c5ce7'%3E%F0%9F%93%96%3C/text%3E%3Ctext x='256' y='340' text-anchor='middle' font-family='Arial,sans-serif' font-size='80' font-weight='bold' fill='%23ffffff'%3ESH%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
