@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
 <style>
+
 /* &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; MMPC-01 ENHANCED STYLES &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; */
 
 /* --- Background Particles --- */
@@ -333,6 +334,56 @@ h1, h2, h3, h4, h5 {
 .video-toggle:hover { opacity: 0.85; }
 .video-section-content { display: none; }
 .video-section-content.active { display: block; }
+
+/* Visual diagram box */
+.visual-diagram {
+    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
+    border: 1px solid rgba(78,205,196,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.visual-diagram:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
+}
+.visual-diagram h5 {
+    color: #4ECDC4;
+    margin-bottom: 16px;
+    font-size: 1.1em;
+}
+.vd-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.vd-step {
+    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(78,205,196,0.1));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    min-width: 110px;
+    transition: all 0.3s ease;
+}
+.vd-step:hover { background: linear-gradient(135deg, rgba(255,107,107,0.25), rgba(78,205,196,0.18)); }
+/* Section badge */
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    color: #fff;
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+}
 </style>
     <link rel="stylesheet" href="enhancements.css">
     <link rel="stylesheet" href="revision-mode.css">
@@ -391,7 +442,7 @@ h1, h2, h3, h4, h5 {
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Management Functions &amp; POSDCORB</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Management Functions POSDCORB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Efficiency vs Effectiveness</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Efficiency vs Effectiveness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
-</div></div>
+</div>
 
 
 <h4>Point 1: Definition of Management</h4>
@@ -1733,9 +1784,10 @@ h1, h2, h3, h4, h5 {
 </ul></div>
 
 
-<!-- /study-content -->
 </div>
 </main>
+</div>
+<!-- /study-content -->
 <script src="pomodoro.js"></script>
 <script src="bookmark-notes.js"></script>
 <script src="flashcards.js"></script>
