@@ -802,10 +802,10 @@ img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
   .stat-card { padding: 0.85rem !important; }
   .stat-card .stat-number { font-size: 1.4rem !important; }
   .stat-card h4 { font-size: 0.7rem !important; }
-  .subjects-grid { grid-template-columns: 1fr !important; }
-  .subject-card { padding: 1.25rem !important; }
-  .subject-card h3, .subject-card h4 { font-size: 1rem !important; }
-  .subject-card p { font-size: 0.82rem !important; }
+  .subjects-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .subject-card { padding: 1.5rem !important; min-height: 160px !important; }
+  .subject-card h3, .subject-card h4 { font-size: 1.15rem !important; }
+  .subject-card p { font-size: 0.85rem !important; }
   .quick-links { gap: 0.4rem !important; }
   .quick-links a { padding: 0.6rem 0.85rem !important; font-size: 0.78rem !important; }
   .hero h2 { font-size: 1.8rem !important; }
