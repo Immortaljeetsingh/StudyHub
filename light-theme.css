@@ -178,11 +178,11 @@ body.light-theme ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); borde
 /* Selection */
 body.light-theme ::selection { background: rgba(0,122,255,0.2); color: #1c1c1e; }
 
-/* Smooth transitions */
-body.light-theme, body.light-theme * {
-  transition-property: background-color, color, border-color, box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+/* Smooth transitions - only color properties, not layout */
+body.light-theme * {
+  transition-property: background-color, color, border-color, box-shadow !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease !important;
 }
 
 /* ═══════════ INLINE STYLE OVERRIDES (beat white text) ═══════════ */
