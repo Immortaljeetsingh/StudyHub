@@ -1797,18 +1797,39 @@ function initDashboard(){initProgress();renderSubjectCards();renderQuickLinks();
     <script src="search.js"></script>
     <script src="sidebar.js"></script>
     <script>document.addEventListener('DOMContentLoaded',function(){initDashboard()});</script>
+    <!-- Firebase SDK (compat for script tag usage) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
     <script>
     (function(){
-        var key='studyhub_visitors';
-        var el=document.getElementById('visitorCount');
-        fetch('https://api.countapi.xyz/hit/immortaljeetsingh-github-io/'+key)
-        .then(function(r){return r.json()})
-        .then(function(d){if(el)el.textContent=d.value})
-        .catch(function(){
-            var c=parseInt(localStorage.getItem(key)||'0')+1;
-            localStorage.setItem(key,c);
-            if(el)el.textContent=c+' (local)';
+        firebase.initializeApp({
+            apiKey: "AIzaSyCDJ6WnWD6KDqP_W6eXioAmFSiWCmeR7X8",
+            authDomain: "studyhub-23608.firebaseapp.com",
+            databaseURL: "https://studyhub-23608-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "studyhub-23608",
+            storageBucket: "studyhub-23608.firebasestorage.app",
+            messagingSenderId: "154941584567",
+            appId: "1:154941584567:web:b8425fc508ed7495788932"
         });
+
+        var db = firebase.database();
+        var el = document.getElementById('visitorCount');
+        var visited = localStorage.getItem('studyhub_visited');
+
+        if (visited) {
+            // Already counted this browser — just read the count
+            db.ref('visitorCount').once('value').then(function(snap) {
+                if (el) el.textContent = snap.val() || 0;
+            });
+        } else {
+            // New visitor — atomically increment
+            db.ref('visitorCount').transaction(function(current) {
+                return (current || 0) + 1;
+            }).then(function(result) {
+                localStorage.setItem('studyhub_visited', '1');
+                if (el) el.textContent = result.snapshot.val();
+            });
+        }
     })();
     </script>
     <script src="enhancements.js"></script>
