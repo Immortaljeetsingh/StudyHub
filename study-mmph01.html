@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPH-01: Organisational Theory and Design | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="manifest" href="manifest.json">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(253,203,110,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}.sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(253,203,110,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#fdcb6e;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#fdcb6e,#fdcb6ecc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#fdcb6e,#fdcb6ecc,#00d4ff,#fdcb6e);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(253,203,110,.08);border-color:#fdcb6e}.callout-example{background:rgba(253,203,110,.05);border-color:#fdcb6e}.callout-examtip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-mnemonic{background:rgba(0,210,255,.06);border-color:#00d4ff}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(253,203,110,.15);color:#fdcb6ecc;border:1px solid rgba(253,203,110,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#fdcb6e}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#fdcb6e;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#fdcb6e,#fdcb6ecc);z-index:9999;transition:width .1s;width:0%}.db{overflow-x:auto;margin:1rem 0}table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:.6rem .8rem;border:1px solid rgba(255,255,255,.1);text-align:left}th{background:rgba(253,203,110,.12);color:#fdcb6e;font-weight:600}td{color:rgba(255,255,255,.72)}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+</style>
+</head>
+<body class="subject-mmph01">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<nav class="sidebar">
+  <a href="study-hub.html">&#x1F3E0; Back</a>
+  <div class="sidebar-header"><h3>MMPH-01</h3></div>
+  <a href="#u1">Unit 1: Approaches to Understanding Organisations</a>
+  <a href="#u2">Unit 2: Theoretical Frameworks</a>
+  <a href="#u3">Unit 3: Organisational Effectiveness</a>
+  <a href="#u4">Unit 4: Fundamentals of Organisational Structure</a>
+  <a href="#u5">Unit 5: Factors Affecting Structures</a>
+  <a href="#u6">Unit 6: Typology of Organisational Designs</a>
+  <a href="#u7">Unit 7: Contemporary Organisational Designs</a>
+  <a href="#u8">Unit 8: Approaches to Job Design</a>
+  <a href="#u9">Unit 9: Emerging Trends at Work</a>
+  <a href="#u10">Unit 10: Role of Organisational Culture</a>
+  <a href="#u11">Unit 11: Organisational Conflict</a>
+  <a href="#mnemonics">Master Mnemonics Table</a>
+  <a href="#frameworks">Key Frameworks &amp; Diagrams</a>
+  <a href="#revision">Quick Revision Sheet</a>
+  <a href="#exam">Exam Focus</a>
+</nav>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPH-01</span><h1>Organisational Theory and Design</h1>
+<p>5 Blocks &bull; 11 Units &bull; IGNOU MBA &bull; Understanding, Structuring &amp; Designing Organizations</p></div>
+
+<!-- Subject Map -->
+<div class="unit" id="subject-map">
+<h3>&#x1F4CB; Subject Map</h3>
+<div class="db"><table>
+<thead><tr><th>Block</th><th>Units</th><th>Title</th><th>Key Focus</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1-3</td><td>Understanding Organisations</td><td>Approaches, theories, effectiveness</td></tr>
+<tr><td>2</td><td>4-5</td><td>Basics of Organisational Structure</td><td>Structure fundamentals, contingency factors</td></tr>
+<tr><td>3</td><td>6-7</td><td>Organisational Design</td><td>Typology, contemporary designs</td></tr>
+<tr><td>4</td><td>8-9</td><td>Job Design</td><td>Traditional &amp; contemporary approaches, emerging trends</td></tr>
+<tr><td>5</td><td>10-11</td><td>Internal Dynamics</td><td>Culture, conflict</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- Unit 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Approaches to Understanding Organisations</h3>
+<div class="br"><span class="sb s-b">Block 1</span><span class="sb s-b">Unit 1</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Organisation:</strong> A social unit with specific purposes; derived from Greek "organon" (tool/instrument). Chester I. Bernard defined it as "a system of consciously coordinated activities of two or more persons."</p>
+<p><strong>Weber's Ideal Type Features:</strong> Transparent boundaries, central coordination, internal differentiation, legitimate order, flexibility, part of societal transformation.</p>
+<p><strong>Levitt's 4 Components (1965):</strong> Task, People, Technology, Structure.</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Open vs Closed Systems</div>
+<p><strong>Open System:</strong> Constantly interacts with environment (all real organizations). 7 features: Subsystems, Synergy, Input-Output Model, Goal-Seeking, Entropy, Steady State, Feedback.</p>
+<p><strong>Closed System:</strong> Self-contained, isolated from environment (theoretical only).</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Morgan's 8 Metaphors</div>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Metaphor</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Machines</td><td>Weber's bureaucracy &mdash; precision, rules</td></tr>
+<tr><td>2</td><td>Organisms</td><td>Living system adapting to environment</td></tr>
+<tr><td>3</td><td>Brains</td><td>Information processing</td></tr>
+<tr><td>4</td><td>Cultures</td><td>Shared values and meanings</td></tr>
+<tr><td>5</td><td>Political Systems</td><td>Power dynamics</td></tr>
+<tr><td>6</td><td>Psychic Prisons</td><td>Mental limitations</td></tr>
+<tr><td>7</td><td>Flux and Transformation</td><td>Constant change</td></tr>
+<tr><td>8</td><td>Instruments of Domination</td><td>Power structures</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; McKinsey 7S Model</div>
+<p><strong>Hard Ss:</strong> Strategy, Structure, Systems (tangible). <strong>Soft Ss:</strong> Style, Staff, Shared Values, Skills (intangible).</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Organisation:</strong> A social unit with specific purposes, consciously coordinated, with defined boundaries and internal differentiation.</p>
+<p><strong>Synergy:</strong> The concept that the whole is greater than the sum of its individual parts.</p>
+<p><strong>Entropy:</strong> The natural tendency of systems toward disorder without energy infusion.</p>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A manufacturing company (open system) receives raw materials (inputs), transforms them into products (throughput), sells to customers (output), and uses customer feedback to improve (feedback loop).</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Morgan's 8 metaphors is a favorite for long-answer questions &mdash; know each metaphor with a one-line example.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MOB-CCPFD</strong> = Machines, Organisms, Brains, Cultures, Political, Flux, Prisons, Domination (Morgan's 8)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Organisation = social unit with specific purposes (Greek "organon")</li>
+<li>Chester Bernard: "system of consciously coordinated activities"</li>
+<li>Levitt's 4 components: Task, People, Technology, Structure</li>
+<li>Open systems: Inputs &rarr; Transformation &rarr; Outputs + Feedback</li>
+<li>Morgan's 8 metaphors: Machines, Organisms, Brains, Cultures, Political, Prisons, Flux, Domination</li>
+<li>McKinsey 7S: Strategy, Structure, Systems, Style, Staff, Shared Values, Skills</li>
+</ul></div>
+</div>
+
+<!-- Unit 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Theoretical Frameworks</h3>
+<div class="br"><span class="sb s-b">Block 1</span><span class="sb s-b">Unit 2</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Classical Theory:</strong> Scientific Management (Taylor) &mdash; time-and-motion studies, standardization. Administrative Theory (Fayol) &mdash; 14 principles. Bureaucracy (Weber) &mdash; hierarchy, rules, impersonality.</p>
+<p><strong>Neo-Classical Theory:</strong> Human Relations Movement (Mayo) &mdash; Hawthorne Experiments showed social factors matter more than physical conditions.</p>
+<p><strong>Systems Theory:</strong> Organisation as open system with inputs &rarr; transformation &rarr; outputs. Katz and Kahn (1966) first applied open systems theory.</p>
+<p><strong>Contingency Theory:</strong> No one best way to organize. Design depends on environment, technology, size.</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Classical Theory:</strong> Early management theories focusing on efficiency, structure, and principles (Taylor, Fayol, Weber).</p>
+<p><strong>Contingency Theory:</strong> The view that the best organizational design depends on the specific circumstances.</p>
+<p><strong>Hawthorne Effect:</strong> Workers' productivity improves when they know they're being observed.</p>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Theory</th><th>Focus</th><th>Key Contributors</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td>Classical</td><td>Efficiency, structure</td><td>Taylor, Fayol, Weber</td><td>Ignores human factors</td></tr>
+<tr><td>Neo-Classical</td><td>Human relations</td><td>Mayo, Hawthorne</td><td>Overemphasizes social factors</td></tr>
+<tr><td>Systems</td><td>Interdependence</td><td>Katz &amp; Kahn, Bertalanffy</td><td>Too abstract</td></tr>
+<tr><td>Contingency</td><td>Situational fit</td><td>Burns &amp; Stalker, Lawrence &amp; Lorsch</td><td>No universal principles</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare classical vs neo-classical vs contingency &mdash; this is a standard exam question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TFW-CK</strong> = Taylor, Fayol, Weber (classical) + Mayo (neo-classical) + Katz &amp; Kahn (systems)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Classical: Taylor (Scientific), Fayol (Administrative), Weber (Bureaucracy)</li>
+<li>Neo-classical: Mayo's Hawthorne &mdash; social factors matter</li>
+<li>Contingency: No one best way &mdash; depends on environment, tech, size</li>
+</ul></div>
+</div>
+
+<!-- Unit 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Organisational Effectiveness</h3>
+<div class="br"><span class="sb s-b">Block 1</span><span class="sb s-b">Unit 3</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Effectiveness:</strong> Achieving organizational goals &mdash; doing the right things. <strong>Efficiency:</strong> Using minimum resources &mdash; doing things right.</p>
+<p><strong>4 Approaches to Measuring Effectiveness:</strong></p>
+<ul>
+<li><strong>Goal Approach:</strong> Achievement of stated goals</li>
+<li><strong>Systems Approach:</strong> Resource acquisition, adaptability, efficiency</li>
+<li><strong>Strategic Constituencies Approach:</strong> Satisfying key stakeholders</li>
+<li><strong>Competing Values Approach:</strong> Balancing contradictory demands (flexibility vs control, internal vs external)</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Organisational Effectiveness:</strong> The degree to which an organization achieves its goals.</p>
+<p><strong>Efficiency:</strong> The ratio of outputs to inputs &mdash; achieving goals with minimum resources.</p>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Concept</th><th>Definition</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>Effectiveness</td><td>Doing right things</td><td>Goal achievement</td></tr>
+<tr><td>Efficiency</td><td>Doing things right</td><td>Resource utilization</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain why an organization can be efficient but not effective (doing wrong things well).</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>GSSE</strong> = Goal, Systems, Strategic constituencies, Effectiveness &mdash; Competing Values (4 approaches)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Effectiveness = doing right things; Efficiency = doing things right</li>
+<li>4 approaches: Goal, Systems, Strategic Constituencies, Competing Values</li>
+</ul></div>
+</div>
+
+<!-- Unit 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Fundamentals of Organisational Structure</h3>
+<div class="br"><span class="sb s-b">Block 2</span><span class="sb s-b">Unit 4</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Organisation Design:</strong> The total pattern of structural elements used to manage the overall organisation (Burton &amp; Thakur, 1995).</p>
+<p><strong>Allen's 7-Step Design Process:</strong> Identify objectives &rarr; Organise top-down &rarr; Organise bottom-up &rarr; Decide management positions &rarr; Identify groupings &rarr; Seek balance &rarr; Check spans of control.</p>
+<p><strong>Organisation Life Cycle:</strong> Birth (centralised, informal) &rarr; Youth (growing, some formalization) &rarr; Middle (formal bureaucracy, decentralised) &rarr; Maturity (mechanistic, rigid).</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 3 Universal Perspectives</div>
+<div class="db"><table>
+<thead><tr><th>Perspective</th><th>Focus</th><th>Key Feature</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td>Bureaucratic (Weber)</td><td>Structure &amp; rules</td><td>Specialization, hierarchy</td><td>Rigid, ignores humans</td></tr>
+<tr><td>Behavioral (Likert)</td><td>Human relations</td><td>Participation, communication</td><td>"One best way" assumption</td></tr>
+<tr><td>Contingency</td><td>Situational fit</td><td>Adapt to environment, tech, size</td><td>No universal principles</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Likert's System 4 Organisation</div>
+<p><strong>System 1:</strong> Bureaucratic &mdash; centralized, downward communication, authoritarian.</p>
+<p><strong>System 4:</strong> Behavioral &mdash; decentralized, free-flowing communication, participative. Likert concluded System 4 is superior.</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Organisation Design:</strong> The total pattern of structural elements used to manage the overall organisation.</p>
+<p><strong>Bureaucracy:</strong> An organisation founded on a legitimate, formal system of authority with specialization, hierarchy, and rules.</p>
+<p><strong>Socio-Technical System:</strong> Balances the social system (human interactions) with the technical system (tasks and technology).</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain Likert's System 1 vs System 4 with examples &mdash; this is a common comparison question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>B2C</strong> = Bureaucratic, Behavioural, Contingency (3 perspectives)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Allen's 7-step design process for organisation structure</li>
+<li>Life cycle: Birth (centralized) &rarr; Youth &rarr; Middle &rarr; Maturity (mechanistic)</li>
+<li>3 perspectives: Bureaucratic, Behavioural, Contingency</li>
+<li>Likert System 4: Participative, decentralized, free communication</li>
+</ul></div>
+</div>
+
+<!-- Unit 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Factors Affecting Organisational Structures</h3>
+<div class="br"><span class="sb s-b">Block 2</span><span class="sb s-b">Unit 5</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Burns &amp; Stalker &mdash; Mechanistic vs Organic</div>
+<p><strong>Mechanistic:</strong> Stable environment &rarr; rules, standardization, centralized decisions.</p>
+<p><strong>Organic:</strong> Unstable environment &rarr; flexibility, few rules, decentralized, autonomous teams.</p>
+<p>These are endpoints on a continuum, not binary choices.</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Mintzberg's 5 Parts of Organisation</div>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Part</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Strategic Apex</td><td>Top management (CEO, board)</td></tr>
+<tr><td>2</td><td>Middle Line</td><td>Middle managers connecting top to bottom</td></tr>
+<tr><td>3</td><td>Operating Core</td><td>Workers who do the basic work</td></tr>
+<tr><td>4</td><td>Technostructure</td><td>Analysts (engineers, planners, accountants)</td></tr>
+<tr><td>5</td><td>Support Staff</td><td>Indirect services (maintenance, legal, cafeteria)</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Mintzberg's 5 Organisational Forms</div>
+<div class="db"><table>
+<thead><tr><th>Form</th><th>Formalization</th><th>Centralization</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Simple Structure</td><td>Low</td><td>High</td><td>Small, entrepreneurial</td></tr>
+<tr><td>Machine Bureaucracy</td><td>High</td><td>High</td><td>Stable, mass production</td></tr>
+<tr><td>Professional Bureaucracy</td><td>Low-Moderate</td><td>Low</td><td>Professional services</td></tr>
+<tr><td>Divisionalized Form</td><td>Low within divisions</td><td>Decentralized</td><td>Large diversified</td></tr>
+<tr><td>Adhocracy</td><td>Low</td><td>Low</td><td>Innovation, change</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Mechanistic Organisation:</strong> A rigid, hierarchical structure with centralized authority, extensive rules, and specialized tasks.</p>
+<p><strong>Organic Organisation:</strong> A flexible, adaptive structure with decentralized authority, few rules, and cross-functional teams.</p>
+<p><strong>Adhocracy:</strong> A temporary, flexible organisation designed to respond to rapid change and innovation.</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw Mintzberg's 5 parts diagram &mdash; it's a guaranteed question. Label all 5 parts with their roles.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SMPDA</strong> = Simple, Machine, Professional, Divisionalised, Adhocracy (Mintzberg's 5 forms)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Burns &amp; Stalker: Mechanistic (stable) vs Organic (unstable)</li>
+<li>Mintzberg 5 parts: Strategic Apex, Middle Line, Operating Core, Technostructure, Support Staff</li>
+<li>Mintzberg 5 forms: Simple, Machine, Professional, Divisionalized, Adhocracy</li>
+</ul></div>
+</div>
+
+<!-- Unit 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Typology of Organisational Designs</h3>
+<div class="br"><span class="sb s-b">Block 3</span><span class="sb s-b">Unit 6</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p>10 design types from simple to complex:</p>
+<ul>
+<li><strong>Line:</strong> Simplest form; scalar principle &mdash; authority flows vertically. Clear authority, fast decisions.</li>
+<li><strong>Line &amp; Staff:</strong> Line authority (command) + Staff specialists (advice). Staff supports but doesn't command.</li>
+<li><strong>Functional:</strong> Grouped by common functions (production, marketing, finance, HR). Specialization, efficiency.</li>
+<li><strong>Product/Divisional:</strong> Autonomous units for each product line. Diversification, accountability.</li>
+<li><strong>Hybrid:</strong> Combines functional (centralized) and divisional (decentralized) features.</li>
+<li><strong>Matrix:</strong> Dual authority: functional manager + project manager. Breaks unity of command.</li>
+<li><strong>Project:</strong> Temporary team for specific project; disbanded after completion.</li>
+<li><strong>Virtual/Network:</strong> Core functions in-house; rest outsourced. Connected by IT.</li>
+<li><strong>Boundaryless (Jack Welch, GE):</strong> No internal or external boundaries.</li>
+<li><strong>Horizontal:</strong> Flat structure organized around core processes. Cross-functional teams.</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Line Authority:</strong> The right to direct the activities of subordinates in the chain of command.</p>
+<p><strong>Staff Authority:</strong> The right to advise but not command &mdash; advisory relationship.</p>
+<p><strong>Matrix Organisation:</strong> Employees report to both a functional manager and a project manager simultaneously.</p>
+<p><strong>Boundaryless Organisation:</strong> Eliminates internal and external barriers to free flow of ideas, resources, and people.</p>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Design</th><th>Authority</th><th>Best For</th><th>Key Risk</th></tr></thead>
+<tbody>
+<tr><td>Line</td><td>Single chain</td><td>Small, simple orgs</td><td>Overloaded top</td></tr>
+<tr><td>Line &amp; Staff</td><td>Line + advisory</td><td>Growing orgs</td><td>Staff not accountable</td></tr>
+<tr><td>Functional</td><td>By function</td><td>Single-product firms</td><td>Silos</td></tr>
+<tr><td>Divisional</td><td>By product/region</td><td>Multi-product firms</td><td>Duplication</td></tr>
+<tr><td>Matrix</td><td>Dual</td><td>Complex projects</td><td>Power struggles</td></tr>
+<tr><td>Network</td><td>Central hub + outsourced</td><td>Dynamic environments</td><td>Loss of control</td></tr>
+<tr><td>Boundaryless</td><td>No boundaries</td><td>Innovation-driven</td><td>Coordination challenges</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare Line, Functional, Matrix, and Divisional structures &mdash; draw diagrams for each.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>LLFPH-MNVBH</strong> = Line, Line&amp;Staff, Functional, Product, Hybrid, Matrix, Network, Virtual, Boundaryless, Horizontal (10 design types)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Design types: Line &rarr; Line&amp;Staff &rarr; Functional &rarr; Product &rarr; Hybrid &rarr; Matrix &rarr; Network &rarr; Virtual &rarr; Boundaryless &rarr; Horizontal</li>
+</ul></div>
+</div>
+
+<!-- Unit 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Contemporary Organisational Designs</h3>
+<div class="br"><span class="sb s-b">Block 3</span><span class="sb s-b">Unit 7</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Learning Organisation (Peter Senge)</div>
+<p><strong>5 Disciplines:</strong></p>
+<ul>
+<li><strong>Personal Mastery:</strong> Continuously learning and improving</li>
+<li><strong>Mental Models:</strong> Challenging assumptions and mental frameworks</li>
+<li><strong>Shared Vision:</strong> Common picture of the future</li>
+<li><strong>Team Learning:</strong> Dialogue and discussion in groups</li>
+<li><strong>Systems Thinking:</strong> Seeing the whole, not just parts (the 5th discipline that integrates all)</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Other Contemporary Designs</div>
+<ul>
+<li><strong>Network Organisation:</strong> Central hub with outsourced functions. IT-enabled coordination.</li>
+<li><strong>Cellular Organisation:</strong> Self-managed cells that can reconfigure. Inspired by biological cells.</li>
+<li><strong>Modular Organisation:</strong> Core competencies in-house; non-core outsourced. Like Lego blocks.</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Learning Organisation:</strong> An organisation that facilitates the learning of all its members and continuously transforms itself (Peter Senge).</p>
+<p><strong>Systems Thinking:</strong> The ability to see interrelationships and patterns rather than linear cause-effect chains.</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Senge's 5 Disciplines is a guaranteed exam question &mdash; know each discipline with a brief explanation.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PMSTS</strong> = Personal Mastery, Mental Models, Shared Vision, Team Learning, Systems Thinking</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Senge's five disciplines create learning organizations</li>
+<li>Network, Cellular, Modular are contemporary design types</li>
+</ul></div>
+</div>
+
+<!-- Unit 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Approaches to Job Design</h3>
+<div class="br"><span class="sb s-b">Block 4</span><span class="sb s-b">Unit 8</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Job Design:</strong> Specifying tasks, methods, and relationships for each job to meet organizational and individual needs.</p>
+<p><strong>Traditional Approach (Taylor):</strong> Fit people to jobs. Standardization, specialization, efficiency.</p>
+<p><strong>Contemporary Approaches:</strong></p>
+<ul>
+<li><strong>Job Rotation:</strong> Moving employees between different jobs periodically.</li>
+<li><strong>Job Enlargement:</strong> "Horizontal loading" &mdash; adding more tasks at same level.</li>
+<li><strong>Job Enrichment (Herzberg):</strong> "Vertical loading" &mdash; adding control, responsibility, freedom.</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Hackman &amp; Oldham Job Characteristics Model</div>
+<p><strong>5 Core Job Dimensions:</strong></p>
+<ul>
+<li><strong>Skill Variety</strong> &mdash; different activities using different skills</li>
+<li><strong>Task Identity</strong> &mdash; complete a whole piece of work</li>
+<li><strong>Task Significance</strong> &mdash; impact on others' lives</li>
+<li><strong>Autonomy</strong> &mdash; freedom in scheduling and procedures</li>
+<li><strong>Feedback</strong> &mdash; direct information about performance</li>
+</ul>
+<p><strong>3 Critical Psychological States:</strong> Experienced meaningfulness (SV+TI+TS), Experienced responsibility (Autonomy), Knowledge of results (Feedback).</p>
+<p><strong>MPS</strong> = (Skill Variety + Task Identity + Task Significance) / 3 &times; Autonomy &times; Feedback</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Job Design:</strong> The process of specifying the contents, methods, and relationships of jobs.</p>
+<p><strong>Job Enrichment:</strong> Adding motivators to a job &mdash; more responsibility, autonomy, growth opportunities (Herzberg).</p>
+<p><strong>Job Enlargement:</strong> Adding more tasks at the same level &mdash; horizontal expansion of job scope.</p>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Approach</th><th>Direction</th><th>Focus</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Job Simplification</td><td>Narrow tasks</td><td>Efficiency</td><td>Assembly line</td></tr>
+<tr><td>Job Rotation</td><td>Lateral movement</td><td>Variety</td><td>Cross-training</td></tr>
+<tr><td>Job Enlargement</td><td>Horizontal expansion</td><td>More tasks</td><td>Clerk handles multiple forms</td></tr>
+<tr><td>Job Enrichment</td><td>Vertical expansion</td><td>More responsibility</td><td>Employee plans own work</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw and explain the Hackman-Oldham model completely &mdash; it's a guaranteed long-answer question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>STTAF</strong> = Skill Variety, Task Identity, Task Significance, Autonomy, Feedback (5 job characteristics)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Job design: Taylor (simplification) vs Rotation vs Enlargement vs Enrichment</li>
+<li>Hackman-Oldham: Skill Variety, Task Identity, Task Significance, Autonomy, Feedback</li>
+</ul></div>
+</div>
+
+<!-- Unit 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Emerging Trends at Work</h3>
+<div class="br"><span class="sb s-b">Block 4</span><span class="sb s-b">Unit 9</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Telecommuting/Remote Work:</strong> Working from locations outside the office using technology.</li>
+<li><strong>Flexible Work Arrangements:</strong> Flextime, Compressed Workweek, Job Sharing.</li>
+<li><strong>Virtual Teams:</strong> Geographically dispersed teams collaborating through technology.</li>
+<li><strong>Gig Economy:</strong> Short-term contracts, freelance work, independent contractors.</li>
+<li><strong>Contingent Workforce:</strong> Non-permanent workers (temps, contractors, freelancers).</li>
+<li><strong>Automation &amp; AI Impact:</strong> Routine tasks automated; new roles in oversight, creativity, problem-solving.</li>
+</ul>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Telecommuting:</strong> Working from a remote location (usually home) using telecommunications technology.</p>
+<p><strong>Gig Economy:</strong> A labor market characterized by short-term contracts or freelance work rather than permanent jobs.</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss how emerging trends affect job design &mdash; flexibility vs control, autonomy vs coordination.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>FV-GR</strong> = Flextime, Virtual teams, Gig economy, Remote work (emerging trends)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Remote work, flextime, gig economy are reshaping job design</li>
+<li>Automation &amp; AI create new roles while eliminating routine tasks</li>
+</ul></div>
+</div>
+
+<!-- Unit 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Role of Organisational Culture in Design</h3>
+<div class="br"><span class="sb s-b">Block 5</span><span class="sb s-b">Unit 10</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Edgar Schein's 3 Levels of Culture</div>
+<div class="db"><table>
+<thead><tr><th>Level</th><th>Visibility</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Artifacts (Surface)</td><td>Visible &mdash; easy to see, hard to decode</td><td>Office layout, dress code, rituals, logos</td></tr>
+<tr><td>Espoused Values (Middle)</td><td>Stated &mdash; strategies, goals, philosophies</td><td>Mission statements, codes of conduct</td></tr>
+<tr><td>Basic Assumptions (Deep)</td><td>Unconscious &mdash; taken-for-granted beliefs</td><td>Human nature, reality, relationships</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Culture Transmission Mechanisms</div>
+<p>Stories (founder myths), Rituals (celebrations), Symbols (logos), Language (jargon), Selection &amp; Socialization (hiring for fit).</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Organisational Culture:</strong> The set of shared, taken-for-granted assumptions that members hold and that determine how they perceive, think about, and react to their environment.</p>
+<p><strong>Bicultural Audit:</strong> A diagnostic tool that identifies cultural differences between merging organizations.</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain Schein's 3 levels with examples for each &mdash; artifacts are easy to spot but hard to interpret correctly.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>AEB</strong> = Artifacts &rarr; Espoused Values &rarr; Basic Assumptions (surface to deep)</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Schein 3 levels: Artifacts &rarr; Espoused Values &rarr; Basic Assumptions</li>
+<li>Culture can support or hinder organizational design changes</li>
+</ul></div>
+</div>
+
+<!-- Unit 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Organisational Conflict</h3>
+<div class="br"><span class="sb s-b">Block 5</span><span class="sb s-b">Unit 11</span></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<p><strong>Types of Conflict:</strong> Intrapersonal (within individual), Interpersonal (between individuals), Intragroup (within group), Intergroup (between groups).</p>
+<p><strong>Functional vs Dysfunctional:</strong> Functional = constructive (better decisions, innovation). Dysfunctional = destructive (stress, turnover).</p>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Thomas-Kilmann Conflict Modes</div>
+<div class="db"><table>
+<thead><tr><th>Mode</th><th>Assertiveness</th><th>Cooperation</th><th>When to Use</th></tr></thead>
+<tbody>
+<tr><td>Competing</td><td>High</td><td>Low</td><td>Emergency, quick decision needed</td></tr>
+<tr><td>Collaborating</td><td>High</td><td>High</td><td>Important issue, both concerns matter</td></tr>
+<tr><td>Compromising</td><td>Moderate</td><td>Moderate</td><td>Time pressure, equally powerful parties</td></tr>
+<tr><td>Avoiding</td><td>Low</td><td>Low</td><td>Trivial issue, cooling off needed</td></tr>
+<tr><td>Accommodating</td><td>Low</td><td>High</td><td>Preserving relationships, you're wrong</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Conflict:</strong> A process that begins when an individual or group perceives that another has frustrated or is about to frustrate a major concern.</p>
+<p><strong>Functional Conflict:</strong> Conflict that supports the goals of the group and improves performance.</p>
+<p><strong>Dysfunctional Conflict:</strong> Conflict that hinders group performance.</p>
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw the Thomas-Kilmann grid with both axes labeled. Know when to use each mode.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CCC-A-A</strong> = Competing, Collaborating, Compromising, Avoiding, Accommodating</p></div>
+
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Thomas-Kilmann: Competing, Collaborating, Compromising, Avoiding, Accommodating</li>
+<li>Functional conflict is constructive; dysfunctional is destructive</li>
+</ul></div>
+</div>
+
+<!-- Master Mnemonics Table -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td>MOB-CCPFD</td><td>Machines, Organisms, Brains, Cultures, Political, Flux, Prisons, Domination</td><td>Morgan's 8 metaphors</td></tr>
+<tr><td>TFW-CK</td><td>Taylor, Fayol, Weber + Katz &amp; Kahn</td><td>Classical &amp; systems theorists</td></tr>
+<tr><td>B2C</td><td>Bureaucratic, Behavioural, Contingency</td><td>3 universal perspectives</td></tr>
+<tr><td>SMPDA</td><td>Simple, Machine, Professional, Divisionalised, Adhocracy</td><td>Mintzberg's 5 forms</td></tr>
+<tr><td>STTAF</td><td>Skill Variety, Task Identity, Task Significance, Autonomy, Feedback</td><td>Hackman-Oldham 5 dimensions</td></tr>
+<tr><td>PMSTS</td><td>Personal Mastery, Mental Models, Shared Vision, Team Learning, Systems Thinking</td><td>Senge's 5 disciplines</td></tr>
+<tr><td>AEB</td><td>Artifacts, Espoused Values, Basic Assumptions</td><td>Schein's culture levels</td></tr>
+<tr><td>CCC-A-A</td><td>Competing, Collaborating, Compromising, Avoiding, Accommodating</td><td>Thomas-Kilmann conflict modes</td></tr>
+<tr><td>BYMM</td><td>Birth, Youth, Middle, Maturity</td><td>Organisation life cycle</td></tr>
+<tr><td>GSSE</td><td>Goal, Systems, Strategic Constituencies, Competing Values</td><td>Effectiveness approaches</td></tr>
+<tr><td>FV-GR</td><td>Flextime, Virtual, Gig, Remote</td><td>Emerging work trends</td></tr>
+<tr><td>LFPHM</td><td>Line, Functional, Product, Hybrid, Matrix</td><td>Basic design types</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- Key Frameworks -->
+<div class="unit" id="frameworks">
+<h3>&#x1F4CA; Key Frameworks &amp; Diagrams</h3>
+
+<h4>McKinsey 7S Model</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+┌────────────────────────────────────────┐
+│             STRATEGY                   │
+│         (Direction &amp; approach)         │
+├──────────┬──────────┬──────────────────┤
+│STRUCTURE │ SYSTEMS  │    STYLE         │
+│(Org chart)│(Processes)│(Leadership)    │
+├──────────┴──────────┴──────────────────┤
+│           SHARED VALUES                │
+│        (Core beliefs &amp; culture)        │
+├──────────────┬─────────────────────────┤
+│    STAFF     │       SKILLS            │
+│(People)      │(Competencies)           │
+└──────────────┴─────────────────────────┘</pre>
+</div>
+
+<h4>Mintzberg's 5 Parts</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+         ┌─────────────────┐
+         │  STRATEGIC APEX │ ← Top management
+         └────────┬────────┘
+                  │
+    ┌─────────────┼─────────────┐
+┌───┴───┐   ┌────┴────┐   ┌───┴───┐
+│MIDDLE │   │TECHNO-  │   │SUPPORT│
+│ LINE  │   │STRUCTURE│   │ STAFF │
+└───┬───┘   └─────────┘   └───────┘
+    │
+┌───┴─────────────────┐
+│   OPERATING CORE    │ ← Workers
+└─────────────────────┘</pre>
+</div>
+
+<h4>Organisation Life Cycle</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+Birth → Youth → Middle → Maturity
+ │       │       │        │
+ ▼       ▼       ▼        ▼
+Centralized Growing  Formal   Mechanistic
+Informal   Formalizing Bureaucracy Rigid</pre>
+</div>
+
+<h4>Burns &amp; Stalker: Mechanistic vs Organic</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+Stable Environment ──────────── Unstable Environment
+
+  MECHANISTIC                    ORGANIC
+  • Rules &amp; regulations          • Few rules
+  • Centralized decisions        • Decentralized
+  • Specialized tasks            • Cross-functional
+  • Vertical communication       • Lateral communication</pre>
+</div>
+
+<h4>Hackman-Oldham Model</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+Job Characteristics    Psychological States    Outcomes
+─────────────────    ───────────────────    ────────
+Skill Variety ─┐
+               ├→ Meaningfulness ──→ High Motivation
+Task Identity ─┤                    High Satisfaction
+Task Signif. ──┘                    High Performance
+Autonomy ───────→ Responsibility ──→ Low Turnover
+Feedback ────────→ Knowledge of Results</pre>
+</div>
+
+<h4>Thomas-Kilmann Conflict Model</h4>
+<div class="callout callout-definition">
+<pre style="font-size:.85rem;color:rgba(255,255,255,.8)">
+         HIGH ASSERTIVENESS
+              │
+    Competing │ Collaborating
+    (I win,   │ (We both win)
+     you lose)│
+──────────────┼────────────── HIGH COOPERATION
+              │
+    Avoiding  │ Accommodating
+    (Nobody   │ (You win,
+     wins)    │  I lose)
+              │
+         LOW ASSERTIVENESS
+         Compromising (middle ground)</pre>
+</div>
+</div>
+
+<!-- Quick Revision Sheet -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<h4>One-Liners</h4>
+<div class="summary-box"><ul>
+<li>Organisation = social unit with specific purposes (Greek "organon")</li>
+<li>Chester Bernard: "system of consciously coordinated activities"</li>
+<li>Levitt's 4 components: Task, People, Technology, Structure</li>
+<li>Open systems: Inputs &rarr; Transformation &rarr; Outputs + Feedback</li>
+<li>Morgan's 8 metaphors: Machines, Organisms, Brains, Cultures, Political, Prisons, Flux, Domination</li>
+<li>McKinsey 7S: Strategy, Structure, Systems, Style, Staff, Shared Values, Skills</li>
+<li>Classical: Taylor (Scientific), Fayol (Administrative), Weber (Bureaucracy)</li>
+<li>Neo-classical: Mayo's Hawthorne &mdash; social factors matter</li>
+<li>Contingency: No one best way &mdash; depends on environment, tech, size</li>
+<li>Likert System 4: Participative, decentralized, free communication</li>
+<li>Burns &amp; Stalker: Mechanistic (stable) vs Organic (unstable)</li>
+<li>Mintzberg 5 parts: Strategic Apex, Middle Line, Operating Core, Technostructure, Support Staff</li>
+<li>Mintzberg 5 forms: Simple, Machine, Professional, Divisionalized, Adhocracy</li>
+<li>Design types: Line &rarr; Line&amp;Staff &rarr; Functional &rarr; Product &rarr; Hybrid &rarr; Matrix &rarr; Network &rarr; Virtual &rarr; Boundaryless &rarr; Horizontal</li>
+<li>Learning Org (Senge): Personal Mastery, Mental Models, Shared Vision, Team Learning, Systems Thinking</li>
+<li>Job design: Taylor (simplification) vs Rotation vs Enlargement vs Enrichment</li>
+<li>Hackman-Oldham: Skill Variety, Task Identity, Task Significance, Autonomy, Feedback</li>
+<li>Schein 3 levels: Artifacts &rarr; Espoused Values &rarr; Basic Assumptions</li>
+<li>Thomas-Kilmann: Competing, Collaborating, Compromising, Avoiding, Accommodating</li>
+<li>Life cycle: Birth (centralized) &rarr; Youth &rarr; Middle &rarr; Maturity (mechanistic)</li>
+</ul></div>
+
+<h4>Key Definitions Quick Reference</h4>
+<div class="db"><table>
+<thead><tr><th>Term</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td>Organisation</td><td>Social unit with specific purposes, consciously coordinated</td></tr>
+<tr><td>Open System</td><td>Constantly interacts with environment</td></tr>
+<tr><td>Bureaucracy</td><td>Organisation based on formal authority, rules, specialization</td></tr>
+<tr><td>Mechanistic</td><td>Rigid, rules, centralized &mdash; for stable environments</td></tr>
+<tr><td>Organic</td><td>Flexible, few rules, decentralized &mdash; for unstable environments</td></tr>
+<tr><td>Culture</td><td>Shared values, beliefs, norms shaping behavior</td></tr>
+<tr><td>Conflict</td><td>Disagreement over resources, goals, or methods</td></tr>
+<tr><td>Job Design</td><td>Specifying tasks, methods, relationships for each job</td></tr>
+<tr><td>Effectiveness</td><td>Achieving goals (doing right things)</td></tr>
+<tr><td>Efficiency</td><td>Using minimum resources (doing things right)</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- Exam Focus -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<h4>Most Frequently Asked Topics</h4>
+<div class="summary-box"><ol>
+<li><strong>Morgan's 8 Metaphors</strong> &mdash; List and explain each with examples (10-12 marks)</li>
+<li><strong>Mintzberg's 5 Organisational Forms</strong> &mdash; Compare with features table (8-10 marks)</li>
+<li><strong>Schein's 3 Levels of Culture</strong> &mdash; Explain with diagram and examples (8-10 marks)</li>
+<li><strong>Hackman-Oldham Model</strong> &mdash; Draw and explain completely (10 marks)</li>
+<li><strong>Burns &amp; Stalker: Mechanistic vs Organic</strong> &mdash; Compare with examples (5-8 marks)</li>
+<li><strong>Organisation Life Cycle</strong> &mdash; Explain 4 stages (5-8 marks)</li>
+<li><strong>Senge's 5 Disciplines</strong> &mdash; List and explain (5-8 marks)</li>
+<li><strong>Thomas-Kilmann Conflict Modes</strong> &mdash; Draw grid, explain each mode (5-8 marks)</li>
+<li><strong>Likert's System 1 vs System 4</strong> &mdash; Compare features (5 marks)</li>
+<li><strong>Organisation Design Types</strong> &mdash; Compare Line, Functional, Matrix (5-8 marks)</li>
+</ol></div>
+
+<h4>Expected Question Patterns</h4>
+<div class="callout callout-examtip"><ul>
+<li><strong>Define and explain:</strong> "What is organisational culture? Explain Schein's 3 levels."</li>
+<li><strong>Compare and contrast:</strong> "Compare mechanistic and organic organisations."</li>
+<li><strong>Draw and explain:</strong> "Draw Hackman-Oldham's Job Characteristics Model and explain."</li>
+<li><strong>List and describe:</strong> "Describe Morgan's 8 metaphors of organisation."</li>
+<li><strong>Application:</strong> "Which organisational design would you recommend for a tech startup? Justify."</li>
+</ul></div>
+
+<h4>Model Answer Structure</h4>
+<div class="callout callout-mnemonic"><ol>
+<li><strong>Definition</strong> (1-2 sentences)</li>
+<li><strong>Framework/Diagram</strong> (draw it)</li>
+<li><strong>Explanation of each component</strong> (2-3 lines each)</li>
+<li><strong>Real-world example</strong> (apply the concept)</li>
+<li><strong>Advantages/Disadvantages</strong> (balanced view)</li>
+<li><strong>Conclusion</strong> (1 sentence linking to the question)</li>
+</ol></div>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+<script>
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll(".unit").forEach(function(e){e.classList.add("fade-in");o.observe(e)});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="pwa-register.js"></script>
+</body>
+</html>
