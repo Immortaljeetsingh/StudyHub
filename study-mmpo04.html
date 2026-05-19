@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPO-04: Management Information Systems | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="manifest" href="manifest.json">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(9,132,227,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(9,132,227,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#0984e3;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#0984e3,#0984e3cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc,#00d4ff,#0984e3);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#0984e3;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(9,132,227,.08);border-color:#0984e3}.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(9,132,227,.15);color:#0984e3cc;border:1px solid rgba(9,132,227,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#0984e3}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#0984e3;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.vd-node{background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem}.callout-tip{background:rgba(255,215,0,.06);border-color:#ffd700}.exam-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}.exam-table th{background:rgba(9,132,227,.15);color:#0984e3;padding:.6rem .8rem;text-align:left;font-weight:600;border-bottom:2px solid rgba(9,132,227,.3)}.exam-table td{padding:.5rem .8rem;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.06)}.exam-table tr:hover{background:rgba(255,255,255,.03)}
+</style>
+</head>
+<body class="subject-mmpo04">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<nav class="sidebar">
+  <a href="study-hub.html">&#x1F3E0; Back</a>
+  <div class="sidebar-header"><h3>MMPO-04</h3></div>
+  <a href="#u1">Unit 1: Intro to IS</a>
+  <a href="#u2">Unit 2: Intro to MIS</a>
+  <a href="#u3">Unit 3: SDLC</a>
+  <a href="#u4">Unit 4: Business Intelligence</a>
+  <a href="#u5">Unit 5: Decision Making</a>
+  <a href="#u6">Unit 6: Spreadsheet Analysis</a>
+  <a href="#u7">Unit 7: Organizing Data</a>
+  <a href="#u8">Unit 8: SQL</a>
+  <a href="#u9">Unit 9: DBMS Implementation</a>
+  <a href="#u10">Unit 10: Cloud Computing</a>
+  <a href="#u11">Unit 11: Big Data</a>
+  <a href="#u12">Unit 12: ERP</a>
+  <a href="#u13">Unit 13: IoT, AI & VR</a>
+  <a href="#u14">Unit 14: Blockchain</a>
+  <a href="#mnemonics">Mnemonics Table</a>
+  <a href="#frameworks">Key Frameworks</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#exam">Exam Focus</a>
+</nav>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPO-04</span><h1>Management Information Systems</h1>
+<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; IGNOU MBA</p></div>
+
+<!-- Unit 1 -->
+<div class="unit" id="u1">
+<h3>Unit 1: Introduction to Information Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>IS</strong>: People + procedures + hardware + software + data + networks for collecting, storing, processing, disseminating information</li>
+<li><strong>Data vs Information</strong>: Raw facts (data) &gt; Processed meaningful context (information)</li>
+<li><strong>IS Types (T-M-D-E-E)</strong>: TPS (operational), MIS (reports), DSS (analytical), EIS (dashboards), ESS (AI-powered)</li>
+<li><strong>IS Components</strong>: Hardware, Software, Data, Procedures, People, Networks</li>
+<li><strong>Competitive Advantage</strong>: Cost leadership, differentiation, innovation through IS</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>IS</strong>: Organized combination of people, hardware, software, networks, data, and policies that stores, retrieves, transforms, and disseminates information</p>
+<p><strong>TPS</strong>: System that records and processes daily business transactions</p>
+<p><strong>DSS</strong>: Interactive system supporting semi-structured and unstructured decision-making</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon uses TPS for order processing, MIS for daily sales reports, DSS for demand forecasting, EIS for executive dashboards showing KPIs.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-M-D-E-E"</strong> = TPS, MIS, DSS, EIS, ESS (bottom to top of organization)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>IS types (TPS, MIS, DSS, EIS, ESS) and their characteristics are the most frequently tested. Always give examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>IS = People + HW + SW + Data + Procedures + Networks</li>
+<li>5 IS types from operational (TPS) to strategic (ESS)</li>
+<li>IS enables competitive advantage through cost leadership and differentiation</li>
+</ul></div>
+</div>
+
+<!-- Unit 2 -->
+<div class="unit" id="u2">
+<h3>Unit 2: Introduction to MIS</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>MIS</strong>: System providing information for managerial decision-making at all levels</li>
+<li><strong>MIS Objectives</strong>: Efficient operations, better decisions, competitive advantage</li>
+<li><strong>MIS Structure</strong>: Operational &gt; Tactical &gt; Strategic level</li>
+<li><strong>Information Quality (A-T-R-C-A)</strong>: Accurate, Timely, Relevant, Complete, Accessible</li>
+<li><strong>Report Types</strong>: Scheduled (regular), On-demand (requested), Exception (deviations)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>MIS</strong>: Integrated system providing information to support operations, management, and decision-making</p>
+<p><strong>Information Quality</strong>: Degree to which information is accurate, timely, relevant, complete, and accessible</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Retail chain MIS: POS data (collection) &gt; aggregation (processing) &gt; data warehouse (storage) &gt; dashboard (retrieval) &gt; email reports (dissemination).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"A-T-R-C-A"</strong> = Accurate, Timely, Relevant, Complete, Accessible (information quality)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>MIS functions and information quality characteristics are common short-answer questions.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>MIS supports all management levels (operational, tactical, strategic)</li>
+<li>5 information quality characteristics: A-T-R-C-A</li>
+<li>3 report types: Scheduled, On-demand, Exception</li>
+</ul></div>
+</div>
+
+<!-- Unit 3 -->
+<div class="unit" id="u3">
+<h3>Unit 3: System Development Life Cycle (SDLC)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>SDLC Phases (P-A-D-I-M)</strong>: Planning &gt; Analysis &gt; Design &gt; Implementation &gt; Maintenance</li>
+<li><strong>Waterfall</strong>: Sequential, rigid, well-defined requirements</li>
+<li><strong>Agile</strong>: Iterative, flexible, changing requirements</li>
+<li><strong>Prototyping</strong>: Build working model first, then refine</li>
+<li><strong>RAD</strong>: Fast delivery with user involvement</li>
+<li><strong>Feasibility Types</strong>: Technical, Economic, Operational, Schedule, Legal</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>SDLC</strong>: Framework defining tasks at each step in software development</p>
+<p><strong>Waterfall</strong>: Sequential design process where progress flows downward through phases</p>
+<p><strong>Agile</strong>: Iterative approach delivering working software in short cycles</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; SDLC Waterfall Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node">Planning (Feasibility Study)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Analysis (Requirements Gathering)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Design (System Architecture)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Implementation (Coding & Testing)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Maintenance (Bug Fixes & Enhancements)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Government tax system uses Waterfall (fixed requirements). A startup app uses Agile (changing requirements, fast iteration).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-A-D-I-M"</strong> = Planning, Analysis, Design, Implementation, Maintenance</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>SDLC phases, Waterfall vs Agile comparison, and feasibility types are all frequently tested.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 SDLC phases: P-A-D-I-M</li>
+<li>Waterfall = sequential, Agile = iterative</li>
+<li>5 feasibility types: Technical, Economic, Operational, Schedule, Legal</li>
+</ul></div>
+</div>
+
+<!-- Unit 4 -->
+<div class="unit" id="u4">
+<h3>Unit 4: Introduction to Business Intelligence</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>BI</strong>: Technology-driven process for analyzing data and presenting actionable information</li>
+<li><strong>BI Components</strong>: Data Warehouse, Data Mining, OLAP, Reporting/Dashboards</li>
+<li><strong>BI Tools</strong>: Tableau, Power BI, QlikView, SAP BI</li>
+<li><strong>ETL Process</strong>: Extract (from sources), Transform (clean, standardize), Load (into warehouse)</li>
+<li><strong>OLAP</strong>: Online Analytical Processing - multidimensional data analysis</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>BI</strong>: Set of technologies and practices for collecting, integrating, analyzing, and presenting business data</p>
+<p><strong>Data Warehouse</strong>: Central repository of integrated data from disparate sources</p>
+<p><strong>ETL</strong>: Extract, Transform, Load process for data warehousing</p>
+<p><strong>OLAP</strong>: Technology enabling fast, interactive analysis of multidimensional data</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Data Warehouse Architecture</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node">Source 1 | Source 2 | Source 3 (Operational Data)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">ETL (Extract, Transform, Load)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Data Warehouse (Central Repository)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">OLAP | Data Mining | Reporting (BI Tools)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Walmart's data warehouse collects POS data from all stores. BI tools analyze sales patterns, identify trends, optimize inventory. OLAP lets managers drill down from national to regional to store level.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"E-T-L"</strong> = Extract, Transform, Load</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>BI components, ETL process, and Data Warehouse concepts are key exam topics.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>BI = Data Warehouse + Data Mining + OLAP + Reporting</li>
+<li>ETL = Extract, Transform, Load</li>
+<li>OLAP enables multidimensional data analysis</li>
+</ul></div>
+</div>
+
+<!-- Unit 5 -->
+<div class="unit" id="u5">
+<h3>Unit 5: Information and Decision Making</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Decision Types</strong>: Structured (routine), Semi-structured, Unstructured (non-programmable)</li>
+<li><strong>Simon's Model (I-D-C-I)</strong>: Intelligence &gt; Design &gt; Choice &gt; Implementation</li>
+<li><strong>DSS Components</strong>: Database, Model Base, Software System, User Interface</li>
+<li><strong>Expert Systems</strong>: Knowledge Base + Inference Engine + User Interface</li>
+<li><strong>Inference Engine</strong>: Forward chaining (data-driven) and Backward chaining (goal-driven)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>DSS</strong>: Interactive, flexible system supporting semi-structured and unstructured decision-making</p>
+<p><strong>Expert System</strong>: AI system simulating judgment and behavior of a human expert</p>
+<p><strong>Inference Engine</strong>: Component applying rules to facts to derive conclusions</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Medical diagnosis expert system: Patient symptoms (input) &gt; Knowledge base (medical rules) &gt; Inference engine (reasoning) &gt; Diagnosis (output).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-D-C-I"</strong> = Simon's model: Intelligence, Design, Choice, Implementation</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>Simon's decision-making model and DSS components are frequently tested. Expert system architecture is also important.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 decision types: Structured, Semi-structured, Unstructured</li>
+<li>Simon's model: Intelligence &gt; Design &gt; Choice &gt; Implementation</li>
+<li>Expert System = Knowledge Base + Inference Engine + UI</li>
+</ul></div>
+</div>
+
+<!-- Unit 6 -->
+<div class="unit" id="u6">
+<h3>Unit 6: Spreadsheet Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Functions</strong>: SUM, AVERAGE, VLOOKUP, HLOOKUP, IF, COUNTIF, SUMIF, Pivot Tables</li>
+<li><strong>Data Analysis</strong>: Sorting, Filtering, Conditional Formatting, Goal Seek, Solver</li>
+<li><strong>Visualization</strong>: Charts (bar, line, pie, scatter), Dashboards, Sparklines</li>
+<li><strong>Pivot Tables</strong>: Summarize large datasets, cross-tabulation analysis</li>
+<li><strong>What-If Analysis</strong>: Goal Seek, Scenario Manager, Data Tables</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Pivot Table</strong>: Data summarization tool that can automatically sort, count, and total data</p>
+<p><strong>VLOOKUP</strong>: Function looking for a value in the leftmost column and returning a value from a specified column</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Sales manager uses Pivot Table to summarize sales by region, product, and quarter. Uses VLOOKUP to pull customer details into order sheets.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>V = Vertical, H = Horizontal</strong> for VLOOKUP/HLOOKUP</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>Know the difference between VLOOKUP and HLOOKUP. Pivot table concepts are frequently tested.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>VLOOKUP = vertical, HLOOKUP = horizontal</li>
+<li>Pivot Tables summarize large datasets</li>
+<li>What-If Analysis: Goal Seek, Scenario Manager, Data Tables</li>
+</ul></div>
+</div>
+
+<!-- Unit 7 -->
+<div class="unit" id="u7">
+<h3>Unit 7: Organizing Data</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Data Types</strong>: Quantitative (numerical) vs Qualitative (categorical)</li>
+<li><strong>Data Scales (N-O-I-R)</strong>: Nominal, Ordinal, Interval, Ratio</li>
+<li><strong>Data Processing</strong>: Coding, Classification, Tabulation</li>
+<li><strong>Visualization</strong>: Charts, Graphs, Dashboards, Heat Maps</li>
+<li><strong>Data Quality</strong>: Accuracy, Completeness, Consistency, Timeliness, Uniqueness</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Nominal</strong>: Categories only (gender, color)</p>
+<p><strong>Ordinal</strong>: Ordered categories (ratings, rankings)</p>
+<p><strong>Interval</strong>: Equal intervals, no true zero (temperature in Celsius)</p>
+<p><strong>Ratio</strong>: Equal intervals with true zero (weight, height)</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Survey data: Gender (nominal), Satisfaction rating 1-5 (ordinal), Temperature (interval), Income in Rs (ratio).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"N-O-I-R"</strong> = Nominal, Ordinal, Interval, Ratio</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>Data scales (NOIR) and their properties are a classic exam question. Know what operations are valid for each scale.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>4 data scales: N-O-I-R (Nominal, Ordinal, Interval, Ratio)</li>
+<li>Data quality dimensions: Accuracy, Completeness, Consistency, Timeliness</li>
+<li>Processing: Coding, Classification, Tabulation</li>
+</ul></div>
+</div>
+
+<!-- Unit 8 -->
+<div class="unit" id="u8">
+<h3>Unit 8: SQL (Structured Query Language)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Relational Model</strong>: Tables (relations), Rows (tuples), Columns (attributes)</li>
+<li><strong>Keys</strong>: Primary Key (unique ID), Foreign Key (link to another table), Candidate Key, Composite Key</li>
+<li><strong>Normalization</strong>: 1NF (no repeating groups), 2NF (no partial deps), 3NF (no transitive deps)</li>
+<li><strong>DDL</strong>: CREATE, ALTER, DROP, TRUNCATE</li>
+<li><strong>DML</strong>: SELECT, INSERT, UPDATE, DELETE</li>
+<li><strong>Joins</strong>: INNER, LEFT, RIGHT, FULL</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Primary Key</strong>: Column uniquely identifying each row</p>
+<p><strong>Foreign Key</strong>: Column referencing primary key of another table</p>
+<p><strong>Normalization</strong>: Organizing data to minimize redundancy and dependency</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>E-commerce: Customers (CustomerID PK), Orders (OrderID PK, CustomerID FK), Products (ProductID PK).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"1-2-3 NF"</strong> = Repeating groups &gt; Partial dependencies &gt; Transitive dependencies</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>SQL queries (SELECT with WHERE, GROUP BY, ORDER BY, JOIN) and normalization (1NF, 2NF, 3NF) are the most tested topics.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>DDL (define) vs DML (manipulate) vs DCL (control)</li>
+<li>Normalization: 1NF &gt; 2NF &gt; 3NF</li>
+<li>4 Join types: INNER, LEFT, RIGHT, FULL</li>
+</ul></div>
+</div>
+
+<!-- Unit 9 -->
+<div class="unit" id="u9">
+<h3>Unit 9: DBMS Implementation and Future Trends</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>ACID Properties</strong>: Atomicity, Consistency, Isolation, Durability</li>
+<li><strong>Concurrency Control</strong>: Locking, Timestamping</li>
+<li><strong>Backup</strong>: Full, Incremental, Differential</li>
+<li><strong>Distributed Database</strong>: Data across multiple locations (replication vs partitioning)</li>
+<li><strong>NoSQL</strong>: Non-relational for unstructured data (MongoDB, Cassandra, Redis)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>ACID</strong>: Properties guaranteeing database transactions are processed reliably</p>
+<p><strong>NoSQL</strong>: Database not using traditional relational data model</p>
+<p><strong>Distributed Database</strong>: Data stored across multiple physical locations</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bank transfer Rs 10,000 from A to B. Atomicity ensures both debit and credit happen (or neither). Durability ensures the change persists even if system crashes.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"A-C-I-D"</strong> = Atomicity, Consistency, Isolation, Durability</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>ACID properties are a guaranteed exam question. Know each property with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>ACID = Atomicity, Consistency, Isolation, Durability</li>
+<li>NoSQL for unstructured data (MongoDB, Cassandra)</li>
+<li>Backup types: Full, Incremental, Differential</li>
+</ul></div>
+</div>
+
+<!-- Unit 10 -->
+<div class="unit" id="u10">
+<h3>Unit 10: Cloud Computing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Cloud Computing</strong>: On-demand delivery of computing resources over the internet</li>
+<li><strong>Service Models (I-P-S)</strong>: IaaS (infra), PaaS (platform), SaaS (software)</li>
+<li><strong>Deployment</strong>: Public, Private, Hybrid, Community</li>
+<li><strong>Benefits</strong>: Scalability, Cost-efficiency, Accessibility, Reliability</li>
+<li><strong>Risks</strong>: Security, Vendor lock-in, Downtime, Compliance</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>IaaS</strong>: Virtualized computing resources over internet (AWS EC2, Azure VMs)</p>
+<p><strong>PaaS</strong>: Platform for developing, running, managing apps (Google App Engine, Heroku)</p>
+<p><strong>SaaS</strong>: Software delivered on subscription (Gmail, Salesforce, Office 365)</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Cloud Service Models</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node">SaaS (Gmail, Salesforce) - Apps</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2191; Provider manages</div>
+<div class="vd-node">PaaS (Google App Engine) - Platform</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193; Customer manages</div>
+<div class="vd-node">IaaS (AWS EC2) - Infrastructure</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A startup uses AWS (IaaS) for servers, Heroku (PaaS) for app deployment, and Google Workspace (SaaS) for email and docs.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-P-S"</strong> = Infrastructure, Platform, Software (as a Service)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>IaaS vs PaaS vs SaaS comparison is the most frequently tested cloud question.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 service models: IaaS, PaaS, SaaS</li>
+<li>4 deployment models: Public, Private, Hybrid, Community</li>
+<li>Key trade-off: Control vs Convenience</li>
+</ul></div>
+</div>
+
+<!-- Unit 11 -->
+<div class="unit" id="u11">
+<h3>Unit 11: Big Data</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Big Data</strong>: Extremely large datasets beyond traditional tools</li>
+<li><strong>4 V's</strong>: Volume, Velocity, Variety, Veracity</li>
+<li><strong>Hadoop</strong>: HDFS (storage), MapReduce (processing), YARN (resource management)</li>
+<li><strong>ML Types</strong>: Supervised (labeled), Unsupervised (patterns), Reinforcement (rewards)</li>
+<li><strong>Data Lakes</strong>: Raw data in native format</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Big Data</strong>: Datasets too large/complex for traditional processing tools</p>
+<p><strong>Hadoop</strong>: Open-source framework for distributed storage and processing</p>
+<p><strong>Machine Learning</strong>: Algorithms learning patterns from data to make predictions</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Netflix: viewing history (volume), real-time streaming (velocity), text/video/ratings (variety), user behavior (veracity). ML recommends shows.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"V-V-V-V"</strong> = Volume, Velocity, Variety, Veracity (4 V's)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>4 V's of Big Data and Hadoop components are frequently tested. ML types (supervised vs unsupervised) are also common.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>4 V's: Volume, Velocity, Variety, Veracity</li>
+<li>Hadoop = HDFS + MapReduce + YARN</li>
+<li>ML: Supervised vs Unsupervised vs Reinforcement</li>
+</ul></div>
+</div>
+
+<!-- Unit 12 -->
+<div class="unit" id="u12">
+<h3>Unit 12: ERP (Enterprise Resource Planning)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>ERP</strong>: Integrated software managing core business processes in real-time</li>
+<li><strong>Components</strong>: Finance, HR, Manufacturing, Supply Chain, Sales, CRM</li>
+<li><strong>Benefits</strong>: Integration, real-time data, improved efficiency, better reporting</li>
+<li><strong>Challenges</strong>: High cost, complex implementation, resistance to change</li>
+<li><strong>Implementation</strong>: Planning &gt; Design &gt; Implementation &gt; Testing &gt; Deployment &gt; Maintenance</li>
+<li><strong>Vendors</strong>: SAP, Oracle, Microsoft Dynamics, Infor</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>ERP</strong>: Software system integrating all facets of enterprise into a single unified information system</p>
+<p><strong>BPR</strong>: Radically redesigning business processes before ERP implementation</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Manufacturing company implements SAP ERP: Finance tracks costs, HR manages payroll, Supply Chain optimizes inventory - all integrated.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"F-H-S-M-C"</strong> = Finance, HR, Supply chain, Manufacturing, CRM (ERP modules)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>ERP benefits, challenges, and implementation phases are common exam questions.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>ERP = integrated real-time business process management</li>
+<li>Modules: Finance, HR, Manufacturing, SCM, CRM</li>
+<li>Key challenge: high cost and complex implementation</li>
+</ul></div>
+</div>
+
+<!-- Unit 13 -->
+<div class="unit" id="u13">
+<h3>Unit 13: IoT, AI & VR</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>IoT</strong>: Network of physical devices connected to internet, collecting/sharing data</li>
+<li><strong>IoT Architecture (P-N-A)</strong>: Perception (sensors) &gt; Network (connectivity) &gt; Application (UI)</li>
+<li><strong>AI</strong>: Machine simulation of human intelligence (ML, Deep Learning, NLP)</li>
+<li><strong>VR</strong>: Immersive computer-generated simulation</li>
+<li><strong>AR</strong>: Overlaying digital info on real world</li>
+<li><strong>Applications</strong>: Chatbots, Recommendations, Fraud detection, Predictive maintenance</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>IoT</strong>: Network of interconnected physical devices collecting and exchanging data</p>
+<p><strong>AI</strong>: Simulation of human intelligence processes by computer systems</p>
+<p><strong>Deep Learning</strong>: Subset of ML using neural networks with many layers</p>
+<p><strong>NLP</strong>: Branch of AI helping computers understand human language</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; IoT Architecture</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node">Perception Layer (Sensors, Actuators, RFID)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Network Layer (WiFi, Bluetooth, 5G, Gateways)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node">Application Layer (Analytics, UI, Smart Services)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Smart factory: IoT sensors detect vibration patterns. AI analyzes data to predict failures (predictive maintenance). VR trains workers in simulated environment.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-N-A"</strong> = IoT architecture: Perception, Network, Application</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>IoT architecture layers and AI/ML/Deep Learning hierarchy are frequently tested.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>IoT architecture: Perception &gt; Network &gt; Application</li>
+<li>AI hierarchy: AI &gt; ML &gt; Deep Learning</li>
+<li>VR = immersive simulation, AR = digital overlay on reality</li>
+</ul></div>
+</div>
+
+<!-- Unit 14 -->
+<div class="unit" id="u14">
+<h3>Unit 14: Blockchain</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Blockchain</strong>: Decentralized, distributed, immutable digital ledger</li>
+<li><strong>Features (D-T-I-C)</strong>: Decentralization, Transparency, Immutability, Consensus</li>
+<li><strong>Consensus</strong>: Proof of Work (PoW), Proof of Stake (PoS), Delegated PoS</li>
+<li><strong>Smart Contracts</strong>: Self-executing contracts with terms in code</li>
+<li><strong>Applications</strong>: Supply chain, Digital identity, Healthcare, Voting</li>
+<li><strong>Challenges</strong>: Scalability, Energy consumption, Regulatory uncertainty</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Blockchain</strong>: Distributed ledger technology recording transactions across many computers</p>
+<p><strong>Smart Contract</strong>: Self-executing code automatically enforcing agreement terms</p>
+<p><strong>Consensus Mechanism</strong>: Method for achieving agreement among distributed processes</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Walmart uses blockchain to track food supply chain: from farm to shelf. Contamination source traced in seconds instead of days.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"D-T-I-C"</strong> = Decentralization, Transparency, Immutability, Consensus</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x2B50; Exam Tip</div><p>Blockchain features, consensus mechanisms, and smart contracts are key exam topics.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Blockchain features: D-T-I-C</li>
+<li>Consensus: PoW vs PoS</li>
+<li>Smart contracts = self-executing code on blockchain</li>
+</ul></div>
+</div>
+
+<!-- Master Mnemonics Table -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<table class="exam-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>T-M-D-E-E</strong></td><td>TPS, MIS, DSS, EIS, ESS</td><td>IS Types (bottom to top)</td></tr>
+<tr><td><strong>A-T-R-C-A</strong></td><td>Accurate, Timely, Relevant, Complete, Accessible</td><td>Information Quality</td></tr>
+<tr><td><strong>P-A-D-I-M</strong></td><td>Planning, Analysis, Design, Implementation, Maintenance</td><td>SDLC Phases</td></tr>
+<tr><td><strong>I-D-C-I</strong></td><td>Intelligence, Design, Choice, Implementation</td><td>Simon's Decision Model</td></tr>
+<tr><td><strong>E-T-L</strong></td><td>Extract, Transform, Load</td><td>Data Warehousing</td></tr>
+<tr><td><strong>N-O-I-R</strong></td><td>Nominal, Ordinal, Interval, Ratio</td><td>Data Scales</td></tr>
+<tr><td><strong>1-2-3 NF</strong></td><td>Repeating &gt; Partial &gt; Transitive</td><td>Normalization</td></tr>
+<tr><td><strong>A-C-I-D</strong></td><td>Atomicity, Consistency, Isolation, Durability</td><td>DB Transactions</td></tr>
+<tr><td><strong>I-P-S</strong></td><td>IaaS, PaaS, SaaS</td><td>Cloud Service Models</td></tr>
+<tr><td><strong>V-V-V-V</strong></td><td>Volume, Velocity, Variety, Veracity</td><td>Big Data 4 V's</td></tr>
+<tr><td><strong>P-N-A</strong></td><td>Perception, Network, Application</td><td>IoT Architecture</td></tr>
+<tr><td><strong>D-T-I-C</strong></td><td>Decentralization, Transparency, Immutability, Consensus</td><td>Blockchain Features</td></tr>
+</tbody></table>
+</div>
+
+<!-- Key Frameworks -->
+<div class="unit" id="frameworks">
+<h3>&#x1F4CA; Key Frameworks & Diagrams</h3>
+
+<div class="visual-diagram"><h5>IS Pyramid (Management Levels)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="width:40%">EIS (Strategic - Top Mgmt)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="width:55%">DSS (Tactical - Middle Mgmt)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="width:70%">MIS (Operational Control)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="width:85%">TPS (Operational - Transactions)</div>
+</div></div>
+
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">SQL vs NoSQL</h4>
+<table class="exam-table">
+<thead><tr><th>Aspect</th><th>SQL</th><th>NoSQL</th></tr></thead>
+<tbody>
+<tr><td>Structure</td><td>Relational (tables)</td><td>Document/Key-Value/Graph</td></tr>
+<tr><td>Schema</td><td>Fixed</td><td>Dynamic</td></tr>
+<tr><td>Scalability</td><td>Vertical</td><td>Horizontal</td></tr>
+<tr><td>ACID</td><td>Full support</td><td>Limited</td></tr>
+<tr><td>Examples</td><td>MySQL, PostgreSQL</td><td>MongoDB, Cassandra</td></tr>
+</tbody></table>
+
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Waterfall vs Agile</h4>
+<table class="exam-table">
+<thead><tr><th>Aspect</th><th>Waterfall</th><th>Agile</th></tr></thead>
+<tbody>
+<tr><td>Approach</td><td>Sequential</td><td>Iterative</td></tr>
+<tr><td>Flexibility</td><td>Low</td><td>High</td></tr>
+<tr><td>Documentation</td><td>Heavy</td><td>Light</td></tr>
+<tr><td>Customer Involvement</td><td>Beginning & End</td><td>Continuous</td></tr>
+<tr><td>Risk</td><td>High (late testing)</td><td>Low (early feedback)</td></tr>
+</tbody></table>
+</div>
+
+<!-- Quick Revision -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+
+<h4 style="color:#0984e3;margin-bottom:0.5rem">IS Type Comparison</h4>
+<table class="exam-table">
+<thead><tr><th>IS Type</th><th>Level</th><th>Users</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>TPS</td><td>Operational</td><td>Clerks</td><td>Record transactions</td></tr>
+<tr><td>MIS</td><td>Tactical</td><td>Managers</td><td>Generate reports</td></tr>
+<tr><td>DSS</td><td>Tactical/Senior</td><td>Analysts</td><td>Analytical decisions</td></tr>
+<tr><td>EIS/ESS</td><td>Strategic</td><td>Executives</td><td>Dashboards, trends</td></tr>
+</tbody></table>
+
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Cloud Service Model Comparison</h4>
+<table class="exam-table">
+<thead><tr><th>Model</th><th>Customer Manages</th><th>Provider Manages</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>IaaS</td><td>OS, Apps, Data</td><td>Infrastructure</td><td>AWS EC2</td></tr>
+<tr><td>PaaS</td><td>Apps, Data</td><td>Platform + Infra</td><td>Google App Engine</td></tr>
+<tr><td>SaaS</td><td>Just data</td><td>Everything else</td><td>Gmail, Salesforce</td></tr>
+</tbody></table>
+
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Normalization Summary</h4>
+<table class="exam-table">
+<thead><tr><th>Normal Form</th><th>Eliminates</th><th>Rule</th></tr></thead>
+<tbody>
+<tr><td>1NF</td><td>Repeating groups</td><td>Atomic values only</td></tr>
+<tr><td>2NF</td><td>Partial dependencies</td><td>All non-key depends on full PK</td></tr>
+<tr><td>3NF</td><td>Transitive dependencies</td><td>Non-key doesn't depend on non-key</td></tr>
+</tbody></table>
+
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Quick One-Liners</h4>
+<ul>
+<li><strong>TPS</strong> = Records daily transactions (operational level)</li>
+<li><strong>DSS</strong> = Supports semi-structured decisions with analytical tools</li>
+<li><strong>ETL</strong> = Extract, Transform, Load (data warehousing process)</li>
+<li><strong>ACID</strong> = Database reliability properties</li>
+<li><strong>IaaS/PaaS/SaaS</strong> = Three cloud service models</li>
+<li><strong>4 V's</strong> = Volume, Velocity, Variety, Veracity (Big Data)</li>
+<li><strong>IoT</strong> = Internet-connected physical devices</li>
+<li><strong>Blockchain</strong> = Decentralized, immutable digital ledger</li>
+<li><strong>Smart Contract</strong> = Self-executing code on blockchain</li>
+<li><strong>Normalization</strong> = Organizing DB to reduce redundancy</li>
+</ul>
+</div>
+
+<!-- Exam Focus -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<h4 style="color:#0984e3;margin-bottom:0.5rem">Most Frequently Asked Topics</h4>
+<ol>
+<li><strong>IS Types</strong> (TPS, MIS, DSS, EIS) with examples</li>
+<li><strong>SDLC Phases</strong> and Waterfall vs Agile comparison</li>
+<li><strong>ACID Properties</strong> of database transactions</li>
+<li><strong>Cloud Service Models</strong> (IaaS vs PaaS vs SaaS)</li>
+<li><strong>Normalization</strong> (1NF, 2NF, 3NF) with examples</li>
+<li><strong>SQL queries</strong> (SELECT, JOIN, GROUP BY)</li>
+<li><strong>Big Data 4 V's</strong> and Hadoop ecosystem</li>
+<li><strong>IoT Architecture</strong> layers</li>
+<li><strong>ERP</strong> benefits and implementation challenges</li>
+<li><strong>Blockchain</strong> features and consensus mechanisms</li>
+</ol>
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Expected Question Patterns</h4>
+<ul>
+<li>Short answer: Define, distinguish, list characteristics</li>
+<li>Long answer: Explain frameworks, compare technologies, case studies</li>
+<li>Diagram: ER diagrams, IoT architecture, SDLC phases</li>
+<li>Practical: SQL queries, normalization exercises</li>
+</ul>
+<h4 style="color:#0984e3;margin:1.5rem 0 0.5rem">Model Answer Structure</h4>
+<ul>
+<li>Comparison questions: Definition &gt; Key differences &gt; When to use &gt; Example</li>
+<li>Framework questions: Definition &gt; Components &gt; Steps &gt; Advantages &gt; Example</li>
+<li>Technology questions: What &gt; How &gt; Benefits &gt; Challenges &gt; Example</li>
+</ul>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+<script>
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="pwa-register.js"></script>
+</body>
+</html>
