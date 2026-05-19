@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-12: Strategic Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="manifest" href="manifest.json">
+<style>
+
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(9,132,227,0.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,0.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,0.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,0.12),transparent),radial-gradient(1px 1px at 10% 80%,rgba(0,210,255,0.15),transparent),radial-gradient(2px 2px at 90% 40%,rgba(255,215,0,0.2),transparent),radial-gradient(1px 1px at 50% 50%,rgba(9,132,227,0.15),transparent),radial-gradient(1.5px 1.5px at 30% 90%,rgba(0,210,255,0.2),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}
+.study-content{flex:1;padding:2rem;min-width:0}
+.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.25rem}
+.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}
+.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(9,132,227,0.15),rgba(0,210,255,0.1));border:1px solid rgba(200,200,200,0.12);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(9,132,227,0.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
+@keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:0.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:0.8}}
+.study-header h1{font-size:2rem;font-weight:800;color:#0984e3;letter-spacing:-.03em;position:relative}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
+.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#0984e3,#74b9ff);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem;border:none}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.unit.visible{opacity:1;transform:translateY(0)}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}
+h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0984e3,#74b9ff,#00d4ff,#0984e3);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.section{margin-bottom:1.25rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}
+.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}
+.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
+.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,0.12)}
+.callout-definition{background:rgba(9,132,227,.08);border-color:#0984e3}
+.callout-important{background:rgba(255,215,0,.06);border-color:#FFD700}
+.callout-important .callout-label{color:#FFD700}
+.callout-example{background:rgba(176,176,176,.06);border-color:#b0b0b0}
+.callout-mnemonic{background:linear-gradient(135deg,rgba(200,200,200,.05),rgba(0,210,255,.05));border-color:#c8c8c8}
+.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}
+.kt strong{color:#ffd700}
+.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
+.s-b{background:rgba(9,132,227,.15);color:#74b9ff;border:1px solid rgba(9,132,227,.3)}
+.fc{display:flex;flex-direction:column;align-items:center;gap:0;margin:1.5rem 0}
+.fc-s{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.25rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;min-width:280px;transition:transform .2s,background .2s}
+.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2);background:rgba(255,255,255,.05)}
+.fc-n{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0984e3,#74b9ff);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.fc-l{font-size:.9rem;color:rgba(255,255,255,.85)}.fc-l small{color:rgba(255,255,255,.5);font-size:.78rem}
+.fc-a{font-size:1.2rem;color:rgba(9,132,227,.6);margin:.15rem 0}
+.db{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.25rem;margin:1rem 0;overflow-x:auto}
+.db table{width:100%;border-collapse:collapse}
+.db th,.db td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.88rem}
+.db th{color:#ffd700;font-weight:700;background:rgba(255,255,255,.03)}.db td{color:rgba(255,255,255,.72)}
+.db tr:hover td{background:rgba(255,255,255,.02)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem;transition:color .2s}
+.back-link:hover{color:#0984e3}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(10px)}
+.skip-link{position:absolute;top:-40px;left:0;background:#0984e3;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}
+.skip-link:focus{top:0}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0984e3,#74b9ff);z-index:9999;transition:width .1s;width:0%}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(9,132,227,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#0984e3;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-section-content{display:none}.video-section-content.active{display:block}
+.summary-box{border:1px solid rgba(0,210,255,.3)!important;background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(108,99,255,.05))!important;transition:transform .3s ease,box-shadow .3s ease!important;padding:1.25rem;border-radius:12px;margin:1.25rem 0}.summary-box:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(0,210,255,.15)!important}.summary-label{font-weight:700;font-size:1rem;color:#00d4ff;margin-bottom:.6rem}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.78);margin-bottom:.4rem;line-height:1.5;font-size:.9rem}
+.visual-diagram{background:linear-gradient(135deg,rgba(78,205,196,0.08),rgba(255,107,107,0.06));border:1px solid rgba(78,205,196,0.2);border-radius:12px;padding:1.25rem;margin:1rem 0}
+.visual-diagram h5{margin-bottom:0.8rem;color:#4ecdc4;font-size:0.95rem}
+.vd-node{padding:0.6rem;border-radius:8px;font-size:0.88rem;text-align:center}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95);backdrop-filter:blur(20px)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+</style>
+</head>
+<body class="subject-mmpc12">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<nav class="sidebar" aria-label="Unit navigation">
+  <a href="study-hub.html">&#x1F3E0; Back to StudyHub</a>
+  <div class="sidebar-header"><h3>MMPC-12 Strategic Management</h3></div>
+  <a href="#u1">Unit 1: Concept of Strategy</a>
+  <a href="#u2">Unit 2: Strategic Framework</a>
+  <a href="#u3">Unit 3: Strategy in Global Context</a>
+  <a href="#u4">Unit 4: External Environment</a>
+  <a href="#u5">Unit 5: Competitive Analysis</a>
+  <a href="#u6">Unit 6: Internal Analysis</a>
+  <a href="#u7">Unit 7: Business Level Strategies</a>
+  <a href="#u8">Unit 8: Competitive Strategy</a>
+  <a href="#u9">Unit 9: Corporate Level Strategy</a>
+  <a href="#u10">Unit 10: Strategy Implementation</a>
+  <a href="#u11">Unit 11: Corporate Governance</a>
+  <a href="#u12">Unit 12: Strategic Leadership</a>
+  <a href="#u13">Unit 13: Contemporary Issues</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#exam">Exam Focus</a>
+</nav>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPC-12</span><h1>Strategic Management</h1>
+<p>4 Blocks, 13 Units &#x2022; Strategy Formulation, Environmental Analysis, Implementation &#x2022; IGNOU MBA</p></div>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3>Unit 1: Concept of Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategy &#x2014; Origin &amp; Definitions</div><p><strong>Origin:</strong> Greek word <em>Strategos</em> &#x2014; <em>Stratos</em> (army) + <em>agos</em> (to lead). Originally military, later adapted to business.</p><p><strong>Glueck:</strong> &quot;Unified, comprehensive and integrated plan relating strategic advantage to environmental challenges.&quot;</p><p><strong>Chandler (1960):</strong> &quot;Determination of basic long-term goals + adoption of courses of action + allocation of resources.&quot;</p><p><strong>Porter:</strong> &quot;Creation of a unique and valued position involving a different set of activities.&quot;</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is Strategy?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="What is Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Mintzberg's 5 Ps of Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Mintzberg 5 Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>P</th><th>Meaning</th><th>Time Focus</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td><strong>Pattern</strong></td><td>Consistent course of action</td><td>Past (realized)</td><td>Deliberate/Emergent</td></tr>
+<tr><td><strong>Plan</strong></td><td>Future course of action</td><td>Future (intended)</td><td>Intended</td></tr>
+<tr><td><strong>Position</strong></td><td>Niche market placement</td><td>External</td><td>Market-facing</td></tr>
+<tr><td><strong>Perspective</strong></td><td>Vision of organization</td><td>Internal</td><td>Cultural</td></tr>
+<tr><td><strong>Ploy</strong></td><td>Tactic to outwit competitors</td><td>Immediate</td><td>Tactical</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Basis</th><th>Strategy</th><th>Policy</th></tr></thead>
+<tbody>
+<tr><td>Nature</td><td>Plan of action</td><td>Guidelines/rules</td></tr>
+<tr><td>Flexibility</td><td>Flexible</td><td>Fixed</td></tr>
+<tr><td>Focus</td><td>Decision making</td><td>Repetitive activities</td></tr>
+<tr><td>Level</td><td>Top + Middle management</td><td>Top management</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Basis</th><th>Strategy</th><th>Tactics</th></tr></thead>
+<tbody>
+<tr><td>Scope</td><td>Organization-wide</td><td>Specific part</td></tr>
+<tr><td>Time Horizon</td><td>Long-term, flexible</td><td>Short-term, definite</td></tr>
+<tr><td>Uncertainty</td><td>High (partial ignorance)</td><td>Low</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Apple's strategy of premium differentiation with ecosystem lock-in (iPhone + Mac + iPad + Services) is a classic <em>pattern</em> strategy &#x2014; consistent over decades.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Expect questions on &quot;Explain Mintzberg's 5 Ps&quot; or &quot;Differentiate between strategy and policy.&quot; Always use a table for comparisons.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;5Ps = PaPPeP&quot;</strong> &#x2014; <strong>Pa</strong>ttern, <strong>P</strong>lan, <strong>P</strong>osition, <strong>Pe</strong>rspective, <strong>P</strong>loy</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 1 Key Summary</div><ul>
+<li>Strategy = Grand design to achieve objectives using resources</li>
+<li>Mintzberg's 5Ps: Pattern, Plan, Position, Perspective, Ploy</li>
+<li>Deliberate = planned &amp; executed; Emergent = evolved naturally</li>
+<li>Strategy vs Policy: Action-oriented vs Decision-oriented</li>
+<li>Strategy vs Tactics: Long-term org-wide vs Short-term specific</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3>Unit 2: Strategic Framework</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Intent &amp; Hierarchy</div><p><strong>Strategic Intent (Hamel &amp; Prahalad, 1989):</strong> Obsessive ambition for success, resource allocation, organizing efforts, motivating people toward goals.</p><p><strong>Hierarchy:</strong> Vision &#x2192; Mission &#x2192; Business Definition &#x2192; Objectives &#x2192; Goals</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Vision vs Mission Statement</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Vision vs Mission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Management Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Strategic Management Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Hierarchy of Strategic Intent</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:60%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Vision &#x2014; Where do we want to be?</div>
+<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.35);width:65%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Mission &#x2014; What business are we in?</div>
+<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(9,132,227,0.1);border:1px solid rgba(9,132,227,0.3);width:70%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Business Definition &#x2192; Objectives &#x2192; Goals</div>
+</div></div>
+<div class="db"><table>
+<thead><tr><th>Term</th><th>Definition</th><th>Answers</th></tr></thead>
+<tbody>
+<tr><td><strong>Vision</strong></td><td>Futuristic picture of desirable future position</td><td>&quot;Where do we want to be?&quot;</td></tr>
+<tr><td><strong>Mission</strong></td><td>Purpose of existence</td><td>&quot;What business are we in?&quot;</td></tr>
+<tr><td><strong>Objectives</strong></td><td>Specific, measurable targets</td><td>Derived from mission</td></tr>
+<tr><td><strong>Goals</strong></td><td>Broader, less specific aspirations</td><td>Overarching direction</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon's vision: &quot;To be Earth's most customer-centric company&quot; &#x2014; drives every strategic decision from e-commerce to cloud (AWS) to streaming.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;VMODE&quot;</strong> &#x2014; <strong>V</strong>ision &#x2192; <strong>M</strong>ission &#x2192; <strong>O</strong>bjectives &#x2192; <strong>D</strong>efinition &#x2192; <strong>E</strong>valuation</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 2 Key Summary</div><ul>
+<li>Strategic Management Process: Intent &#x2192; Analysis &#x2192; Formulation &#x2192; Implementation &#x2192; Evaluation</li>
+<li>Vision = Where we want to be | Mission = Why we exist</li>
+<li>Substantive = what strategy; Procedural = how to implement</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3>Unit 3: Strategy in Global Context</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; PESTLE &amp; EPRG Framework</div><p><strong>PESTLE:</strong> Political, Economic, Social, Technological, Legal, Environmental.</p><p><strong>EPRG (Perlmutter):</strong> Ethnocentric (home), Polycentric (host), Regiocentric (region), Geocentric (global).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PESTLE Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="PESTLE Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>International Entry Modes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Entry Modes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Entry Modes (Low to High Commitment)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);width:80%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Exporting &#x2192; Licensing &#x2192; Franchising &#x2192; Joint Venture &#x2192; FDI &#x2192; Strategic Alliance</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>McDonald's uses <strong>franchising</strong> globally with <strong>polycentric</strong> adaptation (McAloo Tikki in India, Teriyaki Burger in Japan).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;PESTLE + EPRG&quot;</strong> &#x2014; <strong>P</strong>olitical-<strong>E</strong>conomic-<strong>S</strong>ocial-<strong>T</strong>echnological-<strong>L</strong>egal-<strong>E</strong>nvironmental + <strong>E</strong>thno-<strong>P</strong>oly-<strong>R</strong>egio-<strong>G</strong>eocentric</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 3 Key Summary</div><ul>
+<li>PESTLE = 6 macro-environment factors</li>
+<li>EPRG = 4 orientations for international operations</li>
+<li>Entry modes: Export &#x2192; Licensing &#x2192; Franchise &#x2192; JV &#x2192; FDI &#x2192; Alliance</li>
+</ul></div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3>Unit 4: External Environment Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; External Environment</div><p><strong>7 Dimensions:</strong> Demographic, Economic, Political/Legal, Sociocultural, Technological, Global, Physical.</p><p><strong>I/O Model:</strong> External environment determines strategy <em>more than</em> internal resources. Industry structure &gt; firm resources.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>External Environment Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="External Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>I/O vs RBV Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="I/O vs RBV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>COVID-19 pandemic was an external <em>environmental shock</em> that forced companies to restructure strategies (remote work, e-commerce acceleration).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;DEPSTG-GP&quot;</strong> &#x2014; <strong>D</strong>emographic-<strong>E</strong>conomic-<strong>P</strong>olitical-<strong>S</strong>ociocultural-<strong>T</strong>echnological-<strong>G</strong>lobal-<strong>G</strong>eographic-<strong>P</strong>hysical</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 4 Key Summary</div><ul>
+<li>7 dimensions of general environment</li>
+<li>I/O Model = outside-in (environment &gt; resources)</li>
+<li>RBV = inside-out (resources &gt; environment)</li>
+<li>EFE Matrix = weighted rating of external factors</li>
+</ul></div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3>Unit 5: Competitive Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Porter's Five Forces</div><p><strong>5 Forces:</strong> Threat of New Entrants, Bargaining Power of Suppliers, Bargaining Power of Buyers, Threat of Substitutes, Competitive Rivalry.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Porter's Five Forces</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Porter Five Forces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competitive Profile Matrix</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="CPM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Porter's Five Forces Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of New Entrants</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Supplier Power</div>
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);text-align:center;padding:0.7rem;border-radius:8px;font-size:0.9rem;font-weight:700">INDUSTRY RIVALRY</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Buyer Power</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2191;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of Substitutes</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian telecom &#x2014; Jio's entry (2016) changed all five forces: high rivalry (price war), new entrant with deep pockets, substitute for traditional voice (VoIP), buyer power increased (cheap plans), supplier power decreased (tower sharing).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;NSBRS&quot;</strong> &#x2014; <strong>N</strong>ew entrants-<strong>S</strong>uppliers-<strong>B</strong>uyers-<strong>R</strong>ivalry-<strong>S</strong>ubstitutes</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 5 Key Summary</div><ul>
+<li>Porter's 5 Forces: New entrants, Suppliers, Buyers, Rivalry, Substitutes</li>
+<li>Entry barriers: Scale, brand, capital, switching costs, regulation</li>
+<li>Strategic Groups = clusters of firms with similar strategies</li>
+<li>CPM = weighted comparison of critical success factors</li>
+</ul></div>
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3>Unit 6: Internal Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; RBV &amp; VRIN Framework</div><p><strong>Resource-Based View (RBV):</strong> Internal resources and capabilities drive competitive advantage. <em>Inside-out perspective.</em></p><p><strong>VRIN (Barney):</strong> Resources must be <strong>V</strong>aluable, <strong>R</strong>are, <strong>I</strong>nimitable, <strong>N</strong>on-substitutable.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resource-Based View</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="RBV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Value Chain Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Value Chain" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Value Chain (Porter)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);width:90%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.8rem">Support: Firm Infra | HR | Tech Dev | Procurement</div>
+<div style="font-size:1rem;color:rgba(255,215,0,0.5)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);width:90%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Inbound &#x2192; Operations &#x2192; Outbound &#x2192; M&amp;S &#x2192; Service</div>
+<div style="font-size:1rem;color:rgba(0,184,148,0.5)">&#x2192; MARGIN</div>
+</div></div>
+<div class="db"><table>
+<thead><tr><th>Resource Type</th><th>Examples</th><th>Nature</th></tr></thead>
+<tbody>
+<tr><td>Tangible</td><td>Property, equipment, IT, cash</td><td>Physical, measurable</td></tr>
+<tr><td>Intangible</td><td>Brand, patents, culture</td><td>Non-physical, valuable</td></tr>
+<tr><td>Capabilities</td><td>Skills to use assets</td><td>Developed over time</td></tr>
+<tr><td>Core Competencies</td><td>Unique strengths (VRIN)</td><td>Competitive advantage</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Group's core competency = trust and brand reputation built over 150+ years. VRIN? Valuable (customer trust), Rare (few brands have this depth), Inimitable (can't replicate history), Non-substitutable (no shortcut to trust).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;VRIN-SWOT&quot;</strong> &#x2014; <strong>V</strong>aluable-<strong>R</strong>are-<strong>I</strong>nimitable-<strong>N</strong>on-substitutable + <strong>S</strong>trengths-<strong>W</strong>eaknesses-<strong>O</strong>pportunities-<strong>T</strong>hreats</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 6 Key Summary</div><ul>
+<li>RBV = inside-out perspective (resources drive advantage)</li>
+<li>VRIN = Valuable, Rare, Inimitable, Non-substitutable</li>
+<li>Value Chain = Primary + Support activities &#x2192; Margin</li>
+<li>SWOT = internal (S/W) + external (O/T) analysis</li>
+</ul></div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3>Unit 7: Business Level Strategies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Porter's Three Generic Strategies</div><p><strong>Cost Leadership:</strong> Become lowest-cost producer. <strong>Differentiation:</strong> Offer unique products. <strong>Focus:</strong> Serve specific niche (cost focus or differentiation focus).</p><p><strong>&quot;Stuck in the Middle&quot;:</strong> Failing to achieve ANY generic strategy = poor performance.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Porter's Generic Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Generic Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost Leadership vs Differentiation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Cost vs Differentiation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Generic Strategies Matrix</h5>
+<div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
+<div></div><div style="text-align:center;font-weight:700;color:#74b9ff">Low Cost</div><div style="text-align:center;font-weight:700;color:#74b9ff">Differentiation</div>
+<div style="font-weight:700;color:#ffd700">Broad</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;text-align:center">Cost Leadership<br><small>Walmart, Jio</small></div>
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);padding:0.5rem;border-radius:8px;text-align:center">Differentiation<br><small>Apple, BMW</small></div>
+<div style="font-weight:700;color:#ffd700">Narrow</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.5rem;border-radius:8px;text-align:center">Cost Focus<br><small>Dollar stores</small></div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;text-align:center">Focus Differentiation<br><small>Rolex, Tesla</small></div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Air India (pre-Tata) was &quot;stuck in the middle&quot; &#x2014; neither cost leader (high costs) nor differentiated (poor service). IndiGo chose cost leadership; Vistara chose differentiation.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;CDF&quot;</strong> &#x2014; <strong>C</strong>ost leadership-<strong>D</strong>ifferentiation-<strong>F</strong>ocus</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 7 Key Summary</div><ul>
+<li>3 Generic Strategies: Cost Leadership, Differentiation, Focus</li>
+<li>&quot;Stuck in the Middle&quot; = poor performance</li>
+<li>SBU = each business unit treated as independent</li>
+</ul></div>
+</div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3>Unit 8: Competitive Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competitor Analysis Framework</div><p><strong>5-Point Framework:</strong> Future Objectives &#x2192; Current Strategy &#x2192; Assumptions &#x2192; Capabilities &#x2192; Response Profile.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competitive Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Competitive Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Mover Type</th><th>Advantage</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>First Mover</strong></td><td>Brand recognition, market share, learning curve</td><td>Amazon (e-commerce)</td></tr>
+<tr><td><strong>Second Mover</strong></td><td>Learn from first mover's mistakes, fast follower</td><td>Google (search)</td></tr>
+<tr><td><strong>Late Mover</strong></td><td>Established market, niche focus</td><td>Jio (telecom)</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Flipkart was India's first major e-commerce mover; Amazon entered as second mover with deeper pockets and global expertise.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;FCARC&quot;</strong> &#x2014; <strong>F</strong>uture-<strong>C</strong>urrent-<strong>A</strong>ssumptions-<strong>R</strong>esponse-<strong>C</strong>apabilities</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 8 Key Summary</div><ul>
+<li>Competitor Analysis: Future, Current, Assumptions, Response, Capabilities</li>
+<li>First/Second/Late Mover advantages differ</li>
+<li>Industry types: Fragmented, Emerging, Declining, Mature</li>
+</ul></div>
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3>Unit 9: Corporate Level Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Corporate Strategy</div><p><strong>Question:</strong> &quot;What businesses should we be in?&quot;</p><p><strong>4 Strategies:</strong> Growth, Stability, Retrenchment, Combination.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>BCG Matrix Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="BCG Matrix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ansoff Matrix</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Ansoff Matrix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; BCG Matrix</h5>
+<div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
+<div></div><div style="text-align:center;font-weight:700;color:#74b9ff">High Market Share</div><div style="text-align:center;font-weight:700;color:#74b9ff">Low Market Share</div>
+<div style="font-weight:700;color:#ffd700">High Growth</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;text-align:center">STARS *<br><small>Invest heavily</small></div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.5rem;border-radius:8px;text-align:center">QUESTION MARKS ?<br><small>Invest or Divest</small></div>
+<div style="font-weight:700;color:#ffd700">Low Growth</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;text-align:center">CASH COWS $<br><small>Milk for profits</small></div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;text-align:center">DOGS x<br><small>Divest/Liquidate</small></div>
+</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Ansoff Matrix</h5>
+<div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
+<div></div><div style="text-align:center;font-weight:700;color:#74b9ff">Existing Products</div><div style="text-align:center;font-weight:700;color:#74b9ff">New Products</div>
+<div style="font-weight:700;color:#ffd700">Existing Markets</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;text-align:center">Market Penetration<br><small>Coca-Cola increasing ads</small></div>
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);padding:0.5rem;border-radius:8px;text-align:center">Product Development<br><small>Apple Watch</small></div>
+<div style="font-weight:700;color:#ffd700">New Markets</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.5rem;border-radius:8px;text-align:center">Market Development<br><small>Starbucks entering India</small></div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;text-align:center">Diversification<br><small>Tata Steel &#x2192; Tata Tea</small></div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Reliance Industries uses combination strategy &#x2014; Growth in Jio/Retail, Stability in petrochemicals, Retrenchment in legacy textile business.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;GSR-BCG-AND&quot;</strong> &#x2014; <strong>G</strong>rowth-<strong>S</strong>tability-<strong>R</strong>etrenchment + <strong>B</strong>CG Matrix + <strong>A</strong>nsoff Matrix + <strong>N</strong>ew markets + <strong>D</strong>iversification</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 9 Key Summary</div><ul>
+<li>BCG Matrix: Stars, Cash Cows, Question Marks, Dogs</li>
+<li>Ansoff Matrix: Market Penetration, Product Dev, Market Dev, Diversification</li>
+<li>Growth: Concentration, Integration, Diversification</li>
+<li>Vertical Integration: Forward (toward customer), Backward (toward supplier)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3>Unit 10: Strategy Implementation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; McKinsey 7S Framework</div><p><strong>7S = SSSS-SSS:</strong> Strategy, Structure, Systems (Hard) + Style, Staff, Skills, Shared Values (Soft).</p><p><strong>Implementation = Action.</strong> Strategy without implementation is just a wish.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>McKinsey 7S Framework</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="McKinsey 7S" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; McKinsey 7S Framework</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem;font-weight:700">Strategy</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Structure</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Systems</div>
+</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;font-size:0.85rem">Style</div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;font-size:0.85rem">Staff</div>
+</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;font-size:0.85rem">Skills</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.9rem;font-weight:700">Shared Values</div>
+</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>When Satya Nadella became Microsoft CEO, he used McKinsey 7S: New Strategy (cloud-first), new Style (growth mindset), new Skills (AI/Cloud), while keeping Structure mostly intact.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;7S = SSSS-SSS&quot;</strong> &#x2014; <strong>S</strong>trategy-<strong>S</strong>tructure-<strong>S</strong>ystems + <strong>S</strong>tyle-<strong>S</strong>taff-<strong>S</strong>kills + <strong>S</strong>hared Values</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 10 Key Summary</div><ul>
+<li>McKinsey 7S: 3 Hard + 4 Soft elements</li>
+<li>Structure types: Functional, Divisional, Matrix, Network</li>
+<li>Resource allocation must align with strategy</li>
+</ul></div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3>Unit 11: Corporate Governance</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Corporate Governance</div><p><strong>Definition (Cadbury, 1992):</strong> System by which organizations are directed and controlled.</p><p><strong>5 Pillars:</strong> Accountability, Fairness, Transparency, Integrity, Social Responsibility.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; 5 Pillars of Corporate Governance</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem">Accountability</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Fairness</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Transparency</div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;font-size:0.85rem">Integrity</div>
+</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem">Social Responsibility</div>
+</div></div>
+<div class="db"><table>
+<thead><tr><th>Model</th><th>Countries</th><th>Key Feature</th></tr></thead>
+<tbody>
+<tr><td>Anglo-American</td><td>UK, US, Canada</td><td>Shareholder focus</td></tr>
+<tr><td>German</td><td>Germany</td><td>Dual board, bank financing</td></tr>
+<tr><td>Japanese</td><td>Japan</td><td>Cross-shareholding</td></tr>
+<tr><td>Indian</td><td>India</td><td>Mixed, mandatory independent directors</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Satyam scandal (2009) &#x2014; India's Enron &#x2014; led to strengthening of corporate governance norms: mandatory audit committees, independent directors.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;AFTIS&quot;</strong> &#x2014; <strong>A</strong>ccountability-<strong>F</strong>airness-<strong>T</strong>ransparency-<strong>I</strong>ntegrity-<strong>S</strong>ocial Responsibility</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 11 Key Summary</div><ul>
+<li>Corporate Governance = system of direction &amp; control</li>
+<li>5 Pillars: AFTIS</li>
+<li>SOX Act 2002 = response to Enron/WorldCom</li>
+<li>Governance models: Anglo-American, German, Japanese, Indian</li>
+</ul></div>
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3>Unit 12: Strategic Leadership</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Leadership</div><p><strong>Definition:</strong> Ability to anticipate, envision, maintain flexibility, empower others to create strategic change.</p><p><strong>Key Roles:</strong> Navigator, Strategist, Entrepreneur, Talent Developer.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Leadership</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Strategic Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Carroll's CSR Pyramid</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:40%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Philanthropic</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);width:55%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Ethical</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);width:70%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Legal</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:85%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Economic (be profitable)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Ratan Tata exemplifies strategic leadership &#x2014; visionary (Nano car for masses), talent developer (professionalized Tata Group), philanthropist (66% of Tata Sons owned by trusts).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;NETP-CESP&quot;</strong> &#x2014; <strong>N</strong>avigator-<strong>E</strong>ntrepreneur-<strong>T</strong>alent-<strong>P</strong>hilanthropic + <strong>C</strong>orporate-<strong>E</strong>thics-<strong>S</strong>trategy-<strong>P</strong>erformance</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 12 Key Summary</div><ul>
+<li>Strategic Leadership = anticipate, envision, empower</li>
+<li>Roles: Navigator, Strategist, Entrepreneur, Talent Developer</li>
+<li>Carroll's CSR Pyramid: Economic &#x2192; Legal &#x2192; Ethical &#x2192; Philanthropic</li>
+</ul></div>
+</div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3>Unit 13: Contemporary Issues in Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Emerging Trends</div><p><strong>Digital Strategy:</strong> E-commerce, platform businesses, data-driven decisions.</p><p><strong>Sustainability:</strong> Triple Bottom Line &#x2014; People, Planet, Profit.</p><p><strong>Disruptive Innovation (Christensen):</strong> New entrants disrupt incumbents with simpler, cheaper solutions.</p><p><strong>Blue Ocean (Kim &amp; Mauborgne):</strong> Create uncontested market space.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Blue Ocean Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Blue Ocean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Disruptive Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Disruptive Innovation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Trend</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Digital Strategy</strong></td><td>E-commerce, platforms, AI</td><td>Amazon, Flipkart</td></tr>
+<tr><td><strong>Sustainability</strong></td><td>People, Planet, Profit</td><td>ITC, Unilever</td></tr>
+<tr><td><strong>Disruptive Innovation</strong></td><td>Simple, cheaper solutions</td><td>Jio in telecom</td></tr>
+<tr><td><strong>Blue Ocean</strong></td><td>Uncontested market space</td><td>Cirque du Soleil</td></tr>
+<tr><td><strong>M&amp;A</strong></td><td>Horizontal, Vertical, Conglomerate</td><td>Walmart-Flipkart</td></tr>
+<tr><td><strong>Dynamic Capabilities</strong></td><td>Integrate, build, reconfigure</td><td>Tesla</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Jio disrupted Indian telecom (disruptive innovation), created blue ocean (free data = new market space), used M&amp;A (acquired content platforms), and built dynamic capabilities (4G &#x2192; 5G transition).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;DSIA-AMKD&quot;</strong> &#x2014; <strong>D</strong>igital-<strong>S</strong>ustainability-<strong>I</strong>nnovation-<strong>A</strong>gile + <strong>M</strong>ergers-<strong>A</strong>lliances-<strong>K</strong>nowledge-<strong>D</strong>ynamic</p></div>
+<div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 13 Key Summary</div><ul>
+<li>Digital, Sustainability, Innovation, Agile = key trends</li>
+<li>Blue Ocean = create new market space</li>
+<li>M&amp;A types: Horizontal, Vertical, Conglomerate</li>
+<li>Dynamic Capabilities = adapt to changing environment</li>
+</ul></div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>PaPPeP</strong></td><td>Pattern, Plan, Position, Perspective, Ploy</td><td>Mintzberg's 5 Ps</td></tr>
+<tr><td><strong>VMODE</strong></td><td>Vision, Mission, Objectives, Definition, Evaluation</td><td>Strategic Intent</td></tr>
+<tr><td><strong>PESTLE+EPRG</strong></td><td>Political-Economic-Social-Technological-Legal-Environmental + Ethno-Poly-Regio-Geocentric</td><td>Global Strategy</td></tr>
+<tr><td><strong>DEPSTG-GP</strong></td><td>Demographic-Economic-Political-Sociocultural-Technological-Global-Geographic-Physical</td><td>External Environment</td></tr>
+<tr><td><strong>NSBRS</strong></td><td>New entrants, Suppliers, Buyers, Rivalry, Substitutes</td><td>Porter's Five Forces</td></tr>
+<tr><td><strong>VRIN-SWOT</strong></td><td>Valuable-Rare-Inimitable-Non-substitutable + Strengths-Weaknesses-Opportunities-Threats</td><td>Internal Analysis</td></tr>
+<tr><td><strong>CDF</strong></td><td>Cost leadership, Differentiation, Focus</td><td>Generic Strategies</td></tr>
+<tr><td><strong>FCARC</strong></td><td>Future, Current, Assumptions, Response, Capabilities</td><td>Competitor Analysis</td></tr>
+<tr><td><strong>GSR-BCG-AND</strong></td><td>Growth-Stability-Retrenchment + BCG + Ansoff + New + Diversification</td><td>Corporate Strategy</td></tr>
+<tr><td><strong>SSSS-SSS</strong></td><td>Strategy-Structure-Systems + Style-Staff-Skills + Shared Values</td><td>McKinsey 7S</td></tr>
+<tr><td><strong>AFTIS</strong></td><td>Accountability-Fairness-Transparency-Integrity-Social Responsibility</td><td>Corporate Governance</td></tr>
+<tr><td><strong>NETP-CESP</strong></td><td>Navigator-Entrepreneur-Talent-Philanthropic + Corporate-Ethics-Strategy-Performance</td><td>Strategic Leadership</td></tr>
+<tr><td><strong>DSIA-AMKD</strong></td><td>Digital-Sustainability-Innovation-Agile + Mergers-Alliances-Knowledge-Dynamic</td><td>Contemporary Issues</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Top 10 Most Asked Topics</div>
+<ol>
+<li>Mintzberg's 5 Ps of Strategy &#x2014; Define &amp; explain with examples</li>
+<li>Porter's Five Forces &#x2014; Draw diagram, explain each force</li>
+<li>BCG Matrix &#x2014; Draw matrix, explain each quadrant</li>
+<li>Ansoff Matrix &#x2014; Draw matrix, explain growth strategies</li>
+<li>McKinsey 7S &#x2014; Draw diagram, hard vs soft elements</li>
+<li>Porter's Generic Strategies &#x2014; Cost leadership vs Differentiation vs Focus</li>
+<li>SWOT Analysis &#x2014; Apply to a specific company</li>
+<li>Value Chain &#x2014; Primary and support activities</li>
+<li>Corporate Governance &#x2014; 5 pillars, SOX Act</li>
+<li>Balanced Scorecard &#x2014; 4 perspectives</li>
+</ol></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Model Answer Structure</div>
+<ol>
+<li><strong>Introduction</strong> &#x2014; Define the concept (2-3 lines)</li>
+<li><strong>Diagram/Framework</strong> &#x2014; Draw the model (mandatory for frameworks)</li>
+<li><strong>Explanation</strong> &#x2014; Each component with examples</li>
+<li><strong>Real-World Application</strong> &#x2014; Indian company example</li>
+<li><strong>Limitations</strong> &#x2014; Brief critique</li>
+<li><strong>Conclusion</strong> &#x2014; Summary (2-3 lines)</li>
+</ol></div>
+</div>
+
+</main>
+<script src="api-utils.js"></script>
+<script>
+
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll(".unit").forEach(function(el){observer.observe(el)});
+window.addEventListener("scroll",function(){
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  var p=h>0?(window.scrollY/h)*100:0;
+  document.getElementById("readingProgress").style.width=p+"%";
+  var units=document.querySelectorAll(".unit");
+  var links=document.querySelectorAll(".sidebar a[href^="#u]");
+  var current="";
+  units.forEach(function(u){if(u.getBoundingClientRect().top<200)current=u.id});
+  links.forEach(function(l){l.classList.toggle("active",l.getAttribute("href")==="#"+current)});
+});
+
+</script>
+<script src="pwa-register.js"></script>
+</body>
+</html>
