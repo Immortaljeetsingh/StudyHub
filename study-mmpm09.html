@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPM-09: Retail Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="manifest" href="manifest.json">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(108,92,231,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#6c5ce7;padding-left:1rem}.sidebar a.active{color:#6c5ce7;background:rgba(108,92,231,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(108,92,231,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#6c5ce7;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#6c5ce7,#6c5ce7cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#6c5ce7,#6c5ce7cc,#00d4ff,#6c5ce7);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#6c5ce7;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(108,92,231,.15);color:#6c5ce7cc;border:1px solid rgba(108,92,231,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#6c5ce7}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#6c5ce7;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#6c5ce7,#6c5ce7cc);z-index:9999;transition:width .1s;width:0%}.action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}.btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}.btn-primary{background:rgba(108,92,231,.2);color:#a29bfe;border:1px solid rgba(108,92,231,.3)}.btn-primary:hover{background:rgba(108,92,231,.3)}.btn-success{background:rgba(0,184,148,.2);color:#55efc4;border:1px solid rgba(0,184,148,.3)}.btn-success:hover{background:rgba(0,184,148,.3)}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.summary-box h4{color:#ffd700;font-size:.95rem;margin-bottom:.5rem}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+</style>
+</head>
+<body class="subject-mmpm09">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<nav class="sidebar">
+  <a href="study-hub.html">&#x1F3E0; Back</a>
+  <div class="sidebar-header"><h3>MMPM-09</h3></div>
+  <a href="#u1">Unit 1: Overview of Retail Sector</a>
+  <a href="#u2">Unit 2: Concepts of Retailing</a>
+  <a href="#u3">Unit 3: Retail Environment</a>
+  <a href="#u4">Unit 4: Strategic Retail Planning</a>
+  <a href="#u5">Unit 5: Models of Retailing</a>
+  <a href="#u6">Unit 6: Ownership Formats</a>
+  <a href="#u7">Unit 7: Store & Non-Store Formats</a>
+  <a href="#u8">Unit 8: Location Strategy</a>
+  <a href="#u9">Unit 9: Product Mix & Merchandise</a>
+  <a href="#u10">Unit 10: Pricing Strategy</a>
+  <a href="#u11">Unit 11: Communication Mix</a>
+  <a href="#u12">Unit 12: Physical Evidence</a>
+  <a href="#u13">Unit 13: Store Operations</a>
+  <a href="#u14">Unit 14: Sourcing & Inventory</a>
+  <a href="#u15">Unit 15: Managing People</a>
+  <a href="#u16">Unit 16: CRM</a>
+</nav>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPM-09</span><h1>Retail Management</h1>
+<p>Comprehensive Study Notes &#x2014; 16 Units &#x2022; IGNOU MBA</p></div>
+
+<!-- Unit 1 -->
+<div class="unit" id="u1">
+<h3>Unit 1: An Overview of Retail Sector</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Retailing</strong> = sale of goods/services to end customer for personal consumption. Retailers break bulk from manufacturers into small quantities. India's retail = 8-10% of GDP, 2nd largest employer after agriculture. Unorganized sector = 88% (12 million+ small retailers). <strong>Brick and Click</strong> = combining physical stores with online presence for omnichannel.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Indian Retail Market Facts</h5>
+<table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.8);font-size:.88rem"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Market Size</td><td>~$1.2 trillion</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Unorganized Share</td><td>88%</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">GDP Contribution</td><td>8-10%</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Employment Rank</td><td>2nd after agriculture</td></tr><tr><td style="padding:.4rem;font-weight:600">Average Consumer Age</td><td>27 years</td></tr></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Modern players: Reliance Retail, DMart, Shoppers Stop, Trent (Tata). Foreign: IKEA, H&amp;M, Zara. Growth drivers: Young demographics (avg age 27), credit friendliness, working women, low organized penetration, technology adoption.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>YCWO-TECT</strong>: Young, Credit, Working women, Organized penetration, Tech, Entry of corporates, Consumerism, Tier 2/3 expansion</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Retailing = final leg of distribution to end consumer</li>
+<li>88% unorganized, $1.2T market, 8-10% of GDP</li>
+<li>DMart success = EDLP + owned real estate + efficient supply chain</li>
+</ul></div>
+</div>
+
+<!-- Unit 2 -->
+<div class="unit" id="u2">
+<h3>Unit 2: Concepts of Retailing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Wheel of Retailing:</strong> New formats enter as low-price, low-margin, low-status &#8594; upgrade over time &#8594; become vulnerable to new low-price entrants. <strong>Merchandising</strong> = product assortment planning + visual displays. <strong>Planograms</strong> = shelf space allocation diagrams.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Store Layout Types &#x2014; GFLH</h5>
+<table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.8);font-size:.88rem"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Grid</td><td>Parallel aisles, structured flow &#8594; Supermarkets</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Free-flow</td><td>No fixed aisles, open space &#8594; Boutiques</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Loop (Racetrack)</td><td>Guided path through store &#8594; Malls</td></tr><tr><td style="padding:.4rem;font-weight:600">Herringbone</td><td>Main aisle with angled sides &#8594; Electronics</td></tr></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>IKEA's loop layout guides customers through entire store, maximizing exposure. Private labels: DMart, Reliance, BigBasket &#8212; higher margins (25-30% vs 15-20% for national brands).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>GFLH</strong>: Grid, Free-flow, Loop, Herringbone &#8212; 4 store layout types</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Wheel of Retailing: low entry &#8594; upgrade &#8594; vulnerable</li>
+<li>Store layouts: GFLH (Grid, Free-flow, Loop, Herringbone)</li>
+<li>Supply chain tools: ECR, QR, VMI, Cross-docking</li>
+</ul></div>
+</div>
+
+<!-- Unit 3 -->
+<div class="unit" id="u3">
+<h3>Unit 3: Retail Environment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Shrinkage</strong> = inventory loss from theft, damage, or errors. India's rate: 2.38% (~INR 3,470 crores). Shoplifting = 47.6%, Staff theft = 25.5%. <strong>Greentailing</strong> = environmentally friendly retailing.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Shrinkage Prevention &#x2014; STAFF</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Surveillance (CCTV)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Technology (RFID, EAS)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Audits + Fingerprinting + Friendly staff</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Security types &#x2014; GPBC: General liability, Property, Business interruption, Cyber liability. Big Bazaar's "Green Day" promotes reusable bags.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>STAFF</strong>: Surveillance, Technology, Audits, Fingerprinting, Friendly staff</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Shrinkage: 2.38% in India, shoplifting = 47.6%</li>
+<li>Security types: GPBC (General, Property, Business, Cyber)</li>
+<li>Greentailing: eco-friendly practices as competitive advantage</li>
+</ul></div>
+</div>
+
+<!-- Unit 4 -->
+<div class="unit" id="u4">
+<h3>Unit 4: Strategic Retail Planning Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>5 steps: (1) Define business mission, (2) Conduct SWOT, (3) Set objectives, (4) Develop strategy, (5) Implement and control. Indian retail evolved: Pre-1990s kirana &#8594; 1990s organized &#8594; 2010s e-commerce &#8594; 2020s omnichannel.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Reliance Retail's strategy: enter with Jio ecosystem &#8594; acquire brands (Hamleys, Netmeds) &#8594; build omnichannel with JioMart.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 planning steps: Mission &#8594; SWOT &#8594; Objectives &#8594; Strategy &#8594; Implement</li>
+<li>Indian evolution: kirana &#8594; organized &#8594; e-commerce &#8594; omnichannel</li>
+</ul></div>
+</div>
+
+<!-- Unit 5 -->
+<div class="unit" id="u5">
+<h3>Unit 5: Models of Retailing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>7 models: Department Store (Shoppers Stop), Supermarket (DMart), Hypermarket (Reliance Smart), Specialty (Tanishq), Convenience (24Seven), Discount (DMart), Warehouse Club (Costco).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>DMart = Discount Store model with EDLP + owned properties = cost advantage.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Compare on 4 criteria: size, assortment, pricing, target customer</li>
+<li>DMart = discount model, Shoppers Stop = department, Costco = warehouse</li>
+</ul></div>
+</div>
+
+<!-- Unit 6 -->
+<div class="unit" id="u6">
+<h3>Unit 6: Based on Ownership</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>5 formats: Independent (kirana), Chain (DMart), Franchise (McDonald's), Leased Department, Cooperative (Amul). Franchise types: Product/Trade Name, Business Format.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Amul cooperative: 3.6M milk producers &#8594; village cooperatives &#8594; district unions &#8594; GCMMF &#8594; national distribution.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Franchise vs chain = shared control+high scalability vs full control+high investment</li>
+<li>Amul = world's largest cooperative model</li>
+</ul></div>
+</div>
+
+<!-- Unit 7 -->
+<div class="unit" id="u7">
+<h3>Unit 7: Store and Non-Store Based Retail Formats</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Non-store formats growing faster. Omnichannel integrates both. Store: Malls, standalone, pop-up, outlet, flagship. Non-store: E-commerce, direct selling, vending, TV shopping, mobile, catalog.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Non-Store Formats &#x2014; ED-VTMC</h5>
+<table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.8);font-size:.88rem"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">E-commerce</td><td>Amazon, Flipkart</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Direct Selling</td><td>Amway, Tupperware</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Vending Machines</td><td>Coffee, snacks</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">TV Shopping</td><td>Naaptol</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">Mobile Commerce</td><td>Myntra, Nykaa</td></tr><tr><td style="padding:.4rem;font-weight:600">Catalog Retailing</td><td>Pepperfry</td></tr></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Tata's omnichannel: TataCliq (online) + Westside/Croma (offline) + BigBasket (grocery).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ED-VTMC</strong>: E-commerce, Direct, Vending, TV, Mobile, Catalog</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Non-store growing faster due to convenience, tech, urbanization</li>
+<li>Omnichannel = seamless integration of online + offline</li>
+</ul></div>
+</div>
+
+<!-- Unit 8 -->
+<div class="unit" id="u8">
+<h3>Unit 8: Retail Location Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Location = MOST important retail decision. Types: Free-standing, Shopping Center, CBD, Neighborhood. Trading areas: Primary (60-70%), Secondary (20-30%), Tertiary (remaining).</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Location Factors &#x2014; TACTICAL</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Traffic + Accessibility + Competition</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Trade area + Investment + Cost</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Appearance + Legal</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Starbucks selects locations using data analytics &#8212; foot traffic, office density, income levels. Huff's Gravity Model: Attraction = Floor Space / Distance&#178;.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TACTICAL</strong>: Traffic, Access, Competition, Trade area, Investment, Cost, Appearance, Legal</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Location is highest cost, lowest flexibility decision</li>
+<li>Huff's Model: Attraction = Floor Space / Distance&#178;</li>
+<li>Trading areas: Primary 60-70%, Secondary 20-30%, Tertiary rest</li>
+</ul></div>
+</div>
+
+<!-- Unit 9 -->
+<div class="unit" id="u9">
+<h3>Unit 9: Product Mix and Merchandise Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Width</strong> = number of product lines. <strong>Depth</strong> = varieties within each line. <strong>Private labels</strong> = store brands with higher margins (25-30%). <strong>OTB</strong> = Planned Sales + Markdowns + End Inventory &#8722; Begin Inventory.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>DMart's private label "D Mart" products are 10-20% cheaper than national brands with comparable quality.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Width vs depth: number of lines vs varieties per line</li>
+<li>Private labels growing in India: DMart, Reliance, BigBasket</li>
+</ul></div>
+</div>
+
+<!-- Unit 10 -->
+<div class="unit" id="u10">
+<h3>Unit 10: Retail Pricing Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>7 strategies: EDLP, High-Low, Psychological (&#8377;999), Bundle, Penetration, Skimming, Loss Leader. <strong>EDLP</strong> = consistently low (DMart). <strong>HLP</strong> = regular high, promotional low (department stores).</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; EDLP vs HLP</h5>
+<table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.8);font-size:.88rem"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">EDLP</td><td>Stable prices, builds trust, lower marketing cost, Walmart/DMart</td></tr><tr><td style="padding:.4rem;font-weight:600">HLP</td><td>Frequent promotions, creates excitement, higher cost, Shoppers Stop</td></tr></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>DMart's EDLP: no sales, no coupons &#8212; just consistently low prices. Reduces marketing costs and builds customer trust.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>EDLP vs HLP is a guaranteed exam question</li>
+<li>Give pros/cons of each with Indian examples</li>
+</ul></div>
+</div>
+
+<!-- Unit 11 -->
+<div class="unit" id="u11">
+<h3>Unit 11: Retail Communication Mix Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>7 tools &#x2014; <strong>APPS-VLD</strong>: Advertising, Public Relations, Personal Selling, Sales Promotion, Visual Merchandising, Loyalty Programs, Direct Marketing. Loyalty types: Points-based, Tier-based, Paid membership.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Shoppers Stop "First Citizen": tier-based loyalty with exclusive discounts, early access, birthday rewards.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>APPS-VLD</strong>: Advertising, PR, Personal Selling, Sales Promo, Visual, Loyalty, Direct</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>7 communication tools: APPS-VLD</li>
+<li>Loyalty programs: points, tier, paid membership</li>
+</ul></div>
+</div>
+
+<!-- Unit 12 -->
+<div class="unit" id="u12">
+<h3>Unit 12: Physical Evidence</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Store atmospherics influence mood, time spent, and spending. <strong>VAOT</strong>: Visual (lighting, colors), Auditory (music), Olfactory (scents), Tactile (texture, temperature).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Apple Stores: minimalist design, open tables, Genius Bar &#8212; every element reinforces brand identity.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>VAOT</strong>: Visual, Auditory, Olfactory, Tactile &#8212; 4 store atmospherics</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Physical evidence = tangible cues shaping customer experience</li>
+<li>VAOT: 4 senses that influence purchasing decisions</li>
+</ul></div>
+</div>
+
+<!-- Unit 13 -->
+<div class="unit" id="u13">
+<h3>Unit 13: Managing Store Operations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>7 components: Opening/Closing, Cash, Inventory, Customer service, Housekeeping, Staff scheduling, Loss prevention. <strong>Decompression zone</strong> = first 5-15 feet where customers adjust.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Key Formula</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">GMROI = Gross Margin / Avg Inventory Cost</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Profit generated per rupee invested in inventory</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Costco places essentials (milk, eggs) at the back &#8212; forcing customers to walk past high-margin items.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>GMROI formula is a common numerical question</li>
+<li>Store design: decompression zone, power wall, speed bumps, destination categories</li>
+</ul></div>
+</div>
+
+<!-- Unit 14 -->
+<div class="unit" id="u14">
+<h3>Unit 14: Sourcing and Inventory Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>EOQ = &#8730;(2DS/H)</strong> where D=demand, S=ordering cost, H=holding cost. Inventory Turnover = COGS/Avg Inventory. Days of Inventory = 365/Turnover. JIT = minimal inventory, frequent replenishment.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Inventory Methods</h5>
+<table style="width:100%;border-collapse:collapse;color:rgba(255,255,255,.8);font-size:.88rem"><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">JIT</td><td>Minimal inventory, frequent replenishment</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">EOQ</td><td>Optimal order size balancing costs</td></tr><tr style="border-bottom:1px solid rgba(255,255,255,.1)"><td style="padding:.4rem;font-weight:600">ABC Analysis</td><td>A=high value, B=medium, C=low</td></tr><tr><td style="padding:.4rem;font-weight:600">Safety Stock</td><td>Buffer against demand uncertainty</td></tr></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Zara's fast fashion = JIT + vertical integration = new designs every 2 weeks with minimal unsold inventory.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>EOQ = &#8730;(2DS/H), Inventory Turnover = COGS/Avg Inventory</li>
+<li>Zara = JIT + vertical integration = fast fashion leader</li>
+</ul></div>
+</div>
+
+<!-- Unit 15 -->
+<div class="unit" id="u15">
+<h3>Unit 15: Managing People and Processes</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Retail has 60-70% annual employee turnover. SOPs ensure consistency. Employee cycle: Recruit &#8594; Train &#8594; Evaluate &#8594; Compensate &#8594; Develop careers.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>McDonald's Hamburger University trains franchise operators on every aspect of store operations &#8212; ensuring global consistency.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>High turnover (60-70%) is major retail challenge</li>
+<li>SOPs: opening/closing, customer handling, inventory, cash, emergency</li>
+</ul></div>
+</div>
+
+<!-- Unit 16 -->
+<div class="unit" id="u16">
+<h3>Unit 16: Customer Relationship Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU16">&#x1F4AC; Ask AI</button></div>
+<div id="sU16" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>CLV = Avg Purchase &#215; Frequency &#215; Lifespan</strong>. <strong>NPS = % Promoters &#8722; % Detractors</strong>. CRM components &#x2014; CDPLS: Collect, Data analysis, Personalize, Loyalty, Service recovery.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; NPS Scale</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Promoters (9-10): Loyal enthusiasts</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Passives (7-8): Satisfied but vulnerable</div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Detractors (0-6): Unhappy, damage brand</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Amazon Prime: subscription loyalty that increases purchase frequency by 4x and doubles CLV vs non-Prime members.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CDPLS</strong>: Collect, Data analysis, Personalize, Loyalty, Service recovery</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>CLV = Avg Purchase &#215; Frequency &#215; Lifespan</li>
+<li>NPS = % Promoters &#8722; % Detractors</li>
+<li>Retention is 5-7x cheaper than acquisition</li>
+</ul></div>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+<script>
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="pwa-register.js"></script>
+</body>
+</html>
