@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPH-07: Compensation and Rewards Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="manifest" href="manifest.json">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#d63031cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc,#00d4ff,#d63031);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#d63031;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(214,48,49,.15);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#d63031}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+.action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}
+.btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-primary{background:rgba(214,48,49,.2);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}
+.btn-primary:hover{background:rgba(214,48,49,.3)}
+.btn-success{background:rgba(0,184,148,.2);color:#55efc4;border:1px solid rgba(0,184,148,.3)}
+.btn-success:hover{background:rgba(0,184,148,.3)}
+.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}
+.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}
+.summary-box h4{color:#ffd700;font-size:.95rem;margin-bottom:.5rem}
+.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}
+.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}
+.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}
+.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}
+.vd-node{transition:transform .2s}
+.vd-node:hover{transform:scale(1.03)}
+</style>
+</head>
+<body class="subject-mmph07">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<nav class="sidebar">
+  <a href="study-hub.html">&#x1F3E0; Back</a>
+  <div class="sidebar-header"><h3>MMPH-07</h3></div>
+  <a href="#u1">Unit 1: Compensation & Rewards</a>
+  <a href="#u2">Unit 2: Compensation Policy Frameworks</a>
+  <a href="#u3">Unit 3: Economic & Behavioural Issues</a>
+  <a href="#u4">Unit 4: International Trends</a>
+  <a href="#u5">Unit 5: Wage Determination</a>
+  <a href="#u6">Unit 6: Legal Framework</a>
+  <a href="#u7">Unit 7: Job Evaluation</a>
+  <a href="#u8">Unit 8: Pay Structure</a>
+  <a href="#u9">Unit 9: External Equity & Surveys</a>
+  <a href="#u10">Unit 10: Institutional Mechanisms</a>
+  <a href="#u11">Unit 11: Reward Systems</a>
+  <a href="#u12">Unit 12: Incentive Schemes</a>
+  <a href="#u13">Unit 13: Allowances & Benefits</a>
+  <a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
+  <a href="#revision">&#x26A1; Quick Revision</a>
+  <a href="#exam">&#x1F3AF; Exam Focus</a>
+</nav>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPH-07</span><h1>Compensation and Rewards Management</h1>
+<p>Comprehensive Study Notes &#x2014; 13 Units &#x2022; IGNOU MBA</p></div>
+
+<!-- BLOCK 1: COMPENSATION AND REWARDS - AN OVERVIEW -->
+
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Compensation and Rewards Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div><p><strong>Compensation</strong> = all forms of financial returns and tangible services/benefits employees receive as part of employment relationship. Functionally viewed as: (a) system of rewards that motivates performance, (b) tool to foster values/culture/behaviour, (c) instrument to achieve business goals.</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Compensation Components</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>COMPENSATION</strong></div>
+<div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem">
+<div style="flex:1;min-width:200px">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;margin-bottom:0.3rem"><strong>Direct (Financial)</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem;margin-bottom:0.2rem">Basic Pay, DA, Overtime</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem">Incentive, Bonus, Commission</div>
+</div>
+<div style="flex:1;min-width:200px">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;margin-bottom:0.3rem"><strong>Indirect (Benefits)</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem;margin-bottom:0.2rem">PF, Pension, Gratuity, ESI</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem">Medical, Housing, Insurance</div>
+</div>
+</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Direct Compensation:</strong> Financial remuneration in cash - basic pay, DA, overtime, incentives, bonus, commissions.</p>
+<p><strong>Indirect Compensation (Fringe Benefits):</strong> Benefits beyond cash - PF, pension, medical insurance, sick leave, housing.</p>
+<p><strong>Cafeteria Plan:</strong> Employees choose benefit package from a list of available options, matching individual needs.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>In Indian companies, identical basic wages across stations can lead to highly disparate total wages due to DA variations - this is why periodic DA merger with basic pay is recommended.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DOS-PIF</strong> = Direct comp = <strong>D</strong>A, <strong>O</strong>vertime, <strong>S</strong>hift allowance | Indirect = <strong>P</strong>F, <strong>I</strong>nsurance, <strong>F</strong>ringe benefits</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the distinction between direct and indirect compensation and why fringe benefits have grown (tax advantages, retention, legal requirements).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Compensation = Direct (cash) + Indirect (benefits)</li>
+<li>Direct: Basic pay, DA, overtime, incentives, bonus, commissions</li>
+<li>Indirect: PF, pension, medical insurance, housing, ESI</li>
+<li>Role: Attract, retain, motivate, develop skills, foster culture</li>
+<li>DA compensates for inflation, linked to AICPI</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Frameworks of Compensation Policy and Reward System</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Total Rewards Framework (WorldatWork)</div>
+<p><strong>6 Elements:</strong> Compensation (base + variable), Benefits, Work-Life Balance, Performance & Recognition, Career Development, Talent Management.</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Total Rewards Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>TOTAL REWARDS</strong></div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Compensation</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Benefits</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Work-Life</div>
+</div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Performance</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Career</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Talent</div>
+</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Theories</div>
+<p><strong>Equity Theory (Adams):</strong> Employees compare their Input-Outcome ratio with others. Perceived inequity leads to motivation problems. 3 types: Internal, External, Individual equity.</p>
+<p><strong>Expectancy Theory (Vroom):</strong> Motivation = Expectancy &times; Instrumentality &times; Valence. E = "My effort leads to performance", I = "Performance leads to reward", V = "How much I value the reward".</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Pay Strategies</div>
+<p><strong>Lead:</strong> Pay above market - attract top talent, low unemployment.</p>
+<p><strong>Lag:</strong> Pay below market - cost-cutting, high unemployment.</p>
+<p><strong>Match:</strong> Pay at market - standard approach, stable workforce.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CBWPCT</strong> = Total Rewards: <strong>C</strong>ompensation, <strong>B</strong>enefits, <strong>W</strong>ork-life, <strong>P</strong>erformance, <strong>C</strong>areer, <strong>T</strong>alent</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Expect questions comparing Equity Theory vs Expectancy Theory - know both frameworks and their application to compensation design.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Total Rewards has 6 elements: CBWPCT</li>
+<li>Equity Theory: employees compare input-outcome ratios</li>
+<li>Expectancy Theory: M = E &times; I &times; V</li>
+<li>3 pay strategies: Lead, Lag, Match (LLM)</li>
+<li>Google uses Lead strategy; startups use Lag + equity</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Economic and Behavioural Issues</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Economic Theories</div>
+<p><strong>Marginal Productivity Theory:</strong> Wages = marginal revenue product of labour.</p>
+<p><strong>Human Capital Theory (Becker):</strong> Investment in education/training increases productivity and justifies higher wages.</p>
+<p><strong>Efficiency Wage Theory:</strong> Paying above market increases productivity (reduces turnover, improves morale).</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Maslow's Hierarchy &amp; Compensation</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.25);border:1px solid rgba(214,48,49,0.5);width:40%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">5. Self-Actualization (Career Development)</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">4. Esteem (Recognition Awards)</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.15);border:1px solid rgba(214,48,49,0.3);width:60%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">3. Social (Team Incentives)</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.1);border:1px solid rgba(214,48,49,0.25);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">2. Safety (Benefits, Insurance)</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.08);border:1px solid rgba(214,48,49,0.2);width:80%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">1. Physiological (Basic Salary)</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Herzberg's Two-Factor Theory</div>
+<p><strong>Hygiene Factors (Prevent Dissatisfaction):</strong> Salary, job security, working conditions, company policy, supervision quality.</p>
+<p><strong>Motivators (Create Satisfaction):</strong> Achievement, recognition, growth, responsibility, advancement, work itself.</p>
+<p>A salary increase prevents dissatisfaction but doesn't create lasting motivation - recognition and growth drive sustained engagement.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PSSES</strong> = Maslow: <strong>P</strong>hysiological, <strong>S</strong>afety, <strong>S</strong>ocial, <strong>E</strong>steem, <strong>S</strong>elf-actualization</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Human Capital Theory: investment in education justifies higher wages</li>
+<li>Efficiency Wage: above-market pay increases productivity</li>
+<li>Maslow maps to compensation: Basic pay, Benefits, Team incentives, Recognition, Career</li>
+<li>Herzberg: Salary is hygiene, not motivator</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: International Trends</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expatriate Compensation</div>
+<p><strong>Balance Sheet Approach:</strong> Maintain home country living standard abroad - most common for MNCs.</p>
+<p><strong>Going Rate Approach:</strong> Pay host country market rates - simpler but may cause repatriation issues.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Modern Trends</div>
+<ul>
+<li><strong>Pay for Performance:</strong> Linking pay to results</li>
+<li><strong>Broad Banding:</strong> Replacing multiple grades with fewer, wider bands</li>
+<li><strong>Competency-Based Pay:</strong> Pay for skills/competencies, not just job title</li>
+<li><strong>Skill-Based Pay:</strong> Pay for acquired skills</li>
+<li><strong>Flexible Benefits (Cafeteria Plans):</strong> Employee choice from benefit menu</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the difference between Balance Sheet and Going Rate approaches - frequently tested.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Balance Sheet: maintain home standard abroad</li>
+<li>Going Rate: pay host country rates</li>
+<li>Trends: pay for performance, broad banding, competency-based pay, cafeteria plans</li>
+<li>MNCs hiring host-country managers to reduce expatriate costs</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 2: LEGAL FRAMEWORKS -->
+
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Bases of Wage Determination</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 5 Factors Influencing Wages</div>
+<ul>
+<li><strong>Economic:</strong> Market forces, competing employers, cost of living, productivity</li>
+<li><strong>Sociological:</strong> Social status, equity for men/women</li>
+<li><strong>Political:</strong> Trade union bargaining, government intervention</li>
+<li><strong>Psychological:</strong> Motivation, job satisfaction</li>
+<li><strong>Ethical:</strong> Fair wages, living wages</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Wage Hierarchy</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:50%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Living Wage</strong> (reasonable comfort)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2191;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);width:60%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Fair Wage</strong> (between min and living)</div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,0.6)">&#x2191;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:70%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Minimum Wage</strong> (bare minimum)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>In India, the 7th Pay Commission recommended minimum pay of Rs. 18,000 for government employees.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 factors: Economic, Sociological, Political, Psychological, Ethical</li>
+<li>Hierarchy: Minimum Wage &lt; Fair Wage &lt; Living Wage</li>
+<li>DA compensates for inflation, linked to CPI</li>
+<li>Trade union bargaining power affects wage negotiations</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Legal Framework</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Indian Labour Laws</div>
+<p><strong>Minimum Wages Act 1948:</strong> Fixes minimum wage rates.</p>
+<p><strong>Payment of Wages Act 1936:</strong> Timely payment, regulates deductions.</p>
+<p><strong>Equal Remuneration Act 1976:</strong> Equal pay for equal work (regardless of gender).</p>
+<p><strong>Payment of Bonus Act 1965:</strong> Statutory bonus for eligible employees.</p>
+<p><strong>Code on Wages 2019:</strong> Consolidates all 4 wage laws into one code.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Statutory Deductions</div>
+<ul>
+<li><strong>PF:</strong> 12% of basic + DA (both employer &amp; employee)</li>
+<li><strong>ESI:</strong> 0.75% employee + 3.25% employer (salary &lt; Rs. 21,000)</li>
+<li><strong>Professional Tax:</strong> State-specific</li>
+<li><strong>Income Tax (TDS):</strong> As per tax slab</li>
+</ul></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MW-PW-ER-PB</strong> = <strong>M</strong>inimum Wages, <strong>P</strong>ayment of Wages, <strong>E</strong>qual Remuneration, <strong>P</strong>ayment of <strong>B</strong>onus</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the 4 key acts consolidated under Code on Wages 2019 and their individual purposes.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 key acts: Minimum Wages, Payment of Wages, Equal Remuneration, Payment of Bonus, Code on Wages 2019</li>
+<li>PF: 12% basic + DA from both sides</li>
+<li>ESI: 0.75% employee + 3.25% employer</li>
+<li>Code on Wages 2019 consolidates 4 existing laws</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 3: COMPENSATION MANAGEMENT -->
+
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Job Evaluation and Internal Equity</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Job Evaluation:</strong> Systematic method to determine the relative worth of jobs within an organization, establishing rational pay differentials.</p>
+<p><strong>Internal Equity:</strong> Fair pay relationships within the organization - "Right Pay for the Right Job".</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Job Evaluation Methods</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>JOB EVALUATION</strong></div>
+<div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem;width:100%">
+<div style="flex:1;min-width:200px">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Qualitative</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem;margin-bottom:0.2rem;text-align:center">1. Ranking (simplest)</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem;text-align:center">2. Classification (predefined grades)</div>
+</div>
+<div style="flex:1;min-width:200px">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Quantitative</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem;margin-bottom:0.2rem;text-align:center">3. Point Rating (most popular)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.4rem;border-radius:6px;font-size:0.8rem;text-align:center">4. Factor Comparison (monetary values)</div>
+</div>
+</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Method Comparison</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Ranking</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Sort jobs by overall complexity. Simple, quick but subjective.</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Classification</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Match jobs to predefined grades. Easy to understand but rigid.</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Point Rating</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Assign points to 5-8 factors with degrees. Most popular method.</td></tr>
+<tr><td style="padding:0.4rem;color:#d63031;font-weight:600">Factor Comparison</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Compare jobs factor by factor with monetary values. Detailed but time-consuming.</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Point Rating is the most widely used method in medium-to-large organizations because it provides systematic, defensible pay differentials.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>RCPF</strong> = <strong>R</strong>anking, <strong>C</strong>lassification, <strong>P</strong>oint Rating, <strong>F</strong>actor Comparison</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know all 4 methods with advantages/disadvantages. Point Rating is the most frequently asked method.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Job Evaluation determines relative worth of JOBS, not people</li>
+<li>4 methods: RCPF - Ranking, Classification, Point Rating, Factor Comparison</li>
+<li>Point Rating is most popular in medium-to-large organizations</li>
+<li>Non-quantitative: Ranking, Classification</li>
+<li>Quantitative: Point Rating, Factor Comparison</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Pay Structure</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p><strong>Pay Structure:</strong> Hierarchy of jobs with corresponding pay ranges, establishing internal equity. Components: Pay Grades, Pay Ranges (Min-Midpoint-Max), Range Overlap, Broad Banding.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Broad Banding vs Traditional Grading</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Traditional</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Broad Banding</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Levels</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Many (10-20+)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Few (4-6)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Range</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Narrow</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Very wide</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Flexibility</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Low</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">High</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IT companies use broad banding to allow technical specialists to earn as much as managers without forcing them into management tracks.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 steps: Job evaluation, Grade grouping, Pay range, Price structure, Implement</li>
+<li>Broad banding: fewer, wider bands replacing multiple grades</li>
+<li>Range overlap allows career flexibility</li>
+<li>IT companies favor broad banding for technical tracks</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: External Equity and Pay Surveys</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
+<p><strong>External Equity:</strong> Ensuring pay competitiveness with the external market.</p>
+<p><strong>Pay Survey:</strong> Systematic collection of compensation data from other organizations.</p>
+<p><strong>Market Pricing:</strong> Setting pay based on survey data - organizations choose percentile positioning (25th = lag, 50th = match, 75th = lead).</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Survey Analysis Methods</div>
+<ul>
+<li><strong>Mean:</strong> Average pay</li>
+<li><strong>Median:</strong> Middle value (most reliable - less affected by outliers)</li>
+<li><strong>Percentiles:</strong> 25th, 50th, 75th positions</li>
+<li><strong>Regression Analysis:</strong> Predicting pay based on job size</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know why median is preferred over mean in pay surveys (less affected by outliers).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>External equity maintained through pay surveys</li>
+<li>Median preferred over mean (less affected by outliers)</li>
+<li>Market pricing: 25th = lag, 50th = match, 75th = lead</li>
+<li>Types: Industry-specific, regional, job-specific surveys</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Institutional Mechanisms for Compensation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Institutional Mechanisms</div>
+<p><strong>Pay Commission:</strong> Government employees. Example: 7th Pay Commission (2016) - Min Rs. 18,000, 2.57x fitment factor.</p>
+<p><strong>Wage Boards:</strong> Industry-specific. Example: Newspaper Wage Board, Sugar Wage Board.</p>
+<p><strong>Industrial Tribunals:</strong> Wage dispute adjudication.</p>
+<p><strong>Collective Bargaining:</strong> Unionised sectors - negotiated wages between union and management.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The 7th Central Pay Commission (2016) recommended 2.57x fitment factor for revision of pay for central government employees.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the difference between Pay Commission (government) and Wage Boards (industry-specific).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Pay Commission: government employees</li>
+<li>Wage Boards: industry-specific</li>
+<li>Industrial Tribunals: dispute adjudication</li>
+<li>Collective Bargaining: unionised sectors</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 4: REWARDS MANAGEMENT -->
+
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Reward Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Rewards</div>
+<p><strong>Intrinsic (Non-financial):</strong> Recognition, Autonomy, Growth opportunities.</p>
+<p><strong>Extrinsic (Financial):</strong> Pay, Bonuses, Benefits.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Reward Components</div>
+<ul>
+<li><strong>Basic Wage:</strong> Fixed pay based on job evaluation</li>
+<li><strong>Dearness Allowance (DA):</strong> Compensates for price rise, linked to CPI</li>
+<li><strong>Other Allowances:</strong> HRA, Transport, Medical</li>
+<li><strong>Fringe Benefits:</strong> Insurance, PF, leave, housing</li>
+</ul>
+<p>DA influenced by: union policies, wage board awards, labour court decisions, government policy. Periodic merger with basic pay recommended.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>DA calculation methods and CPI linkage is a frequently tested topic.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Intrinsic: recognition, autonomy, growth</li>
+<li>Extrinsic: pay, bonuses, benefits</li>
+<li>DA linked to CPI, periodic merger recommended</li>
+<li>Design: align with goals, ensure fairness, balance fixed/variable</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Incentive Schemes</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="visual-diagram"><h5>&#x1F4CA; 3 Levels of Incentives</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;width:100%">
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Individual</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Piece-rate</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Commission</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Bonus</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">Merit Pay</div>
+</div>
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Group</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Gainsharing</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Profit-sharing</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">ESOPs</div>
+</div>
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Executive</strong></div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Stock Options</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Performance Shares</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">Golden Parachutes</div>
+</div>
+</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Gainsharing:</strong> Sharing productivity gains with employees who contributed to improvements.</p>
+<p><strong>ESOPs:</strong> Employees get right to buy company shares at predetermined price.</p>
+<p><strong>Golden Parachute:</strong> Generous severance for executives in case of termination after merger/acquisition.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian IT companies widely use ESOPs to retain skilled employees - Infosys ESOPs created many employee millionaires.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PCBM</strong> = Individual Incentives: <strong>P</strong>iece-rate, <strong>C</strong>ommission, <strong>B</strong>onus, <strong>M</strong>erit pay</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Differentiate between Gainsharing (productivity-based) and Profit-sharing (profit-based).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 levels: Individual, Group, Executive</li>
+<li>Individual: PCBM (Piece-rate, Commission, Bonus, Merit)</li>
+<li>Group: Gainsharing, Profit-sharing, ESOPs</li>
+<li>Executive: Stock options, Performance shares, Golden parachutes</li>
+<li>Individual = measurable output; Group = collaborative work</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Allowances, Perquisites and Benefits</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 3 Categories</div>
+<ul>
+<li><strong>Allowances:</strong> DA, HRA, Transport, Medical, Education, Special Allowance</li>
+<li><strong>Perquisites/Perks:</strong> Company car, Housing, Club membership, Stock options, Paid holidays</li>
+<li><strong>Fringe Benefits:</strong> PF, ESI, Gratuity, Leave encashment, Group insurance, Retirement benefits</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Statutory Benefits</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">PF</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">12% basic + DA (both employer &amp; employee). Retirement savings.</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">ESI</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">0.75% employee + 3.25% employer. Medical insurance (salary &lt; Rs. 21,000).</td></tr>
+<tr><td style="padding:0.4rem;color:#d63031;font-weight:600">Gratuity</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Employer only (15 days salary per year). After 5 years continuous service.</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cafeteria Approach</div>
+<p>Employees choose benefits from a menu of options. Simplest form: reimbursement account (tax-free). Growing trend with computerized benefit management.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Under Section 10(10) of Income Tax Act, gratuity up to Rs. 20 lakhs is tax-free for government employees.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the statutory contribution rates for PF and ESI - common numerical questions.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Allowances: DA, HRA, Transport, Medical</li>
+<li>Perks: Car, Housing, Club, Stock options</li>
+<li>PF: 12% basic + DA from both sides</li>
+<li>ESI: 0.75% + 3.25% (salary &lt; Rs. 21,000)</li>
+<li>Gratuity: 15 days/year after 5 years</li>
+<li>Cafeteria plan: employees choose benefits from menu</li>
+</ul></div>
+</div>
+
+<!-- MASTER MNEMONICS -->
+<div class="unit" id="mnemonics">
+<h3 id="mnemonics-h">&#x1F9E0; Master Mnemonics Table</h3>
+<div class="callout callout-mnemonic">
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#00d4ff;font-weight:700">Mnemonic</td><td style="padding:0.4rem;color:#00d4ff;font-weight:700">Full Form</td><td style="padding:0.4rem;color:#00d4ff;font-weight:700">Used For</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">LLM</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Lead, Lag, Match</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay strategies</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">CBWPCT</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Compensation, Benefits, Work-Life, Performance, Career, Talent</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Total Rewards Framework</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">PSSES</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Physiological, Safety, Social, Esteem, Self-actualization</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Maslow's Hierarchy</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">RCPF</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Ranking, Classification, Point Rating, Factor Comparison</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Job Evaluation methods</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">PCBM</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Piece-rate, Commission, Bonus, Merit</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Individual Incentives</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">MW-PW-ER-PB</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Minimum Wages, Payment of Wages, Equal Remuneration, Payment of Bonus</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Key Wage Laws</td></tr>
+<tr><td style="padding:0.4rem;color:#55efc4;font-weight:600">EIV</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Expectancy &times; Instrumentality &times; Valence</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Vroom's Motivation</td></tr>
+</table>
+</div>
+</div>
+
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3 id="revision-h">&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Formulas</div>
+<ul>
+<li><strong>Motivation (Vroom):</strong> M = E &times; I &times; V</li>
+<li><strong>Equity Ratio:</strong> Outcomes(self)/Inputs(self) vs Outcomes(other)/Inputs(other)</li>
+<li><strong>PF Contribution:</strong> 12% of (Basic + DA)</li>
+<li><strong>Gratuity:</strong> (Last salary &times; 15 &times; Years of service) / 26</li>
+<li><strong>DA Merger:</strong> When DA exceeds 50% of basic, typically merged into basic</li>
+</ul></div>
+<div class="summary-box"><h4>&#x2705; One-Liner Revision</h4><ul>
+<li>Compensation = Direct (cash) + Indirect (benefits)</li>
+<li>Total Rewards has 6 elements: CBWPCT</li>
+<li>Equity Theory: employees compare input-outcome ratios</li>
+<li>Expectancy Theory: E &times; I &times; V = Motivation</li>
+<li>3 pay strategies: Lead, Lag, Match (LLM)</li>
+<li>4 JE methods: RCPF - Ranking, Classification, Point Rating, Factor Comparison</li>
+<li>Point Rating is the most popular JE method</li>
+<li>Median preferred over mean in pay surveys</li>
+<li>Intrinsic: recognition, autonomy, growth</li>
+<li>Extrinsic: pay, bonuses, benefits</li>
+<li>Individual incentives: PCBM</li>
+<li>Group incentives: Gainsharing, Profit-sharing, ESOPs</li>
+<li>PF: 12% basic + DA from both sides</li>
+<li>ESI: 0.75% employee + 3.25% employer</li>
+<li>Gratuity: 15 days/year after 5 years</li>
+<li>Cafeteria plan: employees choose benefits from menu</li>
+</ul></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3 id="exam-h">&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Top 10 Most Asked Topics</div>
+<ol>
+<li>Direct vs Indirect Compensation - definitions, examples</li>
+<li>Total Rewards Framework - 6 elements, WorldatWork model</li>
+<li>Equity Theory vs Expectancy Theory - comparison, application</li>
+<li>Job Evaluation Methods - all 4 methods with pros/cons</li>
+<li>Point Rating Method - detailed steps, factor-degree-point examples</li>
+<li>Indian Wage Laws - 4 key acts, Code on Wages 2019</li>
+<li>Individual vs Group Incentives - types, examples</li>
+<li>Pay Commission - 7th Pay Commission recommendations</li>
+<li>Cafeteria Approach - concept and benefits</li>
+<li>PF/ESI/Gratuity - contribution rates, eligibility</li>
+</ol></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expected Question Patterns</div>
+<ul>
+<li>"Explain the Total Rewards Framework with examples"</li>
+<li>"Compare Equity Theory and Expectancy Theory in compensation design"</li>
+<li>"Describe the 4 methods of Job Evaluation with merits and limitations"</li>
+<li>"Discuss the legal framework for wage determination in India"</li>
+<li>"Explain individual and group incentive schemes with examples"</li>
+</ul></div>
+<div class="summary-box"><h4>&#x2705; Model Answer Structure</h4><ul>
+<li>1. <strong>Define</strong> the concept clearly</li>
+<li>2. <strong>Explain</strong> with framework/theory</li>
+<li>3. <strong>Give examples</strong> (Indian context preferred)</li>
+<li>4. <strong>Compare</strong> with alternatives</li>
+<li>5. <strong>Conclude</strong> with practical implications</li>
+</ul></div>
+</div>
+
+</main>
+</div>
+<script src="api-utils.js"></script>
+<script>
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="pwa-register.js"></script>
+</body>
+</html>
