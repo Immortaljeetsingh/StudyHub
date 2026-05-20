@@ -24,8 +24,14 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 .video-section-content.active { display: block; }
 
 /* --- Scroll Animations --- */
-.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
-.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+.animate-on-scroll { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-on-scroll.visible {
+  animation: fadeSlideIn 0.7s ease-out forwards;
+}
 /* --- Block Heading --- */
 h2[id^="block"] { letter-spacing: -0.02em; position: relative; padding-bottom: 0.5rem; margin-top: 2rem; font-size: 1.6rem; font-weight: 700; color: #fdcb6e; }
 h2[id^="block"]::after { content: ''; position: absolute; bottom: 0; left: 0; width: 120px; height: 3px; background: linear-gradient(90deg, #fdcb6e, #fdcb6ecc); border-radius: 2px; }

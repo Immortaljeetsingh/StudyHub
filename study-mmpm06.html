@@ -68,20 +68,19 @@ body::after {
 
 .animate-on-scroll {
 
-  opacity: 0;
-
-  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
 
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 
 }
 
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .animate-on-scroll.visible {
-
-  opacity: 1;
-
-  transform: translateY(0);
-
+  animation: fadeSlideIn 0.7s ease-out forwards;
 }
 
 /* --- Section Heading Gradient Underline --- */

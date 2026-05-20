@@ -271,8 +271,8 @@
         .stat-card:hover {
             transform: translateY(-6px) scale(1.02);
             border-color: rgba(200,200,200, 0.3);
-            background: rgba(255, 255, 255, 0.07);
-            box-shadow: 0 20px 60px rgba(200,200,200,0.15), 0 0 40px rgba(200,200,200,0.06);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 0 40px rgba(200,200,200,0.1);
         }
         .stat-card:hover::before { opacity: 1; }
         .stat-card h4 {
@@ -537,17 +537,17 @@
             margin: 2rem 0;
         }
         .subject-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(24px) saturate(180%);
             -webkit-backdrop-filter: blur(24px) saturate(180%);
             border-radius: 22px;
             padding: 2.25rem;
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             cursor: pointer;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
             min-height: 220px;
             display: flex;
             flex-direction: column;
@@ -574,14 +574,14 @@
         .subject-card:hover {
             transform: translateY(-8px) scale(1.02);
             border-color: rgba(0,0,0,0.12);
-            background: rgba(255, 255, 255, 0.07);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.3), 0 0 50px rgba(200,200,200,0.08);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.1), 0 0 50px rgba(200,200,200,0.12);
         }
         .subject-card:hover::before { opacity: 1; }
         .subject-card:hover::after { opacity: 1; }
-        .subject-card:focus-visible { outline: 2px solid #c8c8c8; outline-offset: 3px; border-radius: 20px; }
+        .subject-card:focus-visible { outline: 2px solid #2d3748; outline-offset: 3px; border-radius: 20px; }
         .subject-card h3 {
-            color: #c8c8c8;
+            color: #2d3748;
             margin-bottom: 0.5rem;
             font-size: 1.35rem;
             font-weight: 800;
@@ -595,8 +595,53 @@
             transition: color 0.3s;
             line-height: 1.6;
         }
-        .subject-card:hover h3 { filter: brightness(1.3); }
+        .subject-card:hover h3 { color: #1a202c; }
         .subject-card:hover p { color: rgba(0,0,0,0.7); }
+
+        /* Fix inline-styled light-gray colors on cards for default light background */
+        .subject-card h4[style*="color:#c8c8c8"],
+        .subject-card h4[style*="color:#b0b0b0"],
+        .subject-card h4[style*="color:#d0d0d0"] {
+            color: #2d3748 !important;
+        }
+        .subject-card span[style*="color:#c8c8c8"],
+        .subject-card span[style*="color:#b0b0b0"],
+        .subject-card span[style*="color:#d0d0d0"] {
+            color: rgba(0,0,0,0.55) !important;
+            background: rgba(0,0,0,0.04) !important;
+        }
+        .subject-card span[style*="background:rgba(200,200,200"],
+        .subject-card span[style*="background:rgba(176,176,176"],
+        .subject-card span[style*="background:rgba(208,208,208"] {
+            background: rgba(0,0,0,0.04) !important;
+        }
+
+        /* Fix inline-styled light gray colors across the page for default light background */
+        [style*="color:#c8c8c8"] { color: #4a5568 !important; }
+        [style*="color:#b0b0b0"] { color: #4a5568 !important; }
+        [style*="color:#d0d0d0"] { color: #4a5568 !important; }
+
+        /* Fix section headings with light-gray gradient text */
+        h2[style*="-webkit-background-clip:text"],
+        h2[style*="background-clip:text"] {
+            background: linear-gradient(135deg, #2d3748, #b8860b) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+        }
+
+        /* Fix stat-card number colors set via JS */
+        .stat-card .stat-number[style*="color:#c8c8c8"],
+        .stat-card .stat-number[style*="color:#b0b0b0"] {
+            color: #2d3748 !important;
+        }
+
+        /* Fix kbd elements with light-gray backgrounds */
+        kbd[style*="background:rgba(200,200,200"],
+        kbd[style*="background:rgba(176,176,176"] {
+            background: rgba(0,0,0,0.06) !important;
+            color: #4a5568 !important;
+        }
 
         /* Progress Bar */
 
@@ -609,11 +654,11 @@
         }
         .progress-bar .fill {
             height: 100%;
-            background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #d0d0d0, #ffd700);
+            background: linear-gradient(90deg, #6b7280, #4a5568, #6b7280, #b8860b);
             background-size: 300% 100%;
             animation: progressShimmer 4s ease infinite;
             transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 0 15px rgba(200,200,200, 0.5);
+            box-shadow: 0 0 15px rgba(107,114,128, 0.3);
             border-radius: 50px;
         }
         @keyframes progressShimmer {
@@ -687,7 +732,7 @@
 
         .quick-links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.25rem 0; }
         .quick-links a {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             color: rgba(0,0,0,0.65);
@@ -705,15 +750,15 @@
             content: '';
             position: absolute;
             top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
             transition: left 0.5s;
         }
         .quick-links a:hover {
-            background: rgba(200,200,200, 0.15);
-            color: #b0b0b0;
-            border-color: rgba(200,200,200, 0.3);
+            background: rgba(255,255,255, 0.95);
+            color: #1c1c1e;
+            border-color: rgba(0,0,0, 0.12);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(200,200,200,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
         .quick-links a:hover::before { left: 100%; }
 
@@ -888,7 +933,7 @@
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 1.25rem;
-            background: linear-gradient(135deg, #c8c8c8 0%, #b0b0b0 25%, #d0d0d0 50%, #ffd700 75%, #c8c8c8 100%);
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 25%, #1a202c 50%, #b8860b 75%, #2d3748 100%);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -896,7 +941,7 @@
             animation: gradientFlow 6s ease infinite;
             letter-spacing: -0.04em;
             line-height: 1.1;
-            filter: drop-shadow(0 0 40px rgba(200,200,200,0.25));
+            filter: none;
         }
         @keyframes gradientFlow {
             0% { background-position: 0% 50%; }
@@ -1488,14 +1533,14 @@ var graphEdges=[
 {from:'mmpo04',to:'mmpo05'},{from:'mmpo05',to:'mmpo06'},{from:'mmpo06',to:'mmpo08'},
 {from:'mmpc04',to:'mmpf01'},{from:'mmpf01',to:'mmpf02'},{from:'mmpf02',to:'mmpf03'}
 ];
-function initProgress(){var grid=document.getElementById('dashboardStats');if(!grid)return;grid.innerHTML='';var total=0,started=0,done=0,totalQuiz=0,quizCount=0;for(var i=0;i<courses.length;i++){var c=courses[i],pct=getProgress(c.id),qs=getQuizScore(c.id);if(pct>0)started++;if(pct>=100)done++;total+=pct;if(qs>=0){totalQuiz+=qs;quizCount++}}var avg=courses.length>0?Math.round(total/courses.length):0;var quizAvg=quizCount>0?Math.round(totalQuiz/quizCount):0;var statsData=[{label:'Overall Progress',value:avg+'%',color:'#c8c8c8',sub:started+'/'+courses.length+' started'},{label:'Completed',value:done+'',color:'#50c878',sub:'of '+courses.length+' courses'},{label:'Quiz Average',value:quizAvg+'%',color:'#b0b0b0',sub:quizCount+' quizzes taken'},{label:'Study Streak',value:typeof getStudyStreak==='function'?getStudyStreak()+'d':'0d',color:'#ffd700',sub:'consecutive days'}];for(var i=0;i<statsData.length;i++){var s=statsData[i];var rc=28,cc=2*Math.PI*rc,pctVal=parseInt(s.value)||0,off=cc-(pctVal/100)*cc;var card=document.createElement('div');card.className='stat-card';card.setAttribute('tabindex','0');card.innerHTML='<div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.75rem"><svg width="56" height="56" viewBox="0 0 80 80" style="transform:rotate(-90deg);flex-shrink:0"><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="var(--glass-border, rgba(255,255,255,0.08))" stroke-width="5"/><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="'+s.color+'" stroke-width="5" stroke-dasharray="'+cc+'" stroke-dashoffset="'+off+'" stroke-linecap="round" style="filter:drop-shadow(0 0 6px '+s.color+'40)"/></svg><div><div class="stat-number" style="color:'+s.color+';font-size:1.8rem;line-height:1">'+s.value+'</div><div style="font-size:0.7rem;color:var(--text-secondary);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.2rem">'+s.label+'</div></div></div><div style="font-size:0.78rem;color:var(--text-secondary)">'+s.sub+'</div>';grid.appendChild(card)}}
+function initProgress(){var grid=document.getElementById('dashboardStats');if(!grid)return;grid.innerHTML='';var total=0,started=0,done=0,totalQuiz=0,quizCount=0;for(var i=0;i<courses.length;i++){var c=courses[i],pct=getProgress(c.id),qs=getQuizScore(c.id);if(pct>0)started++;if(pct>=100)done++;total+=pct;if(qs>=0){totalQuiz+=qs;quizCount++}}var avg=courses.length>0?Math.round(total/courses.length):0;var quizAvg=quizCount>0?Math.round(totalQuiz/quizCount):0;var statsData=[{label:'Overall Progress',value:avg+'%',color:'#c8c8c8',sub:started+'/'+courses.length+' started'},{label:'Completed',value:done+'',color:'#50c878',sub:'of '+courses.length+' courses'},{label:'Quiz Average',value:quizAvg+'%',color:'#b0b0b0',sub:quizCount+' quizzes taken'},{label:'Study Streak',value:typeof getStudyStreak==='function'?getStudyStreak()+'d':'0d',color:'#ffd700',sub:'consecutive days'}];for(var i=0;i<statsData.length;i++){var s=statsData[i];var rc=28,cc=2*Math.PI*rc,pctVal=parseInt(s.value)||0,off=cc-(pctVal/100)*cc;var card=document.createElement('div');card.className='stat-card';card.setAttribute('tabindex','0');card.innerHTML='<div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.75rem"><svg width="56" height="56" viewBox="0 0 80 80" style="transform:rotate(-90deg);flex-shrink:0"><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="5"/><circle cx="40" cy="40" r="'+rc+'" fill="none" stroke="'+s.color+'" stroke-width="5" stroke-dasharray="'+cc+'" stroke-dashoffset="'+off+'" stroke-linecap="round" style="filter:drop-shadow(0 0 6px '+s.color+'40)"/></svg><div><div class="stat-number" style="color:'+s.color+';font-size:1.8rem;line-height:1">'+s.value+'</div><div style="font-size:0.7rem;color:rgba(0,0,0,0.45);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-top:0.2rem">'+s.label+'</div></div></div><div style="font-size:0.78rem;color:rgba(0,0,0,0.45)">'+s.sub+'</div>';grid.appendChild(card)}}
 function loadGraph(){var svg=document.getElementById('knowledgeGraph');if(!svg)return;svg.innerHTML='';var defs=document.createElementNS('http://www.w3.org/2000/svg','defs');var mk=document.createElementNS('http://www.w3.org/2000/svg','marker');mk.setAttribute('id','arrowhead');mk.setAttribute('markerWidth','10');mk.setAttribute('markerHeight','7');mk.setAttribute('refX','10');mk.setAttribute('refY','3.5');mk.setAttribute('orient','auto');var p=document.createElementNS('http://www.w3.org/2000/svg','polygon');p.setAttribute('points','0 0, 10 3.5, 0 7');p.setAttribute('fill','var(--text-muted, rgba(255,255,255,0.4))');mk.appendChild(p);defs.appendChild(mk);var glowFilter=document.createElementNS('http://www.w3.org/2000/svg','filter');glowFilter.setAttribute('id','glow');glowFilter.setAttribute('x','-50%');glowFilter.setAttribute('y','-50%');glowFilter.setAttribute('width','200%');glowFilter.setAttribute('height','200%');var feGaussian=document.createElementNS('http://www.w3.org/2000/svg','feGaussianBlur');feGaussian.setAttribute('stdDeviation','4');feGaussian.setAttribute('result','coloredBlur');var feMerge=document.createElementNS('http://www.w3.org/2000/svg','feMerge');var feMergeNode1=document.createElementNS('http://www.w3.org/2000/svg','feMergeNode');feMergeNode1.setAttribute('in','coloredBlur');var feMergeNode2=document.createElementNS('http://www.w3.org/2000/svg','feMergeNode');feMergeNode2.setAttribute('in','SourceGraphic');feMerge.appendChild(feMergeNode1);feMerge.appendChild(feMergeNode2);glowFilter.appendChild(feGaussian);glowFilter.appendChild(feMerge);defs.appendChild(glowFilter);svg.appendChild(defs);for(var ei=0;ei<graphEdges.length;ei++){var e=graphEdges[ei];var fn=null,tn=null;for(var ni=0;ni<graphNodes.length;ni++){if(graphNodes[ni].id===e.from)fn=graphNodes[ni];if(graphNodes[ni].id===e.to)tn=graphNodes[ni]}if(!fn||!tn)continue;var l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',fn.x);l.setAttribute('y1',fn.y);l.setAttribute('x2',tn.x);l.setAttribute('y2',tn.y);l.setAttribute('stroke','var(--glass-border, rgba(255,255,255,0.15))');l.setAttribute('stroke-width','2');l.setAttribute('marker-end','url(#arrowhead)');l.style.transition='stroke 0.3s, stroke-width 0.3s';svg.appendChild(l)}for(var ni=0;ni<graphNodes.length;ni++){var node=graphNodes[ni];var g=document.createElementNS('http://www.w3.org/2000/svg','g');var pct=getProgress(node.id);var qs=getQuizScore(node.id);var r=22+(pct/100)*8;g.setAttribute('class','node-group');g.style.cursor='pointer';g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',node.full);g.setAttribute('data-id',node.id);g.onclick=function(){window.location.href='study-'+this.getAttribute('data-id')+'.html'};var circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('cx',node.x);circle.setAttribute('cy',node.y);circle.setAttribute('r',r);circle.setAttribute('fill',pct>=100?'rgba(80,200,120,0.12)':'var(--glass-bg, rgba(255,255,255,0.02))');circle.setAttribute('stroke',node.color);circle.setAttribute('stroke-width',pct>=100?'3':'2');circle.setAttribute('filter','url(#glow)');circle.style.transition='r 0.3s, stroke-width 0.3s';var t1=document.createElementNS('http://www.w3.org/2000/svg','text');t1.setAttribute('x',node.x);t1.setAttribute('y',node.y-4);t1.setAttribute('text-anchor','middle');t1.setAttribute('fill','#ffffff');t1.setAttribute('stroke','#000000');t1.setAttribute('stroke-width','2');t1.setAttribute('paint-order','stroke');t1.setAttribute('font-size','11');t1.setAttribute('font-weight','bold');t1.textContent=node.label;var t2=document.createElementNS('http://www.w3.org/2000/svg','text');t2.setAttribute('x',node.x);t2.setAttribute('y',node.y+13);t2.setAttribute('text-anchor','middle');t2.setAttribute('fill','var(--text-primary)');t2.setAttribute('stroke','var(--bg-main, #1a1a2e)');t2.setAttribute('stroke-width','1.5');t2.setAttribute('paint-order','stroke');t2.setAttribute('font-size','9');t2.textContent=Math.round(pct)+'%';g.appendChild(circle);g.appendChild(t1);g.appendChild(t2);(function(n,circle,r,pct,qs){n.addEventListener('mouseenter',function(ev){var tt=document.getElementById('nodeTooltip');if(!tt){tt=document.createElement('div');tt.id='nodeTooltip';tt.className='node-tooltip';document.body.appendChild(tt)}tt.innerHTML='<strong>'+n.full+'</strong><br><span style="opacity:0.7">'+n.units+' units</span><br><span style="color:'+n.color+'">Progress: '+Math.round(pct)+'%</span>'+(qs>=0?'<br><span style="color:#b0b0b0">Quiz: '+qs+'%</span>':'');tt.style.display='block';tt.style.left=(ev.clientX+15)+'px';tt.style.top=(ev.clientY-10)+'px';circle.setAttribute('r',r+5);circle.setAttribute('stroke-width','3')});n.addEventListener('mouseleave',function(){var tt=document.getElementById('nodeTooltip');if(tt)tt.style.display='none';circle.setAttribute('r',r);circle.setAttribute('stroke-width',pct>=100?'3':'2')})})(g,circle,r,pct,qs);svg.appendChild(g)}var allCircles=svg.querySelectorAll('circle[stroke]');for(var ai=0;ai<allCircles.length;ai++){(function(idx,circle){setTimeout(function(){circle.style.transition='stroke-opacity .6s ease';circle.style.strokeOpacity='1'},100+idx*80)})(ai,allCircles[ai])}}
 function initInteractiveGraph(){var cont=document.getElementById('graph-container');if(!cont)return;var svg=cont.querySelector('svg');if(!svg)return;var pan=false,sx=0,sy=0,ox=0,oy=0,vb={x:-550,y:-350,w:1100,h:700};cont.addEventListener('mousedown',function(e){pan=true;sx=e.clientX;sy=e.clientY;ox=vb.x;oy=vb.y;svg.style.cursor='grabbing'});cont.addEventListener('mousemove',function(e){if(!pan)return;var s=vb.w/cont.clientWidth;vb.x=ox-(e.clientX-sx)*s;vb.y=oy-(e.clientY-sy)*s;svg.setAttribute('viewBox',vb.x+' '+vb.y+' '+vb.w+' '+vb.h)});cont.addEventListener('mouseup',function(){pan=false;svg.style.cursor='grab'});cont.addEventListener('mouseleave',function(){pan=false});cont.addEventListener('wheel',function(e){e.preventDefault();var f=e.deltaY>0?1.08:0.92,rect=cont.getBoundingClientRect(),mx=(e.clientX-rect.left)/rect.width,my=(e.clientY-rect.top)/rect.height,nw=vb.w*f,nh=vb.h*f;vb.x+=(vb.w-nw)*mx;vb.y+=(vb.h-nh)*my;vb.w=Math.max(300,Math.min(2000,nw));vb.h=Math.max(200,Math.min(1250,nh));svg.setAttribute('viewBox',vb.x+' '+vb.y+' '+vb.w+' '+vb.h)},{passive:false});var ltd=0;cont.addEventListener('touchstart',function(e){if(e.touches.length===1){pan=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY;ox=vb.x;oy=vb.y}else if(e.touches.length===2){ltd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY)}});cont.addEventListener('touchmove',function(e){e.preventDefault();if(e.touches.length===1&&pan){var s2=vb.w/cont.clientWidth;vb.x=ox-(e.touches[0].clientX-sx)*s2;vb.y=oy-(e.touches[0].clientY-sy)*s2;svg.setAttribute('viewBox',vb.x+' '+vb.y+' '+vb.w+' '+vb.h)}else if(e.touches.length===2){var d2=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(ltd>0){var f2=ltd/d2;vb.w*=f2;vb.h*=f2;svg.setAttribute('viewBox',vb.x+' '+vb.y+' '+vb.w+' '+vb.h)}ltd=d2}},{passive:false});cont.addEventListener('touchend',function(){pan=false;ltd=0})}
 function initTooltips(){}
 function trackStudyVisits(){try{var t=new Date().toISOString().split('T')[0],v=JSON.parse(localStorage.getItem('studyhub-visits')||'{}');v[t]=(v[t]||0)+1;localStorage.setItem('studyhub-visits',JSON.stringify(v))}catch(e){}}
 
-function renderSubjectCards(){var grid=document.getElementById('subjects');if(!grid)return;grid.innerHTML='';for(var i=0;i<courses.length;i++){var c=courses[i];var pct=getProgress(c.id);var qs=getQuizScore(c.id);var card=document.createElement('div');card.className='subject-card';card.setAttribute('onclick','window.location.href=\''+c.href+'\';');card.setAttribute('aria-label',c.name);card.setAttribute('tabindex','0');card.setAttribute('role','link');card.onkeydown=function(e){if(e.key==='Enter'||e.key===' ')e.preventDefault(),this.click()};card.style.cssText='border-left:4px solid '+c.color+';position:relative;overflow:hidden;';var accentBar='<div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,'+c.color+','+c.color+'88,transparent);"></div>';var glowBg='<div style="position:absolute;top:-30px;right:-30px;width:180px;height:180px;background:radial-gradient(circle,'+c.glow+' 0%,transparent 70%);pointer-events:none;opacity:0.25;"></div>';var iconBlock='<div style="font-size:3.5rem;margin-bottom:1.1rem;filter:drop-shadow(0 8px 24px '+c.glow+')">'+c.icon+'</div>';var codeLabel=c.id.replace(/(\d+)$/,'-$1').toUpperCase();var codeBadge='<div style="display:inline-block;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;color:'+c.color+';background:'+c.color+'15;border:1px solid '+c.color+'30;padding:0.2rem 0.65rem;border-radius:8px;margin-bottom:0.6rem">'+codeLabel+'</div>';var titleBlock='<h4 style="font-size:1.5rem;font-weight:800;color:'+c.color+';margin-bottom:0.4rem;letter-spacing:-0.02em">'+c.name+'</h4>';var descBlock='<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem">'+c.desc+'</p>';var progBar='<div style="background:rgba(255,255,255,.06);border-radius:10px;height:7px;overflow:hidden;margin-bottom:1rem"><div style="background:linear-gradient(90deg,'+c.color+','+c.color+'aa);height:100%;border-radius:10px;width:'+Math.round(pct)+'%;transition:width .8s cubic-bezier(.34,1.56,.64,1);box-shadow:0 0 20px '+c.glow+'"></div></div>';var bottomRow='<div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--text-secondary);font-size:0.85rem;font-weight:600">'+Math.round(pct)+'% complete'+(qs>=0?' &bull; Quiz: '+qs+'%':'')+'</span><span style="color:'+c.color+';font-size:0.9rem;font-weight:800;display:flex;align-items:center;gap:0.4rem;letter-spacing:0.02em;">Study &rarr;</span></div>';var unitsBadge='<div style="position:absolute;top:1.25rem;right:1.25rem;background:var(--bg-card, rgba(255,255,255,0.05));border:1px solid var(--glass-border, rgba(255,255,255,0.08));border-radius:14px;padding:0.35rem 0.85rem;font-size:0.78rem;color:var(--text-secondary);font-weight:700;letter-spacing:0.03em;backdrop-filter:blur(8px)">'+c.units+' units</div>';card.innerHTML=accentBar+glowBg+iconBlock+codeBadge+titleBlock+descBlock+progBar+bottomRow+unitsBadge;grid.appendChild(card)}}
-function renderQuickLinks(){var el=document.getElementById('quickLinks');if(!el)return;var colors=['#c8c8c8','#b0b0b0','#50c878','#ffd700','#ff6b6b','#1abc9c','#e67e22'];var glows=['rgba(200,200,200,0.2)','rgba(176,176,176,0.2)','rgba(80,200,120,0.2)','rgba(255,215,0,0.2)','rgba(255,107,107,0.2)','rgba(26,188,156,0.2)','rgba(230,126,34,0.2)'];var t=[{t:'Planning & Strategy',u:'MBO, Strategic Planning, Tactical',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>'},{t:'Leadership & Motivation',u:'Styles, Theories, Team Management',i:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>'},{t:'HR Management',u:'Recruitment, Training, Appraisal',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>'},{t:'Business Environment',u:'Macro, Micro, SWOT, PESTEL',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'},{t:'Accounting & Finance',u:'Financial Statements, Budgeting',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>'},{t:'Marketing Management',u:'4P, Branding, Digital Marketing',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'},{t:'Business Communication',u:'Written, Verbal, Reports',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'}];var h='';for(var i=0;i<t.length;i++){h+='<a href="#" class="topic-card" onclick="announce(\'Topic: '+t[i].t+'\')" style="display:flex;align-items:center;gap:0.85rem;padding:1rem 1.25rem;border-radius:14px;border-left:3px solid '+colors[i]+';background:var(--bg-card, rgba(255,255,255,0.03));border:1px solid var(--glass-border, transparent);"><span style="font-size:1.6rem;filter:drop-shadow(0 4px 8px '+glows[i]+')">'+t[i].i+'</span><div><strong style="font-size:0.92rem;font-weight:700;letter-spacing:-0.01em;color:'+colors[i]+'">'+t[i].t+'</strong><br><span style="color:var(--text-secondary);font-size:0.78rem;line-height:1.4">'+t[i].u+'</span></div></a>'}el.innerHTML=h}
+function renderSubjectCards(){var grid=document.getElementById('subjects');if(!grid)return;grid.innerHTML='';for(var i=0;i<courses.length;i++){var c=courses[i];var pct=getProgress(c.id);var qs=getQuizScore(c.id);var card=document.createElement('div');card.className='subject-card';card.setAttribute('onclick','window.location.href=\''+c.href+'\';');card.setAttribute('aria-label',c.name);card.setAttribute('tabindex','0');card.setAttribute('role','link');card.onkeydown=function(e){if(e.key==='Enter'||e.key===' ')e.preventDefault(),this.click()};card.style.cssText='border-left:4px solid '+c.color+';position:relative;overflow:hidden;';var accentBar='<div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,'+c.color+','+c.color+'88,transparent);"></div>';var glowBg='<div style="position:absolute;top:-30px;right:-30px;width:180px;height:180px;background:radial-gradient(circle,'+c.glow+' 0%,transparent 70%);pointer-events:none;opacity:0.25;"></div>';var iconBlock='<div style="font-size:3.5rem;margin-bottom:1.1rem;filter:drop-shadow(0 8px 24px '+c.glow+')">'+c.icon+'</div>';var codeLabel=c.id.replace(/(\d+)$/,'-$1').toUpperCase();var codeBadge='<div style="display:inline-block;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;color:'+c.color+';background:'+c.color+'15;border:1px solid '+c.color+'30;padding:0.2rem 0.65rem;border-radius:8px;margin-bottom:0.6rem">'+codeLabel+'</div>';var titleBlock='<h4 style="font-size:1.5rem;font-weight:800;color:'+c.color+';margin-bottom:0.4rem;letter-spacing:-0.02em">'+c.name+'</h4>';var descBlock='<p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.25rem">'+c.desc+'</p>';var progBar='<div style="background:rgba(0,0,0,.06);border-radius:10px;height:7px;overflow:hidden;margin-bottom:1rem"><div style="background:linear-gradient(90deg,'+c.color+','+c.color+'aa);height:100%;border-radius:10px;width:'+Math.round(pct)+'%;transition:width .8s cubic-bezier(.34,1.56,.64,1);box-shadow:0 0 20px '+c.glow+'"></div></div>';var bottomRow='<div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--text-secondary);font-size:0.85rem;font-weight:600">'+Math.round(pct)+'% complete'+(qs>=0?' &bull; Quiz: '+qs+'%':'')+'</span><span style="color:'+c.color+';font-size:0.9rem;font-weight:800;display:flex;align-items:center;gap:0.4rem;letter-spacing:0.02em;">Study &rarr;</span></div>';var unitsBadge='<div style="position:absolute;top:1.25rem;right:1.25rem;background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.08);border-radius:14px;padding:0.35rem 0.85rem;font-size:0.78rem;color:rgba(0,0,0,0.55);font-weight:700;letter-spacing:0.03em;backdrop-filter:blur(8px)">'+c.units+' units</div>';card.innerHTML=accentBar+glowBg+iconBlock+codeBadge+titleBlock+descBlock+progBar+bottomRow+unitsBadge;grid.appendChild(card)}}
+function renderQuickLinks(){var el=document.getElementById('quickLinks');if(!el)return;var colors=['#c8c8c8','#b0b0b0','#50c878','#ffd700','#ff6b6b','#1abc9c','#e67e22'];var glows=['rgba(200,200,200,0.2)','rgba(176,176,176,0.2)','rgba(80,200,120,0.2)','rgba(255,215,0,0.2)','rgba(255,107,107,0.2)','rgba(26,188,156,0.2)','rgba(230,126,34,0.2)'];var t=[{t:'Planning & Strategy',u:'MBO, Strategic Planning, Tactical',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>'},{t:'Leadership & Motivation',u:'Styles, Theories, Team Management',i:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>'},{t:'HR Management',u:'Recruitment, Training, Appraisal',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>'},{t:'Business Environment',u:'Macro, Micro, SWOT, PESTEL',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'},{t:'Accounting & Finance',u:'Financial Statements, Budgeting',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>'},{t:'Marketing Management',u:'4P, Branding, Digital Marketing',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'},{t:'Business Communication',u:'Written, Verbal, Reports',i:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'}];var h='';for(var i=0;i<t.length;i++){h+='<a href="#" class="topic-card" onclick="announce(\'Topic: '+t[i].t+'\')" style="display:flex;align-items:center;gap:0.85rem;padding:1rem 1.25rem;border-radius:14px;border-left:3px solid '+colors[i]+';background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.06);"><span style="font-size:1.6rem;filter:drop-shadow(0 4px 8px '+glows[i]+')">'+t[i].i+'</span><div><strong style="font-size:0.92rem;font-weight:700;letter-spacing:-0.01em;color:'+colors[i]+'">'+t[i].t+'</strong><br><span style="color:rgba(0,0,0,0.5);font-size:0.78rem;line-height:1.4">'+t[i].u+'</span></div></a>'}el.innerHTML=h}
 function initDashboard(){initProgress();renderSubjectCards();loadGraph();initInteractiveGraph();trackStudyVisits();var n=document.querySelectorAll('#knowledgeGraph .node-group');for(var i=0;i<n.length;i++){n[i].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();this.click()}})}if(typeof initSummarizeButtons==='function')initSummarizeButtons()}
     </script>
     <script src="search.js"></script>

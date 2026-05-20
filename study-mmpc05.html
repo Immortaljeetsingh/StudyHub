@@ -47,11 +47,15 @@ body.subject-mmpc05::before {
 }
 /* Fade-in on scroll */
 .animate-on-scroll {
-  opacity: 0; transform: translateY(28px);
+  opacity: 1; transform: translateY(0);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .animate-on-scroll.visible {
-  opacity: 1; transform: translateY(0);
+  animation: fadeSlideIn 0.6s ease-out forwards;
 }
 /* Staggered delays for cards */
 .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
@@ -348,7 +352,7 @@ body.subject-mmpc05 .subject-tag {
 <div class="fc">
 <div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Find Range<br><small>Max &#x2212; Min</small></div></div><div class="fc-a">&#x2192;</div>
 <div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Decide Classes<br><small>5&#x2013;15 typically</small></div></div><div class="fc-a">&#x2192;</div>
-<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Class Width<br><small>Range Ã· No. of classes</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Class Width<br><small>Range ÷ No. of classes</small></div></div><div class="fc-a">&#x2192;</div>
 <div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Tally &amp; Count<br><small>Assign each value</small></div></div><div class="fc-a">&#x2192;</div>
 <div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Cumulative Freq<br><small>Running totals</small></div></div>
 </div>
