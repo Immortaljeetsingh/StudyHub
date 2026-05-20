@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -21,12 +21,12 @@ h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[
 .cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(214,48,49,.25),0 0 20px rgba(255,107,107,.1)!important;border-color:rgba(214,48,49,.4)!important}
 .callout{transition:transform .3s ease,box-shadow .3s ease!important}.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}
 .study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
-.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
-.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
-.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.sidebar a{display:flex;align-items:center;min-height:44px;padding:.5rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
-.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}
-.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.study-sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.study-sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.study-sidebar a{display:flex;align-items:center;min-height:44px;padding:.5rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}
+.study-sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}
 .study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
 .study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(214,48,49,.15),transparent 70%);animation:hG 8s ease-in-out infinite alternate}
 @keyframes hG{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
@@ -67,7 +67,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 .mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}
 .skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}
 .reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#ff6b6b);z-index:9999;transition:width .1s;width:0%}
-@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
     <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
@@ -79,7 +79,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-05'));</script>
 <button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<aside class="sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-05</span></div>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-05</span></div>
 <nav class="sidebar-nav">
 <a href="#block1">Block-01 Fundamentals</a>
 <a href="#u1">Unit 1: SCM Introduction</a>
@@ -105,6 +105,28 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
 </nav></aside>
 <main id="main-content" class="study-content">
+
+  <!-- Mobile unit jump menu (auto-injected) -->
+  <details class="unit-nav-mobile">
+    <summary>📚 Jump to unit ▾</summary>
+    <nav>
+      <a href="#u1">Unit 1: SCM Introduction</a>
+      <a href="#u2">Unit 2: Customer Focus</a>
+      <a href="#u3">Unit 3: SCM Models</a>
+      <a href="#u4">Unit 4: Strategic SCM</a>
+      <a href="#u5">Unit 5: IT in SCM</a>
+      <a href="#u6">Unit 6: e-SCM</a>
+      <a href="#u7">Unit 7: Cost Analysis</a>
+      <a href="#u8">Unit 8: Benchmarking</a>
+      <a href="#u9">Unit 9: Performance</a>
+      <a href="#u10">Unit 10: Transportation</a>
+      <a href="#u11">Unit 11: Location Strategy</a>
+      <a href="#u12">Unit 12: SCM in Services</a>
+      <a href="#u13">Unit 13: Sustainable SC</a>
+      <a href="#u14">Unit 14: Future Trends</a>
+    </nav>
+  </details>
+
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPO-05</span><h1>Logistics and Supply Chain Management</h1>
 <p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
@@ -113,8 +135,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <h2 id="block1">Block-01: Fundamentals of Logistics &amp; SCM</h2>
 
 <!-- UNIT 1 -->
-<div class="unit" id="u1">
-<h3 id="u1">Unit 1: Logistics and Supply Chain Management &#x2014; An Introduction</h3>
+<div class="unit" id="u1">`n<h3>Unit 1: Logistics and Supply Chain Management &#x2014; An Introduction</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Logistics</strong> = management of flow of goods from origin to consumption. <strong>Supply Chain</strong> = network of organizations involved in producing and delivering products from raw material to end customer. <strong>SCM</strong> = coordination of supply chain activities to maximize customer value and achieve sustainable competitive advantage. <strong>PDM</strong> = managing movement of finished goods from manufacturer to customer. <strong>Integrated Logistics</strong> = two interrelated efforts &#x2014; logistics operations (physical distribution, materials management, inventory transfer) and logistics coordination (forecasting, order processing, MRP). Evolution: Physical Distribution &#x2192; Logistics Management &#x2192; Supply Chain Management.</p></div>
@@ -172,8 +193,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 2 -->
-<div class="unit" id="u2">
-<h3 id="u2">Unit 2: Customer Focus in Supply Chain Management</h3>
+<div class="unit" id="u2">`n<h3>Unit 2: Customer Focus in Supply Chain Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Customer Value</strong> = Benefits received minus Costs incurred (including price, time, effort). <strong>Order Qualifiers</strong> = minimum requirements to even be considered by customers. <strong>Order Winners</strong> = features that actually win customer orders over competitors. <strong>Customer Retention</strong> = keeping existing customers &#x2014; 5x cheaper than acquisition. A 5% increase in retention can increase profits by 25-95%.</p></div>
@@ -220,8 +240,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 3 -->
-<div class="unit" id="u3">
-<h3 id="u3">Unit 3: Models of SCM Integration</h3>
+<div class="unit" id="u3">`n<h3>Unit 3: Models of SCM Integration</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>SCOR Model</strong> (Supply Chain Operations Reference) = Plan, Source, Make, Deliver, Return. <strong>Push System</strong> = produce based on forecasts; <strong>Pull System</strong> = produce based on actual demand. <strong>Leagile</strong> = combination of lean (upstream) and agile (downstream).</p></div>
@@ -309,8 +328,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 4 -->
-<div class="unit" id="u4">
-<h3 id="u4">Unit 4: Strategic Supply Chain Management</h3>
+<div class="unit" id="u4">`n<h3>Unit 4: Strategic Supply Chain Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Outsourcing</strong> = buying from external suppliers to focus on core competencies. <strong>Offshoring</strong> = moving operations to another country for cost advantages. <strong>Nearshoring</strong> = moving operations closer to home. <strong>Bullwhip Effect</strong> = demand variability amplifies as it moves upstream.</p></div>
@@ -372,8 +390,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <h2 id="block2">Block-02: Technology &amp; Cost Analysis</h2>
 
 <!-- UNIT 5 -->
-<div class="unit" id="u5">
-<h3 id="u5">Unit 5: Information Technology in SCM</h3>
+<div class="unit" id="u5">`n<h3>Unit 5: Information Technology in SCM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>ERP</strong> = integrated system connecting all business functions. <strong>EDI</strong> = Electronic Data Interchange for standardized document exchange. <strong>RFID</strong> = Radio Frequency Identification for automatic tracking. <strong>GPS</strong> = Global Positioning System for real-time tracking. <strong>Blockchain</strong> = distributed ledger for transparency and traceability.</p></div>
@@ -425,8 +442,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 6 -->
-<div class="unit" id="u6">
-<h3 id="u6">Unit 6: e-Supply Chain Management</h3>
+<div class="unit" id="u6">`n<h3>Unit 6: e-Supply Chain Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>e-SCM</strong> = using internet and digital platforms for supply chain activities. <strong>e-Procurement</strong> = online purchasing systems reducing paperwork and cycle time. <strong>e-Marketplaces</strong> = online platforms connecting multiple buyers and sellers. <strong>B2B</strong> = business-to-business transactions (IndiaMART, Alibaba). <strong>B2C</strong> = business-to-consumer transactions (Amazon, Flipkart).</p></div>
@@ -475,8 +491,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 7 -->
-<div class="unit" id="u7">
-<h3 id="u7">Unit 7: Cost Analysis and Measurement</h3>
+<div class="unit" id="u7">`n<h3>Unit 7: Cost Analysis and Measurement</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Total Cost of Ownership (TCO)</strong> = purchase price + all operating costs over lifecycle. <strong>Activity-Based Costing (ABC)</strong> = assigns costs to activities based on resource consumption. <strong>Cost Trade-offs</strong> = saving in one area may increase costs in another. <strong>Logistics Cost Components</strong> = transportation (35-50%), warehousing (20-25%), inventory carrying (15-25% of inventory value), administration (5-10%).</p></div>
@@ -550,8 +565,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 8 -->
-<div class="unit" id="u8">
-<h3 id="u8">Unit 8: Best Practices and Benchmarking in SCM</h3>
+<div class="unit" id="u8">`n<h3>Unit 8: Best Practices and Benchmarking in SCM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Benchmarking</strong> = comparing performance against best-in-class organizations. Types: Internal, Competitive, Functional, Generic. <strong>VMI</strong> = Vendor Managed Inventory &#x2014; supplier takes responsibility for managing buyer's inventory levels. <strong>CPFR</strong> = Collaborative Planning, Forecasting, and Replenishment.</p></div>
@@ -630,8 +644,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <h2 id="block3">Block-03: Operations &amp; Distribution</h2>
 
 <!-- UNIT 9 -->
-<div class="unit" id="u9">
-<h3 id="u9">Unit 9: Performance Measurement and Evaluation</h3>
+<div class="unit" id="u9">`n<h3>Unit 9: Performance Measurement and Evaluation</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Bullwhip Effect</strong> = demand variability amplifies upstream in supply chain. Causes: demand forecasting errors (D), order batching (O), price fluctuations (P), rationing/gaming (R). Mitigation: information sharing (I), VMI (V), EDLP (E).</p></div>
@@ -698,8 +711,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 10 -->
-<div class="unit" id="u10">
-<h3 id="u10">Unit 10: Transportation Mix</h3>
+<div class="unit" id="u10">`n<h3>Unit 10: Transportation Mix</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Five transportation modes: Road, Rail, Air, Water, Pipeline. <strong>Intermodal</strong> = combining two or more transportation modes. Mode selection based on: cost, speed, reliability, flexibility, capability.</p></div>
@@ -749,8 +761,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 11 -->
-<div class="unit" id="u11">
-<h3 id="u11">Unit 11: Location Strategy</h3>
+<div class="unit" id="u11">`n<h3>Unit 11: Location Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Facility location is a long-term strategic decision affecting costs and service levels. <strong>Hub-and-Spoke Model</strong> = central hub with radiating routes to spoke locations. Location techniques: Factor Rating, Center-of-Gravity, Load-Distance.</p></div>
@@ -809,8 +820,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 12 -->
-<div class="unit" id="u12">
-<h3 id="u12">Unit 12: SCM in Service Organizations</h3>
+<div class="unit" id="u12">`n<h3>Unit 12: SCM in Service Organizations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Service supply chains differ from manufacturing: people, information, and processes. Key service characteristics: intangibility, perishability, heterogeneity. <strong>Reverse logistics</strong> = managing product returns, recycling, and disposal. <strong>Industry Examples:</strong> Healthcare (pharmaceuticals, medical equipment), Hospitality (food, beverages, linens), Retail (fast fashion, seasonal inventory), IT services (cloud, SaaS).</p></div>
@@ -879,8 +889,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <h2 id="block4">Block-04: Sustainability &amp; Future</h2>
 
 <!-- UNIT 13 -->
-<div class="unit" id="u13">
-<h3 id="u13">Unit 13: Design for Sustainable Supply Chain</h3>
+<div class="unit" id="u13">`n<h3>Unit 13: Design for Sustainable Supply Chain</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Sustainability</strong> = meeting present needs without compromising future generations. <strong>Triple Bottom Line (TBL)</strong> = People, Planet, Profit. <strong>Green SCM</strong> = reducing environmental impact across the entire supply chain. <strong>Circular Economy</strong> = design out waste, keep products in use, regenerate natural systems.</p></div>
@@ -943,8 +952,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 </div></div>
 
 <!-- UNIT 14 -->
-<div class="unit" id="u14">
-<h3 id="u14">Unit 14: Future Trends and Issues</h3>
+<div class="unit" id="u14">`n<h3>Unit 14: Future Trends and Issues</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Industry 4.0</strong> = integration of IoT, AI, Big Data, Cloud in manufacturing and supply chains. <strong>3D Printing</strong> = enables on-demand, localized production. <strong>Digital Twin</strong> = virtual replica of supply chain for simulation and optimization. <strong>Resilience</strong> = ability to recover from disruptions.</p></div>
@@ -1205,7 +1213,7 @@ tr:nth-child(even){background:rgba(255,255,255,.02)}
 <script src="flashcards.js"></script>
 <script>
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)})})();
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
 <script src="enhancements.js"></script>
 <script src="revision-mode.js"></script>

@@ -1,29 +1,19 @@
-﻿const CACHE_NAME = 'studyhub-v2';
-
+const CACHE_NAME = 'studyhub-v3';
 const STATIC_ASSETS = [
-  'study-hub.html',
-  'styles.css',
-  'styles-enhanced.css',
-  'study-hub-enhanced.css',
-  'enhancements.css',
-  'revision-mode.css',
-  'light-theme.css',
-  'api-utils.js',
-  'search.js',
-  'sidebar.js',
-  'enhancements.js',
-  'revision-mode.js',
-  'manifest.json'
+  '/',
+  '/study-hub.html',
+  '/styles.css',
+  '/app.js',
+  '/manifest.json',
+  '/index.html',
+  '/flashcards.html',
+  '/quiz-results.html'
 ];
 
-// Install: pre-cache static assets
+// Install: cache static assets
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(STATIC_ASSETS).catch(err => {
-        console.warn('[SW] Some assets failed to cache:', err);
-      });
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
   );
   self.skipWaiting();
 });
@@ -32,32 +22,45 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
-      )
+      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
     )
   );
   self.clients.claim();
 });
 
-// Fetch: network-first with cache fallback
+// Fetch: cache-first for static, network-first for HTML pages
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // Only handle same-origin GET requests
-  if (event.request.method !== 'GET' || url.origin !== location.origin) return;
+  // Skip non-GET requests
+  if (event.request.method !== 'GET') return;
 
-  event.respondWith(
-    fetch(event.request)
-      .then(response => {
-        // Cache successful responses
-        if (response.ok) {
+  // Skip cross-origin requests (Firebase, Google Fonts, etc.)
+  if (url.origin !== self.location.origin) return;
+
+  // For study/quiz HTML pages: network-first
+  if (url.pathname.endsWith('.html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
           const clone = response.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
-        }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // For CSS/JS: cache-first
+  event.respondWith(
+    caches.match(event.request).then(cached => {
+      if (cached) return cached;
+      return fetch(event.request).then(response => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
         return response;
-      })
-      .catch(() => caches.match(event.request))
+      });
+    })
   );
 });
-
