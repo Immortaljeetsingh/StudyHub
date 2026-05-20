@@ -82,11 +82,14 @@ function initAskButtons() {
 
 // ==================== THEME ====================
 function toggleTheme() {
-    const isLight = document.body.classList.toggle('light-theme');
-    localStorage.setItem('studyhub-theme', isLight ? 'light' : 'dark');
-    const btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = isLight ? '☀️ Light' : '🌙 Dark';
+    var html = document.documentElement;
+    var current = html.getAttribute('data-theme') || 'dark';
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('studyhub-theme', next); } catch(e) {}
+    var btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = next === 'light' ? '☀️ Light' : '🌙 Dark';
 }
-function loadTheme() { if (localStorage.getItem('studyhub-theme') === 'light') { document.body.classList.add('light-theme'); const btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = '☀️ Light'; } }
+function loadTheme() { var saved = localStorage.getItem('studyhub-theme'); if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); var btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = '☀️ Light'; } }
 
 // ==================== API SETTINGS ====================
 function openApiSettings() {

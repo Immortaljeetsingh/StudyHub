@@ -5,153 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results | StudyHub</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-enhanced.css">
-    <style>
-        body {
-            background: #06060f !important;
-        }
-        .results-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        .results-header {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 24px;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .results-header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #d0d0d0);
-        }
-        .results-score {
-            font-size: 4rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #b0b0b0, #b0b0b0, #d0d0d0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-        .results-grade {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--success);
-            margin-bottom: 0.5rem;
-        }
-        .results-header p {
-            color: rgba(255,255,255,0.4);
-            font-size: 1rem;
-        }
-        .results-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .results-stat-card {
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 18px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .results-stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-        }
-        .results-stat-card .stat-value {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #b0b0b0, #b0b0b0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .results-stat-card .stat-label {
-            font-size: 0.72rem;
-            color: rgba(255,255,255,0.35);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 700;
-            margin-top: 0.25rem;
-        }
-        .btn {
-            border-radius: 60px;
-            font-weight: 700;
-            padding: 0.7rem 1.5rem;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #c8c8c8, #d0d0d0);
-            color: #fff;
-            border: none;
-            box-shadow: 0 4px 16px rgba(200,200,200,0.3);
-        }
-        .btn-success {
-            background: linear-gradient(135deg, #34d399, #10b981);
-            color: #fff;
-            border: none;
-            box-shadow: 0 4px 16px rgba(52,211,153,0.3);
-        }
-        .btn-secondary {
-            background: rgba(255,255,255,0.04);
-            color: rgba(255,255,255,0.6);
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.08);
-            color: var(--accent);
-        }
-        .igl {
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 1.5rem;
-        }
-        .igl h4 {
-            color: var(--accent);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-        .igl p {
-            color: rgba(255,255,255,0.55);
-            font-size: 0.9rem;
-        }
-        h3 {
-            color: var(--text-primary);
-            font-weight: 700;
-        }
-        .question-review-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-    </style>
-    <link rel="stylesheet" href="enhancements.css">
-    <link rel="stylesheet" href="revision-mode.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="light-theme.css">
-    <link rel="stylesheet" href="components.css">
+
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="results-container">
@@ -370,8 +225,7 @@
             window.location.href = 'study-hub.html';
         }
     </script>
-    <script src="enhancements.js"></script>
-    <script src="revision-mode.js"></script>
+<script src="revision-mode.js"></script>
     <script src="pwa-register.js"></script>
 </body>
 </html>

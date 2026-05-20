@@ -5,127 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#x1F48F; Flashcards - StudyHub</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-enhanced.css">
-    <style>
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            font-family: 'Inter', sans-serif;
-            background: #06060f !important;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background:
-                radial-gradient(ellipse at 20% 20%, rgba(200,200,200,0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(176,176,176,0.07) 0%, transparent 50%);
-            z-index: -1; pointer-events: none;
-        }
-        .flashcards-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .flashcards-header h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #b0b0b0, #b0b0b0, #d0d0d0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.5rem;
-        }
-        .flashcards-header p {
-            color: rgba(255,255,255,0.4);
-            font-size: 1rem;
-        }
-        .subject-selector {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-        .subject-btn {
-            padding: 0.55rem 1.25rem;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 60px;
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            color: rgba(255,255,255,0.5);
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            font-family: 'Inter', sans-serif;
-        }
-        .subject-btn:hover, .subject-btn.active {
-            background: rgba(200,200,200, 0.12);
-            border-color: rgba(200,200,200, 0.25);
-            color: #b0b0b0;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(200,200,200,0.15);
-        }
-        .back-link {
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            color: rgba(255,255,255,0.4);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .back-link:hover {
-            background: rgba(200,200,200, 0.1);
-            color: #b0b0b0;
-            border-color: rgba(200,200,200,0.2);
-        }
-        .no-cards {
-            text-align: center;
-            color: rgba(255,255,255,0.3);
-            padding: 3rem;
-            font-size: 1rem;
-        }
-        .flashcard-nav-btn {
-            padding: 0.6rem 1.35rem;
-            background: rgba(255,255,255,0.04);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 14px;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .flashcard-nav-btn:hover {
-            background: rgba(200,200,200, 0.12);
-            border-color: rgba(200,200,200, 0.25);
-            color: #b0b0b0;
-            transform: translateY(-2px);
-        }
-    </style>
-    <link rel="stylesheet" href="enhancements.css">
-    <link rel="stylesheet" href="revision-mode.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="light-theme.css">
-    <link rel="stylesheet" href="components.css">
+
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
     <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
@@ -152,8 +33,7 @@
     </div>
 
     <script src="flashcards-app.js"></script>
-    <script src="enhancements.js"></script>
-    <script src="revision-mode.js"></script>
+<script src="revision-mode.js"></script>
     <script src="pwa-register.js"></script>
 </body>
 </html>
