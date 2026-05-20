@@ -1800,3 +1800,67 @@ body { overflow-x: hidden; }
   body { background: white; color: black; }
   .study-content { max-width: 100%; padding: 0; }
 }
+
+/* ═══════════ DEFENSIVE: study content above decorative overlays ═══════════ */
+.study-content,
+.study-sidebar,
+.study-header,
+.unit {
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════ BLOCK-LEVEL DIVIDERS BETWEEN UNITS (MOBILE) ═══════════ */
+@media (max-width: 768px) {
+  .unit {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border, rgba(0,0,0,0.1));
+  }
+  .unit:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .unit > h3 {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 -0.5rem 1rem;
+    background: var(--bg-card);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    scroll-margin-top: 80px;
+  }
+  h2[id^="block"] {
+    font-size: 1.4rem;
+    margin: 2.5rem -0.5rem 1rem;
+    padding: 0.75rem 0.85rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+  h2[id^="block"]::after { display: none; }
+
+  /* Force video iframes to fit viewport */
+  .video-wrapper { max-width: 100%; }
+  .video-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+
+  /* Tables never overflow */
+  .comparison-table, .db table, .db, .qr-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Pyramid widths in % break on narrow screens */
+  .py-l { width: 100% !important; }
+}
+
+/* Disable particle overlay on any device */
+body::before,
+body::after {
+  z-index: -1 !important;
+  pointer-events: none !important;
+}

@@ -34,8 +34,7 @@ body.subject-mmpc03::before {
         radial-gradient(1px 1px at 60% 30%, rgba(0,180,216,0.25), transparent),
         radial-gradient(2px 2px at 25% 45%, rgba(247,127,0,0.15), transparent);
     pointer-events: none;
-    z-index: 0;
-    animation: particleDrift 30s ease-in-out infinite alternate;
+    z-index: -1;
 }
 body.subject-mmpc03::after {
     content: '';
@@ -48,18 +47,7 @@ body.subject-mmpc03::after {
         radial-gradient(2px 2px at 55% 85%, rgba(0,180,216,0.15), transparent),
         radial-gradient(1px 1px at 95% 35%, rgba(144,224,239,0.2), transparent);
     pointer-events: none;
-    z-index: 0;
-    animation: particleDrift2 25s ease-in-out infinite alternate;
-}
-@keyframes particleDrift {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(15px, -10px); }
-    100% { transform: translate(-10px, 15px); }
-}
-@keyframes particleDrift2 {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-12px, 8px); }
-    100% { transform: translate(8px, -12px); }
+    z-index: -1;
 }
 
 /* --- Typography --- */
@@ -321,16 +309,7 @@ h2[id^="block"]::after {
 .video-section-content.active { display: block; }
 
 /* Visual diagram box */
-.visual-diagram {
-    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
-    border: 1px solid rgba(78,205,196,0.2);
-    border-radius: 16px;
-    padding: 24px;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 .visual-diagram:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);

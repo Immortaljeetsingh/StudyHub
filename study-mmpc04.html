@@ -19,25 +19,7 @@ body::before {
     animation: ambientDrift 15s ease-in-out infinite alternate !important;
 }
 /* CSS Particles */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image:
-        radial-gradient(2px 2px at 10% 20%, rgba(6,214,160,0.3), transparent),
-        radial-gradient(2px 2px at 30% 60%, rgba(17,138,178,0.25), transparent),
-        radial-gradient(1px 1px at 50% 10%, rgba(239,71,111,0.2), transparent),
-        radial-gradient(2px 2px at 70% 40%, rgba(6,214,160,0.2), transparent),
-        radial-gradient(1px 1px at 90% 80%, rgba(17,138,178,0.3), transparent),
-        radial-gradient(2px 2px at 15% 85%, rgba(255,255,255,0.15), transparent),
-        radial-gradient(1px 1px at 85% 15%, rgba(6,214,160,0.25), transparent),
-        radial-gradient(2px 2px at 45% 75%, rgba(17,138,178,0.15), transparent),
-        radial-gradient(1px 1px at 65% 25%, rgba(239,71,111,0.15), transparent),
-        radial-gradient(2px 2px at 25% 45%, rgba(255,255,255,0.1), transparent);
-    z-index: -1;
-    pointer-events: none;
-    animation: particleFloat 20s linear infinite;
-}
+/* particle overlay removed - was breaking mobile */
 @keyframes particleFloat {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
@@ -299,25 +281,8 @@ h3, h4, h5 {
 .video-section-content.active { display: block; }
 
 /* Background particles */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image:
-        radial-gradient(2px 2px at 20% 30%, rgba(78,205,196,0.3), transparent),
-        radial-gradient(2px 2px at 40% 70%, rgba(255,107,107,0.25), transparent),
-        radial-gradient(1px 1px at 60% 20%, rgba(255,230,109,0.3), transparent),
-        radial-gradient(1px 1px at 80% 60%, rgba(78,205,196,0.2), transparent),
-        radial-gradient(2px 2px at 10% 80%, rgba(176,176,176,0.25), transparent),
-        radial-gradient(1px 1px at 90% 40%, rgba(255,107,107,0.2), transparent);
-    background-size: 550px 550px;
-    animation: particleDrift 60s linear infinite;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.7;
-}
-@keyframes particleDrift {
-    0% { background-position: 0 0, 100px 200px, 200px 100px, 300px 300px, 50px 150px, 250px 50px; }
+/* particle overlay removed - was breaking mobile */
+
     100% { background-position: 600px 600px, 700px 800px, 800px 700px, 900px 900px, 650px 750px, 850px 650px; }
 }
 /* Case study box */
