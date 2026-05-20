@@ -90,7 +90,9 @@ function toggleTheme() {
 }
 function loadTheme() { var saved = localStorage.getItem('studyhub-theme'); if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); var btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = '☀️ Light'; } }
 
-// ==================== API SETTINGS (removed from subject pages — kept in study-hub.html via app.js) ====================
+// ==================== API SETTINGS (stub — kept in study-hub.html via app.js) ====================
+function renderApiSettingsModal() { return ''; }
+function openApiSettings() {}
 
 // ==================== UNITS TOGGLE ====================
 function toggleUnits() {
@@ -185,9 +187,10 @@ function initSidebarCloseButton() {
 
 // ==================== COMPONENTS ====================
 function renderToolbar(subjectCode) {
-    const L = { 'mmpc-01':{study:'study-mmpc01.html',quiz:'quiz-mmpc01.html'},'mmpc-02':{study:'study-mmpc02.html',quiz:'quiz-mmpc02.html'},'mmpc-03':{study:'study-mmpc03.html',quiz:'quiz-mmpc03.html'},'mmpc-04':{study:'study-mmpc04.html',quiz:'quiz-mmpc04.html'},'mmpc-05':{study:'study-mmpc05.html',quiz:'quiz-mmpc05.html'},'mmpc-06':{study:'study-mmpc06.html',quiz:'quiz-mmpc06.html'},'mmpc-07':{study:'study-mmpc07.html',quiz:'quiz-mmpc07.html'} };
-    const l = L[subjectCode] || {};
-    return `<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">← Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">☰ Units</button>${l.study?`<a href="${l.study}" class="btn btn-outline">📘 Study</a>`:''}${l.quiz?`<a href="${l.quiz}" class="btn btn-outline">📝 Quiz</a>`:''}<button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">🌙 Dark</button></div>`;
+    var code = subjectCode.replace('-', '');
+    var studyHref = 'study-' + code + '.html';
+    var quizHref = 'quiz-' + code + '.html';
+    return '<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">\u2190 Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">\u2630 Units</button><a href="' + studyHref + '" class="btn btn-outline">\uD83D\uDCD8 Study</a><a href="' + quizHref + '" class="btn btn-outline">\uD83D\uDCDD Quiz</a><button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">\uD83C\uDF19 Dark</button></div>';
 }
 
 // ==================== INIT ====================

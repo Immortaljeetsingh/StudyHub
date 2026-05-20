@@ -384,7 +384,16 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js" defer></script>
     <script defer>
     (function(){
+        var el = document.getElementById('visitorCount');
+        function showCount(n) { if (el) el.textContent = n; }
+        function fallbackCountAPI() {
+            fetch('https://api.countapi.xyz/get/studyhub/visitors')
+                .then(function(r) { return r.json(); })
+                .then(function(d) { showCount(d.value || 0); })
+                .catch(function() { showCount('--'); });
+        }
         try {
+            if (typeof firebase === 'undefined') { fallbackCountAPI(); return; }
             firebase.initializeApp({
                 apiKey: "AIzaSyCDJ6WnWD6KDqP_W6eXioAmFSiWCmeR7X8",
                 authDomain: "studyhub-23608.firebaseapp.com",
@@ -395,21 +404,20 @@
                 appId: "1:154941584567:web:b8425fc508ed7495788932"
             });
             var db = firebase.database();
-            var el = document.getElementById('visitorCount');
             var visited = localStorage.getItem('studyhub_visited');
             if (visited) {
                 db.ref('visitorCount').once('value').then(function(snap) {
-                    if (el) el.textContent = snap.val() || 0;
-                });
+                    showCount(snap.val() || 0);
+                }).catch(function() { fallbackCountAPI(); });
             } else {
                 db.ref('visitorCount').transaction(function(current) {
                     return (current || 0) + 1;
                 }).then(function(result) {
                     localStorage.setItem('studyhub_visited', '1');
-                    if (el) el.textContent = result.snapshot.val();
-                });
+                    showCount(result.snapshot.val());
+                }).catch(function() { fallbackCountAPI(); });
             }
-        } catch(e) { console.warn('Firebase init failed:', e); }
+        } catch(e) { console.warn('Firebase init failed:', e); fallbackCountAPI(); }
     })();
     </script>
 
