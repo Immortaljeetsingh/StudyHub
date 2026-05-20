@@ -1048,7 +1048,6 @@ document.querySelectorAll(".unit").forEach(function(e){e.classList.add("fade-in"
 window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar-nav a[href^=\"#u\"],.sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
 <script src="bookmark-notes.js"></script>
-<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

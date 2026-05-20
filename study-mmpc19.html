@@ -1041,7 +1041,6 @@
   window.addEventListener('scroll',function(){var bar=document.getElementById('readingProgress');if(bar){var h=document.documentElement;bar.style.width=Math.min((h.scrollTop/(h.scrollHeight-h.clientHeight))*100,100)+'%';}var links=document.querySelectorAll('.sidebar-nav a[href^="#u"]');var sections=[];links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)sections.push({el:t,link:a});});var pos=window.scrollY+120;var current=null;sections.forEach(function(s){if(s.el.offsetTop<=pos)current=s.link;});links.forEach(function(a){a.classList.remove('active');});if(current)current.classList.add('active');});
 })();
 </script>
-<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

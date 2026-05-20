@@ -1033,11 +1033,15 @@ footer kbd {
 /* ═══════════ STUDY PAGE LAYOUT ═══════════ */
 .study-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 1fr;
   min-height: 100vh;
 }
+.study-layout.sidebar-visible {
+  grid-template-columns: 260px 1fr;
+}
 @media (max-width: 900px) {
-  .study-layout { grid-template-columns: 1fr; }
+  .study-layout,
+  .study-layout.sidebar-visible { grid-template-columns: 1fr; }
   .study-sidebar { display: none; }
   .study-sidebar.mobile-open {
     display: flex; position: fixed; top: 0; left: 0;
@@ -1057,7 +1061,7 @@ footer kbd {
   .sidebar-close-btn:hover { color: var(--accent); }
 }
 
-/* Sidebar */
+/* Sidebar — hidden by default, shown when units-open */
 .study-sidebar {
   background: rgba(255,255,255,0.02);
   backdrop-filter: blur(24px) saturate(180%);
@@ -1068,7 +1072,11 @@ footer kbd {
   height: 100vh; overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.1) transparent;
-  display: flex; flex-direction: column;
+  display: none;
+  flex-direction: column;
+}
+.study-sidebar.units-open {
+  display: flex;
 }
 .sidebar-header {
   padding: 0 1.25rem 1.25rem;
@@ -1469,6 +1477,21 @@ footer kbd {
   backdrop-filter: blur(24px) saturate(180%);
   border-bottom: 1px solid var(--glass-border);
   position: sticky; top: 0; z-index: 100;
+}
+#unitsToggleBtn {
+  background: rgba(201,48,44,0.1);
+  border-color: rgba(201,48,44,0.2);
+  color: var(--accent);
+}
+#unitsToggleBtn:hover {
+  background: rgba(201,48,44,0.2);
+  border-color: var(--accent);
+}
+#unitsToggleBtn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
 }
 
 /* ═══════════ VIDEO SECTIONS ═══════════ */

@@ -1052,6 +1052,5 @@ NAV = (1000 - 50) / 50 = Rs 19 per unit</div>
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})();
 window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.getElementById("readingProgress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
-<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body></html>

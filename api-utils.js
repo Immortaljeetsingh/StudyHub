@@ -92,6 +92,36 @@ function loadTheme() { var saved = localStorage.getItem('studyhub-theme'); if (s
 
 // ==================== API SETTINGS (removed from subject pages — kept in study-hub.html via app.js) ====================
 
+// ==================== UNITS TOGGLE ====================
+function toggleUnits() {
+    const sb = document.querySelector('.study-sidebar');
+    const layout = document.querySelector('.study-layout');
+    if (!sb || !layout) return;
+    const isOpen = sb.classList.toggle('units-open');
+    layout.classList.toggle('sidebar-visible', isOpen);
+    try { localStorage.setItem('studyhub-units-open', isOpen ? '1' : '0'); } catch(e) {}
+    var btn = document.getElementById('unitsToggleBtn');
+    if (btn) {
+        btn.textContent = isOpen ? '✕ Hide Units' : '☰ Units';
+        btn.classList.toggle('active', isOpen);
+    }
+}
+function restoreUnitsState() {
+    try {
+        var isOpen = localStorage.getItem('studyhub-units-open') === '1';
+        if (isOpen) {
+            var sb = document.querySelector('.study-sidebar');
+            var layout = document.querySelector('.study-layout');
+            if (sb && layout) {
+                sb.classList.add('units-open');
+                layout.classList.add('sidebar-visible');
+                var btn = document.getElementById('unitsToggleBtn');
+                if (btn) { btn.textContent = '✕ Hide Units'; btn.classList.add('active'); }
+            }
+        }
+    } catch(e) {}
+}
+
 // ==================== UTILS ====================
 function initReadingProgress() { const bar = document.querySelector('.reading-progress'); if (!bar) return; window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }); }
 function toggleMobileSidebar() { const sb = document.querySelector('.study-sidebar'); if (sb) sb.classList.toggle('mobile-open'); }
@@ -157,12 +187,12 @@ function initSidebarCloseButton() {
 function renderToolbar(subjectCode) {
     const L = { 'mmpc-01':{study:'study-mmpc01.html',quiz:'quiz-mmpc01.html'},'mmpc-02':{study:'study-mmpc02.html',quiz:'quiz-mmpc02.html'},'mmpc-03':{study:'study-mmpc03.html',quiz:'quiz-mmpc03.html'},'mmpc-04':{study:'study-mmpc04.html',quiz:'quiz-mmpc04.html'},'mmpc-05':{study:'study-mmpc05.html',quiz:'quiz-mmpc05.html'},'mmpc-06':{study:'study-mmpc06.html',quiz:'quiz-mmpc06.html'},'mmpc-07':{study:'study-mmpc07.html',quiz:'quiz-mmpc07.html'} };
     const l = L[subjectCode] || {};
-    return `<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">← Hub</a>${l.study?`<a href="${l.study}" class="btn btn-outline">📘 Study</a>`:''}${l.quiz?`<a href="${l.quiz}" class="btn btn-outline">📝 Quiz</a>`:''}<button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">🌙 Dark</button></div>`;
+    return `<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">← Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">☰ Units</button>${l.study?`<a href="${l.study}" class="btn btn-outline">📘 Study</a>`:''}${l.quiz?`<a href="${l.quiz}" class="btn btn-outline">📝 Quiz</a>`:''}<button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">🌙 Dark</button></div>`;
 }
 
 // ==================== INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
-    loadTheme(); initSummarizeButtons(); initAskButtons(); initReadingProgress();
+    loadTheme(); restoreUnitsState(); initSummarizeButtons(); initAskButtons(); initReadingProgress();
     initScrollSpy(); initMobileSidebarAutoClose(); initSidebarCloseButton();
 
     // Mobile: wrap tables in scrollable containers
