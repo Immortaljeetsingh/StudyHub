@@ -6,29 +6,33 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
 <style>
 html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
 body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,206,201,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
 @keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00cec9,#00b4d8,#00cec9);background-size:300% 100%;animation:gS 4s ease-in-out infinite;border-radius:2px}@keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#00cec9,#00b4d8);border-radius:2px}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,206,201,.25),0 0 20px rgba(0,206,201,.1)!important;border-color:rgba(0,206,201,.4)!important}
+.callout{transition:transform .3s ease,box-shadow .3s ease!important}.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}
 .study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
-.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
 .sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
-.sidebar a:hover{background:rgba(255,255,255,.05);color:#00cec9;padding-left:1rem}
-.sidebar a.active{color:#00cec9;background:rgba(0,206,201,.1);font-weight:600}
+.study-sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#00cec9;padding-left:1rem}
+.study-sidebar a.active{color:#00cec9;background:rgba(0,206,201,.1);font-weight:600}
 .study-header{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
-.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,206,201,.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
-@keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,206,201,.15),transparent 70%);animation:hG 8s ease-in-out infinite alternate}
+@keyframes hG{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
 .study-header h1{font-size:2rem;font-weight:800;color:#00cec9;letter-spacing:-.03em;position:relative}
 .study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
 .subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#00cec9,#00cec9cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}
-.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
-h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}
-h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc,#00d4ff,#00cec9);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}
-@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#00cec9;margin-bottom:.4rem}
 .callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
 .callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}
 .callout-definition{background:rgba(0,206,201,.08);border-color:#00cec9}
@@ -40,216 +44,1059 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 .callout-example .callout-label{color:#00d2ff}
 .callout-examtip .callout-label{color:#ff6b6b}
 .callout-mnemonic .callout-label{color:#00cec9}
-.summary-box{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}
+.summary-box{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0;transition:transform .3s ease,box-shadow .3s ease}
 .summary-box:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(255,215,0,.15)}
+.summary-label,.summary-box h4{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}
 .summary-box ul{padding-left:1.5rem;margin:0}
 .summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}
-.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}
-.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}
-.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}
+.visual-diagram{background:linear-gradient(135deg,rgba(0,206,201,.08),rgba(0,210,255,.06));border:1px solid rgba(0,206,201,.25);border-radius:16px;padding:24px;margin:20px 0;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.visual-diagram:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,206,201,.2)}
+.visual-diagram::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00cec9,#00b4d8,#00cec9)}
+.visual-diagram h5{color:#00cec9;margin-bottom:16px;font-size:1.1em}
 table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
 th{background:rgba(0,206,201,.15);color:#00cec9cc;padding:.6rem .8rem;text-align:left;font-weight:600;border:1px solid rgba(255,255,255,.08)}
 td{padding:.5rem .8rem;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
 tr:nth-child(even){background:rgba(255,255,255,.02)}
-.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
-.s-b{background:rgba(0,206,201,.15);color:#00cec9cc;border:1px solid rgba(0,206,201,.3)}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(0,206,201,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#00cec9,#00b4d8);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
+.section-badge{display:inline-block;background:linear-gradient(135deg,#00cec9,#00b4d8);color:#fff;font-size:.75em;padding:3px 10px;border-radius:20px;margin-left:10px;vertical-align:middle;font-weight:600}
+.expandable-content{max-height:0;overflow:hidden;transition:max-height .5s ease}.expandable-content.expanded{max-height:5000px}.expand-toggle{display:inline-block;padding:.4rem 1rem;background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,206,201,.1));border:1px solid rgba(0,206,201,.3);border-radius:6px;color:#c8c8c8;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .3s ease}.expand-toggle:hover{background:linear-gradient(135deg,rgba(0,206,201,.25),rgba(0,206,201,.15));box-shadow:0 2px 10px rgba(200,200,200,.12)}
+.vd-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}.vd-step{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,206,201,.1));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 16px;text-align:center;min-width:110px;transition:all .3s ease}.vd-step:hover{background:linear-gradient(135deg,rgba(0,206,201,.25),rgba(0,206,201,.18))}
+.vd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem}.vd-node{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;margin:.3rem;transition:transform .2s ease,box-shadow .2s ease}.vd-node:hover{transform:scale(1.05);box-shadow:0 4px 15px rgba(0,206,201,.3)}
+.case-study{background:linear-gradient(135deg,rgba(0,206,201,.06),rgba(0,206,201,.04));border:1px solid rgba(0,206,201,.2);border-left:4px solid #00cec9;border-radius:8px;padding:1.2rem;margin:1rem 0}.case-study h5{color:#00cec9;margin-bottom:.5rem;font-weight:600}
 .back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}
 .back-link:hover{color:#00cec9}
-.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.75rem 1rem;border-radius:8px;font-size:1.2rem;cursor:pointer;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .skip-link{position:absolute;top:-40px;left:0;background:#00cec9;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}
-.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc);z-index:9999;transition:width .1s;width:0%}
-@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00cec9,#00b4d8);z-index:9999;transition:width .1s;width:0%}
+@media(max-width:768px){.mobile-nav-toggle{display:flex}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpb06">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpb-06'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPB-06</h3></div>
-  <a href="#u1">Unit 1: Business Ethics</a>
-  <a href="#u2">Unit 2: CG Concepts</a>
-  <a href="#u3">Unit 3: Institutional Mechanism</a>
-  <a href="#u4">Unit 4: Code of Conduct</a>
-  <a href="#u5">Unit 5: Basel Framework</a>
-  <a href="#u6">Unit 6: CG in Indian Banking</a>
-  <a href="#u7">Unit 7: Disclosure & Transparency</a>
-  <a href="#u8">Unit 8: Global Banking Governance</a>
-  <a href="#u9">Unit 9: CG in NBFCs</a>
-  <a href="#u10">Unit 10: CG in Mutual Funds</a>
-  <a href="#u11">Unit 11: CG in Insurance</a>
-  <a href="#u12">Unit 12: Financial Inclusion</a>
-  <a href="#u13">Unit 13: Ethics, Governance & CSR</a>
-  <a href="#u14">Unit 14: Governance Reforms</a>
-</nav>
-<main class="study-content" id="main-content">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPB-06</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Ethics &amp; Governance</a>
+<a href="#u1">Unit 1: Business Ethics</a>
+<a href="#u2">Unit 2: CG Concepts</a>
+<a href="#u3">Unit 3: Institutional Mechanism</a>
+<a href="#u4">Unit 4: Code of Conduct</a>
+<a href="#block2">Block-02 Basel Framework</a>
+<a href="#u5">Unit 5: Basel Framework</a>
+<a href="#u6">Unit 6: CG in Indian Banking</a>
+<a href="#u7">Unit 7: Disclosure &amp; Transparency</a>
+<a href="#u8">Unit 8: Global Banking Governance</a>
+<a href="#block3">Block-03 Financial Sector</a>
+<a href="#u9">Unit 9: CG in NBFCs</a>
+<a href="#u10">Unit 10: CG in Mutual Funds</a>
+<a href="#u11">Unit 11: CG in Insurance</a>
+<a href="#u12">Unit 12: Financial Inclusion</a>
+<a href="#block4">Block-04 Reforms</a>
+<a href="#u13">Unit 13: Ethics, Governance &amp; CSR</a>
+<a href="#u14">Unit 14: Governance Reforms</a>
+<a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
+<a href="#exam">&#x1F3AF; Exam Focus</a>
+<a href="quiz-mmpb06.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPB-06</span><h1>Corporate Governance in Banking and Financial Sector</h1>
-<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; IGNOU MBA</p></div>
+<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; 4 Blocks &#x2022; Basel Norms &#x2022; Indian Examples &#x2022; Exam-Ready</p></div>
+
+<!-- BLOCK 1 -->
+<h2 id="block1">Block-01: Ethics &amp; Governance Foundations</h2>
 
 <div class="unit" id="u1">
 <h3>Unit 1: Business Ethics</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Business Ethics</strong> = moral principles guiding business behavior. Three ethical theories: Utilitarianism (greatest good), Deontology (duty-based), Virtue Ethics (character-based).</p></div>
-<table><tr><th>Theory</th><th>Focus</th><th>Example</th></tr><tr><td>Utilitarianism</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td></tr><tr><td>Deontology</td><td>Duty-based, rules matter</td><td>"Honesty is always right"</td></tr><tr><td>Virtue Ethics</td><td>Character-based</td><td>"What would a good person do?"</td></tr></table>
-<h4>Good Governance Principles (T-A-F-R)</h4>
-<ul><li><strong>T</strong>ransparency</li><li><strong>A</strong>ccountability</li><li><strong>F</strong>airness</li><li><strong>R</strong>esponsibility</li></ul>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The Satyam scam (2009) — India's largest corporate fraud — led to major governance reforms including stricter audit requirements and independent director mandates.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"U-D-V"</strong> for ethical theories: Utilitarianism, Deontology, Virtue Ethics</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Business Ethics</strong> = moral principles guiding business behavior. Three ethical theories: Utilitarianism (greatest good), Deontology (duty-based), Virtue Ethics (character-based).</p>
+<p><strong>Code of Ethics</strong> = formal document outlining ethical standards. <strong>Whistleblowing</strong> = reporting unethical/illegal activities. <strong>Corporate Governance</strong> = system of rules by which companies are directed and controlled.</p></div>
+
+<h4>Ethical Theories Explained</h4>
+<table>
+<tr><th>Theory</th><th>Proponent</th><th>Core Principle</th><th>Business Application</th></tr>
+<tr><td><strong>Utilitarianism</strong></td><td>Jeremy Bentham, John Stuart Mill</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis, stakeholder impact assessment</td></tr>
+<tr><td><strong>Deontology</strong></td><td>Immanuel Kant</td><td>Duty-based, rules must be followed regardless of outcome</td><td>Honest advertising, fair treatment, contract compliance</td></tr>
+<tr><td><strong>Virtue Ethics</strong></td><td>Aristotle</td><td>Character-based, what would a virtuous person do?</td><td>Building ethical culture, leadership by example</td></tr>
+</table>
+
+<h4>Ethical Decision-Making Process</h4>
+<ol>
+<li>Identify the ethical issue</li>
+<li>Gather all relevant facts</li>
+<li>Evaluate alternatives using ethical theories</li>
+<li>Choose the best course of action</li>
+<li>Implement and review the decision</li>
+</ol>
+
+<h4>Stakeholder Analysis</h4>
+<p>Every business decision affects multiple stakeholders. Ethical managers consider the impact on all parties:</p>
+<ul>
+<li><strong>Shareholders</strong> — expect returns on investment</li>
+<li><strong>Employees</strong> — expect fair wages, safe working conditions</li>
+<li><strong>Customers</strong> — expect quality products, fair pricing</li>
+<li><strong>Suppliers</strong> — expect timely payments, fair terms</li>
+<li><strong>Community</strong> — expects environmental responsibility, job creation</li>
+<li><strong>Government</strong> — expects tax compliance, legal adherence</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Ethical Theories</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Theory</th><th>Focus</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Utilitarianism</strong></td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td></tr>
+<tr><td><strong>Deontology</strong></td><td>Duty-based, rules matter</td><td>"Honesty is always right"</td></tr>
+<tr><td><strong>Virtue Ethics</strong></td><td>Character-based</td><td>"What would a good person do?"</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Good Governance Principles (T-A-F-R)</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>T</strong>ransparency</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>A</strong>ccountability</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>F</strong>airness</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>R</strong>esponsibility</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="Business Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ethical Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Ethical Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The Satyam scam (2009) &#x2014; India's largest corporate fraud &#x2014; led to major governance reforms including stricter audit requirements and independent director mandates.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know all three ethical theories with examples. The ethical decision-making process is a structured answer.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"U-D-V"</strong> for ethical theories: <strong>U</strong>tilitarianism, <strong>D</strong>eontology, <strong>V</strong>irtue Ethics</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Three ethical theories: U-D-V</li>
 <li>Good governance: Transparency, Accountability, Fairness, Responsibility</li>
 <li>Satyam scam triggered major governance reforms</li>
-</ul></div></div>
+</ul></div>
+</div></div>
 
 <div class="unit" id="u2">
-<h3>Unit 2: Corporate Governance — Concepts and Theories</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Agency Theory</strong> = separation of ownership (shareholders) and control (management). Agency Costs = Monitoring + Bonding + Residual Loss.</p></div>
-<h4>Board Structure</h4>
+<h3>Unit 2: Corporate Governance &#x2014; Concepts and Theories</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Agency Theory</strong> = separation of ownership (shareholders) and control (management). Agency Costs = Monitoring + Bonding + Residual Loss. <strong>Stakeholder Theory</strong> = consider ALL stakeholders, not just shareholders.</p>
+<p><strong>Agency Problem</strong> = managers may act in self-interest rather than shareholders' interest. <strong>Stewardship Theory</strong> = managers act as responsible stewards of the organization. <strong>Board of Directors</strong> = provides oversight, strategy direction, and accountability.</p></div>
+
+<h4>Agency Costs Explained</h4>
 <ul>
-<li><strong>Executive Directors:</strong> Full-time employees (CEO, CFO)</li>
-<li><strong>Independent Directors:</strong> No material relationship with company</li>
-<li><strong>Non-Executive Directors:</strong> Not involved in daily operations</li>
+<li><strong>Monitoring Costs:</strong> Expenses shareholders incur to supervise management behavior (audit fees, board meetings, reporting requirements)</li>
+<li><strong>Bonding Costs:</strong> Expenses management incurs to assure shareholders they're acting in their interest (voluntary disclosures, governance codes)</li>
+<li><strong>Residual Loss:</strong> Despite monitoring and bonding, some inefficiency remains due to information asymmetry</li>
 </ul>
-<table><tr><th>Shareholder Theory</th><th>Stakeholder Theory</th></tr><tr><td>Maximize shareholder value</td><td>Balance all stakeholder interests</td></tr><tr><td>Profit-focused</td><td>Multi-dimensional</td></tr><tr><td>Milton Friedman</td><td>R. Edward Freeman</td></tr><tr><td>Short-term emphasis</td><td>Long-term emphasis</td></tr></table>
+
+<h4>Board Committees</h4>
+<table>
+<tr><th>Committee</th><th>Primary Function</th><th>Key Responsibilities</th></tr>
+<tr><td><strong>Audit Committee</strong></td><td>Financial oversight</td><td>Review financial statements, internal controls, auditor independence</td></tr>
+<tr><td><strong>Nomination Committee</strong></td><td>Board composition</td><td>Identify and recommend board candidates, evaluate board effectiveness</td></tr>
+<tr><td><strong>Remuneration Committee</strong></td><td>Executive pay</td><td>Set CEO/executive compensation, align pay with performance</td></tr>
+<tr><td><strong>Risk Committee</strong></td><td>Risk management</td><td>Oversee risk framework, identify emerging risks, stress testing</td></tr>
+</table>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Board Structure</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Executive Directors</strong><br><small>CEO, CFO</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Independent Directors</strong><br><small>No material relationship</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Non-Executive Directors</strong><br><small>Not in daily ops</small></div>
+</div>
+</div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Shareholder Theory</th><th>Stakeholder Theory</th></tr></thead>
+<tbody>
+<tr><td>Maximize shareholder value</td><td>Balance all stakeholder interests</td></tr>
+<tr><td>Profit-focused</td><td>Multi-dimensional</td></tr>
+<tr><td>Milton Friedman</td><td>R. Edward Freeman</td></tr>
+<tr><td>Short-term emphasis</td><td>Long-term emphasis</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Agency Theory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fKo0H4LHo5I" title="Agency Theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance Basics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3hMNMJ2p48c" title="CG Basics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Infosys has a strong board with majority independent directors, separate Chairman and CEO roles, and active board committees.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"M-B-R"</strong> for agency costs: Monitoring, Bonding, Residual loss</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"M-B-R"</strong> for agency costs: <strong>M</strong>onitoring, <strong>B</strong>onding, <strong>R</strong>esidual loss</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Agency theory = ownership vs control separation</li>
 <li>Agency costs: Monitoring + Bonding + Residual loss</li>
 <li>Stakeholder vs Shareholder: Friedman vs Freeman</li>
-</ul></div></div>
+</ul></div>
+</div></div>
 
 <div class="unit" id="u3">
 <h3>Unit 3: Institutional Mechanism</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Institutional Investors</strong> = mutual funds, pension funds, insurance companies. <strong>Proxy Voting</strong> = shareholders vote without attending meetings. <strong>Executive Compensation</strong> = salary, bonuses, stock options.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Institutional Investors</strong> = mutual funds, pension funds, insurance companies. <strong>Proxy Voting</strong> = shareholders vote without attending meetings. <strong>Executive Compensation</strong> = salary, bonuses, stock options.</p>
+<p><strong>Shareholder Activism</strong> = shareholders use their equity stake to influence corporate governance and decision-making. <strong>ESOP</strong> = Employee Stock Ownership Plan - aligns employee and shareholder interests.</p></div>
+
+<h4>Types of Institutional Investors</h4>
+<table>
+<tr><th>Type</th><th>Characteristics</th><th>Role in Governance</th></tr>
+<tr><td><strong>Mutual Funds</strong></td><td>Pool money from retail investors</td><td>Vote on resolutions, engage with management</td></tr>
+<tr><td><strong>Pension Funds</strong></td><td>Long-term investors, stable capital</td><td>Focus on long-term value, ESG integration</td></tr>
+<tr><td><strong>Insurance Companies</strong></td><td>Large asset base, conservative</td><td>Risk oversight, governance standards</td></tr>
+<tr><td><strong>Sovereign Wealth Funds</strong></td><td>Government-owned, very large</td><td>Strategic investments, national interest</td></tr>
+</table>
+
+<h4>Proxy Voting Mechanism</h4>
+<ul>
+<li><strong>Process:</strong> Shareholders receive notice of AGM/EGM, vote on resolutions</li>
+<li><strong>Methods:</strong> Postal ballot, e-voting, voting at meeting</li>
+<li><strong>Key Resolutions:</strong> Board appointments, executive compensation, mergers, related party transactions</li>
+<li><strong>Institutional Role:</strong> Large investors exercise significant voting power</li>
+</ul>
+
+<h4>Executive Compensation Best Practices</h4>
+<ul>
+<li>Link pay to performance (both short-term and long-term)</li>
+<li>Clawback provisions for restatements</li>
+<li>Say-on-pay votes for shareholders</li>
+<li>Disclosure of pay ratios (CEO vs median employee)</li>
+<li>Independent compensation committee</li>
+</ul>
+
+<h4>Executive Compensation Components</h4>
+<table>
+<tr><th>Component</th><th>Description</th><th>Purpose</th></tr>
+<tr><td><strong>Base Salary</strong></td><td>Fixed annual pay</td><td>Attract and retain talent</td></tr>
+<tr><td><strong>Annual Bonus</strong></td><td>Performance-based variable pay</td><td>Reward short-term performance</td></tr>
+<tr><td><strong>Stock Options (ESOPs)</strong></td><td>Right to buy shares at fixed price</td><td>Align interests with shareholders</td></tr>
+<tr><td><strong>Long-term Incentives</strong></td><td>Restricted stock, performance shares</td><td>Encourage long-term value creation</td></tr>
+<tr><td><strong>Benefits &amp; Perquisites</strong></td><td>Health insurance, car, housing</td><td>Competitive compensation package</td></tr>
+</table>
+
 <h4>Governance Codes</h4>
 <ul>
-<li><strong>SOX Act (2002):</strong> US — response to Enron/WorldCom scandals</li>
-<li><strong>Companies Act 2013:</strong> India — enhanced governance requirements</li>
-<li><strong>SEBI Regulations:</strong> India — listed company governance</li>
+<li><strong>SOX Act (2002):</strong> US &#x2014; response to Enron/WorldCom scandals. Key provisions: CEO/CFO certification of financial statements, auditor independence, internal controls assessment, whistleblower protection</li>
+<li><strong>Companies Act 2013:</strong> India &#x2014; enhanced governance requirements. Key provisions: Independent directors, audit committee, CSR mandate (Section 135), women director requirement</li>
+<li><strong>SEBI Regulations:</strong> India &#x2014; listed company governance. Key provisions: Corporate governance code for listed companies, related party transactions, disclosure requirements</li>
 </ul>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SOX Act Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SC_iM1X1bVw" title="SOX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>HDFC Bank's institutional investors actively participate in governance, voting on key resolutions and engaging with management on risk practices.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-E-P"</strong> for compensation: Salary, ESOPs, Performance bonus</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Institutional investors drive better governance</li><li>SOX Act, Companies Act 2013, SEBI regulations</li><li>Proxy voting enables remote shareholder participation</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-E-P"</strong> for compensation: <strong>S</strong>alary, <strong>E</strong>SOPs, <strong>P</strong>erformance bonus</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Institutional investors drive better governance</li><li>SOX Act, Companies Act 2013, SEBI regulations</li><li>Proxy voting enables remote shareholder participation</li></ul></div>
+</div></div>
 
 <div class="unit" id="u4">
 <h3>Unit 4: Code of Conduct</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Code of Conduct</strong> = rules guiding employee behavior. Components: Integrity, Confidentiality, Conflict of Interest, Compliance. CSR = business responsibility to society.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Code of Conduct</strong> = rules guiding employee behavior. Components: Integrity, Confidentiality, Conflict of Interest, Compliance. CSR = business responsibility to society.</p>
+<p><strong>Disclosure and Transparency</strong> = timely, accurate information to stakeholders about company performance, risks, and governance practices.</p></div>
+
+<h4>Code of Conduct Components</h4>
+<ol>
+<li><strong>Integrity and Honesty:</strong> Acting ethically in all business dealings</li>
+<li><strong>Confidentiality:</strong> Protecting sensitive company and customer information</li>
+<li><strong>Conflict of Interest:</strong> Avoiding situations where personal interests conflict with company interests</li>
+<li><strong>Compliance:</strong> Adhering to all applicable laws, regulations, and company policies</li>
+<li><strong>Reporting Mechanisms:</strong> Channels for reporting violations (hotlines, whistleblower policies)</li>
+</ol>
+
+<h4>Compliance Mechanisms</h4>
+<ul>
+<li>Regular training programs on ethics and compliance</li>
+<li>Anonymous reporting channels (ethics hotlines)</li>
+<li>Monitoring and auditing of compliance</li>
+<li>Enforcement through disciplinary actions</li>
+<li>Periodic review and update of the code</li>
+</ul>
+
+<h4>CSR in India (Section 135)</h4>
+<table>
+<tr><th>Requirement</th><th>Details</th></tr>
+<tr><td><strong>Applicability</strong></td><td>Net worth &#x2265; 500 crore OR turnover &#x2265; 1000 crore OR net profit &#x2265; 5 crore</td></tr>
+<tr><td><strong>CSR Spend</strong></td><td>Minimum 2% of average net profits of last 3 years</td></tr>
+<tr><td><strong>CSR Committee</strong></td><td>Minimum 3 directors, at least 1 independent</td></tr>
+<tr><td><strong>Activities</strong></td><td>Schedule VII: education, healthcare, environment, rural development</td></tr>
+</table>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Code of Conduct</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6uXNfZ3GHrA" title="Code of Conduct" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>TCS has a comprehensive code of conduct covering anti-corruption, data privacy, conflict of interest, and environmental responsibility.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-C-C-D"</strong> for conduct components: Integrity, Confidentiality, Conflict of interest, Disclosure</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Code of conduct = implementation mechanism for governance</li><li>Components: Integrity, Confidentiality, Conflict management, Compliance</li><li>CSR embedded in code of conduct</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-C-C-D"</strong> for conduct components: <strong>I</strong>ntegrity, <strong>C</strong>onfidentiality, <strong>C</strong>onflict of interest, <strong>D</strong>isclosure</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Code of conduct = implementation mechanism for governance</li><li>Components: Integrity, Confidentiality, Conflict management, Compliance</li><li>CSR embedded in code of conduct</li></ul></div>
+</div></div>
+
+<!-- BLOCK 2 -->
+<h2 id="block2">Block-02: Basel Framework</h2>
 
 <div class="unit" id="u5">
 <h3>Unit 5: Basel Framework</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Basel Committee (BCBS)</strong> = global banking regulator. Basel I (1988) = 8% CAR. Basel II (2004) = three pillars. Basel III (2010) = strengthened post-2008 crisis.</p></div>
-<table><tr><th>Basel</th><th>Year</th><th>Focus</th><th>Key Requirement</th></tr><tr><td>Basel I</td><td>1988</td><td>Credit risk</td><td>8% CAR</td></tr><tr><td>Basel II</td><td>2004</td><td>Three pillars</td><td>More risk-sensitive</td></tr><tr><td>Basel III</td><td>2010</td><td>Post-crisis reform</td><td>Higher capital, liquidity</td></tr></table>
-<h4>Basel II Three Pillars</h4>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Basel Committee (BCBS)</strong> = global banking regulator. Basel I (1988) = 8% CAR. Basel II (2004) = three pillars. Basel III (2010) = strengthened post-2008 crisis.</p>
+<p><strong>Capital Adequacy Ratio (CAR)</strong> = ratio of bank's capital to its risk-weighted assets, ensuring it can absorb losses. <strong>Risk-Weighted Assets (RWA)</strong> = bank assets weighted according to credit risk.</p></div>
+
+<h4>Basel II Three Pillars Explained</h4>
+<table>
+<tr><th>Pillar</th><th>Focus</th><th>Key Requirements</th></tr>
+<tr><td><strong>Pillar 1: Minimum Capital</strong></td><td>Credit, Market, Operational Risk</td><td>CAR = (Tier 1 + Tier 2) / RWA >= 8%</td></tr>
+<tr><td><strong>Pillar 2: Supervisory Review</strong></td><td>Internal capital assessment</td><td>Banks assess own capital needs, regulatory review</td></tr>
+<tr><td><strong>Pillar 3: Market Discipline</strong></td><td>Disclosure requirements</td><td>Public disclosure of risk profile, capital adequacy</td></tr>
+</table>
+
+<h4>Basel III Enhancements</h4>
+<table>
+<tr><th>Requirement</th><th>Basel II</th><th>Basel III</th></tr>
+<tr><td><strong>CET1</strong></td><td>Not specified</td><td>4.5%</td></tr>
+<tr><td><strong>Tier 1</strong></td><td>4%</td><td>6%</td></tr>
+<tr><td><strong>Total CAR</strong></td><td>8%</td><td>8%</td></tr>
+<tr><td><strong>Capital Conservation Buffer</strong></td><td>None</td><td>2.5%</td></tr>
+<tr><td><strong>Countercyclical Buffer</strong></td><td>None</td><td>0-2.5%</td></tr>
+<tr><td><strong>Leverage Ratio</strong></td><td>None</td><td>3%</td></tr>
+<tr><td><strong>LCR</strong></td><td>None</td><td>100%</td></tr>
+</table>
+
+<h4>CAR Formula with Example</h4>
+<div class="formula-block">CAR = (Tier 1 Capital + Tier 2 Capital) / Risk-Weighted Assets >= 8%
+
+Example: Bank has Tier 1 = Rs 80,000 crore, Tier 2 = Rs 20,000 crore, RWA = Rs 10,00,000 crore
+CAR = (80,000 + 20,000) / 10,00,000 = 10%
+Bank meets Basel III minimum (8% + 2.5% buffer = 10.5%) if it has additional buffer</div>
+
+<h4>Capital Tiers</h4>
 <ul>
-<li><strong>Pillar 1 — Minimum Capital:</strong> Credit, Market, Operational risk. CAR = (Tier 1 + Tier 2) / RWA >= 8%</li>
-<li><strong>Pillar 2 — Supervisory Review:</strong> Internal capital assessment, regulatory review</li>
-<li><strong>Pillar 3 — Market Discipline:</strong> Disclosure requirements, public transparency</li>
+<li><strong>Tier 1 (Core Capital):</strong> Equity capital, retained earnings (highest quality, absorbs losses immediately)</li>
+<li><strong>Tier 2 (Supplementary Capital):</strong> Revaluation reserves, subordinated debt, hybrid instruments</li>
 </ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Basel Evolution</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Basel</th><th>Year</th><th>Focus</th><th>Key Requirement</th></tr></thead>
+<tbody>
+<tr><td><strong>Basel I</strong></td><td>1988</td><td>Credit risk</td><td>8% CAR</td></tr>
+<tr><td><strong>Basel II</strong></td><td>2004</td><td>Three pillars</td><td>More risk-sensitive</td></tr>
+<tr><td><strong>Basel III</strong></td><td>2010</td><td>Post-crisis reform</td><td>Higher capital, liquidity</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Basel II Three Pillars</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Pillar 1</strong><br><small>Minimum Capital</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Pillar 2</strong><br><small>Supervisory Review</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Pillar 3</strong><br><small>Market Discipline</small></div>
+</div>
+</div>
+
 <h4>Basel III Key Ratios</h4>
-<table><tr><th>Ratio</th><th>Minimum</th></tr><tr><td>CET1</td><td>4.5%</td></tr><tr><td>Tier 1</td><td>6%</td></tr><tr><td>Total Capital (CAR)</td><td>8%</td></tr><tr><td>Capital Conservation Buffer</td><td>2.5%</td></tr><tr><td>Leverage Ratio</td><td>3%</td></tr><tr><td>LCR</td><td>100%</td></tr></table>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Ratio</th><th>Minimum</th></tr></thead>
+<tbody>
+<tr><td><strong>CET1</strong></td><td>4.5%</td></tr>
+<tr><td><strong>Tier 1</strong></td><td>6%</td></tr>
+<tr><td><strong>Total Capital (CAR)</strong></td><td>8%</td></tr>
+<tr><td><strong>Capital Conservation Buffer</strong></td><td>2.5%</td></tr>
+<tr><td><strong>Leverage Ratio</strong></td><td>3%</td></tr>
+<tr><td><strong>LCR</strong></td><td>100%</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Basel Framework Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/u1w0ZMjz5gE" title="Basel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Basel III Capital Requirements</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6sMo0VJ7Dmo" title="Basel III" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>State Bank of India maintains CAR of ~13-14%, well above the Basel III minimum of 10.5% (8% + 2.5% buffer).</p></div>
 <div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Basel framework is HIGH-FREQUENCY. Memorize all three pillars, Basel III ratios, and CAR formula.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"M-S-M"</strong> for Basel II pillars: Minimum capital, Supervisory review, Market discipline</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"M-S-M"</strong> for Basel II pillars: <strong>M</strong>inimum capital, <strong>S</strong>upervisory review, <strong>M</strong>arket discipline</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>CAR = (Tier 1 + Tier 2) / RWA >= 8%</li>
+<li>CAR = (Tier 1 + Tier 2) / RWA &gt;= 8%</li>
 <li>Basel II: 3 pillars (M-S-M). Basel III: higher capital + liquidity</li>
 <li>SBI: CAR ~13-14%, above 10.5% minimum</li>
-</ul></div></div>
+</ul></div>
+</div></div>
 
 <div class="unit" id="u6">
 <h3>Unit 6: Corporate Governance in Indian Banking</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>RBI</strong> = regulator and supervisor of Indian banks. Key committees: Narasimham Committee, P.J. Nayak Committee. Risk types: Credit, Market, Operational, Liquidity.</p></div>
-<table><tr><th>Committee</th><th>Focus</th></tr><tr><td>Narasimham I (1991)</td><td>Banking reforms, NPA norms</td></tr><tr><td>Narasimham II (1998)</td><td>Capital adequacy, risk management</td></tr><tr><td>P.J. Nayak (2014)</td><td>Bank board governance</td></tr><tr><td>Raghuram Rajan (2009)</td><td>Financial sector reforms</td></tr></table>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>RBI</strong> = regulator and supervisor of Indian banks. Key committees: Narasimham Committee, P.J. Nayak Committee. Risk types: Credit, Market, Operational, Liquidity.</p>
+<p><strong>Public Sector Banks (PSBs)</strong> = government-owned banks (majority stake). <strong>Private Banks</strong> = privately owned. <strong>Foreign Banks</strong> = headquartered outside India.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Indian Banking Structure</h4>
+<table>
+<tr><th>Type</th><th>Examples</th><th>Governance</th></tr>
+<tr><td><strong>Public Sector Banks</strong></td><td>SBI, PNB, Bank of Baroda</td><td>Government majority stake, government-appointed boards</td></tr>
+<tr><td><strong>Private Banks</strong></td><td>HDFC Bank, ICICI, Axis</td><td>Professional boards, promoter-driven</td></tr>
+<tr><td><strong>Foreign Banks</strong></td><td>Citibank, HSBC, Standard Chartered</td><td>Parent company governance, local board</td></tr>
+<tr><td><strong>Regional Rural Banks</strong></td><td>Gramin Banks</td><td>Sponsor bank oversight, government stake</td></tr>
+<tr><td><strong>Small Finance Banks</strong></td><td>AU Small Finance, Ujjivan</td><td>Specialized, financial inclusion focus</td></tr>
+<tr><td><strong>Payment Banks</strong></td><td>Airtel Payments, Paytm</td><td>Limited services, technology-driven</td></tr>
+</table>
+
+<h4>RBI's Role in Banking Governance</h4>
+<ul>
+<li><strong>Licensing:</strong> Grant banking licenses, approve new bank formation</li>
+<li><strong>Supervision:</strong> On-site inspections, off-site monitoring</li>
+<li><strong>Regulation:</strong> Capital adequacy, exposure norms, priority sector lending</li>
+<li><strong>Resolution:</strong> PCA framework, amalgamation, restructuring</li>
+<li><strong>Consumer Protection:</strong> Banking Ombudsman, grievance redressal</li>
+</ul>
+
+<h4>Key Indian Banking Governance Committees</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Committee</th><th>Year</th><th>Focus</th><th>Key Recommendations</th></tr></thead>
+<tbody>
+<tr><td><strong>Narasimham I</strong></td><td>1991</td><td>Banking reforms</td><td>NPA norms, capital adequacy, phased lending</td></tr>
+<tr><td><strong>Narasimham II</strong></td><td>1998</td><td>Capital adequacy</td><td>Risk management, prudential norms, supervisory framework</td></tr>
+<tr><td><strong>P.J. Nayak</strong></td><td>2014</td><td>Bank board governance</td><td>Board composition, government stake reduction, governance reforms</td></tr>
+<tr><td><strong>Raghuram Rajan</strong></td><td>2009</td><td>Financial sector reforms</td><td>Financial inclusion, banking structure, regulation</td></tr>
+</tbody></table></div>
+
+<h4>Risk Types in Banking</h4>
+<table>
+<tr><th>Risk Type</th><th>Description</th><th>Examples</th></tr>
+<tr><td><strong>Credit Risk</strong></td><td>Borrower default on loan obligations</td><td>NPAs, loan defaults</td></tr>
+<tr><td><strong>Market Risk</strong></td><td>Losses from changes in market prices/rates</td><td>Interest rate changes, forex fluctuations</td></tr>
+<tr><td><strong>Operational Risk</strong></td><td>Losses from inadequate processes/systems</td><td>Fraud, system failures, legal risks</td></tr>
+<tr><td><strong>Liquidity Risk</strong></td><td>Inability to meet short-term obligations</td><td>Cash flow mismatches, bank runs</td></tr>
+</table>
+
+<h4>Internal Controls in Banks</h4>
+<ul>
+<li><strong>Audit Committee:</strong> Oversees financial reporting and internal controls</li>
+<li><strong>Risk Management Committee:</strong> Identifies, measures, and manages risks</li>
+<li><strong>Compliance Function:</strong> Ensures adherence to laws and regulations</li>
+<li><strong>Internal Audit:</strong> Independent assessment of control effectiveness</li>
+</ul>
+
+<h4>Impact of Satyam Scam (2009)</h4>
+<ul>
+<li>Strengthened independent director requirements</li>
+<li>Enhanced audit committee powers</li>
+<li>Whistleblower protection mechanisms</li>
+<li>Stricter disclosure norms</li>
+<li>Enhanced SEBI oversight of listed companies</li>
+</ul>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>ICICI Bank has robust governance with separate Chairman/MD roles, majority independent directors, and dedicated risk and audit committees.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-M-O-L"</strong> for banking risks: Credit, Market, Operational, Liquidity</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>RBI = banking regulator. Key committees: Narasimham, P.J. Nayak</li><li>4 risk types: C-M-O-L</li><li>Link governance reforms to specific scandals/events</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-M-O-L"</strong> for banking risks: <strong>C</strong>redit, <strong>M</strong>arket, <strong>O</strong>perational, <strong>L</strong>iquidity</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>RBI = banking regulator. Key committees: Narasimham, P.J. Nayak</li><li>4 risk types: C-M-O-L</li><li>Link governance reforms to specific scandals/events</li></ul></div>
+</div></div>
 
 <div class="unit" id="u7">
 <h3>Unit 7: Disclosure and Transparency in Banking</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>NPA (Non-Performing Asset)</strong> = loan overdue 90+ days. <strong>CRILC</strong> = RBI's database for borrowers with exposure >= Rs 5 crore. Asset Classification: Standard, Sub-standard, Doubtful, Loss.</p></div>
-<table><tr><th>Category</th><th>Description</th><th>Provisioning</th></tr><tr><td>Standard</td><td>Regular payments</td><td>0-10%</td></tr><tr><td>Sub-standard</td><td>Overdue 90 days-12 months</td><td>15-25%</td></tr><tr><td>Doubtful</td><td>Sub-standard for 12+ months</td><td>25-100%</td></tr><tr><td>Loss</td><td>Unrecoverable</td><td>100%</td></tr></table>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>NPA (Non-Performing Asset)</strong> = loan overdue 90+ days. <strong>CRILC</strong> = RBI's database for borrowers with exposure &gt;= Rs 5 crore. Asset Classification: Standard, Sub-standard, Doubtful, Loss.</p>
+<p><strong>Pillar 3 Disclosure</strong> = banks must publicly disclose risk profile, capital adequacy, risk management practices. <strong>NPA Recognition</strong> = based on 90-day overdue norm (used by RBI, while international norm is 90 days).</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>NPA Classification Details</h4>
+<table>
+<tr><th>Category</th><th>Criteria</th><th>Provisioning</th><th>Recovery</th></tr>
+<tr><td><strong>Standard</strong></td><td>Regular payments, 1-90 days overdue</td><td>0-10%</td><td>High probability</td></tr>
+<tr><td><strong>Sub-standard</strong></td><td>90 days - 12 months overdue</td><td>15-25%</td><td>Moderate probability</td></tr>
+<tr><td><strong>Doubtful - D1</strong></td><td>Sub-standard for 12+ months</td><td>25%</td><td>Low probability</td></tr>
+<tr><td><strong>Doubtful - D2</strong></td><td>Doubtful for 12+ months</td><td>40%</td><td>Very low probability</td></tr>
+<tr><td><strong>Doubtful - D3</strong></td><td>Doubtful for 24+ months</td><td>100%</td><td>Near zero</td></tr>
+<tr><td><strong>Loss</strong></td><td>Identified as uncollectible</td><td>100%</td><td>Written off</td></tr>
+</table>
+
+<h4>NPA Management Strategies</h4>
+<ul>
+<li><strong>Prevention:</strong> Better credit appraisal, monitoring, early warning systems</li>
+<li><strong>Resolution:</strong> CDR (Corporate Debt Restructuring), SDR (Strategic Debt Restructuring), S4A (Scheme for Sustainable Structuring)</li>
+<li><strong>Recovery:</strong> SARFAESI Act (2002), DRT (Debt Recovery Tribunal), IBC (Insolvency and Bankruptcy Code 2016)</li>
+</ul>
+
+<h4>Key Indian Banking Reforms</h4>
+<ul>
+<li><strong>SARFAESI Act (2002):</strong> Allows banks to seize and sell collateral without court intervention</li>
+<li><strong>IBC (2016):</strong> Time-bound insolvency resolution (180+90 days)</li>
+<li><strong>PCA Framework:</strong> Prompt Corrective Action for weak banks</li>
+<li><strong>Bank Recapitalization:</strong> Government injecting capital into PSBs</li>
+</ul>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Category</th><th>Description</th><th>Provisioning</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard</strong></td><td>Regular payments</td><td>0-10%</td></tr>
+<tr><td><strong>Sub-standard</strong></td><td>Overdue 90 days-12 months</td><td>15-25%</td></tr>
+<tr><td><strong>Doubtful</strong></td><td>Sub-standard for 12+ months</td><td>25-100%</td></tr>
+<tr><td><strong>Loss</strong></td><td>Unrecoverable</td><td>100%</td></tr>
+</tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian banks' NPAs peaked at ~11.5% in 2018, leading to RBI's Asset Quality Review and stricter provisioning norms.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-S-D-L"</strong> for asset classification: Standard, Sub-standard, Doubtful, Loss</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NPA = loan overdue 90+ days</li><li>Asset classification: S-S-D-L with increasing provisioning</li><li>Pillar 3 disclosures: capital ratios, risk exposures, processes</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-S-D-L"</strong> for asset classification: <strong>S</strong>tandard, <strong>S</strong>ub-standard, <strong>D</strong>oubtful, <strong>L</strong>oss</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NPA = loan overdue 90+ days</li><li>Asset classification: S-S-D-L with increasing provisioning</li><li>Pillar 3 disclosures: capital ratios, risk exposures, processes</li></ul></div>
+</div></div>
 
 <div class="unit" id="u8">
 <h3>Unit 8: Global Perspective on Banking Governance</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>2008 Financial Crisis</strong> exposed governance failures. <strong>G-SIBs</strong> = Globally Systemically Important Banks. Ring-fencing = separating retail from investment banking. Stress testing = assessing resilience under adverse scenarios.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>2008 Financial Crisis</strong> exposed governance failures. <strong>G-SIBs</strong> = Globally Systemically Important Banks. Ring-fencing = separating retail from investment banking.</p>
+<p><strong>Too Big to Fail (TBTF)</strong> = concept that certain large, interconnected financial institutions cannot be allowed to fail due to systemic risk. <strong>Moral Hazard</strong> = banks take excessive risks knowing they'll be bailed out.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Causes of 2008 Financial Crisis</h4>
+<ul>
+<li><strong>Subprime mortgages:</strong> Loans to borrowers with poor credit history</li>
+<li><strong>Securitization:</strong> Packaging risky loans into complex derivatives (CDOs, MBS)</li>
+<li><strong>Rating agency failures:</strong> AAA ratings given to risky securities</li>
+<li><strong>Leverage:</strong> Banks holding too little capital relative to assets</li>
+<li><strong>Governance failures:</strong> Boards not understanding risks, excessive executive compensation</li>
+</ul>
+
 <h4>Post-Crisis Reforms</h4>
-<ul><li>Higher capital requirements (Basel III)</li><li>Stress testing programs</li><li>Living will requirements</li><li>Ring-fencing of operations</li><li>Resolution frameworks</li><li>Compensation restrictions</li></ul>
+<table>
+<tr><th>Reform</th><th>Purpose</th><th>Implementation</th></tr>
+<tr><td><strong>Higher Capital</strong></td><td>More loss-absorbing capacity</td><td>Basel III: CET1 4.5%, Tier 1 6%</td></tr>
+<tr><td><strong>Stress Testing</strong></td><td>Test resilience under adverse scenarios</td><td>CCAR (US), EBA (Europe)</td></tr>
+<tr><td><strong>Living Wills</strong></td><td>Plans for orderly failure</td><td>Recovery and Resolution Plans</td></tr>
+<tr><td><strong>Ring-fencing</strong></td><td>Separate retail from investment banking</td><td>UK Vickers Commission</td></tr>
+<tr><td><strong>Compensation</strong></td><td>Limit excessive risk-taking</td><td>Bonus caps, clawback provisions</td></tr>
+<tr><td><strong>Resolution Frameworks</strong></td><td>Orderly wind-down of failing banks</td><td>FDIC (US), SRB (EU)</td></tr>
+</table>
+
+<h4>G-SIBs (Globally Systemically Important Banks)</h4>
+<ul>
+<li>Additional capital buffer: 1-3.5% of RWA based on systemic importance</li>
+<li>Higher loss-absorbing capacity requirements</li>
+<li>Enhanced supervision and disclosure</li>
+<li>Examples: JP Morgan, HSBC, Deutsche Bank, ICBC</li>
+</ul>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>After 2008, Lehman Brothers collapsed (no ring-fencing), while JP Morgan survived but required $25B government bailout (too big to fail).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-L-R-S"</strong> for post-crisis reforms: Stress testing, Living wills, Ring-fencing, Strict capital</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>2008 crisis exposed governance failures globally</li><li>G-SIBs: additional capital buffer 1-3.5% of RWA</li><li>"Too big to fail" = systemic risk from large interconnected banks</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-L-R-S"</strong> for post-crisis reforms: <strong>S</strong>tress testing, <strong>L</strong>iving wills, <strong>R</strong>ing-fencing, <strong>S</strong>trict capital</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>2008 crisis exposed governance failures globally</li><li>G-SIBs: additional capital buffer 1-3.5% of RWA</li><li>"Too big to fail" = systemic risk from large interconnected banks</li></ul></div>
+</div></div>
+
+<!-- BLOCK 3 -->
+<h2 id="block3">Block-03: Financial Sector Governance</h2>
 
 <div class="unit" id="u9">
 <h3>Unit 9: Corporate Governance in NBFCs</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>NBFC</strong> = Non-Banking Financial Company (registered under Companies Act). Cannot accept demand deposits, no deposit insurance (DICGC).</p></div>
-<table><tr><th>Feature</th><th>NBFC</th><th>Bank</th></tr><tr><td>Demand Deposits</td><td>Cannot accept</td><td>Can accept</td></tr><tr><td>Deposit Insurance</td><td>No DICGC</td><td>DICGC covered</td></tr><tr><td>Payment System</td><td>Limited access</td><td>Full access</td></tr><tr><td>CRR/SLR</td><td>Not required</td><td>Required</td></tr><tr><td>Regulation</td><td>RBI Act, Companies Act</td><td>Banking Regulation Act</td></tr></table>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>NBFC</strong> = Non-Banking Financial Company (registered under Companies Act). Cannot accept demand deposits, no deposit insurance (DICGC).</p>
+<p><strong>Systemically Important NBFC</strong> = asset size > Rs 500 crore. <strong>Core Investment Company (CIC)</strong> = NBFC holding 90%+ assets in group investments.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>NBFC Types</h4>
+<table>
+<tr><th>Type</th><th>Function</th><th>Example</th></tr>
+<tr><td><strong>Loan Company</strong></td><td>Provides loans and advances</td><td>Bajaj Finance</td></tr>
+<tr><td><strong>Investment Company</strong></td><td>Deals in securities</td><td>IL&FS (before crisis)</td></tr>
+<tr><td><strong>Asset Finance Company</strong></td><td>Finances physical assets</td><td>Mahindra Finance</td></tr>
+<tr><td><strong>Infrastructure Finance</strong></td><td>Finances infrastructure projects</td><td>IDFC</td></tr>
+<tr><td><strong>Microfinance Institution</strong></td><td>Small loans to poor</td><td>SKS Microfinance</td></tr>
+</table>
+
+<h4>NBFC Governance Challenges</h4>
+<ul>
+<li>Less stringent regulation compared to banks</li>
+<li>Liquidity risk (IL&FS crisis 2018)</li>
+<li>Related party transactions</li>
+<li>Concentration risk in specific sectors</li>
+</ul>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>NBFC</th><th>Bank</th></tr></thead>
+<tbody>
+<tr><td><strong>Demand Deposits</strong></td><td>Cannot accept</td><td>Can accept</td></tr>
+<tr><td><strong>Deposit Insurance</strong></td><td>No DICGC</td><td>DICGC covered</td></tr>
+<tr><td><strong>Payment System</strong></td><td>Limited access</td><td>Full access</td></tr>
+<tr><td><strong>CRR/SLR</strong></td><td>Not required</td><td>Required</td></tr>
+<tr><td><strong>Regulation</strong></td><td>RBI Act, Companies Act</td><td>Banking Regulation Act</td></tr>
+</tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bajaj Finance (NBFC) provides consumer finance but cannot accept demand deposits like HDFC Bank.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"N-B-D-P"</strong> for NBFC limitations: No demand deposits, No deposit insurance, No payment system access, Partial regulation</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NBFC vs Bank: demand deposits, deposit insurance, CRR/SLR</li><li>Systemically Important NBFCs: asset size > Rs 500 crore</li><li>NBFC vs Bank comparison is common exam question</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"N-B-D-P"</strong> for NBFC limitations: <strong>N</strong>o demand deposits, <strong>N</strong>o deposit insurance, <strong>N</strong>o payment system access, <strong>P</strong>artial regulation</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NBFC vs Bank: demand deposits, deposit insurance, CRR/SLR</li><li>Systemically Important NBFCs: asset size &gt; Rs 500 crore</li><li>NBFC vs Bank comparison is common exam question</li></ul></div>
+</div></div>
 
 <div class="unit" id="u10">
 <h3>Unit 10: Corporate Governance in Mutual Funds</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Mutual Fund</strong> = pool of money managed by AMC. Structure: Sponsor > Trust > AMC > Fund. <strong>NAV</strong> = (Total Assets - Liabilities) / Units. SEBI (Mutual Fund) Regulations, 1996.</p></div>
-<h4>MF Structure</h4>
-<p>Sponsor > Trust > AMC > Fund. Trustee (oversight) + Custodian (safekeeping).</p>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Mutual Fund</strong> = pool of money managed by AMC. Structure: Sponsor &gt; Trust &gt; AMC &gt; Fund. <strong>NAV</strong> = (Total Assets - Liabilities) / Units. SEBI (Mutual Fund) Regulations, 1996.</p>
+<p><strong>Sponsor</strong> = entity that establishes the mutual fund. <strong>Trustee</strong> = holds assets for benefit of unit holders. <strong>AMC</strong> = Asset Management Company that manages investments.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>MF Structure Explained</h4>
+<table>
+<tr><th>Entity</th><th>Role</th><th>Responsibility</th></tr>
+<tr><td><strong>Sponsor</strong></td><td>Establishes the MF</td><td>Set up trust, appoint trustees</td></tr>
+<tr><td><strong>Trust</strong></td><td>Holds assets</td><td>Legal ownership of fund assets</td></tr>
+<tr><td><strong>Trustee</strong></td><td>Oversight</td><td>Ensure AMC acts in investor interest</td></tr>
+<tr><td><strong>AMC</strong></td><td>Manages investments</td><td>Investment decisions, operations</td></tr>
+<tr><td><strong>Custodian</strong></td><td>Safekeeping</td><td>Holds securities, settlement</td></tr>
+</table>
+
+<h4>MF Categories (SEBI Classification)</h4>
+<ul>
+<li><strong>Equity Funds:</strong> Invest 65%+ in stocks (higher risk, higher return)</li>
+<li><strong>Debt Funds:</strong> Invest in bonds, government securities (lower risk)</li>
+<li><strong>Hybrid Funds:</strong> Mix of equity and debt (balanced risk)</li>
+<li><strong>Index Funds:</strong> Track a market index (Nifty, Sensex)</li>
+<li><strong>ELSS:</strong> Equity Linked Savings Scheme (tax saving under 80C)</li>
+</ul>
+
+<h4>NAV Formula</h4>
+<div class="formula-block">NAV = (Total Assets - Total Liabilities) / Total Outstanding Units
+
+Example: Fund has Rs 1000 crore assets, Rs 50 crore liabilities, 50 crore units
+NAV = (1000 - 50) / 50 = Rs 19 per unit</div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>SBI Mutual Fund has a trustee company overseeing the AMC, ensuring investor interests are protected.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-A-C"</strong> for MF structure: Trustee, AMC, Custodian</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NAV = (Assets - Liabilities) / Units</li><li>Structure: Trustee > AMC > Custodian</li><li>SEBI regulations govern MF governance</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-A-C"</strong> for MF structure: <strong>T</strong>rustee, <strong>A</strong>MC, <strong>C</strong>ustodian</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>NAV = (Assets - Liabilities) / Units</li><li>Structure: Trustee &gt; AMC &gt; Custodian</li><li>SEBI regulations govern MF governance</li></ul></div>
+</div></div>
 
 <div class="unit" id="u11">
 <h3>Unit 11: Corporate Governance in Insurance</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>IRDAI</strong> = Insurance Regulatory and Development Authority of India. <strong>Solvency Margin</strong> = assets must exceed liabilities by specified margin (minimum 150%). Types: Life, General, Health.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>IRDAI</strong> = Insurance Regulatory and Development Authority of India. <strong>Solvency Margin</strong> = assets must exceed liabilities by specified margin (minimum 150%). Types: Life, General, Health.</p>
+<p><strong>Actuarial Valuation</strong> = statistical method to assess insurance liabilities. <strong>Premium</strong> = price paid by policyholder for insurance coverage.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Insurance Types in India</h4>
+<table>
+<tr><th>Type</th><th>Covers</th><th>Examples</th></tr>
+<tr><td><strong>Life Insurance</strong></td><td>Death benefit, savings</td><td>LIC, SBI Life, HDFC Life</td></tr>
+<tr><td><strong>General Insurance</strong></td><td>Non-life risks</td><td>New India Assurance, ICICI Lombard</td></tr>
+<tr><td><strong>Health Insurance</strong></td><td>Medical expenses</td><td>Star Health, Apollo Munich</td></tr>
+</table>
+
+<h4>IRDAI Key Functions</h4>
+<ul>
+<li>Regulate insurance industry</li>
+<li>Protect policyholder interests</li>
+<li>License insurance companies</li>
+<li>Set solvency margin requirements</li>
+<li>Approve insurance products</li>
+</ul>
+
+<h4>Insurance Governance Requirements</h4>
+<ul>
+<li>Board composition with independent directors</li>
+<li>Actuarial valuation of liabilities</li>
+<li>Investment regulations (government bonds, corporate bonds, equities)</li>
+<li>Claims settlement process transparency</li>
+</ul>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>LIC maintains solvency margins well above regulatory requirements, ensuring policyholder confidence.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"L-G-H"</strong> for insurance types: Life, General, Health</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>IRDAI = insurance regulator</li><li>Solvency margin = 150% minimum</li><li>Insurance types: Life, General, Health</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"L-G-H"</strong> for insurance types: <strong>L</strong>ife, <strong>G</strong>eneral, <strong>H</strong>ealth</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>IRDAI = insurance regulator</li><li>Solvency margin = 150% minimum</li><li>Insurance types: Life, General, Health</li></ul></div>
+</div></div>
 
 <div class="unit" id="u12">
 <h3>Unit 12: Financial Inclusion and Sustainability</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Financial Inclusion</strong> = access to financial services for all. Initiatives: Jan Dhan Yojana, SHG-Bank Linkage, Microfinance, Digital Banking, Business Correspondents.</p></div>
-<table><tr><th>Initiative</th><th>Focus</th></tr><tr><td>Jan Dhan Yojana</td><td>Bank accounts for all</td></tr><tr><td>SHG-Bank Linkage</td><td>Rural women's groups</td></tr><tr><td>Microfinance</td><td>Small loans to poor</td></tr><tr><td>Digital Banking</td><td>Mobile, UPI, Aadhaar</td></tr><tr><td>Business Correspondents</td><td>Last-mile banking</td></tr></table>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Financial Inclusion</strong> = access to financial services for all. Initiatives: Jan Dhan Yojana, SHG-Bank Linkage, Microfinance, Digital Banking, Business Correspondents.</p>
+<p><strong>Sustainable Development Goals (SDGs)</strong> = UN goals including financial inclusion (Goal 1: No Poverty, Goal 8: Decent Work and Economic Growth).</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Financial Inclusion Initiatives</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Initiative</th><th>Focus</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>Jan Dhan Yojana</strong></td><td>Bank accounts for all</td><td>50+ crore accounts opened</td></tr>
+<tr><td><strong>SHG-Bank Linkage</strong></td><td>Rural women's groups</td><td>Empowered 8+ crore women</td></tr>
+<tr><td><strong>Microfinance</strong></td><td>Small loans to poor</td><td>Rs 3+ lakh crore outstanding</td></tr>
+<tr><td><strong>Digital Banking</strong></td><td>Mobile, UPI, Aadhaar</td><td>10+ billion UPI transactions/month</td></tr>
+<tr><td><strong>Business Correspondents</strong></td><td>Last-mile banking</td><td>Banking services in remote villages</td></tr>
+<tr><td><strong>PM SVANidhi</strong></td><td>Street vendor loans</td><td>50+ lakh loans disbursed</td></tr>
+</tbody></table></div>
+
+<h4>Digital Payment Ecosystem</h4>
+<ul>
+<li><strong>UPI (Unified Payments Interface):</strong> Real-time mobile payments</li>
+<li><strong>Aadhaar:</strong> Biometric identity for KYC</li>
+<li><strong>IMPS/NEFT/RTGS:</strong> Electronic fund transfers</li>
+<li><strong>Digital Lending:</strong> Online loan processing</li>
+</ul>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Initiative</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td><strong>Jan Dhan Yojana</strong></td><td>Bank accounts for all</td></tr>
+<tr><td><strong>SHG-Bank Linkage</strong></td><td>Rural women's groups</td></tr>
+<tr><td><strong>Microfinance</strong></td><td>Small loans to poor</td></tr>
+<tr><td><strong>Digital Banking</strong></td><td>Mobile, UPI, Aadhaar</td></tr>
+<tr><td><strong>Business Correspondents</strong></td><td>Last-mile banking</td></tr>
+</tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Jan Dhan Yojana opened 50+ crore bank accounts, providing financial access to previously unbanked populations.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"J-S-M-D"</strong> for inclusion: Jan Dhan, SHG linkage, Microfinance, Digital banking</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Financial inclusion = access for all</li><li>Jan Dhan: 50+ crore accounts</li><li>Digital: UPI, Aadhaar, mobile banking</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"J-S-M-D"</strong> for inclusion: <strong>J</strong>an Dhan, <strong>S</strong>HG linkage, <strong>M</strong>icrofinance, <strong>D</strong>igital banking</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>Financial inclusion = access for all</li><li>Jan Dhan: 50+ crore accounts</li><li>Digital: UPI, Aadhaar, mobile banking</li></ul></div>
+</div></div>
+
+<!-- BLOCK 4 -->
+<h2 id="block4">Block-04: Reforms &amp; CSR</h2>
 
 <div class="unit" id="u13">
 <h3>Unit 13: Business Ethics, Governance and CSR</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>CSR</strong> = Companies Act 2013, Section 135. Threshold: net worth >= Rs 500 crore OR turnover >= Rs 1000 crore OR net profit >= Rs 5 crore. Spend 2% of average net profit of last 3 years.</p></div>
-<h4>CSR Activities</h4>
-<ul><li>Education, Healthcare, Environment, Rural development, Gender equality, Sports</li></ul>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>CSR</strong> = Companies Act 2013, Section 135. Threshold: net worth &gt;= Rs 500 crore OR turnover &gt;= Rs 1000 crore OR net profit &gt;= Rs 5 crore. Spend 2% of average net profit of last 3 years.</p>
+<p><strong>ESG</strong> = Environmental, Social, Governance factors used to evaluate corporate sustainability and ethical impact.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>CSR Requirements (Section 135)</h4>
+<table>
+<tr><th>Requirement</th><th>Details</th></tr>
+<tr><td><strong>Applicability</strong></td><td>Net worth &#x2265; 500 crore OR turnover &#x2265; 1000 crore OR net profit &#x2265; 5 crore</td></tr>
+<tr><td><strong>CSR Spend</strong></td><td>Minimum 2% of average net profits of last 3 years</td></tr>
+<tr><td><strong>CSR Committee</strong></td><td>Minimum 3 directors, at least 1 independent</td></tr>
+<tr><td><strong>Reporting</strong></td><td>Annual CSR report in Board's report</td></tr>
+<tr><td><strong>Penalty</strong></td><td>Non-compliance: fine Rs 50,000 to Rs 25 lakh</td></tr>
+</table>
+
+<h4>Schedule VII CSR Activities</h4>
+<ul>
+<li>Education and livelihood enhancement</li>
+<li>Healthcare and sanitation</li>
+<li>Environmental sustainability</li>
+<li>Rural development</li>
+<li>Promotion of sports and culture</li>
+<li>Gender equality and women empowerment</li>
+<li>Technology incubators</li>
+<li>Disaster relief and rehabilitation</li>
+</ul>
+
+<h4>ESG Framework</h4>
+<table>
+<tr><th>Factor</th><th>Focus</th><th>Examples</th></tr>
+<tr><td><strong>Environmental</strong></td><td>Climate impact, resource use</td><td>Carbon emissions, waste management</td></tr>
+<tr><td><strong>Social</strong></td><td>People and community</td><td>Labor practices, diversity, community</td></tr>
+<tr><td><strong>Governance</strong></td><td>Corporate governance</td><td>Board composition, ethics, transparency</td></tr>
+</table>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Infosys Foundation spends on education, healthcare, and rural development, exceeding the 2% CSR requirement.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"5-1-5"</strong> for CSR threshold: 500 Cr worth OR 1000 Cr turnover OR 5 Cr profit</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>CSR: Section 135 — 2% of average net profit</li><li>Threshold: 500 Cr / 1000 Cr / 5 Cr</li><li>ESG = Environmental, Social, Governance factors</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"5-1-5"</strong> for CSR threshold: <strong>500</strong> Cr worth OR <strong>1000</strong> Cr turnover OR <strong>5</strong> Cr profit</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>CSR: Section 135 &#x2014; 2% of average net profit</li><li>Threshold: 500 Cr / 1000 Cr / 5 Cr</li><li>ESG = Environmental, Social, Governance factors</li></ul></div>
+</div></div>
 
 <div class="unit" id="u14">
 <h3>Unit 14: Corporate Governance Reforms and Challenges</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Major reforms: <strong>SOX Act</strong> (2002, US — Enron/WorldCom response), <strong>Companies Act 2013</strong> (India), SEBI regulations. <strong>AML</strong> = Anti-Money Laundering (KYC, CTR, STR).</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Major reforms: <strong>SOX Act</strong> (2002, US &#x2014; Enron/WorldCom response), <strong>Companies Act 2013</strong> (India), SEBI regulations. <strong>AML</strong> = Anti-Money Laundering (KYC, CTR, STR).</p>
+<p><strong>FATF</strong> = Financial Action Task Force (global AML watchdog). <strong>PEP</strong> = Politically Exposed Person (higher AML risk).</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Key Governance Reforms</h4>
+<table>
+<tr><th>Reform</th><th>Country</th><th>Year</th><th>Key Provisions</th></tr>
+<tr><td><strong>SOX Act</strong></td><td>US</td><td>2002</td><td>CEO/CFO certification, auditor independence, internal controls</td></tr>
+<tr><td><strong>Companies Act</strong></td><td>India</td><td>2013</td><td>Independent directors, audit committee, CSR mandate</td></tr>
+<tr><td><strong>UK Code</strong></td><td>UK</td><td>2018</td><td>Board diversity, employee engagement, stakeholder voice</td></tr>
+</table>
+
 <h4>AML Mechanisms</h4>
-<ul>
-<li><strong>KYC</strong> (Know Your Customer): Identity verification</li>
-<li><strong>CTR</strong> (Cash Transaction Report): Transactions > Rs 10 lakh</li>
-<li><strong>STR</strong> (Suspicious Transaction Report): Unusual patterns</li>
-</ul>
+<table>
+<tr><th>Mechanism</th><th>Description</th><th>Threshold</th></tr>
+<tr><td><strong>KYC</strong></td><td>Know Your Customer identity verification</td><td>All customers</td></tr>
+<tr><td><strong>CTR</strong></td><td>Cash Transaction Report</td><td>Transactions &gt; Rs 10 lakh</td></tr>
+<tr><td><strong>STR</strong></td><td>Suspicious Transaction Report</td><td>Unusual patterns</td></tr>
+<tr><td><strong>PEP Screening</strong></td><td>Enhanced due diligence for politically exposed persons</td><td>All PEPs</td></tr>
+</table>
+
 <h4>Governance Challenges</h4>
-<ul><li>Family-owned business governance</li><li>Independent director effectiveness</li><li>Related party transactions</li><li>Executive compensation excess</li><li>Whistleblower protection</li></ul>
+<ul>
+<li><strong>Family-owned businesses:</strong> Promoter dominance, related party transactions</li>
+<li><strong>Independent director effectiveness:</strong> Limited time, information asymmetry</li>
+<li><strong>Executive compensation:</strong> Excessive pay vs performance disconnect</li>
+<li><strong>Whistleblower protection:</strong> Fear of retaliation</li>
+<li><strong>Technology disruption:</strong> Cybersecurity, data privacy</li>
+<li><strong>Climate risk:</strong> ESG disclosure, stranded assets</li>
+</ul>
+
+<h4>Future Trends in Corporate Governance</h4>
+<ul>
+<li>ESG integration in investment decisions</li>
+<li>Digital governance (blockchain, AI)</li>
+<li>Climate risk disclosure (TCFD framework)</li>
+<li>Board diversity requirements</li>
+<li>Stakeholder capitalism vs shareholder primacy</li>
+</ul>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The Companies Act 2013 introduced independent director requirements, audit committee powers, and CSR mandates, strengthening Indian corporate governance.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"K-C-S"</strong> for AML: KYC, CTR, STR</p></div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>SOX Act = Enron response. Companies Act 2013 = India reform</li><li>AML: KYC, CTR (>10 lakh), STR</li><li>Future: ESG integration, digital governance, climate risk disclosure</li></ul></div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"K-C-S"</strong> for AML: <strong>K</strong>YC, <strong>C</strong>TR, <strong>S</strong>TR</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul><li>SOX Act = Enron response. Companies Act 2013 = India reform</li><li>AML: KYC, CTR (&gt;10 lakh), STR</li><li>Future: ESG integration, digital governance, climate risk disclosure</li></ul></div>
+</div></div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>U-D-V</strong></td><td>Utilitarianism, Deontology, Virtue Ethics</td><td>Ethical Theories</td></tr>
+<tr><td><strong>T-A-F-R</strong></td><td>Transparency, Accountability, Fairness, Responsibility</td><td>Governance Principles</td></tr>
+<tr><td><strong>M-B-R</strong></td><td>Monitoring, Bonding, Residual loss</td><td>Agency Costs</td></tr>
+<tr><td><strong>S-E-P</strong></td><td>Salary, ESOPs, Performance bonus</td><td>Compensation</td></tr>
+<tr><td><strong>I-C-C-D</strong></td><td>Integrity, Confidentiality, Conflict of interest, Disclosure</td><td>Code of Conduct</td></tr>
+<tr><td><strong>M-S-M</strong></td><td>Minimum capital, Supervisory review, Market discipline</td><td>Basel II Pillars</td></tr>
+<tr><td><strong>C-M-O-L</strong></td><td>Credit, Market, Operational, Liquidity</td><td>Banking Risks</td></tr>
+<tr><td><strong>S-S-D-L</strong></td><td>Standard, Sub-standard, Doubtful, Loss</td><td>Asset Classification</td></tr>
+<tr><td><strong>S-L-R-S</strong></td><td>Stress testing, Living wills, Ring-fencing, Strict capital</td><td>Post-Crisis Reforms</td></tr>
+<tr><td><strong>N-B-D-P</strong></td><td>No demand deposits, No deposit insurance, No payment system, Partial regulation</td><td>NBFC Limitations</td></tr>
+<tr><td><strong>T-A-C</strong></td><td>Trustee, AMC, Custodian</td><td>MF Structure</td></tr>
+<tr><td><strong>L-G-H</strong></td><td>Life, General, Health</td><td>Insurance Types</td></tr>
+<tr><td><strong>J-S-M-D</strong></td><td>Jan Dhan, SHG linkage, Microfinance, Digital banking</td><td>Financial Inclusion</td></tr>
+<tr><td><strong>5-1-5</strong></td><td>500 Cr, 1000 Cr, 5 Cr</td><td>CSR Threshold</td></tr>
+<tr><td><strong>K-C-S</strong></td><td>KYC, CTR, STR</td><td>AML Mechanisms</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<ul>
+<li><strong>Basel Framework</strong> &#x2014; all three pillars, Basel III ratios, CAR formula (10 marks)</li>
+<li><strong>Agency Theory</strong> &#x2014; principal-agent problem, agency costs (10 marks)</li>
+<li><strong>NBFC vs Bank</strong> &#x2014; detailed comparison (10 marks)</li>
+<li><strong>Asset Classification</strong> &#x2014; NPA categories with provisioning (10 marks)</li>
+<li><strong>Ethical Theories</strong> &#x2014; U-D-V with examples (5 marks)</li>
+<li><strong>CSR Law</strong> &#x2014; Section 135, threshold, 2% rule (5 marks)</li>
+<li><strong>Post-2008 Reforms</strong> &#x2014; G-SIBs, stress testing, ring-fencing (10 marks)</li>
+<li><strong>Financial Inclusion</strong> &#x2014; Jan Dhan, digital banking (5 marks)</li>
+</ul></div>
+
+<h4>Model Answer Structure: Basel Framework (10 marks)</h4>
+<button class="expand-toggle" data-target="#expandable-1">Read More</button>
+<div class="expandable-content" id="expandable-1">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define Basel Committee (BCBS), purpose (global banking stability), evolution (I, II, III)</li>
+<li><strong>Basel II Three Pillars (3 marks):</strong> Pillar 1 (minimum capital - CAR formula), Pillar 2 (supervisory review), Pillar 3 (market discipline)</li>
+<li><strong>Basel III Enhancements (3 marks):</strong> Higher capital (CET1 4.5%, Tier 1 6%), buffers (conservation 2.5%, countercyclical 0-2.5%), leverage ratio (3%), liquidity (LCR, NSFR)</li>
+<li><strong>Indian Context (1 mark):</strong> RBI implementation, Indian banks' CAR (13-14%), impact on lending</li>
+<li><strong>Conclusion (1 mark):</strong> Basel framework ensures banking stability, India compliant</li>
+</ol></div>
+
+<h4>Model Answer Structure: Agency Theory (10 marks)</h4>
+<button class="expand-toggle" data-target="#expandable-2">Read More</button>
+<div class="expandable-content" id="expandable-2">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define agency theory (Jensen & Meckling 1976), principal-agent separation</li>
+<li><strong>Agency Problem (2 marks):</strong> Information asymmetry, moral hazard, adverse selection</li>
+<li><strong>Agency Costs (2 marks):</strong> Monitoring costs, bonding costs, residual loss</li>
+<li><strong>Solutions (2 marks):</strong> Board oversight, executive compensation alignment, governance codes</li>
+<li><strong>Indian Examples (1 mark):</strong> Satyam scam, Infosys governance, HDFC Bank</li>
+<li><strong>Conclusion (1 mark):</strong> Good governance reduces agency costs, increases firm value</li>
+</ol></div>
+
+<h4>Model Answer Structure: NBFC vs Bank (10 marks)</h4>
+<button class="expand-toggle" data-target="#expandable-3">Read More</button>
+<div class="expandable-content" id="expandable-3">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define NBFC and bank, regulatory framework</li>
+<li><strong>Key Differences (4 marks):</strong> Demand deposits, deposit insurance, CRR/SLR, payment system, regulation</li>
+<li><strong>NBFC Types (2 marks):</strong> Loan company, investment company, asset finance, microfinance</li>
+<li><strong>Governance Challenges (1 mark):</strong> IL&FS crisis, liquidity risk, related party transactions</li>
+<li><strong>Conclusion (1 mark):</strong> Both essential for financial system, different governance needs</li>
+</ol></div>
+
+<h4>Model Answer Structure: Asset Classification &amp; NPA (10 marks)</h4>
+<button class="expand-toggle" data-target="#expandable-4">Read More</button>
+<div class="expandable-content" id="expandable-4">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define NPA (90+ days overdue), importance of classification</li>
+<li><strong>Classification (3 marks):</strong> Standard, Sub-standard, Doubtful (D1, D2, D3), Loss - with provisioning</li>
+<li><strong>NPA Management (2 marks):</strong> Prevention, resolution (CDR, SDR, S4A), recovery (SARFAESI, DRT, IBC)</li>
+<li><strong>Impact (2 marks):</strong> Banking profitability, credit growth, fiscal impact</li>
+<li><strong>Conclusion (1 mark):</strong> Strict classification improves banking health</li>
+</ol></div>
+
+<h4>Model Answer Structure: CSR - Section 135 (5 marks)</h4>
+<button class="expand-toggle" data-target="#expandable-5">Read More</button>
+<div class="expandable-content" id="expandable-5">
+<ol>
+<li><strong>Introduction (1 mark):</strong> Companies Act 2013, Section 135, mandatory CSR</li>
+<li><strong>Requirements (2 marks):</strong> Threshold (500/1000/5 Cr), 2% spend, CSR committee</li>
+<li><strong>Activities (1 mark):</strong> Schedule VII - education, healthcare, environment, rural development</li>
+<li><strong>Conclusion (1 mark):</strong> India first country to mandate CSR, promotes corporate responsibility</li>
+</ol></div>
+
+<div class="summary-box"><h4>&#x1F4CB; Key Formulas &amp; Numbers</h4><ul>
+<li><strong>CAR = (Tier 1 + Tier 2) / RWA &gt;= 8%</strong></li>
+<li><strong>Basel III: CET1 = 4.5%, Tier 1 = 6%, Total = 8% + 2.5% buffer</strong></li>
+<li><strong>NPA: overdue 90+ days</strong></li>
+<li><strong>CSR: 2% of average net profit (3 years)</strong></li>
+<li><strong>CSR Threshold: 500 Cr / 1000 Cr / 5 Cr</strong></li>
+<li><strong>Solvency Margin: 150% minimum (insurance)</strong></li>
+<li><strong>AML: CTR for transactions &gt; Rs 10 lakh</strong></li>
+<li><strong>NBFC Systemically Important: asset size &gt; Rs 500 crore</strong></li>
+<li><strong>G-SIB Buffer: 1-3.5% of RWA</strong></li>
+<li><strong>IBC Resolution: 180+90 days time-bound</strong></li>
+</ul></div>
+
+<h4>Quick Revision: One-Liner Concepts</h4>
+<button class="expand-toggle" data-target="#expandable-6">Read More</button>
+<div class="expandable-content" id="expandable-6">
+<ul>
+<li><strong>Agency Theory:</strong> Ownership vs control separation creates agency costs</li>
+<li><strong>Stakeholder Theory:</strong> Balance all stakeholders, not just shareholders (Freeman)</li>
+<li><strong>Basel I:</strong> 8% CAR, credit risk only</li>
+<li><strong>Basel II:</strong> Three pillars - minimum capital, supervisory review, market discipline</li>
+<li><strong>Basel III:</strong> Higher capital, liquidity requirements, leverage ratio</li>
+<li><strong>CAR:</strong> Capital Adequacy Ratio = (Tier 1 + Tier 2) / RWA</li>
+<li><strong>Tier 1:</strong> Core capital - equity, retained earnings</li>
+<li><strong>Tier 2:</strong> Supplementary - revaluation reserves, subordinated debt</li>
+<li><strong>NPA:</strong> Non-Performing Asset = loan overdue 90+ days</li>
+<li><strong>Standard Asset:</strong> Regular payments, 0-10% provisioning</li>
+<li><strong>Sub-standard:</strong> 90 days - 12 months overdue, 15-25% provisioning</li>
+<li><strong>Doubtful:</strong> Sub-standard for 12+ months, 25-100% provisioning</li>
+<li><strong>Loss Asset:</strong> Identified as uncollectible, 100% provisioning</li>
+<li><strong>CRILC:</strong> RBI database for borrowers with exposure >= Rs 5 crore</li>
+<li><strong>SARFAESI:</strong> Banks seize collateral without court intervention</li>
+<li><strong>IBC:</strong> Insolvency and Bankruptcy Code - 180+90 days resolution</li>
+<li><strong>G-SIBs:</strong> Globally Systemically Important Banks - additional 1-3.5% buffer</li>
+<li><strong>Ring-fencing:</strong> Separating retail from investment banking</li>
+<li><strong>Living Wills:</strong> Plans for orderly failure of banks</li>
+<li><strong>NBFC:</strong> Cannot accept demand deposits, no DICGC coverage</li>
+<li><strong>NAV:</strong> (Assets - Liabilities) / Units (Mutual Funds)</li>
+<li><strong>Solvency Margin:</strong> 150% minimum (Insurance)</li>
+<li><strong>Financial Inclusion:</strong> Jan Dhan (50+ crore accounts), UPI (10B+ transactions/month)</li>
+<li><strong>CSR:</strong> Section 135 - 2% of average net profit, threshold 500/1000/5 Cr</li>
+<li><strong>ESG:</strong> Environmental, Social, Governance factors</li>
+<li><strong>AML:</strong> KYC, CTR (> Rs 10 lakh), STR</li>
+<li><strong>SOX Act:</strong> US response to Enron/WorldCom (2002)</li>
+<li><strong>Companies Act 2013:</strong> India - independent directors, audit committee, CSR mandate</li>
+</ul></div>
+
+<h4>Comparison Tables for Quick Revision</h4>
+
+<h5>Basel I vs II vs III</h5>
+<table>
+<tr><th>Feature</th><th>Basel I</th><th>Basel II</th><th>Basel III</th></tr>
+<tr><td><strong>Year</strong></td><td>1988</td><td>2004</td><td>2010</td></tr>
+<tr><td><strong>Focus</strong></td><td>Credit risk</td><td>Three pillars</td><td>Post-crisis reform</td></tr>
+<tr><td><strong>CAR</strong></td><td>8%</td><td>8% (risk-sensitive)</td><td>8% + buffers</td></tr>
+<tr><td><strong>Tier 1</strong></td><td>4%</td><td>4%</td><td>6%</td></tr>
+<tr><td><strong>CET1</strong></td><td>N/A</td><td>N/A</td><td>4.5%</td></tr>
+<tr><td><strong>Liquidity</strong></td><td>No</td><td>No</td><td>LCR, NSFR</td></tr>
+</table>
+
+<h5>Shareholder vs Stakeholder Theory</h5>
+<table>
+<tr><th>Aspect</th><th>Shareholder Theory</th><th>Stakeholder Theory</th></tr>
+<tr><td><strong>Focus</strong></td><td>Maximize shareholder value</td><td>Balance all stakeholder interests</td></tr>
+<tr><td><strong>Proponent</strong></td><td>Milton Friedman</td><td>R. Edward Freeman</td></tr>
+<tr><td><strong>Orientation</strong></td><td>Profit-focused</td><td>Multi-dimensional</td></tr>
+<tr><td><strong>Time Frame</strong></td><td>Short-term emphasis</td><td>Long-term emphasis</td></tr>
+<tr><td><strong>CSR View</strong></td><td>Only if profitable</td><td>Corporate responsibility</td></tr>
+</table>
+
+<h5>NBFC vs Bank</h5>
+<table>
+<tr><th>Feature</th><th>NBFC</th><th>Bank</th></tr>
+<tr><td><strong>Demand Deposits</strong></td><td>Cannot accept</td><td>Can accept</td></tr>
+<tr><td><strong>Deposit Insurance</strong></td><td>No DICGC</td><td>DICGC covered</td></tr>
+<tr><td><strong>CRR/SLR</strong></td><td>Not required</td><td>Required</td></tr>
+<tr><td><strong>Payment System</strong></td><td>Limited access</td><td>Full access</td></tr>
+<tr><td><strong>Regulation</strong></td><td>RBI Act, Companies Act</td><td>Banking Regulation Act</td></tr>
+</table>
+
+<h5>Ethical Theories Comparison</h5>
+<table>
+<tr><th>Theory</th><th>Focus</th><th>Proponent</th><th>Example</th></tr>
+<tr><td><strong>Utilitarianism</strong></td><td>Greatest good for greatest number</td><td>Bentham, Mill</td><td>Cost-benefit analysis</td></tr>
+<tr><td><strong>Deontology</strong></td><td>Duty-based, rules matter</td><td>Kant</td><td>"Honesty is always right"</td></tr>
+<tr><td><strong>Virtue Ethics</strong></td><td>Character-based</td><td>Aristotle</td><td>"What would a good person do?"</td></tr>
+</table>
+</div>
 
 </main></div>
-<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})();
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.getElementById("readingProgress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
-</body>
-</html>
+</body></html>

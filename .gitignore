@@ -48,3 +48,14 @@ subject merged files/
 _cleanup/
 run.bat
 start-server.bat
+
+# Build scripts & backups
+*.bak
+__pycache__/
+*.pyc
+add_videos.py
+expand_content.py
+final_expand*.py
+gen_mmpm09.py
+upgrade_mmpf*.py
+study-mmph04-expanded.html

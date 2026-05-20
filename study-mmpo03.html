@@ -6,20 +6,31 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#e17055;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.study-sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.study-sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#e17055;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 .action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}.btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}.btn-primary{background:rgba(225,112,85,.2);color:#e17055;border:1px solid rgba(225,112,85,.3)}.btn-primary:hover{background:rgba(225,112,85,.3)}.btn-success{background:rgba(0,184,148,.2);color:#55efc4;border:1px solid rgba(0,184,148,.3)}.btn-success:hover{background:rgba(0,184,148,.3)}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.summary-box h4{color:#ffd700;font-size:.95rem;margin-bottom:.5rem}.db{width:100%;border-collapse:collapse;margin:1rem 0}.db th{background:rgba(225,112,85,.15);color:#e17055;padding:.6rem .8rem;text-align:left;font-size:.82rem;font-weight:700;border:1px solid rgba(225,112,85,.2)}.db td{padding:.5rem .8rem;border:1px solid rgba(255,255,255,.06);font-size:.85rem;color:rgba(255,255,255,.72)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2)}
+
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(214,48,49,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#d63031,#ff6b6b);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
 </style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpo03">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-03'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPO-03</h3></div>
+<aside class="study-sidebar">
+  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-03</span></div>
+  <nav class="sidebar-nav">
+  <a href="study-hub.html">&#x2190; Back to Hub</a>
   <a href="#u1">Unit 1: OM Introduction</a>
   <a href="#u2">Unit 2: Operations Strategy</a>
   <a href="#u3">Unit 3: Sustainable Operations</a>
@@ -34,7 +45,12 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
   <a href="#u12">Unit 12: Six Sigma QC</a>
   <a href="#u13">Unit 13: TQM &amp; Lean</a>
   <a href="#u14">Unit 14: Maintenance &amp; Reliability</a>
-</nav>
+  <a href="#formulas">Key Formulas</a>
+  <a href="#mnemonics">Mnemonics</a>
+  <a href="#exam">&#x1F3AF; Exam Focus</a>
+  <a href="quiz-mmpo03.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
 <main class="study-content" id="main-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPO-03</span><h1>Operations Management</h1>
@@ -46,10 +62,19 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 1: Operations Management — An Introduction</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Management Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hFuskGIYdZI" title="Project Management Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PERT and CPM Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3RkhVJRqGRQ" title="PERT and CPM Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>Operations Management:</strong> Design, operation, and improvement of systems that create and deliver products/services.</p>
 <p><strong>Input-Transformation-Output Model:</strong> Inputs (materials, labor, capital) &gt; Transformation Process &gt; Outputs (goods, services).</p>
-<p><strong>Service Characteristics (I-I-H-P):</strong> Intangibility, Inseparability, Heterogeneity, Perishability.</p>
+<p><strong>Manufacturing vs Services:</strong> Tangible vs Intangible products.</p>
+<p><strong>Service Characteristics (I-I-H-P):</strong></p>
+<ul>
+<li><strong>Intangibility:</strong> Cannot be touched</li>
+<li><strong>Inseparability:</strong> Produced and consumed simultaneously</li>
+<li><strong>Heterogeneity:</strong> Quality varies</li>
+<li><strong>Perishability:</strong> Cannot be stored</li>
+</ul>
 <p><strong>Competitive Priorities (C-Q-F-D):</strong> Cost, Quality, Flexibility, Delivery.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
@@ -66,6 +91,7 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Outputs (Goods &amp; Services)</div>
 </div></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A restaurant: Inputs (raw food, chefs, kitchen) &gt; Transformation (cooking, plating) &gt; Output (meal served). Service is inseparable (cooked and served simultaneously) and perishable (unsold food is wasted).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>I-I-H-P (service characteristics) and C-Q-F-D (competitive priorities) are guaranteed short-answer questions.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>I-I-H-P</strong> = Intangibility, Inseparability, Heterogeneity, Perishability (service characteristics). <strong>C-Q-F-D</strong> = Cost, Quality, Flexibility, Delivery (competitive priorities).</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>OM = design + operation + improvement of production/service systems</li>
@@ -80,9 +106,12 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 2: Operations Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PERT and CPM Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3RkhVJRqGRQ" title="PERT and CPM Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Critical Path Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nUKFbISqSKk" title="Critical Path Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>Order Winners:</strong> Criteria that win orders from customers (differentiators).</p>
 <p><strong>Order Qualifiers:</strong> Minimum standards to even be considered in the market.</p>
+<p><strong>Core Competencies:</strong> Unique strengths difficult for competitors to replicate.</p>
 <p><strong>Strategic Fit:</strong> Alignment between competitive strategy and operations capabilities.</p>
 <p><strong>Value Chain Analysis:</strong> Primary activities (inbound logistics, operations, outbound logistics, marketing &amp; sales, service) + Support activities (HR, technology, procurement, infrastructure).</p>
 </div>
@@ -104,11 +133,24 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 3: Sustainable Operations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Critical Path Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nUKFbISqSKk" title="Critical Path Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Earned Value Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tZ_OGCBuBJ4" title="Earned Value Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>Triple Bottom Line (TBL):</strong> People, Planet, Profit (3 Ps).</p>
 <p><strong>Green Manufacturing:</strong> Reducing environmental impact in production.</p>
 <p><strong>Circular Economy:</strong> Reduce, Reuse, Recycle (eliminate waste concept).</p>
-<p><strong>7 Wastes (TIMWOOD):</strong> Transport, Inventory, Motion, Waiting, Overproduction, Over-processing, Defects.</p>
+<p><strong>Lean Operations:</strong> Eliminate all forms of waste.</p>
+<p><strong>7 Wastes (TIMWOOD):</strong></p>
+<ul>
+<li><strong>T</strong>ransport &#x2014; unnecessary movement of materials</li>
+<li><strong>I</strong>nventory &#x2014; excess stock tying up capital</li>
+<li><strong>M</strong>otion &#x2014; unnecessary movement of people</li>
+<li><strong>W</strong>aiting &#x2014; idle time between process steps</li>
+<li><strong>O</strong>verproduction &#x2014; making more than needed</li>
+<li><strong>O</strong>ver-processing &#x2014; doing more than required</li>
+<li><strong>D</strong>efects &#x2014; rework and scrap</li>
+</ul>
+<p><strong>Carbon Footprint:</strong> Total greenhouse gas emissions caused by an organization.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>Triple Bottom Line:</strong> Measuring success by social, environmental, and financial impact.</p>
@@ -129,8 +171,18 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 4: Process and Capacity Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Earned Value Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tZ_OGCBuBJ4" title="Earned Value Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Risk Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7Ee6V8xTtFk" title="Risk Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
-<p><strong>Process Types:</strong> Job Shop (low vol, high variety), Batch (medium/medium), Mass/Assembly Line (high vol, low variety), Continuous (very high vol, no variety).</p>
+<p><strong>Process Types:</strong></p>
+<ul>
+<li><strong>Job Shop:</strong> Low volume, high variety (custom furniture)</li>
+<li><strong>Batch:</strong> Medium volume, medium variety (bakery)</li>
+<li><strong>Mass/Assembly Line:</strong> High volume, low variety (cars)</li>
+<li><strong>Continuous:</strong> Very high volume, no variety (cement, chemicals)</li>
+</ul>
+<p><strong>Capacity:</strong> Maximum output rate of a system.</p>
+<p><strong>Capacity Planning:</strong> Long-term (years), Medium-term (months), Short-term (weeks).</p>
 <p><strong>Bottleneck:</strong> The process step with the lowest capacity — limits entire system.</p>
 <p><strong>Theory of Constraints (TOC):</strong> Identify &gt; Exploit &gt; Subordinate &gt; Elevate &gt; Repeat.</p>
 <p><strong>Break-Even Analysis:</strong> BEP = Fixed Cost / (Price - Variable Cost per unit).</p>
@@ -140,14 +192,50 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Theory of Constraints:</strong> A methodology for identifying and managing bottlenecks.</p>
 <p><strong>Break-Even Point:</strong> The level of output at which total revenue equals total cost.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>Process Type</th><th>Volume</th><th>Variety</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Job Shop</td><td>Low</td><td>High</td><td>Custom furniture</td></tr>
+<tr><td>Batch</td><td>Medium</td><td>Medium</td><td>Bakery</td></tr>
+<tr><td>Mass/Line</td><td>High</td><td>Low</td><td>Car assembly</td></tr>
+<tr><td>Continuous</td><td>Very High</td><td>None</td><td>Cement, chemicals</td></tr>
+</tbody>
+</table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>In a pizza shop: dough prep (20/hr) &gt; baking (12/hr) &gt; packaging (25/hr). Baking is the bottleneck at 12/hr. TOC says: exploit (maximize oven use), then subordinate (slow down prep to match baking).</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TOC = I-E-S-E-R</strong> = Identify, Exploit, Subordinate, Elevate, Repeat.</p></div>
 <div class="kt"><strong>&#x1F4B0; Key Formula:</strong> BEP = FC / (P - VC)</div>
+<div class="section"><h4>&#x1F4CA; Capacity Planning Strategies</h4>
+<p><strong>Design Capacity:</strong> Maximum theoretical output under ideal conditions.</p>
+<p><strong>Effective Capacity:</strong> Maximum output after accounting for real-world constraints (breaks, maintenance, changeovers).</p>
+<p><strong>Capacity Utilization</strong> = Actual Output / Design Capacity x 100.</p>
+<p><strong>Three Strategies for Capacity Expansion:</strong></p>
+<ul>
+<li><strong>Lead Strategy:</strong> Add capacity before demand arrives (aggressive, risk of overcapacity) — used by e-commerce firms during festival season</li>
+<li><strong>Lag Strategy:</strong> Add capacity only after demand materializes (conservative, risk of lost sales) — traditional Indian manufacturers like Tata Steel follow this</li>
+<li><strong>Match Strategy:</strong> Add capacity incrementally in response to demand signals (balanced approach) — used by Maruti Suzuki for new model launches</li>
+</ul>
+<p><strong>Capacity Cushion</strong> = 100% - Utilization Rate. Most firms maintain 10-20% cushion for demand surges.</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Theory of Constraints — Focusing Steps</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4);width:85%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.88rem"><strong>Step 1: IDENTIFY</strong> — Find the system bottleneck</div>
+<div style="font-size:1rem;color:rgba(225,112,85,0.5)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:85%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.88rem"><strong>Step 2: EXPLOIT</strong> — Maximize bottleneck output (no idle time)</div>
+<div style="font-size:1rem;color:rgba(0,184,148,0.5)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);width:85%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.88rem"><strong>Step 3: SUBORDINATE</strong> — Align all other resources to bottleneck pace</div>
+<div style="font-size:1rem;color:rgba(0,210,255,0.5)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:85%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.88rem"><strong>Step 4: ELEVATE</strong> — Invest to increase bottleneck capacity</div>
+<div style="font-size:1rem;color:rgba(255,215,0,0.5)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:85%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.88rem"><strong>Step 5: REPEAT</strong> — Go back to Step 1 (new bottleneck emerges)</div>
+</div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Capacity Planning</div><p><strong>Amul (Gujarat Cooperative):</strong> During festival seasons (Diwali, Holi), Amul increases milk procurement and runs plants at 95%+ utilization. They use a lead strategy — expanding chilling capacity in rural Gujarat ahead of peak demand. Their Surat plant added a new processing line in 2023 specifically for the Navratri sweet-making season, increasing capacity by 40%.</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>4 process types: Job Shop, Batch, Mass, Continuous</li>
 <li>Bottleneck = lowest capacity step</li>
 <li>TOC: Identify → Exploit → Subordinate → Elevate → Repeat</li>
 <li>BEP = FC / (P - VC)</li>
+<li>Design vs Effective Capacity — always calculate utilization</li>
+<li>Lead, Lag, Match = 3 capacity expansion strategies</li>
 </ul></div>
 </div>
 
@@ -156,17 +244,34 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 5: Facility Layout</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Risk Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7Ee6V8xTtFk" title="Risk Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Agile vs Waterfall</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VXDFPKLJqEY" title="Agile vs Waterfall" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
-<p><strong>Layout Types:</strong> Product (high vol, standardized), Process (low vol, high variety), Cellular (group similar machines), Fixed-Position (large, immovable products).</p>
+<p><strong>Layout Types:</strong></p>
+<ul>
+<li><strong>Product Layout:</strong> High volume, standardized (assembly line)</li>
+<li><strong>Process Layout:</strong> Low volume, high variety (hospital departments)</li>
+<li><strong>Cellular Layout:</strong> Group similar machines into cells (hybrid)</li>
+<li><strong>Fixed-Position Layout:</strong> Large, immovable products (shipbuilding)</li>
+</ul>
 <p><strong>Line Balancing:</strong> Distributing work evenly across workstations.</p>
 <p><strong>Cycle Time</strong> = Available Time / Required Output.</p>
-<p><strong>Min Stations</strong> = Sum of Task Times / Cycle Time.</p>
+<p><strong>Minimum Stations</strong> = Sum of Task Times / Cycle Time.</p>
 <p><strong>Efficiency</strong> = Sum of Task Times / (Number of Stations x Cycle Time).</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>Line Balancing:</strong> Assigning tasks to workstations so that each has approximately equal time.</p>
 <p><strong>Cycle Time:</strong> The maximum time allowed at each workstation.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>Layout</th><th>Volume</th><th>Variety</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Product</td><td>High</td><td>Low</td><td>Assembly line</td></tr>
+<tr><td>Process</td><td>Low</td><td>High</td><td>Hospital</td></tr>
+<tr><td>Cellular</td><td>Medium</td><td>Medium</td><td>Electronics manufacturing</td></tr>
+<tr><td>Fixed-Position</td><td>Low</td><td>Low</td><td>Shipbuilding, construction</td></tr>
+</tbody>
+</table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Car assembly line (product layout) vs hospital (process layout — each department is a different process). Cell phone manufacturing uses cellular layout — grouped by product family.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>P-P-C-F</strong> = Product, Process, Cellular, Fixed-position layouts.</p></div>
 <div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> Cycle Time = Available Time / Required Output | Min Stations = Task Times / Cycle Time | Efficiency = Task Times / (Stations x Cycle Time)</div>
@@ -182,24 +287,46 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 6: Product and Service Design</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Agile vs Waterfall</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VXDFPKLJqEY" title="Agile vs Waterfall" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Gantt Charts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Cw_EpmOzffk" title="Gantt Charts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>QFD (Quality Function Deployment):</strong> Translates customer needs (WHATs) into technical requirements (HOWs) — "House of Quality".</p>
 <p><strong>DFM (Design for Manufacturing):</strong> Design products for easy manufacturing.</p>
 <p><strong>DFA (Design for Assembly):</strong> Reduce number of assembly steps.</p>
 <p><strong>Modular Design:</strong> Use standardized, interchangeable modules.</p>
 <p><strong>Concurrent Engineering:</strong> Parallel design activities (faster time-to-market).</p>
+<p><strong>Value Engineering:</strong> Improve value by reducing cost or improving function.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>QFD:</strong> A method to transform user demands into design quality and deploy the quality into components.</p>
 <p><strong>Concurrent Engineering:</strong> Simultaneous performance of product design and process design.</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IKEA uses modular design — standardized components that can be combined in different ways. Assembly instructions are designed for customers (DFA).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Q-D-M-C</strong> = QFD, DFM/DFA, Modular, Concurrent.</p></div>
+<div class="section"><h4>&#x1F4CA; QFD House of Quality — Step by Step</h4>
+<table class="db">
+<thead><tr><th>Step</th><th>Action</th><th>Example (Smartphone)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Identify Customer Needs (WHATs)</td><td>Long battery, fast charging, good camera</td></tr>
+<tr><td>2</td><td>Identify Technical Requirements (HOWs)</td><td>Battery capacity (mAh), Charger wattage, Sensor resolution</td></tr>
+<tr><td>3</td><td>Build relationship matrix (strong/medium/weak)</td><td>Battery mAh strongly relates to "long battery" need</td></tr>
+<tr><td>4</td><td>Build correlation matrix (roof)</td><td>Battery size negatively correlates with slim design</td></tr>
+<tr><td>5</td><td>Competitive benchmarking</td><td>Compare your specs vs Samsung, Apple, OnePlus</td></tr>
+<tr><td>6</td><td>Set target values</td><td>5000 mAh battery, 65W charger, 108MP camera</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Product Design</div>
+<p><strong>Tata Nano:</strong> A classic DFM example. Tata designed the Nano for extreme cost reduction — fewer parts (1,300 vs industry avg 2,000+), single windshield wiper, rear engine (eliminated driveshaft), and simplified dashboard. DFM principles enabled a Rs 1 lakh price target. While commercially unsuccessful (market positioning issues), it remains a case study in DFM for emerging markets.</p>
+<p><strong>Amul (Packaging Innovation):</strong> Amul's tetra pak packaging is a modular design triumph — standardized carton sizes across 50+ product variants. DFA principles reduced filling line changeover time from 45 minutes to 10 minutes when switching between milk, buttermilk, and lassi packaging.</p>
+<p><strong>Mahindra Thar:</strong> Uses modular platform design — the same ladder-frame chassis supports multiple body styles (hard top, soft top, convertible). Concurrent engineering between Mahindra's Chennai design center and Pininfarina (Italy) reduced development time from 5 years to 3 years.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Q-D-M-C</strong> = QFD, DFM/DFA, Modular, Concurrent. <strong>"QFD = Voice of Customer becomes Engineering Specs."</strong></p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>QFD = House of Quality (customer needs → technical specs)</li>
-<li>DFM = easy to make; DFA = easy to assemble</li>
-<li>Modular design enables flexibility</li>
-<li>Concurrent engineering = parallel design</li>
+<li>DFM = easy to make; DFA = easy to assemble (fewer parts)</li>
+<li>Modular design = standardized, interchangeable components</li>
+<li>Concurrent engineering = parallel design activities (faster time-to-market)</li>
+<li>Value engineering = improve function-to-cost ratio</li>
+<li>Indian examples: Tata Nano (DFM), Amul (modular packaging), Mahindra (concurrent)</li>
 </ul></div>
 </div>
 
@@ -208,12 +335,23 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 7: Demand Forecasting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Gantt Charts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Cw_EpmOzffk" title="Gantt Charts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>WBS Work Breakdown Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/GzzRpJFHEK0" title="WBS Work Breakdown Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
-<p><strong>Qualitative Methods:</strong> Delphi method, Market Survey, Expert Opinion (subjective).</p>
-<p><strong>Quantitative — Time Series:</strong> Moving Average, Exponential Smoothing, Trend Analysis.</p>
-<p><strong>Quantitative — Causal:</strong> Regression, Correlation.</p>
-<p><strong>Exponential Smoothing:</strong> F(t+1) = alpha x D(t) + (1-alpha) x F(t). Higher alpha = more responsive.</p>
-<p><strong>Error Measures:</strong> MAD (Mean Absolute Deviation), MSE (Mean Squared Error), MAPE (Mean Absolute Percentage Error).</p>
+<p><strong>Qualitative Methods:</strong> Delphi method, Market Survey, Expert Opinion (subjective, judgment-based).</p>
+<p><strong>Quantitative Methods:</strong></p>
+<ul>
+<li><strong>Time Series:</strong> Moving Average, Exponential Smoothing, Trend Analysis</li>
+<li><strong>Causal:</strong> Regression, Correlation</li>
+</ul>
+<p><strong>Exponential Smoothing:</strong> F(t+1) = alpha x D(t) + (1-alpha) x F(t). alpha = smoothing constant (0 to 1); higher alpha = more responsive to recent data.</p>
+<p><strong>Forecast Error Measures:</strong></p>
+<ul>
+<li><strong>MAD</strong> = Mean Absolute Deviation</li>
+<li><strong>MSE</strong> = Mean Squared Error</li>
+<li><strong>MAPE</strong> = Mean Absolute Percentage Error</li>
+</ul>
+<p><strong>Forecast Error</strong> = Actual - Forecast.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>Exponential Smoothing:</strong> A weighted moving average where recent data gets more weight.</p>
@@ -221,13 +359,64 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>MAPE:</strong> Average of absolute percentage errors (best for comparing across datasets).</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A retailer uses exponential smoothing (alpha = 0.3). If actual = 100 and forecast = 90, new forecast = 0.3(100) + 0.7(90) = 93.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>alpha-D + (1-alpha)-F</strong> = Exponential smoothing formula.</p></div>
+<div class="section"><h4>&#x1F4CA; Forecasting Methods Compared</h4>
+<table class="db">
+<thead><tr><th>Method</th><th>Type</th><th>Best For</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td>Moving Average</td><td>Time Series</td><td>Stable demand, no trend</td><td>Lags behind trends</td></tr>
+<tr><td>Weighted Moving Avg</td><td>Time Series</td><td>Recent data matters more</td><td>Still lags trends</td></tr>
+<tr><td>Exponential Smoothing</td><td>Time Series</td><td>Short-term, stable data</td><td>Cannot handle trends alone</td></tr>
+<tr><td>Holt's Method</td><td>Time Series</td><td>Data with trend</td><td>2 parameters to estimate</td></tr>
+<tr><td>Winters' Method</td><td>Time Series</td><td>Trend + seasonality</td><td>3 parameters, needs 2+ cycles</td></tr>
+<tr><td>Linear Regression</td><td>Causal</td><td>One independent variable</td><td>Assumes linear relationship</td></tr>
+<tr><td>Delphi Method</td><td>Qualitative</td><td>New products, no data</td><td>Subjective, time-consuming</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F4D0; Numerical Walkthrough — 3-Month Moving Average</h4>
+<p><strong>Given:</strong> Jan=120, Feb=135, Mar=150, Apr=145, May=?</p>
+<p><strong>3-Month Moving Average for May:</strong></p>
+<ul>
+<li>MA(May) = (Feb + Mar + Apr) / 3 = (135 + 150 + 145) / 3 = <strong>143.3</strong></li>
+</ul>
+<p><strong>Exponential Smoothing (alpha = 0.4, F(Apr) = 140):</strong></p>
+<ul>
+<li>F(May) = 0.4 x 145 + 0.6 x 140 = 58 + 84 = <strong>142</strong></li>
+</ul>
+<p><strong>Error Calculation (if Actual May = 148):</strong></p>
+<ul>
+<li>Forecast Error = 148 - 143.3 = <strong>4.7</strong> (moving avg)</li>
+<li>Forecast Error = 148 - 142 = <strong>6.0</strong> (exponential smoothing)</li>
+</ul>
+</div>
+<div class="section"><h4>&#x1F4D0; Numerical Walkthrough — MAD and MAPE</h4>
+<table class="db">
+<thead><tr><th>Month</th><th>Actual</th><th>Forecast</th><th>Error</th><th>|Error|</th><th>|Error|/Actual</th></tr></thead>
+<tbody>
+<tr><td>Jan</td><td>100</td><td>95</td><td>5</td><td>5</td><td>0.050</td></tr>
+<tr><td>Feb</td><td>110</td><td>105</td><td>5</td><td>5</td><td>0.045</td></tr>
+<tr><td>Mar</td><td>95</td><td>100</td><td>-5</td><td>5</td><td>0.053</td></tr>
+<tr><td>Apr</td><td>120</td><td>108</td><td>12</td><td>12</td><td>0.100</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>MAD</strong> = (5 + 5 + 5 + 12) / 4 = <strong>6.75</strong></li>
+<li><strong>MAPE</strong> = (0.050 + 0.045 + 0.053 + 0.100) / 4 x 100 = <strong>6.2%</strong></li>
+<li>MAPE of 6.2% means forecasts are off by 6.2% on average — good for most industries</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Forecasting</div>
+<p><strong>ITC Foods (Bingo, Sunfeast):</strong> ITC uses a combination of time-series forecasting and market intelligence from its e-Choupal network (over 35,000 internet kiosks in rural India) to predict demand for packaged food products. During monsoon disruptions, they switch to qualitative methods — surveying distributors across 15 states. Their forecasting accuracy improved by 22% after implementing SAP Integrated Business Planning in 2022.</p>
+<p><strong>BigBasket:</strong> Uses exponential smoothing with alpha=0.6 for daily demand of perishables (fruits, vegetables, dairy). High alpha gives more weight to yesterday's actual demand — essential for items with 1-2 day shelf life. Their forecasting error dropped from 18% to 9% after ML-based demand sensing was added in 2023.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>alpha-D + (1-alpha)-F</strong> = Exponential smoothing formula. Higher alpha = more reactive. Lower alpha = more stable. <strong>"Higher Alpha = Higher Reactivity"</strong> (easy to remember).</p></div>
 <div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> F(t+1) = aD(t) + (1-a)F(t) | MAD = Σ|A-F|/n | MAPE = Σ|Error/A|/n × 100</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Qualitative: Delphi, surveys, expert opinion</li>
 <li>Quantitative: Time series (moving avg, exp smoothing) + Causal (regression)</li>
 <li>Exponential smoothing: recent data weighted more</li>
 <li>MAD, MSE, MAPE = error measures</li>
+<li>MAPE is best for comparing across different datasets</li>
+<li>Holt's for trend, Winters' for trend + seasonality</li>
 </ul></div>
 </div>
 
@@ -236,13 +425,15 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 8: Inventory Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>WBS Work Breakdown Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/GzzRpJFHEK0" title="WBS Work Breakdown Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Stakeholder Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/bEJkMaPHsTo" title="Stakeholder Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
-<p><strong>Inventory Types:</strong> Raw Materials, WIP, Finished Goods, MRO.</p>
+<p><strong>Inventory Types:</strong> Raw Materials, WIP (Work in Progress), Finished Goods, MRO (Maintenance, Repair, Operations).</p>
 <p><strong>ABC Analysis:</strong> A items (80% value, 20% items), B items (15% value, 30% items), C items (5% value, 50% items).</p>
-<p><strong>EOQ</strong> = sqrt(2DS/H). D = annual demand, S = ordering cost, H = holding cost.</p>
-<p><strong>ROP</strong> = d x L + Safety Stock. d = daily demand, L = lead time.</p>
-<p><strong>Safety Stock</strong> = Z x sigma x sqrt(L).</p>
-<p><strong>JIT:</strong> Produce only what's needed, when needed, in the quantity needed.</p>
+<p><strong>EOQ (Economic Order Quantity)</strong> = sqrt(2DS/H). D = Annual demand, S = Ordering cost per order, H = Holding cost per unit per year.</p>
+<p><strong>Reorder Point (ROP)</strong> = d x L + Safety Stock. d = daily demand, L = lead time.</p>
+<p><strong>Safety Stock</strong> = Z x sigma x sqrt(L). Z = service level factor, sigma = std dev of demand.</p>
+<p><strong>Just-in-Time (JIT):</strong> Produce only what's needed, when needed, in the quantity needed.</p>
 <p><strong>Kanban:</strong> Pull system using visual signals (cards).</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
@@ -250,14 +441,55 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Safety Stock:</strong> Extra inventory held to buffer against demand/supply variability.</p>
 <p><strong>JIT:</strong> An inventory strategy that increases efficiency by receiving goods only as needed.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>Class</th><th>% Items</th><th>% Value</th><th>Control</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>20%</td><td>80%</td><td>Tight, frequent review</td></tr>
+<tr><td>B</td><td>30%</td><td>15%</td><td>Moderate control</td></tr>
+<tr><td>C</td><td>50%</td><td>5%</td><td>Simple, infrequent</td></tr>
+</tbody>
+</table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon uses ABC analysis: A items (high-value electronics) in easily accessible locations. C items (cheap accessories) in back storage.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>EOQ = sqrt(2DS/H)</strong>. <strong>A = 80/20 rule</strong> = ABC Analysis.</p></div>
-<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> EOQ = sqrt(2DS/H) | ROP = d×L + SS | SS = Z×sigma×sqrt(L)</div>
+<div class="section"><h4>&#x1F4D0; EOQ Numerical Walkthrough</h4>
+<p><strong>Given:</strong> Annual Demand (D) = 12,000 units, Ordering Cost (S) = Rs 500/order, Holding Cost (H) = Rs 10/unit/year</p>
+<ul>
+<li><strong>EOQ</strong> = sqrt(2 x 12000 x 500 / 10) = sqrt(1,200,000) = <strong>1,095 units</strong></li>
+<li><strong>Number of Orders/Year</strong> = D / EOQ = 12,000 / 1,095 = <strong>10.96 orders</strong></li>
+<li><strong>Order Cycle</strong> = 365 / 10.96 = <strong>33.3 days</strong></li>
+<li><strong>Total Cost</strong> = (D/EOQ x S) + (EOQ/2 x H) = (10.96 x 500) + (547.5 x 10) = 5,480 + 5,475 = <strong>Rs 10,955/year</strong></li>
+</ul>
+<p><strong>Safety Stock Example:</strong> Daily demand = 100 units, Lead time = 5 days, sigma = 15, Service level = 95% (Z = 1.65)</p>
+<ul>
+<li><strong>Safety Stock</strong> = 1.65 x 15 x sqrt(5) = 1.65 x 15 x 2.236 = <strong>55.3 units</strong></li>
+<li><strong>ROP</strong> = (100 x 5) + 55.3 = <strong>555.3 units</strong></li>
+</ul>
+</div>
+<div class="section"><h4>&#x1F4CA; JIT vs Traditional Inventory</h4>
+<table class="db">
+<thead><tr><th>Aspect</th><th>Traditional (Push)</th><th>JIT (Pull)</th></tr></thead>
+<tbody>
+<tr><td>Philosophy</td><td>Keep extra stock "just in case"</td><td>Produce only what's needed</td></tr>
+<tr><td>Inventory Level</td><td>High (buffer stock)</td><td>Minimal (near zero)</td></tr>
+<tr><td>Setup Times</td><td>Accept long setups</td><td>Reduce setup aggressively (SMED)</td></tr>
+<tr><td>Supplier Relations</td><td>Multiple suppliers, adversarial</td><td>Few suppliers, partnerships</td></tr>
+<tr><td>Defect Tolerance</td><td>Inspect and catch later</td><td>Zero defects, stop the line (Andon)</td></tr>
+<tr><td>Signal System</td><td>Production schedule (MRP)</td><td>Kanban cards (visual pull)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Inventory &amp; JIT</div>
+<p><strong>Maruti Suzuki:</strong> Maruti pioneered JIT in Indian manufacturing. Their Gurugram plant keeps only 2-4 hours of inventory for key components. Suppliers deliver parts multiple times a day using milk-run logistics (dedicated trucks on fixed routes). This reduced inventory carrying costs by 60% compared to the 1990s. Kanban signals trigger replenishment from nearby supplier parks.</p>
+<p><strong>Amul (GCMMF):</strong> Amul collects milk from 3.6 million farmers daily — the ultimate "perishable inventory" challenge. Their cold chain operates on JIT principles: milk collected in the morning reaches processing plants by evening, and packaged products reach distributors by next morning. Inventory turns are among the fastest in FMCG — fresh products reach retail within 24-48 hours of production.</p>
+<p><strong>Flipkart/Amazon India:</strong> Use ABC analysis for warehouse slotting. A items (fast-moving electronics) are stored near dispatch zones. C items (slow-moving accessories) are in deeper storage. Flipkart's fulfillment centers use algorithmic slotting that adjusts daily based on demand patterns during sales events like Big Billion Days.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>EOQ = sqrt(2DS/H)</strong>. <strong>A = 80/20 rule</strong> = ABC Analysis. <strong>JIT = "Right part, right quantity, right time."</strong> Kanban = visual pull signal.</p></div>
+<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> EOQ = sqrt(2DS/H) | ROP = d×L + SS | SS = Z×sigma×sqrt(L) | Total Inventory Cost = (D/Q x S) + (Q/2 x H)</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>ABC: A=80/20, B=15/30, C=5/50</li>
+<li>ABC: A=80/20, B=15/30, C=5/50 (Pareto principle)</li>
 <li>EOQ minimizes ordering + holding costs</li>
-<li>ROP = when to reorder; Safety Stock = buffer</li>
-<li>JIT = only what's needed, when needed</li>
+<li>ROP = when to reorder; Safety Stock = buffer against variability</li>
+<li>JIT = only what's needed, when needed (pull system)</li>
+<li>Kanban = visual signal for replenishment</li>
+<li>Indian leaders: Maruti (JIT pioneer), Amul (perishable JIT), Flipkart (ABC slotting)</li>
 </ul></div>
 </div>
 
@@ -266,24 +498,61 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 9: Aggregate Planning</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Stakeholder Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/bEJkMaPHsTo" title="Stakeholder Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Communication Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sLkPB8bdlGk" title="Communication Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>Aggregate Plan:</strong> Medium-term production plan (3-18 months) that determines output levels.</p>
-<p><strong>Chase Strategy:</strong> Match demand by adjusting workforce (hire/fire as needed).</p>
-<p><strong>Level Strategy:</strong> Constant production rate, use inventory/backlog to absorb demand fluctuations.</p>
-<p><strong>Mixed Strategy:</strong> Combination of chase and level.</p>
-<p><strong>Costs:</strong> Regular time, Overtime, Hiring, Firing, Inventory holding, Backorder.</p>
+<p><strong>Strategies:</strong></p>
+<ul>
+<li><strong>Chase Strategy:</strong> Match demand by adjusting workforce (hire/fire as needed)</li>
+<li><strong>Level Strategy:</strong> Constant production rate, use inventory/backlog to absorb demand fluctuations</li>
+<li><strong>Mixed Strategy:</strong> Combination of chase and level</li>
+</ul>
+<p><strong>Costs Considered:</strong> Regular time, Overtime, Hiring, Firing, Inventory holding, Backorder.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>Aggregate Planning:</strong> A process to develop a preliminary, approximate schedule of the overall operations.</p>
 <p><strong>Chase Strategy:</strong> Adjusting capacity to match demand (variable workforce).</p>
 <p><strong>Level Strategy:</strong> Maintaining constant capacity regardless of demand.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>Strategy</th><th>Workforce</th><th>Inventory</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Chase</td><td>Variable</td><td>Low</td><td>Demand fluctuations</td></tr>
+<tr><td>Level</td><td>Constant</td><td>High/Low</td><td>Stable demand</td></tr>
+<tr><td>Mixed</td><td>Semi-variable</td><td>Moderate</td><td>Most situations</td></tr>
+</tbody>
+</table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>An ice cream factory uses chase strategy (more workers in summer, fewer in winter). A paper mill uses level strategy (constant production, build inventory in low-demand periods).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>C-L-M</strong> = Chase, Level, Mixed strategies.</p></div>
+<div class="section"><h4>&#x1F4CA; Aggregate Planning Cost Comparison</h4>
+<p><strong>Scenario:</strong> Demand = 1000 units/month (normal), 1500 units/month (peak, 3 months), 700 units/month (low, 3 months)</p>
+<table class="db">
+<thead><tr><th>Strategy</th><th>Approach</th><th>Additional Cost</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td><strong>Chase</strong></td><td>Hire/fire workers each month</td><td>Hiring Rs 5,000/person, Firing Rs 8,000/person</td><td>Morale issues, training costs</td></tr>
+<tr><td><strong>Level</strong></td><td>Produce 1,000/month, build inventory or use backlog</td><td>Inventory holding Rs 50/unit/month</td><td>Storage costs, obsolescence</td></tr>
+<tr><td><strong>Mixed</strong></td><td>Base workforce (800) + overtime + subcontracting</td><td>Overtime 1.5x, Subcontract Rs 200/unit premium</td><td>Supplier dependency</td></tr>
+</tbody>
+</table>
+<p><strong>Key Decision Factors:</strong></p>
+<ul>
+<li>High hiring/firing costs → prefer Level strategy</li>
+<li>High inventory costs → prefer Chase strategy</li>
+<li>Highly seasonal demand with stable base → prefer Mixed strategy</li>
+<li>Skilled labor shortage → Level (keep workforce stable)</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Aggregate Planning</div>
+<p><strong>Cadbury India (Mondelez):</strong> Uses a mixed strategy. Their Pune plant runs at a level production rate year-round for core products (Dairy Milk). During festival season (Oct-Dec), they add overtime shifts and subcontract packaging to meet the 3x demand surge. Post-festival, they reduce shifts but don't fire workers — maintaining a skilled permanent workforce.</p>
+<p><strong>Hindustan Unilever (HUL):</strong> For seasonal products like Kwality Wall's ice cream, HUL uses chase strategy — temporary workers and extended shifts during summer (March-June), reduced operations in winter. For detergents (Surf Excel), they use level strategy with promotional demand managed through advance inventory builds.</p>
+<p><strong>Indian Railways (Coach Manufacturing):</strong> Uses a level strategy — Rail Coach Factory (Kapurthala) and Integral Coach Factory (Chennai) produce at a constant rate. Finished coaches are stored in marshalling yards and deployed as needed across the network. Demand variation is absorbed through scheduling, not production changes.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>C-L-M</strong> = Chase, Level, Mixed strategies. <strong>"Chase = Change workforce. Level = Change inventory. Mixed = Both."</strong></p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Chase = adjust workforce to match demand</li>
-<li>Level = constant production, use inventory</li>
-<li>Mixed = combination approach</li>
+<li>Chase = adjust workforce to match demand (hire/fire)</li>
+<li>Level = constant production, use inventory/backlog to absorb variation</li>
+<li>Mixed = combination of chase and level (most practical)</li>
+<li>Consider: hiring/firing costs, inventory costs, skill requirements, demand patterns</li>
+<li>Indian examples: Cadbury (mixed), HUL (chase for seasonal, level for staples), Railways (level)</li>
 </ul></div>
 </div>
 
@@ -292,12 +561,20 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 10: Materials Requirement Planning (MRP)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Communication Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sLkPB8bdlGk" title="Communication Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YKq8BGRVkbI" title="Quality Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
-<p><strong>MRP Inputs:</strong> Master Production Schedule (MPS), Bill of Materials (BOM), Inventory Records.</p>
+<p><strong>MRP Inputs:</strong></p>
+<ul>
+<li><strong>Master Production Schedule (MPS):</strong> What to make and when</li>
+<li><strong>Bill of Materials (BOM):</strong> What goes into each product</li>
+<li><strong>Inventory Records:</strong> What's already on hand</li>
+</ul>
 <p><strong>MRP Logic:</strong> Gross Requirements &gt; Scheduled Receipts &gt; Net Requirements &gt; Planned Order Releases.</p>
-<p><strong>Lot Sizing:</strong> EOQ, Lot-for-Lot, POQ (Period Order Quantity).</p>
+<p><strong>Lot Sizing Methods:</strong> EOQ, Lot-for-Lot (order exactly what's needed), POQ (Period Order Quantity).</p>
 <p><strong>MRP II:</strong> Manufacturing Resource Planning (adds capacity planning to MRP).</p>
-<p><strong>ERP:</strong> Enterprise Resource Planning (integrates all business functions).</p>
+<p><strong>ERP:</strong> Enterprise Resource Planning (integrates all business functions: finance, HR, manufacturing, etc.).</p>
+<p><strong>BOM:</strong> Hierarchical list of all components needed to make a product.</p>
 </div>
 <div class="section"><h4>&#x1F4D6; Key Definitions</h4>
 <p><strong>MRP:</strong> A system for calculating the materials and components needed to manufacture a product.</p>
@@ -318,6 +595,8 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 11: Scheduling and Sequencing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YKq8BGRVkbI" title="Quality Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resource Leveling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3vz0xYx0E5w" title="Resource Leveling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>FCFS:</strong> First Come First Served — simple, fair.</p>
 <p><strong>SPT:</strong> Shortest Processing Time — minimizes average flow time.</p>
@@ -332,11 +611,45 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Flow Time:</strong> Time from job arrival to completion.</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A mechanic with 3 cars: Oil change (30 min), Brake repair (2 hrs), Tire rotation (45 min). SPT sequence: Oil (30) &gt; Tire (45) &gt; Brake (120). Minimizes average waiting time.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SPT = Shortest First = Min Flow Time</strong>. <strong>EDD = Earliest Due = Min Lateness</strong>.</p></div>
+<div class="section"><h4>&#x1F4D0; Scheduling Rule Comparison — Worked Example</h4>
+<p><strong>Given 4 jobs:</strong></p>
+<table class="db">
+<thead><tr><th>Job</th><th>Processing Time</th><th>Due Date</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>6</td><td>8</td></tr>
+<tr><td>B</td><td>2</td><td>12</td></tr>
+<tr><td>C</td><td>4</td><td>6</td></tr>
+<tr><td>D</td><td>8</td><td>16</td></tr>
+</tbody>
+</table>
+<p><strong>FCFS Sequence (A-B-C-D):</strong></p>
+<ul>
+<li>Flow times: A=6, B=8, C=12, D=20. Avg Flow = 46/4 = <strong>11.5</strong></li>
+<li>Lateness: A=-2, B=-4, C=6, D=4. Max Lateness = <strong>6</strong></li>
+</ul>
+<p><strong>SPT Sequence (B-C-A-D):</strong></p>
+<ul>
+<li>Flow times: B=2, C=6, A=12, D=20. Avg Flow = 40/4 = <strong>10.0</strong> (minimum!)</li>
+<li>Lateness: B=-10, C=0, A=4, D=4. Max Lateness = <strong>4</strong></li>
+</ul>
+<p><strong>EDD Sequence (C-A-B-D):</strong></p>
+<ul>
+<li>Flow times: C=4, A=10, B=12, D=20. Avg Flow = 46/4 = <strong>11.5</strong></li>
+<li>Lateness: C=-2, A=2, B=0, D=4. Max Lateness = <strong>4</strong> (minimum!)</li>
+</ul>
+<p><strong>Conclusion:</strong> SPT minimizes average flow time (best overall). EDD minimizes maximum lateness (best for meeting deadlines).</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Scheduling</div>
+<p><strong>Infosys (Bangalore DC):</strong> Uses SPT-like prioritization for IT service tickets. Quick-fix issues (password resets, access requests) are processed first, while complex projects (system upgrades) are scheduled later. This minimizes average ticket resolution time across their 200,000+ employee base.</p>
+<p><strong>Indian Railways (Rake Scheduling):</strong> Uses a combination of EDD and priority rules. Express trains (Rajdhani, Shatabdi) get priority over freight trains. The scheduling algorithm at Indian Railways' control offices considers due dates (timetable adherence), train priority, and track availability — a real-world application of multi-machine scheduling.</p>
+<p><strong>IRCTC Catering (Pantry Cars):</strong> Uses FCFS for serving passengers on trains, but internally uses SPT for kitchen operations — preparing quick items (tea, snacks) before complex meals (thali) to minimize average waiting time for passengers.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SPT = Shortest First = Min Flow Time</strong>. <strong>EDD = Earliest Due = Min Lateness</strong>. <strong>"Shortest is Sweetest (for flow). Earliest is Easiest (for lateness)."</strong></p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>FCFS = fair; SPT = min flow time; EDD = min lateness</li>
-<li>Johnson's Rule for 2-machine sequencing</li>
+<li>Johnson's Rule for 2-machine sequencing (split by shortest time)</li>
+<li>CR = (Due - Today) / Processing Time (dynamic priority rule)</li>
 <li>Gantt charts visualize schedules</li>
+<li>Indian examples: Infosys (SPT for tickets), Railways (priority scheduling)</li>
 </ul></div>
 </div>
 
@@ -345,6 +658,8 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 12: Six Sigma Quality Control</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resource Leveling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3vz0xYx0E5w" title="Resource Leveling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Closure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sK8HbD0FOjE" title="Project Closure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>SQC:</strong> Monitor and control process quality using statistics.</p>
 <p><strong>Variables vs Attributes:</strong> Measurable (length, weight) vs Countable (defects, defectives).</p>
@@ -362,13 +677,82 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Cp:</strong> Process capability ratio (potential capability). <strong>Cpk:</strong> Process capability index (actual, accounts for centering).</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A hospital tracks patient wait times using X-bar charts. If a point falls outside UCL, the process is out of control and needs investigation.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DMAIC</strong> = Define, Measure, Analyze, Improve, Control. <strong>DPMO = 3.4</strong> at Six Sigma.</p></div>
-<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> Cp = (USL-LSL)/6σ | Cpk = min[(USL-μ)/3σ, (μ-LSL)/3σ] | UCL = X̄ + A₂R̄</div>
+<div class="section"><h4>&#x1F4CB; DMAIC — Detailed Steps</h4>
+<table class="db">
+<thead><tr><th>Phase</th><th>Key Activities</th><th>Tools Used</th></tr></thead>
+<tbody>
+<tr><td><strong>Define</strong></td><td>Identify problem, scope, CTQ (Critical to Quality), project charter, SIPOC diagram</td><td>SIPOC, CTQ tree, Voice of Customer</td></tr>
+<tr><td><strong>Measure</strong></td><td>Collect data, validate measurement system (Gage R&R), establish baseline sigma level</td><td>Data collection plan, Gage R&R, Process Map</td></tr>
+<tr><td><strong>Analyze</strong></td><td>Identify root causes, verify with data, 5 Why analysis, regression analysis</td><td>Fishbone, 5 Why, Regression, Pareto, Hypothesis Testing</td></tr>
+<tr><td><strong>Improve</strong></td><td>Generate solutions, pilot test, implement best solution, DOE (Design of Experiments)</td><td>DOE, Brainstorming, Poka-Yoke, Pilot Run</td></tr>
+<tr><td><strong>Control</strong></td><td>Monitor with control charts, document SOP, handover to process owner, control plan</td><td>Control Charts, SOP, Control Plan, Training</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F451; Six Sigma Belt Hierarchy</h4>
+<table class="db">
+<thead><tr><th>Belt Level</th><th>Role</th><th>Typical Projects</th></tr></thead>
+<tbody>
+<tr><td><strong>Master Black Belt</strong></td><td>Trainer, mentor, strategic deployment</td><td>Organization-wide initiatives</td></tr>
+<tr><td><strong>Black Belt</strong></td><td>Full-time project leader, statistical expert</td><td>Complex, cross-functional projects</td></tr>
+<tr><td><strong>Green Belt</strong></td><td>Part-time project member, assists Black Belts</td><td>Department-level improvement projects</td></tr>
+<tr><td><strong>Yellow Belt</strong></td><td>Basic awareness, supports team</td><td>Team-level quality tasks</td></tr>
+<tr><td><strong>White Belt</strong></td><td>Awareness training only</td><td>Participation in local problem-solving</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F4CA; Control Chart Interpretation</h4>
+<p><strong>When is a process "Out of Control"?</strong></p>
+<ul>
+<li>Any point beyond UCL or LCL (3-sigma limits)</li>
+<li>7 consecutive points on one side of the center line (run rule)</li>
+<li>7 consecutive points trending up or down</li>
+<li>2 out of 3 consecutive points beyond 2-sigma limits</li>
+<li>4 out of 5 consecutive points beyond 1-sigma limits</li>
+</ul>
+<p><strong>Types of Variation:</strong></p>
+<ul>
+<li><strong>Common Cause:</strong> Random, inherent in the process (in control, expected)</li>
+<li><strong>Special Cause:</strong> Assignable, unexpected — indicates process change (out of control)</li>
+</ul>
+</div>
+<div class="section"><h4>&#x1F4D0; Process Capability Example</h4>
+<p><strong>Given:</strong> USL = 10.5 mm, LSL = 9.5 mm, Process Mean (mu) = 10.1 mm, Process Std Dev (sigma) = 0.12 mm</p>
+<ul>
+<li><strong>Cp</strong> = (10.5 - 9.5) / (6 x 0.12) = 1.0 / 0.72 = <strong>1.39</strong> (process can fit within specs)</li>
+<li><strong>Cpk</strong> = min[(10.5 - 10.1) / (3 x 0.12), (10.1 - 9.5) / (3 x 0.12)]</li>
+<li><strong>Cpk</strong> = min[0.4/0.36, 0.6/0.36] = min[1.11, 1.67] = <strong>1.11</strong></li>
+<li><strong>Interpretation:</strong> Cp > 1.33 is good; Cpk = 1.11 means process is capable but slightly off-center (mean shifted toward LSL)</li>
+<li><strong>Rule of Thumb:</strong> Cpk > 1.33 = capable, Cpk > 1.67 = excellent, Cpk < 1.0 = needs improvement</li>
+</ul>
+</div>
+<div class="section"><h4>&#x1F4CA; Sigma Levels and DPMO</h4>
+<table class="db">
+<thead><tr><th>Sigma Level</th><th>DPMO</th><th>Yield (%)</th><th>Real-World Example</th></tr></thead>
+<tbody>
+<tr><td>1 Sigma</td><td>691,462</td><td>30.85%</td><td>Non-managed process</td></tr>
+<tr><td>2 Sigma</td><td>308,538</td><td>69.15%</td><td>Poor quality manufacturer</td></tr>
+<tr><td>3 Sigma</td><td>66,807</td><td>93.32%</td><td>Average company</td></tr>
+<tr><td>4 Sigma</td><td>6,210</td><td>99.38%</td><td>Good quality manufacturer</td></tr>
+<tr><td>5 Sigma</td><td>233</td><td>99.977%</td><td>Excellent quality (airlines)</td></tr>
+<tr><td>6 Sigma</td><td>3.4</td><td>99.99966%</td><td>World class (Motorola, GE)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Six Sigma</div>
+<p><strong>Tata Steel (Jamshedpur):</strong> Tata Steel deployed Six Sigma in 2002 and trained over 500 Black Belts. Their cold rolling mill achieved Cpk of 1.67 for sheet thickness, reducing customer complaints by 45%. The Jamshedpur plant was the first integrated steel plant in India to receive the Deming Prize (2008) — a direct result of Six Sigma and TQM integration.</p>
+<p><strong>Wipro:</strong> Wipro was one of the first Indian IT companies to adopt Six Sigma in the late 1990s. They applied DMAIC to reduce software defects, achieving a 40% reduction in post-delivery defects within 3 years. Wipro trained over 10,000 Green Belts across its global delivery centers.</p>
+<p><strong>Reliance Industries (Jamnagar Refinery):</strong> Uses Six Sigma to optimize refinery yields. Their Jamnagar refinery — the world's largest refining complex — uses control charts to monitor distillation column temperatures, achieving near-zero off-spec production. Process capability (Cpk) exceeds 2.0 for critical parameters.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DMAIC</strong> = Define, Measure, Analyze, Improve, Control. <strong>DPMO = 3.4</strong> at Six Sigma. <strong>"Cp = Can it fit? Cpk = is it Centered?"</strong> Belt hierarchy: <strong>"Master Black → Black → Green → Yellow → White"</strong> (decreasing expertise).</p></div>
+<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> Cp = (USL-LSL)/6σ | Cpk = min[(USL-μ)/3σ, (μ-LSL)/3σ] | UCL = X̄ + A₂R̄ | DPMO = (Defects / (Units × Opportunities)) × 1,000,000</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Six Sigma = 3.4 DPMO</li>
+<li>Six Sigma = 3.4 DPMO (99.99966% yield)</li>
 <li>DMAIC for existing; DMADV for new processes</li>
+<li>5 DMAIC phases: Define (charter) → Measure (baseline) → Analyze (root cause) → Improve (solutions) → Control (sustain)</li>
 <li>7 QC tools: Flowchart, Check Sheet, Histogram, Scatter, Control Chart, Fishbone, Pareto</li>
-<li>Cp = can it fit? Cpk = is it centered?</li>
+<li>Cp = can it fit? Cpk = is it centered? Target Cpk > 1.33</li>
+<li>Belt hierarchy: MBB > BB > GB > YB > WB</li>
+<li>Common cause (random) vs Special cause (assignable) variation</li>
 </ul></div>
 </div>
 
@@ -377,6 +761,8 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 13: Total Quality Management (TQM)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Closure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sK8HbD0FOjE" title="Project Closure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Six Sigma Basics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7gIMlebYFzE" title="Six Sigma Basics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>TQM:</strong> Organization-wide approach to continuous quality improvement.</p>
 <p><strong>Deming's 14 Points:</strong> Management philosophy for quality.</p>
@@ -393,13 +779,62 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Poka-Yoke:</strong> Error-proofing mechanisms that prevent defects.</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Toyota uses 5S in factories: Sort (remove unnecessary tools), Set (organize by frequency of use), Shine (clean daily), Standardize (checklists), Sustain (audits).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>S-S-S-S-S</strong> = Sort, Set, Shine, Standardize, Sustain (5S). <strong>PAIF</strong> = Prevention, Appraisal, Internal Failure, External Failure (quality costs).</p></div>
+<div class="section"><h4>&#x1F4CB; Deming's 14 Points — Key Highlights</h4>
+<table class="db">
+<thead><tr><th>#</th><th>Point</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Create constancy of purpose</td><td>Long-term quality commitment, not just profit</td></tr>
+<tr><td>2</td><td>Adopt the new philosophy</td><td>Zero defects mindset, stop accepting poor quality</td></tr>
+<tr><td>3</td><td>Cease dependence on inspection</td><td>Build quality into the process, don't inspect after</td></tr>
+<tr><td>5</td><td>Improve constantly</td><td>Continuous improvement (Kaizen) is never-ending</td></tr>
+<tr><td>6</td><td>Institute training on the job</td><td>Workers must be trained to do quality work</td></tr>
+<tr><td>8</td><td>Drive out fear</td><td>Workers must feel safe to report problems</td></tr>
+<tr><td>9</td><td>Break down barriers</td><td>Departmental silos destroy quality</td></tr>
+<tr><td>10</td><td>Eliminate slogans and targets</td><td>Targets without systems change are meaningless</td></tr>
+<tr><td>13</td><td>Institute education and self-improvement</td><td>Continuous learning for everyone</td></tr>
+<tr><td>14</td><td>Transformation is everyone's job</td><td>Top management must lead the change</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F4CA; Quality Cost Breakdown (PAIF)</h4>
+<table class="db">
+<thead><tr><th>Cost Type</th><th>Examples</th><th>% of Revenue (typical)</th></tr></thead>
+<tbody>
+<tr><td><strong>Prevention</strong></td><td>Training, quality planning, process design, supplier qualification</td><td>3-5%</td></tr>
+<tr><td><strong>Appraisal</strong></td><td>Inspection, testing, audits, calibration</td><td>5-10%</td></tr>
+<tr><td><strong>Internal Failure</strong></td><td>Scrap, rework, re-inspection, downtime</td><td>10-15%</td></tr>
+<tr><td><strong>External Failure</strong></td><td>Warranty claims, returns, complaints, lost customers</td><td>15-25%</td></tr>
+</tbody>
+</table>
+<p><strong>Key Insight:</strong> Increasing prevention costs reduces failure costs dramatically. A rupee spent on prevention saves 10-100 rupees in external failure.</p>
+</div>
+<div class="section"><h4>&#x1F9E9; Kaizen vs Innovation</h4>
+<table class="db">
+<thead><tr><th>Aspect</th><th>Kaizen</th><th>Innovation</th></tr></thead>
+<tbody>
+<tr><td>Approach</td><td>Incremental, small steps</td><td>Radical, big breakthroughs</td></tr>
+<tr><td>Cost</td><td>Low (uses existing resources)</td><td>High (requires investment)</td></tr>
+<tr><td>Risk</td><td>Low</td><td>High</td></tr>
+<tr><td>Speed</td><td>Continuous, gradual</td><td>One-time, disruptive</td></tr>
+<tr><td>Participation</td><td>Everyone (bottom-up)</td><td>Specialists (top-down)</td></tr>
+<tr><td>Japanese philosophy</td><td>"Change for better"</td><td>"Creative destruction"</td></tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — TQM</div>
+<p><strong>Mahindra &amp; Mahindra:</strong> Mahindra adopted TQM in the 1990s inspired by the Deming Prize winners. Their Kandivali (Mumbai) plant implemented 5S across all production lines and used Kaizen circles — groups of 5-7 workers meeting weekly to suggest improvements. Over 50,000 Kaizen suggestions were implemented between 2010-2020, saving an estimated Rs 200 crore. Mahindra won the Deming Prize in 2015 for its automotive division.</p>
+<p><strong>Tata Steel:</strong> Won the Deming Prize in 2008. Implemented the PDCA cycle across all departments — from blast furnace operations to HR hiring processes. Their Jamshedpur plant uses Poka-Yoke extensively: automatic sensors that detect surface defects on steel coils, rejecting them before packaging. Quality costs dropped from 8% to 3% of revenue.</p>
+<p><strong>Sundaram-Clayton (TVS Group):</strong> First Indian company to win the Deming Prize (1998). A brake manufacturer in Chennai that transformed quality using TQM, PDCA, and 5S. Their defect rate dropped from 500 PPM to under 50 PPM in a decade.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>S-S-S-S-S</strong> = Sort, Set, Shine, Standardize, Sustain (5S). <strong>PAIF</strong> = Prevention, Appraisal, Internal Failure, External Failure (quality costs). <strong>Deming = "Drive out fear, cease inspection dependence, improve constantly."</strong></p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>TQM = organization-wide quality improvement</li>
-<li>PDCA = Plan-Do-Check-Act cycle</li>
-<li>Kaizen = continuous small improvements</li>
+<li>Deming's 14 points = management philosophy for quality</li>
+<li>PDCA = Plan-Do-Check-Act cycle (Deming cycle)</li>
+<li>Kaizen = continuous small improvements (everyone participates)</li>
 <li>5S = Sort, Set, Shine, Standardize, Sustain</li>
-<li>Poka-Yoke = error-proofing</li>
+<li>Poka-Yoke = error-proofing (prevent mistakes by design)</li>
+<li>Quality costs: Prevention (cheapest) → Appraisal → Internal Failure → External Failure (most expensive)</li>
+<li>Indian Deming Prize winners: Sundaram-Clayton (1998), Tata Steel (2008), Mahindra (2015)</li>
 </ul></div>
 </div>
 
@@ -408,6 +843,8 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 14: Maintenance Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14" class="ai-response-box" style="display:none;"></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Six Sigma Basics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7gIMlebYFzE" title="Six Sigma Basics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MS Project Tutorial</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Eac7sUdVxVM" title="MS Project Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <p><strong>Maintenance Types:</strong> Breakdown (reactive), Preventive (scheduled), Predictive (condition-based), TPM (operators maintain own equipment).</p>
 <p><strong>OEE</strong> = Availability x Performance x Quality.</p>
@@ -422,19 +859,67 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>MTTR:</strong> Average time to repair equipment after failure.</p>
 </div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A factory's OEE = 90% Availability x 95% Performance x 99% Quality = 84.6%. World-class OEE is 85%+.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A x P x Q</strong> = OEE formula. <strong>MTBF/(MTBF+MTTR)</strong> = Availability.</p></div>
-<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> OEE = A × P × Q | Availability = MTBF/(MTBF+MTTR)</div>
+<div class="section"><h4>&#x1F4CB; TPM — 8 Pillars</h4>
+<table class="db">
+<thead><tr><th>Pillar</th><th>Focus</th><th>Key Activity</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Autonomous Maintenance</strong></td><td>Operators maintain own equipment</td><td>Clean, lubricate, inspect daily</td></tr>
+<tr><td><strong>2. Planned Maintenance</strong></td><td>Schedule-based preventive</td><td>Calendar-based overhaul</td></tr>
+<tr><td><strong>3. Quality Maintenance</strong></td><td>Zero defects condition</td><td>Inspect for quality parameters</td></tr>
+<tr><td><strong>4. Focused Improvement</strong></td><td>Cross-functional teams</td><td>Kaizen for chronic losses</td></tr>
+<tr><td><strong>5. Early Equipment Management</strong></td><td>Design for maintainability</td><td>Lessons from existing equipment</td></tr>
+<tr><td><strong>6. Training &amp; Education</strong></td><td>Skill development</td><td>Multi-skilled operators</td></tr>
+<tr><td><strong>7. Safety &amp; Environment</strong></td><td>Zero accidents</td><td>Hazard identification</td></tr>
+<tr><td><strong>8. Office TPM</strong></td><td>Administrative efficiency</td><td>Reduce paperwork waste</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F4CA; 6 Big Losses (OEE Killers)</h4>
+<table class="db">
+<thead><tr><th>Category</th><th>Loss Type</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><strong>Availability</strong></td><td>Equipment Failure (breakdown)</td><td>Motor burnout, machine crash</td></tr>
+<tr><td>Setup &amp; Adjustment</td><td>Die changeover, calibration</td></tr>
+<tr><td rowspan="2"><strong>Performance</strong></td><td>Idling &amp; Minor Stops</td><td>Sensor jam, material blockage</td></tr>
+<tr><td>Reduced Speed</td><td>Running below rated speed</td></tr>
+<tr><td rowspan="2"><strong>Quality</strong></td><td>Process Defects</td><td>Scrap, rework during production</td></tr>
+<tr><td>Startup Losses</td><td>Rejects during warm-up/stabilization</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section"><h4>&#x1F4D0; OEE and Availability Numerical</h4>
+<p><strong>OEE Example:</strong> A CNC machine operates for 480 min/shift. Setup takes 30 min, breakdowns lose 20 min. It produces 400 parts (rated speed: 1 part/min). 15 parts are defective.</p>
+<ul>
+<li><strong>Availability</strong> = (480 - 30 - 20) / 480 = 430/480 = <strong>89.6%</strong></li>
+<li><strong>Performance</strong> = 400 / 430 = <strong>93.0%</strong></li>
+<li><strong>Quality</strong> = (400 - 15) / 400 = 385/400 = <strong>96.3%</strong></li>
+<li><strong>OEE</strong> = 89.6% x 93.0% x 96.3% = <strong>80.1%</strong> (below world-class 85%)</li>
+</ul>
+<p><strong>Availability with MTBF/MTTR:</strong> If MTBF = 200 hrs, MTTR = 4 hrs</p>
+<ul>
+<li><strong>Availability</strong> = 200 / (200 + 4) = 200/204 = <strong>98.04%</strong></li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example — Maintenance &amp; TPM</div>
+<p><strong>Maruti Suzuki (Gurugram plant):</strong> Maruti implemented TPM in the early 2000s and won the TPM Excellence Award. Their body welding shop achieved OEE of 92% — well above world-class. Autonomous maintenance is practiced by every operator: daily 15-minute cleaning and inspection routines (AM Step 1-7 progression). Breakdown time reduced by 70% over 5 years.</p>
+<p><strong>Hindustan Unilever (HUL):</strong> HUL's Rajpura plant uses predictive maintenance with IoT sensors on packaging lines. Vibration sensors on motors trigger alerts when readings exceed thresholds — enabling planned repairs before breakdowns. Their OEE improved from 72% to 88% within 2 years of TPM implementation.</p>
+<p><strong>Bajaj Auto (Chakan plant):</strong> Bajaj uses a combination of TPM and Industry 4.0. Real-time OEE dashboards are displayed on shop-floor screens. Each line has a target OEE of 85%. Maintenance teams use mobile apps to log breakdowns and track MTBF/MTTR trends. Their defect rate is under 50 PPM.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A x P x Q</strong> = OEE formula. <strong>MTBF/(MTBF+MTTR)</strong> = Availability. TPM 8 Pillars: <strong>"A-P-Q-F-E-T-S-O"</strong> = Autonomous, Planned, Quality, Focused, Early Equipment, Training, Safety, Office.</p></div>
+<div class="kt"><strong>&#x1F4B0; Key Formulas:</strong> OEE = A × P × Q | Availability = MTBF/(MTBF+MTTR) | Availability = Uptime / Planned Production Time</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>4 maintenance types: Breakdown, Preventive, Predictive, TPM</li>
 <li>OEE = Availability × Performance × Quality (world class = 85%+)</li>
 <li>MTBF = reliability; MTTR = maintainability</li>
 <li>Availability = MTBF/(MTBF+MTTR)</li>
+<li>TPM has 8 pillars — Autonomous Maintenance is the foundation</li>
+<li>6 Big Losses reduce OEE — identify and eliminate them</li>
+<li>Indian leaders: Maruti (OEE 92%), HUL (predictive), Bajaj (Industry 4.0)</li>
 </ul></div>
 </div>
 
 <!-- Key Formulas Section -->
 <div class="unit" id="formulas">
-<h3 id="formulas">&#x1F4B0; Master Formula Sheet</h3>
+<h3>&#x1F4B0; Master Formula Sheet</h3>
 <table class="db">
 <thead><tr><th>Formula</th><th>What It Measures</th></tr></thead>
 <tbody>
@@ -458,7 +943,7 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 <!-- Master Mnemonics -->
 <div class="unit" id="mnemonics">
-<h3 id="mnemonics">&#x1F9E0; Master Mnemonics Table</h3>
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
 <table class="db">
 <thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
 <tbody>
@@ -481,7 +966,7 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 <!-- Exam Focus -->
 <div class="unit" id="exam">
-<h3 id="exam">&#x1F3AF; Exam Focus</h3>
+<h3>&#x1F3AF; Exam Focus</h3>
 <div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Top 10 Most Asked Topics</div>
 <ol style="padding-left:1.5rem;color:rgba(255,255,255,.72)">
 <li><strong>EOQ calculation</strong> and inventory management formulas</li>
@@ -509,16 +994,32 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Framework:</strong> Definition &gt; Components &gt; Steps &gt; Advantages &gt; Example</li>
 <li><strong>Numerical:</strong> Given data &gt; Formula &gt; Calculation &gt; Interpretation</li>
 </ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Common Exam Mistakes to Avoid</div>
+<ul>
+<li><strong>Cp vs Cpk:</strong> Don't confuse them! Cp = potential (spread), Cpk = actual (centering). Cpk is always less than or equal to Cp.</li>
+<li><strong>EOQ units:</strong> Ensure D, S, H are all in the same time period (annual vs monthly).</li>
+<li><strong>Exponential smoothing:</strong> Don't confuse alpha (weight on actual) with (1-alpha) (weight on forecast).</li>
+<li><strong>Chase vs Level:</strong> Chase changes workforce, Level changes inventory. Don't mix them up.</li>
+<li><strong>DMAIC vs DMADV:</strong> DMAIC = existing process, DMADV = new process/design. "I" = Improve existing, "D" = Design new.</li>
+<li><strong>Service characteristics:</strong> Inseparability (not simultaneity) — the official term matters in exams.</li>
+<li><strong>Process types:</strong> Job Shop ≠ Job Shop layout. Job Shop process = low volume, high variety. Process layout = grouping by function.</li>
+<li><strong>Control charts:</strong> UCL/LCL are NOT specification limits. They are process control limits (statistical).</li>
+</ul></div>
 </div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
 var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

@@ -315,43 +315,8 @@ body::after {
 }
 @keyframes particleDrift {
     0% { background-position: 0 0, 100px 200px, 200px 100px, 300px 300px, 50px 150px, 250px 50px; }
-/* Visual diagram box */
-.visual-diagram {
-    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
-    border: 1px solid rgba(78,205,196,0.2);
-    border-radius: 16px;
-    padding: 24px;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    100% { background-position: 600px 600px, 700px 800px, 800px 700px, 900px 900px, 650px 750px, 850px 650px; }
 }
-.visual-diagram:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
-}
-.visual-diagram h5 {
-    color: #4ECDC4;
-    margin-bottom: 16px;
-    font-size: 1.1em;
-}
-.vd-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-.vd-step {
-    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(78,205,196,0.1));
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 12px 16px;
-    text-align: center;
-    min-width: 110px;
-    transition: all 0.3s ease;
-}
-.vd-step:hover { background: linear-gradient(135deg, rgba(255,107,107,0.25), rgba(78,205,196,0.18)); }
 /* Case study box */
 .case-study {
     background: linear-gradient(135deg, rgba(255,230,109,0.06), rgba(176,176,176,0.06));
@@ -373,13 +338,13 @@ body::after {
     margin-left: 10px;
     vertical-align: middle;
     font-weight: 600;
-}
-</style>
+}</style>
     <link rel="stylesheet" href="enhancements.css">
     <link rel="stylesheet" href="revision-mode.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc04">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -392,22 +357,26 @@ body::after {
 <aside class="study-sidebar">
 <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-04</span></div>
 <nav class="sidebar-nav">
-<a href="#unit1">Unit 1: Introduction to Accounting</a>
-<a href="#unit2">Unit 2: Preparation of Books of Accounting</a>
-<a href="#unit3">Unit 3: Financial Statements</a>
-<a href="#unit4">Unit 4: Final Accounts of Companies</a>
-<a href="#unit5">Unit 5: Cash Flow Statement</a>
-<a href="#unit6">Unit 6: Understanding and Classifying Costs</a>
-<a href="#unit7">Unit 7: Absorption and Marginal Costing</a>
-<a href="#unit8">Unit 8: Activity Based Costing</a>
-<a href="#unit9">Unit 9: Cost-Volume-Profit Analysis</a>
-<a href="#unit10">Unit 10: Budgeting and Budgetary Control</a>
-<a href="#unit11">Unit 11: Variance Analysis</a>
-<a href="#unit12">Unit 12: Understanding Annual Reports</a>
-<a href="#unit13">Unit 13: Comparative & Common Size Statements</a>
-<a href="#unit14">Unit 14: Ratio Analysis</a>
-<a href="#unit15">Unit 15: Human Resource Accounting</a>
-<a href="#unit16">Unit 16: Forensic Accounting</a>
+<a href="#block1">Block-01 Accounting Fundamentals</a>
+<a href="#u1">Unit 1: Introduction to Accounting</a>
+<a href="#u2">Unit 2: Preparation of Books of Accounting</a>
+<a href="#u3">Unit 3: Financial Statements</a>
+<a href="#u4">Unit 4: Final Accounts of Companies</a>
+<a href="#u5">Unit 5: Cash Flow Statement</a>
+<a href="#block2">Block-02 Cost Accounting & Analysis</a>
+<a href="#u6">Unit 6: Understanding and Classifying Costs</a>
+<a href="#u7">Unit 7: Absorption and Marginal Costing</a>
+<a href="#u8">Unit 8: Activity Based Costing</a>
+<a href="#u9">Unit 9: Cost-Volume-Profit Analysis</a>
+<a href="#block3">Block-03 Budgeting & Control</a>
+<a href="#u10">Unit 10: Budgeting and Budgetary Control</a>
+<a href="#u11">Unit 11: Variance Analysis</a>
+<a href="#block4">Block-04 Financial Analysis & Special Topics</a>
+<a href="#u12">Unit 12: Understanding Annual Reports</a>
+<a href="#u13">Unit 13: Comparative & Common Size Statements</a>
+<a href="#u14">Unit 14: Ratio Analysis</a>
+<a href="#u15">Unit 15: Human Resource Accounting</a>
+<a href="#u16">Unit 16: Forensic Accounting</a>
 <a href="quiz-mmpc04.html" class="back-link">&#x1F4DD; Take Quiz</a>
 <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
 </nav>
@@ -416,12 +385,58 @@ body::after {
 <div class="study-header"><span class="subject-tag">MMPC-04</span><h1>Accounting for Managers</h1><p>Comprehensive Study Notes with Indian Business Examples, Mnemonics &amp; Practice Tables</p></div>
 
 <!-- ============================================================ -->
-<div class="unit" id="unit-1">
-<h2 id="unit1">Unit 1: Introduction to Accounting</h2>
+<h2 id="block1">Block-01: Accounting Fundamentals</h2>
+
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Introduction to Accounting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Introduction to Accounting</div><p><strong>Accounting</strong> is the art of recording, classifying, and summarising in a significant manner and in terms of money, transactions and events which are of financial character, and interpreting the results thereof. <em>&mdash; AICPA</em></p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Accounting</strong> is the art of recording, classifying, and summarising in a significant manner and in terms of money, transactions and events which are of financial character, and interpreting the results thereof. <em>&mdash; AICPA</em></p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Accounting Fundamentals</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/WiiO5qL0rVI" 
+            title="Accounting Fundamentals Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Accounting Principles & Concepts</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/jTnfEGpIZMw" 
+            title="Accounting Principles & Concepts Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Accounting Concepts Explained</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/2mVFIBchjmc" 
+            title="Accounting Concepts Explained Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Scope of Accounting &mdash; 5 Functions</h3>
 <div class="fc">
@@ -463,119 +478,72 @@ body::after {
 </ul></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Tata Motors</strong> follows Ind AS (Indian Accounting Standards) for preparing consolidated financial statements. When Tata acquired Jaguar Land Rover, the business entity concept required treating the parent and subsidiary as separate entities for reporting, then consolidating them for group-level analysis.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Motors</strong> follows Ind AS (Indian Accounting Standards) for preparing consolidated financial statements. When Tata acquired Jaguar Land Rover, the business entity concept required treating the parent and subsidiary as separate entities for reporting, then consolidating them for group-level analysis.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"BE-GAMP-CCP-M"</strong> &mdash; <strong>B</strong>usiness Entity, <strong>G</strong>oing Concern, <strong>A</strong>ccrual, <strong>M</strong>oney Measurement, <strong>P</strong>eriodicity &mdash; <strong>C</strong>onsistency, <strong>C</strong>onservatism, <strong>P</strong>rudence &mdash; <strong>M</strong>ateriality</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"BE-GAMP-CCP-M"</strong> &mdash; <strong>B</strong>usiness Entity, <strong>G</strong>oing Concern, <strong>A</strong>ccrual, <strong>M</strong>oney Measurement, <strong>P</strong>eriodicity &mdash; <strong>C</strong>onsistency, <strong>C</strong>onservatism, <strong>P</strong>rudence &mdash; <strong>M</strong>ateriality</p></div>
 
 <div class="br"><span class="sb s-b">Accounting</span><span class="sb s-g">GAAP</span><span class="sb s-y">Ind AS</span><span class="sb s-r">IFRS</span></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Fundamentals</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/WiiO5qL0rVI" 
-            title="Accounting Fundamentals Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Principles & Concepts</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/jTnfEGpIZMw" 
-            title="Accounting Principles & Concepts Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Concepts Explained</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/2mVFIBchjmc" 
-            title="Accounting Concepts Explained Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Fundamentals</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/WiiO5qL0rVI" 
-            title="Accounting Fundamentals Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Principles & Concepts</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/jTnfEGpIZMw" 
-            title="Accounting Principles & Concepts Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Accounting Concepts Explained</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/2mVFIBchjmc" 
-            title="Accounting Concepts Explained Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 1 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
 <li>Accounting = recording + classifying + summarising + interpreting</li>
 <li>5 branches: Financial, Cost, Management, Tax, Auditing</li>
 <li>Core concepts: Entity, Going Concern, Accrual, Money Measurement, Periodicity</li>
 <li>Conventions: Consistency, Prudence, Materiality, Full Disclosure</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Accounting concepts form the foundation; conventions ensure reliability. Both are essential for preparing financial statements that stakeholders can trust.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-2">
-<h2 id="unit2">Unit 2: Preparation of Books of Accounting</h2>
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Preparation of Books of Accounting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: Preparation of Books of Accounting</div><p>The <strong>accounting cycle</strong> is the complete sequence from identifying transactions to preparing financial statements and closing books.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p>The <strong>accounting cycle</strong> is the complete sequence from identifying transactions to preparing financial statements and closing books.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Journal Entries</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/twTHuIT1WuA" 
+            title="Journal Entries Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Ledger Posting & Trial Balance</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/iZ48B-NVtQg" 
+            title="Ledger Posting & Trial Balance Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Books of Accounts</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/5JlLRg4evXA" 
+            title="Books of Accounts Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Accounting Process &mdash; 7 Steps</h3>
 <div class="fc">
@@ -602,116 +570,69 @@ body::after {
 <div class="cc"><h5>Modern Approach</h5><p>Assets &amp; Expenses = Debit to increase. Liabilities, Capital &amp; Income = Credit to increase.</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Infosys</strong> maintains detailed books using SAP ERP. Every transaction flows from source document &rarr; journal &rarr; ledger &rarr; trial balance &rarr; adjustments &rarr; financial statements. Their quarterly closing process takes 15&ndash;20 days with automated reconciliation.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> maintains detailed books using SAP ERP. Every transaction flows from source document &rarr; journal &rarr; ledger &rarr; trial balance &rarr; adjustments &rarr; financial statements. Their quarterly closing process takes 15&ndash;20 days with automated reconciliation.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"REAL-GO-IN"</strong> for journal rules: <strong>R</strong>eal = what comes in / goes out; <strong>Personal</strong> = receiver / giver; <strong>Nominal</strong> = expenses / incomes</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"REAL-GO-IN"</strong> for journal rules: <strong>R</strong>eal = what comes in / goes out; <strong>Personal</strong> = receiver / giver; <strong>Nominal</strong> = expenses / incomes</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Journal Entries</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/twTHuIT1WuA" 
-            title="Journal Entries Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Ledger Posting & Trial Balance</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/iZ48B-NVtQg" 
-            title="Ledger Posting & Trial Balance Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Books of Accounts</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/5JlLRg4evXA" 
-            title="Books of Accounts Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Journal Entries</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/twTHuIT1WuA" 
-            title="Journal Entries Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Ledger Posting & Trial Balance</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/iZ48B-NVtQg" 
-            title="Ledger Posting & Trial Balance Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Books of Accounts</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/5JlLRg4evXA" 
-            title="Books of Accounts Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 2 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
 <li>7-step accounting cycle: Source &rarr; Journal &rarr; Ledger &rarr; Trial Balance &rarr; Adjustments &rarr; Statements &rarr; Closing</li>
 <li>3 types of accounts: Personal, Real, Nominal</li>
 <li>Trial Balance verifies arithmetic accuracy but not completeness</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> The accounting cycle is the backbone of financial recording. Understanding golden rules prevents 90% of journal entry errors.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-3">
-<h2 id="unit3">Unit 3: Financial Statements</h2>
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Financial Statements</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Financial Statements</div><p><strong>Financial statements</strong> are formal records of a business's financial activities and position. They include Trading Account, Profit &amp; Loss Account, and Balance Sheet.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Financial statements</strong> are formal records of a business's financial activities and position. They include Trading Account, Profit &amp; Loss Account, and Balance Sheet.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Financial Statements Overview</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/lZVyczKza14" 
+            title="Financial Statements Overview Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Balance Sheet Explained</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/6zpHzDWzclI" 
+            title="Balance Sheet Explained Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Adjustments in Financial Statements</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/clSNbhwZQE4" 
+            title="Adjustments in Financial Statements Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Trading Account</h3>
 <div class="fc">
@@ -771,120 +692,73 @@ body::after {
 <p style="text-align:center;margin-top:12px;font-weight:600;color:#06D6A0;font-size:1.1rem;">Assets = Liabilities + Equity</p>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>The Balance Sheet equation <span class="formula">A = L + E</span> is the foundation of all accounting. Every transaction has a dual effect. Remember: if Assets increase, either Liabilities or Equity must also increase (or other Assets decrease).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The Balance Sheet equation <span class="formula">A = L + E</span> is the foundation of all accounting. Every transaction has a dual effect. Remember: if Assets increase, either Liabilities or Equity must also increase (or other Assets decrease).</p></div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Reliance Industries FY2024:</strong> Revenue &#x20b9;9,76,502 Cr, Net Profit &#x20b9;73,670 Cr, Total Assets &#x20b9;17,45,852 Cr. Their balance sheet shows massive capital employed in Jio (telecom) and Retail segments, reflecting the shift from pure oil &amp; gas to diversified conglomerate.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Reliance Industries FY2024:</strong> Revenue &#x20b9;9,76,502 Cr, Net Profit &#x20b9;73,670 Cr, Total Assets &#x20b9;17,45,852 Cr. Their balance sheet shows massive capital employed in Jio (telecom) and Retail segments, reflecting the shift from pure oil &amp; gas to diversified conglomerate.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"TOP-GP"</strong> for Trading Account: <strong>T</strong>otal Purchases + <strong>O</strong>pening Stock &minus; <strong>C</strong>losing Stock = <strong>G</strong>oods sold; <strong>G</strong>ross <strong>P</strong>rofit = Sales &minus; COGS</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"TOP-GP"</strong> for Trading Account: <strong>T</strong>otal Purchases + <strong>O</strong>pening Stock &minus; <strong>C</strong>losing Stock = <strong>G</strong>oods sold; <strong>G</strong>ross <strong>P</strong>rofit = Sales &minus; COGS</p></div>
 
 <div class="br"><span class="sb s-b">Trading A/c</span><span class="sb s-g">P&amp;L A/c</span><span class="sb s-y">Balance Sheet</span><span class="sb s-r">Cash Flow</span></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Financial Statements Overview</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/lZVyczKza14" 
-            title="Financial Statements Overview Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Balance Sheet Explained</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/6zpHzDWzclI" 
-            title="Balance Sheet Explained Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Adjustments in Financial Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/clSNbhwZQE4" 
-            title="Adjustments in Financial Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Financial Statements Overview</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/lZVyczKza14" 
-            title="Financial Statements Overview Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Balance Sheet Explained</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/6zpHzDWzclI" 
-            title="Balance Sheet Explained Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Adjustments in Financial Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/clSNbhwZQE4" 
-            title="Adjustments in Financial Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 3 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
 <li>Trading A/c &rarr; Gross Profit; P&amp;L A/c &rarr; Net Profit; Balance Sheet &rarr; Financial Position</li>
 <li>COGS = Opening Stock + Purchases + Direct Expenses &minus; Closing Stock</li>
 <li>Balance Sheet can be in Account Form (T) or Report Form (Vertical)</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Financial statements are interconnected. Profit feeds into reserves (Balance Sheet), and cash generation is validated by Cash Flow Statement.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-4">
-<h2 id="unit4">Unit 4: Preparation of Final Accounts of Companies</h2>
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Preparation of Final Accounts of Companies</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Preparation of Final Accounts of Companies</div><p>Company accounts are prepared under <strong>Schedule III of Companies Act 2013</strong>, which mandates a specific format distinct from proprietary firms.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p>Company accounts are prepared under <strong>Schedule III of Companies Act 2013</strong>, which mandates a specific format distinct from proprietary firms.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Final Accounts of Companies</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/MT3SBlOpmJE" 
+            title="Final Accounts of Companies Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Companies Act 2013 Format</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/LyghBkraaHU" 
+            title="Companies Act 2013 Format Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Company Financial Statements</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/Bnoh4AFUY2k" 
+            title="Company Financial Statements Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Company vs Proprietary Firm</h3>
 <div class="cg">
@@ -913,116 +787,69 @@ body::after {
 <div class="cc"><h5>Related Party</h5><p>All related party transactions must be disclosed with nature, amount, and terms.</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>HDFC Bank</strong> files consolidated financial statements covering the bank and its subsidiaries (HDB Financial Services, HDFC Securities). Under Schedule III, the balance sheet classifies assets into Current/Non-Current, and P&amp;L is presented in vertical format with basic &amp; diluted EPS disclosed separately.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>HDFC Bank</strong> files consolidated financial statements covering the bank and its subsidiaries (HDB Financial Services, HDFC Securities). Under Schedule III, the balance sheet classifies assets into Current/Non-Current, and P&amp;L is presented in vertical format with basic &amp; diluted EPS disclosed separately.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"SPICE-N"</strong> &mdash; <strong>S</strong>tatement of P&amp;L, <strong>P</strong>rofit &amp; Loss, <strong>I</strong>ncome, <strong>C</strong>ash Flow, <strong>E</strong>quity Changes, <strong>N</strong>otes &mdash; the 5 components companies must file.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"SPICE-N"</strong> &mdash; <strong>S</strong>tatement of P&amp;L, <strong>P</strong>rofit &amp; Loss, <strong>I</strong>ncome, <strong>C</strong>ash Flow, <strong>E</strong>quity Changes, <strong>N</strong>otes &mdash; the 5 components companies must file.</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Final Accounts of Companies</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/MT3SBlOpmJE" 
-            title="Final Accounts of Companies Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Companies Act 2013 Format</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/LyghBkraaHU" 
-            title="Companies Act 2013 Format Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Company Financial Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Bnoh4AFUY2k" 
-            title="Company Financial Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Final Accounts of Companies</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/MT3SBlOpmJE" 
-            title="Final Accounts of Companies Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Companies Act 2013 Format</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/LyghBkraaHU" 
-            title="Companies Act 2013 Format Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Company Financial Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Bnoh4AFUY2k" 
-            title="Company Financial Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 4 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
 <li>Company accounts follow Schedule III format (Companies Act 2013)</li>
 <li>5 mandatory statements: P&amp;L, Balance Sheet, Cash Flow, Equity Changes, Notes</li>
 <li>CSR, auditor rotation, and governance provisions are key compliance requirements</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Schedule III standardises company financial reporting in India, making inter-company comparison possible and transparent.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-5">
-<h2 id="unit5">Unit 5: Cash Flow Statement</h2>
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Cash Flow Statement</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 5: Cash Flow Statement</div><p>A <strong>Cash Flow Statement</strong> shows actual inflows and outflows of cash during a period, classified into operating, investing, and financing activities. Unlike profit (accrual), it reveals <em>real cash generation</em>.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p>A <strong>Cash Flow Statement</strong> shows actual inflows and outflows of cash during a period, classified into operating, investing, and financing activities. Unlike profit (accrual), it reveals <em>real cash generation</em>.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Cash Flow Statement</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/pISQMexnmew" 
+            title="Cash Flow Statement Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Operating Investing Financing</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/rG-Lb7-7JS4" 
+            title="Operating Investing Financing Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Cash Flow Methods</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/i6DQ5fhr7fo" 
+            title="Cash Flow Methods Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Three Categories of Cash Flow</h3>
 <div class="cg">
@@ -1044,7 +871,7 @@ body::after {
 </div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>Indirect Method adjustments: Start with Net Profit, then <span class="formula">+ Depreciation</span> (non-cash), <span class="formula">&minus; Increase in Debtors</span> (cash not yet received), <span class="formula">+ Increase in Creditors</span> (cash not yet paid). This is the most commonly tested format in exams.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Indirect Method adjustments: Start with Net Profit, then <span class="formula">+ Depreciation</span> (non-cash), <span class="formula">&minus; Increase in Debtors</span> (cash not yet received), <span class="formula">+ Increase in Creditors</span> (cash not yet paid). This is the most commonly tested format in exams.</p></div>
 
 <h3>Methods of Preparation</h3>
 <div class="cg">
@@ -1052,116 +879,71 @@ body::after {
 <div class="cc"><h5>Indirect Method</h5><p>Starts with Net Profit, adjusts for non-cash items (depreciation, provisions) and working capital changes. Most common in India.</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>ICICI Bank FY2024:</strong> Operating cash flow &#x20b9;1,25,000 Cr+, driven by loan disbursements and recoveries. Investing outflow &#x20b9;15,000 Cr (technology infrastructure, branch expansion). Financing inflow &#x20b9;8,000 Cr (bond issuances, tier-1 capital raise).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>ICICI Bank FY2024:</strong> Operating cash flow &#x20b9;1,25,000 Cr+, driven by loan disbursements and recoveries. Investing outflow &#x20b9;15,000 Cr (technology infrastructure, branch expansion). Financing inflow &#x20b9;8,000 Cr (bond issuances, tier-1 capital raise).</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"OIF"</strong> &mdash; <strong>O</strong>perating (core business), <strong>I</strong>nvesting (assets), <strong>F</strong>inancing (capital structure). Think: "OIF! Where's the cash?"</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"OIF"</strong> &mdash; <strong>O</strong>perating (core business), <strong>I</strong>nvesting (assets), <strong>F</strong>inancing (capital structure). Think: "OIF! Where's the cash?"</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cash Flow Statement</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/pISQMexnmew" 
-            title="Cash Flow Statement Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Operating Investing Financing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/rG-Lb7-7JS4" 
-            title="Operating Investing Financing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cash Flow Methods</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/i6DQ5fhr7fo" 
-            title="Cash Flow Methods Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cash Flow Statement</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/pISQMexnmew" 
-            title="Cash Flow Statement Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Operating Investing Financing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/rG-Lb7-7JS4" 
-            title="Operating Investing Financing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cash Flow Methods</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/i6DQ5fhr7fo" 
-            title="Cash Flow Methods Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 5 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
 <li>Cash Flow = O + I + F activities</li>
 <li>Indirect method: Net Profit + Non-cash items + WC changes</li>
 <li>Operating cash flow is the true indicator of business health</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> A company can be profitable but cash-poor. The Cash Flow Statement reveals whether profits are translating into actual cash.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-6">
-<h2 id="unit6">Unit 6: Understanding and Classifying Costs</h2>
+<h2 id="block2">Block-02: Cost Accounting & Analysis</h2>
+
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Understanding and Classifying Costs</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 6: Understanding and Classifying Costs</div><p><strong>Cost</strong> is the value of economic resources sacrificed to achieve a specific objective. Cost accounting systematically records, classifies, and analyses costs for control and decision-making.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Cost</strong> is the value of economic resources sacrificed to achieve a specific objective. Cost accounting systematically records, classifies, and analyses costs for control and decision-making.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Cost Classification</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/9lutqp6NW2E" 
+            title="Cost Classification Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Cost Sheet Preparation</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/pGymzuGAkJ8" 
+            title="Cost Sheet Preparation Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Types of Costs</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/7c4R-cBIztE" 
+            title="Types of Costs Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Elements of Cost</h3>
 <div class="fc">
@@ -1199,7 +981,7 @@ body::after {
 <div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Total Cost</div></div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>Cost Sheet formulas to memorize:</p>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Cost Sheet formulas to memorize:</p>
 <p><span class="formula">Prime Cost = Direct Material + Direct Labour + Direct Expenses</span></p>
 <p><span class="formula">Works Cost = Prime Cost + Factory Overheads</span></p>
 <p><span class="formula">Cost of Production = Works Cost + Office &amp; Admin Overheads</span></p>
@@ -1223,116 +1005,69 @@ body::after {
 <tr><td><strong>Sales</strong></td><td><strong>12,42,000</strong></td><td>Total Cost + Profit</td></tr>
 </table>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Maruti Suzuki</strong> classifies costs meticulously. Direct material (steel, components) is 65% of car cost. Direct labour is 5%. Factory overheads (depreciation, utilities) are 12%. Selling &amp; distribution (advertising, dealer margins) are 15%. This classification helps identify cost reduction opportunities at each stage.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Maruti Suzuki</strong> classifies costs meticulously. Direct material (steel, components) is 65% of car cost. Direct labour is 5%. Factory overheads (depreciation, utilities) are 12%. Selling &amp; distribution (advertising, dealer margins) are 15%. This classification helps identify cost reduction opportunities at each stage.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"DFOC"</strong> for cost classification: <strong>D</strong>irect/Indirect, <strong>F</strong>ixed/Variable, <strong>O</strong>perational/Non-operational, <strong>C</strong>ontrollable/Uncontrollable</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"DFOC"</strong> for cost classification: <strong>D</strong>irect/Indirect, <strong>F</strong>ixed/Variable, <strong>O</strong>perational/Non-operational, <strong>C</strong>ontrollable/Uncontrollable</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cost Classification</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/9lutqp6NW2E" 
-            title="Cost Classification Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cost Sheet Preparation</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/pGymzuGAkJ8" 
-            title="Cost Sheet Preparation Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Types of Costs</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/7c4R-cBIztE" 
-            title="Types of Costs Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cost Classification</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/9lutqp6NW2E" 
-            title="Cost Classification Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Cost Sheet Preparation</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/pGymzuGAkJ8" 
-            title="Cost Sheet Preparation Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Types of Costs</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/7c4R-cBIztE" 
-            title="Types of Costs Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 6 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
 <li>3 elements: Material + Labour + Expenses</li>
 <li>Classify by: Nature, Behaviour, Function, Controllability</li>
 <li>Cost sheet: Prime &rarr; Works &rarr; Production &rarr; Total Cost</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Proper cost classification is the foundation of cost control. What you can classify, you can control.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-7">
-<h2 id="unit7">Unit 7: Absorption and Marginal Costing</h2>
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Absorption and Marginal Costing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 7: Absorption and Marginal Costing</div><p><strong>Absorption Costing</strong> includes all manufacturing costs (fixed + variable) in product cost. <strong>Marginal Costing</strong> includes only variable costs; fixed costs are treated as period costs.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Absorption Costing</strong> includes all manufacturing costs (fixed + variable) in product cost. <strong>Marginal Costing</strong> includes only variable costs; fixed costs are treated as period costs.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Absorption vs Marginal Costing</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/L6sEuYZbaqc" 
+            title="Absorption vs Marginal Costing Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Marginal Costing Technique</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/FhP0H50D_00" 
+            title="Marginal Costing Technique Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Costing Methods Comparison</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/o2UB3y4zhMQ" 
+            title="Costing Methods Comparison Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Absorption vs Marginal Costing</h3>
 <div class="cg">
@@ -1350,7 +1085,7 @@ body::after {
 <p>When stock levels change, profits differ between methods:</p>
 <p><span class="formula">Absorption Profit = Marginal Profit + Fixed OH in Closing Stock &minus; Fixed OH in Opening Stock</span></p>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>If production &gt; sales (stock increases), absorption profit &gt; marginal profit (fixed OH deferred in closing stock). If production &lt; sales (stock decreases), absorption profit &lt; marginal profit (fixed OH released from opening stock). This is the most tested reconciliation concept.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>If production &gt; sales (stock increases), absorption profit &gt; marginal profit (fixed OH deferred in closing stock). If production &lt; sales (stock decreases), absorption profit &lt; marginal profit (fixed OH released from opening stock). This is the most tested reconciliation concept.</p></div>
 
 <h3>Decision-Making with Marginal Costing</h3>
 <div class="cg">
@@ -1360,117 +1095,70 @@ body::after {
 <div class="cc"><h5>Shut Down or Continue</h5><p>If <span class="formula">Contribution &gt; Avoidable Fixed Costs</span> &rarr; Continue.<br>Shut down only when contribution cannot cover avoidable fixed costs.</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Hindustan Unilever</strong> uses absorption costing for statutory reporting (Ind AS) but marginal costing internally for pricing decisions. When launching a new detergent, HUL calculates contribution margin per unit to decide minimum selling price. If contribution is positive, the product covers variable costs and contributes to fixed costs.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Hindustan Unilever</strong> uses absorption costing for statutory reporting (Ind AS) but marginal costing internally for pricing decisions. When launching a new detergent, HUL calculates contribution margin per unit to decide minimum selling price. If contribution is positive, the product covers variable costs and contributes to fixed costs.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"A-FULL, M-ONLY"</strong> &mdash; Absorption = FULL cost (fixed + variable). Marginal = ONLY variable. Remember: Marginal = "More is Less" (only variable costs).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"A-FULL, M-ONLY"</strong> &mdash; Absorption = FULL cost (fixed + variable). Marginal = ONLY variable. Remember: Marginal = "More is Less" (only variable costs).</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Absorption vs Marginal Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/L6sEuYZbaqc" 
-            title="Absorption vs Marginal Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Marginal Costing Technique</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/FhP0H50D_00" 
-            title="Marginal Costing Technique Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Costing Methods Comparison</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/o2UB3y4zhMQ" 
-            title="Costing Methods Comparison Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Absorption vs Marginal Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/L6sEuYZbaqc" 
-            title="Absorption vs Marginal Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Marginal Costing Technique</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/FhP0H50D_00" 
-            title="Marginal Costing Technique Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Costing Methods Comparison</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/o2UB3y4zhMQ" 
-            title="Costing Methods Comparison Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 7 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
 <li>Absorption: All costs in product cost &rarr; external reporting</li>
 <li>Marginal: Only variable costs &rarr; internal decisions</li>
 <li>Profit difference = Fixed OH in stock change</li>
 <li>Marginal is better for short-term decisions (make/buy, accept/reject)</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Use absorption costing for compliance, marginal costing for decisions. Understanding both prevents pricing errors.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-8">
-<h2 id="unit8">Unit 8: Activity Based Costing (ABC)</h2>
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Activity Based Costing (ABC)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 8: Activity Based Costing</div><p><strong>Activity Based Costing (ABC)</strong> allocates overheads based on activities that drive costs, not volume-based measures. Core principle: <em>"Activities consume resources; products consume activities."</em></p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Activity Based Costing (ABC)</strong> allocates overheads based on activities that drive costs, not volume-based measures. Core principle: <em>"Activities consume resources; products consume activities."</em></p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Activity Based Costing</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
+            title="Activity Based Costing Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>ABC Cost Driver</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
+            title="ABC Cost Driver Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>ABC vs Traditional</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/ovs8-FA4pyQ" 
+            title="ABC vs Traditional Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Traditional vs ABC</h3>
 <div class="cg">
@@ -1497,116 +1185,69 @@ body::after {
 <div class="cc"><h5>Product Costing</h5><p><strong>Product A:</strong> 5 setups &times; &#x20b9;1,000 + 100 hrs &times; &#x20b9;200 + 10 moves &times; &#x20b9;500 = <strong>&#x20b9;30,000</strong></p><p><strong>Product B:</strong> 3 setups &times; &#x20b9;1,000 + 200 hrs &times; &#x20b9;200 + 30 moves &times; &#x20b9;500 = <strong>&#x20b9;60,000</strong></p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Tata Steel</strong> implemented ABC to understand true product costs across 500+ steel grades. Traditional costing showed all grades had similar margins, but ABC revealed that customised grades consumed 3&times; more setup and quality resources. This led to repricing low-volume custom orders, improving overall profitability by 4%.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Steel</strong> implemented ABC to understand true product costs across 500+ steel grades. Traditional costing showed all grades had similar margins, but ABC revealed that customised grades consumed 3&times; more setup and quality resources. This led to repricing low-volume custom orders, improving overall profitability by 4%.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"I-ARC"</strong> &mdash; <strong>I</strong>dentify activities &rarr; <strong>A</strong>ssign costs &rarr; <strong>R</strong>ate per driver &rarr; <strong>C</strong>onsume by product</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-ARC"</strong> &mdash; <strong>I</strong>dentify activities &rarr; <strong>A</strong>ssign costs &rarr; <strong>R</strong>ate per driver &rarr; <strong>C</strong>onsume by product</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Activity Based Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
-            title="Activity Based Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>ABC Cost Driver</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
-            title="ABC Cost Driver Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>ABC vs Traditional</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/ovs8-FA4pyQ" 
-            title="ABC vs Traditional Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Activity Based Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
-            title="Activity Based Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>ABC Cost Driver</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/fj2vQAk82JQ" 
-            title="ABC Cost Driver Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>ABC vs Traditional</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/ovs8-FA4pyQ" 
-            title="ABC vs Traditional Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 8 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
 <li>ABC = Multiple cost drivers for accurate costing</li>
 <li>Best for: diverse products, high overhead, complex manufacturing</li>
 <li>Limitations: expensive, complex, needs management commitment</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> ABC reveals the true cost of products that traditional costing hides. Essential for pricing, product mix, and process improvement decisions.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-9">
-<h2 id="unit9">Unit 9: Cost-Volume-Profit (CVP) Analysis</h2>
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Cost-Volume-Profit (CVP) Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 9: Cost-Volume-Profit Analysis</div><p><strong>CVP Analysis</strong> examines the relationship between costs, volume, and profit. It determines the break-even point, margin of safety, and target profit sales.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>CVP Analysis</strong> examines the relationship between costs, volume, and profit. It determines the break-even point, margin of safety, and target profit sales.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>CVP Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/wsRGHu67WXE" 
+            title="CVP Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Break Even Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/swRHc2JqaVE" 
+            title="Break Even Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Margin of Safety</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/gr7M88Upg-Y" 
+            title="Margin of Safety Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Key CVP Concepts</h3>
 <div class="cg">
@@ -1647,7 +1288,7 @@ body::after {
 </div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>The BEP formula <span class="formula">BEP = FC / CM per unit</span> is tested in almost every exam. Also remember: <span class="formula">P/V Ratio = CM / Sales &times; 100</span>. A higher P/V ratio means higher contribution per rupee of sales &mdash; the product is more profitable.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The BEP formula <span class="formula">BEP = FC / CM per unit</span> is tested in almost every exam. Also remember: <span class="formula">P/V Ratio = CM / Sales &times; 100</span>. A higher P/V ratio means higher contribution per rupee of sales &mdash; the product is more profitable.</p></div>
 
 <h3>CVP Assumptions</h3>
 <div class="br"><span class="sb s-b">Linear costs</span><span class="sb s-g">Constant price</span><span class="sb s-y">Production = Sales</span><span class="sb s-r">Single product</span></div>
@@ -1658,117 +1299,72 @@ body::after {
 <div class="cc"><h5>Calculations</h5><p>CM = &#x20b9;100 &minus; &#x20b9;60 = <strong>&#x20b9;40/unit</strong><br>CM Ratio = 40%<br>BEP = 1,00,000 &#xF7; 40 = <strong>2,500 units</strong><br>Target &#x20b9;50,000 profit: (1,00,000+50,000) &#xF7; 40 = <strong>3,750 units</strong></p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Amul</strong> uses CVP analysis for new product launches. Before launching Amul Taaza in a new region, they calculate BEP considering cold chain infrastructure (fixed cost) and milk procurement (variable cost). The high CM ratio of value-added products (butter, cheese) subsidises the low-margin milk business &mdash; a classic CVP strategy.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Amul</strong> uses CVP analysis for new product launches. Before launching Amul Taaza in a new region, they calculate BEP considering cold chain infrastructure (fixed cost) and milk procurement (variable cost). The high CM ratio of value-added products (butter, cheese) subsidises the low-margin milk business &mdash; a classic CVP strategy.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"CM-BE-MOS"</strong> &mdash; <strong>C</strong>ontribution <strong>M</strong>argin &rarr; <strong>B</strong>reak <strong>E</strong>ven &rarr; <strong>M</strong>argin <strong>o</strong>f <strong>S</strong>afety. The logical flow of CVP analysis.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CM-BE-MOS"</strong> &mdash; <strong>C</strong>ontribution <strong>M</strong>argin &rarr; <strong>B</strong>reak <strong>E</strong>ven &rarr; <strong>M</strong>argin <strong>o</strong>f <strong>S</strong>afety. The logical flow of CVP analysis.</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>CVP Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/wsRGHu67WXE" 
-            title="CVP Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Break Even Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/swRHc2JqaVE" 
-            title="Break Even Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Margin of Safety</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/gr7M88Upg-Y" 
-            title="Margin of Safety Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>CVP Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/wsRGHu67WXE" 
-            title="CVP Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Break Even Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/swRHc2JqaVE" 
-            title="Break Even Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Margin of Safety</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/gr7M88Upg-Y" 
-            title="Margin of Safety Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 9 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
 <li>CM = Sales &minus; Variable Costs (contribution to fixed costs)</li>
 <li>BEP = Fixed Costs &#xF7; CM (where profit = 0)</li>
 <li>MOS = Safety cushion above BEP</li>
 <li>CVP assumes linear costs, constant price, production = sales</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> CVP is the manager's compass for pricing, capacity, and profitability decisions. Know your BEP before launching any product.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-10">
-<h2 id="unit10">Unit 10: Budgeting and Budgetary Control</h2>
+<h2 id="block3">Block-03: Budgeting & Control</h2>
+
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Budgeting and Budgetary Control</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 10: Budgeting and Budgetary Control</div><p>A <strong>budget</strong> is a quantitative expression of a plan for a defined period. <strong>Budgetary control</strong> is the system of comparing actual results with budgets and taking corrective action.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p>A <strong>budget</strong> is a quantitative expression of a plan for a defined period. <strong>Budgetary control</strong> is the system of comparing actual results with budgets and taking corrective action.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Budgeting Process</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/XTmlO3LTxG4" 
+            title="Budgeting Process Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Flexible Budget</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/BocqmC1QG84" 
+            title="Flexible Budget Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Budgetary Control</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/IFtqzOlYrdg" 
+            title="Budgetary Control Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Types of Budgets</h3>
 <div class="cg">
@@ -1797,116 +1393,69 @@ body::after {
 <div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Corrective Action</div></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Larsen &amp; Toubro</strong> uses a combination of zero-based and rolling budgets for project-based construction contracts. Each project has its own budget, reviewed monthly. Flexible budgets adjust for weather delays and material price fluctuations. L&amp;T's budget variance reporting feeds directly into project manager KPIs.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Larsen &amp; Toubro</strong> uses a combination of zero-based and rolling budgets for project-based construction contracts. Each project has its own budget, reviewed monthly. Flexible budgets adjust for weather delays and material price fluctuations. L&amp;T's budget variance reporting feeds directly into project manager KPIs.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"MASTER-FRZR"</strong> &mdash; <strong>M</strong>aster, <strong>A</strong>nnual, <strong>S</strong>ales, <strong>T</strong>reasury, <strong>E</strong>xpense, <strong>R</strong>olling &mdash; <strong>F</strong>lexible, <strong>R</strong>olling, <strong>Z</strong>ero-based, <strong>R</strong>ecurrent budget types.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"MASTER-FRZR"</strong> &mdash; <strong>M</strong>aster, <strong>A</strong>nnual, <strong>S</strong>ales, <strong>T</strong>reasury, <strong>E</strong>xpense, <strong>R</strong>olling &mdash; <strong>F</strong>lexible, <strong>R</strong>olling, <strong>Z</strong>ero-based, <strong>R</strong>ecurrent budget types.</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Budgeting Process</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/XTmlO3LTxG4" 
-            title="Budgeting Process Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Flexible Budget</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/BocqmC1QG84" 
-            title="Flexible Budget Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Budgetary Control</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/IFtqzOlYrdg" 
-            title="Budgetary Control Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Budgeting Process</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/XTmlO3LTxG4" 
-            title="Budgeting Process Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Flexible Budget</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/BocqmC1QG84" 
-            title="Flexible Budget Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Budgetary Control</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/IFtqzOlYrdg" 
-            title="Budgetary Control Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 10 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
 <li>Budgets: Master, Flexible, Fixed, Zero-based, Rolling, Incremental</li>
 <li>Flexible is best for performance evaluation (adjusts to actual activity)</li>
 <li>Budgetary control = Set &rarr; Prepare &rarr; Execute &rarr; Monitor &rarr; Correct</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> A budget without control is just a wish. Budgetary control closes the loop between planning and performance.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-11">
-<h2 id="unit11">Unit 11: Variance Analysis</h2>
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Variance Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 11: Variance Analysis</div><p><strong>Variance Analysis</strong> compares standard (budgeted) costs with actual costs to identify deviations. <strong>Favourable (F):</strong> Actual &lt; Standard. <strong>Adverse (A):</strong> Actual &gt; Standard.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Variance Analysis</strong> compares standard (budgeted) costs with actual costs to identify deviations. <strong>Favourable (F):</strong> Actual &lt; Standard. <strong>Adverse (A):</strong> Actual &gt; Standard.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Variance Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
+            title="Variance Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Material & Labour Variance</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/4MhVoFSlcG0" 
+            title="Material & Labour Variance Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Standard Costing</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
+            title="Standard Costing Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Material Variances</h3>
 <div class="cg">
@@ -1926,7 +1475,7 @@ body::after {
 <div class="cc"><h5>Fixed OH</h5><ul><li>Spending: <span class="formula">Actual &minus; Budgeted</span></li><li>Volume: <span class="formula">(Actual &minus; Budgeted Units) &times; SR</span></li><li>Capacity: <span class="formula">(Actual Hrs &minus; Budgeted Hrs) &times; SR</span></li><li>Efficiency: <span class="formula">(Std Hrs for actual output &minus; Actual Hrs) &times; SR</span></li></ul></div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>Material Usage Variance vs Material Mix Variance: MUV measures total efficiency, while MMV isolates the effect of using a different proportion of materials than standard. If exam says "revised standard mix," use: <span class="formula">MMV = (Revised Qty &minus; Actual Qty) &times; Std Price</span>.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Material Usage Variance vs Material Mix Variance: MUV measures total efficiency, while MMV isolates the effect of using a different proportion of materials than standard. If exam says "revised standard mix," use: <span class="formula">MMV = (Revised Qty &minus; Actual Qty) &times; Std Price</span>.</p></div>
 
 <h3>Variance Responsibility Matrix</h3>
 <table class="qr-table">
@@ -1939,117 +1488,72 @@ body::after {
 <tr><td>Fixed OH Volume</td><td>Top Management</td><td>Capacity utilisation changes</td></tr>
 </table>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Asian Paints</strong> tracks variances weekly across 20+ factories. When pigment prices surged 15% in Q3, the MPV was immediately flagged. The purchase team negotiated long-term contracts with alternative suppliers, reducing MPV by 8% in Q4. Production variance (paint wastage) was reduced by implementing Six Sigma processes.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Asian Paints</strong> tracks variances weekly across 20+ factories. When pigment prices surged 15% in Q3, the MPV was immediately flagged. The purchase team negotiated long-term contracts with alternative suppliers, reducing MPV by 8% in Q4. Production variance (paint wastage) was reduced by implementing Six Sigma processes.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"PRICE-USAGE"</strong> for material: <strong>P</strong>rice variance (purchasing dept), <strong>U</strong>sage variance (production dept). <strong>"RATE-EFFICIENCY"</strong> for labour: <strong>R</strong>ate (HR), <strong>E</strong>fficiency (supervisor).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PRICE-USAGE"</strong> for material: <strong>P</strong>rice variance (purchasing dept), <strong>U</strong>sage variance (production dept). <strong>"RATE-EFFICIENCY"</strong> for labour: <strong>R</strong>ate (HR), <strong>E</strong>fficiency (supervisor).</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Variance Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
-            title="Variance Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Material & Labour Variance</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/4MhVoFSlcG0" 
-            title="Material & Labour Variance Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Standard Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
-            title="Standard Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Variance Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
-            title="Variance Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Material & Labour Variance</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/4MhVoFSlcG0" 
-            title="Material & Labour Variance Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Standard Costing</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Wi2Ud3IseJY" 
-            title="Standard Costing Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 11 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
 <li>Variance = Standard &minus; Actual (F if positive, A if negative)</li>
 <li>Material: Price (purchasing) + Usage (production)</li>
 <li>Labour: Rate (HR) + Efficiency (supervisor)</li>
 <li>Investigate variances exceeding 10% or showing consistent trends</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Variance analysis pinpoints <em>who</em> is responsible and <em>why</em> costs deviated. It transforms budgets from plans into accountability tools.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-12">
-<h2 id="unit12">Unit 12: Understanding Annual Reports</h2>
+<h2 id="block4">Block-04: Financial Analysis & Special Topics</h2>
+
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Understanding Annual Reports</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 12: Understanding Annual Reports</div><p>An <strong>Annual Report</strong> is a comprehensive document that communicates a company's financial performance, governance, and strategic direction to stakeholders.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p>An <strong>Annual Report</strong> is a comprehensive document that communicates a company's financial performance, governance, and strategic direction to stakeholders.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Annual Report Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/dl4dPEvojws" 
+            title="Annual Report Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Reading Financial Reports</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/RArHWl11EnY" 
+            title="Reading Financial Reports Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Annual Report Components</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/kJsnQ9g9kSY" 
+            title="Annual Report Components Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Components of Annual Report</h3>
 <div class="cg">
@@ -2065,7 +1569,7 @@ body::after {
 <div class="cc"><h5>Disclaimer</h5><p>Auditor unable to form opinion. Insufficient evidence or scope limitation.</p><p><em>Worst outcome. Could mean management is hiding information.</em></p></div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>Key difference: <strong>Qualified</strong> = "mostly fine, one issue." <strong>Adverse</strong> = "everything is wrong." <strong>Disclaimer</strong> = "I can't tell." In exams, always read the auditor's report carefully &mdash; look for phrases like "except for," "subject to," "we are unable to determine."</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Key difference: <strong>Qualified</strong> = "mostly fine, one issue." <strong>Adverse</strong> = "everything is wrong." <strong>Disclaimer</strong> = "I can't tell." In exams, always read the auditor's report carefully &mdash; look for phrases like "except for," "subject to," "we are unable to determine."</p></div>
 
 <h3>How to Read an Annual Report &mdash; Checklist</h3>
 <div class="cg">
@@ -2075,116 +1579,69 @@ body::after {
 <div class="cc"><h5>Step 4: Notes to Accounts</h5><ul><li>Accounting policies changed?</li><li>Related party transactions</li><li>Contingent liabilities</li></ul></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Infosys Annual Report FY2024</strong> is a gold standard: 200+ pages with detailed MD&amp;A by CEO Salil Parekh, segment-wise performance (Digital, Core), ESG metrics, and independent auditor's report by Deloitte (unqualified opinion). Their corporate governance section includes board diversity metrics, committee compositions, and remuneration details.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys Annual Report FY2024</strong> is a gold standard: 200+ pages with detailed MD&amp;A by CEO Salil Parekh, segment-wise performance (Digital, Core), ESG metrics, and independent auditor's report by Deloitte (unqualified opinion). Their corporate governance section includes board diversity metrics, committee compositions, and remuneration details.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"DAUA"</strong> for audit opinions: <strong>D</strong>isclaimer (can't say), <strong>A</strong>dverse (bad), <strong>U</strong>nqualified (good), <strong>A</strong>qualified (mostly good, with caveat).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"DAUA"</strong> for audit opinions: <strong>D</strong>isclaimer (can't say), <strong>A</strong>dverse (bad), <strong>U</strong>nqualified (good), <strong>A</strong>qualified (mostly good, with caveat).</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Annual Report Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/dl4dPEvojws" 
-            title="Annual Report Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Reading Financial Reports</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/RArHWl11EnY" 
-            title="Reading Financial Reports Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Annual Report Components</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/kJsnQ9g9kSY" 
-            title="Annual Report Components Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Annual Report Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/dl4dPEvojws" 
-            title="Annual Report Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Reading Financial Reports</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/RArHWl11EnY" 
-            title="Reading Financial Reports Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Annual Report Components</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/kJsnQ9g9kSY" 
-            title="Annual Report Components Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 12 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
 <li>Annual Report = Financials + Governance + Strategy + Compliance</li>
 <li>4 audit opinions: Unqualified (best) &rarr; Qualified &rarr; Adverse &rarr; Disclaimer (worst)</li>
 <li>Director's Report &amp; MD&amp;A provide qualitative context to numbers</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Reading an annual report is a manager's essential skill. Numbers tell <em>what</em>; the narrative tells <em>why</em>.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-13">
-<h2 id="unit13">Unit 13: Comparative, Common Size and Trend Statements</h2>
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Comparative, Common Size and Trend Statements</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 13: Comparative, Common Size and Trend Statements</div><p><strong>Horizontal Analysis</strong> compares financial data across periods (comparative statements). <strong>Vertical Analysis</strong> expresses items as % of a base (common size). <strong>Trend Analysis</strong> tracks changes over multiple periods using a base year.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Horizontal Analysis</strong> compares financial data across periods (comparative statements). <strong>Vertical Analysis</strong> expresses items as % of a base (common size). <strong>Trend Analysis</strong> tracks changes over multiple periods using a base year.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Comparative Statements</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
+            title="Comparative Statements Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Common Size Statements</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
+            title="Common Size Statements Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Trend Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/4gYj-3BfSNU" 
+            title="Trend Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Three Techniques</h3>
 <div class="cg">
@@ -2199,117 +1656,70 @@ body::after {
 <div class="cc"><h5>2024</h5><p>Sales: &#x20b9;6,00,000 (+20%)<br>COGS: &#x20b9;3,50,000 (+17%)<br>Gross Profit: &#x20b9;2,50,000 (+25%)<br>Expenses: &#x20b9;1,20,000 (+20%)<br>Net Profit: &#x20b9;1,30,000 (+30%)</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>TCS</strong> common size analysis reveals: Employee costs = 50% of revenue (consistent across years), while depreciation has increased from 3% to 5% due to massive campus investments. Trend analysis over 10 years shows revenue grew 3&times; while employee count grew only 1.8&times; &mdash; indicating improving productivity per employee.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>TCS</strong> common size analysis reveals: Employee costs = 50% of revenue (consistent across years), while depreciation has increased from 3% to 5% due to massive campus investments. Trend analysis over 10 years shows revenue grew 3&times; while employee count grew only 1.8&times; &mdash; indicating improving productivity per employee.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"HVT"</strong> &mdash; <strong>H</strong>orizontal (across periods), <strong>V</strong>ertical (within period, % of base), <strong>T</strong>rend (multi-year index). Remember: "HVT = How Values Transform."</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"HVT"</strong> &mdash; <strong>H</strong>orizontal (across periods), <strong>V</strong>ertical (within period, % of base), <strong>T</strong>rend (multi-year index). Remember: "HVT = How Values Transform."</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Comparative Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
-            title="Comparative Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Common Size Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
-            title="Common Size Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Trend Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/4gYj-3BfSNU" 
-            title="Trend Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Comparative Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
-            title="Comparative Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Common Size Statements</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/tZa9RHXQ6MI" 
-            title="Common Size Statements Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Trend Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/4gYj-3BfSNU" 
-            title="Trend Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 13 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
 <li>Comparative = year-on-year absolute and % change</li>
 <li>Common size = % of base (Sales or Total Assets)</li>
 <li>Trend = index numbers with base year = 100</li>
 <li>All three together give comprehensive financial picture</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Isolated numbers are meaningless. Comparison (across time, across companies, across structures) is what gives numbers meaning.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-14">
-<h2 id="unit14">Unit 14: Ratio Analysis</h2>
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Ratio Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 14: Ratio Analysis</div><p><strong>Ratio Analysis</strong> expresses the mathematical relationship between two financial figures to evaluate profitability, liquidity, solvency, and efficiency.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Ratio Analysis</strong> expresses the mathematical relationship between two financial figures to evaluate profitability, liquidity, solvency, and efficiency.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Ratio Analysis</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/gyajfvneTSk" 
+            title="Ratio Analysis Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Profitability Ratios</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/bU55lm3sMgU" 
+            title="Profitability Ratios Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Liquidity & Solvency Ratios</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/SofiN04DIBY" 
+            title="Liquidity & Solvency Ratios Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Ratio Categories</h3>
 <div class="cg">
@@ -2351,7 +1761,7 @@ body::after {
 </ul>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>DuPont Analysis formula: <span class="formula">ROE = NP Margin &times; Asset Turnover &times; Equity Multiplier</span>. This decomposes ROE into profitability, efficiency, and leverage &mdash; showing <em>how</em> a company generates returns. High ROE could mean high margins, efficient asset use, OR high debt (risky!).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>DuPont Analysis formula: <span class="formula">ROE = NP Margin &times; Asset Turnover &times; Equity Multiplier</span>. This decomposes ROE into profitability, efficiency, and leverage &mdash; showing <em>how</em> a company generates returns. High ROE could mean high margins, efficient asset use, OR high debt (risky!).</p></div>
 
 <table class="qr-table">
 <tr><th>Ratio</th><th>Formula</th><th>Ideal / Benchmark</th></tr>
@@ -2374,117 +1784,70 @@ body::after {
 <div class="fc-s"><div class="fc-n">ROE</div><div class="fc-l">Return on Equity</div></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Bharti Airtel FY2024:</strong> Current Ratio = 0.6 (below ideal, but normal for telecom with predictable cash flows). Debt-Equity = 2.5 (high leverage for 5G spectrum investment). ROCE = 12% (improving from 8% two years ago). Inventory Turnover is irrelevant (service industry). This shows ratios must be interpreted in industry context.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Bharti Airtel FY2024:</strong> Current Ratio = 0.6 (below ideal, but normal for telecom with predictable cash flows). Debt-Equity = 2.5 (high leverage for 5G spectrum investment). ROCE = 12% (improving from 8% two years ago). Inventory Turnover is irrelevant (service industry). This shows ratios must be interpreted in industry context.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"LEAPS"</strong> &mdash; <strong>L</strong>iquidity, <strong>E</strong>fficiency, <strong>A</strong>ctivity, <strong>P</strong>rofitability, <strong>S</strong>olvency &mdash; the 5 pillars of ratio analysis.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"LEAPS"</strong> &mdash; <strong>L</strong>iquidity, <strong>E</strong>fficiency, <strong>A</strong>ctivity, <strong>P</strong>rofitability, <strong>S</strong>olvency &mdash; the 5 pillars of ratio analysis.</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Ratio Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/gyajfvneTSk" 
-            title="Ratio Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Profitability Ratios</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/bU55lm3sMgU" 
-            title="Profitability Ratios Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Liquidity & Solvency Ratios</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/SofiN04DIBY" 
-            title="Liquidity & Solvency Ratios Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Ratio Analysis</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/gyajfvneTSk" 
-            title="Ratio Analysis Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Profitability Ratios</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/bU55lm3sMgU" 
-            title="Profitability Ratios Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Liquidity & Solvency Ratios</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/SofiN04DIBY" 
-            title="Liquidity & Solvency Ratios Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 14 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
 <li>4 categories: Liquidity, Profitability, Solvency, Efficiency</li>
 <li>DuPont: ROE = NP Margin &times; Asset Turnover &times; Equity Multiplier</li>
 <li>Ratios need industry context &mdash; no universal "good" values</li>
 <li>Limitations: historical, window dressing, inflation effects</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Ratio analysis is diagnostic, not prescriptive. It tells you where to investigate deeper, not what to conclude.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-15">
-<h2 id="unit15">Unit 15: Human Resource Accounting</h2>
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Human Resource Accounting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
 <div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 15: Human Resource Accounting</div><p><strong>Human Resource Accounting (HRA)</strong> is the process of identifying, measuring, and communicating information about human resources to facilitate effective management. It treats people as assets, not expenses.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Human Resource Accounting (HRA)</strong> is the process of identifying, measuring, and communicating information about human resources to facilitate effective management. It treats people as assets, not expenses.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Human Resource Accounting</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
+            title="Human Resource Accounting Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>HRA Methods</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
+            title="HRA Methods Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>HRA in Indian Companies</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/N1j-KApvRNM" 
+            title="HRA in Indian Companies Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Traditional View vs HRA View</h3>
 <div class="cg">
@@ -2500,117 +1863,70 @@ body::after {
 <div class="cc"><h5>Lev &amp; Schwartz Model</h5><p>HR Value = &#x3A3; [Future Benefits &#xF7; (1+r)^t]. Discounted future earnings approach.</p></div>
 </div>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Infosys</strong> pioneered HRA disclosure in India. Their annual report includes human resource value using the Lev &amp; Schwartz model. Infosys invests &#x20b9;3,000+ Cr annually in employee training (Infosys Global Education Centre in Mysore). Their attrition rate (13%) directly impacts HRA valuation &mdash; every 1% increase in attrition reduces HR asset value by &#x20b9;500 Cr approximately.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> pioneered HRA disclosure in India. Their annual report includes human resource value using the Lev &amp; Schwartz model. Infosys invests &#x20b9;3,000+ Cr annually in employee training (Infosys Global Education Centre in Mysore). Their attrition rate (13%) directly impacts HRA valuation &mdash; every 1% increase in attrition reduces HR asset value by &#x20b9;500 Cr approximately.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"HROP"</strong> &mdash; <strong>H</strong>istorical, <strong>R</strong>eplacement, <strong>O</strong>pportunity, Present <strong>V</strong>alue methods for HRA valuation.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"HROP"</strong> &mdash; <strong>H</strong>istorical, <strong>R</strong>eplacement, <strong>O</strong>pportunity, Present <strong>V</strong>alue methods for HRA valuation.</p></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Human Resource Accounting</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
-            title="Human Resource Accounting Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>HRA Methods</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
-            title="HRA Methods Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>HRA in Indian Companies</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/N1j-KApvRNM" 
-            title="HRA in Indian Companies Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Human Resource Accounting</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
-            title="Human Resource Accounting Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>HRA Methods</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/Kj25kX8LsZs" 
-            title="HRA Methods Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>HRA in Indian Companies</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/N1j-KApvRNM" 
-            title="HRA in Indian Companies Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 15 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
 <li>HRA = Measuring human capital as organizational assets</li>
 <li>4 methods: Historical, Replacement, Opportunity, Present Value</li>
 <li>Benefits: Better HR decisions, improved reporting, employee motivation</li>
 <li>Challenges: Intangible, no standards, high implementation cost</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> In knowledge economies, 70% of market cap is intangible (people, brands, IP). HRA makes this visible in financial reporting.</p></div>
-</div>
 
 <!-- ============================================================ -->
 </div>
-<div class="unit" id="unit-16">
-<h2 id="unit16">Unit 16: Forensic Accounting</h2>
+<div class="unit" id="u16">
+<h3 id="u16">Unit 16: Forensic Accounting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU16">&#x1F4AC; Ask AI</button></div>
 <div id="sU16">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 16: Forensic Accounting</div><p><strong>Forensic Accounting</strong> applies accounting, auditing, and investigative skills to examine financial statements for use in legal proceedings. It combines accounting expertise with detective work.</p></div>
 
-<div class="callout callout-definition"><div class="callout-label">Definition</div><p><strong>Forensic Accounting</strong> applies accounting, auditing, and investigative skills to examine financial statements for use in legal proceedings. It combines accounting expertise with detective work.</p></div>
+<div class="video-section">
+  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+  <div class="video-section-content">
+    <div class="video-grid">
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Forensic Accounting</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/kPF8OfSSHGM" 
+            title="Forensic Accounting Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Fraud Detection</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/FKGoEl7OYD4" 
+            title="Fraud Detection Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+<div class="video-card">
+  <div class="video-header">
+    <span class="video-icon">&#9654;</span>
+    <h5>Forensic Accounting Cases</h5>
+  </div>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/1F845oDf-qU" 
+            title="Forensic Accounting Cases Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
 
 <h3>Types of Corporate Fraud</h3>
 <div class="cg">
@@ -2627,7 +1943,7 @@ body::after {
 <div class="cc"><h5>Digital Forensics</h5><p>Email analysis, metadata examination, deleted file recovery, blockchain tracing for cryptocurrency fraud.</p><p><strong>Tools:</strong> EnCase, FTK, Cellebrite for device imaging; Chainalysis for crypto tracing.</p></div>
 </div>
 
-<div class="callout callout-important"><div class="callout-label">Exam Tip</div><p>Remember the fraud triangle: <span class="formula">Pressure + Opportunity + Rationalisation = Fraud</span>. All three must be present. Forensic accountants look for all three elements when assessing fraud risk. In India, SEBI (LODR) Regulations 2015 require listed companies to have a whistleblower policy &mdash; this addresses the "opportunity" element.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Remember the fraud triangle: <span class="formula">Pressure + Opportunity + Rationalisation = Fraud</span>. All three must be present. Forensic accountants look for all three elements when assessing fraud risk. In India, SEBI (LODR) Regulations 2015 require listed companies to have a whistleblower policy &mdash; this addresses the "opportunity" element.</p></div>
 
 <h3>Red Flags &mdash; Quick Reference</h3>
 <table class="qr-table">
@@ -2640,140 +1956,53 @@ body::after {
 <tr><td>Inventory growing faster than sales</td><td>Overvaluation, fictitious stock</td><td>Inventory turnover analysis</td></tr>
 </table>
 
-<div class="callout callout-example"><div class="callout-label">Indian Example</div><p><strong>Satyam Scandal (2009):</strong> India's largest accounting fraud. Ramalinga Raju inflated revenue by &#x20b9;5,040 Cr over 5 years. Red flags: cash balances shown didn't match bank statements, revenue growth exceeded industry rates, related-party transactions with Maytas Properties. Forensic auditors (KPMG) used bank reconciliation and Benford's Law analysis to uncover the fraud. Led to Companies Act 2013 reforms.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Satyam Scandal (2009):</strong> India's largest accounting fraud. Ramalinga Raju inflated revenue by &#x20b9;5,040 Cr over 5 years. Red flags: cash balances shown didn't match bank statements, revenue growth exceeded industry rates, related-party transactions with Maytas Properties. Forensic auditors (KPMG) used bank reconciliation and Benford's Law analysis to uncover the fraud. Led to Companies Act 2013 reforms.</p></div>
 
-<div class="callout callout-mnemonic"><div class="callout-label">Mnemonic</div><p><strong>"ABC-Fraud"</strong> &mdash; <strong>A</strong>sset misappropriation (most common), <strong>B</strong>ribery/Corruption (moderate), <strong>C</strong>ooking books / Financial statement fraud (least common, most costly).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"ABC-Fraud"</strong> &mdash; <strong>A</strong>sset misappropriation (most common), <strong>B</strong>ribery/Corruption (moderate), <strong>C</strong>ooking books / Financial statement fraud (least common, most costly).</p></div>
 
 <div class="br"><span class="sb s-b">Benford's Law</span><span class="sb s-g">Data Mining</span><span class="sb s-y">Ratio Analysis</span><span class="sb s-r">Digital Forensics</span></div>
 
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Forensic Accounting</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/kPF8OfSSHGM" 
-            title="Forensic Accounting Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Fraud Detection</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/FKGoEl7OYD4" 
-            title="Fraud Detection Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Forensic Accounting Cases</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/1F845oDf-qU" 
-            title="Forensic Accounting Cases Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="video-section">
-  <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
-  <div class="video-section-content">
-    <h4>Video Lectures</h4>
-    <div class="video-grid">
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Forensic Accounting</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/kPF8OfSSHGM" 
-            title="Forensic Accounting Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Fraud Detection</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/FKGoEl7OYD4" 
-            title="Fraud Detection Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-<div class="video-card">
-  <div class="video-header">
-    <span class="video-icon">&#9654;</span>
-    <h5>Forensic Accounting Cases</h5>
-  </div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube-nocookie.com/embed/1F845oDf-qU" 
-            title="Forensic Accounting Cases Video" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen loading="lazy"></iframe>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="summary-box"><h5>Unit 16 Summary</h5><ul>
+<div class="summary-box"><h4>&#x2705; Unit 16 Summary</h4><ul>
 <li>3 types of fraud: Asset misappropriation, Corruption, Financial statement fraud</li>
 <li>Techniques: Benford's Law, Data mining, Ratio analysis, Digital forensics</li>
 <li>Legal framework: Companies Act 2013, Indian Evidence Act, SEBI regulations</li>
 <li>Career: CBI, SFIO, Big 4 forensic practices, internal audit</li>
 </ul></div>
 <div class="kt"><p><strong>Key Takeaway:</strong> Forensic accounting is the intersection of accounting and investigation. In India's evolving regulatory landscape, demand for forensic accountants is growing 25% annually.</p></div>
-</div>
 
 </div>
 </main>
 </div>
-</script>
 <script src="pomodoro.js"></script>
 <script src="bookmark-notes.js"></script>
 <script src="flashcards.js"></script>
 <script>
-// Scroll-triggered animations with IntersectionObserver
+// Scroll-triggered animations
 (function() {
-    // Mark elements for animation
-    const selectors = [
-        'h2[id]', 'h3', '.cg', '.callout', '.fc', '.visual-diagram',
-        '.summary-box', '.kt', '.br', '.qr-table'
-    ];
-    document.querySelectorAll(selectors.join(',')).forEach((el, i) => {
-        el.classList.add('animate-on-scroll');
-        el.style.transitionDelay = (i % 6) * 0.05 + 's';
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
-    // Observe
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
 })();
 </script>
     <script src="enhancements.js"></script>

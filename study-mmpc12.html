@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="manifest" href="manifest.json">
 <style>
 
 html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
@@ -14,12 +13,12 @@ body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backgr
 @keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
 .study-layout{display:flex;max-width:1400px;margin:0 auto}
 .study-content{flex:1;padding:2rem;min-width:0}
-.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
 .sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.25rem}
-.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
-.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}
-.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}
+.study-sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}
+.study-sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}
 .study-header{background:linear-gradient(135deg,rgba(9,132,227,0.15),rgba(0,210,255,0.1));border:1px solid rgba(200,200,200,0.12);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
 .study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(9,132,227,0.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
 @keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:0.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:0.8}}
@@ -69,44 +68,70 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 .visual-diagram{background:linear-gradient(135deg,rgba(78,205,196,0.08),rgba(255,107,107,0.06));border:1px solid rgba(78,205,196,0.2);border-radius:12px;padding:1.25rem;margin:1rem 0}
 .visual-diagram h5{margin-bottom:0.8rem;color:#4ecdc4;font-size:0.95rem}
 .vd-node{padding:0.6rem;border-radius:8px;font-size:0.88rem;text-align:center}
-@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95);backdrop-filter:blur(20px)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95);backdrop-filter:blur(20px)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc12">
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-12'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<nav class="sidebar" aria-label="Unit navigation">
-  <a href="study-hub.html">&#x1F3E0; Back to StudyHub</a>
-  <div class="sidebar-header"><h3>MMPC-12 Strategic Management</h3></div>
-  <a href="#u1">Unit 1: Concept of Strategy</a>
-  <a href="#u2">Unit 2: Strategic Framework</a>
-  <a href="#u3">Unit 3: Strategy in Global Context</a>
-  <a href="#u4">Unit 4: External Environment</a>
-  <a href="#u5">Unit 5: Competitive Analysis</a>
-  <a href="#u6">Unit 6: Internal Analysis</a>
-  <a href="#u7">Unit 7: Business Level Strategies</a>
-  <a href="#u8">Unit 8: Competitive Strategy</a>
-  <a href="#u9">Unit 9: Corporate Level Strategy</a>
-  <a href="#u10">Unit 10: Strategy Implementation</a>
-  <a href="#u11">Unit 11: Corporate Governance</a>
-  <a href="#u12">Unit 12: Strategic Leadership</a>
-  <a href="#u13">Unit 13: Contemporary Issues</a>
-  <a href="#mnemonics">Master Mnemonics</a>
-  <a href="#exam">Exam Focus</a>
-</nav>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-12</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Strategy Fundamentals</a>
+<a href="#u1">Unit 1: Concept of Strategy</a>
+<a href="#u2">Unit 2: Strategic Framework</a>
+<a href="#u3">Unit 3: Strategy in Global Context</a>
+<a href="#block2">Block-02 Strategic Analysis</a>
+<a href="#u4">Unit 4: External Environment</a>
+<a href="#u5">Unit 5: Competitive Analysis</a>
+<a href="#u6">Unit 6: Internal Analysis</a>
+<a href="#block3">Block-03 Strategy Formulation</a>
+<a href="#u7">Unit 7: Business Level Strategies</a>
+<a href="#u8">Unit 8: Competitive Strategy</a>
+<a href="#u9">Unit 9: Corporate Level Strategy</a>
+<a href="#block4">Block-04 Strategy Implementation</a>
+<a href="#u10">Unit 10: Strategy Implementation</a>
+<a href="#u11">Unit 11: Corporate Governance</a>
+<a href="#u12">Unit 12: Strategic Leadership</a>
+<a href="#u13">Unit 13: Contemporary Issues</a>
+<a href="#mnemonics">Master Mnemonics</a>
+<a href="#frameworks">Key Frameworks</a>
+<a href="#revision">Quick Revision</a>
+<a href="#exam">Exam Focus</a>
+<a href="quiz-mmpc12.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
 <main class="study-content" id="main-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPC-12</span><h1>Strategic Management</h1>
 <p>4 Blocks, 13 Units &#x2022; Strategy Formulation, Environmental Analysis, Implementation &#x2022; IGNOU MBA</p></div>
 
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Strategy Fundamentals</h2>
+
 <!-- UNIT 1 -->
 <div class="unit" id="u1">
-<h3>Unit 1: Concept of Strategy</h3>
+<h3 id="u1">Unit 1: Concept of Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
-<div id="sU1" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategy &#x2014; Origin &amp; Definitions</div><p><strong>Origin:</strong> Greek word <em>Strategos</em> &#x2014; <em>Stratos</em> (army) + <em>agos</em> (to lead). Originally military, later adapted to business.</p><p><strong>Glueck:</strong> &quot;Unified, comprehensive and integrated plan relating strategic advantage to environmental challenges.&quot;</p><p><strong>Chandler (1960):</strong> &quot;Determination of basic long-term goals + adoption of courses of action + allocation of resources.&quot;</p><p><strong>Porter:</strong> &quot;Creation of a unique and valued position involving a different set of activities.&quot;</p></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategy &#x2014; Origin &amp; Definitions</div><p><strong>Origin:</strong> Greek word <em>Strategos</em> &#x2014; <em>Stratos</em> (army) + <em>agos</em> (to lead). Originally military, later adapted to business. Without strategy, an organization is &quot;like a ship without a rudder.&quot;</p><p><strong>Glueck:</strong> &quot;Unified, comprehensive and integrated plan relating strategic advantage to environmental challenges, designed to ensure basic objectives through proper implementation.&quot;</p><p><strong>Chandler (1960):</strong> &quot;Determination of basic long-term goals + adoption of courses of action + allocation of resources.&quot;</p><p><strong>Porter:</strong> &quot;Creation of a unique and valued position involving a different set of activities.&quot;</p></div>
+<div class="db"><table>
+<thead><tr><th>Strategy Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Deliberate</strong></td><td>Intended = Realized (planned and executed exactly)</td><td>Apple's iPhone launch strategy</td></tr>
+<tr><td><strong>Unrealized</strong></td><td>Intended &#x2260; Realized (plans that never materialized)</td><td>Kodak's digital camera strategy</td></tr>
+<tr><td><strong>Emergent</strong></td><td>Step-by-step realization (not planned but evolved)</td><td>Amazon's evolution from books to everything</td></tr>
+</tbody></table></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -114,6 +139,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is Strategy?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="What is Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Mintzberg's 5 Ps of Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Mintzberg 5 Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="db"><table>
 <thead><tr><th>P</th><th>Meaning</th><th>Time Focus</th><th>Type</th></tr></thead>
 <tbody>
@@ -130,6 +156,8 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <tr><td>Flexibility</td><td>Flexible</td><td>Fixed</td></tr>
 <tr><td>Focus</td><td>Decision making</td><td>Repetitive activities</td></tr>
 <tr><td>Level</td><td>Top + Middle management</td><td>Top management</td></tr>
+<tr><td>Direction</td><td>Action-oriented</td><td>Decision-oriented</td></tr>
+<tr><td>Environment</td><td>External</td><td>Internal</td></tr>
 </tbody></table></div>
 <div class="db"><table>
 <thead><tr><th>Basis</th><th>Strategy</th><th>Tactics</th></tr></thead>
@@ -137,6 +165,9 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <tr><td>Scope</td><td>Organization-wide</td><td>Specific part</td></tr>
 <tr><td>Time Horizon</td><td>Long-term, flexible</td><td>Short-term, definite</td></tr>
 <tr><td>Uncertainty</td><td>High (partial ignorance)</td><td>Low</td></tr>
+<tr><td>Delegation</td><td>Cannot delegate too low</td><td>Can delegate to all levels</td></tr>
+<tr><td>Information</td><td>More (external + internal)</td><td>Mainly internal</td></tr>
+<tr><td>Formulation</td><td>Continuous, irregular</td><td>Periodic, scheduled</td></tr>
 </tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Apple's strategy of premium differentiation with ecosystem lock-in (iPhone + Mac + iPad + Services) is a classic <em>pattern</em> strategy &#x2014; consistent over decades.</p></div>
 <div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Expect questions on &quot;Explain Mintzberg's 5 Ps&quot; or &quot;Differentiate between strategy and policy.&quot; Always use a table for comparisons.</p></div>
@@ -152,10 +183,24 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 
 <!-- UNIT 2 -->
 <div class="unit" id="u2">
-<h3>Unit 2: Strategic Framework</h3>
+<h3 id="u2">Unit 2: Strategic Framework</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
-<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div id="sU2">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Intent &amp; Hierarchy</div><p><strong>Strategic Intent (Hamel &amp; Prahalad, 1989):</strong> Obsessive ambition for success, resource allocation, organizing efforts, motivating people toward goals.</p><p><strong>Hierarchy:</strong> Vision &#x2192; Mission &#x2192; Business Definition &#x2192; Objectives &#x2192; Goals</p></div>
+<div class="kt"><strong>Strategic Management Process &#x2014; Detailed:</strong>
+<ul>
+<li><strong>Step 1: Strategic Intent:</strong> Define vision, mission, and long-term objectives. Establish direction.</li>
+<li><strong>Step 2: Environmental Analysis:</strong> Scan external (PESTLE) and internal (SWOT, VRIN) environments. Identify opportunities, threats, strengths, weaknesses.</li>
+<li><strong>Step 3: Strategy Formulation:</strong> Develop business-level (cost leadership, differentiation, focus) and corporate-level (growth, stability, retrenchment) strategies.</li>
+<li><strong>Step 4: Strategy Implementation:</strong> Allocate resources, design structure, manage change, develop policies and programs.</li>
+<li><strong>Step 5: Evaluation &amp; Control:</strong> Monitor performance, compare with standards, take corrective action. Use Balanced Scorecard, KPIs.</li>
+</ul></div>
+<div class="kt"><strong>Vision vs Mission &#x2014; Key Differences:</strong>
+<ul>
+<li><strong>Vision:</strong> Future-oriented, aspirational, inspirational. Answers &quot;Where do we want to be?&quot; Timeless, rarely changes.</li>
+<li><strong>Mission:</strong> Present-oriented, operational, descriptive. Answers &quot;What business are we in?&quot; More specific, may evolve.</li>
+<li><strong>Good Vision:</strong> Brief, clear, inspiring, stable over time. Example: Google's &quot;Organize the world's information and make it universally accessible&quot;</li>
+<li><strong>Good Mission:</strong> Defines customers, products/services, technology, philosophy. Example: Tata's &quot;Improving the quality of life of the communities we serve&quot;</li></ul></div><div class="kt"><strong>Strategic Intent  —  Examples:</strong><ul><li><strong>Komatsu (vs Caterpillar):</strong> &quot;Encircle Caterpillar&quot;  —  aggressive goal to overtake market leader</li><li><strong>Canon (vs Xerox):</strong> &quot;Beat Xerox&quot;  —  focused all resources on copier technology</li><li><strong>Honda:</strong> &quot;We will crush, squash, and slaughter Yamaha&quot;  —  competitive warfare</li><li><strong>Infosys:</strong> &quot;Win in the flat world&quot;  —  leveraging globalization</li></ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -163,6 +208,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Vision vs Mission Statement</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Vision vs Mission" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Management Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Strategic Management Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Hierarchy of Strategic Intent</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:60%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Vision &#x2014; Where do we want to be?</div>
@@ -179,6 +225,12 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <tr><td><strong>Objectives</strong></td><td>Specific, measurable targets</td><td>Derived from mission</td></tr>
 <tr><td><strong>Goals</strong></td><td>Broader, less specific aspirations</td><td>Overarching direction</td></tr>
 </tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Dimension</th><th>Description</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td><strong>Substantive</strong></td><td>Determining <em>what</em> strategy to pursue</td><td>Content of strategy</td></tr>
+<tr><td><strong>Procedural</strong></td><td>Placing strategy into <em>operation</em></td><td>Implementation process</td></tr>
+</tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon's vision: &quot;To be Earth's most customer-centric company&quot; &#x2014; drives every strategic decision from e-commerce to cloud (AWS) to streaming.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;VMODE&quot;</strong> &#x2014; <strong>V</strong>ision &#x2192; <strong>M</strong>ission &#x2192; <strong>O</strong>bjectives &#x2192; <strong>D</strong>efinition &#x2192; <strong>E</strong>valuation</p></div>
 <div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 2 Key Summary</div><ul>
@@ -190,9 +242,9 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 
 <!-- UNIT 3 -->
 <div class="unit" id="u3">
-<h3>Unit 3: Strategy in Global Context</h3>
+<h3 id="u3">Unit 3: Strategy in Global Context</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
-<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div id="sU3">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; PESTLE &amp; EPRG Framework</div><p><strong>PESTLE:</strong> Political, Economic, Social, Technological, Legal, Environmental.</p><p><strong>EPRG (Perlmutter):</strong> Ethnocentric (home), Polycentric (host), Regiocentric (region), Geocentric (global).</p></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
@@ -201,6 +253,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PESTLE Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="PESTLE Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>International Entry Modes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Entry Modes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Entry Modes (Low to High Commitment)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);width:80%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Exporting &#x2192; Licensing &#x2192; Franchising &#x2192; Joint Venture &#x2192; FDI &#x2192; Strategic Alliance</div>
@@ -214,11 +267,25 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Internationalization Motives</div>
+<ul>
+<li><strong>Market Expansion:</strong> Access new customers beyond domestic market</li>
+<li><strong>Scale Economies:</strong> Larger production volumes reduce per-unit cost</li>
+<li><strong>Location Advantages:</strong> Access to raw materials, cheap labour, favorable regulations</li>
+<li><strong>PLC Extension:</strong> Extend product life cycle by introducing in new markets</li>
+<li><strong>Low-Cost Labour:</strong> Manufacturing in countries with lower wage costs</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Environmental Analysis Process</div>
+<p><strong>4 Steps:</strong> Factor Identification &#x2192; Selection of Key Variables &#x2192; Variable Analysis &#x2192; Strategic Positioning</p></div>
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Strategic Analysis</h2>
+
 <!-- UNIT 4 -->
 <div class="unit" id="u4">
-<h3>Unit 4: External Environment Analysis</h3>
+<h3 id="u4">Unit 4: External Environment Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
-<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div id="sU4">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; External Environment</div><p><strong>7 Dimensions:</strong> Demographic, Economic, Political/Legal, Sociocultural, Technological, Global, Physical.</p><p><strong>I/O Model:</strong> External environment determines strategy <em>more than</em> internal resources. Industry structure &gt; firm resources.</p></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
@@ -227,6 +294,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>External Environment Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="External Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>I/O vs RBV Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="I/O vs RBV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>COVID-19 pandemic was an external <em>environmental shock</em> that forced companies to restructure strategies (remote work, e-commerce acceleration).</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;DEPSTG-GP&quot;</strong> &#x2014; <strong>D</strong>emographic-<strong>E</strong>conomic-<strong>P</strong>olitical-<strong>S</strong>ociocultural-<strong>T</strong>echnological-<strong>G</strong>lobal-<strong>G</strong>eographic-<strong>P</strong>hysical</p></div>
 <div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 4 Key Summary</div><ul>
@@ -237,12 +305,40 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Environmental Scanning &amp; EFE Matrix</div>
+<p><strong>Environmental Scanning:</strong> Systematic collection and interpretation of environmental data for strategy formulation. Identifies opportunities and threats.</p>
+<p><strong>EFE Matrix (External Factor Evaluation):</strong> Weighted rating of external factors (opportunities + threats). Steps: List key external factors &#x2192; Assign weights (0 to 1) &#x2192; Rate each (1-4) &#x2192; Multiply weight x rating &#x2192; Sum total.</p>
+<ul>
+<li><strong>Opportunities:</strong> Emerging markets, technology shifts, regulatory changes, demographic shifts</li>
+<li><strong>Threats:</strong> New competitors, substitute products, economic downturns, unfavorable policy changes</li>
+<li><strong>Weight range:</strong> 0.0 (not important) to 1.0 (very important) &#x2014; all weights must sum to 1.0</li>
+<li><strong>Rating scale:</strong> 1 = poor response, 2 = average, 3 = above average, 4 = superior response</li>
+<li><strong>Interpretation:</strong> Total weighted score above 2.5 = strong external position; below 2.5 = weak</li>
+</ul></div>
+<div class="kt"><strong>I/O Model vs RBV &#x2014; Key Differences:</strong>
+<ul>
+<li><strong>I/O (Outside-In):</strong> External environment determines strategy. Industry structure &gt; firm resources. Focus on industry attractiveness. <em>Example:</em> Choosing to enter growing industries (Indian EdTech, EV market)</li>
+<li><strong>RBV (Inside-Out):</strong> Internal resources drive competitive advantage. Firm resources &gt; industry structure. Focus on core competencies. <em>Example:</em> Tata leveraging brand trust across industries</li>
+<li><strong>Best Approach:</strong> Combine both &#x2014; external analysis identifies opportunities, internal analysis determines capability to exploit them</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Dimension</th><th>Key Factors</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Demographic</strong></td><td>Population size, age structure, urbanization, literacy</td><td>India's young population (65% under 35) = opportunity for consumer goods, education, tech</td></tr>
+<tr><td><strong>Economic</strong></td><td>GDP growth, inflation, exchange rates, interest rates</td><td>India's 6-7% GDP growth, rising middle class = market expansion opportunity</td></tr>
+<tr><td><strong>Political/Legal</strong></td><td>Government policies, regulations, taxation, trade policies</td><td>Make in India, PLI schemes, GST implementation, FDI regulations</td></tr>
+<tr><td><strong>Sociocultural</strong></td><td>Cultural values, lifestyle trends, consumer preferences</td><td>Health consciousness rise, digital adoption, nuclear families, premiumization</td></tr>
+<tr><td><strong>Technological</strong></td><td>Innovation, R&D, automation, digital transformation</td><td>UPI payments revolution, AI adoption, 5G rollout, cloud computing</td></tr>
+<tr><td><strong>Global</strong></td><td>Globalization, international trade, cross-border flows</td><td>India as global services hub, supply chain diversification from China</td></tr>
+<tr><td><strong>Physical</strong></td><td>Climate, natural resources, environmental sustainability</td><td>Water scarcity, renewable energy push, climate change regulations</td></tr>
+</tbody></table></div>
 <!-- UNIT 5 -->
 <div class="unit" id="u5">
-<h3>Unit 5: Competitive Analysis</h3>
+<h3 id="u5">Unit 5: Competitive Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
-<div id="sU5" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Porter's Five Forces</div><p><strong>5 Forces:</strong> Threat of New Entrants, Bargaining Power of Suppliers, Bargaining Power of Buyers, Threat of Substitutes, Competitive Rivalry.</p></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Porter's Five Forces</div><p><strong>5 Forces:</strong> Threat of New Entrants, Bargaining Power of Suppliers, Bargaining Power of Buyers, Threat of Substitutes, Competitive Rivalry.</p><p>Developed by Michael Porter (1979), this framework helps analyze industry attractiveness and profitability potential. The stronger the forces, the lower the industry's profit potential.</p></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -250,6 +346,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Porter's Five Forces</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Porter Five Forces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competitive Profile Matrix</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="CPM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Porter's Five Forces Model</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of New Entrants</div>
@@ -262,22 +359,167 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2191;</div>
 <div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of Substitutes</div>
 </div></div>
+<div class="db"><table>
+<thead><tr><th>Force</th><th>Key Factors</th><th>High When</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Threat of New Entrants</strong></td><td>Entry barriers determine ease of entry</td><td>Barriers are low, retaliation is weak</td></tr>
+<tr><td><strong>2. Supplier Power</strong></td><td>Concentration, switching costs, forward integration threat</td><td>Few dominant suppliers, no substitutes, high switching costs</td></tr>
+<tr><td><strong>3. Buyer Power</strong></td><td>Volume, switching costs, price sensitivity, backward integration threat</td><td>Concentrated buyers, undifferentiated products, cost information available</td></tr>
+<tr><td><strong>4. Threat of Substitutes</strong></td><td>Price-performance ratio of alternatives</td><td>Substitutes are attractively priced, easy to switch</td></tr>
+<tr><td><strong>5. Competitive Rivalry</strong></td><td>Number of competitors, growth rate, exit barriers</td><td>Many equally balanced competitors, slow growth, high fixed costs</td></tr>
+</tbody></table></div>
+<div class="kt"><strong>Force 1: Threat of New Entrants &#x2014; Entry Barriers:</strong>
+<ul>
+<li>Economies of scale (lower cost at higher volume)</li>
+<li>Learning/Experience curve effects</li>
+<li>Cost disadvantages independent of scale (patents, locations, raw materials)</li>
+<li>Brand loyalty and identity</li>
+<li>Capital requirements</li>
+<li>Switching costs (financial or psychological)</li>
+<li>Access to distribution channels</li>
+<li>Anticipated retaliation from incumbents</li>
+<li>Regulatory policies and tariffs</li>
+</ul></div>
+<div class="kt"><strong>Force 2: Bargaining Power of Suppliers &#x2014; High When:</strong>
+<ul>
+<li>Few suppliers dominate (high concentration)</li>
+<li>No substitutes for supplier's product</li>
+<li>Switching costs are high for buyers</li>
+<li>Credible threat of forward integration</li>
+<li>Buyer is not important to supplier</li>
+</ul></div>
+<div class="kt"><strong>Force 3: Bargaining Power of Buyers &#x2014; High When:</strong>
+<ul>
+<li>Undifferentiated/standard products</li>
+<li>Buyers are price-sensitive</li>
+<li>Buyers have accurate cost information</li>
+<li>Concentrated buyers (few large buyers)</li>
+<li>Credible threat of backward integration</li>
+</ul></div>
+<div class="kt"><strong>Force 4: Threat of Substitutes &#x2014; Depends On:</strong>
+<ul>
+<li>Whether substitutes are attractively priced</li>
+<li>Whether buyers view substitutes as satisfactory in quality/performance</li>
+<li>How easily buyers can switch</li>
+</ul></div>
+<div class="kt"><strong>Force 5: Competitive Rivalry &#x2014; Intensity Factors:</strong>
+<ul>
+<li>Stability of environment (unstable = hyper-competitive)</li>
+<li>Life expectancy of competitive advantage (short = more rivalry)</li>
+<li>Number and diversity of competitors</li>
+<li>Industry growth rate</li>
+<li>Fixed costs and exit barriers</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Industry Example</th><th>Force Analysis</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>Indian Telecom (Jio 2016)</strong></td><td>New entrant with Rs 1.5 lakh crore investment, offered free data</td><td>Hyper-rivalry, Vodafone-Idea struggling, buyer power increased</td></tr>
+<tr><td><strong>Indian Airlines</strong></td><td>High capital requirements, airport slot constraints</td><td>Moderate barriers, but price war between IndiGo, SpiceJet, Air India</td></tr>
+<tr><td><strong>Indian E-commerce</strong></td><td>Amazon vs Flipkart, high buyer power (easy price comparison)</td><td>Intense rivalry, thin margins, constant discounting</td></tr>
+<tr><td><strong>Indian FMCG</strong></td><td>Strong brand loyalty (HUL, P&G), distribution network barriers</td><td>Low threat of new entrants, stable competitive landscape</td></tr>
+<tr><td><strong>Smartphone Industry</strong></td><td>Samsung/Apple dominate, but Chinese brands (Xiaomi, Realme) entered</td><td>Supplier power (Qualcomm chips), buyer power (price comparison)</td></tr>
+</tbody></table></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian telecom &#x2014; Jio's entry (2016) changed all five forces: high rivalry (price war), new entrant with deep pockets, substitute for traditional voice (VoIP), buyer power increased (cheap plans), supplier power decreased (tower sharing).</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;NSBRS&quot;</strong> &#x2014; <strong>N</strong>ew entrants-<strong>S</strong>uppliers-<strong>B</strong>uyers-<strong>R</strong>ivalry-<strong>S</strong>ubstitutes</p></div>
+<div class="db"><table>
+<thead><tr><th>Concept</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Strategic Groups</strong></td><td>Conceptual clusters of firms with similar strategies within an industry</td><td>Cars vs MUVs vs Sports Cars in automobile industry</td></tr>
+<tr><td><strong>Competitive Profile Matrix (CPM)</strong></td><td>Comparing firm's critical success factors vs competitors using weighted scores</td><td>Comparing Tata Motors vs Mahindra vs Maruti on R&D, brand, distribution</td></tr>
+</tbody></table></div>
 <div class="summary-box"><div class="summary-label">&#x1F4DD; Unit 5 Key Summary</div><ul>
 <li>Porter's 5 Forces: New entrants, Suppliers, Buyers, Rivalry, Substitutes</li>
 <li>Entry barriers: Scale, brand, capital, switching costs, regulation</li>
 <li>Strategic Groups = clusters of firms with similar strategies</li>
 <li>CPM = weighted comparison of critical success factors</li>
+<li>Indian telecom (Jio) = textbook example of all 5 forces changing simultaneously</li>
 </ul></div>
 </div>
 
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Force 1: Threat of New Entrants &#x2014; Entry Barriers</div>
+<ul>
+<li><strong>Economies of scale:</strong> Lower cost at higher volume deters small entrants</li>
+<li><strong>Learning/Experience curve:</strong> Incumbents have cost advantage from experience</li>
+<li><strong>Cost disadvantages:</strong> Patents, locations, raw materials independent of scale</li>
+<li><strong>Brand loyalty:</strong> Established brands create switching costs for customers</li>
+<li><strong>Capital requirements:</strong> High upfront investment needed to compete</li>
+<li><strong>Switching costs:</strong> Financial or psychological costs for buyers to change</li>
+<li><strong>Access to distribution:</strong> Incumbents control key channels</li>
+<li><strong>Anticipated retaliation:</strong> Incumbents may respond aggressively to new entrants</li>
+<li><strong>Regulatory policies:</strong> Tariffs, licensing requirements, government regulations</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Force 2: Bargaining Power of Suppliers &#x2014; High When</div>
+<ul>
+<li>Few suppliers dominate the market (high concentration)</li>
+<li>No substitutes for the supplier's product exist</li>
+<li>Switching costs are high for buyers</li>
+<li>Credible threat of forward integration (supplier enters buyer's industry)</li>
+<li>Buyer is not important to supplier's total business</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Force 3: Bargaining Power of Buyers &#x2014; High When</div>
+<ul>
+<li>Products are undifferentiated or standardized</li>
+<li>Buyers are highly price-sensitive</li>
+<li>Buyers have accurate cost and market information</li>
+<li>Few large buyers dominate (concentrated buyers)</li>
+<li>Credible threat of backward integration (buyer enters supplier's industry)</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Force 4: Threat of Substitutes</div>
+<ul>
+<li>Whether substitutes are attractively priced relative to industry product</li>
+<li>Whether buyers view substitutes as satisfactory in quality and performance</li>
+<li>How easily buyers can switch to the substitute</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Force 5: Competitive Rivalry Intensity</div>
+<ul>
+<li><strong>Environmental stability:</strong> Unstable environments = hyper-competitive</li>
+<li><strong>Advantage life expectancy:</strong> Short-lived advantages = more rivalry</li>
+<li><strong>Number and diversity:</strong> More competitors = higher rivalry</li>
+<li><strong>Industry growth rate:</strong> Slow growth = more fight for market share</li>
+<li><strong>Fixed costs and exit barriers:</strong> High fixed costs = price wars to fill capacity</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Groups &amp; CPM</div>
+<p><strong>Strategic Groups:</strong> Conceptual clusters of firms with similar strategies within an industry (e.g., Cars vs MUVs vs Sports Cars in automobile industry). Firms within a group are closer competitors.</p>
+<p><strong>Competitive Profile Matrix (CPM):</strong> Comparing a firm's critical success factors vs competitors using weighted scores. Factors include market share, brand loyalty, financial position, product quality, customer loyalty, global expansion.</p></div>
 <!-- UNIT 6 -->
 <div class="unit" id="u6">
-<h3>Unit 6: Internal Analysis</h3>
+<h3 id="u6">Unit 6: Internal Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
-<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div id="sU6">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; RBV &amp; VRIN Framework</div><p><strong>Resource-Based View (RBV):</strong> Internal resources and capabilities drive competitive advantage. <em>Inside-out perspective.</em></p><p><strong>VRIN (Barney):</strong> Resources must be <strong>V</strong>aluable, <strong>R</strong>are, <strong>I</strong>nimitable, <strong>N</strong>on-substitutable.</p></div>
+<div class="kt"><strong>SWOT Analysis &#x2014; Detailed Breakdown:</strong>
+<ul>
+<li><strong>Strengths (S):</strong> Internal positive attributes that give competitive advantage &#x2014; brand reputation, skilled workforce, proprietary technology, financial resources, efficient processes</li>
+<li><strong>Weaknesses (W):</strong> Internal negative factors that hinder performance &#x2014; high debt, poor brand image, skill gaps, outdated technology, weak distribution</li>
+<li><strong>Opportunities (O):</strong> External factors the firm can exploit &#x2014; market growth, technological changes, regulatory changes, competitor weaknesses, new segments</li>
+<li><strong>Threats (T):</strong> External factors that could cause trouble &#x2014; new competitors, changing regulations, economic downturn, shifting consumer preferences, substitute products</li>
+</ul></div>
+<div class="kt"><strong>IFE Matrix (Internal Factor Evaluation):</strong>
+<ul>
+<li>Step 1: List key internal factors (strengths and weaknesses)</li>
+<li>Step 2: Assign weights (0.00 to 1.00) based on importance</li>
+<li>Step 3: Rate each factor (1=Major weakness, 2=Minor weakness, 3=Minor strength, 4=Major strength)</li>
+<li>Step 4: Multiply weight x rating = weighted score</li>
+<li>Step 5: Sum all weighted scores (2.5 = average, above = strong, below = weak)</li>
+</ul></div>
+<div class="kt"><strong>EFE Matrix (External Factor Evaluation):</strong>
+<ul>
+<li>Similar to IFE but for external opportunities and threats</li>
+<li>Step 1: List key external factors</li>
+<li>Step 2: Assign weights (0.00 to 1.00) based on importance</li>
+<li>Step 3: Rate each factor (1=Poor response, 2=Average response, 3=Above average, 4=Superior response)</li>
+<li>Step 4: Calculate weighted scores and total</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Analysis Type</th><th>Focus</th><th>Key Questions</th></tr></thead>
+<tbody>
+<tr><td><strong>SWOT</strong></td><td>Overall strategic position</td><td>Where are we strong/weak? What opportunities/threats exist?</td></tr>
+<tr><td><strong>VRIN</strong></td><td>Competitive advantage sources</td><td>Do our resources meet VRIN criteria?</td></tr>
+<tr><td><strong>Value Chain</strong></td><td>Activity-level analysis</td><td>Where do we create value? Where are costs high?</td></tr>
+<tr><td><strong>IFE Matrix</strong></td><td>Internal factor quantification</td><td>How strong is our internal position numerically?</td></tr>
+<tr><td><strong>EFE Matrix</strong></td><td>External factor quantification</td><td>How well do we respond to external factors?</td></tr>
+</tbody></table></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -285,6 +527,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resource-Based View</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="RBV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Value Chain Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Value Chain" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Value Chain (Porter)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);width:90%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.8rem">Support: Firm Infra | HR | Tech Dev | Procurement</div>
@@ -310,12 +553,56 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; IFE Matrix &amp; Core Competencies</div>
+<p><strong>IFE Matrix (Internal Factor Evaluation):</strong> Weighted rating of internal strengths + weaknesses. Steps: List key internal factors &#x2192; Assign weights (0 to 1) &#x2192; Rate each (1-4) &#x2192; Multiply weight x rating &#x2192; Sum total. Above 2.5 = strong internal position.</p>
+<p><strong>Core Competencies (Prahalad &amp; Hamel):</strong> Unique strengths that provide competitive advantage. Must meet VRIN criteria. Examples: Honda (engines), 3M (innovation), Apple (design + ecosystem). Core competencies are the glue that holds the organization together.</p>
+<ul>
+<li><strong>Competencies:</strong> Bundle of skills distinguishing from competitors</li>
+<li><strong>Core Competencies:</strong> Unique strengths providing sustainable competitive advantage (VRIN met)</li>
+<li><strong>Dynamic capabilities:</strong> Ability to integrate, build, reconfigure resources for changing environments</li>
+</ul></div>
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Strategy Formulation</h2>
+
 <!-- UNIT 7 -->
 <div class="unit" id="u7">
-<h3>Unit 7: Business Level Strategies</h3>
+<h3 id="u7">Unit 7: Business Level Strategies</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
-<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div id="sU7">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Porter's Three Generic Strategies</div><p><strong>Cost Leadership:</strong> Become lowest-cost producer. <strong>Differentiation:</strong> Offer unique products. <strong>Focus:</strong> Serve specific niche (cost focus or differentiation focus).</p><p><strong>&quot;Stuck in the Middle&quot;:</strong> Failing to achieve ANY generic strategy = poor performance.</p></div>
+<div class="kt"><strong>Cost Leadership &#x2014; Detailed:</strong>
+<ul>
+<li>Become lowest-cost producer in industry while maintaining acceptable quality</li>
+<li>Serve price-sensitive customers with competitive pricing</li>
+<li><strong>Prerequisites:</strong> Efficient scale, cost reduction from experience curve, tight cost control, marginal account avoidance</li>
+<li><strong>Sources:</strong> Economies of scale, learning curve effects, technology, supply chain optimization</li>
+<li><strong>Risks:</strong> Technology changes making investments obsolete, imitations by competitors, focus on cost ignoring other factors</li>
+<li><strong>Indian Examples:</strong> IndiGo Airlines (operational efficiency), Jio (data at lowest cost), Maruti Suzuki (economies of scale)</li>
+</ul></div>
+<div class="kt"><strong>Differentiation &#x2014; Detailed:</strong>
+<ul>
+<li>Offer unique products or services valued by customers, commanding premium prices</li>
+<li><strong>Sources:</strong> Product features, technology innovation, brand image, customer service, distribution network, design</li>
+<li><strong>Benefits:</strong> Customer loyalty, reduced price sensitivity, higher margins, competitive barriers</li>
+<li><strong>Risks:</strong> Price premium too high, differentiation basis becomes less important to buyers, imitation by competitors</li>
+<li><strong>Indian Examples:</strong> Apple (design + ecosystem), BMW (engineering + luxury), Tata (trust + quality), Amul (cooperative model)</li>
+</ul></div>
+<div class="kt"><strong>Focus Strategy &#x2014; Detailed:</strong>
+<ul>
+<li>Serve specific market segment (niche) better than competitors serving broad market</li>
+<li>Can be <strong>Cost Focus</strong> (lowest cost in niche) OR <strong>Differentiation Focus</strong> (unique value in niche)</li>
+<li><strong>Target Segments:</strong> Geographic, demographic, product-line segment, customer type</li>
+<li><strong>Risks:</strong> Segment becomes too broad, competitors find sub-segments, differences between segment and broad market shrink</li>
+<li><strong>Indian Examples:</strong> Rolex (luxury niche), Tesla (EV niche initially), Dollar stores (price-sensitive niche), FabIndia (ethnic wear niche)</li>
+</ul></div>
+<div class="kt"><strong>SBU (Strategic Business Unit):</strong>
+<ul>
+<li>Each business unit treated as independent with its own strategy, mission, competitors</li>
+<li>Has its own set of competitors, distinct from other SBUs</li>
+<li>Has a manager responsible for strategic planning and profit performance</li>
+<li><strong>Example:</strong> Reliance Industries has separate SBUs: Jio, Retail, Petrochemicals, Oil & Gas</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -323,6 +610,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Porter's Generic Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Generic Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost Leadership vs Differentiation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Cost vs Differentiation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Generic Strategies Matrix</h5>
 <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
 <div></div><div style="text-align:center;font-weight:700;color:#74b9ff">Low Cost</div><div style="text-align:center;font-weight:700;color:#74b9ff">Differentiation</div>
@@ -342,18 +630,65 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cost Leadership Details</div>
+<ul>
+<li>Become lowest-cost producer in the industry</li>
+<li>Serve price-sensitive customers aggressively</li>
+<li><strong>Prerequisites:</strong> Efficient scale, cost reduction from experience curve, tight cost control, marginal account avoidance</li>
+<li><strong>Risk:</strong> Technology changes can obsolete cost advantages; competitors imitate cost-reduction methods</li>
+<li><strong>Examples:</strong> Walmart (supply chain efficiency), Jio (massive scale), IndiGo (fleet standardization)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Differentiation Details</div>
+<ul>
+<li>Offer unique products valued by customers for their distinctiveness</li>
+<li><strong>Sources:</strong> Product features, technology, brand image, customer service, distribution network, design quality</li>
+<li><strong>Risk:</strong> Price premium too high for customers; differentiation basis becomes less important over time</li>
+<li><strong>Examples:</strong> Apple (design + ecosystem), BMW (engineering + luxury), Vistara (premium service)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Focus Strategy Details</div>
+<ul>
+<li>Serve a specific market segment (niche) better than broad competitors</li>
+<li>Can be <strong>cost focus</strong> (lowest cost in niche) OR <strong>differentiation focus</strong> (unique value in niche)</li>
+<li><strong>Risk:</strong> Segment becomes too broad for focus; competitors find profitable sub-segments</li>
+<li><strong>Examples:</strong> Rolex (luxury niche), Tesla initially (premium EV niche), Dollar stores (cost focus)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; SBU (Strategic Business Unit)</div>
+<p><strong>SBU:</strong> Each business unit treated as independent with its own strategy, mission, competitors, and objectives. Part of a larger corporation but operates autonomously. Enables focused resource allocation and performance measurement per business line.</p></div>
 <!-- UNIT 8 -->
 <div class="unit" id="u8">
-<h3>Unit 8: Competitive Strategy</h3>
+<h3 id="u8">Unit 8: Competitive Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
-<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div id="sU8">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competitor Analysis Framework</div><p><strong>5-Point Framework:</strong> Future Objectives &#x2192; Current Strategy &#x2192; Assumptions &#x2192; Capabilities &#x2192; Response Profile.</p></div>
+<div class="kt"><strong>Wheel of Competitive Strategy:</strong>
+<ul>
+<li>Goals at center, functional areas as spokes: Finance, Production, Marketing, HR, Engineering, etc.</li>
+<li>Each functional area must align with overall competitive strategy</li>
+<li>Competitive strategy = Goals (ends) + Policies (means) for competing in specific business</li>
+</ul></div>
+<div class="kt"><strong>Industry Types &amp; Strategy:</strong>
+<ul>
+<li><strong>Fragmented Industry:</strong> Many small firms, no dominant player. Strategy: Consolidation (M&A), Specialization (niche focus). <em>Example:</em> Indian restaurants, local retail</li>
+<li><strong>Emerging Industry:</strong> Newly formed or reformed industry. Strategy: First mover advantage, technological leadership, building barriers. <em>Example:</em> Indian EV market, EdTech</li>
+<li><strong>Declining Industry:</strong> Growth has stopped, demand falling. Strategy: Leadership (dominate remaining market), Niche (focus on segments), Harvest (maximize cash), Divest (exit). <em>Example:</em> Landline telecom, DVD rental</li>
+<li><strong>Mature Industry:</strong> Slow growth, established players. Strategy: Cost efficiency, incremental innovation, market share defense. <em>Example:</em> Indian FMCG, steel industry</li>
+</ul></div>
+<div class="kt"><strong>Competitive Dimensions:</strong>
+<ul>
+<li><strong>Cost:</strong> Price competitiveness, operational efficiency</li>
+<li><strong>Quality:</strong> Product reliability, features, performance</li>
+<li><strong>Flexibility:</strong> Ability to adapt, customize, respond to changes</li>
+<li><strong>Delivery:</strong> Speed, reliability of delivery</li>
+<li><strong>Service:</strong> Customer support, after-sales service</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
 <div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competitive Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Competitive Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="db"><table>
 <thead><tr><th>Mover Type</th><th>Advantage</th><th>Example</th></tr></thead>
 <tbody>
@@ -370,12 +705,59 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Wheel of Competitive Strategy</div>
+<p>Goals at the center, with functional areas as spokes: Finance, Production, Marketing, HR, Engineering, Purchasing. Each functional area must align its policies with the overall competitive strategy.</p></div>
+<div class="db"><table>
+<thead><tr><th>Industry Type</th><th>Characteristics</th><th>Strategy Options</th></tr></thead>
+<tbody>
+<tr><td><strong>Fragmented</strong></td><td>Many small firms, no dominant player</td><td>Consolidation, specialization, &ldquo;managed&rdquo; fragmentation</td></tr>
+<tr><td><strong>Emerging</strong></td><td>New industry, high growth, uncertain</td><td>First mover advantage, technological leadership, shaping industry standards</td></tr>
+<tr><td><strong>Mature</strong></td><td>Slow growth, established players</td><td>Cost efficiency, incremental innovation, market share defense</td></tr>
+<tr><td><strong>Declining</strong></td><td>Shrinking demand, excess capacity</td><td>Leadership, niche, harvest, divest</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competitive Dimensions</div>
+<p>Firms compete along 5 key dimensions:</p>
+<ul>
+<li><strong>Cost:</strong> Price competitiveness through efficiency</li>
+<li><strong>Quality:</strong> Product/service quality and reliability</li>
+<li><strong>Flexibility:</strong> Ability to adapt to market changes quickly</li>
+<li><strong>Delivery:</strong> Speed and reliability of delivery</li>
+<li><strong>Service:</strong> After-sales support and customer experience</li>
+</ul></div>
 <!-- UNIT 9 -->
 <div class="unit" id="u9">
-<h3>Unit 9: Corporate Level Strategy</h3>
+<h3 id="u9">Unit 9: Corporate Level Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
-<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div id="sU9">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Corporate Strategy</div><p><strong>Question:</strong> &quot;What businesses should we be in?&quot;</p><p><strong>4 Strategies:</strong> Growth, Stability, Retrenchment, Combination.</p></div>
+<div class="kt"><strong>BCG Matrix &#x2014; Detailed Quadrant Analysis:</strong>
+<ul>
+<li><strong>Stars (High Growth, High Share):</strong> Market leaders in growing industries. Need heavy investment to maintain position. Eventually become cash cows when market matures. <em>Example:</em> Jio in early years (2016-2019), Reliance Retail</li>
+<li><strong>Cash Cows (Low Growth, High Share):</strong> Market leaders in mature, slow-growing markets. Generate more cash than needed. Fund other business units. <em>Example:</em> TCS, HUL's detergent business, Maruti Suzuki</li>
+<li><strong>Question Marks (High Growth, Low Share):</strong> Attractive industries but weak market position. Require significant investment to gain share. Decision: invest heavily or divest. <em>Example:</em> Tata Motors' EV business, Reliance's new energy ventures</li>
+<li><strong>Dogs (Low Growth, Low Share):</strong> Weak position in slow-growing markets. Typically divested or liquidated. May generate enough cash to sustain but don't grow. <em>Example:</em> Landline telephony, legacy IT services</li>
+</ul></div>
+<div class="kt"><strong>Vertical Integration &#x2014; Detailed:</strong>
+<ul>
+<li><strong>Forward Integration:</strong> Moving toward the customer (downstream). Manufacturer opens retail stores, acquires distributors. <em>Example:</em> Apple opening Apple Stores, Tata launching Tata Cliq</li>
+<li><strong>Backward Integration:</strong> Moving toward raw materials (upstream). Manufacturer acquires suppliers. <em>Example:</em> Tata Steel acquiring coal mines, Reliance acquiring textile mills</li>
+<li><strong>Benefits:</strong> Better coordination, cost savings, quality control, supply security</li>
+<li><strong>Risks:</strong> Increased capital requirements, reduced flexibility, bureaucratic costs</li>
+</ul></div>
+<div class="kt"><strong>Stability Strategies:</strong>
+<ul>
+<li><strong>Pause/Proceed with Caution:</strong> Temporary stop to consolidate resources before next growth phase</li>
+<li><strong>No Change:</strong> Continue current operations in stable environment (rare in practice)</li>
+<li><strong>Profit:</strong> Capitalize on existing position, generate maximum cash flow</li>
+<li><strong>Harvesting:</strong> Maximize short-term cash flow, may sacrifice market share</li>
+</ul></div>
+<div class="kt"><strong>Retrenchment Strategies:</strong>
+<ul>
+<li><strong>Turnaround:</strong> Aggressive cost reduction + revenue improvement when decline is not severe. <em>Example:</em> Air India under Tata Group restructuring</li>
+<li><strong>Divestiture:</strong> Sell off business units to focus on core operations. <em>Example:</em> Tata Group selling Corus Steel UK</li>
+<li><strong>Liquidation:</strong> Sell assets and close business (last resort). <em>Example:</em> Kingfisher Airlines shutdown</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -383,6 +765,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>BCG Matrix Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="BCG Matrix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ansoff Matrix</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Ansoff Matrix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; BCG Matrix</h5>
 <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
 <div></div><div style="text-align:center;font-weight:700;color:#74b9ff">High Market Share</div><div style="text-align:center;font-weight:700;color:#74b9ff">Low Market Share</div>
@@ -413,18 +796,76 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Growth Strategies in Detail</div>
+<ul>
+<li><strong>Concentration:</strong> Focus on existing business, increase market share in current market</li>
+<li><strong>Integration:</strong> Expand within the same industry</li>
+<li><strong>Vertical Integration:</strong> <strong>Forward</strong> = toward customer (manufacturer opens retail); <strong>Backward</strong> = toward supplier (manufacturer acquires raw material source)</li>
+<li><strong>Diversification:</strong> Enter new businesses &#x2014; <strong>Related</strong> (shared technology/marketing) or <strong>Unrelated</strong> (conglomerate)</li>
+<li><strong>International:</strong> Enter new geographic markets through exporting, licensing, JV, or FDI</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Stability Strategies</div>
+<ul>
+<li><strong>Pause/Proceed with Caution:</strong> Temporary stop to consolidate before next growth phase</li>
+<li><strong>No Change:</strong> Continue as-is in a stable environment</li>
+<li><strong>Profit:</strong> Capitalize on existing position, generate cash for future investment</li>
+<li><strong>Harvesting:</strong> Maximize cash flow, may sacrifice market share intentionally</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Retrenchment Strategies</div>
+<ul>
+<li><strong>Turnaround:</strong> Aggressive cost reduction + revenue improvement when decline is not severe</li>
+<li><strong>Divestiture:</strong> Sell off non-core or underperforming business units</li>
+<li><strong>Liquidation:</strong> Sell assets and close business &#x2014; last resort</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Combination Strategy</div>
+<p>Mix of growth, stability, and retrenchment applied across different business units simultaneously or sequentially. Large diversified corporations like Reliance, Tata Group, and Adani Group typically use combination strategies.</p></div>
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Strategy Implementation &amp; Governance</h2>
+
 <!-- UNIT 10 -->
 <div class="unit" id="u10">
-<h3>Unit 10: Strategy Implementation</h3>
+<h3 id="u10">Unit 10: Strategy Implementation</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
-<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div id="sU10">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; McKinsey 7S Framework</div><p><strong>7S = SSSS-SSS:</strong> Strategy, Structure, Systems (Hard) + Style, Staff, Skills, Shared Values (Soft).</p><p><strong>Implementation = Action.</strong> Strategy without implementation is just a wish.</p></div>
+<div class="kt"><strong>McKinsey 7S &#x2014; Detailed Element Breakdown:</strong>
+<ul>
+<li><strong>Strategy (Hard):</strong> Plan to build competitive advantage. Must be clear, consistently communicated, and adaptive to change.</li>
+<li><strong>Structure (Hard):</strong> How organization is organized. Types: Functional (by department), Divisional (by product/region), Matrix (dual reporting), Network (outsourced/virtual).</li>
+<li><strong>Systems (Hard):</strong> Daily procedures, processes, and workflows. Includes IT systems, reward systems, financial systems, quality systems.</li>
+<li><strong>Style (Soft):</strong> Leadership and management style. Includes leadership approach, decision-making style, organizational culture.</li>
+<li><strong>Staff (Soft):</strong> Employees and their capabilities. Includes recruitment, training, development, retention, motivation.</li>
+<li><strong>Skills (Soft):</strong> Competencies and capabilities of the organization. Includes core competencies, distinctive capabilities, knowledge base.</li>
+<li><strong>Shared Values (Soft - Central):</strong> Core values and culture that guide the organization. The foundation that connects all other elements.</li>
+</ul></div>
+<div class="kt"><strong>Organizational Structure Types:</strong>
+<ul>
+<li><strong>Functional:</strong> Grouped by function (marketing, finance, HR, operations). Advantages: specialization, efficiency. Disadvantages: silos, slow response.</li>
+<li><strong>Divisional:</strong> Grouped by product, region, or customer. Advantages: accountability, flexibility. Disadvantages: duplication, competition between divisions.</li>
+<li><strong>Matrix:</strong> Dual reporting (functional + project). Advantages: resource sharing, flexibility. Disadvantages: confusion, power struggles.</li>
+<li><strong>Network:</strong> Outsourced, virtual organization. Advantages: flexibility, cost savings. Disadvantages: less control, coordination challenges.</li>
+</ul></div>
+<div class="kt"><strong>Resource Allocation for Implementation:</strong>
+<ul>
+<li><strong>Financial Resources:</strong> Budget allocation aligned with strategic priorities</li>
+<li><strong>Human Resources:</strong> Right people in right roles, training and development</li>
+<li><strong>Physical Resources:</strong> Facilities, equipment, technology infrastructure</li>
+<li><strong>Technological Resources:</strong> IT systems, R&D capabilities, innovation capacity</li>
+</ul></div>
+<div class="kt"><strong>Change Management:</strong>
+<ul>
+<li><strong>Resistance Sources:</strong> Fear of unknown, loss of status, disruption of routines, lack of trust</li>
+<li><strong>Overcoming Resistance:</strong> Communication, participation, education, facilitation, negotiation, coercion (last resort)</li>
+<li><strong>Kotter's 8-Step Model:</strong> Create urgency, Form coalition, Create vision, Communicate vision, Empower action, Create quick wins, Build on change, Anchor in culture</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
 <div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>McKinsey 7S Framework</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="McKinsey 7S" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; McKinsey 7S Framework</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem;font-weight:700">Strategy</div>
@@ -450,18 +891,70 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="db"><table>
+<thead><tr><th>Structure Type</th><th>Description</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Functional</strong></td><td>Grouped by function (marketing, finance, etc.)</td><td>Single product firms, stable environments</td></tr>
+<tr><td><strong>Divisional</strong></td><td>Grouped by product, region, or customer</td><td>Diversified firms, multiple product lines</td></tr>
+<tr><td><strong>Matrix</strong></td><td>Dual reporting (functional + project)</td><td>Complex projects, consulting firms</td></tr>
+<tr><td><strong>Network</strong></td><td>Outsourced, virtual organization with core at center</td><td>Technology firms, agile organizations</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Resource Allocation &amp; Change Management</div>
+<ul>
+<li><strong>Financial resources:</strong> Budget must align with strategic priorities</li>
+<li><strong>Human resources:</strong> Right people in right roles, talent development</li>
+<li><strong>Physical resources:</strong> Facilities, equipment, technology infrastructure</li>
+<li><strong>Technological resources:</strong> IT systems, R&amp;D capabilities, digital platforms</li>
+<li><strong>Change Management:</strong> Managing resistance to change, building support for new direction, communicating vision effectively, creating quick wins to build momentum</li>
+</ul></div>
 <!-- UNIT 11 -->
 <div class="unit" id="u11">
-<h3>Unit 11: Corporate Governance</h3>
+<h3 id="u11">Unit 11: Corporate Governance</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
-<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div id="sU11">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Corporate Governance</div><p><strong>Definition (Cadbury, 1992):</strong> System by which organizations are directed and controlled.</p><p><strong>5 Pillars:</strong> Accountability, Fairness, Transparency, Integrity, Social Responsibility.</p></div>
+<div class="kt"><strong>Evolution of Corporate Governance:</strong>
+<ul>
+<li><strong>3rd Century BC:</strong> Chanakya's Arthashastra &#x2014; governance principles for statecraft</li>
+<li><strong>1870:</strong> German Company Law &#x2014; early corporate regulation</li>
+<li><strong>1992:</strong> UK Cadbury Committee &#x2014; &quot;system by which organizations are directed and controlled&quot;</li>
+<li><strong>1999:</strong> OECD Principles of Corporate Governance</li>
+<li><strong>2002:</strong> Sarbanes-Oxley Act (US) &#x2014; response to Enron/WorldCom scandals</li>
+<li><strong>2004:</strong> Revised OECD Principles</li>
+<li><strong>2013:</strong> Companies Act 2013 (India) &#x2014; strengthened governance norms</li>
+</ul></div>
+<div class="kt"><strong>5 Pillars &#x2014; Detailed:</strong>
+<ul>
+<li><strong>Accountability:</strong> Owning rewards and risks at all levels. Directors accountable to shareholders, management accountable to board.</li>
+<li><strong>Fairness:</strong> Treating all stakeholders equally. Equal access to information, equal voting rights, minority shareholder protection.</li>
+<li><strong>Transparency:</strong> Disclosing all relevant information to stakeholders. Timely financial reporting, disclosure of related party transactions, risk disclosure.</li>
+<li><strong>Integrity:</strong> Professional culture where each employee is valued. Ethical conduct, honesty, freedom from fraud and corruption.</li>
+<li><strong>Social Responsibility:</strong> Decisions benefiting organization and society. Environmental protection, community development, sustainable practices.</li>
+</ul></div>
+<div class="kt"><strong>Sarbanes-Oxley Act (SOX) 2002 &#x2014; Key Provisions:</strong>
+<ul>
+<li><strong>Section 302:</strong> CEO/CFO must certify financial statements</li>
+<li><strong>Section 404:</strong> Internal controls over financial reporting must be assessed</li>
+<li><strong>Section 802:</strong> Criminal penalties for destroying evidence</li>
+<li><strong>Section 906:</strong> Criminal penalties for misleading financial reports</li>
+<li><strong>PCAOB:</strong> Public Company Accounting Oversight Board created</li>
+</ul></div>
+<div class="kt"><strong>Business Ethics in Governance:</strong>
+<ul>
+<li>Application of ethical principles in business decisions</li>
+<li><strong>Wealth maximization</strong> (long-term stakeholder value) &gt; <strong>Profit maximization</strong> (short-term shareholder returns)</li>
+<li><strong>Descriptive ethics:</strong> What is (current state of ethics in organization)</li>
+<li><strong>Normative ethics:</strong> What should be (ethical standards and principles)</li>
+<li>Ethical decision-making frameworks: Utilitarian, Rights-based, Justice-based, Virtue ethics</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
 <div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Corporate Governance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; 5 Pillars of Corporate Governance</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem">Accountability</div>
@@ -490,18 +983,66 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="db"><table>
+<thead><tr><th>Year</th><th>Event</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td>3rd Century BC</td><td>Chanakya's Arthashastra</td><td>Earliest governance principles in Indian context</td></tr>
+<tr><td>1870</td><td>German Company Law</td><td>First formal corporate law framework</td></tr>
+<tr><td>1992</td><td>UK Cadbury Committee</td><td>Defined corporate governance: &ldquo;system by which organizations are directed and controlled&rdquo;</td></tr>
+<tr><td>1999</td><td>OECD Principles</td><td>International governance standards established</td></tr>
+<tr><td>2002</td><td>Sarbanes-Oxley Act (US)</td><td>Response to Enron/WorldCom &#x2014; mandatory audit committees, CEO certification</td></tr>
+<tr><td>2004</td><td>Revised OECD Principles</td><td>Updated guidelines incorporating lessons from scandals</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Business Ethics</div>
+<ul>
+<li><strong>Application of ethical principles in business:</strong> Fair dealing, honesty, integrity in all business transactions</li>
+<li><strong>Wealth maximization vs Profit maximization:</strong> Long-term shareholder value over short-term profits</li>
+<li><strong>Descriptive ethics:</strong> What IS (current ethical behavior) vs <strong>Normative ethics:</strong> What SHOULD BE (ethical ideals)</li>
+<li><strong>Ethical dilemmas:</strong> Conflicts between profitability and social responsibility require principled decision-making</li>
+</ul></div>
 <!-- UNIT 12 -->
 <div class="unit" id="u12">
-<h3>Unit 12: Strategic Leadership</h3>
+<h3 id="u12">Unit 12: Strategic Leadership</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
-<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div id="sU12">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Leadership</div><p><strong>Definition:</strong> Ability to anticipate, envision, maintain flexibility, empower others to create strategic change.</p><p><strong>Key Roles:</strong> Navigator, Strategist, Entrepreneur, Talent Developer.</p></div>
+<div class="kt"><strong>Key Roles of Strategic Leaders:</strong>
+<ul>
+<li><strong>Navigator:</strong> Charting the course, understanding environment, identifying opportunities and threats</li>
+<li><strong>Strategist:</strong> Long-term planning, setting direction, creating competitive advantage</li>
+<li><strong>Entrepreneur:</strong> Innovation and risk-taking, exploring new opportunities, driving change</li>
+<li><strong>Talent Developer:</strong> Building future leaders, mentoring, developing organizational capabilities</li>
+</ul></div>
+<div class="kt"><strong>Top Management Team:</strong>
+<ul>
+<li><strong>CEO:</strong> Chief Executive Officer &#x2014; overall strategic direction and leadership</li>
+<li><strong>CFO:</strong> Chief Financial Officer &#x2014; financial strategy, risk management, investor relations</li>
+<li><strong>COO:</strong> Chief Operating Officer &#x2014; operational efficiency, day-to-day management</li>
+<li><strong>CTO:</strong> Chief Technology Officer &#x2014; technology strategy, innovation, R&D</li>
+<li><strong>Diversity:</strong> Diverse backgrounds improve strategic decisions, reduce groupthink</li>
+</ul></div>
+<div class="kt"><strong>Strategic Decision Making Models:</strong>
+<ul>
+<li><strong>Rational:</strong> Comprehensive analysis, optimal choice. Assumes complete information, clear objectives. Best for stable environments.</li>
+<li><strong>Incremental:</strong> Small steps, trial and error. Adjusts as information becomes available. Best for uncertain environments.</li>
+<li><strong>Mixed Scanning:</strong> Combines rational (fundamental decisions) + incremental (routine decisions). Balances thoroughness with practicality.</li>
+</ul></div>
+<div class="kt"><strong>Corporate Governance in Practice:</strong>
+<ul>
+<li><strong>Board of Directors:</strong> Oversees management, sets strategic direction, ensures accountability</li>
+<li><strong>Shareholders:</strong> Exercise voting rights, elect board, approve major decisions</li>
+<li><strong>Audit Committees:</strong> Oversee financial reporting, internal controls, external audits</li>
+<li><strong>Nomination Committees:</strong> Identify and recommend board candidates</li>
+<li><strong>Compensation Committees:</strong> Set executive pay, align incentives with performance</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
 <div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Leadership</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Strategic Leadership" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="visual-diagram"><h5>&#x1F4CA; Carroll's CSR Pyramid</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:40%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Philanthropic</div>
@@ -518,12 +1059,72 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Top Management Team</div>
+<p><strong>C-Suite:</strong> CEO (vision and direction), CFO (financial health), COO (operations), CTO (technology strategy). Diverse backgrounds in the top team improve quality of strategic decisions by bringing multiple perspectives.</p></div>
+<div class="db"><table>
+<thead><tr><th>Decision Making Type</th><th>Description</th><th>When Used</th></tr></thead>
+<tbody>
+<tr><td><strong>Rational</strong></td><td>Comprehensive analysis, optimal choice</td><td>Stable environments, well-defined problems</td></tr>
+<tr><td><strong>Incremental</strong></td><td>Small steps, trial and error</td><td>Uncertain environments, complex issues</td></tr>
+<tr><td><strong>Mixed Scanning</strong></td><td>Combines rational (fundamental) + incremental (routine)</td><td>Most real-world strategic decisions</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Corporate Governance in Practice</div>
+<ul>
+<li><strong>Board of Directors:</strong> Oversees management, protects shareholder interests</li>
+<li><strong>Shareholders:</strong> Exercise voting rights at AGM, elect board members</li>
+<li><strong>Accountability:</strong> Through financial reporting, external audits, regulatory compliance</li>
+<li><strong>Independent Directors:</strong> Ensure unbiased oversight, prevent management entrenchment</li>
+</ul></div>
 <!-- UNIT 13 -->
 <div class="unit" id="u13">
-<h3>Unit 13: Contemporary Issues in Strategy</h3>
+<h3 id="u13">Unit 13: Contemporary Issues in Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
-<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div id="sU13">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Emerging Trends</div><p><strong>Digital Strategy:</strong> E-commerce, platform businesses, data-driven decisions.</p><p><strong>Sustainability:</strong> Triple Bottom Line &#x2014; People, Planet, Profit.</p><p><strong>Disruptive Innovation (Christensen):</strong> New entrants disrupt incumbents with simpler, cheaper solutions.</p><p><strong>Blue Ocean (Kim &amp; Mauborgne):</strong> Create uncontested market space.</p></div>
+<div class="kt"><strong>Digital Strategy &#x2014; Detailed:</strong>
+<ul>
+<li><strong>E-commerce:</strong> Online selling, digital payments, last-mile delivery. <em>Example:</em> Flipkart, Amazon India, Nykaa</li>
+<li><strong>Platform Businesses:</strong> Multi-sided platforms connecting users. <em>Example:</em> Ola, Uber, Zomato, Swiggy</li>
+<li><strong>Data-Driven Decisions:</strong> Analytics, AI/ML for strategic insights. <em>Example:</em> Netflix recommendations, Jio's data analytics</li>
+<li><strong>Digital Transformation:</strong> Integrating digital technology into all business areas. <em>Example:</em> HDFC Bank's digital banking, Reliance's Jio platforms</li>
+</ul></div>
+<div class="kt"><strong>Sustainability Strategy &#x2014; Triple Bottom Line:</strong>
+<ul>
+<li><strong>People:</strong> Social responsibility, fair labor practices, community development</li>
+<li><strong>Planet:</strong> Environmental protection, carbon neutrality, sustainable sourcing</li>
+<li><strong>Profit:</strong> Economic viability, long-term value creation</li>
+<li><em>Examples:</em> ITC's e-Choupal (social + profit), Tata's sustainability initiatives, Infosys' carbon neutrality</li>
+</ul></div>
+<div class="kt"><strong>Innovation Strategy:</strong>
+<ul>
+<li><strong>Disruptive Innovation (Christensen):</strong> New entrants disrupt incumbents with simpler, cheaper solutions. Incumbents focus on high-end customers, leaving low-end open. <em>Example:</em> Jio disrupted telecom with free data, Xiaomi disrupted smartphones with value pricing</li>
+<li><strong>Blue Ocean Strategy (Kim &amp; Mauborgne):</strong> Create uncontested market space instead of competing in existing markets. <em>Example:</em> Cirque du Soleil (circus + theatre), Yellow Cab (app-based taxi in India before Ola/Uber)</li>
+<li><strong>Agile Strategy:</strong> Rapid adaptation, iterative planning, short cycles. Respond quickly to market changes. <em>Example:</em> Indian startups pivoting during COVID-19</li>
+</ul></div>
+<div class="kt"><strong>Mergers &amp; Acquisitions (M&amp;A):</strong>
+<ul>
+<li><strong>Horizontal:</strong> Same industry, same stage (competitor). <em>Example:</em> HDFC Bank + Centurion Bank, Vodafone + Idea</li>
+<li><strong>Vertical:</strong> Different stages of value chain. <em>Example:</em> Reliance acquiring content platforms for Jio</li>
+<li><strong>Conglomerate:</strong> Unrelated businesses. <em>Example:</em> Tata Group acquisitions across industries</li>
+<li><strong>Benefits:</em> Synergies, market power, diversification, access to resources</li>
+<li><strong>Risks:</em> Integration challenges, cultural clashes, overpayment, regulatory issues</li>
+</ul></div>
+<div class="kt"><strong>Dynamic Capabilities (Teece):</strong>
+<ul>
+<li>Ability to integrate, build, reconfigure resources to match changing environment</li>
+<li><strong>Sensing:</strong> Identifying opportunities and threats in the environment</li>
+<li><strong>Seizing:</strong> Mobilizing resources to capture opportunities</li>
+<li><strong>Transforming:</strong> Renewing and reconfiguring organizational resources</li>
+<li><em>Example:</em> Tesla sensing EV opportunity, seizing with Gigafactories, transforming automotive industry</li>
+</ul></div>
+<div class="kt"><strong>Knowledge Management:</strong>
+<ul>
+<li>Creating, sharing, using organizational knowledge as competitive asset</li>
+<li><strong>Explicit Knowledge:</strong> Documented, codified (manuals, databases, patents)</li>
+<li><strong>Tacit Knowledge:</strong> Personal, experience-based (skills, insights, intuitions)</li>
+<li><em>Example:</em> Infosys's Knowledge Management System, TCS's global delivery model knowledge base</li>
+</ul></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -531,6 +1132,7 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Blue Ocean Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Blue Ocean" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Disruptive Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Disruptive Innovation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 </div></div></div>
+</div>
 <div class="db"><table>
 <thead><tr><th>Trend</th><th>Description</th><th>Example</th></tr></thead>
 <tbody>
@@ -551,6 +1153,36 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ul></div>
 </div>
 
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Agile Strategy</div>
+<ul>
+<li><strong>Rapid adaptation:</strong> Quick response to market changes and disruptions</li>
+<li><strong>Iterative planning:</strong> Short planning cycles instead of rigid long-term plans</li>
+<li><strong>Short cycles:</strong> Sprint-based execution with frequent feedback loops</li>
+<li><strong>Cross-functional teams:</strong> Breaking silos for faster decision-making</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Strategic Alliances</div>
+<ul>
+<li><strong>Partnerships:</strong> Formal collaboration between firms for mutual benefit</li>
+<li><strong>Joint Ventures:</strong> Creating a new entity owned by two or more parent companies</li>
+<li><strong>Networks:</strong> Informal relationships and information-sharing between firms</li>
+<li><strong>Benefits:</strong> Shared risk, access to new markets/technology, economies of scale</li>
+<li><strong>Example:</strong> Star Alliance in airlines, Maruti-Suzuki JV in India</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Knowledge Management</div>
+<ul>
+<li><strong>Creating:</strong> R&amp;D, innovation labs, brainstorming, experimentation</li>
+<li><strong>Sharing:</strong> Internal wikis, communities of practice, mentoring, training</li>
+<li><strong>Using:</strong> Applying organizational knowledge as competitive asset in decision-making</li>
+<li><strong>Tacit vs Explicit:</strong> Tacit knowledge (in people's heads) must be converted to explicit (documented) for organizational use</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Dynamic Capabilities (Teece)</div>
+<p><strong>Dynamic Capabilities:</strong> The ability to integrate, build, and reconfigure internal and external competencies to address rapidly changing environments. Three key processes:</p>
+<ul>
+<li><strong>Sensing:</strong> Identifying and assessing opportunities and threats in the environment</li>
+<li><strong>Seizing:</strong> Mobilizing resources to capture value from opportunities</li>
+<li><strong>Transforming/Renewing:</strong> Continuous reconfiguration and renewal of organizational assets</li>
+</ul></div>
 <!-- MASTER MNEMONICS TABLE -->
 <div class="unit" id="mnemonics">
 <h3>&#x1F9E0; Master Mnemonics Table</h3>
@@ -600,24 +1232,128 @@ h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;heigh
 </ol></div>
 </div>
 
+
+
+<!-- KEY FRAMEWORKS -->
+<div class="unit" id="frameworks">
+<h3>&#x1F4CA; Key Frameworks Quick Reference</h3>
+
+<div class="visual-diagram"><h5>Porter's Five Forces</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of New Entrants (Scale, Brand, Capital, Switching)</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Supplier Power (Concentration, Switching, Integration)</div>
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);text-align:center;padding:0.7rem;border-radius:8px;font-size:0.9rem;font-weight:700">INDUSTRY RIVALRY (Growth, Fixed costs, Exit barriers)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Buyer Power (Volume, Switching, Integration)</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2191;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:70%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Threat of Substitutes (Price, Quality, Switching)</div>
+</div></div>
+
+<div class="visual-diagram"><h5>BCG Matrix</h5>
+<div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0.5rem;padding:0.5rem;font-size:0.85rem">
+<div></div><div style="text-align:center;font-weight:700;color:#74b9ff">High Market Share</div><div style="text-align:center;font-weight:700;color:#74b9ff">Low Market Share</div>
+<div style="font-weight:700;color:#ffd700">High Growth</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;text-align:center">QUESTION MARKS (?)<br><small>Invest or Divest | e.g., New ventures</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;text-align:center">STARS (*)<br><small>Invest heavily | e.g., Jio (early)</small></div>
+<div style="font-weight:700;color:#ffd700">Low Growth</div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;text-align:center">DOGS (x)<br><small>Divest/Liquidate | e.g., Landline</small></div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;text-align:center">CASH COWS ($)<br><small>Milk for profits | e.g., TCS</small></div>
+</div></div>
+
+<div class="visual-diagram"><h5>Corporate Governance 5 Pillars</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem">Accountability</div>
+<div style="display:flex;gap:2rem;align-items:center">
+<div class="vd-node" style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Fairness</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.5rem;border-radius:8px;font-size:0.85rem">Transparency</div>
+<div class="vd-node" style="background:rgba(200,200,200,0.1);border:1px solid rgba(200,200,200,0.2);padding:0.5rem;border-radius:8px;font-size:0.85rem">Integrity</div>
+</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:50%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.9rem">Social Responsibility</div>
+</div></div>
+</div>
+
+<!-- QUICK REVISION SHEET -->
+<div class="unit" id="revision">
+<h3>&#x1F4CB; Quick Revision Sheet</h3>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; One-Liner Essentials</div>
+<ul>
+<li>Strategy = Grand design to achieve objectives using resources</li>
+<li>Mintzberg's 5Ps: Pattern, Plan, Position, Perspective, Ploy</li>
+<li>Vision = Where we want to be | Mission = Why we exist</li>
+<li>PESTLE = Political, Economic, Social, Technological, Legal, Environmental</li>
+<li>EPRG = Ethnocentric, Polycentric, Regiocentric, Geocentric</li>
+<li>Porter's Five Forces = New entrants, Suppliers, Buyers, Rivalry, Substitutes</li>
+<li>RBV = Resource-Based View &#x2014; internal resources drive competitive advantage</li>
+<li>VRIN = Valuable, Rare, Inimitable, Non-substitutable</li>
+<li>Value Chain = Primary + Support activities &#x2192; Margin</li>
+<li>Generic Strategies = Cost Leadership, Differentiation, Focus</li>
+<li>BCG Matrix = Stars, Cash Cows, Question Marks, Dogs</li>
+<li>Ansoff = Market Penetration, Market Dev, Product Dev, Diversification</li>
+<li>McKinsey 7S = Strategy, Structure, Systems, Style, Staff, Skills, Shared Values</li>
+<li>Balanced Scorecard = Financial, Customer, Process, Learning &amp; Growth</li>
+<li>Corporate Governance 5 Pillars = Accountability, Fairness, Transparency, Integrity, Social Responsibility</li>
+<li>SOX Act 2002 = Response to Enron/WorldCom scandals</li>
+<li>Triple Bottom Line = People, Planet, Profit</li>
+<li>Blue Ocean = Create uncontested market space</li>
+<li>Dynamic Capabilities = Integrate, build, reconfigure resources for changing environment</li>
+</ul></div>
+
+<div class="db"><table>
+<thead><tr><th>Concept A</th><th>Concept B</th><th>Key Difference</th></tr></thead>
+<tbody>
+<tr><td>Strategy</td><td>Policy</td><td>Action-oriented vs Decision-oriented rules</td></tr>
+<tr><td>Strategy</td><td>Tactics</td><td>Long-term org-wide vs Short-term specific</td></tr>
+<tr><td>I/O Model</td><td>RBV</td><td>Outside-in (environment) vs Inside-out (resources)</td></tr>
+<tr><td>Deliberate</td><td>Emergent</td><td>Planned vs Evolved naturally</td></tr>
+<tr><td>Concentration</td><td>Diversification</td><td>Same business vs New businesses</td></tr>
+<tr><td>Forward Integration</td><td>Backward Integration</td><td>Toward customer vs Toward supplier</td></tr>
+<tr><td>Cost Leadership</td><td>Differentiation</td><td>Lowest cost vs Unique value</td></tr>
+<tr><td>Stars</td><td>Cash Cows</td><td>High growth + High share vs Low growth + High share</td></tr>
+<tr><td>Question Marks</td><td>Dogs</td><td>High growth + Low share vs Low growth + Low share</td></tr>
+<tr><td>Hard S (7S)</td><td>Soft S (7S)</td><td>Strategy/Structure/Systems vs Style/Staff/Skills/Shared Values</td></tr>
+</tbody></table></div>
+</div>
+
 </main>
-<script src="api-utils.js"></script>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll(".unit").forEach(function(el){observer.observe(el)});
-window.addEventListener("scroll",function(){
-  var h=document.documentElement.scrollHeight-window.innerHeight;
-  var p=h>0?(window.scrollY/h)*100:0;
-  document.getElementById("readingProgress").style.width=p+"%";
-  var units=document.querySelectorAll(".unit");
-  var links=document.querySelectorAll(".sidebar a[href^="#u]");
-  var current="";
-  units.forEach(function(u){if(u.getBoundingClientRect().top<200)current=u.id});
-  links.forEach(function(l){l.classList.toggle("active",l.getAttribute("href")==="#"+current)});
-});
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
 
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+})();
 </script>
-<script src="pwa-register.js"></script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
 </body>
 </html>

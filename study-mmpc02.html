@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 /* ===== MMPC-02 ENHANCED STYLES ===== */
 
@@ -21,7 +20,9 @@ body::after {
         radial-gradient(1px 1px at 60% 20%, rgba(255,230,109,0.3), transparent),
         radial-gradient(1px 1px at 80% 60%, rgba(78,205,196,0.2), transparent),
         radial-gradient(2px 2px at 10% 80%, rgba(176,176,176,0.25), transparent),
-        radial-gradient(1px 1px at 90% 40%, rgba(255,107,107,0.2), transparent);
+        radial-gradient(1px 1px at 90% 40%, rgba(255,107,107,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%,rgba(78,205,196,0.15),transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%,rgba(0,210,255,0.2),transparent);
     background-size: 550px 550px;
     animation: particleDrift 60s linear infinite;
     z-index: -1;
@@ -185,6 +186,7 @@ h3::after {
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc02">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -199,27 +201,26 @@ h3::after {
 <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-02</span></div>
 <nav class="sidebar-nav">
 <a href="#block1">Block-01 HRM Introduction</a>
-<a href="#unit-1">&nbsp;&nbsp;Unit 1: Concept & Evolution of HRM</a>
-<a href="#unit-2">&nbsp;&nbsp;Unit 2: Functions of HRM</a>
-<a href="#unit-3">&nbsp;&nbsp;Unit 3: Environment & Strategic HRM</a>
-<a href="#unit-4">&nbsp;&nbsp;Unit 4: Human Resource Planning</a>
-<a href="#unit-5">&nbsp;&nbsp;Unit 5: Job Analysis, Design & Evaluation</a>
+<a href="#u1">Unit 1: Concept & Evolution of HRM</a>
+<a href="#u2">Unit 2: Functions of HRM</a>
+<a href="#u3">Unit 3: Environment & Strategic HRM</a>
+<a href="#u4">Unit 4: Human Resource Planning</a>
+<a href="#u5">Unit 5: Job Analysis, Design & Evaluation</a>
 <a href="#block2">Block-02 Sourcing of Human Resources</a>
-<a href="#unit-6">&nbsp;&nbsp;Unit 6: Recruitment & Selection</a>
-<a href="#unit-7">&nbsp;&nbsp;Unit 7: Socialization & Mobility</a>
+<a href="#u6">Unit 6: Recruitment & Selection</a>
+<a href="#u7">Unit 7: Socialization & Mobility</a>
 <a href="#block3">Block-03 Performance & Compensation</a>
-<a href="#unit-8">&nbsp;&nbsp;Unit 8: Performance Appraisal</a>
-<a href="#unit-9">&nbsp;&nbsp;Unit 9: Career Development</a>
-<a href="#unit-10">&nbsp;&nbsp;Unit 10: Training & Development</a>
-<a href="#unit-11">&nbsp;&nbsp;Unit 11: Compensation & Rewards</a>
+<a href="#u8">Unit 8: Performance Appraisal</a>
+<a href="#u9">Unit 9: Career Development</a>
+<a href="#u10">Unit 10: Training & Development</a>
+<a href="#u11">Unit 11: Compensation & Rewards</a>
 <a href="#block4">Block-04 Employer-Employee Relations</a>
-<a href="#unit-12">&nbsp;&nbsp;Unit 12: Employee Empowerment</a>
-<a href="#unit-13">&nbsp;&nbsp;Unit 13: Grievance Handling & Discipline</a>
-<a href="#unit-14">&nbsp;&nbsp;Unit 14: Unions & Associations</a>
+<a href="#u12">Unit 12: Employee Empowerment</a>
+<a href="#u13">Unit 13: Grievance Handling & Discipline</a>
+<a href="#u14">Unit 14: Unions & Associations</a>
 <a href="quiz-mmpc02.html" class="back-link">&#x1F4DD; Take Quiz</a>
 <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
-</nav>
-</aside>
+</nav></aside>
 
 <main id="main-content" class="study-content">
 <div class="study-header">
@@ -231,8 +232,8 @@ h3::after {
 <!-- BLOCK 01 -->
 <h2 id="block1">Block-01: Introduction to Human Resource Management</h2>
 
-<div class="unit" id="unit-1">
-<h3>Unit 1: Concept &amp; Evolution of HRM</h3>
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Concept &amp; Evolution of HRM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
 
@@ -241,7 +242,7 @@ h3::after {
 <p>"The process of acquiring, training, appraising, compensating, and attending to employees' labor relations, health, safety, and fairness concerns." &mdash; <strong>Gary Dessler</strong></p>
 <p>HRM is the art of procuring, developing, and maintaining a competent workforce to achieve organizational goals while satisfying individual employee needs.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRM Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fuJt5Vys-jY" title="HRM Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRM vs Personnel Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/cOu-2tIGLnM" title="HRM vs Personnel Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Evolution of HRM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SZPL7c0Cd3Q" title="Evolution of HRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -350,7 +351,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> HRM evolved from welfare to strategic partner. Modern HRM is interdisciplinary, people-centric, and aligned with business strategy.</p></div>
 
 <div class="summary-box">
-<h4>Unit 1 Summary</h4>
+<h4>✅ Unit 1 Summary</h4>
 <ul>
 <li>HRM = Acquiring, Training, Appraising, Compensating, Maintaining workforce</li>
 <li>Evolution: Welfare &rarr; Personnel &rarr; HRM &rarr; Strategic HRM &rarr; Digital HR</li>
@@ -362,8 +363,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-2">
-<h3>Unit 2: Functions of HRM</h3>
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Functions of HRM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
 
@@ -371,7 +372,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: HRM Functions</div>
 <p>HRM functions are the activities performed by HR professionals and line managers to manage human resources effectively. They are classified into <strong>Managerial Functions</strong> (performed by all managers) and <strong>Operative Functions</strong> (performed by HR department).</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRM Functions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tauhps2rHA0" title="HRM Functions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRM Environment</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/V67xd4Dzs7U" title="HRM Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic HRM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SZPL7c0Cd3Q" title="Strategic HRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -437,7 +438,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Managerial functions (Planning, Organizing, Staffing, Directing, Controlling) are done by ALL managers. Operative functions (Employment, Compensation, Development, Integration, Maintenance) are done by the HR department specifically.</p></div>
 
 <div class="summary-box">
-<h4>Unit 2 Summary</h4>
+<h4>✅ Unit 2 Summary</h4>
 <ul>
 <li>Managerial Functions: P-O-S-D-C (all managers perform these)</li>
 <li>Operative Functions: Employment, Compensation, Development, Integration, Maintenance</li>
@@ -448,8 +449,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-3">
-<h3>Unit 3: Environment &amp; Strategic HRM</h3>
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Environment &amp; Strategic HRM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
 
@@ -457,7 +458,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Strategic HRM</div>
 <p>Strategic HRM is the pattern of planned human resource deployments and activities intended to enable an organization to achieve its goals. It involves aligning HR practices with the overall business strategy. &mdash; <strong>Wright &amp; McMahan</strong></p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HR Planning Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/jA-ZdKgNzio" title="HR Planning Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Demand Supply Forecasting HR</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aKOwsOoNb1o" title="Demand Supply Forecasting HR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRP Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RMplEycKkgU" title="HRP Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -524,7 +525,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Strategic HRM = HR practices aligned with overall business strategy. The Harvard Model focuses on stakeholder interests (soft HRM), while the Michigan Model focuses on strategic fit (hard HRM).</p></div>
 
 <div class="summary-box">
-<h4>Unit 3 Summary</h4>
+<h4>✅ Unit 3 Summary</h4>
 <ul>
 <li>Internal factors: Culture, structure, leadership, finances, technology</li>
 <li>External factors: PESTLE (Political, Economic, Social, Technological, Legal, Environmental)</li>
@@ -536,8 +537,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-4">
-<h3>Unit 4: Human Resource Planning</h3>
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Human Resource Planning</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
 
@@ -546,7 +547,7 @@ h3::after {
 <p>"The process of forecasting an organization's future demand for, and supply of, the right type of people in the right numbers." &mdash; <strong>Vetter</strong></p>
 <p>HRP bridges the gap between the current workforce and future requirements, ensuring the right people are at the right place, at the right time, with the right skills.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Job Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fIhGz2Nv7h4" title="Job Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Job Design Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/EKZrOQ_pxBI" title="Job Design Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Job Evaluation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9wtyteH4koE" title="Job Evaluation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -632,7 +633,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> HRP ensures no surplus and no shortage. Demand = what we need, Supply = what we have, Gap = the difference that needs action.</p></div>
 
 <div class="summary-box">
-<h4>Unit 4 Summary</h4>
+<h4>✅ Unit 4 Summary</h4>
 <ul>
 <li>HRP: Forecasting future demand and supply of the right people</li>
 <li>Process: Scan &rarr; Demand &rarr; Supply &rarr; Gap &rarr; Action &rarr; Implement &rarr; Monitor</li>
@@ -644,8 +645,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-5">
-<h3>Unit 5: Job Analysis, Design &amp; Evaluation</h3>
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Job Analysis, Design &amp; Evaluation</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
 
@@ -653,7 +654,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Job Analysis</div>
 <p>Job Analysis is the systematic process of gathering, documenting, and analyzing information about a job's content, context, and requirements. It produces two key outputs: <strong>Job Description</strong> (what the job involves) and <strong>Job Specification</strong> (what the person needs).</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Recruitment Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dOXXUy1zBbw" title="Recruitment Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Selection Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uvFsDiRYKJE" title="Selection Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Internal vs External Recruitment</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nDHdLPdhDWU" title="Internal vs External Recruitment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -705,7 +706,7 @@ h3::after {
 </div>
 
 <div class="summary-box">
-<h4>Unit 5 Summary</h4>
+<h4>✅ Unit 5 Summary</h4>
 <ul>
 <li>Job Analysis: Process of gathering information about jobs</li>
 <li>Outputs: Job Description (duties) + Job Specification (qualifications)</li>
@@ -720,8 +721,8 @@ h3::after {
 <!-- BLOCK 02 -->
 <h2 id="block2">Block-02: Sourcing of Human Resources</h2>
 
-<div class="unit" id="unit-6">
-<h3>Unit 6: Recruitment &amp; Selection</h3>
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Recruitment &amp; Selection</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
 
@@ -729,7 +730,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Recruitment &amp; Selection</div>
 <p><strong>Recruitment</strong> is the process of identifying and attracting qualified candidates for job vacancies. <strong>Selection</strong> is the process of choosing the most suitable candidate from the pool of applicants. Recruitment is positive (attracting); Selection is negative (rejecting unsuitable candidates).</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Socialization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/rZrnbXQNFto" title="Employee Socialization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transfer Promotion</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nJPtXvX9sBw" title="Transfer Promotion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Separation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/cEMMKy0n8RQ" title="Employee Separation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -805,7 +806,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Recruitment = attracting candidates (positive process). Selection = choosing the best (negative process). Placement = putting them in the right role.</p></div>
 
 <div class="summary-box">
-<h4>Unit 6 Summary</h4>
+<h4>✅ Unit 6 Summary</h4>
 <ul>
 <li>Recruitment: Internal (promotions, transfers, referrals) vs External (campus, portals, agencies)</li>
 <li>Selection Process: Screen &rarr; Test &rarr; GD &rarr; Interview &rarr; Reference &rarr; Medical &rarr; Offer</li>
@@ -817,8 +818,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-7">
-<h3>Unit 7: Socialization &amp; Mobility</h3>
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Socialization &amp; Mobility</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
 
@@ -826,7 +827,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Organizational Socialization</div>
 <p>Organizational Socialization is the process by which new employees learn the values, norms, and behaviors required to function effectively as members of the organization. It transforms outsiders into effective insiders.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Performance Appraisal</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/HK8Tk5YbWPw" title="Performance Appraisal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MBO Performance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NSvGo8mwQKM" title="MBO Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Appraisal Errors</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sAoLduUqAB8" title="Appraisal Errors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -879,7 +880,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Socialization = integrating new hires into the organization. Induction = formal orientation program. Onboarding = broader process covering the first 6&ndash;12 months.</p></div>
 
 <div class="summary-box">
-<h4>Unit 7 Summary</h4>
+<h4>✅ Unit 7 Summary</h4>
 <ul>
 <li>Socialization Process: Pre-arrival &rarr; Encounter &rarr; Adjustment &rarr; Adaptation</li>
 <li>Induction: Welcome, Policies, Culture, Procedures, Introductions</li>
@@ -894,8 +895,8 @@ h3::after {
 <!-- BLOCK 03 -->
 <h2 id="block3">Block-03: Performance and Compensation Management</h2>
 
-<div class="unit" id="unit-8">
-<h3>Unit 8: Performance Appraisal</h3>
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Performance Appraisal</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
 
@@ -903,7 +904,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Performance Appraisal</div>
 <p>Performance Appraisal is the systematic evaluation of employee performance against predetermined standards, conducted periodically to assess strengths, weaknesses, and potential for development. It serves multiple purposes: career development, compensation decisions, training needs identification, succession planning, and legal documentation.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Career Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/y-J7fiiFTHg" title="Career Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Career Stages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/alB5GnVNR5I" title="Career Stages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Succession Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2cYg0Av2llA" title="Succession Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -995,7 +996,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> 360-degree feedback = Self + Supervisor + Peers + Subordinates + Customers. Modern methods (BARS, MBO, 360&#xb0;) are more objective than traditional methods.</p></div>
 
 <div class="summary-box">
-<h4>Unit 8 Summary</h4>
+<h4>✅ Unit 8 Summary</h4>
 <ul>
 <li>Purpose: Development, Compensation, Training, Succession, Documentation</li>
 <li>Traditional: Rating scales, Essay, Critical Incident, Confidential Report</li>
@@ -1007,8 +1008,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-9">
-<h3>Unit 9: Career Development</h3>
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Career Development</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
 
@@ -1016,7 +1017,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Career Development</div>
 <p>Career Development is the ongoing process of managing learning, work, and transitions to move toward a personally determined and evolving preferred future. It encompasses both individual career planning and organizational career management systems.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Training Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5Zn6Cc8-snA" title="Training Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Training Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/jRmkQBccr6o" title="Training Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Training Need Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/BTjxR6NtWd4" title="Training Need Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1066,7 +1067,7 @@ h3::after {
 </div>
 
 <div class="summary-box">
-<h4>Unit 9 Summary</h4>
+<h4>✅ Unit 9 Summary</h4>
 <ul>
 <li>Super's Career Stages: Growth &rarr; Exploration &rarr; Establishment &rarr; Maintenance &rarr; Decline</li>
 <li>Career Planning: Self-Assessment &rarr; Research &rarr; Goals &rarr; Action &rarr; Review</li>
@@ -1077,8 +1078,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-10">
-<h3>Unit 10: Training &amp; Development</h3>
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Training &amp; Development</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
 
@@ -1086,7 +1087,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Training &amp; Development</div>
 <p><strong>Training</strong> is the systematic process of enhancing employee knowledge, skills, and abilities for their current job. <strong>Development</strong> is a broader, long-term process preparing employees for future roles and responsibilities. Training focuses on present needs; Development focuses on future growth.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compensation Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8QfXRVLdj6I" title="Compensation Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Benefits Incentives</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/knPe2vPCbAE" title="Benefits Incentives" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Wage Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CDG-HTyt4L8" title="Wage Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1192,7 +1193,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Training = present job, Development = future roles, Education = broader knowledge. Know the Kirkpatrick model for evaluation: Reaction, Learning, Behavior, Results.</p></div>
 
 <div class="summary-box">
-<h4>Unit 10 Summary</h4>
+<h4>✅ Unit 10 Summary</h4>
 <ul>
 <li>Training (current job) vs Development (future roles) vs Education (broader)</li>
 <li>Process: Needs Assessment &rarr; Objectives &rarr; Design &rarr; Implement &rarr; Evaluate</li>
@@ -1204,8 +1205,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-11">
-<h3>Unit 11: Compensation &amp; Rewards Management</h3>
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Compensation &amp; Rewards Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
 
@@ -1213,7 +1214,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Compensation Management</div>
 <p>Compensation Management is the process of providing monetary and non-monetary rewards to employees in exchange for their work. It includes direct pay (salary, wages, bonuses) and indirect pay (benefits, perks). Effective compensation strategy helps attract, retain, and motivate talented employees while ensuring internal equity and external competitiveness.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Empowerment</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/x3dnpTsAI_4" title="Employee Empowerment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality of Work Life</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/G88vx0XO3nw" title="Quality of Work Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Engagement</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/pDrt7gPHF0o" title="Employee Engagement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1268,7 +1269,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Know the difference between Salary (fixed monthly), Wages (hourly/daily), and Compensation (total package including benefits). Minimum Wage Act, Payment of Wages Act, and Equal Remuneration Act are key legislations.</p></div>
 
 <div class="summary-box">
-<h4>Unit 11 Summary</h4>
+<h4>✅ Unit 11 Summary</h4>
 <ul>
 <li>Components: Direct Pay, Indirect Pay (Benefits), Non-Financial Rewards, Perquisites</li>
 <li>Determination: Job Evaluation &rarr; Market Survey &rarr; Pay Structure &rarr; Individual Pay</li>
@@ -1283,8 +1284,8 @@ h3::after {
 <!-- BLOCK 04 -->
 <h2 id="block4">Block-04: Employer-Employee Relations</h2>
 
-<div class="unit" id="unit-12">
-<h3>Unit 12: Employee Empowerment</h3>
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Employee Empowerment</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
 
@@ -1292,7 +1293,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Employee Empowerment</div>
 <p>Employee Empowerment is the process of giving employees the authority, resources, information, and accountability to make decisions and take action in their work areas without prior approval. It involves shifting decision-making power from managers to frontline employees, fostering ownership and innovation.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Grievance Handling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/UtyU9xssZZ8" title="Grievance Handling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Discipline Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/UVpn0f2_90g" title="Discipline Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Conflict Resolution</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Zs73uIha5WQ" title="Conflict Resolution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1334,7 +1335,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Empowerment requires leadership commitment, clear communication, training, reward systems, and support processes. Without these, empowerment initiatives fail.</p></div>
 
 <div class="summary-box">
-<h4>Unit 12 Summary</h4>
+<h4>✅ Unit 12 Summary</h4>
 <ul>
 <li>Empowerment = Authority + Information + Resources + Accountability</li>
 <li>Methods: Delegation, Participative Management, Self-Managed Teams, Quality Circles</li>
@@ -1346,8 +1347,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-13">
-<h3>Unit 13: Grievance Handling &amp; Discipline</h3>
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Grievance Handling &amp; Discipline</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
 
@@ -1355,7 +1356,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Grievance</div>
 <p>A Grievance is any real or imagined feeling of dissatisfaction, injustice, or discomfort that an employee experiences in relation to their employment. It may arise from violation of company policies, unfair treatment, poor working conditions, or interpersonal conflicts. Effective grievance handling prevents escalation and maintains workplace harmony.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Trade Unions India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/XFHURx5g2Ak" title="Trade Unions India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Collective Bargaining</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5cuabQk7dr0" title="Collective Bargaining" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Industrial Relations</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7HupZDCFVVI" title="Industrial Relations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1415,7 +1416,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Prevention is better than cure. Clear policies, regular training, open communication channels, and a positive work environment prevent most grievances.</p></div>
 
 <div class="summary-box">
-<h4>Unit 13 Summary</h4>
+<h4>✅ Unit 13 Summary</h4>
 <ul>
 <li>Grievance Process: Present &rarr; Acknowledge &rarr; Investigate &rarr; Discuss &rarr; Decide &rarr; Appeal</li>
 <li>Progressive Discipline: Oral &rarr; Written &rarr; Final &rarr; Suspension &rarr; Dismissal</li>
@@ -1427,8 +1428,8 @@ h3::after {
 </div>
 </div>
 
-<div class="unit" id="unit-14">
-<h3>Unit 14: Unions &amp; Associations</h3>
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Unions &amp; Associations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">
 
@@ -1436,7 +1437,7 @@ h3::after {
 <div class="callout-label">&#x1F4D6; Definition: Trade Union</div>
 <p>A Trade Union is a voluntary association of workers formed to protect and promote their economic and social interests through collective action. Trade unions negotiate with employers on behalf of workers regarding wages, working conditions, and employment terms. In India, the Trade Unions Act, 1926 provides the legal framework for union formation and regulation.</p>
 </div>
-<div class="video-section"><button class="video-toggle" onclick="var c=this.nextElementSibling;c.classList.toggle(&quot;active&quot;);this.textContent=c.classList.contains(&quot;active&quot;)?&quot;&#x25BC; Hide Videos&quot;:&quot;&#x25B6; Watch Videos&quot;">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Industrial Disputes Act</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RvXtSuBh7Us" title="Industrial Disputes Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Workers Participation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/goTmxV6AmWI" title="Workers Participation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
 <div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Grievance Redressal</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/-yYGtQApT3A" title="Grievance Redressal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
@@ -1498,7 +1499,7 @@ h3::after {
 <div class="kt"><p><strong>Key Takeaway:</strong> Collective Bargaining = negotiations between union and management. Collective Agreement = the resulting contract. Conciliation = mediation by third party. Arbitration = binding decision by third party. Know the difference for exam questions.</p></div>
 
 <div class="summary-box">
-<h4>Unit 14 Summary</h4>
+<h4>✅ Unit 14 Summary</h4>
 <ul>
 <li>Trade Union Types: Craft, Industrial, General, White-Collar</li>
 <li>Functions: Collective Bargaining, Representation, Welfare, Political Action</li>
@@ -1533,22 +1534,30 @@ h3::after {
 <script>
 // Scroll-triggered animations
 (function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    // Add animate-on-scroll to all main content sections
-    document.querySelectorAll('.unit, h2, .callout, .summary-box, .cg, .fc, .db, .kt, .br, .igl, .py, .visual-diagram, .case-study').forEach(el => {
-        if (!el.classList.contains('animate-on-scroll')) {
-            el.classList.add('animate-on-scroll');
-        }
-        observer.observe(el);
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
 })();
 </script>
     <script src="enhancements.js"></script>

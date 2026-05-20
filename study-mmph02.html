@@ -6,19 +6,56 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-example{background:rgba(225,112,85,.05);border-color:#e17055}.callout-examtip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-mnemonic{background:rgba(0,210,255,.06);border-color:#00d4ff}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}.db{overflow-x:auto;margin:1rem 0}table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:.6rem .8rem;border:1px solid rgba(255,255,255,.1);text-align:left}th{background:rgba(225,112,85,.12);color:#e17055;font-weight:600}td{color:rgba(255,255,255,.72)}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-example{background:rgba(225,112,85,.05);border-color:#e17055}.callout-examtip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-mnemonic{background:rgba(0,210,255,.06);border-color:#00d4ff}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer;min-width:44px;min-height:44px}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}.db{overflow-x:auto;margin:1rem 0}table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:.6rem .8rem;border:1px solid rgba(255,255,255,.1);text-align:left}th{background:rgba(225,112,85,.12);color:#e17055;font-weight:600}td{color:rgba(255,255,255,.72)}@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FFD700; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-toggle { background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(0,210,255,0.15)); border: 1px solid rgba(108,99,255,0.3); color: #e0e0ff; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.3s; margin-bottom: 1rem; }
+.video-toggle:hover { background: linear-gradient(135deg, rgba(108,99,255,0.3), rgba(0,210,255,0.25)); }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.study-sidebar .sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.study-sidebar .sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sidebar-nav{display:flex;flex-direction:column;gap:2px}
+.sidebar-nav a{display:flex;align-items:center;padding:.5rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s;min-height:44px}
+.sidebar-nav a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}
+.sidebar-nav a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}
+.quiz-link{background:rgba(255,215,0,.08)!important;color:#ffd700!important;border:1px solid rgba(255,215,0,.2)}
+.quiz-link:hover{background:rgba(255,215,0,.15)!important}
+.subject-badge{display:inline-block;padding:.2rem .6rem;background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(225,112,85,.3);border-radius:20px;font-size:.75rem;font-weight:600;color:#e17055;margin-top:.5rem}
+.action-bar{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}
+.action-bar .btn{padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s;border:1px solid transparent;min-height:44px;display:inline-flex;align-items:center;gap:.3rem}
+.btn-primary{background:rgba(225,112,85,.15);color:#e17055;border-color:rgba(225,112,85,.3)}
+.btn-primary:hover{background:rgba(225,112,85,.25)}
+.btn-success{background:rgba(0,210,255,.1);color:#00d4ff;border-color:rgba(0,210,255,.3)}
+.btn-success:hover{background:rgba(0,210,255,.2)}
 </style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmph02">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmph-02'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPH-02</h3></div>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">📘 MMPH-02</span></div>
+<nav class="sidebar-nav">
   <a href="#u1">Unit 1: HRD — An Overview</a>
   <a href="#u2">Unit 2: HRD Systems</a>
   <a href="#u3">Unit 3: HRD Processes & Methods</a>
@@ -35,7 +72,9 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
   <a href="#frameworks">📊 Key Frameworks</a>
   <a href="#revision">⚡ Quick Revision</a>
   <a href="#exam">🎯 Exam Focus</a>
-</nav>
+  <a href="quiz-mmph02.html" class="quiz-link">📚 Take Quiz</a>
+  <a href="study-hub.html" class="back-link">← Back to Hub</a>
+</nav></aside>
 <main class="study-content" id="main-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPH-02</span><h1>Human Resource Development</h1>
@@ -45,6 +84,18 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u1">
 <h3>Unit 1: HRD — An Overview</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>HRD</strong> = systematic development of employees' knowledge, skills, abilities, and attitudes to improve individual and organisational performance. NOT just training — it's a holistic ecosystem covering appraisal, feedback, counselling, career planning, and rewards. Human capital = the most valuable and inimitable asset.</p></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Prof. T.V. Rao's Definition</div><p>"HRD is a set of systematic and planned activities designed by an organisation to provide its members with the necessary learning opportunities to improve their performance and enable the organisation to achieve its goals." — Prof. T.V. Rao (Father of HRD in India)</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su1">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su1">💬 Ask AI</button></div>
+<div id="su1">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD Concepts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kYXMrMcWVKA" title="HRD Concepts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Human Resource Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/QWxnrJeGpFk" title="Human Resource Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Period</th><th>Movement</th><th>Key Figure</th><th>Focus</th></tr></thead>
@@ -69,20 +120,45 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>9</td><td>Employee Welfare</td><td>Ensures well-being</td></tr>
 </tbody></table></div>
 
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; VUCA World</div><p><strong>VUCA</strong> = Volatile, Unprecedented, Complex, Ambiguous — the modern business environment requiring agile HRD responses. Post-COVID reality: Work From Home, hybrid models, "third place" workstations have fundamentally changed HRD delivery.</p></div>
+
+<h4>Gary Nielson's Strategy (HBR):</h4>
+<ol>
+<li>Alter to flexi-organisational structure</li>
+<li>Redesign expectation matrices</li>
+<li>Re-align people power</li>
+<li>Maximise idea-to-execution speed</li>
+<li>Involve and include teams</li>
+<li>Keep pumping motivation</li>
+</ol>
+
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>An IT company in Bengaluru with 3000+ employees found 43% wanted WFH, 26% hybrid, 31% full-time office — requiring completely different HRD interventions for each group. Post-COVID reality: Work From Home, hybrid models, "third place" workstations have fundamentally changed HRD delivery.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PPTM-OD-FCRW</strong> — Performance appraisal, Potential appraisal, Training, Management dev, OD, Feedback, Counselling, Rewards, Welfare (all 9 HRD mechanisms)</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Always mention VUCA context when discussing modern HRD. Examiners expect you to connect traditional mechanisms to contemporary challenges.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>HRD integrates training, OD, and career development for effectiveness</li>
 <li>L&amp;T pioneered HRD practices in India (1975)</li>
 <li>9 HRD mechanisms from appraisal to welfare</li>
 <li>VUCA world demands agile HRD responses</li>
+<li>Gary Nielson's 6-point strategy for organisational agility</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 2 ===== -->
 <div class="unit" id="u2">
 <h3>Unit 2: HRD Systems</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>HRD System</strong> = integrated set of mechanisms working together for systematic people development. Not isolated programmes — they must connect to organisational strategy.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su2">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su2">💬 Ask AI</button></div>
+<div id="su2">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VXz8FEjvOHY" title="HRD Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD Processes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Mx8YsVmJfXo" title="HRD Processes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <h4>5 Sub-systems:</h4>
 <ul>
@@ -93,7 +169,12 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Quality of Work Life (QWL) System</strong></li>
 </ul>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; HRD Matrix</div><p>Cross-references individual development needs with organisational requirements. Rows = Individual competencies needed. Columns = Organisational goals. Cells = Specific HRD interventions.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; HRD Matrix</div><p>Cross-references individual development needs with organisational requirements. Rows = Individual competencies needed. Columns = Organisational goals. Cells = Specific HRD interventions.<br><br>
+<strong>How it works:</strong><br>
+- Each employee's competency gaps are mapped against organisational objectives<br>
+- The intersection cells identify which HRD interventions (training, coaching, rotation) are needed<br>
+- Ensures individual development directly supports business strategy<br>
+- Example: If organisation needs "digital skills" and employee lacks "data analytics" → specific data analytics training programme</p></div>
 
 <h4>Systematic Approach:</h4>
 <div class="db"><table>
@@ -113,11 +194,22 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>Systematic approach: Assess → Design → Implement → Evaluate</li>
 </ul></div>
 </div>
+</div>
 
 <!-- ===== UNIT 3 ===== -->
 <div class="unit" id="u3">
 <h3>Unit 3: HRD Processes &amp; Methods</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Overview</div><p>Training methods fall into two categories: On-the-Job (learning by doing in real work environment) and Off-the-Job (classroom-based, simulated environment).</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su3">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su3">💬 Ask AI</button></div>
+<div id="su3">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Training Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RJFGHqFCrvI" title="Training Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ADDIE Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eC2YPCzOqJA" title="ADDIE Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>On-the-Job</th><th>Off-the-Job</th></tr></thead>
@@ -151,20 +243,45 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>4. Results</td><td>Did performance improve?</td><td>KPIs, productivity data</td><td>6-12 months later</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tatas use a modified Kirkpatrick model — they add Level 5 (ROI) to calculate the return on training investment.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ADDIE</strong> = Analysis, Design, Develop, Implement, Evaluate<br><strong>RLBR</strong> = Reaction, Learning, Behaviour, Results</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Kirkpatrick's model is one of the most frequently tested frameworks. Always draw the 4-level pyramid and give examples for each level.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Kirkpatrick's Evaluation Pyramid</div><p>The evaluation builds upward — each level provides stronger evidence of training effectiveness:<br><br>
+<strong>Level 4 — Results:</strong> Did performance improve? (KPIs, productivity data, 6-12 months)<br>
+<strong>Level 3 — Behaviour:</strong> Are they using it? (Observation, 360-degree, 3-6 months)<br>
+<strong>Level 2 — Learning:</strong> Did they learn? (Tests, demonstrations, end of training)<br>
+<strong>Level 1 — Reaction:</strong> Did they enjoy it? (Feedback forms, immediately after)<br><br>
+Most organisations only measure Level 1 (happy sheets). Progressive firms measure up to Level 4.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tatas use a modified Kirkpatrick model — they add Level 5 (ROI) to calculate the return on training investment. For example, after a leadership programme, they calculate (Benefits - Cost) / Cost x 100 to get training ROI percentage.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Training Method Examples</div><p><strong>On-the-Job at Indian Companies:</strong> Infosys uses job rotation across banking, healthcare, and retail verticals. Tata Steel runs 4-year apprenticeship programmes. Maruti Suzuki pairs new hires with experienced mentors through shadowing.<br><br>
+<strong>Off-the-Job at Indian Companies:</strong> L&amp;T uses case study method at its management development centre. Infosys Global Education Centre in Mysuru trains 14,000 employees simultaneously. Role-playing is standard in sales training at FMCG companies like HUL and P&G.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ADDIE</strong> = Analysis, Design, Develop, Implement, Evaluate<br><strong>RLBR</strong> = Reaction, Learning, Behaviour, Results<br><br>
+<strong>Remember the pyramid:</strong> "Rats Like Big Rewards" — Reaction (base) → Learning → Behaviour → Results (top)</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Kirkpatrick's model is one of the most frequently tested frameworks. Always draw the 4-level pyramid and give examples for each level. Mention that Tatas add Level 5 (ROI) — this shows deeper knowledge.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>Two training categories: on-the-job vs off-the-job</li>
 <li>ADDIE: 5-step training design framework</li>
 <li>Kirkpatrick: Reaction → Learning → Behaviour → Results</li>
+<li>Tatas add Level 5 (ROI) to Kirkpatrick's model</li>
+<li>Most firms only measure Level 1 — progressive ones go to Level 4</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 4 ===== -->
 <div class="unit" id="u4">
 <h3>Unit 4: HRD for Employees</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>KSAA</strong> = Knowledge + Skills + Abilities + Attitudes — the components of individual human capital. HRD for employees focuses on making them more capable, confident, and committed.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su4">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su4">💬 Ask AI</button></div>
+<div id="su4">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Performance Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kNWxmrJeGpFk" title="Performance Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>360 Degree Feedback</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YXMrMcWVKA0" title="360 Degree Feedback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <h4>HRD Department Functions for Employees:</h4>
 <ul>
@@ -184,20 +301,54 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>Contemporary</td><td>Employee experience (EX)</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google's "20% time" policy (now defunct but influential) allowed employees to spend 20% of work time on personal projects — a radical HRD approach that produced Gmail and Google News.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>KSAA</strong> — Knowledge (what you know), Skills (what you can do), Abilities (what you're capable of), Attitudes (how you approach work)</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Connect KSAA to competency mapping (Unit 6) — they're conceptually linked.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Individual Human Capital Formula</div><p><strong>KSAA = Knowledge + Skills + Abilities + Attitudes</strong><br><br>
+<strong>Knowledge</strong> = what you know (facts, theories, procedures)<br>
+<strong>Skills</strong> = what you can do (practical application, learned through practice)<br>
+<strong>Abilities</strong> = what you're capable of (innate capacity, aptitude)<br>
+<strong>Attitudes</strong> = how you approach work (mindset, values, commitment)<br><br>
+Human capital is rare, inimitable, and portable — it's the most valuable asset an organisation possesses.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google's "20% time" policy (now defunct but influential) allowed employees to spend 20% of work time on personal projects — a radical HRD approach that produced Gmail and Google News. Indian IT companies like Infosys and Wipro have similar innovation time programmes.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Quality Circles at Indian Companies:</strong> Bharat Heavy Electricals Limited (BHEL) introduced quality circles in the 1980s — small groups of 5-12 workers meeting regularly to identify and solve work-related problems. This participative approach improved productivity by 15-20% and reduced defects significantly. Today, companies like Tata Steel and Maruti Suzuki continue this practice.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>KSAA</strong> — Knowledge (what you know), Skills (what you can do), Abilities (what you're capable of), Attitudes (how you approach work)<br><br>
+<strong>Think:</strong> "Know-Do-Capable-Approach" — the four pillars of human capital</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Connect KSAA to competency mapping (Unit 6) — they're conceptually linked. Also mention that human capital is the only resource that appreciates with use (unlike machines which depreciate).</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>KSAA = Knowledge + Skills + Abilities + Attitudes</li>
 <li>Evolution: Traditional → Modern → Contemporary (Employee Experience)</li>
 <li>HRD makes employees more capable, confident, and committed</li>
+<li>Human capital appreciates with use — unlike physical assets</li>
+<li>Quality circles and job enrichment are key HRD tools for employees</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 5 ===== -->
 <div class="unit" id="u5">
 <h3>Unit 5: Role of HR Managers</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ulrich's HR Model — 4 Roles</div><p>A 2×2 matrix defining the four strategic roles HR managers must play to add value to the organisation.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ulrich's HR Model — 4 Roles</div><p>A 2×2 matrix defining the four strategic roles HR managers must play to add value to the organisation.<br><br>
+<strong>Matrix Layout:</strong><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STRATEGIC FOCUS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┌───────────────┬───────────────┐<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;Strategic&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;Change&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;Partner&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───────────────┼───────────────┤<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;Employee&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;Expert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;Champion&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───────────────┴───────────────┘<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PEOPLE</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su5">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su5">💬 Ask AI</button></div>
+<div id="su5">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competency Mapping</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Z8FEjvOHYXk" title="Competency Mapping" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competency Models</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FEjvOHYXkZ8" title="Competency Models" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Role</th><th>Focus</th><th>Key Activities</th></tr></thead>
@@ -224,11 +375,22 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>HRIS, People Analytics, AI transforming HR</li>
 </ul></div>
 </div>
+</div>
 
 <!-- ===== UNIT 6 ===== -->
 <div class="unit" id="u6">
 <h3>Unit 6: Competency Mapping</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Competency:</strong> An underlying characteristic of a person that leads to effective and/or superior performance in a job — Boyatzis (1982)</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su6">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su6">💬 Ask AI</button></div>
+<div id="su6">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Career Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xnrJeGpFkQW" title="Career Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Career Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YsVmJfXoMx8" title="Career Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Type</th><th>Meaning</th><th>Example</th></tr></thead>
@@ -238,6 +400,21 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </tbody></table></div>
 
 <h4>Competency Framework — 4 Categories:</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competency Pyramid</div><p>The four categories build from foundation to apex:<br><br>
+<strong>┌─────────────────────────────────────┐</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEADERSHIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;&nbsp;Vision, Inspiration, Change&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>├─────────────────────────────────────┤</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MANAGERIAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;Planning, Organising, Controlling&nbsp;│</strong><br>
+<strong>├─────────────────────────────────────┤</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEHAVIOURAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;Communication, Teamwork, Ethics&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>├─────────────────────────────────────┤</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TECHNICAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>│&nbsp;&nbsp;&nbsp;Job-specific knowledge &amp; skills&nbsp;&nbsp;&nbsp;│</strong><br>
+<strong>└─────────────────────────────────────┘</strong></p></div>
+
 <div class="db"><table>
 <thead><tr><th>Category</th><th>Examples</th></tr></thead>
 <tbody>
@@ -265,11 +442,22 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>5-step mapping process from identification to action plan</li>
 </ul></div>
 </div>
+</div>
 
 <!-- ===== UNIT 7 ===== -->
 <div class="unit" id="u7">
 <h3>Unit 7: Performance &amp; Career Planning</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; PMS Cycle</div><p>Goal Setting → Performance Monitoring → Appraisal → Feedback → Development Plan → (cycle repeats)</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su7">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su7">💬 Ask AI</button></div>
+<div id="su7">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organisation Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/GHqFCrvIJRF" title="Organisation Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>OD Interventions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PCzOqJAeC2Y" title="OD Interventions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Traditional</th><th>Modern</th></tr></thead>
@@ -294,21 +482,48 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>Decline</td><td>65+</td><td>Reduced role, retirement transition</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Infosys uses a dual career track — technical ladder (individual contributor) and management ladder — so engineers don't have to become managers to advance.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>GM-A-F-D</strong> = Goal setting, Monitoring, Appraisal, Feedback, Development<br><strong>EEMD</strong> = Exploration, Establishment, Maintenance, Decline</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Compare traditional vs modern appraisal methods in a table. 360-degree feedback is the most commonly asked modern method.</p></div>
+<h4>Career Development Tools:</h4>
+<ul>
+<li><strong>Mentoring</strong> — senior guides junior through career decisions and organisational navigation</li>
+<li><strong>Coaching</strong> — performance-focused, short-term, skill-specific improvement</li>
+<li><strong>Job Rotation</strong> — breadth of experience across departments and functions</li>
+<li><strong>Succession Planning</strong> — building a pipeline of ready candidates for key roles</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Infosys uses a dual career track — technical ladder (individual contributor) and management ladder — so engineers don't have to become managers to advance. A senior architect at Infosys can earn the same as a vice president without managing anyone.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>360-Degree Feedback at Indian Companies:</strong> Wipro implemented 360-degree feedback in the early 2000s. Managers receive feedback from supervisors, peers, subordinates, and even clients. The key insight: self-ratings are almost always higher than others' ratings — this "reality gap" is itself a powerful development tool. HDFC Bank and ICICI Bank also use 360-degree for senior leadership development.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>GM-A-F-D</strong> = Goal setting, Monitoring, Appraisal, Feedback, Development<br><strong>EEMD</strong> = Exploration, Establishment, Maintenance, Decline<br><br>
+<strong>Appraisal Methods:</strong> "Traditional = One-way, Modern = Multi-way"<br>
+Traditional: Rating Scales, Checklist, Forced Distribution, Essay, Ranking<br>
+Modern: MBO, 360-Degree, BARS, Balanced Scorecard, KPIs + OKRs</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Compare traditional vs modern appraisal methods in a table. 360-degree feedback is the most commonly asked modern method. Always mention the "self-rating gap" — it shows analytical thinking.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>PMS cycle: Goal → Monitor → Appraise → Feedback → Develop</li>
 <li>Traditional vs Modern appraisal methods</li>
 <li>Super's 4 career stages: EEMD</li>
 <li>Dual career tracks at Infosys</li>
+<li>Career tools: Mentoring, Coaching, Job Rotation, Succession Planning</li>
+<li>360-degree feedback reveals the "self-rating reality gap"</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 8 ===== -->
 <div class="unit" id="u8">
 <h3>Unit 8: HRD Culture &amp; Climate</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>HRD Climate:</strong> The employees' collective perception of HRD practices, policies, and culture within the organisation</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su8">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su8">💬 Ask AI</button></div>
+<div id="su8">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality of Work Life</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xmrJeGpFkQW" title="Quality of Work Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>QWL Programs</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/McWVKA0YXMr" title="QWL Programs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <h4>5 Elements of HRD Climate:</h4>
 <ol>
@@ -327,20 +542,48 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>"How it feels here"</td><td>"How things are done here"</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google's HRD climate surveys consistently show high scores on "learning opportunities" and "manager support" — directly correlating with their #1 employer brand status.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>G-T-O-R-F</strong> = General mechanisms, Training climate, OD interventions, Rewards, Feedback</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Distinguish between climate (surveys can measure) and culture (deep values). This is a common exam trap.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; HRD Climate Survey</div><p>Measures employee perceptions across all 5 elements using Likert-scale questionnaires. Results identify strengths and gaps in HRD delivery.<br><br>
+<strong>Impact chain:</strong> Positive climate → Higher motivation → Better performance → Lower attrition<br><br>
+<strong>Key dimensions measured:</strong><br>
+- Availability and accessibility of HRD mechanisms<br>
+- Manager support for learning and development<br>
+- Quality and frequency of performance feedback<br>
+- Fairness of rewards and recognition<br>
+- Effectiveness of OD interventions</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google's HRD climate surveys consistently show high scores on "learning opportunities" and "manager support" — directly correlating with their #1 employer brand status. Indian companies like Infosys and TCS also conduct annual climate surveys to track employee engagement and HRD effectiveness.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>HRD Climate at L&amp;T:</strong> Larsen &amp; Toubro's HRD department, established in 1975 under the guidance of Prof. T.V. Rao and Udai Pareek, pioneered HRD climate research in India. They developed the HRD Climate Survey instrument that measures 6 dimensions: general HRD mechanisms, training climate, OD interventions, rewards, feedback quality, and career development opportunities. This instrument is now used by hundreds of Indian organisations.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>G-T-O-R-F</strong> = General mechanisms, Training climate, OD interventions, Rewards, Feedback<br><br>
+<strong>Climate vs Culture:</strong> "Climate is what you FEEL, Culture is what you DO"<br>
+Climate = observable, measurable, short-term, changeable ("How it feels here")<br>
+Culture = deep, invisible, long-term, stable ("How things are done here")</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Distinguish between climate (surveys can measure) and culture (deep values). This is a common exam trap. Always mention the climate → motivation → performance → attrition chain to show systemic thinking.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>HRD climate = collective employee perception</li>
 <li>5 elements: G-T-O-R-F</li>
 <li>Climate (observable) vs Culture (deep values)</li>
+<li>Positive climate → Higher motivation → Better performance → Lower attrition</li>
+<li>L&amp;T pioneered HRD climate research in India (1975)</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 9 ===== -->
 <div class="unit" id="u9">
 <h3>Unit 9: Counselling, Coaching &amp; Mentoring</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Three Helping Relationships</div><p>Three distinct approaches to employee development, each with different focus, timing, and methods.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su9">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su9">💬 Ask AI</button></div>
+<div id="su9">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD Climate</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/jvOHYXkZ8FE" title="HRD Climate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD Instruments</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mJeGpFkQWxn" title="HRD Instruments" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Counselling</th><th>Coaching</th><th>Mentoring</th></tr></thead>
@@ -368,20 +611,55 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td><strong>W — Will</strong></td><td>What will you do?</td><td>Commit to action</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Wipro's formal mentoring programme pairs senior leaders with high-potential employees for 18-month development journeys, resulting in 40% faster promotions for mentees. They also practice reverse mentoring where juniors teach seniors digital skills.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DNP</strong> = Directive, Non-directive, Participative (counselling types)<br><strong>GROW</strong> = Goal, Reality, Options, Will</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>The GROW model is exam gold. Always draw the 4-step framework and give a coaching conversation example.</p></div>
+<h4>Mentoring Details:</h4>
+<ul>
+<li><strong>Formal:</strong> Organisationally assigned mentor-mentee pairs with structured timelines and goals</li>
+<li><strong>Informal:</strong> Natural development relationships that emerge organically</li>
+<li><strong>Reverse Mentoring:</strong> Junior teaches senior (e.g., digital skills, social media, new technology trends)</li>
+</ul>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Benefits of Mentoring</div><p><strong>For the mentee:</strong> Knowledge transfer, career advancement, psychosocial support, networking, confidence building<br>
+<strong>For the mentor:</strong> Leadership development, fresh perspectives, personal satisfaction, legacy building<br>
+<strong>For the organisation:</strong> Talent retention, knowledge preservation, leadership pipeline, cultural integration</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Wipro's formal mentoring programme pairs senior leaders with high-potential employees for 18-month development journeys, resulting in 40% faster promotions for mentees. They also practice reverse mentoring where juniors teach seniors digital skills. TCS has a similar programme called "Mentoring Circles" where groups of 8-10 mentees share a senior mentor.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; GROW Coaching Conversation Example</div><p><strong>Scenario:</strong> A manager coaching a team member who wants to improve presentation skills<br><br>
+<strong>G (Goal):</strong> "What do you want to achieve?" → "I want to deliver confident client presentations"<br>
+<strong>R (Reality):</strong> "Where are you now?" → "I get nervous, speak too fast, avoid eye contact"<br>
+<strong>O (Options):</strong> "What could you do?" → "Practice with colleagues, join Toastmasters, record myself"<br>
+<strong>W (Will):</strong> "What will you do?" → "I'll practice twice this week and present at next team meeting"</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DNP</strong> = Directive, Non-directive, Participative (counselling types)<br><strong>GROW</strong> = Goal, Reality, Options, Will<br><br>
+<strong>Counselling vs Coaching vs Mentoring:</strong><br>
+Counselling = "Fix the problem" (past/present, therapeutic)<br>
+Coaching = "Improve the performance" (present, goal-driven)<br>
+Mentoring = "Grow the career" (future, development-driven)</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>The GROW model is exam gold. Always draw the 4-step framework and give a coaching conversation example. Also mention reverse mentoring as a contemporary trend — examiners love it.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>Counselling (problems) vs Coaching (performance) vs Mentoring (career)</li>
 <li>3 counselling types: Directive, Non-directive, Participative</li>
 <li>GROW: Goal → Reality → Options → Will</li>
+<li>Formal vs Informal vs Reverse mentoring</li>
+<li>Mentoring benefits: mentee growth, mentor development, organisational retention</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== UNIT 10 ===== -->
 <div class="unit" id="u10">
 <h3>Unit 10: HRD in Industrial Relations</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Overview</div><p>HRD improves industrial relations by building trust, communication, and shared goals. When employees feel developed and valued, they're less likely to engage in conflict.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Overview</div><p>HRD improves industrial relations by building trust, communication, and shared goals. When employees feel developed and valued, they're less likely to engage in conflict. HRD contributes to better IR through communication systems, grievance handling, participative management, worker education, and QWL programmes.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su10">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su10">💬 Ask AI</button></div>
+<div id="su10">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Counselling Mentoring</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VmJfXoMx8Ys" title="Counselling Mentoring" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Coaching at Work</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/qFCrvIJRFGH" title="Coaching at Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <h4>HRD Contributions to Better IR:</h4>
 <ol>
@@ -394,14 +672,16 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 <h4>QWL Programmes:</h4>
 <ul>
-<li>Flexible working hours</li>
-<li>Job enrichment and enlargement</li>
-<li>Health and safety initiatives</li>
-<li>Employee assistance programmes</li>
-<li>Work-life balance policies</li>
+<li><strong>Flexible working hours</strong> — flextime, compressed work weeks</li>
+<li><strong>Job enrichment and enlargement</strong> — adding meaning and variety to work</li>
+<li><strong>Health and safety initiatives</strong> — on-site medical, safety training, ergonomic workstations</li>
+<li><strong>Employee assistance programmes (EAPs)</strong> — counselling, stress management, financial advice</li>
+<li><strong>Work-life balance policies</strong> — parental leave, childcare support, sabbaticals</li>
 </ul>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Maruti Suzuki's QWL programme includes on-site medical facilities, recreational centres, and continuous skill upgradation — contributing to relatively stable IR despite being in the auto sector.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Maruti Suzuki's QWL programme includes on-site medical facilities, recreational centres, and continuous skill upgradation — contributing to relatively stable IR despite being in the auto sector. Tata Steel's Jamshedpur township provides housing, schools, hospitals, and sports facilities — a comprehensive QWL ecosystem.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Participative Management at Indian PSUs:</strong> Bharat Petroleum Corporation Limited (BPCL) implemented Joint Management Councils (JMCs) where worker representatives participate in operational decisions. This participative approach reduced grievances by 40% and improved productivity. Similar practices exist at SAIL and NTPC through Works Committees and Safety Committees.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>C-G-P-W-Q</strong> = Communication, Grievance handling, Participative management, Worker education, QWL</p></div>
 <div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>"How does HRD contribute to better industrial relations?" appears frequently. Use the 5 points above.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
@@ -409,11 +689,22 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>5 contributions: Communication, Grievance, Participative, Worker education, QWL</li>
 </ul></div>
 </div>
+</div>
 
 <!-- ===== UNIT 11 ===== -->
 <div class="unit" id="u11">
 <h3>Unit 11: Emerging Trends</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Drivers of Change</div><p>Globalisation, technology (AI, automation), demographics (millennials, Gen Z), and competition are reshaping HRD.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Drivers of Change</div><p>Globalisation, technology (AI, automation), demographics (millennials, Gen Z), and competition are reshaping HRD. These four forces are creating a "new normal" where traditional HRD approaches are insufficient. Organisations must adapt or risk losing their best talent to more progressive competitors.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su11">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su11">💬 Ask AI</button></div>
+<div id="su11">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Knowledge Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OqJAeC2YPCz" title="Knowledge Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Learning Organisation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eGpFkQWxnMr" title="Learning Organisation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>#</th><th>Trend</th><th>What It Means</th></tr></thead>
@@ -427,13 +718,45 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>7</td><td>Continuous Learning</td><td>Learning organisations, micro-learning</td></tr>
 </tbody></table></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IBM uses AI to predict which employees are likely to leave (95% accuracy) and proactively offers retention interventions — a game-changer in HRD.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A-P-E-G-D-W-C</strong> = AI, People analytics, Employee experience, Gig economy, DEI, Wellness, Continuous learning</p></div>
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Always mention COVID-19 as an accelerator of these trends. Examiners expect awareness of post-pandemic HRD realities.</p></div>
+<h4>Sectoral HRD Trends:</h4>
+<div class="db"><table>
+<thead><tr><th>Sector</th><th>Key HRD Trends</th></tr></thead>
+<tbody>
+<tr><td><strong>IT</strong></td><td>Remote-first, skills-based hiring, continuous upskilling</td></tr>
+<tr><td><strong>Manufacturing</strong></td><td>Automation reskilling, safety culture, Industry 4.0 training</td></tr>
+<tr><td><strong>Healthcare</strong></td><td>Burnout prevention, telemedicine training, empathy skills</td></tr>
+<tr><td><strong>Education</strong></td><td>EdTech integration, digital pedagogy, hybrid teaching</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IBM uses AI to predict which employees are likely to leave (95% accuracy) and proactively offers retention interventions — a game-changer in HRD. Unilever's AI recruitment screens 250,000+ applicants annually, reducing hiring time by 75%.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>Gig Economy in India:</strong> Companies like Ola, Swiggy, and Zomato manage millions of gig workers. HRD challenges include training delivery to distributed workforces, performance management without traditional appraisals, and benefits for non-permanent employees.<br><br>
+<strong>DEI in Indian IT:</strong> Infosys, TCS, and Wipro have dedicated DEI programmes. Infosys reported 39% women in its workforce in 2023. Tata Group has programmes for differently-abled employees and LGBTQ+ inclusion.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A-P-E-G-D-W-C</strong> = AI, People analytics, Employee experience, Gig economy, DEI, Wellness, Continuous learning<br><br>
+<strong>Remember:</strong> "All People Experience Gigantic Digital Wellness Changes" — the 7 trends reshaping HRD</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Always mention COVID-19 as an accelerator of these trends. Examiners expect awareness of post-pandemic HRD realities. Give sector-specific examples — it shows depth of understanding.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>7 emerging trends reshaping HRD</li>
 <li>COVID-19 accelerated digital transformation</li>
 <li>AI, analytics, and EX are the biggest shifts</li>
+<li>Different sectors face different HRD challenges</li>
+<li>Gig economy and DEI are India-specific growth areas</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ===== KEY DEFINITIONS BOX ===== -->
+<div class="unit" id="definitions">
+<h3>Key Definitions Quick Reference</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Prof. T.V. Rao (Father of HRD in India)</div><p>"HRD is a set of systematic and planned activities designed by an organisation to provide its members with the necessary learning opportunities to improve their performance and enable the organisation to achieve its goals."</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Boyatzis (1982) on Competency</div><p>"A competency is an underlying characteristic of a person which results in effective and/or superior performance in a job." — This definition distinguishes between threshold competencies (minimum needed) and differentiating competencies (what makes top performers stand out).</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ulrich on HR Roles</div><p>"HR must shift from being a 'cost centre' to a 'value creator'. The four roles — Strategic Partner, Change Agent, Administrative Expert, and Employee Champion — define how HR creates measurable business value."</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Definition Strategy for Exams</div><ul>
+<li>Always quote the original author — it adds academic credibility</li>
+<li>Follow the definition with your own explanation in simple terms</li>
+<li>Connect the definition to a real-world example</li>
+<li>Link related concepts (e.g., KSAA to Competency Mapping)</li>
 </ul></div>
 </div>
 
@@ -441,6 +764,16 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u12">
 <h3>Unit 12: HRD Experiences</h3>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Overview</div><p>Case studies from Indian organisations demonstrating HRD best practices. Lessons from both successes and failures.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#su12">📝 Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#su12">💬 Ask AI</button></div>
+<div id="su12">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>HRD in New Economy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JfXoMx8YsVm" title="HRD in New Economy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Future of HRD</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CrvIJRFGHqF" title="Future of HRD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 
 <div class="db"><table>
 <thead><tr><th>Organisation</th><th>HRD Innovation</th></tr></thead>
@@ -454,18 +787,25 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 <h4>Lessons Learned:</h4>
 <ol>
-<li>Top management commitment is non-negotiable</li>
-<li>HRD must align with business strategy</li>
-<li>One-size-fits-all doesn't work — contextualise</li>
-<li>Measurement and evaluation are essential</li>
-<li>Line managers are critical HRD partners</li>
+<li><strong>Top management commitment is non-negotiable</strong> — HRD fails without CEO/CXO sponsorship</li>
+<li><strong>HRD must align with business strategy</strong> — development for development's sake wastes resources</li>
+<li><strong>One-size-fits-all doesn't work</strong> — contextualise for industry, culture, and workforce demographics</li>
+<li><strong>Measurement and evaluation are essential</strong> — use Kirkpatrick's model to prove HRD ROI</li>
+<li><strong>Line managers are critical HRD partners</strong> — they implement development on the ground daily</li>
 </ol>
 
-<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Use Indian case studies in your answers — examiners reward practical knowledge. Even 2-3 examples significantly boost marks.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian HRD Success Story</div><p><strong>Infosys Global Education Centre, Mysuru:</strong> Spread over 337 acres, this campus can train 14,000 employees simultaneously. New hires undergo 23-week foundation training. The centre uses a mix of classroom, e-learning, project-based, and assessment-driven learning. This investment in training helped Infosys maintain industry-leading employee quality and low attrition rates.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Tata Group HRD Legacy</div><p><strong>Tata Management Training Centre (TMTC), Pune:</strong> Established in 1966, TMTC is one of Asia's oldest corporate universities. It has trained over 100,000 Tata leaders across 150+ group companies. Programmes range from 2-day workshops to 12-month leadership development journeys. The Tata brand is synonymous with HRD excellence in India.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Use Indian case studies in your answers — examiners reward practical knowledge. Even 2-3 examples significantly boost marks. Mention specific numbers (14,000 trainees at Infosys, 100,000 leaders at TMTC, 52 competencies at L&amp;T) — they add credibility.</p></div>
 <div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
 <li>Indian pioneers: Infosys, Tata, L&amp;T, Wipro, Godrej</li>
 <li>5 lessons: Commitment, alignment, contextualisation, measurement, line manager involvement</li>
+<li>Infosys Mysuru campus trains 14,000 simultaneously</li>
+<li>Tata TMTC has trained 100,000+ leaders since 1966</li>
 </ul></div>
+</div>
 </div>
 
 <!-- ===== MASTER MNEMONICS ===== -->
@@ -532,6 +872,42 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr><td>Implement</td><td>Deliver programme</td><td>Trained employees</td></tr>
 <tr><td>Evaluate</td><td>Measure effectiveness</td><td>ROI &amp; feedback</td></tr>
 </tbody></table></div>
+
+<h4>Competency Mapping Process:</h4>
+<div class="db"><table>
+<thead><tr><th>Step</th><th>Activity</th><th>Output</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Identify roles and responsibilities</td><td>Role descriptions</td></tr>
+<tr><td>2</td><td>Identify competencies required</td><td>Competency dictionary</td></tr>
+<tr><td>3</td><td>Assess current levels</td><td>Assessment reports</td></tr>
+<tr><td>4</td><td>Identify gaps</td><td>Gap analysis</td></tr>
+<tr><td>5</td><td>Develop action plan</td><td>Training &amp; development plan</td></tr>
+</tbody></table></div>
+
+<h4>HRD Mechanisms — Complete Reference:</h4>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Mechanism</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Performance Appraisal</td><td>Evaluate current performance</td><td>Annual reviews at TCS</td></tr>
+<tr><td>2</td><td>Potential Appraisal</td><td>Assess future capability</td><td>9-box grid at Infosys</td></tr>
+<tr><td>3</td><td>Training</td><td>Build job-specific skills</td><td>Technical training at Wipro</td></tr>
+<tr><td>4</td><td>Management Development</td><td>Grow managerial capabilities</td><td>Leadership programmes at L&amp;T</td></tr>
+<tr><td>5</td><td>Organisation Development</td><td>Improve organisational effectiveness</td><td>Change management at HUL</td></tr>
+<tr><td>6</td><td>Feedback</td><td>Provide performance information</td><td>360-degree at HDFC Bank</td></tr>
+<tr><td>7</td><td>Counselling</td><td>Address personal/work issues</td><td>EAP at Maruti Suzuki</td></tr>
+<tr><td>8</td><td>Rewards</td><td>Motivate through recognition</td><td>Tata Excellence Awards</td></tr>
+<tr><td>9</td><td>Employee Welfare</td><td>Ensure well-being</td><td>Township facilities at Tata Steel</td></tr>
+</tbody></table></div>
+
+<h4>Career Stages — Super's Model:</h4>
+<div class="db"><table>
+<thead><tr><th>Stage</th><th>Age Range</th><th>Characteristics</th><th>HRD Focus</th></tr></thead>
+<tbody>
+<tr><td>Exploration</td><td>15-24</td><td>Trying different roles</td><td>Induction, job rotation</td></tr>
+<tr><td>Establishment</td><td>25-44</td><td>Building reputation</td><td>Skill development, promotions</td></tr>
+<tr><td>Maintenance</td><td>45-64</td><td>Sustaining performance</td><td>Mentoring, knowledge transfer</td></tr>
+<tr><td>Decline</td><td>65+</td><td>Reduced role</td><td>Succession planning, retirement</td></tr>
+</tbody></table></div>
 </div>
 
 <!-- ===== QUICK REVISION ===== -->
@@ -549,6 +925,11 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Mentoring</strong> = senior guides junior's career development</li>
 <li><strong>QWL</strong> = Quality of Work Life programmes</li>
 <li><strong>360-degree</strong> = multi-source feedback from all directions</li>
+<li><strong>ADDIE</strong> = Analyse, Design, Develop, Implement, Evaluate (training design)</li>
+<li><strong>Kirkpatrick</strong> = 4-level training evaluation (Reaction, Learning, Behaviour, Results)</li>
+<li><strong>GROW</strong> = Goal, Reality, Options, Will (coaching framework)</li>
+<li><strong>Ulrich</strong> = 4 HR roles (Strategic Partner, Change Agent, Admin Expert, Employee Champion)</li>
+<li><strong>HRD Matrix</strong> = cross-reference of individual needs with organisational goals</li>
 </ul>
 
 <h4>Framework Quick Reference:</h4>
@@ -574,11 +955,39 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </tbody></table></div>
 
 <div class="db"><table>
+<thead><tr><th>Traditional Appraisal</th><th>Modern Appraisal</th></tr></thead>
+<tbody>
+<tr><td>One-way (manager rates)</td><td>Multi-source (360°)</td></tr>
+<tr><td>Subjective</td><td>More objective</td></tr>
+<tr><td>Annual event</td><td>Continuous process</td></tr>
+<tr><td>Focus on past</td><td>Focus on future</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
 <thead><tr><th>Counselling</th><th>Coaching</th><th>Mentoring</th></tr></thead>
 <tbody>
 <tr><td>Problem-focused</td><td>Performance-focused</td><td>Career-focused</td></tr>
 <tr><td>Past/present</td><td>Present</td><td>Future</td></tr>
 <tr><td>Therapeutic</td><td>Goal-driven</td><td>Development-driven</td></tr>
+<tr><td>Trained counsellor</td><td>Line manager/coach</td><td>Senior colleague</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Climate</th><th>Culture</th></tr></thead>
+<tbody>
+<tr><td>Observable, measurable</td><td>Deep, invisible</td></tr>
+<tr><td>Short-term, changeable</td><td>Long-term, stable</td></tr>
+<tr><td>"How it feels here"</td><td>"How things are done here"</td></tr>
+<tr><td>Surveys can measure</td><td>Requires ethnographic study</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Threshold Competency</th><th>Differentiating Competency</th></tr></thead>
+<tbody>
+<tr><td>Minimum required</td><td>Distinguishes superior performers</td></tr>
+<tr><td>Typing speed for data entry</td><td>Leadership initiative</td></tr>
+<tr><td>Necessary but not sufficient</td><td>Creates competitive advantage</td></tr>
+<tr><td>Easy to measure</td><td>Harder to assess</td></tr>
 </tbody></table></div>
 </div>
 
@@ -614,16 +1023,54 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>Give Indian industry examples</li>
 <li>Conclude with relevance to contemporary HRD</li>
 </ol>
+
+<h4>Key Indian Companies for Examples:</h4>
+<div class="db"><table>
+<thead><tr><th>Company</th><th>HRD Strength</th><th>Use In Answers About</th></tr></thead>
+<tbody>
+<tr><td>Infosys</td><td>Global Education Centre, competency-linked development</td><td>Training, Competency Mapping, Career Planning</td></tr>
+<tr><td>Tata Group</td><td>Tata Management Training Centre, leadership pipeline</td><td>Leadership Development, HRD Mechanisms, Welfare</td></tr>
+<tr><td>L&amp;T</td><td>Competency dictionary (52 competencies), HRD department (1975)</td><td>Competency Mapping, HRD Climate, Pioneering HRD</td></tr>
+<tr><td>Wipro</td><td>Formal mentoring, WASE programme, 360-degree feedback</td><td>Mentoring, Coaching, Performance Management</td></tr>
+<tr><td>Godrej</td><td>Innovation labs, intrapreneurship support</td><td>Employee Development, Innovation Culture</td></tr>
+<tr><td>Maruti Suzuki</td><td>QWL programme, stable IR</td><td>Industrial Relations, QWL, Employee Welfare</td></tr>
+<tr><td>HUL</td><td>Change management, OD interventions</td><td>Organisation Development, Change Management</td></tr>
+<tr><td>TCS</td><td>Large-scale training, digital transformation</td><td>Training Systems, Emerging Trends</td></tr>
+</tbody></table></div>
+
+<h4>Mark Boosters — Use These Phrases:</h4>
+<ul>
+<li>"In the VUCA business environment..."</li>
+<li>"As demonstrated by [Indian company]..."</li>
+<li>"The HRD climate survey reveals..."</li>
+<li>"Linking back to the competency framework..."</li>
+<li>"In the post-COVID context..."</li>
+<li>"According to Ulrich's model..."</li>
+<li>"Kirkpatrick's Level 4 data shows..."</li>
+<li>"The GROW coaching framework suggests..."</li>
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x1F3AF; Exam Strategy</div><p><strong>For 10-mark questions:</strong> Write 2-3 pages. Include definition, framework, diagram, 2-3 Indian examples, and a conclusion.<br><br>
+<strong>Time allocation:</strong> Spend 2 minutes planning, 12 minutes writing, 1 minute reviewing. Always draw diagrams — they earn easy marks.<br><br>
+<strong>Common mistakes to avoid:</strong><br>
+- Not giving Indian examples (lose 2-3 marks)<br>
+- Confusing climate with culture (common trap)<br>
+- Mixing up Kirkpatrick levels (draw the pyramid!)<br>
+- Not connecting to VUCA context (shows limited thinking)</p></div>
 </div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
 <script>
 var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll(".unit").forEach(function(e){e.classList.add("fade-in");o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar-nav a[href^=\"#u\"],.sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
+<script src="enhancements.js"></script>
+<script src="search.js"></script>
+<script src="sidebar.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

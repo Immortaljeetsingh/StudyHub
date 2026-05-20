@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPO-02: Project Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(253,203,110,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
+.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}
+.sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(253,203,110,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:2rem;margin-bottom:2rem}
+.study-header h1{font-size:1.8rem;font-weight:800;color:#fdcb6e;margin:.5rem 0}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem}
+.subject-tag{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.75rem;font-weight:700;letter-spacing:.05em;background:linear-gradient(135deg,#fdcb6e,#fdcb6ecc);color:#fff}
+.callout{padding:1.25rem;border-radius:12px;margin:1.25rem 0;border-left:4px solid}
+.callout-definition{background:rgba(253,203,110,.08);border-color:#fdcb6e}
+.callout-example{background:rgba(0,210,255,.08);border-color:#00d2ff}
+.callout-examtip{background:rgba(255,107,107,.08);border-color:#ff6b6b}
+.callout-mnemonic{background:rgba(108,99,255,.08);border-color:#6c63ff}
+.callout-label{font-weight:700;font-size:.9rem;margin-bottom:.5rem}
+.callout-definition .callout-label{color:#fdcb6e}
+.callout-example .callout-label{color:#00d2ff}
+.callout-examtip .callout-label{color:#ff6b6b}
+.callout-mnemonic .callout-label{color:#6c63ff}
+.summary-box{border:1px solid rgba(0,210,255,.3);background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(108,99,255,.05));padding:1.25rem;border-radius:12px;margin:1.25rem 0}
+.summary-label{font-weight:700;font-size:1rem;color:#00d4ff;margin-bottom:.6rem}
+.summary-box ul{padding-left:1.5rem;margin:0}
+.summary-box li{color:rgba(255,255,255,.78);margin-bottom:.4rem;line-height:1.5;font-size:.9rem}
+.unit{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+h3{color:#fdcb6e;font-size:1.3rem;margin-bottom:1rem}
+h4{color:rgba(255,255,255,.9);font-size:1.05rem;margin:1.2rem 0 .6rem}
+ul,ol{padding-left:1.5rem}li{margin-bottom:.4rem;color:rgba(255,255,255,.78)}
+.back-link{display:block;padding:.6rem .75rem;margin-top:1rem;background:rgba(253,203,110,.1);border-radius:8px;color:#fdcb6e;text-decoration:none;font-weight:600;font-size:.85rem;text-align:center}
+.back-link:hover{background:rgba(253,203,110,.2)}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+th,td{padding:.5rem .75rem;border:1px solid rgba(255,255,255,.1);text-align:left}
+th{background:rgba(253,203,110,.1);color:#fdcb6e;font-weight:600}
+td{color:rgba(255,255,255,.78)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(214,48,49,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#d63031,#ff6b6b);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.video-toggle, .btn, button {
+    min-height: 44px;
+    min-width: 44px;
+}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpo02">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<aside class="study-sidebar">
+<div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-02</span></div>
+<nav class="sidebar-nav">
+<a href="#u1">Unit 1: Intro to PM</a>
+<a href="#u2">Unit 2: Project Feasibility</a>
+<a href="#u3">Unit 3: Project Chartering</a>
+<a href="#u4">Unit 4: Scope Management</a>
+<a href="#u5">Unit 5: PERT & CPM</a>
+<a href="#u6">Unit 6: Scheduling</a>
+<a href="#u7">Unit 7: Crashing</a>
+<a href="#u8">Unit 8: Earned Value</a>
+<a href="#u9">Unit 9: PMIS</a>
+<a href="#u10">Unit 10: Monitoring & Control</a>
+<a href="#u11">Unit 11: Risk Management</a>
+<a href="#u12">Unit 12: Agile PM</a>
+<a href="#u13">Unit 13: Contracts</a>
+<a href="#u14">Unit 14: Audit & Closure</a>
+<a href="#formulas">Key Formulas</a>
+<a href="#exam">Exam Focus</a>
+<a href="quiz-mmpo02.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav>
+</aside>
+<main class="study-content" id="main-content">
+<div class="study-header"><span class="subject-tag">MMPO-02</span><h1>Project Management</h1><p>4 Blocks, 14 Units | Planning, Execution, Risk & Closure</p></div>
+
+
+<div class="unit" id="u1"><h3>Unit 1: Introduction to Project Management</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project:</strong> A temporary endeavor undertaken to create a unique product, service, or result. <strong>Project Management:</strong> Application of knowledge, skills, tools, and techniques to meet project requirements.</p>
+<p><strong>Key Distinctions:</strong> Projects are <em>temporary</em> (have a definite beginning and end) and <em>unique</em> (produce something new). Operations are <em>ongoing</em> and <em>repetitive</em>. Programs are <em>groups of related projects</em> managed in a coordinated way. Portfolios are <em>collections of projects and programs</em> managed together for strategic objectives.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Management Fundamentals</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/23WJFRnI" title="Project Management Fundamentals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is a Project?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hEwBrMnE" title="What is a Project?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Project:</strong> A temporary endeavor undertaken to create a unique product, service, or result. <strong>Project Management:</strong> Application of knowledge, skills, tools, and techniques to meet project requirements.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Iron Triangle:</strong> The four competing constraints — Scope, Time, Cost, Quality</li>
+<li><strong>Project Life Cycle:</strong> Initiation &gt; Planning &gt; Execution &gt; Monitoring &amp; Controlling &gt; Closure</li>
+<li><strong>Stakeholders:</strong> Sponsor, project team, customers, end users, PM, functional managers</li>
+<li><strong>Project vs Operations:</strong> Temporary &amp; unique vs Ongoing &amp; repetitive</li>
+<li><strong>Program:</strong> A group of related projects managed in a coordinated way</li>
+<li><strong>Portfolio:</strong> A collection of projects and programs managed together for strategic objectives</li>
+</ul>
+<h4>Project vs Operations vs Program vs Portfolio</h4>
+<table>
+<tr><th>Aspect</th><th>Project</th><th>Operations</th><th>Program</th><th>Portfolio</th></tr>
+<tr><td>Duration</td><td>Temporary</td><td>Ongoing</td><td>Temporary</td><td>Ongoing</td></tr>
+<tr><td>Output</td><td>Unique</td><td>Repetitive</td><td>Coordinated benefits</td><td>Strategic objectives</td></tr>
+<tr><td>Example</td><td>Build a bridge</td><td>Maintain the bridge</td><td>Highway expansion program</td><td>Infrastructure portfolio</td></tr>
+</table>
+<h4>Project Management Knowledge Areas (PMI)</h4>
+<ol>
+<li><strong>Integration Management:</strong> Coordinating all project elements</li>
+<li><strong>Scope Management:</strong> Defining and controlling what's included</li>
+<li><strong>Schedule Management:</strong> Planning and controlling timelines</li>
+<li><strong>Cost Management:</strong> Budgeting and cost control</li>
+<li><strong>Quality Management:</strong> Ensuring standards are met</li>
+<li><strong>Resource Management:</strong> Managing team and materials</li>
+<li><strong>Communications Management:</strong> Stakeholder information flow</li>
+<li><strong>Risk Management:</strong> Identifying and responding to uncertainties</li>
+<li><strong>Procurement Management:</strong> Acquiring external resources</li>
+<li><strong>Stakeholder Management:</strong> Engaging all affected parties</li>
+</ol>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Building a new airport terminal is a <strong>project</strong> (temporary, unique). Running the airport daily is <strong>operations</strong> (ongoing, repetitive).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Be clear on the difference between Project vs Operations vs Program vs Portfolio. This is a frequent short-answer question.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>S-T-C-Q</strong> = Iron Triangle: Scope, Time, Cost, Quality</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Project = temporary + unique; Operations = ongoing + repetitive</li>
+<li>Iron Triangle: Scope, Time, Cost, Quality</li>
+<li>Life Cycle: Initiation, Planning, Execution, M&amp;C, Closure</li>
+</ul></div></div>
+
+
+<div class="unit" id="u2"><h3>Unit 2: Project Feasibility Analysis</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Feasibility Analysis:</strong> Assessment of a proposed project's practicality and viability. Determines whether the project should proceed, be modified, or abandoned. Evaluates technical, economic, legal, operational, and schedule aspects (TELOS framework).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>NPV Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hGkzC" title="NPV Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>IRR vs NPV</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="IRR vs NPV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>NPV:</strong> The difference between the present value of cash inflows and outflows over time. <strong>IRR:</strong> The discount rate that makes NPV zero. <strong>Payback Period:</strong> Time required to recover the cost of investment.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Feasibility Types (TELOS):</strong> Technical, Economic, Legal, Operational, Schedule</li>
+<li><strong>Cost-Benefit Analysis (CBA):</strong> Compare total costs vs total benefits in monetary terms</li>
+<li><strong>NPV:</strong> Sum of all discounted future cash flows. NPV &gt; 0: Accept | NPV &lt; 0: Reject</li>
+<li><strong>IRR:</strong> Discount rate at which NPV = 0. IRR &gt; Required rate: Accept</li>
+<li><strong>Payback Period:</strong> Time to recover the initial investment (simplest method)</li>
+<li><strong>ROI:</strong> (Net Profit / Cost of Investment) x 100</li>
+</ul>
+<h4>Feasibility Analysis Framework (TELOS)</h4>
+<table>
+<tr><th>Type</th><th>Key Question</th><th>Example</th></tr>
+<tr><td>Technical</td><td>Can we build it?</td><td>Technology availability, skilled labor</td></tr>
+<tr><td>Economic</td><td>Should we build it?</td><td>NPV, IRR, Payback analysis</td></tr>
+<tr><td>Legal</td><td>Are we allowed to?</td><td>Permits, regulations, compliance</td></tr>
+<tr><td>Operational</td><td>Will it work?</td><td>Integration with existing systems</td></tr>
+<tr><td>Schedule</td><td>Can we do it on time?</td><td>Timeline feasibility, deadlines</td></tr>
+</table>
+<h4>Investment Appraisal Methods Comparison</h4>
+<table>
+<tr><th>Method</th><th>Formula</th><th>Decision Rule</th><th>Advantage</th><th>Limitation</th></tr>
+<tr><td>NPV</td><td>Sum of PV of cash flows</td><td>NPV &gt; 0: Accept</td><td>Considers time value</td><td>Requires discount rate</td></tr>
+<tr><td>IRR</td><td>Rate where NPV = 0</td><td>IRR &gt; WACC: Accept</td><td>Easy to understand</td><td>Multiple IRRs possible</td></tr>
+<tr><td>Payback</td><td>Investment / Annual CF</td><td>Shorter = Better</td><td>Simple calculation</td><td>Ignores time value</td></tr>
+<tr><td>ROI</td><td>(Net Profit / Cost) x 100</td><td>Higher = Better</td><td>Percentage comparison</td><td>Ignores time value</td></tr>
+</table>
+<h4>NPV Calculation Example</h4>
+<p>Project costs Rs 100 lakh. Cash inflows: Year 1 = Rs 30 lakh, Year 2 = Rs 40 lakh, Year 3 = Rs 50 lakh. Discount rate = 10%.</p>
+<ul>
+<li>Year 1 PV = 30 / (1.10)^1 = Rs 27.27 lakh</li>
+<li>Year 2 PV = 40 / (1.10)^2 = Rs 33.06 lakh</li>
+<li>Year 3 PV = 50 / (1.10)^3 = Rs 37.57 lakh</li>
+<li>Total PV = Rs 97.90 lakh</li>
+<li>NPV = 97.90 - 100 = <strong>Rs -2.10 lakh (Reject)</strong></li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A company evaluating a new factory: if NPV = Rs 50 lakh at 10% discount rate, the project creates value and should be accepted.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>NPV and IRR calculations are almost guaranteed in exams. Practice numerical problems with different cash flow patterns.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>TELOS</strong> = Technical, Economic, Legal, Operational, Schedule feasibility</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>TELOS: Technical, Economic, Legal, Operational, Schedule</li>
+<li>NPV &gt; 0 accept; IRR &gt; required rate accept</li>
+<li>Payback = simplest; ROI = (Net Profit / Investment) x 100</li>
+</ul></div></div>
+
+
+<div class="unit" id="u3"><h3>Unit 3: Project Chartering</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Chartering:</strong> The process of formally authorizing a project. The charter is the key document that gives the project manager authority to apply organizational resources to project activities. It links the project to the ongoing work of the organization.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Charter</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VEDj3c" title="Project Charter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SOW Writing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/k3WJFRnI" title="SOW Writing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Project Charter:</strong> A document issued by the project initiator that formally authorizes the project. <strong>SOW:</strong> A detailed narrative description of the work required for the project.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Project Charter:</strong> Formal document that officially authorizes a project and gives PM authority</li>
+<li><strong>Statement of Work (SOW):</strong> Narrative description of products/services to be delivered</li>
+<li><strong>Business Case:</strong> Justification for the project — why it's needed</li>
+<li><strong>Charter Contains:</strong> Objectives, scope, stakeholders, authority, milestones, budget summary</li>
+</ul>
+<h4>Charter vs SOW vs Business Case</h4>
+<table>
+<tr><th>Document</th><th>Purpose</th><th>When Created</th><th>Key Contents</th></tr>
+<tr><td>Project Charter</td><td>Authorize project, give PM authority</td><td>Initiation phase</td><td>Objectives, scope, stakeholders, budget, milestones</td></tr>
+<tr><td>Statement of Work</td><td>Describe deliverables in detail</td><td>Before charter (external)</td><td>Products, services, timelines, acceptance criteria</td></tr>
+<tr><td>Business Case</td><td>Justify why project is needed</td><td>Before charter</td><td>Problem, solution, benefits, costs, ROI, risks</td></tr>
+</table>
+<h4>Charter Contents Checklist</h4>
+<ul>
+<li>Project title and description</li>
+<li>Project purpose and justification (business case reference)</li>
+<li>Measurable objectives and success criteria</li>
+<li>High-level requirements</li>
+<li>Assumptions and constraints</li>
+<li>Summary milestone schedule</li>
+<li>Summary budget</li>
+<li>Project organization (stakeholder list)</li>
+<li>Assigned PM and authority level</li>
+<li>Sponsor name and authority</li>
+</ul>
+<h4>SOW vs Charter Key Differences</h4>
+<table>
+<tr><th>Aspect</th><th>SOW</th><th>Charter</th></tr>
+<tr><td>Focus</td><td>What to deliver</td><td>Authorization to proceed</td></tr>
+<tr><td>Created By</td><td>Customer/sponsor</td><td>Sponsor/initiator</td></tr>
+<tr><td>Content</td><td>Scope, specifications, deliverables</td><td>Objectives, authority, budget</td></tr>
+<tr><td>Purpose</td><td>Describe work</td><td>Authorize project</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Before building a metro line, the government issues a project charter authorizing the work, defining scope (stations, route), budget, and appointing a project director.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know the difference between SOW and Charter. SOW = what to deliver. Charter = authorization to proceed.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>C-S-B-O-S</strong> = Charter includes: Scope, Stakeholders, Budget, Objectives, Schedule</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Charter = formal authorization; SOW = what to deliver</li>
+<li>Business case = why the project is needed</li>
+<li>Charter gives PM authority over project resources</li>
+</ul></div></div>
+
+
+<div class="unit" id="u4"><h3>Unit 4: Project Scope Management</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Scope Management:</strong> The processes required to ensure that the project includes all the work required, and only the work required, to complete the project successfully. It defines what is inside and outside the project boundaries, preventing scope creep and ensuring stakeholder alignment.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>WBS Work Breakdown</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b5sQ" title="WBS Work Breakdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Scope Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JFRnI" title="Scope Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>WBS:</strong> A deliverable-oriented grouping of project elements that organizes and defines the total scope. <strong>Work Package:</strong> The lowest level of WBS; can be estimated for cost and duration. <strong>Scope Creep:</strong> Uncontrolled scope expansion.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Scope Statement:</strong> Defines what is IN and OUT of the project (boundaries)</li>
+<li><strong>WBS:</strong> Hierarchical decomposition of total work into manageable chunks</li>
+<li><strong>Work Packages:</strong> Lowest level of WBS where time, cost, and resources can be estimated</li>
+<li><strong>Responsibility Matrix (RM):</strong> Maps tasks to team members (who does what)</li>
+<li><strong>Scope Creep:</strong> Uncontrolled expansion of project scope without adjustments to time, cost, or resources</li>
+<li><strong>Gold Plating:</strong> Adding extra features not requested by customer (different from scope creep)</li>
+</ul>
+<h4>WBS Levels</h4>
+<ol>
+<li>Level 1: Project (complete)</li>
+<li>Level 2: Major Deliverables (2-10 parts)</li>
+<li>Level 3-4: Sub-deliverables</li>
+<li>Level 5: Cost/Resource Account</li>
+<li>Level 6: Work Packages</li>
+</ol>
+<h4>WBS Creation Approaches</h4>
+<table>
+<tr><th>Approach</th><th>Description</th><th>Best For</th></tr>
+<tr><td>Top-Down</td><td>Decompose from project to work packages</td><td>Well-understood projects</td></tr>
+<tr><td>Bottom-Up</td><td>Identify tasks first, then group</td><td>New/uncertain projects</td></tr>
+<tr><td>Analogy</td><td>Use WBS from similar past project</td><td>Recurring project types</td></tr>
+<tr><td>Rolling Wave</td><td>Detail near-term, plan later in phases</td><td>Long projects with uncertainty</td></tr>
+</table>
+<h4>Scope Creep vs Gold Plating</h4>
+<table>
+<tr><th>Aspect</th><th>Scope Creep</th><th>Gold Plating</th></tr>
+<tr><td>Definition</td><td>Uncontrolled scope expansion</td><td>Adding extra features not requested</td></tr>
+<tr><td>Cause</td><td>Poor change control</td><td>Team adding "nice to have" features</td></tr>
+<tr><td>Impact</td><td>Delays, cost overruns</td><td>Wasted effort, potential defects</td></tr>
+<tr><td>Prevention</td><td>Formal change control process</td><td>Strict scope adherence</td></tr>
+</table>
+<h4>Responsibility Assignment Matrix (RAM)</h4>
+<table>
+<tr><th>Task</th><th>PM</th><th>Developer</th><th>Tester</th><th>Designer</th></tr>
+<tr><td>Requirements</td><td>A</td><td>C</td><td>I</td><td>R</td></tr>
+<tr><td>Design</td><td>A</td><td>C</td><td>I</td><td>R</td></tr>
+<tr><td>Coding</td><td>I</td><td>R</td><td>C</td><td>A</td></tr>
+<tr><td>Testing</td><td>I</td><td>C</td><td>R</td><td>A</td></tr>
+</table>
+<p><strong>R</strong> = Responsible, <strong>A</strong> = Accountable, <strong>C</strong> = Consulted, <strong>I</strong> = Informed</p>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Building a motorcycle WBS: Motor &gt; Frame &gt; Gears &gt; Wheels &gt; Brakes, each broken into sub-components (design, materials, assembly).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>WBS diagram questions are common. Practice drawing WBS for real-world scenarios (wedding, software project, construction).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>W-W-R</strong> = WBS, Work packages, Responsibility matrix</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>WBS = hierarchical decomposition of all project work</li>
+<li>Work packages = lowest level, estimable</li>
+<li>Scope creep = uncontrolled expansion without adjusting constraints</li>
+</ul></div></div>
+
+
+<div class="unit" id="u5"><h3>Unit 5: Project Network Analysis (PERT & CPM)</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Network Analysis:</strong> A set of techniques used to plan, schedule, and control projects. PERT (Program Evaluation and Review Technique) uses probabilistic time estimates for uncertain projects. CPM (Critical Path Method) uses deterministic estimates for well-understood projects. Both identify the critical path — the longest sequence of activities that determines minimum project duration.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PERT and CPM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="PERT and CPM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Critical Path Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hGkzC4TQ" title="Critical Path Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Critical Path:</strong> The longest sequence of activities that determines the minimum project duration. <strong>Float/Slack:</strong> The amount of time an activity can be delayed without delaying the project. <strong>PERT:</strong> Probabilistic time estimation using three estimates. <strong>CPM:</strong> Deterministic time estimation using a single estimate.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>PERT:</strong> Program Evaluation and Review Technique (probabilistic — uses 3 time estimates)</li>
+<li>Expected Time = (O + 4M + P) / 6</li>
+<li>Variance = ((P - O) / 6)^2</li>
+<li>O = Optimistic, M = Most Likely, P = Pessimistic</li>
+<li><strong>CPM:</strong> Critical Path Method (deterministic — single time estimate)</li>
+<li><strong>Critical Path:</strong> Longest path through the network (zero float)</li>
+<li><strong>Float/Slack:</strong> LS - ES = LF - EF</li>
+<li><strong>Forward Pass:</strong> Calculate Early Start (ES) and Early Finish (EF)</li>
+<li><strong>Backward Pass:</strong> Calculate Late Start (LS) and Late Finish (LF)</li>
+</ul>
+<h4>PERT vs CPM Detailed Comparison</h4>
+<table>
+<tr><th>Aspect</th><th>PERT</th><th>CPM</th></tr>
+<tr><td>Time Estimates</td><td>3 (Optimistic, Most Likely, Pessimistic)</td><td>1 (Single estimate)</td></tr>
+<tr><td>Nature</td><td>Probabilistic (uncertain)</td><td>Deterministic (certain)</td></tr>
+<tr><td>Focus</td><td>Time</td><td>Time-cost tradeoff</td></tr>
+<tr><td>Best For</td><td>R&amp;D, new products</td><td>Construction, known projects</td></tr>
+<tr><td>Activity Duration</td><td>Variable (statistical)</td><td>Fixed (known)</td></tr>
+<tr><td>Crashing</td><td>Not applicable</td><td>Applicable</td></tr>
+</table>
+<h4>Network Diagram Types</h4>
+<ul>
+<li><strong>AOA (Activity on Arrow):</strong> Activities represented by arrows, nodes represent events</li>
+<li><strong>AON (Activity on Node):</strong> Activities represented by nodes, arrows show dependencies</li>
+</ul>
+<h4>Float Types</h4>
+<table>
+<tr><th>Float Type</th><th>Formula</th><th>Meaning</th></tr>
+<tr><td>Total Float</td><td>LS - ES or LF - EF</td><td>Max delay without delaying project</td></tr>
+<tr><td>Free Float</td><td>ES(next) - EF(current)</td><td>Delay without affecting next activity</td></tr>
+<tr><td>Independent Float</td><td>ES(next) - LS(current)</td><td>Float independent of predecessor</td></tr>
+</table>
+<h4>PERT Calculation Example</h4>
+<p>Activity with O = 4 days, M = 6 days, P = 14 days.</p>
+<ul>
+<li>Expected Time = (4 + 4×6 + 14) / 6 = 42/6 = <strong>7 days</strong></li>
+<li>Variance = ((14 - 4) / 6)^2 = (10/6)^2 = <strong>2.78</strong></li>
+<li>Standard Deviation = sqrt(2.78) = <strong>1.67 days</strong></li>
+</ul>
+<table>
+<tr><th>PERT</th><th>CPM</th></tr>
+<tr><td>Probabilistic</td><td>Deterministic</td></tr>
+<tr><td>3 time estimates</td><td>1 time estimate</td></tr>
+<tr><td>Focus on time</td><td>Focus on time-cost tradeoff</td></tr>
+<tr><td>Research/uncertain projects</td><td>Construction/known projects</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>In a house construction project, the critical path might be: Foundation &gt; Walls &gt; Roof &gt; Finishing. Any delay in these delays the whole project.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>PERT calculations (expected time, variance) and critical path identification are the MOST frequently tested topics. Practice network diagrams extensively.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>O-M-P / 6</strong> = PERT expected time formula. <strong>"Longest = Critical"</strong> = Critical path is the longest path.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>PERT = (O + 4M + P) / 6; Variance = ((P-O)/6)^2</li>
+<li>Critical Path = longest path, zero float</li>
+<li>Float = LS - ES = LF - EF</li>
+</ul></div></div>
+
+
+<div class="unit" id="u6"><h3>Unit 6: Project Scheduling</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Scheduling:</strong> The process of determining the planned start and finish dates for project activities. Scheduling creates a time-based plan that shows when each activity should start and end, identifies dependencies, and establishes milestones. Gantt charts and network diagrams are the primary scheduling tools.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Gantt Charts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VEDj3c0G" title="Gantt Charts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Scheduling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/k3WJFRnI9" title="Project Scheduling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Gantt Chart:</strong> A bar chart that shows project activities against time. <strong>Milestone:</strong> A significant point or event in the project (zero duration).</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Gantt Chart:</strong> Horizontal bar chart showing activities vs time (visual scheduling tool)</li>
+<li><strong>Milestones:</strong> Key checkpoints/deliverables in the project (zero-duration events)</li>
+<li><strong>Resource Loading:</strong> Assigning resources to activities</li>
+<li><strong>Resource Leveling:</strong> Smoothing resource usage to avoid peaks and valleys</li>
+<li><strong>Slack Time:</strong> How long an activity can be delayed without affecting project end date</li>
+<li><strong>Resource Smoothing:</strong> Adjusting activities within float to level resources</li>
+</ul>
+<h4>Gantt Chart vs Network Diagram</h4>
+<table>
+<tr><th>Aspect</th><th>Gantt Chart</th><th>Network Diagram</th></tr>
+<tr><td>Format</td><td>Horizontal bars</td><td>Nodes and arrows</td></tr>
+<tr><td>Shows</td><td>Time, duration, progress</td><td>Dependencies, critical path</td></tr>
+<tr><td>Best For</td><td>Time visualization, tracking</td><td>Dependency analysis, planning</td></tr>
+<tr><td>Limitations</td><td>Doesn't show dependencies well</td><td>Hard to see time at a glance</td></tr>
+<tr><td>Created During</td><td>Scheduling phase</td><td>Planning phase</td></tr>
+</table>
+<h4>Resource Leveling vs Resource Smoothing</h4>
+<table>
+<tr><th>Aspect</th><th>Resource Leveling</th><th>Resource Smoothing</th></tr>
+<tr><td>Goal</td><td>Resolve resource over-allocation</td><td>Even out resource usage</td></tr>
+<tr><td>Impact on Schedule</td><td>May extend project duration</td><td>Does not extend project duration</td></tr>
+<tr><td>Uses Float</td><td>May use total float</td><td>Only uses free float</td></tr>
+<tr><td>Critical Path</td><td>May change critical path</td><td>Critical path unchanged</td></tr>
+</table>
+<h4>Scheduling Terminology</h4>
+<ul>
+<li><strong>Activity Duration:</strong> Time required to complete an activity</li>
+<li><strong>Lead Time:</strong> Overlap between activities (start successor before predecessor finishes)</li>
+<li><strong>Lag Time:</strong> Delay between activities (must wait after predecessor finishes)</li>
+<li><strong>Fast Tracking:</strong> Performing activities in parallel</li>
+<li><strong>Crashing:</strong> Adding resources to shorten duration</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A Gantt chart for a software project shows coding (weeks 1-4), testing (weeks 3-5), deployment (week 6) as parallel bars.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Gantt charts vs Network diagrams — know when to use each. Gantt = time visualization. Network = dependency and critical path.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>G-M-R-L</strong> = Gantt, Milestones, Resource loading, Leveling</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Gantt = visual time chart; Milestones = zero-duration events</li>
+<li>Resource leveling smooths peaks and valleys</li>
+<li>Gantt for time viz, Network for dependencies</li>
+</ul></div></div>
+
+
+<div class="unit" id="u7"><h3>Unit 7: Project Crashing</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Crashing:</strong> A schedule compression technique that reduces project duration by adding resources to critical path activities. The goal is to achieve the maximum schedule compression with the least cost increase. Only critical path activities can be crashed, and the cheapest crash option is selected first.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Crashing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b5sQwCr" title="Project Crashing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Fast Tracking</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JFRnI9e0" title="Fast Tracking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Crashing:</strong> Compressing the schedule by adding resources to critical path activities. <strong>Fast Tracking:</strong> Performing phases in parallel that would normally be done sequentially.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Crashing:</strong> Reducing project duration by adding resources (cost-time tradeoff)</li>
+<li><strong>Fast Tracking:</strong> Performing activities in parallel that were originally sequential</li>
+<li>Crash Cost per Period = (Crash Cost - Normal Cost) / (Normal Time - Crash Time)</li>
+<li><strong>Rule:</strong> Crash critical path activities first, starting with the cheapest option</li>
+</ul>
+<h4>Crashing vs Fast Tracking</h4>
+<table>
+<tr><th>Aspect</th><th>Crashing</th><th>Fast Tracking</th></tr>
+<tr><td>Method</td><td>Add resources (overtime, extra staff)</td><td>Perform activities in parallel</td></tr>
+<tr><td>Cost Impact</td><td>Increases cost</td><td>May not increase cost</td></tr>
+<tr><td>Risk</td><td>Lower risk</td><td>Higher risk (rework)</td></tr>
+<tr><td>Best For</td><td>Critical path activities</td><td>Activities with dependencies</td></tr>
+<tr><td>Limitation</td><td>Not all activities can be crashed</td><td>Not all activities can overlap</td></tr>
+</table>
+<h4>Crashing Procedure</h4>
+<ol>
+<li>Identify the critical path</li>
+<li>Find activities that can be crashed</li>
+<li>Calculate crash cost per period for each</li>
+<li>Select cheapest critical activity to crash</li>
+<li>Crash by one time period</li>
+<li>Recalculate critical path (may change)</li>
+<li>Repeat until target duration reached or no more crashing possible</li>
+</ol>
+<h4>Crashing Example</h4>
+<table>
+<tr><th>Activity</th><th>Normal Time</th><th>Crash Time</th><th>Normal Cost</th><th>Crash Cost</th><th>Cost/Period</th></tr>
+<tr><td>A</td><td>5 days</td><td>3 days</td><td>Rs 10,000</td><td>Rs 14,000</td><td>Rs 2,000/day</td></tr>
+<tr><td>B</td><td>4 days</td><td>2 days</td><td>Rs 8,000</td><td>Rs 12,000</td><td>Rs 2,000/day</td></tr>
+<tr><td>C</td><td>6 days</td><td>4 days</td><td>Rs 12,000</td><td>Rs 18,000</td><td>Rs 3,000/day</td></tr>
+</table>
+<p>If A, B, C are all on critical path: Crash A first (cheapest at Rs 2,000/day), then B (same cost), then C.</p>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A delayed building project: hire extra workers (crashing) or start interior work before exterior is complete (fast tracking).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Crashing numerical problems are very common. Practice calculating crash cost per period and determining which activities to crash.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>"Crash Cheap Critical First"</strong> = Always crash the cheapest critical activity</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Crashing = add resources; Fast tracking = parallel activities</li>
+<li>Crash Cost/Period = (CC-NC)/(NT-CT)</li>
+<li>Always crash cheapest critical activity first</li>
+</ul></div></div>
+
+
+<div class="unit" id="u8"><h3>Unit 8: Earned Value Analysis (EVA)</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Earned Value Analysis:</strong> A project management technique that integrates scope, schedule, and cost data to assess project performance and progress. It answers: "Are we on time?" and "Are we on budget?" by comparing what we planned (PV), what we accomplished (EV), and what we spent (AC).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Earned Value Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VEDj3c0Gh" title="Earned Value Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>EVM Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="EVM Explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Earned Value:</strong> The value of work actually completed, measured in budget terms. <strong>CPI:</strong> Cost Performance Index — efficiency of budget utilization. <strong>SPI:</strong> Schedule Performance Index — efficiency of time utilization.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>PV (Planned Value):</strong> Budgeted cost of work scheduled (what we planned to spend)</li>
+<li><strong>EV (Earned Value):</strong> Budgeted cost of work performed (what we actually accomplished)</li>
+<li><strong>AC (Actual Cost):</strong> Actual cost of work performed (what we actually spent)</li>
+<li><strong>BAC (Budget at Completion):</strong> Total approved budget</li>
+<li><strong>CV = EV - AC</strong> (Cost Variance; positive = under budget)</li>
+<li><strong>SV = EV - PV</strong> (Schedule Variance; positive = ahead of schedule)</li>
+<li><strong>CPI = EV / AC</strong> (&gt;1 = efficient; &lt;1 = over budget)</li>
+<li><strong>SPI = EV / PV</strong> (&gt;1 = ahead; &lt;1 = behind)</li>
+<li><strong>EAC = BAC / CPI</strong> (Estimate at Completion)</li>
+<li><strong>ETC = EAC - AC</strong> (Estimate to Complete)</li>
+<li><strong>VAC = BAC - EAC</strong> (Variance at Completion)</li>
+<li><strong>TCPI = (BAC - EV) / (BAC - AC)</strong> (To-Complete Performance Index)</li>
+</ul>
+<h4>EVA Formulas Quick Reference</h4>
+<table>
+<tr><th>Formula</th><th>Interpretation</th><th>Good Sign</th></tr>
+<tr><td>CV = EV - AC</td><td>Cost efficiency</td><td>Positive = under budget</td></tr>
+<tr><td>SV = EV - PV</td><td>Schedule efficiency</td><td>Positive = ahead</td></tr>
+<tr><td>CPI = EV / AC</td><td>Cost performance</td><td>&gt; 1.0 = efficient</td></tr>
+<tr><td>SPI = EV / PV</td><td>Schedule performance</td><td>&gt; 1.0 = ahead</td></tr>
+<tr><td>EAC = BAC / CPI</td><td>Estimated final cost</td><td>Lower than BAC</td></tr>
+<tr><td>ETC = EAC - AC</td><td>Remaining cost</td><td>Manageable</td></tr>
+<tr><td>VAC = BAC - EAC</td><td>Expected variance</td><td>Positive = savings</td></tr>
+<tr><td>TCPI = (BAC-EV)/(BAC-AC)</td><td>Required efficiency</td><td>Achievable (&lt;1.2)</td></tr>
+</table>
+<h4>EVA Interpretation Guide</h4>
+<table>
+<tr><th>Scenario</th><th>CV</th><td>SV</td><th>CPI</th><th>SPI</th><th>Meaning</th></tr>
+<tr><td>Over budget, behind</td><td>Negative</td><td>Negative</td><td>&lt; 1</td><td>&lt; 1</td><td>Trouble - needs corrective action</td></tr>
+<tr><td>Under budget, ahead</td><td>Positive</td><td>Positive</td><td>&gt; 1</td><td>&gt; 1</td><td>Excellent performance</td></tr>
+<tr><td>Over budget, ahead</td><td>Negative</td><td>Positive</td><td>&lt; 1</td><td>&gt; 1</td><td>Spending more but ahead of schedule</td></tr>
+<tr><td>Under budget, behind</td><td>Positive</td><td>Negative</td><td>&gt; 1</td><td>&lt; 1</td><td>Efficient but behind schedule</td></tr>
+</table>
+<h4>Complete EVA Example</h4>
+<p><strong>Given:</strong> Project BAC = Rs 500 lakh. At month 6: PV = Rs 200 lakh, EV = Rs 180 lakh, AC = Rs 220 lakh.</p>
+<ul>
+<li>CV = 180 - 220 = <strong>Rs -40 lakh (over budget)</strong></li>
+<li>SV = 180 - 200 = <strong>Rs -20 lakh (behind schedule)</strong></li>
+<li>CPI = 180 / 220 = <strong>0.82 (spending Rs 1.22 for every Rs 1 of work)</strong></li>
+<li>SPI = 180 / 200 = <strong>0.90 (completing 90% of planned work)</strong></li>
+<li>EAC = 500 / 0.82 = <strong>Rs 609.76 lakh (project will cost Rs 109.76 lakh more)</strong></li>
+<li>ETC = 609.76 - 220 = <strong>Rs 389.76 lakh (remaining cost)</strong></li>
+<li>VAC = 500 - 609.76 = <strong>Rs -109.76 lakh (overrun)</strong></li>
+</ul>
+<table>
+<tr><th>Formula</th><th>What It Measures</th></tr>
+<tr><td>CV = EV - AC</td><td>Cost Variance</td></tr>
+<tr><td>SV = EV - PV</td><td>Schedule Variance</td></tr>
+<tr><td>CPI = EV / AC</td><td>Cost efficiency</td></tr>
+<tr><td>SPI = EV / PV</td><td>Schedule efficiency</td></tr>
+<tr><td>EAC = BAC / CPI</td><td>Estimated total cost</td></tr>
+<tr><td>VAC = BAC - EAC</td><td>Expected variance at end</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Project BAC = Rs 100 lakh. At month 3: PV = Rs 30 lakh, EV = Rs 25 lakh, AC = Rs 35 lakh. CPI = 25/35 = 0.71 (over budget). SPI = 25/30 = 0.83 (behind schedule).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>EVA is the HIGHEST frequency numerical question. Memorize: CV = EV-AC, SV = EV-PV, CPI = EV/AC, SPI = EV/PV. Always EV comes first!</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>E-A-P</strong> = EV minus AC = CV, EV minus PV = SV. <strong>"EV on top"</strong> for CPI and SPI.</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>CV = EV - AC; SV = EV - PV</li>
+<li>CPI = EV/AC; SPI = EV/PV</li>
+<li>EAC = BAC / CPI</li>
+</ul></div></div>
+
+
+<div class="unit" id="u9"><h3>Unit 9: Project Management Information System (PMIS)</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>PMIS:</strong> An automated system used to create, collect, store, and distribute project information. It integrates scheduling, resource management, cost tracking, and reporting tools to provide real-time project visibility. Modern PMIS includes dashboards, collaboration features, and analytics capabilities.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PMIS Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hGkzC4TQx" title="PMIS Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Software</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b5sQwCrR" title="Project Software" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>PMIS:</strong> A system that collects, integrates, and distributes project management information.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>PMIS:</strong> Integrates planning, scheduling, reporting, and reviewing</li>
+<li><strong>Tools:</strong> MS Project, Primavera P6, Jira, Asana</li>
+<li><strong>Report Types:</strong> Progress, Status, Exception, Forecast</li>
+<li><strong>Dashboards:</strong> Visual display of key project metrics</li>
+</ul>
+<h4>PMIS Components</h4>
+<table>
+<tr><th>Component</th><th>Function</th><th>Example</th></tr>
+<tr><td>Planning Module</td><td>Create WBS, schedule, budget</td><td>MS Project Gantt charts</td></tr>
+<tr><td>Scheduling Module</td><td>Track progress, dependencies</td><td>Primavera P6 critical path</td></tr>
+<tr><td>Resource Module</td><td>Allocate and level resources</td><td>Resource histograms</td></tr>
+<tr><td>Cost Module</td><td>Track budget vs actual</td><td>Earned Value reports</td></tr>
+<tr><td>Risk Module</td><td>Identify and track risks</td><td>Risk registers</td></tr>
+<tr><td>Communication Module</td><td>Stakeholder updates</td><td>Dashboards, reports</td></tr>
+</table>
+<h4>Report Types Comparison</h4>
+<table>
+<tr><th>Report Type</th><th>Purpose</th><th>Frequency</th><th>Audience</th></tr>
+<tr><td>Progress</td><td>What has been accomplished</td><td>Weekly/bi-weekly</td><td>Project team</td></tr>
+<tr><td>Status</td><td>Current state of project</td><td>Monthly</td><td>Stakeholders</td></tr>
+<tr><td>Exception</td><td>Deviations from plan</td><td>As needed</td><td>Management</td></tr>
+<tr><td>Forecast</td><td>Predictions for future</td><td>Monthly/quarterly</td><td>Executives</td></tr>
+</table>
+<h4>PM Tools Comparison</h4>
+<table>
+<tr><th>Tool</th><th>Best For</th><th>Key Features</th><th>Cost</th></tr>
+<tr><td>MS Project</td><td>Traditional PM</td><td>Gantt, resource leveling, EVA</td><td>Commercial</td></tr>
+<tr><td>Primavera P6</td><td>Large projects</td><td>Multi-project, enterprise</td><td>Commercial</td></tr>
+<tr><td>Jira</td><td>Agile/Scrum</td><td>Backlog, sprints, boards</td><td>Freemium</td></tr>
+<tr><td>Asana</td><td>Team collaboration</td><td>Tasks, timelines, portfolios</td><td>Freemium</td></tr>
+<tr><td>Trello</td><td>Kanban boards</td><td>Visual cards, lists</td><td>Free</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Using MS Project to create Gantt charts, track milestones, and generate status reports for stakeholders.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know the four report types and when each is used.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>P-S-E-F</strong> = Progress, Status, Exception, Forecast reports</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>PMIS integrates planning, scheduling, reporting</li>
+<li>Four report types: Progress, Status, Exception, Forecast</li>
+<li>Tools: MS Project, Primavera, Jira, Asana</li>
+</ul></div></div>
+
+
+<div class="unit" id="u10"><h3>Unit 10: Project Monitoring and Control</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Monitoring & Control:</strong> The process of tracking, reviewing, and regulating project progress and performance. Monitoring involves collecting data on actual performance, while controlling involves comparing actual vs planned performance and taking corrective action when necessary. This ensures the project stays on track and deviations are addressed promptly.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Monitoring and Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Monitoring and Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Change Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VEDj3c0GhB" title="Change Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Change Control Board (CCB):</strong> Group that reviews, approves, or rejects change requests. <strong>Baseline:</strong> The approved version of the project plan against which progress is measured.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Monitoring:</strong> Collecting data on actual performance (passive observation)</li>
+<li><strong>Controlling:</strong> Comparing actual vs planned and taking corrective action (active intervention)</li>
+<li><strong>Change Control:</strong> Formal process for managing changes to project baselines</li>
+<li><strong>Configuration Management:</strong> Tracking versions of deliverables and documentation</li>
+<li><strong>Variance Analysis:</strong> Comparing planned vs actual performance</li>
+</ul>
+<h4>Monitoring vs Controlling</h4>
+<table>
+<tr><th>Aspect</th><th>Monitoring</th><th>Controlling</th></tr>
+<tr><td>Focus</td><td>Collecting data</td><td>Taking action</td></tr>
+<tr><td>Nature</td><td>Passive (observe)</td><td>Active (intervene)</td></tr>
+<tr><td>Output</td><td>Performance reports</td><td>Change requests, corrective actions</td></tr>
+<tr><td>Question</td><td>"What is happening?"</td><td>"What should we do about it?"</td></tr>
+</table>
+<h4>Change Control Process</h4>
+<ol>
+<li><strong>Identify Change:</strong> Recognize need for change</li>
+<li><strong>Document Change:</strong> Create change request form</li>
+<li><strong>Evaluate Impact:</strong> Assess effect on scope, time, cost, quality</li>
+<li><strong>CCB Review:</strong> Change Control Board reviews request</li>
+<li><strong>Approve/Reject:</strong> CCB makes decision</li>
+<li><strong>Update Baselines:</strong> If approved, update project plans</li>
+<li><strong>Communicate:</strong> Inform stakeholders of changes</li>
+<li><strong>Track:</strong> Monitor implementation of change</li>
+</ol>
+<h4>Configuration Management Activities</h4>
+<ul>
+<li><strong>Configuration Identification:</strong> Identify items to be controlled</li>
+<li><strong>Configuration Control:</strong> Manage changes to configuration items</li>
+<li><strong>Configuration Status Accounting:</strong> Track current status of items</li>
+<li><strong>Configuration Audit:</strong> Verify items match specifications</li>
+</ul>
+<h4>Change Request Form Contents</h4>
+<ul>
+<li>Change ID and date</li>
+<li>Description of change</li>
+<li>Reason for change</li>
+<li>Impact analysis (scope, time, cost, quality)</li>
+<li>Alternatives considered</li>
+<li>Recommendation</li>
+<li>Approval/rejection with date</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Client requests a new feature. The change request goes to CCB, which evaluates impact on scope, time, and cost before approving or rejecting.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Distinguish between monitoring (data collection) and controlling (corrective action). Change control process steps are a common question.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>M-C-V</strong> = Monitor, Control, Variance analysis</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Monitoring = data collection; Controlling = corrective action</li>
+<li>Change control = formal process for baseline changes</li>
+<li>Configuration management = version tracking</li>
+</ul></div></div>
+
+
+<div class="unit" id="u11"><h3>Unit 11: Project Risk Management</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Risk Management:</strong> The systematic process of identifying, analyzing, and responding to project risks. Risks can be negative (threats) or positive (opportunities). Effective risk management increases the probability of project success by proactively addressing uncertainties before they become issues.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Risk Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JFRnI9e0Z" title="Risk Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Risk Register</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/k3WJFRnI9e" title="Risk Register" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Risk Register:</strong> A document listing all identified risks, their analysis, and response plans. <strong>Contingency Reserve:</strong> Budget/time set aside for identified risks. <strong>Management Reserve:</strong> Budget/time set aside for unknown risks.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Risk:</strong> An uncertain event that, if it occurs, affects project objectives (positive or negative)</li>
+<li><strong>Risk Identification:</strong> Brainstorming, Delphi technique, SWOT, checklists, interviews</li>
+<li><strong>Qualitative Analysis:</strong> Probability-Impact matrix (prioritize risks)</li>
+<li><strong>Quantitative Analysis:</strong> Monte Carlo simulation, decision trees, sensitivity analysis</li>
+<li><strong>Negative Risk Response (ATMA):</strong> Avoid, Transfer, Mitigate, Accept</li>
+<li><strong>Positive Risk Response (ESEA):</strong> Exploit, Share, Enhance, Accept</li>
+<li><strong>Contingency Plan:</strong> Response for identified risks (Plan B)</li>
+<li><strong>Fallback Plan:</strong> Response for residual risks that remain after contingency</li>
+</ul>
+<h4>Risk Management Process</h4>
+<ol>
+<li><strong>Plan Risk Management:</strong> Define how to approach risk activities</li>
+<li><strong>Identify Risks:</strong> Determine which risks may affect the project</li>
+<li><strong>Qualitative Analysis:</strong> Prioritize risks by probability and impact</li>
+<li><strong>Quantitative Analysis:</strong> Numerically analyze risk effects</li>
+<li><strong>Plan Responses:</strong> Develop options to enhance opportunities and reduce threats</li>
+<li><strong>Monitor Risks:</strong> Track identified risks, identify new ones, evaluate process</li>
+</ol>
+<h4>Probability-Impact Matrix</h4>
+<table>
+<tr><th>Probability / Impact</th><th>Low Impact</th><th>Medium Impact</th><th>High Impact</th></tr>
+<tr><td>High Probability</td><td>Medium</td><td>High</td><td>Critical</td></tr>
+<tr><td>Medium Probability</td><td>Low</td><td>Medium</td><td>High</td></tr>
+<tr><td>Low Probability</td><td>Low</td><td>Low</td><td>Medium</td></tr>
+</table>
+<h4>Negative vs Positive Risk Responses</h4>
+<table>
+<tr><th>Strategy</th><th>Negative Risk (Threat)</th><th>Positive Risk (Opportunity)</th></tr>
+<tr><td>Eliminate/Exploit</td><td>Avoid: Eliminate the threat</td><td>Exploit: Ensure opportunity happens</td></tr>
+<tr><td>Transfer/Share</td><td>Transfer: Shift impact to 3rd party (insurance)</td><td>Share: Allocate ownership to 3rd party</td></tr>
+<tr><td>Reduce/Enhance</td><td>Mitigate: Reduce probability or impact</td><td>Enhance: Increase probability or impact</td></tr>
+<tr><td>Accept</td><td>Accept: Take no action (passive/active)</td><td>Accept: Take no action</td></tr>
+</table>
+<h4>Risk Register Contents</h4>
+<ul>
+<li>Risk ID and description</li>
+<li>Risk category (technical, external, organizational, PM)</li>
+<li>Probability (1-5 scale)</li>
+<li>Impact (1-5 scale)</li>
+<li>Risk score (Probability x Impact)</li>
+<li>Priority (High/Medium/Low)</li>
+<li>Response strategy (ATMA/ESEA)</li>
+<li>Response plan details</li>
+<li>Owner (who is responsible)</li>
+<li>Status (open/closed)</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Construction project risk: monsoon delay (identified risk). Contingency plan: schedule buffer. Transfer: insurance for equipment damage.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Risk response strategies (ATMA for negative) are frequently asked. Know the difference between contingency and fallback plans.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>ATMA</strong> = Avoid, Transfer, Mitigate, Accept (negative risks). <strong>ESEA</strong> = Exploit, Share, Enhance, Accept (positive risks).</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>ATMA: Avoid, Transfer, Mitigate, Accept (negative)</li>
+<li>ESEA: Exploit, Share, Enhance, Accept (positive)</li>
+<li>Contingency = Plan B for known risks; Fallback for residual risks</li>
+</ul></div></div>
+
+
+<div class="unit" id="u12"><h3>Unit 12: Agile Project Management</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Agile Project Management:</strong> An iterative approach to delivering a project throughout its life cycle. Agile delivers working software in short iterations (sprints), embracing changing requirements and customer collaboration. It values individuals, working software, customer collaboration, and responding to change over rigid processes.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Agile Scrum</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hEwBrMnEds" title="Agile Scrum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sprint Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b5sQwCrRR" title="Sprint Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Sprint:</strong> A time-boxed iteration in Scrum (1-4 weeks). <strong>Product Backlog:</strong> Prioritized list of all features/requirements. <strong>Sprint Backlog:</strong> Items selected for the current sprint.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Agile Manifesto Values:</strong>
+<ol>
+<li>Individuals and interactions &gt; processes and tools</li>
+<li>Working software &gt; comprehensive documentation</li>
+<li>Customer collaboration &gt; contract negotiation</li>
+<li>Responding to change &gt; following a plan</li>
+</ol></li>
+<li><strong>Scrum Framework:</strong> Sprint (1-4 weeks), Daily Standup, Sprint Review, Sprint Retrospective</li>
+<li><strong>Scrum Roles:</strong> Product Owner, Scrum Master, Development Team</li>
+<li><strong>Scrum Artifacts:</strong> Product Backlog, Sprint Backlog, Increment</li>
+<li><strong>Kanban:</strong> Visual board with columns, WIP limits, continuous flow</li>
+</ul>
+<h4>Scrum Framework Details</h4>
+<table>
+<tr><th>Component</th><th>Description</th><th>Duration</th></tr>
+<tr><td>Sprint</td><td>Time-boxed iteration</td><td>1-4 weeks (fixed)</td></tr>
+<tr><td>Sprint Planning</td><td>Select items for sprint</td><td>2-4 hours</td></tr>
+<tr><td>Daily Standup</td><td>15-min daily sync</td><td>15 minutes daily</td></tr>
+<tr><td>Sprint Review</td><td>Demo working software</td><td>1-2 hours</td></tr>
+<tr><td>Sprint Retrospective</td><td>Process improvement</td><td>1-1.5 hours</td></tr>
+</table>
+<h4>Scrum Roles and Responsibilities</h4>
+<table>
+<tr><th>Role</th><th>Responsibility</th><th>Key Activities</th></tr>
+<tr><td>Product Owner</td><td>Maximize product value</td><td>Manage backlog, prioritize, accept/reject work</td></tr>
+<tr><td>Scrum Master</td><td>Facilitate Scrum process</td><td>Remove impediments, coach, protect team</td></tr>
+<tr><td>Development Team</td><td>Deliver working software</td><td>Self-organizing, cross-functional, 3-9 members</td></tr>
+</table>
+<h4>Agile vs Waterfall Detailed Comparison</h4>
+<table>
+<tr><th>Aspect</th><th>Agile</th><th>Waterfall</th></tr>
+<tr><td>Approach</td><td>Iterative &amp; Incremental</td><td>Sequential &amp; Linear</td></tr>
+<tr><td>Requirements</td><td>Evolve throughout</td><td>Fixed at start</td></tr>
+<tr><td>Planning</td><td>Adaptive (rolling wave)</td><td>Predictive (upfront)</td></tr>
+<tr><td>Delivery</td><td>Frequent small releases</td><td>Single final release</td></tr>
+<tr><td>Customer Involvement</td><td>Continuous</td><td>At milestones</td></tr>
+<tr><td>Change</td><td>Welcomed</td><td>Resisted</td></tr>
+<tr><td>Testing</td><td>Continuous</td><td>After development</td></tr>
+<tr><td>Documentation</td><td>Lightweight</td><td>Comprehensive</td></tr>
+<tr><td>Best For</td><td>Uncertain, changing requirements</td><td>Well-defined, stable requirements</td></tr>
+</table>
+<h4>Kanban vs Scrum</h4>
+<table>
+<tr><th>Aspect</th><th>Scrum</th><th>Kanban</th></tr>
+<tr><td>Iterations</td><td>Fixed sprints</td><td>Continuous flow</td></tr>
+<tr><td>Roles</td><td>Defined (PO, SM, Dev)</td><td>No prescribed roles</td></tr>
+<tr><td>Changes</td><td>Between sprints</td><td>Anytime</td></tr>
+<tr><td>WIP Limits</td><td>Per sprint</td><td>Per column</td></tr>
+<tr><td>Board</td><td>Reset each sprint</td><td>Persistent</td></tr>
+</table>
+<table>
+<tr><th>Agile</th><th>Waterfall</th></tr>
+<tr><td>Iterative</td><td>Sequential</td></tr>
+<tr><td>Flexible scope</td><td>Fixed scope</td></tr>
+<tr><td>Customer collaboration</td><td>Contract negotiation</td></tr>
+<tr><td>Working software priority</td><td>Documentation priority</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A software team uses 2-week sprints. Daily 15-min standups. Sprint review demos working features to stakeholders.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Agile vs Waterfall comparison is a frequent question. Know Scrum roles, artifacts, and ceremonies.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>I-W-C-R</strong> = Agile values: Individuals, Working software, Customer collaboration, Responding to change</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>Agile = iterative, incremental, customer-focused, adaptive</li>
+<li>Scrum = Sprint-based framework with Product Owner, Scrum Master, Dev Team</li>
+<li>Artifacts: Product Backlog, Sprint Backlog, Increment</li>
+</ul></div></div>
+
+
+<div class="unit" id="u13"><h3>Unit 13: Project Contracts and Partnering</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Contract:</strong> A legally binding agreement between the buyer and seller that defines the terms and conditions under which work will be performed. Contract types include Fixed Price, Cost Reimbursable, and Time & Material, each with different risk allocations between buyer and seller.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Contracts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VEDj3c0GhBx" title="Project Contracts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>BOT Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JFRnI9e0Zx" title="BOT Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Fixed Price Contract:</strong> Total price is set; seller absorbs cost overruns. <strong>Cost Reimbursable:</strong> Buyer pays all legitimate costs plus a fee to the seller. <strong>BOT:</strong> A project delivery method where the contractor builds, operates for a period, then transfers ownership.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Fixed Price (FP):</strong> Seller bears cost risk (buyer knows total cost upfront)</li>
+<li><strong>Cost Reimbursable (CR):</strong> Buyer bears cost risk (seller gets actual costs + fee)</li>
+<li><strong>Time &amp; Material (T&amp;M):</strong> Hybrid (hourly/daily rates + materials)</li>
+<li><strong>PPP (Public-Private Partnership):</strong> Government + Private sector collaboration</li>
+<li><strong>BOT:</strong> Build-Operate-Transfer (private builds, operates, then transfers to government)</li>
+<li><strong>BOOT:</strong> Build-Own-Operate-Transfer</li>
+</ul>
+<h4>Contract Types Detailed Comparison</h4>
+<table>
+<tr><th>Aspect</th><th>Fixed Price (FP)</th><th>Cost Reimbursable (CR)</th><th>Time &amp; Material (T&amp;M)</th></tr>
+<tr><td>Risk Bearer</td><td>Seller</td><td>Buyer</td><td>Shared</td></tr>
+<tr><td>Scope Clarity</td><td>Well-defined</td><td>Unclear/evolving</td><td>Small/urgent</td></tr>
+<tr><td>Cost Predictability</td><td>High (fixed)</td><td>Low (actual costs)</td><td>Medium</td></tr>
+<tr><td>Seller Incentive</td><td>Control costs</td><td>Increase costs</td><td>Bill more hours</td></tr>
+<tr><td>Buyer Control</td><td>Low</td><td>High</td><td>Medium</td></tr>
+<tr><td>Best For</td><td>Construction, manufacturing</td><td>R&amp;D, innovation</td><td>Consulting, staff augmentation</td></tr>
+</table>
+<h4>Cost Reimbursable Contract Variants</h4>
+<table>
+<tr><th>Type</th><th>Description</th><th>Seller Incentive</th></tr>
+<tr><td>CPFF (Cost Plus Fixed Fee)</td><td>Costs + fixed fee</td><td>Low (fee doesn't change)</td></tr>
+<tr><td>CPIF (Cost Plus Incentive Fee)</td><td>Costs + incentive for meeting targets</td><td>Medium (performance-based)</td></tr>
+<tr><td>CPAF (Cost Plus Award Fee)</td><td>Costs + subjective award</td><td>High (please buyer)</td></tr>
+<tr><td>CPPC (Cost Plus Percentage of Cost)</td><td>Costs + % of costs</td><td>Very low (higher costs = higher fee)</td></tr>
+</table>
+<h4>PPP/BOT Models</h4>
+<table>
+<tr><th>Model</th><th>Build</th><th>Own</th><th>Operate</th><th>Transfer</th></tr>
+<tr><td>BOT</td><td>Private</td><td>Government</td><td>Private (period)</td><td>To Government</td></tr>
+<tr><td>BOOT</td><td>Private</td><td>Private</td><td>Private (period)</td><td>To Government</td></tr>
+<tr><td>BOO</td><td>Private</td><td>Private</td><td>Private (permanent)</td><td>Never</td></tr>
+<tr><td>DBFO</td><td>Private</td><td>Private</td><td>Private</td><td>Finance + Operate</td></tr>
+</table>
+<table>
+<tr><th>Fixed Price</th><th>Cost Reimbursable</th><th>T&amp;M</th></tr>
+<tr><td>Seller bears risk</td><td>Buyer bears risk</td><td>Shared risk</td></tr>
+<tr><td>Known scope</td><td>Unclear scope</td><td>Small/urgent work</td></tr>
+<tr><td>Predictable cost</td><td>Actual cost + fee</td><td>Hourly rate + materials</td></tr>
+</table>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A highway project using BOT: private company builds the highway, collects tolls for 30 years (operates), then transfers ownership to the government.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Contract types and risk allocation (who bears the risk) is a key exam question.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>F-C-T</strong> = Fixed, Cost-reimbursable, T&amp;M contract types. <strong>BOT = Build, Operate, Transfer</strong></p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>FP = seller risk; CR = buyer risk; T&amp;M = shared</li>
+<li>BOT = Build, Operate, Transfer</li>
+<li>PPP = Government + Private collaboration</li>
+</ul></div></div>
+
+
+<div class="unit" id="u14"><h3>Unit 14: Project Audit and Closure</h3>
+<div class="callout callout-definition"><div class="callout-label">Definition</div>
+<p><strong>Project Audit:</strong> An independent examination of project performance, processes, and deliverables to assess whether the project met its objectives. <strong>Project Closure:</strong> The final process group that formally completes all project activities, releases resources, and archives documentation. Proper closure ensures lessons are captured and organizational knowledge is preserved.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Project Closure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hGkzC4TQxS" title="Project Closure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Lessons Learned</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Lessons Learned" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<p><strong>Lessons Learned:</strong> Knowledge gained during a project that can be used to improve future projects. <strong>Administrative Closure:</strong> The process of finalizing all activities across all process groups.</p>
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Project Audit:</strong> Independent examination of project performance and processes</li>
+<li><strong>Concurrent Audit:</strong> During the project | <strong>Post-Project Audit:</strong> After completion</li>
+<li><strong>Closure Types:</strong>
+<ul>
+<li>Normal: Completed as planned</li>
+<li>Premature: Completed early (scope reduced)</li>
+<li>Perpetual: Never-ending (continuous changes)</li>
+<li>Failed: Did not meet objectives</li>
+<li>Changed Priority: Cancelled due to strategic shift</li>
+</ul></li>
+<li><strong>Lessons Learned:</strong> Document what went well and what didn't</li>
+<li><strong>Administrative Closure:</strong> Finalize all activities, release resources, archive documents</li>
+<li><strong>Contract Closure:</strong> Complete and settle each contract</li>
+</ul>
+<h4>Project Closure Types Details</h4>
+<table>
+<tr><th>Type</th><th>Description</th><th>Example</th></tr>
+<tr><td>Normal</td><td>Completed as planned</td><td>Software delivered on time and budget</td></tr>
+<tr><td>Premature</td><td>Completed early, scope reduced</td><td>MVP launched, full features later</td></tr>
+<tr><td>Perpetual</td><td>Never-ending, continuous changes</td><td>Legacy system modernization</td></tr>
+<tr><td>Failed</td><td>Did not meet objectives</td><td>Project cancelled due to poor performance</td></tr>
+<tr><td>Changed Priority</td><td>Cancelled due to strategic shift</td><td>Company pivots to new market</td></tr>
+</table>
+<h4>Administrative vs Contract Closure</h4>
+<table>
+<tr><th>Aspect</th><th>Administrative Closure</th><th>Contract Closure</th></tr>
+<tr><td>Scope</td><td>All project activities</td><td>Individual contracts</td></tr>
+<tr><td>Timing</td><td>At project end</td><td>When each contract completes</td></tr>
+<tr><td>Activities</td><td>Verify deliverables, archive docs, release resources</td><td>Settle payments, verify deliverables, close contract</td></tr>
+<tr><td>Output</td><td>Final project report, lessons learned</td><td>Closed contracts, final payments</td></tr>
+</table>
+<h4>Lessons Learned Best Practices</h4>
+<ul>
+<li>Document throughout the project (not just at the end)</li>
+<li>Include both positive and negative experiences</li>
+<li>Be specific — what happened, why, what to do differently</li>
+<li>Make lessons accessible to future project teams</li>
+<li>Review lessons at the start of new projects</li>
+<li>Assign owners for implementing improvements</li>
+</ul>
+<h4>Project Closure Checklist</h4>
+<ul>
+<li>Verify all deliverables accepted by customer</li>
+<li>Complete all contract closures</li>
+<li>Document lessons learned</li>
+<li>Release project resources (team, equipment)</li>
+<li>Archive project documents</li>
+<li>Update organizational process assets</li>
+<li>Celebrate success with team</li>
+<li>Conduct post-project review/audit</li>
+</ul>
+<div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>After completing a software project, the team holds a retrospective: "We should have involved QA earlier" becomes a lesson learned for the next project.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know all five closure types and the difference between administrative and contract closure.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>N-P-P-F-C</strong> = Normal, Premature, Perpetual, Failed, Changed Priority</p></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<li>5 closure types: Normal, Premature, Perpetual, Failed, Changed Priority</li>
+<li>Lessons learned = documented knowledge for future projects</li>
+<li>Administrative vs Contract closure</li>
+</ul></div></div>
+
+<div class="unit" id="mnemonics"><h3>Master Mnemonics Table</h3>
+<table>
+<tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td>S-T-C-Q</td><td>Scope, Time, Cost, Quality</td><td>Iron Triangle</td></tr>
+<tr><td>TELOS</td><td>Technical, Economic, Legal, Operational, Schedule</td><td>Feasibility Types</td></tr>
+<tr><td>C-S-B-O-S</td><td>Scope, Stakeholders, Budget, Objectives, Schedule</td><td>Charter Contents</td></tr>
+<tr><td>W-W-R</td><td>WBS, Work packages, Responsibility matrix</td><td>Scope Management</td></tr>
+<tr><td>O-M-P / 6</td><td>(Optimistic + 4xMost Likely + Pessimistic) / 6</td><td>PERT Expected Time</td></tr>
+<tr><td>Longest = Critical</td><td>Longest path = Critical Path</td><td>CPM</td></tr>
+<tr><td>G-M-R-L</td><td>Gantt, Milestones, Resource loading, Leveling</td><td>Scheduling</td></tr>
+<tr><td>Crash Cheap</td><td>Crash cheapest critical activity first</td><td>Crashing Rule</td></tr>
+<tr><td>EV minus AC/PV</td><td>EV-AC=CV, EV-PV=SV</td><td>Earned Value</td></tr>
+<tr><td>EV on top</td><td>CPI=EV/AC, SPI=EV/PV</td><td>Performance Indices</td></tr>
+<tr><td>P-S-E-F</td><td>Progress, Status, Exception, Forecast</td><td>PMIS Report Types</td></tr>
+<tr><td>M-C-V</td><td>Monitor, Control, Variance analysis</td><td>Monitoring & Control</td></tr>
+<tr><td>ATMA</td><td>Avoid, Transfer, Mitigate, Accept</td><td>Negative Risk Response</td></tr>
+<tr><td>ESEA</td><td>Exploit, Share, Enhance, Accept</td><td>Positive Risk Response</td></tr>
+<tr><td>I-W-C-R</td><td>Individuals, Working software, Collaboration, Response</td><td>Agile Values</td></tr>
+<tr><td>F-C-T</td><td>Fixed, Cost-reimbursable, T&M</td><td>Contract Types</td></tr>
+<tr><td>N-P-P-F-C</td><td>Normal, Premature, Perpetual, Failed, Changed</td><td>Closure Types</td></tr>
+</table>
+</div>
+
+<div class="unit" id="formulas"><h3>Key Formulas Reference</h3>
+<table>
+<tr><th>Formula</th><th>What It Measures</th></tr>
+<tr><td>NPV = sum of (Cash Flow / (1+r)^t)</td><td>Project value in today's money</td></tr>
+<tr><td>IRR: rate where NPV = 0</td><td>Maximum acceptable cost of capital</td></tr>
+<tr><td>Payback = Investment / Annual Cash Flow</td><td>Time to recover investment</td></tr>
+<tr><td>PERT Time = (O + 4M + P) / 6</td><td>Expected activity duration</td></tr>
+<tr><td>PERT Variance = ((P-O)/6)^2</td><td>Uncertainty in duration</td></tr>
+<tr><td>Float = LS - ES = LF - EF</td><td>Schedule flexibility</td></tr>
+<tr><td>Crash Cost/Period = (CC-NC)/(NT-CT)</td><td>Cost to crash one time unit</td></tr>
+<tr><td>CV = EV - AC</td><td>Cost Variance</td></tr>
+<tr><td>SV = EV - PV</td><td>Schedule Variance</td></tr>
+<tr><td>CPI = EV / AC</td><td>Cost efficiency</td></tr>
+<tr><td>SPI = EV / PV</td><td>Schedule efficiency</td></tr>
+<tr><td>EAC = BAC / CPI</td><td>Estimated total cost</td></tr>
+<tr><td>VAC = BAC - EAC</td><td>Expected variance at end</td></tr>
+</table>
+</div>
+
+<div class="unit" id="exam"><h3>Exam Focus</h3>
+<h4>Most Frequently Asked Topics</h4>
+<ol>
+<li><strong>PERT/CPM numerical problems</strong> (almost every paper) — Expected time, variance, critical path, float</li>
+<li><strong>Earned Value Analysis calculations</strong> (CV, SV, CPI, SPI, EAC) — Interpret results</li>
+<li><strong>Critical Path identification</strong> from network diagrams — Forward/backward pass</li>
+<li><strong>Risk response strategies</strong> (ATMA for negative, ESEA for positive)</li>
+<li><strong>Agile vs Waterfall</strong> comparison — When to use each</li>
+<li><strong>Contract types</strong> and risk allocation (FP, CR, T&M)</li>
+<li><strong>WBS creation</strong> for given scenarios</li>
+<li><strong>Project closure types</strong> (N-P-P-F-C)</li>
+<li><strong>NPV/IRR calculations</strong> — Investment appraisal</li>
+<li><strong>Crashing problems</strong> — Cost-time tradeoff</li>
+</ol>
+<h4>Expected Question Patterns</h4>
+<ul>
+<li><strong>Numerical:</strong> PERT time/variance, EVA calculations, NPV/IRR, crashing cost per period</li>
+<li><strong>Short answer:</strong> Define/distinguish types, strategies, approaches (2-3 marks each)</li>
+<li><strong>Long answer:</strong> Explain frameworks, compare approaches, case studies (8-10 marks)</li>
+<li><strong>Diagram:</strong> WBS, network diagrams, Gantt charts, risk matrix</li>
+</ul>
+<h4>Model Answer Structure</h4>
+<ul>
+<li><strong>For comparison questions:</strong> Definition of each &gt; Key differences &gt; When to use &gt; Example</li>
+<li><strong>For framework questions:</strong> Definition &gt; Components &gt; Steps/Process &gt; Advantages &gt; Example</li>
+<li><strong>For numerical:</strong> Given data &gt; Formula &gt; Calculation &gt; Interpretation</li>
+</ul>
+<h4>Key Exam Tips</h4>
+<ul>
+<li>Always draw diagrams when asked — network diagrams, WBS, Gantt charts</li>
+<li>Show all calculations step by step for numerical problems</li>
+<li>Use mnemonics to remember lists (ATMA, TELOS, etc.)</li>
+<li>Give real-world examples to support your answers</li>
+<li>Manage time — don't spend too long on one question</li>
+<li>Read questions carefully — distinguish between "explain" and "compare"</li>
+</ul>
+</div>
+
+</main>
+</div>
+
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-02'));</script>
+<script>
+(function() {
+    var o = new IntersectionObserver(function(e) {
+        e.forEach(function(x) {
+            if (x.isIntersecting) {
+                x.target.classList.add('visible');
+                o.unobserve(x.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.unit').forEach(function(e) { o.observe(e); });
+
+    window.addEventListener('scroll', function() {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+        var progressBar = document.getElementById('readingProgress');
+        if (progressBar) progressBar.style.width = p + '%';
+
+        var u = document.querySelectorAll('.unit');
+        var l = document.querySelectorAll('.sidebar a[href^="#u"]');
+        var c = '';
+        u.forEach(function(e) {
+            if (e.getBoundingClientRect().top < 200) c = e.id;
+        });
+        l.forEach(function(e) {
+            e.classList.toggle('active', e.getAttribute('href') === '#' + c);
+        });
+    });
+
+    var selectors = ['h3', 'h4', '.callout', '.summary-box', 'table', 'ul', 'ol'];
+    document.querySelectorAll(selectors.join(',')).forEach(function(el, idx) {
+        el.classList.add('animate-on-scroll');
+        el.style.transitionDelay = (idx % 6) * 0.05 + 's';
+    });
+    document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+        o.observe(el);
+    });
+})();
+</script>
+<script src="pwa-register.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+</body>
+</html>

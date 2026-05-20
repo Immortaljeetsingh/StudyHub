@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>MMPC-03: Business Environment</title>
+<title>MMPC-03: Business Environment | StudyHub</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
@@ -92,12 +92,12 @@ body.subject-mmpc03::after {
 .animate-on-scroll:nth-child(5) { transition-delay: 0.2s; }
 
 /* --- Animated gradient underline on h3 --- */
-.subject-mmpc03 h3 {
+h3[id^="u"] {
     position: relative;
     padding-bottom: 12px;
     margin-bottom: 20px;
 }
-.subject-mmpc03 h3::after {
+h3[id^="u"]::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -112,6 +112,19 @@ body.subject-mmpc03::after {
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     100% { background-position: 300% 50%; }
+}
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #00B4D8, #90E0EF);
+  border-radius: 2px;
 }
 
 /* --- Card hover effects --- */
@@ -181,8 +194,8 @@ body.subject-mmpc03::after {
     max-width: 100%;
 }
 
-/* --- Mnemonic box --- */
-.mnemonic-box {
+/* --- Mnemonic box (now callout-mnemonic) --- */
+.callout-mnemonic {
     background: linear-gradient(135deg, rgba(247,127,0,0.1), rgba(247,127,0,0.03));
     border: 1px solid rgba(247,127,0,0.3);
     border-radius: 10px;
@@ -190,7 +203,7 @@ body.subject-mmpc03::after {
     margin: 16px 0;
     position: relative;
 }
-.mnemonic-box .mnemonic-title {
+.callout-mnemonic .callout-label {
     font-weight: 700;
     color: #F77F00;
     font-size: 0.9rem;
@@ -198,21 +211,14 @@ body.subject-mmpc03::after {
     letter-spacing: 0.05em;
     margin-bottom: 8px;
 }
-.mnemonic-box .mnemonic-text {
+.callout-mnemonic .mnemonic-text {
     color: #e0d0c0;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-/* --- Exam tip enhanced --- */
-.exam-tip {
-    background: linear-gradient(135deg, rgba(247,127,0,0.12), rgba(247,127,0,0.04));
-    border-left: 4px solid #F77F00;
-    border-radius: 0 10px 10px 0;
-    padding: 14px 18px;
-    margin: 16px 0;
-}
-.exam-tip .tip-label {
+/* --- Exam tip (now callout-important) --- */
+.callout-important .callout-label {
     font-weight: 700;
     color: #F77F00;
     font-size: 0.85rem;
@@ -220,15 +226,8 @@ body.subject-mmpc03::after {
     margin-bottom: 6px;
 }
 
-/* --- Indian example box --- */
-.indian-example {
-    background: linear-gradient(135deg, rgba(144,224,239,0.08), rgba(144,224,239,0.02));
-    border-left: 4px solid #90E0EF;
-    border-radius: 0 10px 10px 0;
-    padding: 14px 18px;
-    margin: 16px 0;
-}
-.indian-example .example-label {
+/* --- Indian example box (now callout-example) --- */
+.callout-example .callout-label {
     font-weight: 700;
     color: #90E0EF;
     font-size: 0.85rem;
@@ -313,7 +312,7 @@ body.subject-mmpc03::after {
 .video-icon { color: #FF0000; font-size: 1.2rem; }
 .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
 .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; padding: 0.75rem 1.4rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; min-height: 44px; min-width: 44px; }
 .video-toggle:hover { opacity: 0.85; }
 .video-section-content { display: none; }
 .video-section-content.active { display: block; }
@@ -377,12 +376,27 @@ body.subject-mmpc03::after {
     vertical-align: middle;
     font-weight: 600;
 }
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,180,216,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,180,216,0.05), rgba(0,180,216,0.02)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,180,216,0.15) !important;
+}
 </style>
     <link rel="stylesheet" href="enhancements.css">
     <link rel="stylesheet" href="revision-mode.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc03">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -395,32 +409,37 @@ body.subject-mmpc03::after {
 <aside class="study-sidebar">
   <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4DC; MMPC-03</span></div>
   <nav class="sidebar-nav">
-    <a href="#unit1">Unit 1: Introduction to Business and Environment</a>
-    <a href="#unit2">Unit 2: Economic Growth and Development</a>
-    <a href="#unit3">Unit 3: Socio-Cultural and Politico Legal Environment</a>
-    <a href="#unit4">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</a>
-    <a href="#unit5">Unit 5: Indian Financial System</a>
-    <a href="#unit6">Unit 6: Industrial Policy Framework</a>
-    <a href="#unit7">Unit 7: Agri-business Environment</a>
-    <a href="#unit8">Unit 8: New Economic Policy</a>
-    <a href="#unit9">Unit 9: Financial Sector and Fiscal Sector Reforms</a>
-    <a href="#unit10">Unit 10: International Financial System</a>
-    <a href="#unit11">Unit 11: Balance of Payments (BoP)</a>
-    <a href="#unit12">Unit 12: Foreign Trade</a>
-    <a href="#unit13">Unit 13: Sources of Global Financing</a>
-    <a href="#unit14">Unit 14: Technological Environment</a>
-    <a href="quiz-mmpc03.html" class="back-link">&#x1F4DD; Take Quiz</a>
-    <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
-  </nav>
-</aside>
+<a href="#block1">Block-01 Business Environment Fundamentals</a>
+<a href="#u1">Unit 1: Introduction to Business and Environment</a>
+<a href="#u2">Unit 2: Economic Growth and Development</a>
+<a href="#u3">Unit 3: Socio-Cultural and Politico Legal Environment</a>
+<a href="#u4">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</a>
+<a href="#u5">Unit 5: Indian Financial System</a>
+<a href="#block2">Block-02 Indian Economic Framework</a>
+<a href="#u6">Unit 6: Industrial Policy Framework</a>
+<a href="#u7">Unit 7: Agri-business Environment</a>
+<a href="#u8">Unit 8: New Economic Policy</a>
+<a href="#u9">Unit 9: Financial Sector and Fiscal Sector Reforms</a>
+<a href="#u10">Unit 10: International Financial System</a>
+<a href="#block3">Block-03 International &amp; Technological Environment</a>
+<a href="#u11">Unit 11: Balance of Payments (BoP)</a>
+<a href="#u12">Unit 12: Foreign Trade</a>
+<a href="#u13">Unit 13: Sources of Global Financing</a>
+<a href="#u14">Unit 14: Technological Environment</a>
+<a href="quiz-mmpc03.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
 <main id="main-content" class="study-content">
-<div class="study-header"><span class="subject-tag">MMPC-03</span><h1>Business Environment</h1><p>Enhanced Study Notes</p></div>
+<div class="study-header"><span class="subject-tag">MMPC-03</span><h1>Business Environment</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
 
-<div class="unit" id="unit-1">
-<h3 class="animate-on-scroll">Unit 1: Introduction to Business and Environment</h3>
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Business Environment Fundamentals</h2>
+
+<div class="unit" id="u1">
+<h3 id="u1" class="animate-on-scroll">Unit 1: Introduction to Business and Environment</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Introduction to Business and Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Introduction to Business and Environment</div><p>Covers the definition, characteristics, types (internal/external, micro/macro), and importance of studying business environment. Includes PESTEL analysis framework and SWOT comparison.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -550,14 +569,14 @@ body.subject-mmpc03::after {
   <li>Environmental analysis helps identify opportunities and threats</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example</div>
 <p><strong>Reliance Jio (2016):</strong> Mukesh Ambani studied the Indian telecom environment &#x2014; high data prices, limited smartphone penetration, and a young population hungry for digital content. Jio launched with free voice and ultra-cheap data, disrupting the entire industry. Within 3 years, Jio had 370 million subscribers. This is a textbook case of environmental scanning creating massive opportunity.</p>
 </div>
 
 <h4>Point 5: PESTEL Analysis Framework</h4>
 <p>PESTEL is a strategic tool to analyze the macro-environment across six dimensions:</p>
-<div class="comparison-table animate-on-scroll">
+<div class="animate-on-scroll">
 <table class="comparison-table">
 <tr><th>Factor</th><th>Description</th><th>Indian Example</th></tr>
 <tr><td><strong>Political</strong></td><td>Government policies, stability, trade regulations</td><td>Make in India policy boosting manufacturing FDI</td></tr>
@@ -569,47 +588,54 @@ body.subject-mmpc03::after {
 </table>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip</div>
 <p>PESTEL questions are very common in exams. Always give the framework definition AND one Indian example per factor. Remember: <strong>P-E-S-T-E-L</strong> &#x2014; "Politicians Eat Samosas To Earn Loyalty" is a popular mnemonic among MBA students.</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Characteristics of Business Environment</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Characteristics of Business Environment</div>
 <div class="mnemonic-text"><strong>D-C-I-R-I</strong> &#x2014; "Delhi Companies Invest Rapidly Internationally"<br>
 <strong>D</strong>ynamic, <strong>C</strong>omplex, <strong>I</strong>nterrelated, <strong>R</strong>elativity, <strong>I</strong>ncertain (Uncertain)</div>
 </div>
 
 <h4>Point 6: SWOT vs Environmental Analysis</h4>
 <p><strong>SWOT</strong> examines internal Strengths &amp; Weaknesses and external Opportunities &amp; Threats. It is firm-specific, while PESTEL is industry/macro-level. Best practice: conduct PESTEL first, then derive SWOT from findings.</p>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Introduction to Business and Environment</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors ar...</p>
+  <p>Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as: Value system of society, Rules and regulations laid down by Government, Monetary policies of the central bank, Institutional setup of the country, Ideological beliefs of the leaders, Attitude towards foreign capital and enterprise.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>nagements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as: Value system of society Rules and regulations laid down by Government Monetary policies of the central bank Institu...</p>
+  <p>Business environment = totality of external factors beyond control of enterprises. Five characteristics: Dynamic, Complex, Interrelated, Relativity (varies by region), Uncertain. Types: Internal vs External; Micro vs Macro; Controllable vs Uncontrollable. PESTEL framework: Political, Economic, Social, Technological, Environmental, Legal. Environmental scanning helps identify opportunities and threats for strategic decision-making.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Tata Motors:</strong> Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms must operate. Environmental factors are essentially the "givens" such as: Value system o...</p></div>
+<div class="eb"><p>Tata Motors: Tata Motors studied the Indian automotive environment — rising middle class, government push for electric vehicles, and infrastructure development. They acquired Jaguar Land Rover for global expansion and launched the Nexon EV for the Indian market. Their environmental scanning identified the EV transition opportunity early, making them India's leading electric car manufacturer with 60%+ market share.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Dynamic: Business environments are highly flexible and keep on changing due to factors like customer preferences, new competitors, novel technology, new marketing channels, government policies, and changing demography.; Uncertain: It is very difficult to assume with certainty about the factors influencing business environment because they fluctuate quickly.; Complex: The business environment is continuously exposed to uncertain challenges such as technological disruptions, global competition, leadership changes, shifting economic, social, and regulatory conditions.</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 1.</p></div>
 <div class="br"><span class="sb s-b">Unit 1</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Introduction to Business and Environment</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Business environment = totality of external factors beyond control of enterprises; includes value systems, government rules, monetary policies</li>
+<li>Five characteristics: Dynamic, Complex, Interrelated, Relativity (varies by region), Uncertain</li>
+<li>Types: Internal vs External; Micro vs Macro; Controllable vs Uncontrollable</li>
+<li>PESTEL framework: Political, Economic, Social, Technological, Environmental, Legal</li>
+<li>Environmental scanning helps identify opportunities and threats for strategic decision-making</li>
+<li>SWOT is firm-specific; PESTEL is macro/industry-level. Conduct PESTEL first, then derive SWOT</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-2">
-<h3 class="animate-on-scroll">Unit 2: Economic Growth and Development</h3>
+<div class="unit" id="u2">
+<h3 id="u2" class="animate-on-scroll">Unit 2: Economic Growth and Development</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: Economic Growth and Development</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: Economic Growth and Development</div><p>Distinguishes between economic growth (GDP) and broader economic development (HDI, poverty). Covers determinants, indicators, strategies, Five Year Plans, and NITI Aayog.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -666,8 +692,8 @@ body.subject-mmpc03::after {
 </svg>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Economic Development Indicators</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Economic Development Indicators</div>
 <div class="mnemonic-text"><strong>"G-P-L-G-I-H"</strong> &#x2014; "Good People Love Great Indian Halwa"<br>
 <strong>G</strong>DP per capita, <strong>P</strong>overty ratio, <strong>L</strong>iteracy rate, <strong>G</strong>ini coefficient, <strong>I</strong>nfant mortality, <strong>H</strong>DI</div>
 </div>
@@ -707,13 +733,13 @@ body.subject-mmpc03::after {
   <li><strong>Institution Building</strong>: Strengthening legal and regulatory frameworks</li>
 </ol>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example</div>
 <p><strong>Gujarat vs Kerala Growth Model:</strong> Gujarat focuses on industrialization and infrastructure (high GDP growth ~10%), while Kerala prioritizes human development (highest literacy 96%, best HDI in India). This illustrates that economic growth and economic development can follow different paths. Gujarat has higher GDP; Kerala has better social indicators. The ideal strategy combines both approaches.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip</div>
 <p>Always distinguish between <strong>Growth</strong> (quantitative &#x2014; GDP increase) and <strong>Development</strong> (qualitative &#x2014; HDI, poverty reduction, equality). A common exam question: "Can a country have growth without development?" Answer: Yes &#x2014; Nigeria has oil-driven GDP growth but poor HDI. India's post-1991 reforms achieved both in varying degrees.</p>
 </div>
 
@@ -726,7 +752,7 @@ body.subject-mmpc03::after {
   <li><strong>SDG India Index</strong> tracking sustainable development goals</li>
 </ul>
 
-<div class="comparison-table animate-on-scroll">
+<div class="animate-on-scroll">
 <table class="comparison-table">
 <tr><th>Parameter</th><th>Planning Commission</th><th>NITI Aayog</th></tr>
 <tr><td>Approach</td><td>Top-down, centralized</td><td>Bottom-up, cooperative federalism</td></tr>
@@ -736,34 +762,41 @@ body.subject-mmpc03::after {
 </table>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Economic Growth and Development</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Economic Growth refers to increase in real output of goods and services over time, typically measured by GDP growth rate. Economic Development encompasses broader improvements in living standards including: Income distribution Health and education ou...</p>
+  <p><strong>Economic Growth</strong> refers to increase in real output of goods and services over time, typically measured by GDP growth rate. <strong>Economic Development</strong> encompasses broader improvements in living standards including: Income distribution, Health and education outcomes, Infrastructure development, Reduction in poverty levels. Determinants include Physical Capital (infrastructure, machinery), Human Capital (education, training), Natural Resources, and Technology.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>ncompasses broader improvements in living standards including: Income distribution Health and education outcomes Infrastructure development Reduction in poverty levels Physical Capital: Infrastructure, machinery, and equipment investment Human Capita...</p>
+  <p>Economic Growth = quantitative increase in GDP; Economic Development = broader improvements in HDI, poverty, equality. Determinants: Physical Capital, Human Capital, Natural Resources, Technology, Institutional Framework. India's GDP ~$3.5 trillion (5th largest); HDI rank 132. Five Year Plans (1951-2017) replaced by NITI Aayog (2015). Gujarat model = high GDP growth; Kerala model = high HDI. Ideal strategy combines both approaches.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Reliance Industries:</strong> Economic Growth refers to increase in real output of goods and services over time, typically measured by GDP growth rate. Economic Development encompasses broader improvements in living standards including: Income distribution Health and education outcomes Infrastructure development Reduction in pov...</p></div>
+<div class="eb"><p>Reliance Industries: Reliance Industries exemplifies how economic growth and development can be integrated. Under Mukesh Ambani, Reliance Jio disrupted telecom with cheap data, driving digital inclusion (growth). Simultaneously, Reliance Foundation invested in rural healthcare, education, and sports development (development). Jio's 400M+ subscribers boosted India's digital economy while Reliance's CSR spending exceeded Rs 1,000 crore annually.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Physical Capital: Infrastructure, machinery, and equipment investment; Human Capital: Education, training, and skill development of workforce; Natural Resources: Availability of land, minerals, water, and other resources</p></div>
 <div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
 <div class="br"><span class="sb s-b">Unit 2</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Economic Growth and Development</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Economic Growth = quantitative increase in GDP; Economic Development = broader improvements in HDI, poverty, equality</li>
+<li>Determinants: Physical capital, Human capital, Natural resources, Technology, Institutional factors</li>
+<li>Indicators: GDP per capita, HDI, Poverty ratio, Gini coefficient, Infant mortality, Literacy rate</li>
+<li>Strategies: Industrialization, Infrastructure development, HRD, Technology transfer, Institution building</li>
+<li>NITI Aayog (2015) replaced Planning Commission: bottom-up cooperative federalism vs top-down centralized</li>
+<li>Gujarat model (high GDP) vs Kerala model (high HDI) illustrates growth vs development distinction</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-3">
-<h3 class="animate-on-scroll">Unit 3: Socio-Cultural and Politico Legal Environment</h3>
+<div class="unit" id="u3">
+<h3 id="u3" class="animate-on-scroll">Unit 3: Socio-Cultural and Politico Legal Environment</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Socio-Cultural and Politico Legal Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Socio-Cultural and Politico Legal Environment</div><p>Examines cultural values, social structures, religious influences, and the politico-legal framework including Constitution, Acts of Parliament, and regulatory agencies.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -851,55 +884,62 @@ body.subject-mmpc03::after {
   <li>Political developments affecting business climate</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example</div>
 <p><strong>Haldiram's Cultural Adaptation:</strong> Haldiram's studied the socio-cultural environment across Indian states and customized its product range &#x2014; Raj kachori in North, bhujia variants in Rajasthan, South Indian snacks in southern markets. They also adapted to the vegetarian preference in Gujarat and Jain communities by offering onion-garlic-free products. Cultural sensitivity helped them become a &#x20B9;5,000 crore brand.</p>
 </div>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; Political-Legal</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; Political-Legal</div>
 <p><strong>GST Impact (2017):</strong> The Goods and Services Tax transformed India's indirect tax landscape. It subsumed 17 central and state taxes into one unified tax. Businesses had to completely restructure their supply chains &#x2014; earlier they optimized for tax arbitrage between states; now they optimize for logistics efficiency. E-way bills, GSTN compliance, and input tax credits became new business imperatives.</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Socio-Cultural Factors</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Socio-Cultural Factors</div>
 <div class="mnemonic-text"><strong>"C-S-R-L-D"</strong> &#x2014; "Cool Students Read Lots Daily"<br>
 <strong>C</strong>ultural values, <strong>S</strong>ocial structure, <strong>R</strong>eligious influences, <strong>L</strong>anguage &amp; communication, <strong>D</strong>emographics</div>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip</div>
 <p>For politico-legal environment questions, always mention <strong>FEMA 1999</strong> (replaced FERA), <strong>Companies Act 2013</strong> (replaced 1956 Act), and <strong>Consumer Protection Act 2019</strong> (replaced 1986 Act). These three reforms are examiner favorites and show you understand legislative evolution.</p>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Socio-Cultural and Politico Legal Environment</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Cultural Values: Beliefs, customs, traditions, and social norms that influence business behavior and expectations. Social Structure: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition. Reli...</p>
+  <p><strong>Cultural Values</strong>: Beliefs, customs, traditions, and social norms that influence business behavior and expectations. <strong>Social Structure</strong>: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition. <strong>Religious Influences</strong>: Religious beliefs and practices that shape business conduct and consumer preferences. <strong>Language and Communication</strong>: Languages spoken, communication styles, and their impact on business operations.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>family structures, demographic patterns affecting consumption patterns and workforce composition. Religious Influences: Religious beliefs and practices that shape business conduct and consumer preferences. Language and Communication: Languages spoken...</p>
+  <p>Socio-cultural factors: Cultural values, Social structure, Religious influences, Language, Demographics. Politico-legal factors: Political system, Legal framework, Regulatory agencies. Indian Constitution: Fundamental Rights (Article 14-32), Directive Principles (Article 36-51). Key Acts: Companies Act 2013, Competition Act 2002, Consumer Protection Act 2019, FEMA 1999. Regulatory bodies: SEBI, RBI, IRDAI, PFRDA, CCI.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Infosys:</strong> Cultural Values: Beliefs, customs, traditions, and social norms that influence business behavior and expectations. Social Structure: Class systems, family structures, demographic patterns affecting consumption patterns and workforce composition. Religious Influences: Religious beliefs and practices ...</p></div>
+<div class="eb"><p>Infosys: Infosys navigates India's socio-cultural environment by embracing diversity — employees from 28 states speaking 22+ languages. Their Mysore campus includes prayer rooms for all religions, vegetarian cafeterias, and cultural festivals. Infosys Foundation invests in rural education and healthcare, respecting Indian cultural values of community welfare. Their corporate governance follows Indian legal requirements while maintaining global standards.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Operational Decisions: Cultural preferences influence product design and marketing strategies; Employment Practices: Legal requirements for working conditions, wages, and benefits; Market Entry Strategies: Political climate affects foreign investment decisions</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 3.</p></div>
 <div class="br"><span class="sb s-b">Unit 3</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Socio-Cultural and Politico Legal Environment</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Socio-cultural factors: Cultural values, Social structure, Religious influences, Language, Demographics</li>
+<li>Politico-legal factors: Political system, Legal framework (Constitution, Acts), Regulatory agencies, Taxation policy</li>
+<li>Legal hierarchy: Constitution > Acts of Parliament > State Legislations > Judicial Precedents > Notifications</li>
+<li>Key legislation: Companies Act 2013, Consumer Protection Act 2019, FEMA 1999</li>
+<li>Cultural sensitivity crucial for market entry: Haldiram's customized products across Indian states</li>
+<li>GST (2017) transformed indirect tax landscape: unified 17 taxes into one, restructured supply chains</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-4">
-<h3 class="animate-on-scroll">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</h3>
+<div class="unit" id="u4">
+<h3 id="u4" class="animate-on-scroll">Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</div><p>Covers business ethics principles, Carroll's CSR Pyramid, India's Section 135 mandatory CSR provisions, and ethical theories (utilitarian, deontological, virtue).</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -987,19 +1027,19 @@ body.subject-mmpc03::after {
   <li><strong>Long-term Sustainability</strong>: Creates enduring competitive advantage</li>
 </ol>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; CSR Leaders</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; CSR Leaders</div>
 <p><strong>Tata Group:</strong> India's gold standard in CSR. Tata Trusts hold 66% of Tata Sons' equity &#x2014; profits flow to philanthropy. Major initiatives: Tata Memorial Hospital (cancer care), TCS rural education programs, Tata Water Mission (clean water for 3M+ people). Annual CSR spend: &#x20B9;1,000+ crore. Ratan Tata's philosophy: "I don't believe in wealth creation for personal gain."</p>
 <p><strong>Infosys Foundation:</strong> Spent &#x20B9;322 crore on CSR in FY2023. Focus areas: education (1,50,000+ scholarships), healthcare (rural hospitals), rural development (digital literacy). Sudha Murthy personally oversees projects across Karnataka and other states.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; Section 135 CSR Mandate</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; Section 135 CSR Mandate</div>
 <p>Memorize the thresholds: Net worth &#x2265; &#x20B9;500 crore <strong>OR</strong> Turnover &#x2265; &#x20B9;1,000 crore <strong>OR</strong> Net profit &#x2265; &#x20B9;5 crore &#x2192; must spend <strong>2% of average net profits</strong> on CSR. Failure to spend requires explanation in board report (comply-or-explain). India is the <strong>first country</strong> to mandate CSR by law &#x2014; this is a common exam fact.</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: CSR Pyramid (Carroll)</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: CSR Pyramid (Carroll)</div>
 <div class="mnemonic-text"><strong>"E-L-E-P from bottom to top"</strong> &#x2014; "Elephants Love Eating Peanuts"<br>
 <strong>E</strong>conomic &#x2192; <strong>L</strong>egal &#x2192; <strong>E</strong>thical &#x2192; <strong>P</strong>hilanthropic<br>
 You must be profitable first (economic), then obey laws, then be ethical, then give back.</div>
@@ -1009,38 +1049,43 @@ You must be profitable first (economic), then obey laws, then be ethical, then g
 <p><strong>Whistleblower Protection Act 2014</strong> protects persons reporting corruption or willful misuse of power. Key provisions: anonymity, protection from victimization, competent authority for inquiry.</p>
 <p><strong>Corporate Governance Reforms (SEBI):</strong> Mandatory independent directors (50% for top 500 companies), audit committees, related-party transaction approvals, board diversity requirements.</p>
 
-<ul>
-  <li>--</li>
-</ul>
+
 <p># MMPC03 Business Environment</p>
 <p>## Part 2: Units 5-7 - Indian Economy</p>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Business Ethics and Corporate Social Responsibility (CSR)</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Business ethics refers to moral principles and standards governing business conduct and decision-making. Key Ethical Issues: Honesty in advertising and communication Fair treatment of employees and customers Environmental responsibility Truthful fina...</p>
+  <p>Business ethics refers to moral principles and standards governing business conduct and decision-making. Key Ethical Issues: Honesty in advertising and communication, Fair treatment of employees and customers, Environmental responsibility, Truthful financial reporting, Conflict of interest management. CSR involves businesses going beyond legal compliance to address social and environmental concerns.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>ation Fair treatment of employees and customers Environmental responsibility Truthful financial reporting Conflict of interest management CSR involves businesses going beyond legal compliance to address social and environmental concerns. Dimensions: ...</p>
+  <p>Business ethics = moral principles governing business conduct and decision-making. Carroll's CSR Pyramid (bottom to top): Economic > Legal > Ethical > Philanthropic responsibilities. Section 135 of Companies Act 2013: mandatory 2% average net profit CSR for companies with Rs 500Cr+ turnover or Rs 1000Cr+ net worth or Rs 5Cr+ net profit. Ethical theories: Utilitarian (greatest good), Deontological (duty-based), Virtue Ethics (character-based).</p>
   </div>
 </div>
-<div class="eb"><p><strong>Wipro:</strong> Business ethics refers to moral principles and standards governing business conduct and decision-making. Key Ethical Issues: Honesty in advertising and communication Fair treatment of employees and customers Environmental responsibility Truthful financial reporting Conflict of interest management CS...</p></div>
+<div class="eb"><p>Wipro: Wipro is recognized as one of India's most ethical companies. Under Azim Premji's leadership, Wipro committed Rs 1,500 crore to education through Azim Premji Foundation. Their ethics training covers anti-corruption, data privacy, and environmental sustainability. Wipro's CSR focuses on education, ecology, and community development. They were among the first Indian IT companies to publish sustainability reports and adopt UN Global Compact principles.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Economic Responsibility: Be profitable and sustainable; Legal Responsibility: Obey laws and regulations; Ethical Responsibility: Do what is right and fair</p></div>
 <div class="br"><span class="sb s-b">Unit 4</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Business Ethics and Corporate Social Responsibility (CSR)</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Business ethics = moral principles governing business conduct and decision-making</li>
+<li>Carroll's CSR Pyramid (bottom to top): Economic > Legal > Ethical > Philanthropic</li>
+<li>Section 135, Companies Act 2013: companies with net worth >= Rs 500 Cr must spend 2% of avg net profits on CSR</li>
+<li>India is one of only 3 countries with mandatory CSR provisions</li>
+<li>Ethical theories: Utilitarian (greatest good), Deontological (duty-based), Contractarian, Virtue ethics</li>
+<li>CSR benefits: Reputation enhancement, Employee attraction, Customer loyalty, Risk reduction</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-5">
-<h3 class="animate-on-scroll">Unit 5: Indian Financial System</h3>
+<div class="unit" id="u5">
+<h3 id="u5" class="animate-on-scroll">Unit 5: Indian Financial System</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 5: Indian Financial System</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 5: Indian Financial System</div><p>Explores the structure of India's financial system including RBI, commercial banks, SEBI, stock exchanges, insurance sector, and capital markets.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1191,50 +1236,60 @@ You must be profitable first (economic), then obey laws, then be ethical, then g
   <li>Foreign Exchange Management Act, 1999</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; UPI Revolution</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; UPI Revolution</div>
 <p><strong>UPI (Unified Payments Interface):</strong> Launched by NPCI in 2016, UPI processed <strong>13.4 billion transactions in January 2024</strong> worth &#x20B9;18.4 lakh crore. It transformed India from a cash-dominant economy to a digital payment leader. Google Pay, PhonePe, and Paytm process 95%+ of UPI volumes. UPI is now being adopted by Singapore, UAE, France, and Sri Lanka &#x2014; India's biggest fintech export.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; RBI Functions</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; RBI Functions</div>
 <p>Remember RBI's 6 functions using mnemonic <strong>"M-B-B-L-R-F"</strong>: <strong>M</strong>onetary authority, <strong>B</strong>anker to banks, <strong>B</strong>anker to govt, <strong>L</strong>ender of last resort, <strong>R</strong>egulator, <strong>F</strong>oreign exchange manager. A common trick question: "Is RBI the regulator of stock markets?" No &#x2014; that's SEBI. RBI regulates banking; SEBI regulates securities markets.</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Financial Market Types</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Financial Market Types</div>
 <div class="mnemonic-text"><strong>"Money Capital Debt Forex Derivatives"</strong> &#x2014; "Many Citizens Don't Find it Difficult"<br>
 Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Market (bonds) &#x2192; Forex Market &#x2192; Derivatives Market</div>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Indian Financial System</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through: Institutional Components: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit...</p>
+  <p>The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through: <strong>Institutional Components</strong> — Commercial Banks (scheduled and non-scheduled), Cooperative Banks (member-owned), Regional Rural Banks (focused on agricultural and rural credit), Development Financial Institutions, Non-Banking Financial Companies (NBFCs). <strong>Market Components</strong> — Money Market, Capital Market, Debt Market, Forex Market, Derivatives Market.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>Institutional Components**: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit services Cooperative Banks: Member-owned financial institutions at urban and rural levels Regional Rural Banks: Focused on agricultural and r...</p>
+  <p>Indian financial system: institutions and markets facilitating savings, investment, and risk management. RBI: central bank regulating monetary policy, forex reserves ($600B+), banking supervision. Commercial banks: public sector (SBI, PNB), private (HDFC, ICICI), foreign. SEBI: capital market regulator. Stock exchanges: BSE (oldest in Asia), NSE (largest by derivatives volume). Insurance: LIC (largest), private players. Mutual funds: AUM Rs 40+ lakh crore.</p>
   </div>
 </div>
-<div class="eb"><p><strong>HDFC Bank:</strong> The Indian financial system consists of institutions and markets that facilitate savings, investment, and risk management. It operates through: Institutional Components: Commercial Banks: Scheduled and non-scheduled banks providing deposit and credit services Cooperative Banks: Member-owned financia...</p></div>
+<div class="eb"><p>HDFC Bank: HDFC Bank exemplifies India's financial system evolution. Started in 1994 post-liberalization, it grew to become India's largest private sector bank by assets. HDFC Bank pioneered digital banking in India — first to launch mobile banking, UPI integration, and AI-powered customer service. Their distribution network covers 6,000+ branches and 18,000+ ATMs across India, serving both urban and rural customers through technology-driven financial inclusion.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Monetary Authority: Regulates money supply and interest rates; Banker to Banks: Maintains accounts of scheduled commercial banks; Banker to Government: Manages government accounts and public debt</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 5.</p></div>
 <div class="br"><span class="sb s-b">Unit 5</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Indian Financial System</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Indian financial system: institutions and markets facilitating savings, investment, and risk management</li>
+<li>RBI: central bank regulating monetary policy, currency issuance, and bank supervision</li>
+<li>Capital markets: SEBI regulates; BSE and NSE facilitate securities trading and price discovery</li>
+<li>Banking structure: Public/private commercial banks, cooperative banks, RRBs, NBFCs</li>
+<li>Insurance sector: IRDAI regulates; LIC dominates life insurance; growing private participation</li>
+<li>Financial inclusion: Jan Dhan Yojana, UPI digital payments, PM-SVANidhi for street vendors</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-6">
-<h3 class="animate-on-scroll">Unit 6: Industrial Policy Framework</h3>
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Indian Economic Framework</h2>
+
+<div class="unit" id="u6">
+<h3 id="u6" class="animate-on-scroll">Unit 6: Industrial Policy Framework</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 6: Industrial Policy Framework</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 6: Industrial Policy Framework</div><p>Traces India's industrial policy from 1948 to 2020, covering Industrial Policy Resolutions, licensing, delicensing, FDI policy, and Make in India.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1376,12 +1431,12 @@ Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Ma
   <li>Renewable energy</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; PLI Scheme Success</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; PLI Scheme Success</div>
 <p><strong>Production-Linked Incentive (PLI) Scheme:</strong> Launched in 2020 for 14 sectors with &#x20B9;1.97 lakh crore outlay. Results: Apple suppliers (Foxconn, Wistron) now manufacture iPhones in India. Mobile phone exports surged from &#x20B9;11,000 crore (2017) to &#x20B9;1.2 lakh crore (2023). India is now the world's second-largest mobile phone manufacturer. PLI also covers semiconductors (&#x20B9;76,000 crore), EV batteries, and white goods.</p>
 </div>
 
-<div class="comparison-table animate-on-scroll">
+<div class="animate-on-scroll">
 <table class="comparison-table">
 <tr><th>Feature</th><th>Pre-1991 (License Raj)</th><th>Post-1991 (Liberalization)</th></tr>
 <tr><td>Licensing</td><td>Mandatory for all industries</td><td>Abolished except 5 sectors</td></tr>
@@ -1392,39 +1447,46 @@ Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Ma
 </table>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip</div>
 <p>The 1991 Industrial Policy is the most frequently examined topic. Remember the <strong>3 reforms</strong>: De-licensing (abolished licensing), Dereservation (reduced public sector reservation from 17 to 3), and Decontrol (removed MRTP restrictions). Always cite Manmohan Singh as the architect and PV Narasimha Rao as the political enabler.</p>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Industrial Policy Framework</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Pre-1991 Era (License Raj): Industrial Licensing under Industries (Development and Regulation) Act, 1951 Reservation of industries for public sector MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Po...</p>
+  <p><strong>Pre-1991 Era (License Raj)</strong>: Industrial Licensing under Industries (Development and Regulation) Act, 1951; Reservation of industries for public sector; MRTP Act restrictions on large business houses; Import substitution strategy; High tariff protection. <strong>Post-1991 Era (Liberalization)</strong>: Abolition of industrial licensing (except few industries); Opening up to foreign investment; Reduction in import tariffs; Disinvestment of public sector enterprises.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>tor MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Post-1991 Era (Liberalization): Abolition of industrial licensing (except few industries) Opening up to foreign investment Reduction in import tari...</p>
+  <p>Industrial Policy Resolutions: 1948, 1956 (socialist pattern), 1991 (LPG liberalization), 2020 (Aatmanirbhar). 1956 IPR established public sector dominance in heavy industries. 1991 reforms: de-licensing, dereservation (17 to 3 industries), decontrol (MRTP removed). FDI policy: automatic route (most sectors), government route (strategic sectors). Make in India (2014): 25 sectors, ease of doing business, manufacturing push. PLI scheme: Rs 1.97 lakh crore for 14 sectors.</p>
   </div>
 </div>
-<div class="eb"><p><strong>ICICI Bank:</strong> Pre-1991 Era (License Raj): Industrial Licensing under Industries (Development and Regulation) Act, 1951 Reservation of industries for public sector MRTP Act restrictions on large business houses Import substitution strategy High tariff protection Post-1991 Era (Liberalization): Abolition of industr...</p></div>
+<div class="eb"><p>ICICI Bank: ICICI Bank was born from India's industrial policy evolution. ICICI Ltd (1955) was a development financial institution created under the 1956 IPR to finance industrial projects. Post-1991 liberalization, ICICI transformed into a universal bank (2002 merger). This shift from DFI to commercial bank mirrors India's policy transition from controlled industrialization to market-driven growth. ICICI now serves 60M+ customers with digital-first banking.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 6</p></div>
 <div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
 <div class="br"><span class="sb s-b">Unit 6</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Industrial Policy Framework</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Industrial Policy Resolutions: 1948, 1956 (socialist pattern), 1991 (LPG liberalization), 2020 (Aatmanirbhar)</li>
+<li>1956 IPR established public sector dominance with 17 industries reserved for state</li>
+<li>1991 reforms: delicensing, FDI liberalization, disinvestment, reduced public sector role</li>
+<li>Make in India (2014): boost manufacturing to 25% of GDP, ease of doing business reforms</li>
+<li>FDI policy: automatic route (most sectors) vs government route (restricted sectors)</li>
+<li>MSME sector contributes ~30% of GDP and ~45% of manufacturing output</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-7">
-<h3 class="animate-on-scroll">Unit 7: Agri-business Environment</h3>
+<div class="unit" id="u7">
+<h3 id="u7" class="animate-on-scroll">Unit 7: Agri-business Environment</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 7: Agri-business Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 7: Agri-business Environment</div><p>Covers the agricultural sector's role in Indian economy, agri-business value chains, food processing, Green Revolution, MSP, and agricultural reforms.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1544,52 +1606,59 @@ Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Ma
 <p><strong>Infrastructure</strong>: National Agriculture Market (e-NAM), agricultural roads</p>
 <p><strong>Investment</strong>: Agricultural investment funds and credit guarantee schemes</p>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; Amul Model</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; Amul Model</div>
 <p><strong>Amul (GCMMF):</strong> The White Revolution's crown jewel. Founded by Tribhuvandas Patel and led by Verghese Kurien, Amul pioneered the cooperative model &#x2014; 3.6 million milk producers across 18,600 villages. Daily procurement: 27 million liters. Revenue: &#x20B9;72,000 crore (FY2023). The Amul model bypassed middlemen, ensuring 80% of the consumer price goes to farmers. It's studied at Harvard Business School as a masterclass in rural supply chain management.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; Farm Laws 2020</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; Farm Laws 2020</div>
 <p>The three farm laws (repealed 2021) are a hot exam topic. They aimed to: (1) Allow farmers to sell outside APMC mandis, (2) Enable contract farming, (3) Remove essential commodities from stock limits. They were repealed due to farmer protests. In exams, present both sides: the reform rationale (market freedom, better prices) vs. farmer concerns (loss of MSP guarantee, corporate exploitation).</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Agricultural Revolutions</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Agricultural Revolutions</div>
 <div class="mnemonic-text"><strong>"Green White Yellow Blue Golden Silver"</strong> &#x2014; "Good Workers Yield Big Gold Silver"<br>
 <strong>Green</strong> = Food grains (HYV), <strong>White</strong> = Milk (Operation Flood), <strong>Yellow</strong> = Oilseeds, <strong>Blue</strong> = Fish, <strong>Golden</strong> = Horticulture, <strong>Silver</strong> = Eggs/Poultry</div>
 </div>
 
 <p># MMPC03 Business Environment</p>
 <p>## Part 3: Units 8-14 - Structural Reforms to Technological Environment</p>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Agri-business Environment</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Agriculture remains the backbone of Indian economy despite declining share in GDP: Employs about 50% of workforce Contributes approximately 17% to GDP Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotto...</p>
+  <p>Agriculture remains the backbone of Indian economy despite declining share in GDP: Employs about 50% of workforce, Contributes approximately 17% to GDP. India is the largest producer of milk, pulses, and spices globally and the second largest producer of wheat, rice, and cotton. <strong>Land Resources</strong>: Net sown area ~141 million hectares; Gross cropped area ~260 million hectares (multiple cropping); Soil types: Alluvial, black cotton, red, laterite, desert, mountain.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotton Land Resources: Net sown area: ~141 million hectares Gross cropped area: ~260 million hectares (multiple cropping) Soil types: Alluvial, black cotton...</p>
+  <p>Agriculture employs ~42% of workforce but contributes ~18% of GDP (productivity gap). Green Revolution (1960s): HYV seeds, irrigation, fertilizers — Punjab, Haryana, UP benefited most. White Revolution (Operation Flood): Amul model, India = world's largest milk producer. MSP (Minimum Support Price): government procurement for 23 crops. Food Corporation of India (FCI): public distribution system. Agricultural reforms: e-NAM (electronic market), contract farming, farm laws (2020, repealed 2021).</p>
   </div>
 </div>
-<div class="eb"><p><strong>Larsen & Toubro:</strong> Agriculture remains the backbone of Indian economy despite declining share in GDP: Employs about 50% of workforce Contributes approximately 17% to GDP Largest producer of milk, pulses, and spices globally Second largest producer of wheat, rice, cotton Land Resources: Net sown area: ~141 million hect...</p></div>
+<div class="eb"><p>Larsen & Toubro: L&T demonstrates how agri-business connects with industrial infrastructure. L&T Construction builds irrigation projects, cold storage facilities, and food processing plants across India. Their water & effluent treatment division has executed Rs 50,000+ crore worth of agricultural infrastructure projects. L&T's contribution to agricultural modernization includes building dams, canals, and micro-irrigation systems that support India's food security goals.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 7</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 7.</p></div>
 <div class="br"><span class="sb s-b">Unit 7</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Agri-business Environment</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Agriculture employs ~42% of workforce but contributes ~18% of GDP (productivity gap)</li>
+<li>Green Revolution (1960s): HYV seeds, irrigation, fertilizers transformed food production</li>
+<li>MSP (Minimum Support Price) announced for 23 crops; procurement through FCI</li>
+<li>Agri-business value chains: farming, processing, logistics, retail, export</li>
+<li>Food processing industry: SAMPADA scheme, Mega Food Parks, cold chain infrastructure</li>
+<li>Recent reforms: e-NAM (electronic National Agriculture Market), contract farming, APMC reforms</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-8">
-<h3 class="animate-on-scroll">Unit 8: New Economic Policy</h3>
+<div class="unit" id="u8">
+<h3 id="u8" class="animate-on-scroll">Unit 8: New Economic Policy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 8: New Economic Policy</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 8: New Economic Policy</div><p>Examines the 1991 LPG reforms (Liberalization, Privatization, Globalization), the balance of payments crisis, and structural adjustment program.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1686,12 +1755,12 @@ Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Ma
   <li>Infrastructure bottlenecks</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; 1991 Gold Pledge</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; 1991 Gold Pledge</div>
 <p><strong>The Crisis that Changed India:</strong> In June 1991, India pledged 47 tonnes of gold to the Bank of England and Union Bank of Switzerland to raise $600 million. Foreign reserves had dropped to just $1.2 billion &#x2014; barely enough for 2 weeks of imports. RBI Governor S. Venkitaramnan personally flew the gold to London. This humiliation catalyzed the LPG reforms under Finance Minister Manmohan Singh. Within a decade, India's reserves crossed $100 billion.</p>
 </div>
 
-<div class="comparison-table animate-on-scroll">
+<div class="animate-on-scroll">
 <table class="comparison-table">
 <tr><th>Reform Area</th><th>Key Change</th><th>Impact</th></tr>
 <tr><td>Industrial</td><td>Licensing abolished</td><td>Private sector boom, new industries</td></tr>
@@ -1702,40 +1771,47 @@ Money Market (short-term) &#x2192; Capital Market (equity/debt) &#x2192; Debt Ma
 </table>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: LPG Reforms</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: LPG Reforms</div>
 <div class="mnemonic-text"><strong>"L-P-G"</strong> &#x2014; "Let People Grow"<br>
 <strong>L</strong>iberalization (remove government controls) &#x2192; <strong>P</strong>rivatization (transfer ownership to private sector) &#x2192; <strong>G</strong>lobalization (integrate with world economy)<br>
 Also remember: <strong>"SLG"</strong> &#x2014; Stabilization first, then Liberalization &amp; Globalization</div>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">8</div><div class="fc-l">New Economic Policy</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis: Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losse...</p>
+  <p>The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis: Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports), Fiscal deficit exceeded 8% of GDP, Public sector inefficiency and mounting losses, External debt servicing difficulties. <strong>Objectives</strong>: Stabilization (correct external sector imbalances and fiscal deficit), Liberalization (remove restrictions on private sector), Globalization (integrate with world economy).</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>r 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losses External debt servicing difficulties Objectives: Stabilization: Correct external sector imbalances and fiscal deficit Liberalization: Remove restric...</p>
+  <p>1991 Balance of Payments crisis: forex reserves fell to 2 weeks of imports. LPG reforms: Liberalization (delicensing), Privatization (disinvestment), Globalization (FDI opening). Key reforms: industrial licensing abolished, FDI limits raised, tariff reduction, tax reforms (GST), banking reforms. Stabilization measures: IMF gold pledge, fiscal deficit control, rupee devaluation. Results: GDP growth accelerated from 3.5% to 6-8%, forex reserves crossed $600B, India became 5th largest economy.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Bajaj Auto:</strong> The New Economic Policy (NEP) of 1991 was introduced due to severe balance of payments crisis: Foreign exchange reserves fell to $1 billion (enough for 2-3 weeks imports) Fiscal deficit exceeded 8% of GDP Public sector inefficiency and mounting losses External debt servicing difficulties Objectives:...</p></div>
+<div class="eb"><p>Bajaj Auto: Bajaj Auto exemplifies India's 1991 transformation. Pre-liberalization, Bajaj had a 10-year waiting list for its Chetak scooter due to license raj restrictions. Post-1991, Bajaj faced competition from Japanese manufacturers but transformed by investing in R&D, launching Pulsar motorcycles, and expanding globally. Today Bajaj exports to 70+ countries and is the world's largest three-wheeler manufacturer. The 1991 reforms forced Bajaj to innovate rather than rely on protectionism.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Stabilization: Correct external sector imbalances and fiscal deficit; Liberalization: Remove restrictions on business and industry; Globalization: Integrate with world economy and attract foreign investment</p></div>
 <div class="br"><span class="sb s-b">Unit 8</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>New Economic Policy</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>1991 Balance of Payments crisis: forex reserves fell to 2 weeks of imports</li>
+<li>LPG reforms: Liberalization (delicensing), Privatization (disinvestment), Globalization (open markets)</li>
+<li>Key reforms: industrial delicensing, FDI opening, tax reforms (introduced service tax), forex liberalization</li>
+<li>Narasimham Committee recommendations shaped banking and financial sector reforms</li>
+<li>Average GDP growth rose from 3.5% (Hindu rate) to 6-7% post-reforms</li>
+<li>India moved from license raj to market-oriented economy; FDI grew from negligible to $80B+ annually</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-9">
-<h3 class="animate-on-scroll">Unit 9: Financial Sector and Fiscal Sector Reforms</h3>
+<div class="unit" id="u9">
+<h3 id="u9" class="animate-on-scroll">Unit 9: Financial Sector and Fiscal Sector Reforms</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 9: Financial Sector and Fiscal Sector Reforms</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 9: Financial Sector and Fiscal Sector Reforms</div><p>Covers banking reforms, NPA issues, fiscal consolidation, FRBM Act, GST implementation, and tax reforms post-1991.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1834,44 +1910,51 @@ Also remember: <strong>"SLG"</strong> &#x2014; Stabilization first, then Liberal
   <li>Contingent liability management</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; GST Impact</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; GST Impact</div>
 <p><strong>GST (July 1, 2017):</strong> India's biggest tax reform since independence. Subsumed 17 indirect taxes (Excise, VAT, Service Tax, etc.) into one unified tax. Impact: Eliminated cascading effect of "tax on tax," reduced logistics costs by 20% (no more state border checkposts), formalized the economy (GSTN tracks every transaction). Challenges: Multiple rate slabs (5/12/18/28%), compliance burden for SMEs, initial IT glitches. Revenue: &#x20B9;1.68 lakh crore monthly collection (April 2023 record).</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; Narasimham Committee</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; Narasimham Committee</div>
 <p>Two committees (1991 and 1998) are exam favorites. Key recommendations: Reduce SLR and CRR, allow private banks, recapitalize PSU banks, adopt Basel norms, set up ARCs for bad loans. In 2024 context: many recommendations were implemented (Bandhan Bank, IDFC First Bank are new private banks), but full privatization of PSU banks remains politically sensitive.</p>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">9</div><div class="fc-l">Financial Sector and Fiscal Sector Reforms</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Banking Sector: Narasimham Committee recommendations (1991, 1998) Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR) Deregulation of interest rates on deposits and advances Introduction of prudential norms for income recognitio...</p>
+  <p><strong>Banking Sector</strong>: Narasimham Committee recommendations (1991, 1998) — Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR), Deregulation of interest rates on deposits and advances, Introduction of prudential norms for income recognition and asset classification, Technology upgradation and computerization. <strong>Capital Markets</strong>: Establishment of SEBI as statutory regulator, Dematerialization of shares, Screen-based trading, Rolling settlement.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>tion of interest rates on deposits and advances Introduction of prudential norms for income recognition and asset classification Technology upgradation and computerization Capital Markets: Establishment of SEBI as statutory regulator Dematerializatio...</p>
+  <p>Banking reforms: Basel norms adoption, NPA resolution (IBC 2016), PSB recapitalization. NPA crisis: twin balance sheet problem (stressed banks + stressed companies). IBC: 330+ cases resolved, Rs 2.5 lakh crore recovered. Fiscal reforms: FRBM Act (2003), fiscal deficit targets. GST (2017): One Nation One Tax, replaced 17 indirect taxes. GST revenue: Rs 1.5-1.7 lakh crore/month. Direct tax reforms: faceless assessment, e-filing, tax-to-GDP ratio improvement.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Maruti Suzuki:</strong> Banking Sector: Narasimham Committee recommendations (1991, 1998) Reduction in Statutory Liquidity Ratio (SLR) and Cash Reserve Ratio (CRR) Deregulation of interest rates on deposits and advances Introduction of prudential norms for income recognition and asset classification Technology upgradation ...</p></div>
+<div class="eb"><p>Maruti Suzuki: Maruti Suzuki benefited from banking sector reforms post-1991. Easy auto loans from reformed banks fueled Maruti's growth — from 50% market share to 80M+ cumulative sales. Maruti's supply chain uses banking reforms: working capital finance for 300+ vendors, dealer financing programs, and digital payment integration. The company's success story is intertwined with India's financial sector modernization — from cash-based to digital-first economy.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 9</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 9.</p></div>
 <div class="br"><span class="sb s-b">Unit 9</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
 <div class="db"><table style="width:100%;border-collapse:collapse;color:#e0e0e0"><tr style="background:#1a1a3e"><th>Concept</th><th>Detail</th></tr><tr><td>Financial Sector and Fiscal Sector Reforms</td><td>Details</td></tr></table></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>Banking reforms: Basel norms adoption, NPA resolution (IBC 2016), PSB recapitalization</li>
+<li>NPA crisis: twin balance sheet problem (stressed banks + stressed corporates); IBC resolved Rs 3 lakh Cr+</li>
+<li>Fiscal consolidation: FRBM Act 2003 targets 3% fiscal deficit, path to debt-to-GDP reduction</li>
+<li>GST (2017): unified indirect tax, destination-based, input tax credit chain, GST Council governance</li>
+<li>Direct tax reforms: corporate tax cut to 22% (2019), faceless assessment, new ITR forms</li>
+<li>Financial inclusion: Jan Dhan accounts (50 Cr+), UPI digital payments (10B+ monthly transactions)</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-10">
-<h3 class="animate-on-scroll">Unit 10: International Financial System</h3>
+<div class="unit" id="u10">
+<h3 id="u10" class="animate-on-scroll">Unit 10: International Financial System</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 10: International Financial System</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 10: International Financial System</div><p>Explores IMF, World Bank, WTO, regional development banks, exchange rate regimes, and India's role in global financial institutions.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1922,8 +2005,8 @@ Also remember: <strong>"SLG"</strong> &#x2014; Stabilization first, then Liberal
 </svg>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: Bretton Woods Twins</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: Bretton Woods Twins</div>
 <div class="mnemonic-text"><strong>"IMF = Short-term, World Bank = Long-term"</strong><br>
 IMF = International Monetary Fund = Money for <strong>stabilization</strong> (balance of payments crises)<br>
 World Bank = Money for <strong>development</strong> (poverty reduction, infrastructure)<br>
@@ -1963,33 +2046,43 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 <p><strong>Membership</strong>: 68 countries including India</p>
 <p><strong>Operations</strong>: Infrastructure financing, social development, regional cooperation</p>
 <p><strong>India's Role</strong>: Fourth largest shareholder and borrower</p>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">10</div><div class="fc-l">International Financial System</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Functions: Surveillance of international monetary system Financial assistance to member countries Technical assistance and training programs Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota ...</p>
+  <p><strong>Functions</strong>: Surveillance of international monetary system, Financial assistance to member countries, Technical assistance and training programs, Research and data dissemination. <strong>Quotas and Resources</strong>: Based on relative size of member economies, Total quota resources ~$1 trillion, Special Drawing Rights (SDRs) as international reserve asset. <strong>Components</strong>: International Bank for Reconstruction and Development (IBRD), International Development Association (IDA), International Finance Corporation (IFC), Multilateral Investment Guarantee Agency (MIGA), International Centre for Settlement of Investment Disputes (ICSID).</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>s Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota resources: ~$1 trillion Special Drawing Rights (SDRs) as international reserve asset Components: International Bank for Reconstruction and ...</p>
+  <p>IMF: provides BoP support, surveillance, SDR allocations; India's quota and voting share matter. World Bank Group (IBRD, IDA, IFC, MIGA): development financing, poverty reduction. WTO: trade liberalization, dispute resolution; Doha Round stalled. ADB: Asia-Pacific development financing. Exchange rate regimes: fixed, floating, managed float (India). India's forex reserves: $600B+ (4th largest globally). Regional cooperation: BRICS New Development Bank, AIIB, SCO.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Asian Paints:</strong> Functions: Surveillance of international monetary system Financial assistance to member countries Technical assistance and training programs Research and data dissemination Quotas and Resources: Based on relative size of member economies Total quota resources: ~$1 trillion Special Drawing Rights (SD...</p></div>
+<div class="eb"><p>Asian Paints: Asian Paints demonstrates how the international financial system enables Indian companies to go global. With operations in 15+ countries across Asia, Africa, and the Middle East, Asian Paints uses World Bank-funded infrastructure projects for market entry. Their international expansion leverages multilateral trade frameworks (WTO rules), foreign exchange markets for hedging, and development finance for manufacturing plants in emerging markets.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 10</p></div>
 <div class="py"><div class="py-l">Concept</div><div class="py-l">Application</div><div class="py-l">Result</div></div>
 <div class="br"><span class="sb s-b">Unit 10</span><span class="sb s-g">Important</span><span class="sb s-y">Key</span></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>IMF: provides BoP support, surveillance, SDR allocations; India's quota and voting share matter</li>
+<li>World Bank Group (IBRD, IDA, IFC, MIGA): funds development projects across India</li>
+<li>WTO: governs global trade rules; India active in Doha Round and agricultural subsidy negotiations</li>
+<li>Exchange rate regimes: India follows managed float since 1993; rupee largely market-determined</li>
+<li>Regional banks: ADB, NDB (BRICS), AIIB; India is major recipient of development financing</li>
+<li>India's forex reserves crossed $600 billion; 4th largest globally, strong external buffer</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-11">
-<h3 class="animate-on-scroll">Unit 11: Balance of Payments (BoP)</h3>
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: International &amp; Technological Environment</h2>
+
+<div class="unit" id="u11">
+<h3 id="u11" class="animate-on-scroll">Unit 11: Balance of Payments (BoP)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 11: Balance of Payments (BoP)</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 11: Balance of Payments (BoP)</div><p>Covers BoP components (current account, capital account), BoP crises in India, forex reserves, and exchange rate management.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -2081,42 +2174,49 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
   <li>Structural reforms</li>
 </ul>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; 1991 BoP Crisis</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; 1991 BoP Crisis</div>
 <p><strong>The 1991 Crisis:</strong> India's current account deficit ballooned to $10 billion, forex reserves fell to $1.2 billion (2 weeks of imports), and India had to pledge 47 tonnes of gold to Bank of England. The crisis forced India to adopt LPG reforms. Fast forward to 2024: India's forex reserves are $650+ billion (10+ months of imports), and India is the world's 5th largest economy. The 1991 crisis was the best thing that happened to India's economy &#x2014; it forced reform.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip</div>
 <p>A common exam question: "Differentiate between Current Account Deficit (CAD) and Fiscal Deficit." CAD = imports > exports (external imbalance), Fiscal Deficit = government spending > revenue (internal imbalance). Both can be related: high fiscal deficit &#x2192; higher imports &#x2192; higher CAD. India targets CAD < 2.5% of GDP and fiscal deficit < 4.5% of GDP (FY2026 target).</p>
 </div>
 
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">11</div><div class="fc-l">Balance of Payments (BoP)</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Current Account: Trade in goods (visible exports and imports) Trade in services (invisible exports and imports) Income receipts and payments Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident inv...</p>
+  <p><strong>Current Account</strong>: Trade in goods (visible exports and imports), Trade in services (invisible exports and imports), Income receipts and payments, Current transfers. <strong>Capital Account</strong>: Capital transfers (debt forgiveness, migrants' transfers), Non-resident investments in domestic assets, Reserve assets transactions. <strong>Financial Account</strong>: Direct investment flows, Portfolio investment flows, Other investment flows (loans, trade credits).</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>s Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident investments in domestic assets Reserve assets transactions Financial Account: Direct investment flows Portfolio investment flows Other investm...</p>
+  <p>BoP = Current Account (trade, services, transfers) + Capital Account (investments, loans). Current Account Deficit (CAD) driven by oil imports, gold imports; offset by IT services surplus, remittances. India's CAD: 1-3% of GDP typically. Capital Account: FDI, FII, ECBs, NRI deposits. Forex reserves act as buffer. BoP crises: 1991 (gold pledge), 2013 (taper tantrum). India's remittances: $100B+ (largest globally). Services exports: IT/BPO leading.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Bharat Petroleum:</strong> Current Account: Trade in goods (visible exports and imports) Trade in services (invisible exports and imports) Income receipts and payments Current transfers Capital Account: Capital transfers (debt forgiveness, migrants' transfers) Non-resident investments in domestic assets Reserve assets transac...</p></div>
+<div class="eb"><p>Bharat Petroleum: Bharat Petroleum directly impacts India's Balance of Payments as a major oil importer. India imports 85% of its crude oil needs, making petroleum the largest component of India's import bill. BPCL's crude oil imports from Middle East, Africa, and Americas contribute significantly to India's Current Account Deficit. However, BPCL's refinery exports and petrochemical shipments help offset some of this deficit, demonstrating the complex dynamics of BoP management.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 11</p></div>
 <div class="mb"><p><strong>Mnemonic:</strong> Remember key concepts for unit 11.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>BoP = Current Account (trade, services, transfers) + Capital Account (investments, loans)</li>
+<li>Current Account Deficit (CAD) driven by oil imports, gold imports; offset by services exports and remittances</li>
+<li>1991 BoP crisis: forex reserves at $1.2 billion, India pledged gold reserves, approached IMF</li>
+<li>Forex reserves management by RBI; includes foreign currency assets, gold, SDRs, reserve tranche</li>
+<li>Exchange rate: moved from fixed (pegged) to managed float; rupee largely market-determined</li>
+<li>Remittances: India largest recipient globally ($100B+ annually); Gulf countries major source</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-12">
-<h3 class="animate-on-scroll">Unit 12: Foreign Trade</h3>
+<div class="unit" id="u12">
+<h3 id="u12" class="animate-on-scroll">Unit 12: Foreign Trade</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 12: Foreign Trade</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 12: Foreign Trade</div><p>Examines India's foreign trade policy, export-import composition, trade agreements (FTA/RTA), trade balance, and export promotion measures.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -2138,13 +2238,13 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
   </div>
 </div>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; Trade Agreements</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; Trade Agreements</div>
 <p><strong>India's FTA Network:</strong> India has signed FTAs with ASEAN (2010), Japan (2011), South Korea (2010), and the UAE (2022). The India-UAE CEPA boosted bilateral trade by 16% in the first year. India is negotiating FTAs with EU, UK, Canada, and Israel. However, India walked out of RCEP (2020) citing concerns about Chinese goods flooding Indian markets &#x2014; a protectionist stance to safeguard domestic manufacturing.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; India's Export Composition</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; India's Export Composition</div>
 <p>India's top exports: (1) Petroleum products (refinery), (2) Gems &amp; jewelry, (3) Pharmaceuticals, (4) IT services, (5) Chemicals. Top imports: (1) Crude oil, (2) Gold, (3) Electronics, (4) Coal, (5) Machinery. India has a structural trade deficit because oil and gold imports are massive and non-negotiable. Key exam fact: India's services exports ($325B) are stronger than merchandise exports &#x2014; the "IT dividend."</p>
 </div>
 <h4>Point 1: Foreign Trade Policy</h4>
@@ -2177,31 +2277,38 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
   <li>Gold and electronics from various countries</li>
   <li>Machinery and raw materials</li>
 </ul>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">12</div><div class="fc-l">Foreign Trade</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Export Promotion: Merchandise Exports from India Scheme (MEIS) Service Exports from India Scheme (SEIS) Duty-free credit scrips for exporters Infrastructure development for exports Import Policy: Import licensing largely abolished Tariff liberalizati...</p>
+  <p><strong>Export Promotion</strong>: Merchandise Exports from India Scheme (MEIS), Service Exports from India Scheme (SEIS), Duty-free credit scrips for exporters, Infrastructure development for exports. <strong>Import Policy</strong>: Import licensing largely abolished, Tariff liberalization and rationalization, Free Trade Agreement utilization, Preferential import arrangements. <strong>Export Destinations</strong>: USA, UAE, China, UK, Germany. IT services exports to USA and Europe dominate.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>ructure development for exports Import Policy: Import licensing largely abolished Tariff liberalization and rationalization Free Trade Agreement utilization Preferential import arrangements Export Destinations: USA, UAE, China, UK, Germany IT service...</p>
+  <p>Foreign Trade Policy (FTP) 2023: targets $2 trillion exports by 2030; focuses on ease of doing business. Export composition: services (IT, BPO) > merchandise (petroleum, gems, textiles). Import composition: crude oil, gold, electronics, machinery. Trade agreements: RCEP (India opted out), bilateral FTAs (UAE, Australia). Trade balance: persistent deficit due to oil/gold imports. Export promotion: SEZs, EOUs, advance authorization, duty drawback. Districts as export hubs initiative.</p>
   </div>
 </div>
-<div class="eb"><p><strong>Hindustan Unilever:</strong> Export Promotion: Merchandise Exports from India Scheme (MEIS) Service Exports from India Scheme (SEIS) Duty-free credit scrips for exporters Infrastructure development for exports Import Policy: Import licensing largely abolished Tariff liberalization and rationalization Free Trade Agreement utiliz...</p></div>
+<div class="eb"><p>Hindustan Unilever: Hindustan Unilever (HUL) exemplifies India's foreign trade evolution. HUL exports to 50+ countries, leveraging India's trade agreements and export promotion schemes. Their "Made in India" products (Surf Excel, Lifebuoy) are exported to Asia, Africa, and Middle East. HUL uses Free Trade Agreements with ASEAN and SAARC countries for preferential tariff access. Their supply chain optimization demonstrates how Indian companies navigate complex trade regulations.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 12</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Foreign Trade Policy (FTP) 2023: targets $2 trillion exports by 2030; focuses on ease of doing business</li>
+<li>Export composition: services (IT, BPO) lead; merchandise includes petroleum, gems, chemicals, pharma, textiles</li>
+<li>Import composition: crude oil, gold, electronics, machinery, coal; trade deficit structural challenge</li>
+<li>Trade agreements: India-ASEAN FTA, India-Japan CEPA, India-UAE CEPA; RCEP negotiations</li>
+<li>Export promotion: SEZ scheme, RoDTEP (tax refunds), ECGC credit guarantee, trade infrastructure</li>
+<li>India's share in global trade: ~2.5% merchandise, ~4% services; growth potential significant</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-13">
-<h3 class="animate-on-scroll">Unit 13: Sources of Global Financing</h3>
+<div class="unit" id="u13">
+<h3 id="u13" class="animate-on-scroll">Unit 13: Sources of Global Financing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 13: Sources of Global Financing</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 13: Sources of Global Financing</div><p>Covers FDI, FII, ECBs, ADR/GDR, sovereign bonds, multilateral aid, and India's FDI policy framework.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -2235,8 +2342,8 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </svg>
 </div>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; FDI Success Story</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; FDI Success Story</div>
 <p><strong>Gujarat's GIFT City:</strong> India's first International Financial Services Centre (IFSC) in Gandhinagar. Attracted $26B+ in cumulative transactions. Features: tax holidays, relaxed regulations, global banking licenses. Major occupiers: Standard Chartered, Deutsche Bank, JP Morgan. GIFT City aims to compete with Singapore and Dubai as Asia's financial hub. It shows how infrastructure + regulatory reform = FDI magnet.</p>
 </div>
 <h4>Point 1: International Capital Flows</h4>
@@ -2272,31 +2379,38 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
   <li>Reporting and disclosure requirements</li>
   <li>All-in-cost ceiling framework</li>
 </ul>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">13</div><div class="fc-l">Sources of Global Financing</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Foreign Direct Investment (FDI): Long-term investment for business control Technology transfer and employment generation Linkage with global production networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond marke...</p>
+  <p><strong>Foreign Direct Investment (FDI)</strong>: Long-term investment for business control, Technology transfer and employment generation, Linkage with global production networks. <strong>Portfolio Investment</strong>: Short-term capital flows for financial returns, Stock and bond market investments, Higher volatility and speculative nature. <strong>Loan Capital</strong>: Commercial borrowings abroad (ECB), Official development finance, Multilateral and bilateral aid.</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>uction networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond market investments Higher volatility and speculative nature Loan Capital: Commercial borrowings abroad (ECB) Official development finance Multilateral...</p>
+  <p>FDI: equity capital + reinvested earnings; India received $80B+ FDI in FY22; Mauritius, Singapore top sources. FII/FPI: portfolio investments in stocks/bonds; volatile flows. ECBs: external commercial borrowings; end-use restrictions. ADR/GDR: Indian companies listing abroad. Sovereign bonds: India's first sovereign green bond (2023). FDI policy: automatic route (most sectors), government route (defense, media, multi-brand retail). PLI scheme attracting manufacturing FDI.</p>
   </div>
 </div>
-<div class="eb"><p><strong>ITC:</strong> Foreign Direct Investment (FDI): Long-term investment for business control Technology transfer and employment generation Linkage with global production networks Portfolio Investment: Short-term capital flows for financial returns Stock and bond market investments Higher volatility and speculative na...</p></div>
+<div class="eb"><p>ITC: ITC demonstrates diverse global financing strategies. ITC's international business uses FDI for hotel expansion (Welcomhotel brand in Sri Lanka, Bangladesh), portfolio investment through global fund managers, and ECBs for capital expenditure. ITC's agri-business exports to 80+ countries, earning foreign exchange. Their e-Choupal digital platform connects 4 million farmers to global markets, showing how Indian companies leverage international financing for domestic development.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 13</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>FDI: equity capital + reinvested earnings; India received $80B+ FDI in FY22; Mauritius, Singapore top sources</li>
+<li>FII/FPI: portfolio investment in stock markets; volatile, driven by global risk appetite and returns</li>
+<li>ECBs (External Commercial Borrowings): corporates borrow overseas; regulated by RBI within ECB framework</li>
+<li>ADR/GDR: Indian companies list on NYSE/London Stock Exchange to access global capital</li>
+<li>Sovereign bonds: India issued $10B sovereign green bonds; accessing international debt markets</li>
+<li>FDI policy: 100% FDI in most sectors via automatic route; multi-brand retail, defence have conditions</li>
+</ul></div>
 </div>
 
 </div>
-<div class="unit" id="unit-14">
-<h3 class="animate-on-scroll">Unit 14: Technological Environment</h3>
+<div class="unit" id="u14">
+<h3 id="u14" class="animate-on-scroll">Unit 14: Technological Environment</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 14: Technological Environment</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 14: Technological Environment</div><p>Explores India's digital transformation, IT sector growth, Startup India, Digital India, emerging technologies (AI, 5G, blockchain), and technology policy.</p></div>
 
 <div class="video-section animate-on-scroll">
   <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -2339,18 +2453,18 @@ Both created at Bretton Woods Conference (1944), HQ: Washington DC</div>
 </svg>
 </div>
 
-<div class="indian-example animate-on-scroll">
-<div class="example-label">Indian Example &#x2014; Digital India Success</div>
+<div class="callout callout-example animate-on-scroll">
+<div class="callout-label">Indian Example &#x2014; Digital India Success</div>
 <p><strong>India's UPI Global Expansion:</strong> UPI is now accepted in 7 countries &#x2014; Singapore, UAE, France, Sri Lanka, Bhutan, Nepal, and Mauritius. Google recommended India's UPI model to the US Federal Reserve. India processes more digital transactions than the US and China combined. The India Stack (Aadhaar + UPI + DigiLocker) is being studied by 30+ countries as a model for digital public infrastructure.</p>
 </div>
 
-<div class="exam-tip animate-on-scroll">
-<div class="tip-label">Exam Tip &#x2014; Technology & Business</div>
+<div class="callout callout-important animate-on-scroll">
+<div class="callout-label">Exam Tip &#x2014; Technology & Business</div>
 <p>For technology environment questions, always connect technology to <strong>business impact</strong>: (1) AI &#x2192; automation + job displacement concerns, (2) UPI &#x2192; financial inclusion + cashless economy, (3) Aadhaar &#x2192; identity verification + subsidy targeting (JAM trinity), (4) 5G &#x2192; IoT + smart manufacturing. The examiner wants to see you link technology to economic outcomes, not just list technologies.</p>
 </div>
 
-<div class="mnemonic-box animate-on-scroll">
-<div class="mnemonic-title">Mnemonic: India's Digital Initiatives</div>
+<div class="callout callout-mnemonic animate-on-scroll">
+<div class="callout-label">Mnemonic: India's Digital Initiatives</div>
 <div class="mnemonic-text"><strong>"D-A-B-U-S-D"</strong> &#x2014; "Digital Aadhaar Brings UPI Smartly Daily"<br>
 <strong>D</strong>igital India &#x2192; <strong>A</strong>adhaar &#x2192; <strong>B</strong>haratNet &#x2192; <strong>U</strong>PI &#x2192; <strong>S</strong>tartup India &#x2192; <strong>D</strong>igiLocker<br>
 These form the backbone of India's digital economy.</div>
@@ -2395,50 +2509,66 @@ These form the backbone of India's digital economy.</div>
   <li>Investment in R&D and innovation</li>
   <li>Cybersecurity and data privacy concerns</li>
 </ul>
-<ul>
-  <li>--</li>
-</ul>
+
 
 <div class="fc">
   <div class="fc-s"><div class="fc-n">14</div><div class="fc-l">Technological Environment</div></div>
 </div>
 <div class="cg">
   <div class="cc"><h5>Key Concepts</h5>
-  <p>Transformation Areas: E-commerce and digital payments Artificial Intelligence and automation Internet of Things (IoT) applications Blockchain and distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India pr...</p>
+  <p><strong>Transformation Areas</strong>: E-commerce and digital payments, Artificial Intelligence and automation, Internet of Things (IoT) applications, Blockchain and distributed ledger technology, Big data analytics and cloud computing. <strong>Startup Ecosystem</strong>: Startup India program, Atmanirbhar Bharat digital initiatives, Digital India program, BharatNet connectivity project. <strong>Technology Adoption</strong>: Aadhaar biometric identity (1.3B+ enrolments), UPI digital payments (10B+ monthly transactions), JAM Trinity (Jan Dhan-Aadhaar-Mobile).</p>
   </div>
   <div class="cc"><h5>Summary</h5>
-  <p>d distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India program Atmanirbhar Bharat digital initiatives Digital India program BharatNet connectivity project Technology Adoption: Aadhaar biometric identit...</p>
+  <p>India's IT sector: $250B+ revenue; TCS, Infosys, Wipro lead; 5 million+ workforce. Digital India program: digital infrastructure, governance, literacy. UPI: 10B+ monthly transactions, Rs 15-20 lakh crore value. Startup ecosystem: 100+ unicorns, $100B+ funding. Emerging tech: AI (IndiaAI mission), 5G rollout, blockchain pilots. Challenges: digital divide, cybersecurity, data privacy (DPDP Act 2023). Technology policy: National Digital Health Mission, ONDC (Open Network for Digital Commerce).</p>
   </div>
 </div>
-<div class="eb"><p><strong>Dabur:</strong> Transformation Areas: E-commerce and digital payments Artificial Intelligence and automation Internet of Things (IoT) applications Blockchain and distributed ledger technology Big data analytics and cloud computing Startup Ecosystem: Startup India program Atmanirbhar Bharat digital initiatives Digit...</p></div>
+<div class="eb"><p>Dabur: Dabur demonstrates how traditional Indian companies embrace technology. Founded in 1884 as an Ayurvedic medicine company, Dabur now uses AI for demand forecasting, IoT for supply chain monitoring, and e-commerce platforms for direct consumer reach. Their digital transformation includes cloud-based ERP systems, data analytics for product development, and social media marketing. Dabur's Rs 11,000+ crore revenue shows how traditional businesses can thrive by adopting modern technology while preserving heritage.</p></div>
 <div class="kt"><p><strong>Key Takeaways:</strong> Key points for unit 14</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>India's IT sector: $250B+ revenue; TCS, Infosys, Wipro lead; 5 million+ workforce</li>
+<li>Digital India program: digital infrastructure, governance on demand, digital literacy</li>
+<li>UPI revolution: 10B+ monthly transactions; world's largest real-time digital payment system</li>
+<li>Startup India: 100,000+ DPIIT-recognized startups; 100+ unicorns; $150B+ valuation</li>
+<li>Emerging technologies: AI (NITI Aayog strategy), 5G rollout, blockchain, IoT, EV ecosystem</li>
+<li>Technology policy: Data Protection Act 2023, semiconductor mission ($10B incentive), space sector privatization</li>
+</ul></div>
 </div>
 
 </div>
 </main>
 </div>
-<script src="api-utils.js"></script>
-
-    <script src="pomodoro.js"></script>
+<script src="pomodoro.js"></script>
     <script src="bookmark-notes.js"></script>
     <script src="flashcards.js"></script>
-    <script>
-    // Scroll-triggered fade-in animations
-    (function() {
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+<script>
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
-            observer.observe(el);
-        });
-    })();
-    </script>
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+})();
+</script>
     <script src="enhancements.js"></script>
     <script src="revision-mode.js"></script>
     <script src="pwa-register.js"></script>

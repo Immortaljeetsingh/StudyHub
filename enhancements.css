@@ -76,7 +76,7 @@
 /* Achievement toast notification */
 .achievement-toast {
   position: fixed;
-  bottom: 24px;
+  bottom: 6rem;
   right: 24px;
   display: flex;
   align-items: center;
@@ -127,3 +127,19 @@
 .animate-on-scroll:nth-child(6) { transition-delay: 0.40s; }
 .animate-on-scroll:nth-child(7) { transition-delay: 0.48s; }
 .animate-on-scroll:nth-child(8) { transition-delay: 0.56s; }
+
+/* Reduced motion support */
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto !important; }
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+}
+
+/* Print styles */
+@media print {
+  .reading-progress, .top-toolbar, .scroll-top, .exam-mode-fab, .achievement-toast,
+  .flashcards-toggle, .bookmark-btn, .notes-toggle, .pomodoro-widget, .sidebar-toggle,
+  .study-sidebar, .quiz-timer, .shortcuts-modal, .mobile-nav-toggle, .pwa-install-banner { display: none !important; }
+  .animate-on-scroll { opacity: 1 !important; transform: none !important; }
+  body { background: white !important; color: black !important; }
+  .study-content { padding: 1rem !important; }
+}

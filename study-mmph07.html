@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#d63031cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc,#00d4ff,#d63031);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#d63031;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(214,48,49,.15);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#d63031}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.study-sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}.study-sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#d63031cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc,#00d4ff,#d63031);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#d63031;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(214,48,49,.15);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#d63031}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 .action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}
 .btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}
 .btn-primary{background:rgba(214,48,49,.2);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}
@@ -24,16 +28,35 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 .kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}
 .vd-node{transition:transform .2s}
 .vd-node:hover{transform:scale(1.03)}
+
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FFD700; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-toggle { background: linear-gradient(135deg, rgba(108,99,255,0.2), rgba(0,210,255,0.15)); border: 1px solid rgba(108,99,255,0.3); color: #e0e0ff; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; transition: all 0.3s; margin-bottom: 1rem; }
+.video-toggle:hover { background: linear-gradient(135deg, rgba(108,99,255,0.3), rgba(0,210,255,0.25)); }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
 </style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmph07">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmph-07'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
-<nav class="sidebar">
+<aside class="study-sidebar">
+  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">MMPH-07</span></div>
+  <nav class="sidebar-nav">
   <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPH-07</h3></div>
   <a href="#u1">Unit 1: Compensation & Rewards</a>
   <a href="#u2">Unit 2: Compensation Policy Frameworks</a>
   <a href="#u3">Unit 3: Economic & Behavioural Issues</a>
@@ -50,7 +73,10 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
   <a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
   <a href="#revision">&#x26A1; Quick Revision</a>
   <a href="#exam">&#x1F3AF; Exam Focus</a>
+  <a href="quiz-mmph07.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
 </nav>
+</aside>
 <main class="study-content" id="main-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPH-07</span><h1>Compensation and Rewards Management</h1>
@@ -63,6 +89,14 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1" class="ai-response-box" style="display:none;"></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div><p><strong>Compensation</strong> = all forms of financial returns and tangible services/benefits employees receive as part of employment relationship. Functionally viewed as: (a) system of rewards that motivates performance, (b) tool to foster values/culture/behaviour, (c) instrument to achieve business goals.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compensation Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kYXMrMcWVKA" title="Compensation Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Reward Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/QWxnrJeGpFk" title="Reward Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="visual-diagram"><h5>&#x1F4CA; Compensation Components</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>COMPENSATION</strong></div>
@@ -84,15 +118,33 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Indirect Compensation (Fringe Benefits):</strong> Benefits beyond cash - PF, pension, medical insurance, sick leave, housing.</p>
 <p><strong>Cafeteria Plan:</strong> Employees choose benefit package from a list of available options, matching individual needs.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>In Indian companies, identical basic wages across stations can lead to highly disparate total wages due to DA variations - this is why periodic DA merger with basic pay is recommended.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Compensation Structure Components (Indian Context)</div>
+<ul>
+<li><strong>Basic Wage:</strong> Fixed pay based on job evaluation; typically 40-50% of CTC in India</li>
+<li><strong>Dearness Allowance (DA):</strong> Compensates for inflation; linked to AICPI; revised twice yearly</li>
+<li><strong>House Rent Allowance (HRA):</strong> 40-50% of basic for metro cities; tax-free if rent paid</li>
+<li><strong>Conveyance/Transport:</strong> Fixed monthly amount or company transport</li>
+<li><strong>Medical Allowance:</strong> Rs. 15,000/year tax-free under Section 17(2)</li>
+<li><strong>Leave Travel Allowance (LTA):</strong> Tax-free for domestic travel (2 trips in 4 years)</li>
+<li><strong>Special Allowance:</strong> Balance amount to reach target CTC</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>DA Variations:</strong> In Indian companies, identical basic wages across stations can lead to highly disparate total wages due to DA variations - a worker in Mumbai with the same basic as one in a smaller city may earn significantly more due to higher DA for metro areas.</p>
+<p style="margin-top:0.5rem"><strong>CTC Breakdown Example (Indian IT):</strong> For a CTC of Rs. 10 lakhs: Basic = Rs. 4 lakhs, HRA = Rs. 2 lakhs, Special Allowance = Rs. 2.5 lakhs, PF (employer) = Rs. 48,000, Gratuity = Rs. 19,230, Medical = Rs. 15,000, LTA = Rs. 20,000.</p>
+<p style="margin-top:0.5rem"><strong>Fringe Benefits Growth:</strong> In India, fringe benefits have grown from 15-20% of total compensation in the 1990s to 25-35% today, driven by tax advantages, talent competition, and statutory requirements.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DOS-PIF</strong> = Direct comp = <strong>D</strong>A, <strong>O</strong>vertime, <strong>S</strong>hift allowance | Indirect = <strong>P</strong>F, <strong>I</strong>nsurance, <strong>F</strong>ringe benefits</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the distinction between direct and indirect compensation and why fringe benefits have grown (tax advantages, retention, legal requirements).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Know the distinction between direct and indirect compensation and why fringe benefits have grown (tax advantages, retention, legal requirements). CTC breakdown is a practical Indian example - know the components and their proportions.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Compensation = Direct (cash) + Indirect (benefits)</li>
 <li>Direct: Basic pay, DA, overtime, incentives, bonus, commissions</li>
 <li>Indirect: PF, pension, medical insurance, housing, ESI</li>
 <li>Role: Attract, retain, motivate, develop skills, foster culture</li>
-<li>DA compensates for inflation, linked to AICPI</li>
+<li>DA compensates for inflation, linked to AICPI; revised twice yearly</li>
+<li>Indian CTC: Basic (40-50%) + HRA + Special Allowance + PF + Gratuity + Benefits</li>
+<li>Fringe benefits grew from 15-20% to 25-35% of total compensation in India</li>
 </ul></div>
 </div>
 
@@ -103,6 +155,14 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Total Rewards Framework (WorldatWork)</div>
 <p><strong>6 Elements:</strong> Compensation (base + variable), Benefits, Work-Life Balance, Performance & Recognition, Career Development, Talent Management.</p>
 </div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Wage Determination</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VXz8FEjvOHY" title="Wage Determination" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Minimum Wages India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Mx8YsVmJfXo" title="Minimum Wages India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="visual-diagram"><h5>&#x1F4CA; Total Rewards Model</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>TOTAL REWARDS</strong></div>
@@ -117,23 +177,51 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Talent</div>
 </div>
 </div></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Theories</div>
-<p><strong>Equity Theory (Adams):</strong> Employees compare their Input-Outcome ratio with others. Perceived inequity leads to motivation problems. 3 types: Internal, External, Individual equity.</p>
-<p><strong>Expectancy Theory (Vroom):</strong> Motivation = Expectancy &times; Instrumentality &times; Valence. E = "My effort leads to performance", I = "Performance leads to reward", V = "How much I value the reward".</p>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Equity Theory (Adams, 1963)</div>
+<p>Employees compare their <strong>Input-Outcome ratio</strong> with others. Perceived inequity leads to motivation problems.</p>
+<p><strong>3 Types of Equity:</strong></p>
+<ul>
+<li><strong>Internal Equity:</strong> Fair pay within the organization</li>
+<li><strong>External Equity:</strong> Competitive with market</li>
+<li><strong>Individual Equity:</strong> Fair person-to-person comparisons</li>
+</ul>
+<p><strong>Equity Flow:</strong> Employee Input &rarr; Compare Ratio &rarr; Perceived Equity/Inequity &rarr; Behaviour Change (adjust effort, seek raise, or quit)</p>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Pay Strategies</div>
-<p><strong>Lead:</strong> Pay above market - attract top talent, low unemployment.</p>
-<p><strong>Lag:</strong> Pay below market - cost-cutting, high unemployment.</p>
-<p><strong>Match:</strong> Pay at market - standard approach, stable workforce.</p>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expectancy Theory (Vroom)</div>
+<p><strong>Motivation = Expectancy &times; Instrumentality &times; Valence</strong></p>
+<ul>
+<li><strong>E (Expectancy):</strong> "My effort leads to performance"</li>
+<li><strong>I (Instrumentality):</strong> "Performance leads to reward"</li>
+<li><strong>V (Valence):</strong> "How much I value the reward"</p></li>
+</ul>
+<p>All three must be high for motivation to work. If any one is zero, motivation is zero.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Compensation Philosophy - 3 Strategies</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Strategy</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Description</td><td style="padding:0.4rem;color:#d63031;font-weight:600">When to Use</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Lead</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay above market</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Attract top talent, low unemployment</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Lag</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay below market</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Cost-cutting, high unemployment</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Match</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay at market</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Standard approach, stable workforce</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Equity Theory - Indian Examples</div>
+<ul>
+<li><strong>Internal Equity:</strong> A software engineer at TCS should earn comparably to a similar role at Infosys within the same company</li>
+<li><strong>External Equity:</strong> If market rate for Java developers is Rs. 8 lakhs, paying Rs. 6 lakhs will cause attrition to competitors</li>
+<li><strong>Individual Equity:</strong> Two project managers with similar experience should not have vastly different salaries</li>
+</ul>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;"><strong>Inequity Responses (Adams):</strong> When employees perceive inequity, they may: (1) reduce effort, (2) seek pay raise, (3) rationalize, (4) change comparison target, or (5) quit the organization.</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CBWPCT</strong> = Total Rewards: <strong>C</strong>ompensation, <strong>B</strong>enefits, <strong>W</strong>ork-life, <strong>P</strong>erformance, <strong>C</strong>areer, <strong>T</strong>alent</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Expect questions comparing Equity Theory vs Expectancy Theory - know both frameworks and their application to compensation design.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Expect questions comparing Equity Theory vs Expectancy Theory - know both frameworks and their application to compensation design. Equity Theory focuses on fairness comparisons; Expectancy Theory focuses on effort-reward linkage.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Total Rewards has 6 elements: CBWPCT</li>
-<li>Equity Theory: employees compare input-outcome ratios</li>
-<li>Expectancy Theory: M = E &times; I &times; V</li>
+<li>Equity Theory: employees compare input-outcome ratios; 3 types: internal, external, individual</li>
+<li>Expectancy Theory: M = E &times; I &times; V (all must be high)</li>
 <li>3 pay strategies: Lead, Lag, Match (LLM)</li>
 <li>Google uses Lead strategy; startups use Lag + equity</li>
+<li>Inequity responses: reduce effort, seek raise, rationalize, change target, quit</li>
 </ul></div>
 </div>
 
@@ -141,11 +229,29 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 3: Economic and Behavioural Issues</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Economic Theories</div>
-<p><strong>Marginal Productivity Theory:</strong> Wages = marginal revenue product of labour.</p>
-<p><strong>Human Capital Theory (Becker):</strong> Investment in education/training increases productivity and justifies higher wages.</p>
-<p><strong>Efficiency Wage Theory:</strong> Paying above market increases productivity (reduces turnover, improves morale).</p>
-</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Economic Issues in Compensation</div>
+<ul>
+<li><strong>Demand &amp; Supply of Labour:</strong> Market forces determine wage levels</li>
+<li><strong>Marginal Productivity Theory:</strong> Wages = marginal revenue product of labour</li>
+<li><strong>Human Capital Theory (Becker):</strong> Investment in education/training increases productivity and justifies higher wages</li>
+<li><strong>Efficiency Wage Theory:</strong> Paying above market increases productivity (reduces turnover, improves morale)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Herzberg's Two-Factor Theory - Detailed</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Hygiene Factors (Prevent Dissatisfaction)</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Motivators (Create Satisfaction)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Salary, job security</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Achievement, recognition</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Working conditions</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Growth, responsibility</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Company policy, supervision</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Advancement, work itself</td></tr>
+</table>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">A salary increase (hygiene) prevents dissatisfaction but doesn't create lasting motivation - recognition and growth opportunities (motivators) drive sustained engagement.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Job Evaluation Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/RJFGHqFCrvI" title="Job Evaluation Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Point Factor Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eC2YPCzOqJA" title="Point Factor Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="visual-diagram"><h5>&#x1F4CA; Maslow's Hierarchy &amp; Compensation</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(214,48,49,0.25);border:1px solid rgba(214,48,49,0.5);width:40%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">5. Self-Actualization (Career Development)</div>
@@ -159,12 +265,28 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Motivators (Create Satisfaction):</strong> Achievement, recognition, growth, responsibility, advancement, work itself.</p>
 <p>A salary increase prevents dissatisfaction but doesn't create lasting motivation - recognition and growth drive sustained engagement.</p>
 </div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Efficiency Wage Theory - Indian Context</div>
+<ul>
+<li><strong>Core Idea:</strong> Paying above market-clearing wage increases productivity through:</li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>Reduced turnover (lower hiring/training costs)</li>
+<li>Improved morale and effort</li>
+<li>Attracting better quality applicants</li>
+<li>Reduced "shirking" (employees work harder to keep good job)</li>
+</ul>
+<li><strong>Indian Example:</strong> Infosys and TCS pay 15-20% above market average - this reduces attrition from 20%+ industry average to 12-15%, saving significant recruitment costs</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Human Capital Theory:</strong> In India, IIT/IIM graduates command 2-3x higher starting salaries than regional engineering college graduates - this premium reflects the human capital investment (better education, skills, network).</p>
+<p style="margin-top:0.5rem"><strong>Herzberg Application:</strong> Indian IT companies discovered that just increasing salaries (hygiene) didn't reduce attrition - they had to add motivators like challenging projects, career growth paths, and recognition programs (e.g., Infosys "Insta Awards", Wipro "Spirit of Wipro").</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PSSES</strong> = Maslow: <strong>P</strong>hysiological, <strong>S</strong>afety, <strong>S</strong>ocial, <strong>E</strong>steem, <strong>S</strong>elf-actualization</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Human Capital Theory: investment in education justifies higher wages</li>
-<li>Efficiency Wage: above-market pay increases productivity</li>
+<li>Human Capital Theory: investment in education justifies higher wages (IIT/IIM premium)</li>
+<li>Efficiency Wage: above-market pay increases productivity (Infosys, TCS example)</li>
 <li>Maslow maps to compensation: Basic pay, Benefits, Team incentives, Recognition, Career</li>
-<li>Herzberg: Salary is hygiene, not motivator</li>
+<li>Herzberg: Salary is hygiene, not motivator; recognition and growth are motivators</li>
+<li>Indian IT: salary alone doesn't reduce attrition - need motivators (growth, recognition)</li>
 </ul></div>
 </div>
 
@@ -172,10 +294,27 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 4: International Trends</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expatriate Compensation</div>
-<p><strong>Balance Sheet Approach:</strong> Maintain home country living standard abroad - most common for MNCs.</p>
-<p><strong>Going Rate Approach:</strong> Pay host country market rates - simpler but may cause repatriation issues.</p>
-</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expatriate Compensation - 2 Approaches</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Approach</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Description</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Balance Sheet</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Maintain home country living standard abroad - most common for MNCs</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Going Rate</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay host country market rates - simpler but may cause repatriation issues</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Global Compensation Challenges</div>
+<ul>
+<li>Currency fluctuations affecting expatriate pay</li>
+<li>Tax equalisation across countries</li>
+<li>Cost of living adjustments (COLA)</li>
+<li>Cultural differences in rewards preferences</li>
+</ul></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Pay Structures</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kNWxmrJeGpFk" title="Pay Structures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Salary Bands Grades</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YXMrMcWVKA0" title="Salary Bands Grades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Modern Trends</div>
 <ul>
 <li><strong>Pay for Performance:</strong> Linking pay to results</li>
@@ -184,12 +323,36 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Skill-Based Pay:</strong> Pay for acquired skills</li>
 <li><strong>Flexible Benefits (Cafeteria Plans):</strong> Employee choice from benefit menu</li>
 </ul></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the difference between Balance Sheet and Going Rate approaches - frequently tested.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Balance Sheet Approach - Components</div>
+<ul>
+<li><strong>Base Salary:</strong> Home country salary level</li>
+<li><strong>Goods & Services Differential:</strong> Cost of living adjustment (COLA)</li>
+<li><strong>Housing:</strong> Housing allowance or company-provided accommodation</li>
+<li><strong>Tax Equalization:</strong> Employer pays tax difference so employee pays home-country tax rate</li>
+<li><strong>Hardship Premium:</strong> Additional pay for difficult locations (conflict zones, remote areas)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competency-Based Pay vs Skill-Based Pay</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Competency-Based</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Skill-Based</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Focus</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Behaviors and capabilities</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Specific technical skills</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Measurement</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Behavioral indicators</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Certifications, tests</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Best For</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Knowledge workers, managers</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Technicians, tradespeople</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Indian Example</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">IT companies paying for leadership competencies</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Manufacturing paying for multi-machine operation skills</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Expatriate Pay:</strong> Indian IT companies (TCS, Infosys, Wipro) send thousands of employees abroad annually. They typically use the Balance Sheet approach - maintaining Indian salary + COLA + housing + hardship allowances for US/EU/Middle East postings.</p>
+<p style="margin-top:0.5rem"><strong>Cafeteria Plans:</strong> In India, companies like ICICI Bank, Infosys, and HUL offer flexible benefit plans where employees choose between HRA, LTA, food coupons, NPS contributions, and medical insurance from a fixed budget.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Know the difference between Balance Sheet and Going Rate approaches - frequently tested. Understand competency-based vs skill-based pay. Indian IT companies' expatriate compensation is a good example for Balance Sheet approach.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Balance Sheet: maintain home standard abroad</li>
+<li>Balance Sheet: maintain home standard abroad (base + COLA + housing + tax equalization + hardship)</li>
 <li>Going Rate: pay host country rates</li>
-<li>Trends: pay for performance, broad banding, competency-based pay, cafeteria plans</li>
-<li>MNCs hiring host-country managers to reduce expatriate costs</li>
+<li>Competency-based: pay for behaviors/capabilities (knowledge workers)</li>
+<li>Skill-based: pay for acquired technical skills (technicians)</li>
+<li>Trends: pay for performance, broad banding, flexible benefits</li>
+<li>Indian IT uses Balance Sheet for expatriates; cafeteria plans growing in India</li>
 </ul></div>
 </div>
 
@@ -200,6 +363,17 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 5 Factors Influencing Wages</div>
+<div class="visual-diagram" style="margin:0.5rem 0"><h5>&#x1F4CA; Wage Determination Factors</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>WAGE DETERMINATION</strong></div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Economic</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Sociological</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Political</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Psychological</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:6px;font-size:0.8rem;flex:1;min-width:100px">Ethical</div>
+</div>
+</div></div>
 <ul>
 <li><strong>Economic:</strong> Market forces, competing employers, cost of living, productivity</li>
 <li><strong>Sociological:</strong> Social status, equity for men/women</li>
@@ -215,12 +389,34 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div style="font-size:1.2rem;color:rgba(0,210,255,0.6)">&#x2191;</div>
 <div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:70%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Minimum Wage</strong> (bare minimum)</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>In India, the 7th Pay Commission recommended minimum pay of Rs. 18,000 for government employees.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Wage Concepts (Indian Context)</div>
+<ul>
+<li><strong>Organisation's Ability to Pay:</strong> Profitable companies (Reliance, TCS) can afford higher wages; struggling firms pay minimum</li>
+<li><strong>Prevailing Market Rate:</strong> Indian IT sector benchmarks against NASSCOM salary surveys</li>
+<li><strong>Cost of Living:</strong> Adjusted through DA linked to AICPI; metro cities have higher HRA</li>
+<li><strong>Productivity:</strong> Output per unit of labour input; higher productivity justifies higher wages</li>
+<li><strong>Trade Union's Bargaining Power:</strong> Strong unions (banking, railways) negotiate better wages</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Minimum Wage in India:</strong> The 7th Pay Commission recommended minimum pay of Rs. 18,000 for government employees. National Floor Level Minimum Wage (NFLMW) is Rs. 178/day (2023) - states cannot fix minimum wages below this.</p>
+<p style="margin-top:0.5rem"><strong>Fair Wage Example:</strong> A factory worker in Mumbai may earn Rs. 15,000 (minimum wage) while a similar worker in a profitable company earns Rs. 25,000 (fair wage) - the difference reflects the organization's ability to pay and market competition.</p>
+<p style="margin-top:0.5rem"><strong>Living Wage:</strong> The 15th Indian Labour Conference (1957) defined living wage as one that provides for "a decent standard of living" including food, clothing, housing, education, medical, and some recreation.</p>
+</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Incentive Schemes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Z8FEjvOHYXk" title="Incentive Schemes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Performance Pay</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FEjvOHYXkZ8" title="Performance Pay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>5 factors: Economic, Sociological, Political, Psychological, Ethical</li>
 <li>Hierarchy: Minimum Wage &lt; Fair Wage &lt; Living Wage</li>
-<li>DA compensates for inflation, linked to CPI</li>
-<li>Trade union bargaining power affects wage negotiations</li>
+<li>DA compensates for inflation, linked to AICPI</li>
+<li>NFLMW: Rs. 178/day (2023) - states cannot go below this</li>
+<li>15th ILC (1957) defined living wage for India</li>
+<li>Trade union bargaining power affects wage negotiations (strong in banking, railways)</li>
 </ul></div>
 </div>
 
@@ -228,13 +424,25 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 6: Legal Framework</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Indian Labour Laws</div>
-<p><strong>Minimum Wages Act 1948:</strong> Fixes minimum wage rates.</p>
-<p><strong>Payment of Wages Act 1936:</strong> Timely payment, regulates deductions.</p>
-<p><strong>Equal Remuneration Act 1976:</strong> Equal pay for equal work (regardless of gender).</p>
-<p><strong>Payment of Bonus Act 1965:</strong> Statutory bonus for eligible employees.</p>
-<p><strong>Code on Wages 2019:</strong> Consolidates all 4 wage laws into one code.</p>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Indian Labour Laws on Wages</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Act</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Year</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Purpose</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Minimum Wages Act</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1948</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Fixes minimum wage rates</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Payment of Wages Act</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1936</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Timely payment, regulates deductions</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Equal Remuneration Act</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1976</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Equal pay for equal work (regardless of gender)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Payment of Bonus Act</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1965</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Statutory bonus for eligible employees</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Code on Wages</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">2019</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Consolidates all 4 wage laws into one code</td></tr>
+</table>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;"><strong>Wage Components under Law:</strong> Basic wage + Dearness Allowance (DA) + House Rent Allowance (HRA) + Other allowances</p>
 </div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Benefits</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xnrJeGpFkQW" title="Employee Benefits" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Fringe Benefits India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YsVmJfXoMx8" title="Fringe Benefits India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Statutory Deductions</div>
 <ul>
 <li><strong>PF:</strong> 12% of basic + DA (both employer &amp; employee)</li>
@@ -242,12 +450,40 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Professional Tax:</strong> State-specific</li>
 <li><strong>Income Tax (TDS):</strong> As per tax slab</li>
 </ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; EPF - Employee Provident Fund (Detailed)</div>
+<ul>
+<li><strong>EPF Act 1952:</strong> Applies to establishments with 20+ employees</li>
+<li><strong>Employee Contribution:</strong> 12% of basic + DA (mandatory, deducted from salary)</li>
+<li><strong>Employer Contribution:</strong> 12% of basic + DA (split: 8.33% to EPS pension, 3.67% to EPF)</li>
+<li><strong>EPF Interest Rate:</strong> Declared annually by EPFO (typically 8.1% - 8.5%)</li>
+<li><strong>Withdrawal:</strong> Full withdrawal on retirement; partial for housing, medical, education</li>
+<li><strong>Tax Benefit:</strong> Section 80C deduction for employee contribution; employer contribution tax-free</li>
+<li><strong>UAN (Universal Account Number):</strong> Portable across jobs - single account for life</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ESI - Employee State Insurance (Detailed)</div>
+<ul>
+<li><strong>ESI Act 1948:</strong> Social security for workers in organized sector</li>
+<li><strong>Eligibility:</strong> Employees earning up to Rs. 21,000/month (Rs. 25,000 for disabled)</li>
+<li><strong>Employee Contribution:</strong> 0.75% of gross salary</li>
+<li><strong>Employer Contribution:</strong> 3.25% of gross salary</li>
+<li><strong>Benefits Provided:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>Medical benefit (self + family)</li>
+<li>Sickness benefit (70% wages for 91 days)</li>
+<li>Maternity benefit (full wages for 26 weeks)</li>
+<li>Disablement benefit</li>
+<li>Dependants' benefit (fatal injury)</li>
+<li>Funeral expenses</li>
+</ul>
+</ul></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MW-PW-ER-PB</strong> = <strong>M</strong>inimum Wages, <strong>P</strong>ayment of Wages, <strong>E</strong>qual Remuneration, <strong>P</strong>ayment of <strong>B</strong>onus</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the 4 key acts consolidated under Code on Wages 2019 and their individual purposes.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the 4 key acts consolidated under Code on Wages 2019 and their individual purposes. EPF/ESI contribution rates are frequently tested numerical questions.</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>5 key acts: Minimum Wages, Payment of Wages, Equal Remuneration, Payment of Bonus, Code on Wages 2019</li>
-<li>PF: 12% basic + DA from both sides</li>
-<li>ESI: 0.75% employee + 3.25% employer</li>
+<li>EPF: 12% basic + DA from both sides; employer split: 8.33% EPS + 3.67% EPF</li>
+<li>ESI: 0.75% employee + 3.25% employer (salary &lt; Rs. 21,000)</li>
+<li>ESI covers: medical, sickness, maternity, disablement, dependants' benefits</li>
+<li>UAN is portable across jobs for EPF members</li>
 <li>Code on Wages 2019 consolidates 4 existing laws</li>
 </ul></div>
 </div>
@@ -262,6 +498,14 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>Job Evaluation:</strong> Systematic method to determine the relative worth of jobs within an organization, establishing rational pay differentials.</p>
 <p><strong>Internal Equity:</strong> Fair pay relationships within the organization - "Right Pay for the Right Job".</p>
 </div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Executive Compensation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/GHqFCrvIJRF" title="Executive Compensation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CEO Pay</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PCzOqJAeC2Y" title="CEO Pay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="visual-diagram"><h5>&#x1F4CA; Job Evaluation Methods</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>JOB EVALUATION</strong></div>
@@ -285,15 +529,56 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Point Rating</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Assign points to 5-8 factors with degrees. Most popular method.</td></tr>
 <tr><td style="padding:0.4rem;color:#d63031;font-weight:600">Factor Comparison</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Compare jobs factor by factor with monetary values. Detailed but time-consuming.</td></tr>
 </table></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Point Rating is the most widely used method in medium-to-large organizations because it provides systematic, defensible pay differentials.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Job Evaluation vs Related Concepts</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Concept</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Focus</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Job Evaluation</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Relative worth of the JOB (not the person)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Merit Rating</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Performance of the PERSON on the job</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Work Study</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Speed and efficiency of WORK output</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Job Analysis Process Flow</div>
+<div class="visual-diagram" style="margin:0.5rem 0"><h5>&#x1F4CA; Job Analysis to Job Assessment</h5>
+<div style="display:flex;flex-wrap:wrap;gap:0.3rem;justify-content:center;align-items:center;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem;text-align:center">Job Analysis<br><small style="color:rgba(255,255,255,0.5)">Duties, Responsibilities</small></div>
+<div style="color:rgba(255,255,255,0.4);font-size:1.2rem">&rarr;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem;text-align:center">Job Description<br><small style="color:rgba(255,255,255,0.5)">Written Summary</small></div>
+<div style="color:rgba(255,255,255,0.4);font-size:1.2rem">&rarr;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3);padding:0.5rem;border-radius:8px;font-size:0.8rem;text-align:center">Job Specification<br><small style="color:rgba(255,255,255,0.5)">Skills Needed</small></div>
+<div style="color:rgba(255,255,255,0.4);font-size:1.2rem">&rarr;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);padding:0.5rem;border-radius:8px;font-size:0.8rem;text-align:center">Job Grading<br><small style="color:rgba(255,255,255,0.5)">Ranking/Classification</small></div>
+<div style="color:rgba(255,255,255,0.4);font-size:1.2rem">&rarr;</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.15);border:1px solid rgba(214,48,49,0.3);padding:0.5rem;border-radius:8px;font-size:0.8rem;text-align:center">Job Assessment<br><small style="color:rgba(255,255,255,0.5)">Monetary Value</small></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Point Rating Example - Paper Mill</div>
+<p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.5rem">Real example showing how points are assigned to different factors for two jobs:</p>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Factor</td><td style="padding:0.4rem;color:#d63031;font-weight:600;text-align:center">Sweeper (Points)</td><td style="padding:0.4rem;color:#d63031;font-weight:600;text-align:center">Turner (Points)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Education</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">14</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">56</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Experience</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">60</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">32</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Initiative</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">21</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">8</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Physical Effort</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">8</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">32</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Mental Demand</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">20</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">20</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Resp. (Material/Production)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">8</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">24</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Resp. (Tools/Equipment)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">4</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">16</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Resp. (Others' Work)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">4</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">8</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Resp. (Safety)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">4</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">8</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Surroundings</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">36</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">36</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Hazards</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">16</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7);text-align:center">24</td></tr>
+<tr><td style="padding:0.4rem;color:#d63031;font-weight:700">Total</td><td style="padding:0.4rem;color:#d63031;font-weight:700;text-align:center">150</td><td style="padding:0.4rem;color:#d63031;font-weight:700;text-align:center">316</td></tr>
+</table>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;">The Turner job scores more than double the Sweeper job (316 vs 150), justifying a significantly higher pay rate based on education, technical skill, and tool responsibility.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Point Rating is the most widely used method in medium-to-large organizations because it provides systematic, defensible pay differentials. Indian PSUs like BHEL and SAIL use point rating systems with 8-12 factors to establish internal pay equity across thousands of positions.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>RCPF</strong> = <strong>R</strong>anking, <strong>C</strong>lassification, <strong>P</strong>oint Rating, <strong>F</strong>actor Comparison</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know all 4 methods with advantages/disadvantages. Point Rating is the most frequently asked method.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know all 4 methods with advantages/disadvantages. Point Rating is the most frequently asked method. Always remember: Job Evaluation evaluates the JOB, not the person doing it.</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Job Evaluation determines relative worth of JOBS, not people</li>
 <li>4 methods: RCPF - Ranking, Classification, Point Rating, Factor Comparison</li>
 <li>Point Rating is most popular in medium-to-large organizations</li>
 <li>Non-quantitative: Ranking, Classification</li>
 <li>Quantitative: Point Rating, Factor Comparison</li>
+<li>Job Analysis flows: Analysis &rarr; Description &rarr; Specification &rarr; Grading &rarr; Assessment</li>
+<li>Point Rating example: Sweeper (150 pts) vs Turner (316 pts) in paper mill</li>
 </ul></div>
 </div>
 
@@ -301,9 +586,30 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 8: Pay Structure</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p><strong>Pay Structure:</strong> Hierarchy of jobs with corresponding pay ranges, establishing internal equity. Components: Pay Grades, Pay Ranges (Min-Midpoint-Max), Range Overlap, Broad Banding.</p>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Pay Structure Components</div>
+<ul>
+<li><strong>Pay Grades:</strong> Groups of jobs with similar worth</li>
+<li><strong>Pay Ranges:</strong> Min &rarr; Midpoint &rarr; Max for each grade</li>
+<li><strong>Range Overlap:</strong> Overlap between adjacent grades</li>
+<li><strong>Broad Banding:</strong> Replacing multiple grades with fewer, wider bands</li>
+</ul>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;"><strong>5 Steps to Design Pay Structure:</strong></p>
+<ol style="padding-left:1.5rem;margin:0.5rem 0;">
+<li style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.3rem">Conduct job evaluation</li>
+<li style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.3rem">Group jobs into grades</li>
+<li style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.3rem">Determine pay range for each grade</li>
+<li style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.3rem">Price the structure (using market data)</li>
+<li style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:0.3rem">Implement and maintain</li>
+</ol>
 </div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compensation Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xmrJeGpFkQW" title="Compensation Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Total Rewards</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/McWVKA0YXMr" title="Total Rewards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Broad Banding vs Traditional Grading</div>
 <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Traditional</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Broad Banding</td></tr>
@@ -311,12 +617,18 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Range</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Narrow</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Very wide</td></tr>
 <tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Flexibility</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Low</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">High</td></tr>
 </table></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IT companies use broad banding to allow technical specialists to earn as much as managers without forcing them into management tracks.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Broad Banding in IT:</strong> Companies like Infosys, TCS, and Wipro use broad banding to allow technical specialists (architects, principal engineers) to earn as much as directors without forcing them into management tracks.</p>
+<p style="margin-top:0.5rem"><strong>Indian Pay Grades:</strong> Central government uses Pay Matrix (7th CPC) with 18 levels (Level 1: Rs. 18,000 to Level 18: Rs. 2,50,000). PSUs like ONGC, BHEL use structured grade systems with defined pay ranges.</p>
+<p style="margin-top:0.5rem"><strong>Range Overlap Example:</strong> A senior software engineer (Grade 5) at the top of their range may earn more than a newly promoted team lead (Grade 6) at the bottom - this overlap allows lateral moves without immediate pay cuts.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>5 steps: Job evaluation, Grade grouping, Pay range, Price structure, Implement</li>
 <li>Broad banding: fewer, wider bands replacing multiple grades</li>
 <li>Range overlap allows career flexibility</li>
 <li>IT companies favor broad banding for technical tracks</li>
+<li>7th CPC Pay Matrix: 18 levels from Rs. 18,000 to Rs. 2,50,000</li>
+<li>PSUs use structured grade systems with defined pay ranges</li>
 </ul></div>
 </div>
 
@@ -328,7 +640,20 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <p><strong>External Equity:</strong> Ensuring pay competitiveness with the external market.</p>
 <p><strong>Pay Survey:</strong> Systematic collection of compensation data from other organizations.</p>
 <p><strong>Market Pricing:</strong> Setting pay based on survey data - organizations choose percentile positioning (25th = lag, 50th = match, 75th = lead).</p>
-</div>
+<p><strong>Types of Pay Surveys:</strong></p>
+<ul>
+<li>Industry-specific surveys</li>
+<li>Regional surveys</li>
+<li>Job-specific surveys</li>
+</ul></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Pay Equity</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/jvOHYXkZ8FE" title="Pay Equity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Equal Pay</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mJeGpFkQWxn" title="Equal Pay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Survey Analysis Methods</div>
 <ul>
 <li><strong>Mean:</strong> Average pay</li>
@@ -336,12 +661,38 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>Percentiles:</strong> 25th, 50th, 75th positions</li>
 <li><strong>Regression Analysis:</strong> Predicting pay based on job size</li>
 </ul></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know why median is preferred over mean in pay surveys (less affected by outliers).</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Survey Design Considerations</div>
+<ul>
+<li><strong>Job Matching:</strong> Match survey jobs to internal jobs based on job content, not title</li>
+<li><strong>Data Sources:</strong> Salary.com, Glassdoor, NASSCOM (IT), AIMA, Mercer, Aon Hewitt</li>
+<li><strong>Confidentiality:</strong> Survey data must be aggregated to protect individual company data</li>
+<li><strong>Frequency:</strong> Annual surveys typical; quarterly for high-turnover sectors</li>
+<li><strong>Scope:</strong> Industry, geography, company size, job family</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Compensable Factors in Surveys</div>
+<ul>
+<li><strong>Base Salary:</strong> Fixed pay component</li>
+<li><strong>Total Cash:</strong> Base + variable pay (bonuses, incentives)</li>
+<li><strong>Total Compensation:</strong> Total cash + benefits + perquisites</li>
+<li><strong>Total Rewards:</strong> Total compensation + non-financial rewards</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Indian Pay Surveys:</strong> NASSCOM conducts annual salary surveys for IT/BPO sector; AIMA surveys for management positions; Mercer and Aon Hewitt provide comprehensive compensation benchmarks for MNCs in India.</p>
+<p style="margin-top:0.5rem"><strong>Market Pricing Example:</strong> An Indian IT company positioning at 75th percentile (Lead strategy) for software engineers will pay more than 75% of competitors - this attracts top talent but increases costs.</p>
+<p style="margin-top:0.5rem"><strong>Regression Analysis:</strong> Used to predict pay based on job size (points from job evaluation). Creates a "pay line" - jobs above the line are overpaid, below are underpaid relative to market.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Know why median is preferred over mean in pay surveys (less affected by outliers). Understand the difference between base salary, total cash, total compensation, and total rewards. Job matching based on content (not title) is crucial for survey accuracy.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>External equity maintained through pay surveys</li>
 <li>Median preferred over mean (less affected by outliers)</li>
 <li>Market pricing: 25th = lag, 50th = match, 75th = lead</li>
 <li>Types: Industry-specific, regional, job-specific surveys</li>
+<li>Job matching based on content, not title</li>
+<li>Indian surveys: NASSCOM (IT), AIMA, Mercer, Aon Hewitt</li>
+<li>Compensable factors: base salary, total cash, total compensation, total rewards</li>
+<li>Regression analysis creates pay line to identify overpaid/underpaid jobs</li>
 </ul></div>
 </div>
 
@@ -350,18 +701,56 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Institutional Mechanisms</div>
-<p><strong>Pay Commission:</strong> Government employees. Example: 7th Pay Commission (2016) - Min Rs. 18,000, 2.57x fitment factor.</p>
-<p><strong>Wage Boards:</strong> Industry-specific. Example: Newspaper Wage Board, Sugar Wage Board.</p>
-<p><strong>Industrial Tribunals:</strong> Wage dispute adjudication.</p>
-<p><strong>Collective Bargaining:</strong> Unionised sectors - negotiated wages between union and management.</p>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Mechanism</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Scope</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Example</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Pay Commission</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Government employees</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">7th Pay Commission (2016) - Min Rs. 18,000, 2.57x fitment factor</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Wage Boards</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Industry-specific</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Newspaper Wage Board, Sugar Wage Board</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Industrial Tribunals</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Wage dispute adjudication</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Adjudicate specific disputes</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)"><strong>Collective Bargaining</strong></td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Unionised sectors</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Negotiated wages between union and management</td></tr>
+</table></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>International Compensation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VmJfXoMx8Ys" title="International Compensation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Expatriate Pay</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/qFCrvIJRFGH" title="Expatriate Pay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Pay Commission - India (Detailed)</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Pay Commission</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Year</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Key Recommendation</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1st CPC</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1946</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Minimum pay Rs. 55</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">5th CPC</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">1996</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Minimum pay Rs. 2,550</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">6th CPC</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">2006</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay Bands + Grade Pay; Min Rs. 7,000</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">7th CPC</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">2016</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay Matrix; Min Rs. 18,000; Fitment 2.57x</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Wage Boards in India</div>
+<ul>
+<li><strong>Statutory Wage Boards:</strong> Bipartite bodies (employer + worker representatives + independent chair)</li>
+<li><strong>Major Wage Boards:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>Newspaper Wage Board (most famous - fixed wages for journalists)</li>
+<li>Sugar Wage Board</li>
+<li>Cotton Textile Wage Board</li>
+<li>Cement Wage Board</li>
+</ul>
+<li><strong>Decline:</strong> Wage boards have declined since 1990s liberalization; industry-level bargaining has weakened</li>
+<li><strong>Current Relevance:</strong> Still used in some organized sectors; Industrial Tribunals handle disputes</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>7th Pay Commission (2016):</strong> Recommended 2.57x fitment factor, minimum pay Rs. 18,000, maximum Rs. 2,50,000 (Level 18). Created Pay Matrix with 18 levels replacing Pay Bands + Grade Pay system.</p>
+<p style="margin-top:0.5rem"><strong>Collective Bargaining:</strong> In India, strong unions exist in banking (AIBEA), insurance (AIIEA), railways, and public sector. Bank employees' wage settlements happen every 5 years through bipartite negotiations between IBA (Indian Banks' Association) and unions.</p>
+<p style="margin-top:0.5rem"><strong>Industrial Disputes Act, 1947:</strong> Provides for conciliation, arbitration, and adjudication of industrial disputes including wage disputes. Labour Courts and Industrial Tribunals handle wage-related cases.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The 7th Central Pay Commission (2016) recommended 2.57x fitment factor for revision of pay for central government employees.</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the difference between Pay Commission (government) and Wage Boards (industry-specific).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Know the difference between Pay Commission (government employees) and Wage Boards (industry-specific). 7th CPC details (2.57x fitment, Pay Matrix) are frequently tested. Collective bargaining in banking (IBA settlements) is a good Indian example.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Pay Commission: government employees</li>
-<li>Wage Boards: industry-specific</li>
-<li>Industrial Tribunals: dispute adjudication</li>
-<li>Collective Bargaining: unionised sectors</li>
+<li>Pay Commission: government employees; 7th CPC: Rs. 18,000 min, 2.57x fitment, 18-level Pay Matrix</li>
+<li>Wage Boards: industry-specific bipartite bodies (Newspaper, Sugar, Cement)</li>
+<li>Industrial Tribunals: dispute adjudication under Industrial Disputes Act</li>
+<li>Collective Bargaining: strong in banking (IBA), insurance, railways, PSUs</li>
+<li>Wage boards declining since 1990s liberalization</li>
 </ul></div>
 </div>
 
@@ -372,9 +761,27 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Rewards</div>
-<p><strong>Intrinsic (Non-financial):</strong> Recognition, Autonomy, Growth opportunities.</p>
-<p><strong>Extrinsic (Financial):</strong> Pay, Bonuses, Benefits.</p>
-</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Intrinsic (Non-financial)</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Extrinsic (Financial)</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Recognition</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Pay, Bonuses</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Autonomy</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Benefits (PF, ESI, Gratuity)</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Growth opportunities</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Allowances (HRA, Transport, Medical)</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Dearness Allowance (DA) Details</div>
+<ul>
+<li>Linked to Consumer Price Index (CPI)</li>
+<li>Influenced by: union policies, wage board awards, labour court decisions, government policy</li>
+<li>Disparities exist across regions/stations</li>
+<li>Periodic merger with basic pay recommended (typically when DA exceeds 50% of basic)</li>
+</ul></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compensation Communication</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OqJAeC2YPCz" title="Compensation Communication" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Pay Transparency</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eGpFkQWxnMr" title="Pay Transparency" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Reward Components</div>
 <ul>
 <li><strong>Basic Wage:</strong> Fixed pay based on job evaluation</li>
@@ -384,12 +791,29 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </ul>
 <p>DA influenced by: union policies, wage board awards, labour court decisions, government policy. Periodic merger with basic pay recommended.</p>
 </div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>DA calculation methods and CPI linkage is a frequently tested topic.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Designing Effective Reward Systems</div>
+<ul>
+<li><strong>Alignment:</strong> Reward system must align with organizational goals and strategy</li>
+<li><strong>Fairness:</strong> Internal equity (within org) and external equity (with market)</li>
+<li><strong>Balance:</strong> Fixed vs variable pay ratio (typically 70:30 in India for managers)</li>
+<li><strong>Transparency:</strong> Employees should understand how pay is determined</li>
+<li><strong>Communication:</strong> Total reward statements showing full compensation value</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>DA in India:</strong> DA is revised twice yearly (January and July) based on AICPI (All-India Consumer Price Index). When DA exceeds 50% of basic, it is typically merged into basic pay - this happened in 2004 and 2007 for central government employees.</p>
+<p style="margin-top:0.5rem"><strong>Recognition Programs:</strong> Tata Group has the "Tata Innovista" awards for innovation; Infosys has "Infy Awards" for outstanding performers; L&T has "L&T Best Employee" awards with monetary rewards.</p>
+<p style="margin-top:0.5rem"><strong>Total Reward Statements:</strong> Companies like HUL, P&G India provide annual total reward statements showing employees the full value of their compensation (base + variable + benefits + perks).</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>DA calculation methods and CPI linkage is a frequently tested topic. Know that DA merger happens when DA exceeds 50% of basic. Intrinsic rewards (recognition, growth) are increasingly important for knowledge workers.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Intrinsic: recognition, autonomy, growth</li>
 <li>Extrinsic: pay, bonuses, benefits</li>
-<li>DA linked to CPI, periodic merger recommended</li>
-<li>Design: align with goals, ensure fairness, balance fixed/variable</li>
+<li>DA linked to AICPI, revised twice yearly (Jan/Jul), merger at 50% of basic</li>
+<li>Design: align with goals, ensure fairness, balance fixed/variable (70:30 typical)</li>
+<li>Total reward statements help employees understand full compensation value</li>
+<li>Indian recognition: Tata Innovista, Infy Awards, L&T Best Employee</li>
 </ul></div>
 </div>
 
@@ -421,20 +845,75 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </div>
 </div>
 </div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Individual vs Group Incentives</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Individual</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Group</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Focus</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Personal performance</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Team/organizational results</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Best for</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Measurable output jobs</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Collaborative work</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Risk</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Internal competition</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Free-riding</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Example</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Sales commission</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Profit-sharing</td></tr>
+</table></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
 <p><strong>Gainsharing:</strong> Sharing productivity gains with employees who contributed to improvements.</p>
-<p><strong>ESOPs:</strong> Employees get right to buy company shares at predetermined price.</p>
+<p><strong>ESOPs (Employee Stock Options Plans):</strong> Employees get right to buy company shares at predetermined price.</p>
 <p><strong>Golden Parachute:</strong> Generous severance for executives in case of termination after merger/acquisition.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian IT companies widely use ESOPs to retain skilled employees - Infosys ESOPs created many employee millionaires.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Legal Framework Wages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JfXoMx8YsVm" title="Legal Framework Wages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Payment of Wages Act</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CrvIJRFGHqF" title="Payment of Wages Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Gainsharing vs Profit-Sharing (Detailed)</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Gainsharing</td><td style="padding:0.4rem;color:#d63031;font-weight:600">Profit-Sharing</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Based On</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Productivity improvements</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Organizational profits</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Control</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Employees directly influence</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Many factors beyond employee control</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Frequency</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Monthly/Quarterly</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Annual</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Best For</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Manufacturing teams</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Company-wide motivation</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Indian Example</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Tata Steel production teams</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Infosys annual profit share</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ESOPs in India - Detailed</div>
+<ul>
+<li><strong>Regulation:</strong> Governed by SEBI (Share Based Employee Benefits) Regulations, 2014</li>
+<li><strong>Vesting Period:</strong> Minimum 1 year; typically 3-4 years with graded vesting</li>
+<li><strong>Exercise Window:</strong> Usually 3-7 years after vesting</li>
+<li><strong>Tax Impact:</strong> Perquisite tax at exercise (FMV - Exercise price); Capital gains at sale</li>
+<li><strong>Why Companies Use ESOPs:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>Retain talent in competitive markets (especially IT/startups)</li>
+<li>Align employee interests with shareholders</li>
+<li>Conserve cash (pay less salary, give equity)</li>
+<li>Reward long-term commitment</li>
+</ul>
+<li><strong>Famous Indian ESOP Stories:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li><strong>Infosys (2000s):</strong> Early employees with ESOPs became crorepatis as stock rose 100x</li>
+<li><strong>Flipkart (2018):</strong> Walmart acquisition paid out Rs. 6,000+ crore to ESOP holders</li>
+<li><strong>Zomato (2021):</strong> IPO made many employee ESOP holders wealthy</li>
+<li><strong>Paytm (2021):</strong> Pre-IPO ESOP holders saw significant gains</li>
+</ul>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>ESOPs:</strong> Indian IT companies widely use ESOPs to retain skilled employees. Infosys ESOPs created many employee millionaires in the 2000s. When Flipkart was acquired by Walmart in 2018, employees with ESOPs received payouts worth crores.</p>
+<p style="margin-top:0.5rem"><strong>Profit-Sharing:</strong> India's Payment of Bonus Act, 1965 mandates statutory bonus (8.33% to 20% of wages) for employees earning up to Rs. 21,000/month - this is a form of mandatory profit-sharing.</p>
+<p style="margin-top:0.5rem"><strong>Gainsharing:</strong> Tata Steel's manufacturing units use gainsharing where production teams share cost savings from improved efficiency.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PCBM</strong> = Individual Incentives: <strong>P</strong>iece-rate, <strong>C</strong>ommission, <strong>B</strong>onus, <strong>M</strong>erit pay</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Differentiate between Gainsharing (productivity-based) and Profit-sharing (profit-based).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Differentiate between Gainsharing (productivity-based, team level) and Profit-sharing (profit-based, company level). ESOPs are the most tested incentive - know vesting, exercise, and taxation. Statutory bonus under Payment of Bonus Act is a form of mandatory profit-sharing in India.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>3 levels: Individual, Group, Executive</li>
 <li>Individual: PCBM (Piece-rate, Commission, Bonus, Merit)</li>
-<li>Group: Gainsharing, Profit-sharing, ESOPs</li>
+<li>Group: Gainsharing (productivity), Profit-sharing (profits), ESOPs (ownership)</li>
 <li>Executive: Stock options, Performance shares, Golden parachutes</li>
 <li>Individual = measurable output; Group = collaborative work</li>
+<li>ESOPs: Regulated by SEBI; vesting 1-4 years; taxed at exercise and sale</li>
+<li>Indian examples: Infosys, Flipkart, Zomato ESOPs created employee wealth</li>
+<li>Statutory bonus (8.33% - 20%) is mandatory profit-sharing in India</li>
 </ul></div>
 </div>
 
@@ -442,30 +921,116 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3>Unit 13: Allowances, Perquisites and Benefits</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 3 Categories</div>
-<ul>
-<li><strong>Allowances:</strong> DA, HRA, Transport, Medical, Education, Special Allowance</li>
-<li><strong>Perquisites/Perks:</strong> Company car, Housing, Club membership, Stock options, Paid holidays</li>
-<li><strong>Fringe Benefits:</strong> PF, ESI, Gratuity, Leave encashment, Group insurance, Retirement benefits</li>
-</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 3 Categories of Compensation Beyond Basic Pay</div>
+<div class="visual-diagram" style="margin:0.5rem 0"><h5>&#x1F4CA; Compensation Beyond Basic Pay</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>COMPENSATION BEYOND BASIC PAY</strong></div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem">
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Allowances</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">DA, HRA</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Transport, Medical</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.12);border:1px solid rgba(0,210,255,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">Education, Special</div>
+</div>
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Perquisites/Perks</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Company car, Housing</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Club membership</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">Stock options, Paid holidays</div>
+</div>
+<div style="flex:1;min-width:150px">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);padding:0.5rem;border-radius:6px;font-size:0.85rem;margin-bottom:0.3rem;text-align:center"><strong>Fringe Benefits</strong></div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">PF, ESI, Gratuity</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;margin-bottom:0.15rem;text-align:center">Leave encashment</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.12);border:1px solid rgba(214,48,49,0.25);padding:0.3rem;border-radius:4px;font-size:0.75rem;text-align:center">Group insurance</div>
+</div>
+</div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Statutory Benefits</div>
 <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">PF</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">12% basic + DA (both employer &amp; employee). Retirement savings.</td></tr>
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">ESI</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">0.75% employee + 3.25% employer. Medical insurance (salary &lt; Rs. 21,000).</td></tr>
 <tr><td style="padding:0.4rem;color:#d63031;font-weight:600">Gratuity</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Employer only (15 days salary per year). After 5 years continuous service.</td></tr>
 </table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Gratuity - Detailed (Payment of Gratuity Act, 1972)</div>
+<ul>
+<li><strong>Eligibility:</strong> Employees with 5+ years continuous service (in same or multiple establishments under same employer)</li>
+<li><strong>Who Pays:</strong> Employer only - no employee contribution</li>
+<li><strong>Formula:</strong> Gratuity = (Last drawn salary &times; 15 &times; Years of service) / 26</li>
+<li><strong>Last Drawn Salary:</strong> Basic + DA (not including HRA, bonuses, other allowances)</li>
+<li><strong>Maximum Limit:</strong> Rs. 20 lakhs (tax-free for government employees under Section 10(10))</li>
+<li><strong>Tax Treatment:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>Government employees: Fully tax-free (no upper limit)</li>
+<li>Private sector (covered under Act): Tax-free up to Rs. 20 lakhs</li>
+<li>Private sector (not covered): Tax-free up to Rs. 10 lakhs</li>
+</ul>
+<li><strong>Forfeiture:</strong> Gratuity can be forfeited if employee terminated for riotous/violent behaviour or moral turpitude</li>
+</ul>
+<div class="visual-diagram" style="margin:0.5rem 0"><h5>&#x1F4CA; Gratuity Calculation Example</h5>
+<div style="padding:0.5rem;font-size:0.85rem;color:rgba(255,255,255,0.7);text-align:left">
+<p><strong>Scenario:</strong> Employee with Basic + DA = Rs. 50,000/month, 12 years of service</p>
+<p><strong>Calculation:</strong> (50,000 &times; 15 &times; 12) / 26 = Rs. 3,46,154</p>
+<p style="color:#55efc4;margin-top:0.3rem"><strong>This amount is tax-free up to Rs. 20 lakhs limit.</strong></p>
+</div></div>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; EPF and ESI - Employer Responsibilities</div>
+<table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#d63031;font-weight:600">Feature</td><td style="padding:0.4rem;color:#d63031;font-weight:600">EPF</td><td style="padding:0.4rem;color:#d63031;font-weight:600">ESI</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Applicability</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">20+ employees</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">10+ employees</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Salary Ceiling</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">No ceiling</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Rs. 21,000/month</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Employee Rate</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">12%</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">0.75%</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Employer Rate</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">12% (3.67% EPF + 8.33% EPS)</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">3.25%</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Nature</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Retirement savings</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Social insurance (medical + cash)</td></tr>
+<tr><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Portability</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">UAN portable across jobs</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Not portable</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ESOPs - Employee Stock Options (Indian Context)</div>
+<ul>
+<li><strong>What:</strong> Right to buy company shares at a predetermined (exercise) price after a vesting period</li>
+<li><strong>Vesting Period:</strong> Typically 1-4 years; employee must stay to exercise options</li>
+<li><strong>Tax Treatment (India):</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li>At exercise: Perquisite tax (difference between FMV and exercise price) taxed as salary income</li>
+<li>At sale: Capital gains tax on difference between sale price and FMV at exercise</li>
+</ul>
+<li><strong>Indian Companies Using ESOPs:</strong></li>
+<ul style="padding-left:1.5rem;margin-top:0.3rem">
+<li><strong>Infosys:</strong> Created many employee millionaires through ESOPs in early 2000s</li>
+<li><strong>Wipro:</strong> Regular ESOP grants to retain tech talent</li>
+<li><strong>TCS:</strong> Performance-linked stock grants</li>
+<li><strong>Flipkart:</strong> ESOPs worth crores for early employees at Walmart acquisition</li>
+<li><strong>Startups:</strong> ESOPs used as compensation substitute for cash-poor startups</li>
+</ul>
+</ul></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cafeteria Approach</div>
 <p>Employees choose benefits from a menu of options. Simplest form: reimbursement account (tax-free). Growing trend with computerized benefit management.</p>
+<p style="margin-top:0.5rem;color:rgba(255,255,255,0.7);font-size:0.85rem;"><strong>Indian Companies with Cafeteria Plans:</strong> ICICI Bank, Infosys, Wipro, and other large IT/financial companies offer flexible benefit plans where employees can allocate a fixed budget across HRA, LTA, medical, food coupons, NPS, etc.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Under Section 10(10) of Income Tax Act, gratuity up to Rs. 20 lakhs is tax-free for government employees.</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div><p>Know the statutory contribution rates for PF and ESI - common numerical questions.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compensation Trends</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JAeC2YPCzOq" title="Compensation Trends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Future of Pay</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/QWxnrJeGpFk2" title="Future of Pay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Examples</div>
+<p><strong>Gratuity:</strong> Under Section 10(10) of Income Tax Act, gratuity up to Rs. 20 lakhs is tax-free for government employees. Private sector employees covered under the Payment of Gratuity Act also get Rs. 20 lakhs exemption.</p>
+<p style="margin-top:0.5rem"><strong>ESOPs:</strong> When Flipkart was acquired by Walmart in 2018, employees with ESOPs received payouts worth crores - some junior employees became millionaires overnight. This is why ESOPs are called the "golden handcuffs" of Indian IT.</p>
+<p style="margin-top:0.5rem"><strong>EPF:</strong> TCS and Infosys contribute to EPF for all employees regardless of salary, going beyond the statutory minimum - this is a key employee retention strategy.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Exam Tip</div>
+<p>Know the statutory contribution rates for PF and ESI - common numerical questions. Gratuity formula is frequently tested: (Last salary &times; 15 &times; Years) / 26. Remember ESOP taxation: perquisite at exercise, capital gains at sale.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Allowances: DA, HRA, Transport, Medical</li>
-<li>Perks: Car, Housing, Club, Stock options</li>
-<li>PF: 12% basic + DA from both sides</li>
-<li>ESI: 0.75% + 3.25% (salary &lt; Rs. 21,000)</li>
-<li>Gratuity: 15 days/year after 5 years</li>
-<li>Cafeteria plan: employees choose benefits from menu</li>
+<li>Allowances: DA, HRA, Transport, Medical, Education, Special</li>
+<li>Perks: Car, Housing, Club, Stock options, Paid holidays</li>
+<li>PF: 12% basic + DA from both sides; employer split: 8.33% EPS + 3.67% EPF</li>
+<li>ESI: 0.75% + 3.25% (salary &lt; Rs. 21,000); covers medical, sickness, maternity</li>
+<li>Gratuity: (Last salary &times; 15 &times; Years) / 26; tax-free up to Rs. 20 lakhs</li>
+<li>ESOPs: Vesting period, exercise price, perquisite tax at exercise, capital gains at sale</li>
+<li>Infosys, Flipkart, Wipro ESOPs created employee millionaires</li>
+<li>Cafeteria plan: employees choose benefits from menu (ICICI, Infosys, Wipro offer this)</li>
 </ul></div>
 </div>
 
@@ -481,7 +1046,8 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">RCPF</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Ranking, Classification, Point Rating, Factor Comparison</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Job Evaluation methods</td></tr>
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">PCBM</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Piece-rate, Commission, Bonus, Merit</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Individual Incentives</td></tr>
 <tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">MW-PW-ER-PB</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Minimum Wages, Payment of Wages, Equal Remuneration, Payment of Bonus</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Key Wage Laws</td></tr>
-<tr><td style="padding:0.4rem;color:#55efc4;font-weight:600">EIV</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Expectancy &times; Instrumentality &times; Valence</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Vroom's Motivation</td></tr>
+<tr style="border-bottom:1px solid rgba(255,255,255,0.1)"><td style="padding:0.4rem;color:#55efc4;font-weight:600">EIV</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Expectancy &times; Instrumentality &times; Valence</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Vroom's Motivation</td></tr>
+<tr><td style="padding:0.4rem;color:#55efc4;font-weight:600">DOS-PIF</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">DA, Overtime, Shift | PF, Insurance, Fringe</td><td style="padding:0.4rem;color:rgba(255,255,255,0.7)">Direct vs Indirect Compensation</td></tr>
 </table>
 </div>
 </div>
@@ -496,23 +1062,28 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li><strong>PF Contribution:</strong> 12% of (Basic + DA)</li>
 <li><strong>Gratuity:</strong> (Last salary &times; 15 &times; Years of service) / 26</li>
 <li><strong>DA Merger:</strong> When DA exceeds 50% of basic, typically merged into basic</li>
+<li><strong>ESI:</strong> 0.75% employee + 3.25% employer (salary &lt; Rs. 21,000)</li>
+<li><strong>EPF Split:</strong> 12% total = 3.67% EPF + 8.33% EPS (employer side)</li>
 </ul></div>
 <div class="summary-box"><h4>&#x2705; One-Liner Revision</h4><ul>
 <li>Compensation = Direct (cash) + Indirect (benefits)</li>
 <li>Total Rewards has 6 elements: CBWPCT</li>
-<li>Equity Theory: employees compare input-outcome ratios</li>
-<li>Expectancy Theory: E &times; I &times; V = Motivation</li>
+<li>Equity Theory: employees compare input-outcome ratios (internal, external, individual)</li>
+<li>Expectancy Theory: E &times; I &times; V = Motivation (all must be high)</li>
 <li>3 pay strategies: Lead, Lag, Match (LLM)</li>
 <li>4 JE methods: RCPF - Ranking, Classification, Point Rating, Factor Comparison</li>
 <li>Point Rating is the most popular JE method</li>
-<li>Median preferred over mean in pay surveys</li>
+<li>Job Evaluation evaluates the JOB, not the person (vs Merit Rating)</li>
+<li>Median preferred over mean in pay surveys (less affected by outliers)</li>
 <li>Intrinsic: recognition, autonomy, growth</li>
 <li>Extrinsic: pay, bonuses, benefits</li>
-<li>Individual incentives: PCBM</li>
-<li>Group incentives: Gainsharing, Profit-sharing, ESOPs</li>
-<li>PF: 12% basic + DA from both sides</li>
-<li>ESI: 0.75% employee + 3.25% employer</li>
-<li>Gratuity: 15 days/year after 5 years</li>
+<li>Individual incentives: PCBM (Piece-rate, Commission, Bonus, Merit)</li>
+<li>Group incentives: Gainsharing (productivity), Profit-sharing (profits), ESOPs (ownership)</li>
+<li>EPF: 12% basic + DA from both sides; employer split: 3.67% EPF + 8.33% EPS</li>
+<li>ESI: 0.75% employee + 3.25% employer (salary &lt; Rs. 21,000)</li>
+<li>Gratuity: (Last salary &times; 15 &times; Years) / 26; tax-free up to Rs. 20 lakhs</li>
+<li>ESOPs: Regulated by SEBI; vesting 1-4 years; taxed at exercise and sale</li>
+<li>7th CPC: Rs. 18,000 min, 2.57x fitment, 18-level Pay Matrix</li>
 <li>Cafeteria plan: employees choose benefits from menu</li>
 </ul></div>
 </div>
@@ -520,18 +1091,23 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <!-- EXAM FOCUS -->
 <div class="unit" id="exam">
 <h3 id="exam-h">&#x1F3AF; Exam Focus</h3>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Top 10 Most Asked Topics</div>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Top 15 Most Asked Topics</div>
 <ol>
-<li>Direct vs Indirect Compensation - definitions, examples</li>
-<li>Total Rewards Framework - 6 elements, WorldatWork model</li>
-<li>Equity Theory vs Expectancy Theory - comparison, application</li>
-<li>Job Evaluation Methods - all 4 methods with pros/cons</li>
-<li>Point Rating Method - detailed steps, factor-degree-point examples</li>
-<li>Indian Wage Laws - 4 key acts, Code on Wages 2019</li>
-<li>Individual vs Group Incentives - types, examples</li>
-<li>Pay Commission - 7th Pay Commission recommendations</li>
-<li>Cafeteria Approach - concept and benefits</li>
-<li>PF/ESI/Gratuity - contribution rates, eligibility</li>
+<li>Direct vs Indirect Compensation - definitions, examples, CTC breakdown</li>
+<li>Total Rewards Framework - 6 elements (CBWPCT), WorldatWork model</li>
+<li>Equity Theory vs Expectancy Theory - comparison, application, Indian examples</li>
+<li>Job Evaluation Methods - all 4 methods (RCPF) with pros/cons</li>
+<li>Point Rating Method - detailed steps, factor-degree-point examples (Paper Mill)</li>
+<li>Job Evaluation vs Merit Rating vs Work Study - key distinctions</li>
+<li>Indian Wage Laws - 4 key acts, Code on Wages 2019 consolidation</li>
+<li>EPF/ESI - contribution rates, eligibility, benefits, employer split</li>
+<li>Gratuity - formula, eligibility, tax treatment, calculation examples</li>
+<li>ESOPs - vesting, exercise, taxation, SEBI regulations, Indian examples</li>
+<li>Individual vs Group Incentives - types, examples, Gainsharing vs Profit-sharing</li>
+<li>Pay Commission - 7th CPC recommendations (Rs. 18,000, 2.57x, Pay Matrix)</li>
+<li>Cafeteria Approach - concept, benefits, Indian companies using it</li>
+<li>Expatriate Compensation - Balance Sheet vs Going Rate approaches</li>
+<li>Broad Banding vs Traditional Grading - features, advantages, Indian IT examples</li>
 </ol></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expected Question Patterns</div>
 <ul>
@@ -539,7 +1115,12 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>"Compare Equity Theory and Expectancy Theory in compensation design"</li>
 <li>"Describe the 4 methods of Job Evaluation with merits and limitations"</li>
 <li>"Discuss the legal framework for wage determination in India"</li>
-<li>"Explain individual and group incentive schemes with examples"</li>
+<li>"Explain EPF and ESI contribution rates and benefits"</li>
+<li>"Calculate gratuity for an employee with given salary and service years"</li>
+<li>"Explain ESOPs with reference to Indian IT companies"</li>
+<li>"Differentiate between Gainsharing and Profit-sharing schemes"</li>
+<li>"Discuss the 7th Pay Commission recommendations"</li>
+<li>"Explain the Balance Sheet approach to expatriate compensation"</li>
 </ul></div>
 <div class="summary-box"><h4>&#x2705; Model Answer Structure</h4><ul>
 <li>1. <strong>Define</strong> the concept clearly</li>
@@ -552,12 +1133,46 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+(function() {
+  var o = new IntersectionObserver(function(e) {
+    e.forEach(function(x) {
+      if (x.isIntersecting) {
+        x.target.classList.add("visible");
+        o.unobserve(x.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll(".unit").forEach(function(e) {
+    e.classList.add("fade-in");
+    o.observe(e);
+  });
+  window.addEventListener("scroll", function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    var progressBar = document.getElementById("readingProgress");
+    if (progressBar) progressBar.style.width = p + "%";
+    var u = document.querySelectorAll(".unit");
+    var l = document.querySelectorAll(".study-sidebar a[href^='#u']");
+    var c = "";
+    u.forEach(function(e) {
+      if (e.getBoundingClientRect().top < 200) c = e.id;
+    });
+    l.forEach(function(e) {
+      e.classList.toggle("active", e.getAttribute("href") === "#" + c);
+    });
+  });
+  document.querySelectorAll('.callout, .summary-box, .visual-diagram').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    o.observe(el);
+  });
+})();
 </script>
-<script src="pwa-register.js"></script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
 </body>
 </html>

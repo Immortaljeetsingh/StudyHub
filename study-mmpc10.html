@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-10: Managerial Economics | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(253,203,110,0.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,0.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,0.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,0.12),transparent),radial-gradient(1px 1px at 10% 80%,rgba(0,210,255,0.15),transparent),radial-gradient(2px 2px at 90% 40%,rgba(255,215,0,0.2),transparent),radial-gradient(1px 1px at 50% 50%,rgba(253,203,110,0.15),transparent),radial-gradient(1.5px 1.5px at 30% 90%,rgba(0,210,255,0.2),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+.animate-on-scroll:nth-child(2){transition-delay:.1s}
+.animate-on-scroll:nth-child(3){transition-delay:.2s}
+.animate-on-scroll:nth-child(4){transition-delay:.3s}
+.animate-on-scroll:nth-child(5){transition-delay:.4s}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}
+.study-content{flex:1;padding:2rem;min-width:0}
+.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.25rem}
+.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}
+.sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(253,203,110,0.15),rgba(0,210,255,0.1));border:1px solid rgba(200,200,200,0.12);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(253,203,110,0.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
+@keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:0.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:0.8}}
+.study-header h1{font-size:2rem;font-weight:800;color:#fdcb6e;letter-spacing:-.03em;position:relative}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
+.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#fdcb6e,#f39c12);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem;border:none}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.unit.visible{opacity:1;transform:translateY(0)}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}
+.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(108,99,255,.25),0 0 20px rgba(0,210,255,.1)!important;border-color:rgba(108,99,255,.4)!important}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem;font-size:1.5rem;font-weight:800;color:#fdcb6e;margin-top:2.5rem;margin-bottom:1rem}
+h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#c8c8c8,#b0b0b0);border-radius:2px}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}
+h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#c8c8c8,#b0b0b0,#FFD700,#c8c8c8);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.section{margin-bottom:1.25rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}
+.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}
+.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
+.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,0.12)}
+.callout-definition{background:rgba(253,203,110,.08);border-color:#fdcb6e}
+.callout-important{background:rgba(255,215,0,.06);border-color:#FFD700;border-left-color:#FFD700!important}
+.callout-important .callout-label{color:#FFD700}
+.callout-example{background:rgba(176,176,176,.06);border-color:#b0b0b0}
+.callout-mnemonic{background:linear-gradient(135deg,rgba(200,200,200,.05),rgba(0,210,255,.05));border-color:#c8c8c8}
+.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}
+.kt strong{color:#ffd700}
+.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
+.s-b{background:rgba(253,203,110,.15);color:#ffeaa7;border:1px solid rgba(253,203,110,.3)}
+.fc{display:flex;flex-direction:column;align-items:center;gap:0;margin:1.5rem 0}
+.fc-s{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.25rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;min-width:280px;transition:transform .2s,background .2s}
+.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2);background:rgba(255,255,255,.05)}
+.fc-n{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#fdcb6e,#f39c12);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.fc-l{font-size:.9rem;color:rgba(255,255,255,.85)}.fc-l small{color:rgba(255,255,255,.5);font-size:.78rem}
+.fc-a{font-size:1.2rem;color:rgba(253,203,110,.6);margin:.15rem 0}
+.db{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.25rem;margin:1rem 0;overflow-x:auto}
+.db table{width:100%;border-collapse:collapse}
+.db th,.db td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.88rem}
+.db th{color:#ffd700;font-weight:700;background:rgba(255,255,255,.03)}.db td{color:rgba(255,255,255,.72)}
+.db tr:hover td{background:rgba(255,255,255,.02)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem;transition:color .2s}
+.back-link:hover{color:#fdcb6e}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(10px)}
+.skip-link{position:absolute;top:-40px;left:0;background:#fdcb6e;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}
+.skip-link:focus{top:0}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#fdcb6e,#f39c12);z-index:9999;transition:width .1s;width:0%}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95);backdrop-filter:blur(20px)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(108,99,255,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-section-content{display:none}.video-section-content.active{display:block}
+.video-toggle{background:linear-gradient(135deg,#c8c8c8,#b0b0b0);color:white;border:none;padding:0.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:0.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}
+.summary-box{border:1px solid rgba(0,210,255,.3)!important;background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(108,99,255,.05))!important;transition:transform .3s ease,box-shadow .3s ease!important;padding:1.25rem;border-radius:12px;margin:1.25rem 0}.summary-box:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(0,210,255,.15)!important}.summary-label{font-weight:700;font-size:1rem;color:#00d4ff;margin-bottom:.6rem}
+.summary-box h4{font-weight:700;font-size:1rem;color:#00d4ff;margin:0 0 .6rem}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.78);margin-bottom:.4rem;line-height:1.5;font-size:.9rem}
+</style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc10">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar">
+<div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-10</span></div>
+<nav class="sidebar-nav">
+  <a href="#block1">Block-01: Demand &amp; Economics</a>
+  <a href="#u1">Unit 1: Scope of Managerial Economics</a>
+  <a href="#u2">Unit 2-3: Demand Analysis</a>
+  <a href="#u3">Unit 4: Demand Concepts Deep Dive</a>
+  <a href="#u4">Unit 5: Demand Elasticity</a>
+  <a href="#block2">Block-02: Production &amp; Costs</a>
+  <a href="#u5">Unit 6: Demand Estimation &amp; Forecasting</a>
+  <a href="#u6">Unit 7: Production Function</a>
+  <a href="#u7">Unit 8: Short Run Cost Analysis</a>
+  <a href="#u8">Unit 9: Long Run Cost Analysis</a>
+  <a href="#block3">Block-03: Market Structure</a>
+  <a href="#u9">Unit 10: Market Structure &amp; Barriers</a>
+  <a href="#u10">Unit 11: Perfect Competition &amp; Monopoly</a>
+  <a href="#u11">Unit 12: Monopolistic &amp; Oligopoly</a>
+  <a href="#block4">Block-04: Pricing &amp; Exam</a>
+  <a href="#u12">Unit 13: Pricing Strategies</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#formulas">Formula Sheet</a>
+  <a href="#exam">Exam Focus</a>
+  <a href="quiz-mmpc10.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main class="study-content" id="main-content">
+<div class="study-header"><span class="subject-tag">MMPC-10</span><h1>Managerial Economics</h1>
+<p>4 Blocks, 13 Units &#x2022; Demand, Production, Cost &amp; Market Analysis &#x2022; IGNOU MBA</p></div>
+
+<h2 id="block1">Block-01: Scope of Managerial Economics &amp; Demand Analysis</h2>
+
+<!-- ==================== UNIT 1 ==================== -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Scope of Managerial Economics</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Definition</div><p><strong>Managerial Economics</strong> = Applied Microeconomics for business decisions. It bridges the gap between economic theory and business practice, focusing on how firms react to economic environment changes. It addresses three central economic problems: <strong>What</strong> to produce, <strong>How</strong> to produce, and <strong>For whom</strong> to produce.</p><p><strong>Scope:</strong> Resource allocation, inventory management, pricing decisions, and capital budgeting. It uses economic concepts like demand, supply, elasticity, and market structure to guide business decisions.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Insight</div><p>Managerial Economics is <strong>normative</strong> (prescriptive) — it tells managers what they <em>should</em> do, unlike pure economics which is <strong>positive</strong> (descriptive). It combines microeconomic theory with decision sciences like operations research and statistics.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to Managerial Economics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Gf5gYdS2d0A" title="Managerial Economics Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Micro vs Macro Economics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/gD6MOm0hUuc" title="Micro vs Macro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Analysis Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Micro vs Macro</td><td>Individual entities vs aggregates</td><td>Firm pricing vs GDP</td></tr>
+<tr><td>Partial vs General Equilibrium</td><td>One variable at a time vs all interactions</td><td>Ceteris paribus vs simultaneous</td></tr>
+<tr><td>Static vs Dynamic</td><td>No change vs successive changes over time</td><td>Snapshot vs time series</td></tr>
+<tr><td>Positive vs Normative</td><td>"What is" vs "What should be"</td><td>Facts vs value judgments</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Four Types of Market Failure</div><p><strong>1. Monopoly</strong> &#x2014; Deadweight loss from reduced output. <strong>2. Public Goods</strong> &#x2014; Non-excludable (national defense, clean air). <strong>3. Externalities</strong> &#x2014; Pollution costs borne by third parties. <strong>4. Information Asymmetry</strong> &#x2014; "Market for lemons" problem.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: RIP-I</div><p>4 problem groups: <strong>R</strong>esource allocation, <strong>I</strong>nventory &amp; Queuing, <strong>P</strong>ricing, <strong>I</strong>nvestment.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Reliance Jio&#x2019;s entry into telecom is a classic case of managerial economics &#x2014; they analyzed demand elasticity, pricing strategy, and market structure before launching free voice + cheap data, disrupting the entire industry.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Managerial Economics = Applied Micro for business decisions</li>
+<li>Three central problems: What, How, For whom to produce</li>
+<li>Market mechanism: Supply &#x2229; Demand = Equilibrium price</li>
+<li>Four market failures: Monopoly, Public Goods, Externalities, Info Asymmetry</li>
+<li>Four problem groups: Resource, Inventory, Pricing, Investment (RIP-I)</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 2-3 ==================== -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2-3: Demand Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Demand Function</div><p><strong>Qd = f(Po, Pc, Ps, Yd, T, A, CR, R, E, N, O)</strong> &#x2014; Quantity demanded depends on own price, price of complements/substitutes, disposable income, tastes, advertising, credit availability, interest rate, expectations, number of buyers, and other factors.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Law of Demand Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2LMBw0OdCi8" title="Law of Demand" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Demand Function &amp; Determinants</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4L8R2dKz0y4" title="Demand Function" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="db"><table><thead><tr><th>Variable</th><th>Meaning</th><th>Effect on Demand</th></tr></thead><tbody>
+<tr><td>Po</td><td>Own Price</td><td>Inverse (Law of Demand)</td></tr>
+<tr><td>Pc</td><td>Price of Complements</td><td>Inverse</td></tr>
+<tr><td>Ps</td><td>Price of Substitutes</td><td>Direct</td></tr>
+<tr><td>Yd</td><td>Disposable Income</td><td>Direct (normal goods)</td></tr>
+<tr><td>T</td><td>Tastes &amp; Preferences</td><td>Variable</td></tr>
+<tr><td>A</td><td>Advertising levels</td><td>Direct (own), Inverse (substitutes)</td></tr>
+<tr><td>CR</td><td>Credit Availability</td><td>Direct</td></tr>
+<tr><td>R</td><td>Interest Rate</td><td>Inverse</td></tr>
+<tr><td>E</td><td>Expectations</td><td>Variable</td></tr>
+<tr><td>N</td><td>Number of Customers</td><td>Direct</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Law of Demand: Price &#x2191; &#x2192; Quantity &#x2193;</div><p><strong>Income Effect:</strong> Price drop &#x2192; real income &#x2191; &#x2192; buy more. <strong>Substitution Effect:</strong> Price drop &#x2192; relatively cheaper &#x2192; substitute toward it. <strong>Exceptions:</strong> Giffen goods (inferior, income effect > substitution effect), Veblen goods (status signaling).</p></div>
+<div class="db"><table><thead><tr><th>Exception Type</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td>Giffen Goods</td><td>Inferior good where income effect > substitution effect</td><td>Staple foods during famine (bread, rice)</td></tr>
+<tr><td>Veblen Goods</td><td>Goods demanded more as price rises (status signaling)</td><td>Luxury brands (Rolex, Gucci)</td></tr>
+<tr><td>Speculative Goods</td><td>Expected future price increases drive current demand</td><td>Stocks, real estate during bubbles</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Shift vs Movement &#x2014; Critical Distinction</div><p><strong>Movement along curve:</strong> Only when own price changes. <strong>Shift of curve:</strong> When any other determinant changes. Remember: &quot;Move on Price, Shift on the rest.&quot;</p></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Demand Curve: Shift vs Movement</h5>
+<div style="display:flex;flex-direction:column;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3)">Movement along curve = Price changes (own price only)</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6);text-align:center">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);border:1px solid rgba(0,210,255,0.3)">Shift of curve = Any other factor changes (income, tastes, etc.)</div>
+</div></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: PITY-CANE</div><p>Demand determinants: <strong>P</strong>rice, <strong>I</strong>ncome, <strong>T</strong>astes, other prices (<strong>Y</strong>), <strong>C</strong>redit, <strong>A</strong>dvertising, <strong>N</strong>umber of buyers, <strong>E</strong>xpectations.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>When onion prices surged to &#x20B9;150/kg in India, demand fell sharply &#x2014; households switched to alternatives like cabbage and beetroot. Government had to impose export bans and import onions from Turkey and Egypt.</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Jio&#x2019;s Impact on Telecom Demand</h5><p>When Reliance Jio launched in 2016 with free voice + &#x20B9;50/GB data, the entire telecom demand curve shifted right &#x2014; millions of new users entered the market. Existing operators (Airtel, Vodafone) had to match prices. This demonstrates: 1) Price elasticity of demand in India&#x2019;s price-sensitive market, 2) How a new entrant can shift industry demand, 3) Substitution effect as users switched from 2G/3G to 4G.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 2-3 Summary</h4><ul>
+<li>Demand function: Qd = f(Po, Pc, Ps, Yd, T, A, CR, R, E, N, O)</li>
+<li>Law of Demand: Price &#x2191; &#x2192; Quantity &#x2193; (Ceteris Paribus)</li>
+<li>Income and Substitution effects explain the Law</li>
+<li>Exceptions: Giffen goods, Veblen goods, Speculative goods</li>
+<li>Market demand = Horizontal summation of individual demands</li>
+<li>Types: Individual, Market, Joint, Derived, Competitive demand</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 4 ==================== -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 4: Demand Concepts Deep Dive</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Distinctions</div><p><strong>Value in Use</strong> vs <strong>Value in Exchange</strong> &#x2014; Air has use value but no exchange value (abundant). <strong>Effective Demand</strong> = Willingness + Ability to pay. Demand always refers to a <strong>time period</strong> (weekly, monthly, yearly).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Shift vs Movement in Demand</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kYw-0ldRkH0" title="Shift vs Movement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Demand</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MHcUj3F_0jE" title="Types of Demand" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Concept</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Movement along curve</td><td>Change in own price</td><td>Price drop &#x2192; quantity demanded &#x2191;</td></tr>
+<tr><td>Shift of curve</td><td>Change in any other determinant</td><td>Income rise &#x2192; demand curve shifts right</td></tr>
+<tr><td>Value in Use</td><td>Utility derived from consumption</td><td>Water &#x2014; essential for life</td></tr>
+<tr><td>Value in Exchange</td><td>Market price of the good</td><td>Water &#x2014; nearly free (abundant)</td></tr>
+<tr><td>Effective Demand</td><td>Willingness + Ability to pay</td><td>Wanting a Mercedes but unable to afford it &#x2260; demand</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Movement</strong> = own price change (along curve). <strong>Shift</strong> = other factors change (curve moves). Think: "Move on Price, Shift on the rest."</p></div>
+<div class="db"><table>
+<thead><tr><th>Demand Type</th><th>Definition</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Individual Demand</td><td>Single consumer's demand at various prices</td><td>Your monthly onion purchases</td></tr>
+<tr><td>Market Demand</td><td>Horizontal summation of all individual demands</td><td>Total onion demand in India</td></tr>
+<tr><td>Joint Demand</td><td>Demand for complementary goods</td><td>Car + petrol, printer + ink</td></tr>
+<tr><td>Derived Demand</td><td>Demand for inputs derived from output demand</td><td>Steel demand from car demand</td></tr>
+<tr><td>Competitive Demand</td><td>Demand for substitute goods</td><td>Tea vs coffee, petrol vs diesel</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Diamond-Water Paradox</div><p><strong>Value in Use</strong> vs <strong>Value in Exchange</strong> explains the paradox: Water has high use value (essential for life) but low exchange value (abundant). Diamonds have low use value but high exchange value (scarce). <strong>Resolution:</strong> Price depends on <strong>marginal</strong> utility, not total utility. The marginal unit of water is cheap because water is abundant.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>During COVID-19, demand for face masks shifted massively to the right (taste/awareness change), while within each day, higher prices caused movement along the demand curve as fewer people bought at inflated prices.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Value in Use vs Value in Exchange: Diamond-water paradox</li>
+<li>Effective Demand = Willingness + Ability to pay</li>
+<li>Movement = own price change; Shift = other determinants change</li>
+<li>Demand always measured over a time period</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 5 ==================== -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 5: Demand Elasticity (Critical Unit)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Elasticity Formula</div><p><strong>Elasticity</strong> = % Change in Dependent Variable / % Change in Independent Variable. Three key types: <strong>Price (Ed)</strong>, <strong>Income (Ey)</strong>, and <strong>Cross (Exy)</strong> elasticity.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Price Elasticity of Demand</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/w7P2U1YJQzg" title="Price Elasticity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Income &amp; Cross Elasticity</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5pGdGTt0lK0" title="Income Cross Elasticity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Elasticity &amp; Total Revenue</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3G7LJFaQ3EM" title="Elasticity Revenue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Formula</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>Price Elasticity (Ed)</td><td>%&#x394;Q / %&#x394;P</td><td>Responsiveness to own price</td></tr>
+<tr><td>Income Elasticity (Ey)</td><td>%&#x394;Q / %&#x394;Y</td><td>Normal (>0) vs Inferior (<0) goods</td></tr>
+<tr><td>Cross Elasticity (Exy)</td><td>%&#x394;Qx / %&#x394;Py</td><td>Substitutes (>0) vs Complements (<0)</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>|Ed| Value</th><th>Type</th><th>Revenue Effect</th></tr></thead>
+<tbody>
+<tr><td>> 1</td><td>Elastic</td><td>Price &#x2191; &#x2192; Revenue &#x2193;</td></tr>
+<tr><td>= 1</td><td>Unit Elastic</td><td>Revenue maximized</td></tr>
+<tr><td>< 1</td><td>Inelastic</td><td>Price &#x2191; &#x2192; Revenue &#x2191;</td></tr>
+<tr><td>&#x221E;</td><td>Perfectly Elastic</td><td>Any price increase &#x2192; zero demand</td></tr>
+<tr><td>0</td><td>Perfectly Inelastic</td><td>Demand unchanged</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Total Revenue Rule</div><p><strong>Elastic:</strong> Price and Revenue move <strong>opposite</strong> directions. <strong>Inelastic:</strong> Price and Revenue move <strong>same</strong> direction. <strong>Unit Elastic:</strong> Revenue is at <strong>maximum</strong>.</p></div>
+<div class="visual-diagram">
+<h5>Elasticity-Revenue Relationship</h5>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);margin-bottom:0.5rem;">
+<strong>Elastic (|Ed| > 1):</strong> Price &#x2191; &#x2192; Revenue &#x2193; (inverse relationship)
+</div>
+<div class="vd-node" style="background:rgba(78,205,196,0.15);margin-bottom:0.5rem;">
+<strong>Unit Elastic (|Ed| = 1):</strong> Revenue is at MAXIMUM
+</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.15);">
+<strong>Inelastic (|Ed| < 1):</strong> Price &#x2191; &#x2192; Revenue &#x2191; (direct relationship)
+</div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Determinant</th><th>Effect on Elasticity</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Availability of Substitutes</td><td>More substitutes &#x2192; more elastic</td><td>Coca-Cola vs Pepsi (elastic) vs insulin (inelastic)</td></tr>
+<tr><td>Necessity vs Luxury</td><td>Necessities &#x2192; inelastic</td><td>Bread (inelastic) vs designer clothes (elastic)</td></tr>
+<tr><td>Proportion of Income</td><td>Larger share &#x2192; more elastic</td><td>Salt (tiny share, inelastic) vs car (large share, elastic)</td></tr>
+<tr><td>Time Horizon</td><td>Longer time &#x2192; more elastic</td><td>Short-run petrol (inelastic) vs long-run (elastic, switch to EVs)</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Elasticity in Action</div><p><strong>Petrol in India:</strong> Highly inelastic (|Ed| &lt; 0.5) &#x2014; even when prices cross &#x20B9;100/litre, commuters still buy because alternatives are limited. <strong>iPhones:</strong> Elastic demand (|Ed| &gt; 1) &#x2014; a 10% price increase leads to &gt;10% drop in sales because Android alternatives exist. <strong>Life-saving drugs:</strong> Perfectly inelastic (|Ed| = 0) &#x2014; patients pay any price.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: ENUP</div><p>Elasticity determinants: <strong>E</strong>xpenditure share, <strong>N</strong>ecessity vs Luxury, <strong>U</strong>bstitutes availability, <strong>P</strong>eriod of time.</p></div>
+<div class="kt"><p><strong>Arc Elasticity Formula:</strong> Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)] &#x2014; Use midpoint method for accuracy between two points.</p><p><strong>Point Elasticity Formula:</strong> Ed = (dQ/dP) &#xD7; (P/Q) &#x2014; Elasticity at a specific point on the demand curve.</p><p><strong>Income Elasticity:</strong> Ey = (&#x394;Q/&#x394;Y) &#xD7; (Y/Q) &#x2014; Ey > 0 = normal good, Ey < 0 = inferior good.</p><p><strong>Cross Elasticity:</strong> Exy = (&#x394;Qx/&#x394;Py) &#xD7; (Py/Qx) &#x2014; Exy > 0 = substitutes, Exy < 0 = complements.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Petrol in India is inelastic &#x2014; even when prices cross &#x20B9;100/litre, people still buy because there are few substitutes for commuting. But luxury goods like iPhones have elastic demand &#x2014; a price hike significantly reduces sales.</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Elasticity of Indian Goods</h5><p><strong>Inelastic goods in India:</strong> Petrol (|Ed| ~0.3), Salt (|Ed| ~0.1), Insulin (|Ed| ~0.0),自来水 (|Ed| ~0.2). These are necessities with few substitutes. <strong>Elastic goods in India:</strong> Air travel (|Ed| ~1.5), Restaurant meals (|Ed| ~1.2), Branded clothing (|Ed| ~1.8), Electronics (|Ed| ~1.4). These are luxuries with many substitutes. <strong>Policy implication:</strong> Government can tax inelastic goods (petrol, tobacco) without significantly reducing consumption, generating more revenue.</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> Arc Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)] &#x2022; Point Ed = (dQ/dP) &#xD7; (P/Q) &#x2022; TR = P &#xD7; Q &#x2022; MR = dTR/dQ</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Three elasticities: Price, Income, Cross</li>
+<li>Elastic (|Ed|>1): Price &#x2191; &#x2192; Revenue &#x2193;</li>
+<li>Inelastic (|Ed|<1): Price &#x2191; &#x2192; Revenue &#x2191;</li>
+<li>Determinants: Substitutes, Necessity, Income share, Time (ENUP)</li>
+<li>Arc vs Point elasticity methods for calculation</li>
+</ul></div>
+</div>
+
+<h2 id="block2">Block-02: Demand Estimation, Production &amp; Cost Analysis</h2>
+
+<!-- ==================== UNIT 6 ==================== -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 6: Demand Estimation &amp; Forecasting</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Estimation vs Forecasting</div><p><strong>Estimation:</strong> Quantifies links between demand and determining variables (regression). <strong>Forecasting:</strong> Predicts overall level of future demand (time series, qualitative methods).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Regression Analysis for Demand</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/zkEhR6BOvNs" title="Regression Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Demand Forecasting Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3LmoY9n0YVk" title="Forecasting Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Methods</th><th>When to Use</th></tr></thead>
+<tbody>
+<tr><td>Qualitative</td><td>Expert opinion, Delphi, Market surveys</td><td>New products, no data</td></tr>
+<tr><td>Quantitative</td><td>Time series, Regression, Smoothing</td><td>Existing products with data</td></tr>
+<tr><td>Barometric</td><td>Leading indicators</td><td>Economic turning points</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Regression Key Metrics</div><p><strong>R&#xB2;</strong> = % of variation explained (closer to 1 = better). <strong>t-statistic</strong> = coefficient / standard error (|t| > 2 = significant). <strong>F-statistic</strong> = Tests overall significance of regression.</p></div>
+<div class="db"><table>
+<thead><tr><th>Method</th><th>Type</th><th>When to Use</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td>Consumer Survey</td><td>Qualitative</td><td>New products, no historical data</td><td>Biased responses</td></tr>
+<tr><td>Delphi Method</td><td>Qualitative</td><td>Technology forecasting</td><td>Expert bias</td></tr>
+<tr><td>Time Series</td><td>Quantitative</td><td>Established products with data</td><td>Assumes past patterns continue</td></tr>
+<tr><td>Regression</td><td>Quantitative</td><td>Multiple demand factors</td><td>Requires sufficient data points</td></tr>
+<tr><td>Moving Average</td><td>Quantitative</td><td>Smooth out random fluctuations</td><td>Lags behind trends</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Regression in Practice</div><p>A regression model for Indian car demand: <strong>Q = 5000 - 200P + 150Y + 300A</strong> where P = price (&#x20B9; lakhs), Y = disposable income (&#x20B9; thousands), A = advertising spend (&#x20B9; lakhs). If R&#xB2; = 0.85, the model explains 85% of variation. A t-stat of 3.5 for price coefficient means price significantly affects demand.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: DREG</div><p>Demand estimation: <strong>D</strong>ata collection, <strong>R</strong>egression, <strong>E</strong>valuate R&#xB2;/t-stats, <strong>G</strong>enerate forecast.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>FMCG companies like HUL use regression analysis to estimate how price changes, advertising spend, and festival seasons affect demand for products like Surf Excel or Lux soap across Indian markets.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Estimation quantifies demand-variable links; Forecasting predicts future demand</li>
+<li>Regression: Q = a + bP + cY + ... ; check R&#xB2;, t-stats, F-stat</li>
+<li>Qualitative (new products) vs Quantitative (existing products) methods</li>
+<li>Barometric methods use leading indicators for turning points</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 7 ==================== -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 7: Production Function (Critical Unit)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Production Function</div><p><strong>Q = f(L, K)</strong> &#x2014; Maximum output from given input combination. <strong>Technical Efficiency:</strong> Max output from given inputs. <strong>Economic Efficiency:</strong> Given output at lowest cost (considers input prices). <strong>Short Run:</strong> At least one input fixed. <strong>Long Run:</strong> All inputs variable.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Production Function TP AP MP</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/KJnGkOY1hSg" title="TP AP MP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Law of Diminishing Returns</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/bj7Gf5MFOkc" title="Diminishing Returns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Isoquants &amp; Returns to Scale</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xiGqfRx8D1E" title="Isoquants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Measure</th><th>Formula</th><th>Behavior</th></tr></thead>
+<tbody>
+<tr><td>TP (Total Product)</td><td>Total output</td><td>Rises, peaks, then falls</td></tr>
+<tr><td>AP (Average Product)</td><td>TP / L</td><td>Rises, peaks, then falls</td></tr>
+<tr><td>MP (Marginal Product)</td><td>&#x394;TP / &#x394;L</td><td>Rises first, then falls (diminishing returns)</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Critical MP-AP Relationships</div><p><strong>MP > AP</strong> &#x2192; AP rising. <strong>MP < AP</strong> &#x2192; AP falling. <strong>MP = AP</strong> &#x2192; AP at maximum. <strong>MP = 0</strong> &#x2192; TP at maximum. <strong>MP < 0</strong> &#x2192; TP falling. <strong>Cricket Analogy:</strong> If Sachin averages 50 and scores 100, his average rises. If he scores 0, average falls.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Optimal Input Hiring Rule</div><p>A firm should hire inputs until: <strong>Value of Marginal Product (VMP) = Input Price</strong>. For labor: VMP = P &#xD7; MPL = w (wage rate). For capital: VMP = P &#xD7; MPK = r (rental rate). This ensures the last unit of input hired generates revenue exactly equal to its cost.</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> AP = TP/L &#x2022; MP = &#x394;TP/&#x394;L &#x2022; MRTS = MPL/MPK &#x2022; Optimal: MRTS = w/r &#x2022; VMP = P &#xD7; MP = w</p></div>
+<div class="db"><table>
+<thead><tr><th>Returns to Scale</th><th>Output Change</th><th>When</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Increasing</td><td>Output &#x2191; more than proportionally</td><td>Specialization benefits</td><td>Small factory doubling workers</td></tr>
+<tr><td>Constant</td><td>Output &#x2191; proportionally</td><td>Balanced scaling</td><td>Replicating identical plants</td></tr>
+<tr><td>Decreasing</td><td>Output &#x2191; less than proportionally</td><td>Managerial complexity</td><td>Very large corporations</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Stage</th><th>MP</th><th>AP</th><th>Decision</th></tr></thead>
+<tbody>
+<tr><td>I</td><td>> 0, Rising</td><td>Rising</td><td>Keep adding inputs</td></tr>
+<tr><td>II</td><td>> 0, Falling</td><td>Falling</td><td><strong>Optimal range</strong></td></tr>
+<tr><td>III</td><td>< 0</td><td>Falling</td><td>Reduce inputs</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: TAM-IRS</div><p>Production concepts: <strong>T</strong>otal product, <strong>A</strong>verage product, <strong>M</strong>arginal product, <strong>I</strong>soquants, <strong>R</strong>eturns to scale, <strong>S</strong>tages of production.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Indian farmers experience diminishing returns when adding more fertilizer to a fixed plot of land &#x2014; initial increases boost yield, but excessive fertilizer actually reduces crop output (Stage III).</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Indian IT Industry Production Function</h5><p><strong>TCS Infosys Production Analysis:</strong> Indian IT companies show clear production function behavior. <strong>Stage I:</strong> When TCS hires first 1000 developers, each additional developer adds more output (specialization benefits). <strong>Stage II:</strong> Between 1000-500000 developers, MP is positive but declining &#x2014; communication overhead increases. <strong>Stage III:</strong> Beyond 500000 developers, coordination costs become so high that additional hires reduce total output. <strong>Optimal:</strong> TCS maintains ~500000 employees &#x2014; in Stage II, where MP > 0 but MP < AP. <strong>MRTS:</strong> TCS substitutes capital (AI tools) for labor (developers) as AI becomes cheaper &#x2014; MRTS = MPL/MPK = w/r.</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> AP = TP/L &#x2022; MP = &#x394;TP/&#x394;L &#x2022; MRTS = MPL/MPK &#x2022; Optimal: MRTS = w/r &#x2022; VMP = P &#xD7; MP = w</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Production function: Q = f(L, K) &#x2014; max output from inputs</li>
+<li>Three stages: Stage II is optimal (MP>0, MP<AP)</li>
+<li>Law of Diminishing Returns: MP eventually declines</li>
+<li>Isoquants show same-output input combinations; MRTS = MPL/MPK</li>
+<li>Returns to Scale: Increasing, Constant, Decreasing</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 8 ==================== -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 8: Short Run Cost Analysis (Critical Unit)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cost Measures</div><p><strong>TC = FC + VC</strong> &#x2022; <strong>ATC = TC/Q = AFC + AVC</strong> &#x2022; <strong>AFC = FC/Q</strong> (always declining) &#x2022; <strong>AVC = VC/Q</strong> (U-shaped) &#x2022; <strong>MC = &#x394;TC/&#x394;Q</strong> (U-shaped, crosses ATC &amp; AVC at minimum points).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost Curves Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/a8RYGt9kQnE" title="Cost Curves" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Break-Even Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aY7y2mulgYw" title="Break Even" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Cost Type</th><th>Definition</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Actual vs Opportunity</td><td>Historical cost vs best alternative foregone</td><td>Book cost vs rental income</td></tr>
+<tr><td>Explicit vs Implicit</td><td>Out-of-pocket vs imputed</td><td>Wages vs owner&#x2019;s time</td></tr>
+<tr><td>Direct vs Indirect</td><td>Traceable vs not traceable to product</td><td>Raw materials vs rent</td></tr>
+<tr><td>Fixed vs Variable</td><td>Doesn&#x2019;t change with output vs changes</td><td>Rent vs raw materials</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Measure</th><th>Formula</th><th>Behavior</th></tr></thead>
+<tbody>
+<tr><td>TC</td><td>FC + VC</td><td>Total cost</td></tr>
+<tr><td>ATC</td><td>TC / Q = AFC + AVC</td><td>U-shaped</td></tr>
+<tr><td>AFC</td><td>FC / Q</td><td>Always declining (rectangular hyperbola)</td></tr>
+<tr><td>AVC</td><td>VC / Q</td><td>U-shaped</td></tr>
+<tr><td>MC</td><td>&#x394;TC / &#x394;Q</td><td>U-shaped, crosses ATC &amp; AVC at minimum</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Critical MC-ATC-AVC Relationships</div><p><strong>MC < ATC</strong> &#x2192; ATC falling. <strong>MC > ATC</strong> &#x2192; ATC rising. <strong>MC = ATC</strong> &#x2192; ATC at minimum. MC crosses both ATC and AVC at their <strong>minimum points</strong>. AVC reaches minimum at <strong>lower output</strong> than ATC.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Break-Even &amp; Shutdown</div><p><strong>Break-even:</strong> TR = TC &#x2192; Q_BE = FC / (P - AVC). <strong>Shutdown point:</strong> P < AVC &#x2192; stop production. Below Q_BE: Loss (but continue if P > AVC). Above Q_BE: Profit.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Cost Curve Relationships (ASCII)</div><pre style="color:rgba(255,255,255,.7);font-size:0.85rem;line-height:1.4;margin:1rem 0;">
+Cost
+  |        MC
+  |       /  \
+  |      / ATC \
+  |     /  / \  \
+  |    / AVC   \
+  |   /  / \    \
+  |  / AFC      \
+  | / (declining) \
+  |/________________\_____________ Quantity
+
+Key: MC crosses ATC and AVC at their minimum points
+     AFC is always declining (rectangular hyperbola)
+     AVC reaches minimum before ATC
+</pre></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Operating Leverage</div><p><strong>Operating Leverage</strong> = Proportion of fixed costs in total costs. High fixed costs mean high operating leverage. <strong>Example:</strong> Airlines have high operating leverage (aircraft leases, crew salaries are fixed). When passenger load is high, profits soar. During COVID with low loads, losses were catastrophic because fixed costs remained. IndiGo's fixed costs are ~60% of total costs.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: FAVM-B</div><p>Cost concepts: <strong>F</strong>ixed, <strong>A</strong>verage, <strong>V</strong>ariable, <strong>M</strong>arginal, <strong>B</strong>reak-even.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Indian airlines like IndiGo have high operating leverage &#x2014; aircraft leases are fixed costs. When passenger load is high, profits soar. During COVID with low loads, losses were catastrophic because fixed costs remained. IndiGo&#x2019;s break-even load factor is ~75%.</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Indian Steel Industry Cost Structure</h5><p><strong>Tata Steel vs JSW Steel:</strong> Both have high fixed costs (blast furnaces, mines, land). <strong>Fixed Costs:</strong> ~60% of total costs. <strong>Break-even:</strong> Tata Steel&#x2019;s break-even is ~&#x20B9;45,000/tonne. When steel prices fall below this, losses accumulate. <strong>Operating Leverage:</strong> When steel prices rose from &#x20B9;40,000 to &#x20B9;70,000/tonne (2020-2021), Tata Steel&#x2019;s profit increased 10x. <strong>Shutdown:</strong> Even during price dips, production continues as long as P > AVC (&#x20B9;30,000/tonne).</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> TC = FC + VC &#x2022; ATC = TC/Q &#x2022; MC = &#x394;TC/&#x394;Q &#x2022; Break-even: Q = FC/(P-AVC) &#x2022; Profit = (P - ATC) &#xD7; Q</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>TC = FC + VC; ATC = AFC + AVC; MC = &#x394;TC/&#x394;Q</li>
+<li>MC crosses ATC and AVC at their minimum points</li>
+<li>Break-even: Q = FC/(P-AVC); Shutdown: P < AVC</li>
+<li>AFC always declining (rectangular hyperbola)</li>
+<li>Operating leverage = proportion of fixed costs</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 9 ==================== -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 9: Long Run Cost Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Long Run Average Cost (LRAC)</div><p><strong>Envelope Curve</strong> &#x2014; Envelopes all short run AC curves. U-shaped due to economies then diseconomies of scale. <strong>Unique Point:</strong> At minimum LRAC: SRAC = SRMC = LRAC = LRMC. Cost-Output Elasticity: <strong>Ec = MC/AC</strong>; Ec < 1 = Economies of Scale.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Economies of Scale Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/57GukMs2MkQ" title="Economies of Scale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Learning Curve &amp; Economies of Scope</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2g6i5T3M3QI" title="Learning Curve" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Economy Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Production</td><td>Specialization, technical economies, inventory economies</td></tr>
+<tr><td>Marketing</td><td>Advertising/R&amp;D spread over more units</td></tr>
+<tr><td>Managerial</td><td>Specialization, decentralization, team experience</td></tr>
+<tr><td>Transport/Storage</td><td>Bulk discounts, lower per-unit costs</td></tr>
+<tr><td>Pecuniary</td><td>Bulk buying discounts, lower interest rates</td></tr>
+<tr><td>External</td><td>Industry-wide: specialized suppliers, knowledge spillovers</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Learning Curve &amp; Scope</div><p><strong>Learning Curve:</strong> C(n) = C(1) &#xD7; n^(-b) &#x2014; Costs decrease with cumulative production. b = learning parameter, n = cumulative units. <strong>Economies of Scope:</strong> TC(Q1, Q2) < TC(Q1,0) + TC(0,Q2) &#x2014; producing together is cheaper than separately.</p></div>
+<div class="kt"><p><strong>Cost-Output Elasticity:</strong> Ec = MC/AC &#x2022; Ec < 1 &#x2192; Economies of Scale &#x2022; Ec = 1 &#x2192; Constant Returns &#x2022; Ec > 1 &#x2192; Diseconomies of Scale</p><p><strong>Learning Curve:</strong> C(n) = C(1) &#xD7; n^(-b) where b = learning parameter, n = cumulative units produced</p><p><strong>Economies of Scope:</strong> TC(Q1, Q2) < TC(Q1, 0) + TC(0, Q2) &#x2014; Joint production is cheaper than separate production</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Diseconomies of Scale</div><p><strong>Causes:</strong> 1) <strong>Morale problems</strong> &#x2014; larger workforce leads to less personal connection. 2) <strong>Communication breakdown</strong> &#x2014; more management layers distort messages. 3) <strong>Coordination complexity</strong> &#x2014; harder to align large teams. 4) <strong>Bureaucracy</strong> &#x2014; excessive rules slow decisions.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Cost-Output Elasticity</div><p><strong>Ec = MC / AC</strong>. When Ec &lt; 1 &#x2192; Economies of Scale (costs rise slower than output). When Ec = 1 &#x2192; Constant Returns. When Ec &gt; 1 &#x2192; Diseconomies of Scale (costs rise faster than output).</p></div>
+<div class="db"><table>
+<thead><tr><th>Economy Type</th><th>Source</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Production</td><td>Specialization, technical economies, inventory economies</td><td>Assembly line (Ford Model T)</td></tr>
+<tr><td>Marketing</td><td>Advertising/R&amp;D spread over more units</td><td>HUL advertising across 50+ brands</td></tr>
+<tr><td>Managerial</td><td>Specialization, decentralization, team experience</td><td>Separate managers for finance, ops, marketing</td></tr>
+<tr><td>Transport/Storage</td><td>Bulk discounts, lower per-unit costs</td><td>Container shipping (20ft vs 40ft)</td></tr>
+<tr><td>Pecuniary</td><td>Bulk buying discounts, lower interest rates</td><td>Walmart negotiating supplier discounts</td></tr>
+<tr><td>External</td><td>Industry-wide: specialized suppliers, knowledge spillovers</td><td>Silicon Valley tech ecosystem</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: PEM-LES</div><p>Long run costs: <strong>P</strong>ecuniary, <strong>E</strong>xternal, <strong>M</strong>anagerial, <strong>L</strong>earning curve, <strong>E</strong>conomies of scope, <strong>S</strong>cale economies.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Tata Steel benefits from economies of scale &#x2014; their Jamshedpur plant produces at lower per-unit cost than smaller steel mills. Maruti Suzuki&#x2019;s learning curve effects have reduced manufacturing costs over decades of car production.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>LRAC = Envelope of all SRAC curves (U-shaped)</li>
+<li>At min LRAC: SRAC = SRMC = LRAC = LRMC</li>
+<li>Economies of Scale: Production, Marketing, Managerial, Transport</li>
+<li>Learning Curve: C(n) = C(1) &#xD7; n^(-b)</li>
+<li>Economies of Scope: Joint production cheaper than separate</li>
+</ul></div>
+</div>
+
+<h2 id="block3">Block-03: Market Structure &amp; Competitive Analysis</h2>
+
+<!-- ==================== UNIT 10 ==================== -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 10: Market Structure &amp; Barriers to Entry</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Market Structure Classification</div><p>Four market structures: <strong>Perfect Competition</strong> (many, homogeneous, free entry), <strong>Monopoly</strong> (one, unique, blocked), <strong>Monopolistic Competition</strong> (many, differentiated, free), <strong>Oligopoly</strong> (few, interdependent, difficult entry).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Market Structures Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PEgkzTMJJLg" title="Market Structures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Barriers to Entry</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FUIkPjVzvN8" title="Barriers to Entry" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Perfect Comp.</th><th>Monopoly</th><th>Monopolistic</th><th>Oligopoly</th></tr></thead>
+<tbody>
+<tr><td>Firms</td><td>Many</td><td>One</td><td>Many</td><td>Few</td></tr>
+<tr><td>Product</td><td>Homogeneous</td><td>Unique</td><td>Differentiated</td><td>Homo/Differentiated</td></tr>
+<tr><td>Entry</td><td>Free</td><td>Blocked</td><td>Relatively free</td><td>Difficult</td></tr>
+<tr><td>Price Control</td><td>None (taker)</td><td>Significant (maker)</td><td>Some</td><td>Interdependent</td></tr>
+<tr><td>Demand Curve</td><td>Horizontal</td><td>Downward sloping</td><td>Downward (elastic)</td><td>Kinked</td></tr>
+<tr><td>Long Run Profit</td><td>Normal (zero)</td><td>Supernormal possible</td><td>Normal (zero)</td><td>Supernormal possible</td></tr>
+<tr><td>MR vs Price</td><td>MR = P</td><td>MR < P</td><td>MR < P</td><td>MR < P</td></tr>
+<tr><td>Allocative Efficiency</td><td>Yes (P = MC)</td><td>No (P > MC)</td><td>No (P > MC)</td><td>No (P > MC)</td></tr>
+<tr><td>Productive Efficiency</td><td>Yes (min ATC)</td><td>No (not at min ATC)</td><td>No (excess capacity)</td><td>No</td></tr>
+</tbody></table></div>
+<div class="visual-diagram">
+<h5>Market Structure Spectrum</h5>
+<div class="vd-node" style="background:rgba(78,205,196,0.15);margin-bottom:0.5rem;">
+<strong>Perfect Competition</strong> &larr; Many firms, homogeneous, price taker &rarr; <strong>Zero LR profit</strong>
+</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.15);margin-bottom:0.5rem;">
+<strong>Monopolistic Competition</strong> &larr; Many firms, differentiated, some power &rarr; <strong>Zero LR profit</strong>
+</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);margin-bottom:0.5rem;">
+<strong>Oligopoly</strong> &larr; Few firms, interdependent, strategic &rarr; <strong>Possible LR profit</strong>
+</div>
+<div class="vd-node" style="background:rgba(253,203,110,0.15);">
+<strong>Monopoly</strong> &larr; One firm, unique, price maker &rarr; <strong>Sustained LR profit</strong>
+</div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: PEPE-BL</div><p>Market features: <strong>P</strong>roduct type, <strong>E</strong>ntry barriers, <strong>P</strong>rice control, <strong>E</strong>lasticity, <strong>B</strong>uyers/Sellers, <strong>L</strong>ong run profit.</p></div>
+<div class="db"><table>
+<thead><tr><th>Barrier Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Natural</td><td>Economies of scale, high capital requirements, resource control</td><td>Utilities (power, water), mining</td></tr>
+<tr><td>Strategic</td><td>Limit pricing, excess capacity, patents, brand loyalty</td><td>Pharma patents, tech IP</td></tr>
+<tr><td>Legal</td><td>Government licenses, franchises, tariffs, regulations</td><td>Telecom spectrum, liquor licenses</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Entry Deterrence Strategies</div><p><strong>Limit Pricing:</strong> Set price low to discourage new entrants (Jio's initial free data). <strong>Excess Capacity:</strong> Show ability to flood market if entry occurs. <strong>R&amp;D Spending:</strong> Patent protection (pharma companies). <strong>Brand Proliferation:</strong> Fill market niches (P&amp;G with 65+ brands).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Indian Railways is a monopoly in long-distance rail travel. OYO and FabHotels operate in monopolistic competition (differentiated hotel rooms). Jio-Airtel-Vi form an oligopoly in Indian telecom.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Four structures: Perfect Competition, Monopoly, Monopolistic, Oligopoly</li>
+<li>Barriers: Natural (scale, capital), Strategic (limit pricing, patents), Legal (licenses)</li>
+<li>Perfect Comp: Price taker, zero LR profit; Monopoly: Price maker, sustained LR profit</li>
+<li>Oligopoly: Few firms, interdependent decisions</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 11 ==================== -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 11: Perfect Competition &amp; Monopoly (Critical Unit)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Profit Maximization Rule</div><p><strong>MR = MC</strong> &#x2014; Universal rule across ALL market structures. In Perfect Competition: P = MR = AR (horizontal demand). In Monopoly: MR < P, MR curve lies below demand curve.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Perfect Competition Equilibrium</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8ZCMPv2eVNE" title="Perfect Competition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Monopoly Pricing &amp; Price Discrimination</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WK3J4YFBhY" title="Monopoly Pricing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Degree</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>1st Degree</td><td>Each unit at max willingness to pay</td><td>Auctions, doctors</td></tr>
+<tr><td>2nd Degree</td><td>Price varies by quantity</td><td>Bulk discounts, versioning</td></tr>
+<tr><td>3rd Degree</td><td>Different prices for different segments</td><td>Student/senior discounts</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Welfare Comparison</div><p><strong>Perfect Competition:</strong> P = MC, maximum total surplus, efficient. <strong>Monopoly:</strong> P > MC, deadweight loss, inefficient. Consumer surplus is maximum under perfect competition, reduced under monopoly (transferred to producer).</p></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Perfect Competition</th><th>Monopoly</th></tr></thead>
+<tbody>
+<tr><td>Firms</td><td>Many (price takers)</td><td>One (price maker)</td></tr>
+<tr><td>Demand Curve</td><td>Horizontal (perfectly elastic)</td><td>Downward sloping (market demand)</td></tr>
+<tr><td>Price Rule</td><td>P = MR = MC</td><td>MR = MC, then charge from demand</td></tr>
+<tr><td>Long Run Profit</td><td>Zero economic profit</td><td>Supernormal profit possible</td></tr>
+<tr><td>Efficiency</td><td>Allocative (P=MC) + Productive (min ATC)</td><td>Neither (P > MC, not at min ATC)</td></tr>
+<tr><td>Consumer Surplus</td><td>Maximum</td><td>Reduced (transferred to producer)</td></tr>
+<tr><td>Deadweight Loss</td><td>None</td><td>Present (lost surplus)</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Price Discrimination Conditions</div><p>For price discrimination to work, three conditions must be met:</p><p>1) <strong>Market Power</strong> &#x2014; firm can set price (not a price taker).</p><p>2) <strong>Market Segmentation</strong> &#x2014; identifiable groups with different willingness to pay.</p><p>3) <strong>No Arbitrage</strong> &#x2014; can't resell product between segments.</p><p><strong>Example:</strong> Airlines charge business travelers 3-5x more than leisure travelers for the same seat because business travelers can't resell their tickets. Student discounts, senior citizen pricing, and geographic pricing are all forms of 3rd degree price discrimination.</p></div>
+<div class="db"><table>
+<thead><tr><th>Degree</th><th>Description</th><th>Example</th><th>Consumer Surplus</th></tr></thead>
+<tbody>
+<tr><td>1st Degree</td><td>Each unit at max willingness to pay</td><td>Auctions, doctors, car dealers</td><td>Zero (all extracted)</td></tr>
+<tr><td>2nd Degree</td><td>Price varies by quantity purchased</td><td>Bulk discounts, versioning (software)</td><td>Partial</td></tr>
+<tr><td>3rd Degree</td><td>Different prices for different segments</td><td>Student/senior discounts, geographic</td><td>Partial by segment</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: MRD-P</div><p>Monopoly: <strong>M</strong>arket power, <strong>R</strong>evenue maximization (MR=MC), <strong>D</strong>eadweight loss, <strong>P</strong>rice discrimination.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Indian pharmaceutical companies practice 3rd degree price discrimination &#x2014; same medicine sold at lower prices in India than in the US. Ola/Uber use surge pricing (1st degree) during peak hours.</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> Perfect Comp: P = MR = AR &#x2022; Profit Max: MR = MC &#x2022; Monopoly Profit: &#x3C0; = (P - ATC) &#xD7; Q &#x2022; DWL = 0.5 &#xD7; (Pm-Pc) &#xD7; (Qc-Qm)</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Indian Railways &#x2014; A Natural Monopoly</h5><p><strong>Why Monopoly?</strong> Indian Railways is a natural monopoly &#x2014; massive capital requirements (tracks, stations, rolling stock) create insurmountable barriers to entry. <strong>Pricing:</strong> Railways practices 3rd degree price discrimination &#x2014; Sleeper class (&#x20B9;0.34/km), AC 3-tier (&#x20B9;1.25/km), AC 2-tier (&#x20B9;1.86/km), AC First (&#x20B9;3.36/km). Different prices for different segments. <strong>MR = MC:</strong> Railways sets prices where marginal revenue from each class equals marginal cost of providing service. <strong>Welfare Issue:</strong> P > MC creates deadweight loss, but government subsidizes to make rail affordable. <strong>Recent Change:</strong> Private trains (Tejas Express) introduce competition, moving toward monopolistic competition.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>MR = MC is universal profit maximization rule</li>
+<li>Perfect Comp: P = MC, zero LR profit, efficient</li>
+<li>Monopoly: P > MC, supernormal LR profit, deadweight loss</li>
+<li>Price Discrimination: 1st, 2nd, 3rd degree</li>
+<li>Conditions: Market power, Segmentation, No arbitrage</li>
+</ul></div>
+</div>
+
+<!-- ==================== UNIT 12 ==================== -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 12: Monopolistic &amp; Oligopolistic Competition</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Monopolistic Competition</div><p>Many sellers, differentiated products, free entry. <strong>Short run:</strong> Like monopoly (MR = MC, can earn profits). <strong>Long run:</strong> Entry eliminates profits (P = ATC). <strong>Excess capacity:</strong> Produces left of minimum ATC. <strong>Non-price competition:</strong> Advertising, branding, quality.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Monopolistic Competition</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/M6S9FzfSzQ0" title="Monopolistic Competition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Oligopoly &amp; Game Theory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7p9X8j5_L0c" title="Oligopoly Game Theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Model</th><th>Assumption</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>Cournot</td><td>Firms choose quantities simultaneously</td><td>Between monopoly and competition</td></tr>
+<tr><td>Bertrand</td><td>Firms choose prices simultaneously</td><td>Drives price to marginal cost</td></tr>
+<tr><td>Stackelberg</td><td>Leader-follower quantity setting</td><td>Leader has first-mover advantage</td></tr>
+<tr><td>Sweezy</td><td>Kinked demand (asymmetric response)</td><td>Price rigidity</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Kinked Demand Curve (Sweezy)</div><p>Competitors <strong>match price cuts</strong> but <strong>don&#x2019;t match price increases</strong> &#x2192; price rigidity. Firms face different elasticity above and below current price.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Monopolistic Competition: Short Run vs Long Run</div><p><strong>Short Run:</strong> Like monopoly &#x2014; MR = MC, can earn supernormal profits. <strong>Long Run:</strong> Entry of new firms eliminates profits &#x2192; P = ATC (tangent to demand curve). <strong>Excess Capacity:</strong> Produces left of minimum ATC &#x2014; this is the cost of product variety. <strong>Non-price competition:</strong> Advertising, branding, quality differentiation become key strategies.</p></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Monopolistic Competition</th><th>Oligopoly</th></tr></thead>
+<tbody>
+<tr><td>Number of Firms</td><td>Many</td><td>Few (2-10 dominant)</td></tr>
+<tr><td>Product</td><td>Differentiated</td><td>Homogeneous or Differentiated</td></tr>
+<tr><td>Entry</td><td>Relatively free</td><td>Difficult (high barriers)</td></tr>
+<tr><td>Interdependence</td><td>Low (each firm small)</td><td>High (actions affect rivals)</td></tr>
+<tr><td>Pricing Power</td><td>Some (downward demand)</td><td>Significant (kinked demand)</td></tr>
+<tr><td>Examples</td><td>Restaurants, clothing brands</td><td>Telecom, airlines, steel</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: COPS-G</div><p>Oligopoly: <strong>C</strong>ollusion, <strong>O</strong>ligopolistic interdependence, <strong>P</strong>rice rigidity, <strong>S</strong>trategic behavior, <strong>G</strong>ame theory.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Indian telecom (Jio, Airtel, Vi) is a classic oligopoly. When Jio launched free data, competitors had to match. OPEC is a global cartel example. Restaurants in Connaught Place operate in monopolistic competition &#x2014; each offers a differentiated experience.</p></div>
+<div class="kt"><p><strong>Concentration Measures:</strong></p><p>CR4 = Market share of top 4 firms &#x2014; simple measure of concentration</p><p>HHI = &#x2211;(si&#xB2;) where si = market share of firm i &#x2014; more sophisticated measure</p><p>HHI < 1500: Unconcentrated &#x2022; 1500-2500: Moderately concentrated &#x2022; > 2500: Highly concentrated</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Indian Telecom Oligopoly</h5><p><strong>Jio-Airtel-Vi Oligopoly:</strong> India&#x2019;s telecom market is a textbook oligopoly with 3 major players. <strong>CR4:</strong> Top 3 firms control ~95% of market (highly concentrated). <strong>HHI:</strong> ~3500 (highly concentrated). <strong>Kinked Demand:</strong> When Airtel tried to raise prices in 2019, Jio didn&#x2019;t follow &#x2014; Airtel had to reverse. <strong>Game Theory:</strong> Jio&#x2019;s entry in 2016 was a dominant strategy &#x2014; free data forced competitors to match or lose subscribers. <strong>Cartel Attempt:</strong> In 2023, all three raised prices simultaneously (tacit collusion) &#x2014; no formal cartel but coordinated behavior. <strong>Result:</strong> Prices rose 20-25% without losing subscribers (inelastic demand for data).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Monopolistic Comp: Differentiated products, free entry, zero LR profit, excess capacity</li>
+<li>Oligopoly: Few firms, interdependent, kinked demand, price rigidity</li>
+<li>Models: Cournot (quantities), Bertrand (prices), Stackelberg (leader-follower), Sweezy (kinked)</li>
+<li>Cartel: Firms collude to act as monopoly (OPEC)</li>
+<li>Concentration: CR4, HHI measures</li>
+</ul></div>
+</div>
+
+<h2 id="block4">Block-04: Pricing Strategies &amp; Exam Review</h2>
+
+<!-- ==================== UNIT 13 ==================== -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 13: Pricing Strategies (Critical Unit)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Pricing Strategies</div><p>Seven key strategies: <strong>Cost-Plus</strong> (Cost + Markup%), <strong>Target Return</strong> (achieve ROI), <strong>Price Discrimination</strong> (different prices), <strong>Bundling</strong> (package products), <strong>Peak Load</strong> (high demand = high price), <strong>Two-Part Tariff</strong> (fixed + per-unit), <strong>Transfer Pricing</strong> (internal pricing).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Pricing Strategies Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/QwWV0S4lJkE" title="Pricing Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transfer Pricing &amp; Bundling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YH9p2F8fW8M" title="Transfer Pricing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Strategy</th><th>Description</th><th>When to Use</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Cost-Plus</td><td>Cost + Markup %</td><td>Simple, stable costs</td><td>Government contracts, construction</td></tr>
+<tr><td>Target Return</td><td>Price for target ROI</td><td>Capital-intensive industries</td><td>Tata Steel targeting 15% ROE</td></tr>
+<tr><td>Bundling</td><td>Package multiple products</td><td>Complementary goods</td><td>McDonald's McAloo Tikki meal</td></tr>
+<tr><td>Peak Load</td><td>Higher price during high demand</td><td>Capacity-constrained services</td><td>Ola/Uber surge pricing</td></tr>
+<tr><td>Two-Part Tariff</td><td>Fixed fee + per-unit charge</td><td>Amusement parks, telecom</td><td>Jio monthly + data charges</td></tr>
+<tr><td>Transfer Pricing</td><td>Internal pricing between divisions</td><td>Multidivisional firms</td><td>Reliance Refining to Retail</td></tr>
+<tr><td>Price Discrimination</td><td>Different prices, same product</td><td>Segmented markets</td><td>Airlines (business vs leisure)</td></tr>
+</tbody></table></div>
+<div class="visual-diagram">
+<h5>Pricing Strategy Decision Tree</h5>
+<div class="vd-node" style="background:rgba(253,203,110,0.15);margin-bottom:0.5rem;">
+<strong>Start:</strong> What is your objective?
+</div>
+<div class="vd-node" style="background:rgba(78,205,196,0.15);margin-bottom:0.5rem;">
+<strong>Cover costs?</strong> &rarr; Cost-Plus Pricing (AVC + markup%)
+</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.15);margin-bottom:0.5rem;">
+<strong>Maximize revenue?</strong> &rarr; Price Discrimination (segment markets)
+</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);margin-bottom:0.5rem;">
+<strong>Extract surplus?</strong> &rarr; Two-Part Tariff (fixed + usage)
+</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.15);">
+<strong>Manage demand?</strong> &rarr; Peak Load Pricing (time-based)
+</div>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Transfer Pricing Rules</div><p><strong>Competitive market:</strong> Transfer price = Market price (selling division can sell externally at market price).</p><p><strong>No external market:</strong> Transfer price = Marginal cost of producing division (no alternative, so use cost).</p><p><strong>Imperfect market:</strong> Negotiate between MC and market price (compromise between divisions).</p></div>
+<div class="kt"><p><strong>Cost-Plus Pricing Formula:</strong> P = AVC + (Markup% &#xD7; AVC) &#x2022; Or: P = ATC + Target Profit Margin</p><p><strong>Two-Part Pricing:</strong> Total Price = Fixed Fee (access) + Per-Unit Usage Fee &#x2022; Optimal: Set usage fee = MC, extract surplus via fixed fee</p><p><strong>Peak Load Pricing:</strong> Higher prices during peak demand, lower during off-peak to stimulate demand (electricity, airlines, hotels)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Bundling Strategy</div><p><strong>Bundling</strong> is effective when customer demands are <strong>negatively correlated</strong> &#x2014; one values product A highly but not B, while another values B but not A. By bundling, you extract more surplus from both. <strong>Example:</strong> Microsoft Office bundle (Word + Excel + PowerPoint) vs selling individually.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Two-Part Tariff Optimization</div><p><strong>Optimal two-part tariff:</strong> Set usage fee = MC (marginal cost), then extract consumer surplus via fixed fee. <strong>Example:</strong> Amusement parks charge entry fee (fixed) + per-ride fee (usage). Clubs charge membership (fixed) + drink prices (usage). The fixed fee captures surplus that would otherwise go to consumers.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: CBT-PT</div><p>Pricing strategies: <strong>C</strong>ost-plus, <strong>B</strong>undling, <strong>T</strong>wo-part tariff, <strong>P</strong>eak load, <strong>T</strong>ransfer pricing.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Jio uses two-part tariff &#x2014; monthly fixed fee + data charges. Airlines use peak load pricing (Diwali flights cost more). McDonald&#x2019;s uses bundling (McAloo Tikki meal = burger + fries + drink cheaper than buying separately). Reliance uses transfer pricing between Refining and Retail divisions.</p></div>
+<div class="kt"><p><strong>Key Formulas:</strong> Cost-Plus: P = AVC(1 + markup%) &#x2022; Break-even: Q = FC/(P - AVC) &#x2022; Transfer Price: Between MC and market price &#x2022; Two-Part: Set usage fee = MC, extract surplus via fixed fee</p></div>
+<div class="db"><table>
+<thead><tr><th>Formula</th><th>Variables</th><th>Application</th></tr></thead>
+<tbody>
+<tr><td>P = AVC(1 + m%)</td><td>m = markup percentage</td><td>Cost-plus pricing</td></tr>
+<tr><td>Q_BE = FC/(P - AVC)</td><td>FC = fixed cost, P = price, AVC = variable cost</td><td>Break-even analysis</td></tr>
+<tr><td>TP = MC &#xD7; Q</td><td>Transfer price, MC = marginal cost</td><td>Internal pricing</td></tr>
+<tr><td>Total = F + (U &#xD7; Q)</td><td>F = fixed fee, U = usage fee, Q = quantity</td><td>Two-part tariff</td></tr>
+</tbody></table></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Indian Pricing Strategy Examples</h5><p><strong>1. Jio (Two-Part Tariff):</strong> Monthly fixed fee &#x20B9;239 + data charges. Sets usage fee near MC, extracts surplus via fixed fee. <strong>2. Airlines (Peak Load):</strong> Diwali/Dussehra flights cost 2-3x normal. Uber surge pricing during rain. <strong>3. McDonald&#x2019;s (Bundling):</strong> McAloo Tikki meal (&#x20B9;99) = Burger (&#x20B9;49) + Fries (&#x20B9;39) + Drink (&#x20B9;35) = &#x20B9;123 separately. Bundling saves &#x20B9;24. <strong>4. Reliance (Transfer Pricing):</strong> Refining division sells crude oil products to Retail division at transfer price between MC and market price. <strong>5. Government (Cost-Plus):</strong> NHAI contracts use cost-plus pricing for highway construction. <strong>6. Pharma (Price Discrimination):</strong> Same medicine sold at different prices in India vs US (3rd degree).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Seven strategies: Cost-Plus, Target Return, Discrimination, Bundling, Peak Load, Two-Part, Transfer</li>
+<li>Transfer pricing: Competitive market &#x2192; market price; No market &#x2192; MC</li>
+<li>Bundling effective when demands are negatively correlated</li>
+<li>Two-Part Tariff: Set usage fee = MC, extract surplus via fixed fee</li>
+</ul></div>
+</div>
+
+<!-- ==================== MASTER MNEMONICS ==================== -->
+<div class="unit" id="mnemonics">
+<h3 id="mnemonics">Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Covers</th><th>Remember</th></tr></thead>
+<tbody>
+<tr><td><strong>RIP-I</strong></td><td>Problem groups</td><td><strong>R</strong>esource, <strong>I</strong>nventory, <strong>P</strong>ricing, <strong>I</strong>nvestment</td></tr>
+<tr><td><strong>PITY-CANE</strong></td><td>Demand determinants</td><td><strong>P</strong>rice, <strong>I</strong>ncome, <strong>T</strong>astes, other prices, <strong>C</strong>redit, <strong>A</strong>ds, <strong>N</strong>umber, <strong>E</strong>xpectations</td></tr>
+<tr><td><strong>PIC</strong></td><td>Elasticity types</td><td><strong>P</strong>rice, <strong>I</strong>ncome, <strong>C</strong>ross</td></tr>
+<tr><td><strong>ENUP</strong></td><td>Elasticity determinants</td><td><strong>E</strong>xpenditure, <strong>N</strong>ecessity, <strong>U</strong>bstitutes, <strong>P</strong>eriod</td></tr>
+<tr><td><strong>AAMC</strong></td><td>Cost curves</td><td><strong>A</strong>FC&#x2193;, <strong>A</strong>VC U, <strong>A</strong>TC U, <strong>M</strong>C U</td></tr>
+<tr><td><strong>TAM-IRS</strong></td><td>Production</td><td><strong>T</strong>otal, <strong>A</strong>verage, <strong>M</strong>arginal, <strong>I</strong>soquants, <strong>R</strong>eturns, <strong>S</strong>tages</td></tr>
+<tr><td><strong>FAVM-B</strong></td><td>Cost concepts</td><td><strong>F</strong>ixed, <strong>A</strong>verage, <strong>V</strong>ariable, <strong>M</strong>arginal, <strong>B</strong>reak-even</td></tr>
+<tr><td><strong>PEM-LES</strong></td><td>Long run costs</td><td><strong>P</strong>ecuniary, <strong>E</strong>xternal, <strong>M</strong>anagerial, <strong>L</strong>earning, <strong>E</strong>conomies of scope, <strong>S</strong>cale</td></tr>
+<tr><td><strong>PMOM</strong></td><td>Market structures</td><td><strong>P</strong>erfect, <strong>M</strong>onopoly, <strong>O</strong>ligopoly, <strong>M</strong>onopolistic comp.</td></tr>
+<tr><td><strong>PEPE-BL</strong></td><td>Market features</td><td><strong>P</strong>roduct, <strong>E</strong>ntry, <strong>P</strong>rice, <strong>E</strong>lasticity, <strong>B</strong>uyers/Sellers, <strong>L</strong>ong run profit</td></tr>
+<tr><td><strong>MRD-P</strong></td><td>Monopoly</td><td><strong>M</strong>arket power, <strong>R</strong>evenue, <strong>D</strong>eadweight, <strong>P</strong>rice discrimination</td></tr>
+<tr><td><strong>COPS-G</strong></td><td>Oligopoly</td><td><strong>C</strong>ollusion, <strong>O</strong>ligopolistic interdependence, <strong>P</strong>rice rigidity, <strong>S</strong>trategy, <strong>G</strong>ame theory</td></tr>
+<tr><td><strong>CBT-PT</strong></td><td>Pricing strategies</td><td><strong>C</strong>ost-plus, <strong>B</strong>undling, <strong>T</strong>wo-part, <strong>P</strong>eak load, <strong>T</strong>ransfer</td></tr>
+<tr><td><strong>MR=MC</strong></td><td>Profit maximization</td><td>Universal rule across ALL market structures</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- ==================== FORMULA SHEET ==================== -->
+<div class="unit" id="formulas">
+<h3 id="formulas">Key Formulas &amp; Quick Revision</h3>
+<div class="db"><table>
+<thead><tr><th>Category</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>Elasticity</td><td>Ed = (&#x394;Q/&#x394;P) &#xD7; (P/Q) &#x2022; Arc: [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)] &#x2022; Ey = (&#x394;Q/&#x394;Y) &#xD7; (Y/Q) &#x2022; Exy = (&#x394;Qx/&#x394;Py) &#xD7; (Py/Qx)</td></tr>
+<tr><td>Production</td><td>AP = TP/L &#x2022; MP = &#x394;TP/&#x394;L &#x2022; MRTS = MPL/MPK &#x2022; Optimal: MRTS = w/r</td></tr>
+<tr><td>Cost</td><td>TC = FC + VC &#x2022; ATC = TC/Q &#x2022; MC = &#x394;TC/&#x394;Q &#x2022; Break-even: Q = FC/(P-AVC) &#x2022; Profit = (P-ATC) &#xD7; Q</td></tr>
+<tr><td>Revenue</td><td>TR = P &#xD7; Q &#x2022; MR = dTR/dQ &#x2022; For P = a - bQ: MR = a - 2bQ</td></tr>
+<tr><td>Concentration</td><td>CR4 = Sum of top 4 firms&#x2019; shares &#x2022; HHI = &#x2211;(si&#xB2;)</td></tr>
+<tr><td>Pricing</td><td>Cost-Plus: P = AVC(1 + markup%) &#x2022; Transfer: Between MC and market price</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 8 Key Relationships</div><p>1. <strong>MR = MC</strong> &#x2192; Profit max (ALL markets). 2. <strong>P = MC</strong> &#x2192; Allocative efficiency (perfect comp only). 3. <strong>P = min ATC</strong> &#x2192; Productive efficiency. 4. <strong>P > MC</strong> &#x2192; Market power exists. 5. <strong>MC < ATC</strong> &#x2192; ATC falling. 6. <strong>MP > AP</strong> &#x2192; AP rising. 7. <strong>Ed elastic</strong> &#x2192; MR positive. 8. <strong>Free entry</strong> &#x2192; Zero LR profit.</p></div>
+<div class="db"><table>
+<thead><tr><th>Formula</th><th>Application</th><th>Key Insight</th></tr></thead>
+<tbody>
+<tr><td>Ed = (&#x394;Q/&#x394;P) &#xD7; (P/Q)</td><td>Price sensitivity measurement</td><td>|Ed| > 1 = elastic, < 1 = inelastic</td></tr>
+<tr><td>Arc Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)]</td><td>Elasticity between two points</td><td>Use midpoint method for accuracy</td></tr>
+<tr><td>Ey = (&#x394;Q/&#x394;Y) &#xD7; (Y/Q)</td><td>Income sensitivity</td><td>Ey > 0 = normal good, Ey < 0 = inferior</td></tr>
+<tr><td>Exy = (&#x394;Qx/&#x394;Py) &#xD7; (Py/Qx)</td><td>Cross-price relationship</td><td>Exy > 0 = substitutes, Exy < 0 = complements</td></tr>
+<tr><td>Q_BE = FC / (P - AVC)</td><td>Break-even quantity</td><td>Covers fixed costs + zero profit point</td></tr>
+<tr><td>&#x3C0; = (P - ATC) &#xD7; Q</td><td>Profit calculation</td><td>Profit per unit &#xD7; quantity sold</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Numerical Problem Solving</div><p><strong>Break-Even Example:</strong> FC = &#x20B9;10 lakh, AVC = &#x20B9;500/unit, Price = &#x20B9;800/unit. Q_BE = 10,00,000 / (800 - 500) = 3,333 units. <strong>Elasticity Example:</strong> Price rises from &#x20B9;100 to &#x20B9;120, demand falls from 1000 to 800 units. Ed = [(800-1000)/(800+1000)] / [(120-100)/(120+100)] = [-200/1800] / [20/220] = -0.111 / 0.091 = -1.22 (elastic).</p></div>
+</div>
+
+<!-- ==================== EXAM FOCUS ==================== -->
+<div class="unit" id="exam">
+<h3 id="exam">Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; High-Probability Topics</div><p>1. Elasticity calculations (price, income, cross) with numerical problems. 2. Cost calculations (ATC, AVC, MC, break-even). 3. Market structure comparison table. 4. Price discrimination degrees with examples. 5. Production stages and optimal input hiring. 6. Economies of scale types. 7. MR=MC rule across market structures. 8. Perfect competition vs Monopoly welfare analysis.</p></div>
+<div class="db"><table>
+<thead><tr><th>Question Type</th><th>What to Prepare</th></tr></thead>
+<tbody>
+<tr><td>Numerical</td><td>Calculate elasticity, break-even, profit from given data</td></tr>
+<tr><td>Comparison</td><td>Perfect comp vs Monopoly vs Monopolistic vs Oligopoly table</td></tr>
+<tr><td>Diagram-based</td><td>Draw cost curves, production stages, market equilibrium</td></tr>
+<tr><td>Application</td><td>Which pricing strategy for given business scenario?</td></tr>
+<tr><td>Short notes</td><td>Economies of scale, price discrimination, kinked demand curve</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Definition Quick Reference</div><p><strong>Managerial Economics:</strong> Application of micro to business decisions. <strong>Elasticity:</strong> %&#x394;Dependent / %&#x394;Independent. <strong>Production Function:</strong> Max output from inputs. <strong>Economies of Scale:</strong> Cost advantages from volume. <strong>Consumer Surplus:</strong> Willingness to pay - Actual price. <strong>Deadweight Loss:</strong> Lost surplus from inefficiency. <strong>Nash Equilibrium:</strong> Each player&#x2019;s strategy is optimal given others.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Model Answer Structure (10 Marks)</div><p><strong>Step 1:</strong> Define the concept (1-2 sentences). <strong>Step 2:</strong> Explain with diagram/table (3-4 points). <strong>Step 3:</strong> Give Indian example (1-2 sentences). <strong>Step 4:</strong> State exam tip or key relationship. <strong>Step 5:</strong> Conclude with significance. <strong>Time allocation:</strong> 12 minutes for 10-mark question.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Exam Strategy</div><p><strong>Always draw diagrams</strong> for cost curves, production stages, market equilibrium. <strong>Use tables</strong> for comparisons (market structures, pricing strategies). <strong>Include Indian examples</strong> (Jio, Tata, Ola, Indian Railways). <strong>State mnemonics</strong> in answers to show structured thinking. <strong>Practice numerical problems</strong> for elasticity and break-even calculations.</p></div>
+<div class="db"><table>
+<thead><tr><th>Question Pattern</th><th>What Examiners Look For</th><th>Time Allocation</th></tr></thead>
+<tbody>
+<tr><td>Define &amp; Explain (5 marks)</td><td>Definition + 3-4 points + example</td><td>6 minutes</td></tr>
+<tr><td>Compare &amp; Contrast (10 marks)</td><td>Table format + 4-5 differences + examples</td><td>12 minutes</td></tr>
+<tr><td>Numerical Problem (10 marks)</td><td>Formula + step-by-step calculation + interpretation</td><td>12 minutes</td></tr>
+<tr><td>Diagram-based (10 marks)</td><td>Labeled diagram + explanation + Indian example</td><td>12 minutes</td></tr>
+<tr><td>Case Study (15 marks)</td><td>Identify issue + apply theory + recommend + justify</td><td>18 minutes</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Critical Concepts for Exam</div><p><strong>1. Elasticity:</strong> Know all 3 types, arc vs point methods, revenue relationship. <strong>2. Cost Curves:</strong> MC-ATC-AVC relationships, break-even calculation. <strong>3. Market Structures:</strong> Complete comparison table with all features. <strong>4. Production Stages:</strong> MP-AP relationships, optimal stage identification. <strong>5. Pricing Strategies:</strong> When to use which strategy, transfer pricing rules.</p></div>
+</div>
+
+</main>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-10'));</script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to unit sections, visual diagrams, case studies, summary boxes, and callouts
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+
+  // Reading progress & sidebar active state
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('readingProgress').style.width = p + '%';
+    var units = document.querySelectorAll('.unit');
+    var links = document.querySelectorAll('.sidebar-nav a[href^="#u"]');
+    var current = '';
+    units.forEach(function(u) { if (u.getBoundingClientRect().top < 200) current = u.id; });
+    links.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+  });
+})();
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body>
+</html>

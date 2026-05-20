@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 
 /* &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; MMPC-06 ENHANCED STYLES &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; */
@@ -446,7 +445,6 @@ body.subject-mmpc06 .btn-success:hover {
 /* &#x2550;&#x2550;&#x2550; VIDEO SECTIONS &#x2550;&#x2550;&#x2550; */
 .video-section { margin: 2rem 0; }
 .video-section h4 { color: #FF9F1C; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
-.video-section h4::before { content: 'F3AC'; }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
 .video-card { background: rgba(255,159,28,0.08); border: 1px solid rgba(255,159,28,0.2); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
 .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255,159,28,0.2); }
@@ -460,91 +458,13 @@ body.subject-mmpc06 .btn-success:hover {
 .video-section-content { display: none; }
 .video-section-content.active { display: block; }
 
-/* Background particles */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image:
-        radial-gradient(2px 2px at 20% 30%, rgba(78,205,196,0.3), transparent),
-        radial-gradient(2px 2px at 40% 70%, rgba(255,107,107,0.25), transparent),
-        radial-gradient(1px 1px at 60% 20%, rgba(255,230,109,0.3), transparent),
-        radial-gradient(1px 1px at 80% 60%, rgba(78,205,196,0.2), transparent),
-        radial-gradient(2px 2px at 10% 80%, rgba(176,176,176,0.25), transparent),
-        radial-gradient(1px 1px at 90% 40%, rgba(255,107,107,0.2), transparent);
-    background-size: 550px 550px;
-    animation: particleDrift 60s linear infinite;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.7;
-}
-@keyframes particleDrift {
-    0% { background-position: 0 0, 100px 200px, 200px 100px, 300px 300px, 50px 150px, 250px 50px; }
-/* Visual diagram box */
-.visual-diagram {
-    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
-    border: 1px solid rgba(78,205,196,0.2);
-    border-radius: 16px;
-    padding: 24px;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.visual-diagram:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
-}
-.visual-diagram h5 {
-    color: #4ECDC4;
-    margin-bottom: 16px;
-    font-size: 1.1em;
-}
-.vd-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-.vd-step {
-    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(78,205,196,0.1));
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 12px 16px;
-    text-align: center;
-    min-width: 110px;
-    transition: all 0.3s ease;
-}
-.vd-step:hover { background: linear-gradient(135deg, rgba(255,107,107,0.25), rgba(78,205,196,0.18)); }
-/* Case study box */
-.case-study {
-    background: linear-gradient(135deg, rgba(255,230,109,0.06), rgba(176,176,176,0.06));
-    border: 1px solid rgba(255,230,109,0.2);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 16px 0;
-}
-.case-study h5 { color: #FFE66D; margin-bottom: 10px; }
-.case-study p { font-size: 0.92em; line-height: 1.7; }
-/* Section badge */
-.section-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
-    color: #fff;
-    font-size: 0.75em;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-left: 10px;
-    vertical-align: middle;
-    font-weight: 600;
-}
 </style>
     <link rel="stylesheet" href="enhancements.css">
     <link rel="stylesheet" href="revision-mode.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc06">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -557,18 +477,22 @@ body::after {
 <aside class="study-sidebar">
   <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4DC; MMPC-06</span></div>
   <nav class="sidebar-nav">
-    <a href="#unit1">Unit 1: Marketing &#x2014; An Overview</a>
-    <a href="#unit2">Unit 2: Marketing Environment Analysis</a>
-    <a href="#unit3">Unit 3: Market Segmentation, Targeting &amp; Positioning</a>
-    <a href="#unit4">Unit 4: Consumer Behavior</a>
-    <a href="#unit5">Unit 5: Product Decisions</a>
-    <a href="#unit6">Unit 6: Product Development &amp; Branding</a>
-    <a href="#unit7">Unit 7: Pricing Decisions</a>
-    <a href="#unit8">Unit 8: Distribution Decisions</a>
-    <a href="#unit9">Unit 9: Promotion Decisions</a>
-    <a href="#unit10">Unit 10: Retail &amp; Service Marketing</a>
-    <a href="#unit11">Unit 11: B2B &amp; International Marketing</a>
-    <a href="#unit12">Unit 12: Digital Marketing &amp; Emerging Issues</a>
+    <a href="#block1">Block-01 Marketing Fundamentals</a>
+    <a href="#u1">Unit 1: Marketing &#x2014; An Overview</a>
+    <a href="#u2">Unit 2: Marketing Environment Analysis</a>
+    <a href="#u3">Unit 3: Market Segmentation, Targeting &amp; Positioning</a>
+    <a href="#u4">Unit 4: Consumer Behavior</a>
+    <a href="#block2">Block-02 Product &amp; Pricing</a>
+    <a href="#u5">Unit 5: Product Decisions</a>
+    <a href="#u6">Unit 6: Product Development &amp; Branding</a>
+    <a href="#u7">Unit 7: Pricing Decisions</a>
+    <a href="#block3">Block-03 Distribution &amp; Promotion</a>
+    <a href="#u8">Unit 8: Distribution Decisions</a>
+    <a href="#u9">Unit 9: Promotion Decisions</a>
+    <a href="#block4">Block-04 Advanced Marketing</a>
+    <a href="#u10">Unit 10: Retail &amp; Service Marketing</a>
+    <a href="#u11">Unit 11: B2B &amp; International Marketing</a>
+    <a href="#u12">Unit 12: Digital Marketing &amp; Emerging Issues</a>
     <a href="quiz-mmpc06.html" class="back-link">&#x1F4DD; Take Quiz</a>
     <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
   </nav>
@@ -577,11 +501,12 @@ body::after {
 <main id="main-content" class="study-content">
 <div class="study-header"><span class="subject-tag">MMPC-06</span><h1>Marketing Management</h1><p>Comprehensive Study Notes &#x2014; Diagrams &bull; Indian Examples &bull; Mnemonics &bull; Comparison Tables</p></div>
 
-<!-- ============================================================ -->
-<!-- UNIT 1: MARKETING &#x2014; AN OVERVIEW -->
-<!-- ============================================================ -->
-<div class="unit" id="unit-1">
-<h2 id="unit1">Unit 1: Marketing &#x2014; An Overview</h2>
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Marketing Fundamentals</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Marketing &#x2014; An Overview</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
 
@@ -669,8 +594,15 @@ body::after {
 
 <div class="kt"><p><strong>Key Takeaway:</strong> Modern marketing is not just selling &#x2014; it is understanding customer needs deeply and creating superior value. Indian companies like Amul, HUL, and Tata demonstrate that combining the 4Ps with the 4As framework creates sustainable competitive advantage in emerging markets.</p></div>
 <div class="br"><span class="sb s-b">Marketing Mix</span><span class="sb s-g">4As Framework</span><span class="sb s-y">5 Concepts</span><span class="sb s-pc">Indian Examples</span></div>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Marketing is the process of creating, communicating, and delivering value to satisfy customer needs and organizational objectives (AMA &amp; Kotler definitions)</li>
+<li>The 4Ps Marketing Mix (Product, Price, Place, Promotion) is the foundational framework; the 4As (Attraction, Affordability, Accessibility, Awareness) is more relevant for emerging markets like India</li>
+<li>Five marketing orientations evolved chronologically: Production, Product, Selling, Marketing, and Societal concepts, shifting from "make what we can" to "understand what customers need"</li>
+<li>Needs vs Wants vs Demands is critical: needs are felt deprivation, wants are shaped by culture/personality, demands are wants backed by purchasing power</li>
+<li>Indian companies like Amul, HUL, and Tata demonstrate that combining 4Ps with 4As creates sustainable competitive advantage in emerging markets</li>
+</ul></div>
 
-<div class="extra-card animate-on-scroll">
+<div class="video-section">
 <h5>Case Study: Patanjali's Marketing Disruption</h5>
 <p>Patanjali disrupted Indian FMCG by combining <strong>Product</strong> (Ayurvedic/herbal positioning), <strong>Price</strong> (10-30% cheaper than HUL), <strong>Place</strong> (5,000+ Swadeshi Kendras + general trade), and <strong>Promotion</strong> (Baba Ramdev's personal brand + nationalism narrative). Within 5 years, it reached &#x20B9;30,000 crore revenue &#x2014; proving that a fundamentally different approach to the 4Ps can disrupt even entrenched multinationals.</p>
 </div>
@@ -715,12 +647,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 2: MARKETING ENVIRONMENT ANALYSIS -->
-<!-- ============================================================ -->
+<!-- UNIT 2 -->
 
-<div class="unit" id="unit-2">
-<h2 id="unit2">Unit 2: Marketing Environment Analysis</h2>
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Marketing Environment Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
 
@@ -813,6 +743,13 @@ body::after {
 <p><strong>S-W</strong> = Internal (what we control) | <strong>O-T</strong> = External (what happens to us)</p>
 <p>"<strong>S</strong>trengths and <strong>W</strong>eaknesses are <strong>W</strong>ithin us; <strong>O</strong>pportunities and <strong>T</strong>hreats are <strong>O</strong>utside."</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>The marketing environment comprises micro forces (company, intermediaries, competitors, customers) and macro forces analyzed through PESTEL (Political, Economic, Social, Technological, Environmental, Legal)</li>
+<li>PESTEL analysis is the backbone of strategic marketing planning; Indian firms like ITC, HUL, and Tata consistently outperform by scanning both micro and macro environments systematically</li>
+<li>Environmental scanning tools include competitive intelligence, market research, trend analysis, and SWOT Analysis (Strengths, Weaknesses = internal; Opportunities, Threats = external)</li>
+<li>Jio's 2016 launch is a masterclass in reading all six PESTEL factors correctly, gaining 100M subscribers in 170 days by aligning with Digital India push, rising smartphone penetration, and young population demand</li>
+<li>Interconnection between PESTEL factors matters: Political (Make in India) + Economic (rising middle class) + Technological (UPI) together created conditions for digital payment marketing</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -839,12 +776,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 3: MARKET SEGMENTATION, TARGETING & POSITIONING -->
-<!-- ============================================================ -->
+<!-- UNIT 3 -->
 </div>
-<div class="unit" id="unit-3">
-<h2 id="unit3">Unit 3: Market Segmentation, Targeting &amp; Positioning</h2>
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Market Segmentation, Targeting &amp; Positioning</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
 
@@ -934,6 +869,13 @@ body::after {
 
 <div class="kt"><p><strong>Key Takeaway:</strong> STP is the foundation of all marketing strategy. Successful Indian companies like NestlÃ©, HUL, and Maruti segment precisely, target selectively, and position distinctly. The position must be clear, competitive, and communicable.</p></div>
 <div class="br"><span class="sb s-b">Segmentation</span><span class="sb s-g">Targeting</span><span class="sb s-y">Positioning</span><span class="sb s-pc">MASA Criteria</span></div>
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>The STP framework is the foundation of all marketing strategy: Segment (divide market into distinct groups) then Target (select most attractive segments) then Position (create clear place in customers' minds)</li>
+<li>Four bases of segmentation: Geographic (region, urban/rural), Demographic (age, income, gender), Psychographic (lifestyle, values, personality), and Behavioral (usage rate, brand loyalty, benefits sought)</li>
+<li>Effective segmentation must meet MASA criteria: Measurable (quantifiable), Accessible (reachable), Substantial (profitable enough), and Actionable (programs can be designed)</li>
+<li>Four targeting strategies: Undifferentiated (one offer for all), Differentiated (different offers per segment), Concentrated (single niche segment), and Micromarketing (individual/local customization)</li>
+<li>Positioning statement format: "For [target customer] who [needs/wants], [brand] is the [category] that [key benefit] because [reason to believe]" with methods including attribute, benefit, use, user, competitor, and value-based positioning</li>
+</ul></div>
 
 <div class="extra-card animate-on-scroll">
 <h5>Case Study: Maruti Suzuki's STP in India</h5>
@@ -974,12 +916,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 4: CONSUMER BEHAVIOR -->
-<!-- ============================================================ -->
+<!-- UNIT 4 -->
 </div>
-<div class="unit" id="unit-4">
-<h2 id="unit4">Unit 4: Consumer Behavior</h2>
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Consumer Behavior</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
 
@@ -1082,6 +1022,13 @@ body::after {
 </div>
 
 <div class="kt"><p><strong>Key Takeaway:</strong> Consumer behavior is influenced by cultural, social, personal, and psychological factors. Indian marketers must understand the joint family system, regional diversity, and value-consciousness that make Indian consumers unique.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>The consumer decision-making process has 5 stages: Need Recognition, Information Search, Evaluation of Alternatives, Purchase Decision, and Post-Purchase Behavior (satisfaction or dissonance)</li>
+<li>Four categories of influence on consumer behavior (C-S-P-P): Cultural (culture, subculture, social class), Social (reference groups, family, roles), Personal (age, occupation, lifestyle), and Psychological (motivation, perception, learning, beliefs)</li>
+<li>Three levels of consumer decision-making: Extensive Problem Solving (high involvement, compare all options), Limited Problem Solving (moderate comparison), and Habitual Decision Making (automatic brand loyalty)</li>
+<li>Indian consumers are unique due to the joint family system, regional diversity, and value-consciousness; Flipkart succeeded by understanding high perceived risk and introducing Cash on Delivery (60% of early orders)</li>
+<li>Four consumer behavior models: Economic (rational, utility-maximizing), Learning (reinforcement-driven), Psychoanalytic (unconscious motivations), and Sociological (social influences and group membership)</li>
+</ul></div>
 
 <div class="extra-card animate-on-scroll">
 <h5>Case Study: Flipkart's Understanding of Indian Consumer Behavior</h5>
@@ -1122,12 +1069,13 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 5: PRODUCT DECISIONS -->
-<!-- ============================================================ -->
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Product &amp; Pricing</h2>
+
+<!-- UNIT 5 -->
 </div>
-<div class="unit" id="unit-5">
-<h2 id="unit5">Unit 5: Product Decisions</h2>
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Product Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
 
@@ -1221,6 +1169,13 @@ body::after {
 </div>
 
 <div class="kt"><p><strong>Key Takeaway:</strong> Product decisions span from core benefit identification to managing entire product portfolios. Understanding PLC helps marketers adapt strategy &#x2014; India's electric vehicle market is currently transitioning from Introduction to Growth, requiring different approaches than mature markets like smartphones.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Five levels of product: Core Benefit (what the buyer really buys), Generic Product (basic version), Expected Product (buyer expectations), Augmented Product (beyond expectations), and Potential Product (future enhancements)</li>
+<li>The Product Life Cycle (PLC) has 4 stages (I-G-M-D): Introduction (low sales, heavy promotion), Growth (rapid rise, maximize share), Maturity (peak, differentiate), and Decline (harvest or divest)</li>
+<li>Product mix decisions involve four dimensions: Width (number of product lines), Length (total items), Depth (variations per product), and Consistency (how related the lines are)</li>
+<li>Strategic implications change at each PLC stage: Introduction needs skimming/penetration pricing, Growth requires quality improvement, Maturity demands differentiation, and Decline calls for harvest/divest/rejuvenate</li>
+<li>Indian examples demonstrate product mix mastery: Dabur spans Healthcare, Personal Care, and Foods; Tata Motors has Width across passenger, commercial, and EV categories with depth in variants</li>
+</ul></div>
 
 <div class="extra-card animate-on-scroll">
 <h5>Case Study: Tata Motors &#x2014; Product Mix Mastery</h5>
@@ -1261,12 +1216,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 6: PRODUCT DEVELOPMENT & BRANDING -->
-<!-- ============================================================ -->
+<!-- UNIT 6 -->
 </div>
-<div class="unit" id="unit-6">
-<h2 id="unit6">Unit 6: Product Development &amp; Branding</h2>
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Product Development &amp; Branding</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
 
@@ -1359,7 +1312,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>For branding questions, structure your answer around: (1) <strong>Brand Elements</strong> (name, logo, tagline, packaging), (2) <strong>Brand Equity</strong> (Keller's 6 levels), (3) <strong>Brand Portfolio Strategy</strong> (branded house vs house of brands). Use Indian examples throughout. The NPD process mnemonic <strong>I-I-C-B-P-T-C</strong> is frequently asked.</p>
 </div>
-
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>The New Product Development (NPD) process has 7 steps (I-I-C-B-P-T-C): Idea Generation, Idea Screening, Concept Development, Business Analysis, Product Development, Test Marketing, and Commercialization</li>
+<li>Keller's Brand Equity Pyramid has 6 levels building upward: Brand Salience (recall), Brand Performance (how it works), Brand Imagery (what it means), Brand Judgments (what I think), Brand Feelings (what I feel), and Brand Resonance (deep loyalty)</li>
+<li>Four brand portfolio strategies: Branded House (Tata for all), House of Brands (HUL with separate Surf, Dove, Lux), Endorsed Brands (ITC endorsing Aashirvaad, Bingo), and Freestanding (P&G's Whisper with no parent link)</li>
+<li>Brand elements include brand name (memorable, meaningful, protectable), logo (visual identity), tagline, packaging (colors, shape), and jingles; each contributes to distinctiveness and recall</li>
+<li>Amul has 99% brand recall in India with $3.5B brand value; Tanishq overcame local goldsmith preference by building trust through BIS hallmarked gold and premium positioning to become India's largest jewellery brand</li>
+</ul></div>
 
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -1385,12 +1344,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 7: PRICING DECISIONS -->
-<!-- ============================================================ -->
+<!-- UNIT 7 -->
 </div>
-<div class="unit" id="unit-7">
-<h2 id="unit7">Unit 7: Pricing Decisions</h2>
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Pricing Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
 
@@ -1468,6 +1425,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>Pricing questions often ask to "compare strategies." Use the <strong>S-P-P-P</strong> mnemonic and provide ONE Indian example for each strategy. Always mention <strong>factors affecting pricing</strong>: costs, demand, competition, government regulation, brand positioning. The Jio example is mandatory for any penetration pricing answer.</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Price is the only marketing mix element that generates revenue; all others are costs. Pricing objectives include profit-oriented, volume-oriented, status quo, and prestige pricing</li>
+<li>Four pricing approaches: Cost-Based (markup on cost), Demand-Based (perceived value), Competition-Based (match competitors), and Value-Based (worth to customer)</li>
+<li>Four primary pricing strategies (S-P-P-P): Skimming (high initial, gradual reduction), Penetration (low initial for market share), Psychological (Rs.999 instead of Rs.1,000), and Promotional (temporary discounts)</li>
+<li>Additional strategies include Dynamic Pricing (Ola/Uber surge), Freemium (Spotify, LinkedIn), Bundle Pricing (McDonald's Happy Meal), Geographic Pricing, and Loss Leader (Amazon Kindle at cost)</li>
+<li>Jio's penetration pricing is the most dramatic example globally: free voice/data gained 100M subscribers in 170 days; D-Mart's Everyday Low Pricing (EDLP) proves consistent low pricing beats promotional pricing for Indian consumers</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -1494,12 +1458,13 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 8: DISTRIBUTION DECISIONS -->
-<!-- ============================================================ -->
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Distribution &amp; Promotion</h2>
+
+<!-- UNIT 8 -->
 </div>
-<div class="unit" id="unit-8">
-<h2 id="unit8">Unit 8: Distribution Decisions</h2>
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Distribution Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
 
@@ -1563,6 +1528,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>Distribution questions should cover: (1) <strong>Channel strategy</strong> (intensive/selective/exclusive), (2) <strong>Channel length</strong> (zero to three-level), (3) <strong>Logistics</strong> (warehousing, transport, inventory). Always mention India-specific challenges: vast geography, rural penetration, kirana store dominance (85% of FMCG sales).</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>Distribution channels bridge the gap between producers and consumers; channel members include agents/brokers, wholesalers, retailers, and franchisees</li>
+<li>Three distribution strategies: Intensive (maximum outlets, e.g., Coca-Cola 25 lakh+ outlets), Selective (selected outlets, e.g., Samsung authorized dealers), and Exclusive (limited outlets, e.g., Apple Premium Resellers)</li>
+<li>Channel length ranges from zero-level (direct, e.g., Amul parlours, D2C brands) to three-level (producer to agent to wholesaler to retailer to consumer); India's traditional FMCG trade uses two-level channels</li>
+<li>Logistics decisions cover warehousing (Amazon 60+ fulfillment centers), transportation (India's road freight carries 65% of goods), and inventory management (Maruti pioneered JIT with local suppliers)</li>
+<li>HUL's Project Shakti reaches 600,000+ villages through 136,000+ Shakti Ammas; Asian Paints has 70,000+ dealers with 99%+ order fulfillment using AI-driven demand forecasting</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -1589,12 +1561,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 9: PROMOTION DECISIONS -->
-<!-- ============================================================ -->
+<!-- UNIT 9 -->
 </div>
-<div class="unit" id="unit-9">
-<h2 id="unit9">Unit 9: Promotion Decisions</h2>
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Promotion Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
 
@@ -1676,6 +1646,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>Promotion questions often ask about <strong>Push vs Pull</strong> strategy. Push = trade promotions + personal selling (push through channel). Pull = advertising + consumer demand (pull through channel). Use <strong>A-P-S-P-D</strong> mnemonic for promotion mix elements. Always mention <strong>IMC</strong> (Integrated Marketing Communications) &#x2014; combining all tools for consistent messaging.</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>The promotion mix (A-P-S-P-D) comprises Advertising (paid mass communication), Personal Selling (face-to-face), Sales Promotion (short-term incentives), Public Relations (stakeholder relations), and Direct Marketing (targeted communication)</li>
+<li>Push strategy pushes products through channels using trade promotions and personal selling; Pull strategy creates consumer demand through advertising so consumers ask retailers for the product</li>
+<li>Advertising media comparison: Television (very high reach, high cost), Digital/Social (high and targeted), Print (regional), Radio (local), Outdoor/OOH (location-based), Direct Mail (targeted B2B)</li>
+<li>Integrated Marketing Communications (IMC) combines all promotion tools for consistent messaging; digital marketing is now the fastest-growing promotion channel in India</li>
+<li>boAt built a Rs.10,000+ crore brand with zero TV advertising using influencer marketing, content marketing, social media, and event sponsorship; Fevicol has 70%+ market share through 60+ years of consistent "Fevicol ka jod" messaging</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -1702,12 +1679,13 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 10: RETAIL & SERVICE MARKETING -->
-<!-- ============================================================ -->
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Advanced Marketing</h2>
+
+<!-- UNIT 10 -->
 </div>
-<div class="unit" id="unit-10">
-<h2 id="unit10">Unit 10: Retail &amp; Service Marketing</h2>
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Retail &amp; Service Marketing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
 
@@ -1770,6 +1748,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>Service marketing questions MUST cover <strong>IIVP</strong> (4 characteristics) with examples. Use <strong>RATER</strong> for service quality questions. Compare retail formats table is frequently asked &#x2014; memorize at least 5 formats with Indian examples. For B2B vs B2C, focus on the <strong>differences table</strong> &#x2014; it's a guaranteed 5-mark question.</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Retail formats include Department Stores (Shoppers Stop), Supermarkets (Big Bazaar, D-Mart), Specialty Stores (Tanishq, Croma), Convenience Stores (kiranas), Hypermarkets (Reliance Smart), Warehouse Clubs (Metro Cash & Carry), and E-Commerce (Flipkart, Amazon)</li>
+<li>Service characteristics (IIVP): Intangibility (cannot be seen before purchase), Inseparability (produced and consumed simultaneously), Variability (quality varies by provider), and Perishability (cannot be stored)</li>
+<li>SERVQUAL dimensions (RATER): Reliability (accurate, dependable), Assurance (knowledge, courtesy), Tangibles (physical facilities), Empathy (personalized attention), and Responsiveness (prompt service)</li>
+<li>Zomato solved all four IIVP challenges: reviews for intangibility, real-time tracking for inseparability, restaurant ratings for variability, and off-peak discounts for perishability</li>
+<li>India's services sector contributes 55%+ of GDP; Ola and Practo demonstrate innovative solutions to service marketing challenges through technology and customer experience design</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -1796,12 +1781,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 11: B2B & INTERNATIONAL MARKETING -->
-<!-- ============================================================ -->
+<!-- UNIT 11 -->
 </div>
-<div class="unit" id="unit-11">
-<h2 id="unit11">Unit 11: B2B &amp; International Marketing</h2>
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: B2B &amp; International Marketing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
 
@@ -1867,6 +1850,13 @@ body::after {
 <div class="callout callout-tip animate-on-scroll"><div class="callout-label">Exam Tip</div>
 <p>B2B vs B2C comparison table is a guaranteed question. Memorize the <strong>6 differences</strong>: Buyers, Decision Process, Sales Cycle, Relationship, Marketing, Example. For international marketing, know the <strong>4 strategies</strong> (Global/Multi-domestic/International/Transnational) and <strong>5 entry methods</strong> (Export &#x2192; License &#x2192; Franchise &#x2192; JV &#x2192; Subsidiary).</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>B2B vs B2C differences: B2B has few large-volume buyers, rational multi-stakeholder decisions, long sales cycles, long-term partnerships, and relies on personal selling/trade shows; B2C has many small-volume buyers, emotional individual decisions, short cycles, and uses mass advertising</li>
+<li>Three B2B buying situations: Straight Rebuy (routine reorder), Modified Rebuy (changing specifications), and New Task (first-time purchase requiring extensive evaluation)</li>
+<li>Four international marketing strategies: Global (standardized worldwide), Multi-Domestic (adapted to each country), International (export existing products), and Transnational (global efficiency + local responsiveness)</li>
+<li>Five market entry methods in order of increasing investment/risk: Exporting, Licensing, Franchising, Joint Venture, and Subsidiary (full control, highest risk)</li>
+<li>Infosys grew from exporting to subsidiaries in 56 countries by hiring local talent and positioning as premium (not cheap outsourcing); Tata Group uses different entry modes for different businesses (JLR acquisition for Tata Motors, organic subsidiaries for TCS)</li>
+</ul></div>
 
 
 <div class="video-section">
@@ -1893,12 +1883,10 @@ body::after {
 </div>
 
 
-<!-- ============================================================ -->
-<!-- UNIT 12: DIGITAL MARKETING & EMERGING ISSUES -->
-<!-- ============================================================ -->
+<!-- UNIT 12 -->
 </div>
-<div class="unit" id="unit-12">
-<h2 id="unit12">Unit 12: Digital Marketing &amp; Emerging Issues</h2>
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Digital Marketing &amp; Emerging Issues</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
 
@@ -1982,6 +1970,13 @@ body::after {
 <div class="callout callout-mnemonic animate-on-scroll"><div class="callout-label">Master Mnemonic: All 12 Units</div>
 <p><strong>U1:</strong> 4Ps + 4As | <strong>U2:</strong> PESTEL + SWOT | <strong>U3:</strong> STP + MASA | <strong>U4:</strong> C-S-P-P | <strong>U5:</strong> PLC (I-G-M-D) | <strong>U6:</strong> NPD (I-I-C-B-P-T-C) | <strong>U7:</strong> S-P-P-P | <strong>U8:</strong> Channel Strategies | <strong>U9:</strong> A-P-S-P-D | <strong>U10:</strong> IIVP + RATER | <strong>U11:</strong> B2B vs B2C | <strong>U12:</strong> S-S-E-C-S</p>
 </div>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Digital marketing channels (S-S-E-C-S): Search Engine Marketing (SEO + PPC), Social Media Marketing (Facebook, Instagram, LinkedIn), Email Marketing (personalized campaigns), Content Marketing (blogs, videos, podcasts), and Mobile/Smartphone Marketing</li>
+<li>Emerging technologies transforming marketing: AI (chatbots, personalization), Big Data Analytics (customer insights, demand forecasting), IoT (connected products), Augmented Reality (virtual try-on), and Blockchain (supply chain transparency, loyalty programs)</li>
+<li>Omnichannel marketing delivers seamless experience across all touchpoints: Click &amp; Collect (online order, in-store pickup), Showrooming (check in-store, buy online), and Webrooming (research online, buy in-store; 78% of Indian consumers do this)</li>
+<li>Sustainable marketing includes Green Marketing (eco-friendly products), Cause Marketing (Tata Tea's Jaago Re), Ethical Marketing (honest claims), and CSR (ITC's e-Choupal, Tata's initiatives)</li>
+<li>India has 800M+ internet users and Rs.50,000+ crore digital ad market; Nykaa built Rs.1 lakh crore+ IPO through digital-first marketing; CRED and Zepto prove unconventional digital strategies can build billion-dollar brands without traditional advertising</li>
+</ul></div>
 
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
@@ -2015,26 +2010,38 @@ body::after {
 </div>
 
 </div>
-</div>
 </main>
-
-</script>
+</div>
+<!-- /study-content -->
 <script src="pomodoro.js"></script>
 <script src="bookmark-notes.js"></script>
 <script src="flashcards.js"></script>
 <script>
-// Scroll-triggered animations via IntersectionObserver
+// Scroll-triggered animations
 (function() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
     observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
   });
 })();
 </script>

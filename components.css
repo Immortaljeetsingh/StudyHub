@@ -77,7 +77,7 @@
     backdrop-filter: blur(12px);
     transition: var(--transition, all 0.35s cubic-bezier(0.4,0,0.1,1));
 }
-.vd-node:hover { transform: scale(1.05); }
+.vd-node:hover { transform: translateY(-2px); position: relative; z-index: 1; }
 .vd-flow {
     display: flex;
     align-items: center;
@@ -260,7 +260,7 @@
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     transition: var(--transition, all 0.35s cubic-bezier(0.4,0,0.1,1));
 }
-.pyr-row:hover { transform: scale(1.03); }
+.pyr-row:hover { transform: translateY(-2px); }
 .pyr-label {
     display: block;
     font-size: 0.75rem;
@@ -482,6 +482,9 @@
 .extra-card h5 { font-size: 0.95rem; font-weight: 700; color: var(--text-primary, #f0f0f0); margin-bottom: 0.75rem; }
 .extra-card p { font-size: 0.85rem; color: var(--text-secondary, rgba(255,255,255,0.6)); line-height: 1.6; }
 
+.cc { transition: all 0.35s cubic-bezier(0.4,0,0.1,1); }
+.cc:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+
 /* ============================================================
    FORMULA / QR TABLE / DIAGRAM TITLE / VIDEO PLACEHOLDER
    ============================================================ */
@@ -563,11 +566,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.4rem 0.9rem;
+    padding: 0.65rem 1rem;
     border: none;
     border-radius: var(--radius-pill, 60px);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
+    min-height: 44px;
     cursor: pointer;
     transition: var(--spring, all 0.5s cubic-bezier(0.34,1.56,0.64,1));
 }
@@ -630,6 +634,6 @@
     .cdp-flow, .stp-flow, .process-flow, .flow-visual { gap: 0.25rem; padding: 1rem 0.5rem; }
     .cdp-step, .stp-step, .process-step { min-width: 80px; padding: 0.6rem 0.5rem; }
     .quad-grid { grid-template-columns: 1fr; }
-    .pyr-row { max-width: 100% !important; }
+    .pyr-row { max-width: 100% !important; width: 100% !important; }
     .timeline { padding-left: 1.5rem; }
 }

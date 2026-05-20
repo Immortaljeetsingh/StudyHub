@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-17: Advanced Strategic Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(253,203,110,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}.sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(253,203,110,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#fdcb6e;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#fdcb6e,#fdcb6ecc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#fdcb6e,#fdcb6ecc,#00d4ff,#fdcb6e);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(253,203,110,.08);border-color:#fdcb6e}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-tip{background:rgba(0,210,255,.08);border-color:#00d4ff}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#fdcb6e;font-size:1rem;margin-bottom:.75rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#fdcb6e}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#fdcb6e;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#fdcb6e,#fdcb6ecc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(253,203,110,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#fdcb6e;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.video-section-content{display:none}.video-section-content.active{display:block}.comparison-table{width:100%;border-collapse:collapse;margin:1rem 0}.comparison-table th,.comparison-table td{padding:.5rem .75rem;border:1px solid rgba(255,255,255,.08);font-size:.85rem}.comparison-table th{background:rgba(253,203,110,.08);color:#fdcb6e;font-weight:600}.comparison-table td{color:rgba(255,255,255,.7)}.framework-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;font-family:monospace;font-size:.85rem;color:rgba(255,255,255,.7);white-space:pre;overflow-x:auto}.action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}.btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}.btn-primary{background:rgba(253,203,110,.2);color:#fdcb6e;border:1px solid rgba(253,203,110,.3)}.btn-primary:hover{background:rgba(253,203,110,.3)}.btn-success{background:rgba(253,203,110,.2);color:#55efc4;border:1px solid rgba(253,203,110,.3)}.btn-success:hover{background:rgba(253,203,110,.3)}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc17">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-17'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-17</span></div>
+<nav class="sidebar-nav">
+  <a href="#block1">Block-01 Corporate Level Strategy</a>
+  <a href="#u1">Unit 1: Corporate Management</a>
+  <a href="#u2">Unit 2: Corporate Policy</a>
+  <a href="#u3">Unit 3: Intensive Growth</a>
+  <a href="#u4">Unit 4: Integration &amp; Diversification</a>
+  <a href="#block2">Block-02 International Strategy</a>
+  <a href="#u5">Unit 5: Strategic Alliances</a>
+  <a href="#u6">Unit 6: Internationalization</a>
+  <a href="#u7">Unit 7: Market Risk</a>
+  <a href="#u8">Unit 8: Entry Modes</a>
+  <a href="#block3">Block-03 Strategic Enablers</a>
+  <a href="#u9">Unit 9: IT &amp; Strategy</a>
+  <a href="#u10">Unit 10: Technology &amp; R&amp;D</a>
+  <a href="#u11">Unit 11: Knowledge Management</a>
+  <a href="#u12">Unit 12: Innovation</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#frameworks">Key Frameworks</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#exam">Exam Focus</a>
+  <a href="quiz-mmpc17.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPC-17</span><h1>Advanced Strategic Management</h1>
+<p>4 Blocks &#x2022; 12 Units &#x2022; Corporate Growth, International Strategy &amp; Strategic Enablers &#x2022; IGNOU MBA</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Corporate Level Strategy</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Corporate Management &#x2014; An Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Corporate Management has three dimensions: Planning + Implementation + Evaluation &amp; Control</li>
+<li>It evolved through 5 paradigm shifts from Adhocism to integrated Corporate Management</li>
+<li>Corporate Planning (Drucker): "A continuous process of making entrepreneurial decisions systematically with the best possible knowledge of their futurity"</li>
+<li>Corporate Planning (Hussey): "Not a technique, it is a complete way of running a business"</li>
+</ul>
+<blockquote><strong>Corporate Planning:</strong> Continuous process of making entrepreneurial decisions systematically with the best possible knowledge of their futurity (Drucker)</blockquote>
+<blockquote><strong>Corporate Management:</strong> Encompasses corporate planning + implementation + evaluation &amp; control of plans</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; 5 Paradigm Shifts (A-P-E-C-C)</div>
+<ul>
+<li><strong>Adhocism</strong> (till 1930) &#x2014; reactive, exigency-driven decisions</li>
+<li><strong>Planned Policy</strong> &#x2014; post Great Depression, anticipating contingencies</li>
+<li><strong>Environment-Strategy Interface</strong> &#x2014; strategy copes with environmental forces</li>
+<li><strong>Corporate Planning</strong> &#x2014; environmental appraisal to strategic alternatives</li>
+<li><strong>Corporate Management</strong> &#x2014; includes implementation &amp; control</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Corporate Planning Process Steps</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">1. Formulation of Strategic Intent</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">2. Environmental Appraisal</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">3. Generation of Strategic Alternatives</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">4. Evaluation of Alternatives</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">5. Decisions (Strategy, Policies, Programmes)</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Implementation Aspects</div>
+<ul>
+<li><strong>Project</strong> &#x2014; specific initiatives with timelines</li>
+<li><strong>Procedural</strong> &#x2014; standard operating procedures</li>
+<li><strong>Resource Allocation</strong> &#x2014; budgeting methods: Strategic, Zero-Base, PLC-Based, BCG</li>
+<li><strong>Structural</strong> &#x2014; organizational design</li>
+<li><strong>Behavioral</strong> &#x2014; leadership, culture, motivation</li>
+<li><strong>Functional</strong> &#x2014; marketing, finance, operations integration</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Corporate Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Strategic Mgmt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Reliance Industries</strong> under Mukesh Ambani transformed from adhoc decision-making to systematic corporate management &#x2014; planning Jio's entry into telecom years in advance, implementing through massive infrastructure investment, and evaluating performance through subscriber growth metrics.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A-P-E-C-C</strong> = Adhocism &#x2192; Planned Policy &#x2192; Environment-Strategy &#x2192; Corporate Planning &#x2192; Corporate Management</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Know the 5 paradigm shifts chronologically and be able to compare Drucker vs Hussey definitions.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Corporate Management = Planning + Implementation + Evaluation &amp; Control</li>
+<li>5 paradigm shifts from Adhocism to integrated Corporate Management</li>
+<li>Corporate Planning process: 5 steps from intent to decisions</li>
+<li>Implementation aspects: Project, Procedural, Resource, Structural, Behavioral, Functional</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Corporate Policy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Corporate policy = guidelines for decision-making at corporate level</li>
+<li>Types of policies: Growth, Stability, Retrenchment, Combination</li>
+<li>Policy formulation involves: mission, objectives, environmental analysis, strategy selection</li>
+<li>Corporate governance: board responsibilities, transparency, accountability</li>
+</ul>
+<blockquote><strong>Corporate Policy:</strong> A broad guideline for decision-making that helps managers make consistent choices aligned with organizational objectives</blockquote>
+<blockquote><strong>Growth Policy:</strong> Expanding operations through new products, markets, or acquisitions (e.g., Amazon expanding from books to everything)</blockquote>
+<blockquote><strong>Retrenchment Policy:</strong> Downsizing or divesting to cut losses (e.g., Tata Steel selling UK operations)</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; 4 Policy Types (G-S-R-C)</div>
+<ul>
+<li><strong>Growth</strong> &#x2014; expanding through new products/markets/acquisitions</li>
+<li><strong>Stability</strong> &#x2014; maintaining current operations without major changes</li>
+<li><strong>Retrenchment</strong> &#x2014; downsizing or divesting to cut losses</li>
+<li><strong>Combination</strong> &#x2014; mix of growth, stability, and retrenchment simultaneously</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Policy Formulation Process</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">1. Define Mission &amp; Objectives</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">2. Environmental Appraisal (SWOT/PESTLE)</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">3. Generate Strategic Alternatives</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">4. Evaluate (Risk-Return Tradeoff)</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">5. Select &amp; Communicate Policy</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Corporate Governance Dimensions</div>
+<ul>
+<li>Board composition (independent directors)</li>
+<li>Transparency in reporting</li>
+<li>Accountability to stakeholders</li>
+<li>Ethical conduct and compliance</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Corporate Policy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/gD6MOm0hUuc" title="Corporate Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Growth Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Growth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Tata Group's</strong> corporate policy emphasizes "nation-building" &#x2014; policies guide decisions like entering telecom (Tata Docomo), exiting steel UK operations, and investing in technology (Tata Elxsi). Each decision aligns with their overarching growth + stability policy framework.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>G-S-R-C</strong> = Growth, Stability, Retrenchment, Combination &#x2014; the 4 corporate policy types</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Understand the relationship between corporate policy and corporate strategy. Policy provides the framework; strategy provides the action plan. Know the 4 policy types with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Corporate policy = guidelines for decision-making at corporate level</li>
+<li>4 types: Growth, Stability, Retrenchment, Combination</li>
+<li>Corporate governance: board composition, transparency, accountability, ethical conduct</li>
+<li>Policy provides framework; Strategy provides action plan</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Intensive Growth Strategies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>3 levels of strategy: Corporate ("What business?"), Competitive ("How to compete?"), Functional ("Department contribution?")</li>
+<li>4 Generic Corporate Strategies: Stability, Growth, Retrenchment, Combination</li>
+</ul>
+<blockquote><strong>Corporate Strategy:</strong> Determines what businesses the firm should be in (portfolio decisions)</blockquote>
+<blockquote><strong>Competitive Strategy:</strong> How to compete in each business unit (Porter's generic strategies)</blockquote>
+<blockquote><strong>Diversification:</strong> Entering new markets with new products, either related or unrelated to existing business</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Ansoff's Product-Market Expansion Grid</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem;max-width:600px;margin:0 auto">
+<div style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Market Penetration</strong><br>Current Products + Current Markets<br><em>(Least Risky)</em></div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Product Development</strong><br>New Products + Current Markets</div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Market Development</strong><br>Current Products + New Markets</div>
+<div style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Diversification</strong><br>New Products + New Markets<br><em>(Most Risky)</em></div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Ansoff's Grid Explained</div>
+<ul>
+<li><strong>Market Penetration</strong> (Least Risky): Existing products in existing markets. Increase purchase frequency, attract competitors' customers</li>
+<li><strong>Market Development</strong>: Existing products in new markets (new geographies or segments)</li>
+<li><strong>Product Development</strong>: New products for existing markets (requires R&amp;D)</li>
+<li><strong>Diversification</strong> (Most Risky): New products for new markets. Related vs unrelated</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ansoff's Matrix</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="Ansoff" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Growth Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Growth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon</strong> exemplifies Ansoff's Grid &#x2014; Market Penetration (increasing Prime subscriptions in existing markets), Market Development (expanding to India, Middle East), Product Development (AWS cloud services for existing customers), and Diversification (Amazon Studios in entertainment, a completely new product-market combination).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>M-M-P-D</strong> = Market penetration (safest) &#x2192; Market dev &#x2192; Product dev &#x2192; Diversification (riskiest)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Ansoff's Grid is the most frequently tested framework. Know risk levels of each quadrant.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 levels: Corporate ("What business?"), Competitive ("How to compete?"), Functional</li>
+<li>Ansoff's Grid: 2x2 matrix with increasing risk from penetration to diversification</li>
+<li>4 generic strategies: Stability, Growth, Retrenchment, Combination</li>
+</ul></div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Integration &amp; Diversification Growth Strategies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<blockquote><strong>Vertical Integration:</strong> Expanding operations forward (toward customers) or backward (toward suppliers) along the value chain</blockquote>
+<blockquote><strong>Horizontal Integration:</strong> Acquiring or merging with competitors at the same level of the value chain</blockquote>
+<blockquote><strong>Related Diversification:</strong> Entering new businesses that share common capabilities with existing operations</blockquote>
+<blockquote><strong>Unrelated Diversification:</strong> Entering entirely new industries with no connection to current businesses</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Vertical Integration</div>
+<ul>
+<li><strong>Backward Integration:</strong> Moving toward suppliers (e.g., manufacturer buying raw material supplier)</li>
+<li><strong>Forward Integration:</strong> Moving toward customers (e.g., manufacturer opening retail stores)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Horizontal Integration</div>
+<ul>
+<li>Same level of value chain &#x2014; acquiring competitors</li>
+<li>Example: Facebook acquiring Instagram</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Diversification Types</div>
+<ul>
+<li><strong>Related:</strong> Leverages existing capabilities (e.g., Tata Group across industries)</li>
+<li><strong>Unrelated/Conglomerate:</strong> New industries entirely (e.g., Reliance entering telecom from petrochemicals)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Reasons for Diversification</div>
+<ul>
+<li>Economies of scale &amp; scope</li>
+<li>Risk reduction through portfolio spread</li>
+<li>Market dominance</li>
+<li>Surplus resource utilization</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Integration Types</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Backward Integration (toward suppliers)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Horizontal Integration (same level)</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Forward Integration (toward customers)</div>
+</div></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Integration Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Gf5gYdS2d0A" title="Integration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Diversification</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Diversification" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Reliance Industries</strong> exemplifies all strategies &#x2014; backward integration (owning oil fields), forward integration (Reliance Retail), horizontal integration (acquiring Hamleys), related diversification (Jio telecom from petrochemicals), and unrelated diversification (Jio Financial Services). Amazon also practices vertical integration by owning warehouses (backward) and delivery fleet (forward).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>B-F-H-R-U</strong> = Backward, Forward, Horizontal, Related diversification, Unrelated diversification &#x2014; 5 growth integration types</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Know the difference between vertical (up/down value chain) and horizontal (same level) integration. Use real-world examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Vertical integration: Backward (suppliers) and Forward (customers)</li>
+<li>Horizontal integration: Acquiring competitors at same level</li>
+<li>Related diversification leverages existing capabilities; Unrelated enters new industries</li>
+<li>Reasons: economies of scale/scope, risk reduction, market dominance, surplus resources</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: International Strategy</h2>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Strategic Alliances</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Cooperative agreements between firms to achieve shared objectives while remaining independent</li>
+<li>Types: Joint Ventures, Equity Strategic Alliances, Non-equity Strategic Alliances, Consortia</li>
+</ul>
+<blockquote><strong>Strategic Alliance:</strong> A cooperative agreement between two or more firms to achieve shared objectives while remaining independent organizations</blockquote>
+<blockquote><strong>Joint Venture:</strong> A new entity created by two or more parent companies combining resources, with shared ownership and risk</blockquote>
+<blockquote><strong>Equity Alliance:</strong> One partner purchases equity in the other, creating a financial bond</blockquote>
+<blockquote><strong>Non-equity Alliance:</strong> Partners share resources through contracts without creating a new entity</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; When to Use Each Type</h5>
+<table class="comparison-table"><tr><th>Type</th><th>Control</th><th>Investment</th><th>Risk</th></tr>
+<tr><td>JV</td><td>Shared</td><td>High</td><td>Moderate</td></tr>
+<tr><td>Equity Alliance</td><td>Partial</td><td>Medium</td><td>Medium</td></tr>
+<tr><td>Non-equity Alliance</td><td>Low</td><td>Low</td><td>Low</td></tr>
+<tr><td>Consortium</td><td>Shared</td><td>Varies</td><td>Shared</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Reasons for Alliances</div>
+<ul>
+<li>Share risk &amp; resources</li>
+<li>Access new markets/technology</li>
+<li>Achieve economies of scale</li>
+<li>Circumvent government restrictions</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Alliances</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Alliances" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>JV Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="JV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Starbucks-Tata Alliance:</strong> Starbucks entered India through a JV with Tata Global Beverages. Tata provided local market knowledge, real estate, and tea/coffee sourcing. Starbucks brought global brand, operations expertise, and coffee culture. The alliance preserved both companies' independence while achieving what neither could alone.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>J-E-N-C</strong> = Joint Venture, Equity alliance, Non-equity alliance, Consortium &#x2014; 4 alliance types in order of control</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Compare alliances vs M&amp;A. Alliances preserve independence; M&amp;A doesn't. Know when to use each type.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Alliances preserve independence; M&amp;A doesn't</li>
+<li>4 types: JV, Equity, Non-equity, Consortium</li>
+<li>Reasons: share risk/resources, access new markets/tech, economies of scale, circumvent restrictions</li>
+</ul></div>
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Internationalization Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Firms internationalize to access markets, resources, reduce costs, or follow customers</li>
+</ul>
+<blockquote><strong>Internationalization:</strong> The process of increasing involvement in international operations across country borders</blockquote>
+<blockquote><strong>MNC:</strong> A company that owns or controls production of goods or services in at least one country other than its home country</blockquote>
+<blockquote><strong>Transnational:</strong> A firm that combines global efficiency with local responsiveness, operating as an integrated network worldwide</blockquote>
+<blockquote><strong>Ethnocentric:</strong> A management philosophy where home-country practices are considered superior and applied globally</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; 5 Stages of Internationalization (D-F-J-M-T)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Stage 1: DOMESTIC &#x2014; Ethnocentric, home market only</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Stage 2: FOREIGN &#x2014; Export to foreign markets</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Stage 3: JOINT VENTURE &#x2014; Physical operations abroad</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Stage 4: MULTINATIONAL &#x2014; Multiple production facilities worldwide</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Stage 5: TRANSNATIONAL &#x2014; Global efficiency + local responsiveness</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Advantages of MNCs</div>
+<ul>
+<li>Superior technical know-how</li>
+<li>Economies of scale</li>
+<li>Lower input costs (bulk buying)</li>
+<li>Access to overseas raw materials</li>
+<li>Brand image &amp; goodwill</li>
+<li>Low-cost financing</li>
+<li>Financial flexibility (shift to low-tax locations)</li>
+<li>Information advantages</li>
+<li>Risk offset through diversification</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Disadvantages of MNCs</div>
+<ul>
+<li>Business risks (forex fluctuations)</li>
+<li>Regulations in host country</li>
+<li>Different legal systems</li>
+<li>Political risks</li>
+<li>Operational difficulties</li>
+<li>Cultural differences</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Models of International Trade</div>
+<ul>
+<li><strong>Product Life Cycle Model (Vernon, 1966):</strong> New &#x2192; Mature &#x2192; Standardized</li>
+<li><strong>Uppsala Model:</strong> Progressive internationalization through stages</li>
+<li><strong>Transaction Cost Model:</strong> Internationalize when foreign transaction cost &lt; internal cost</li>
+<li><strong>Eclectic Model (Dunning):</strong> OLI framework (Ownership, Location, Internalization)</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Internationalization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/gD6MOm0hUuc" title="Internationalization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MNC vs Transnational</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="MNC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Infosys</strong> followed D-F-J-M-T perfectly: started as a domestic IT company (Stage 1), began exporting software to US clients (Stage 2), formed JV partnerships and subsidiaries abroad (Stage 3), became a multinational with offices in 50+ countries (Stage 4), and now operates as a transnational with global delivery centers adapting to local markets (Stage 5).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>D-F-J-M-T</strong> = Domestic &#x2192; Foreign &#x2192; Joint Venture &#x2192; Multinational &#x2192; Transnational</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>D-F-J-M-T is the most tested mnemonic in this subject. Know all 5 stages with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 stages: Domestic &#x2192; Foreign &#x2192; JV &#x2192; MNC &#x2192; Transnational</li>
+<li>MNC advantages: know-how, scale, low cost, brand, financing, risk offset</li>
+<li>MNC risks: forex, regulations, politics, culture</li>
+<li>Models: Vernon (PLC), Uppsala, Transaction Cost, Dunning's OLI</li>
+</ul></div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Market Risk Assessment</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<blockquote><strong>Political Risk:</strong> The risk of loss due to political instability, government policy changes, or expropriation in a host country</blockquote>
+<blockquote><strong>Forex Risk:</strong> The risk of financial loss due to fluctuations in exchange rates between currencies</blockquote>
+<blockquote><strong>Country Risk:</strong> The overall risk of investing in a particular country, encompassing political, economic, and legal factors</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; 5 Types of International Risks (P-E-C-F-L)</div>
+<ul>
+<li><strong>Political Risk</strong> &#x2014; Government instability, policy changes, expropriation</li>
+<li><strong>Economic Risk</strong> &#x2014; Inflation, exchange rate fluctuations, recession</li>
+<li><strong>Cultural Risk</strong> &#x2014; Language barriers, business customs, consumer behavior</li>
+<li><strong>Currency/Forex Risk</strong> &#x2014; Exchange rate volatility affecting profits</li>
+<li><strong>Legal/Regulatory Risk</strong> &#x2014; Different laws, compliance requirements</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Risk Assessment Frameworks</div>
+<ul>
+<li>Qualitative analysis (expert judgment)</li>
+<li>Quantitative analysis (scoring models)</li>
+<li>Comparative analysis (cross-country comparison)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Risk Mitigation Strategies</div>
+<ul>
+<li>Political risk insurance (MIGA, OPIC)</li>
+<li>Hedging for currency risk (forwards, futures, options)</li>
+<li>Joint ventures with local partners (share political risk)</li>
+<li>Diversification across multiple countries</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>International Risk</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="Risk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Country Risk Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Country Risk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Vodafone</strong> entered India (2007) and faced massive tax liability from India's retrospective tax law (2012) &#x2014; a classic political/legal risk. <strong>Uber</strong> exited China (2016) due to regulatory and competitive risks. <strong>Samsung</strong> diversified manufacturing across Vietnam, India, and Indonesia to mitigate country-specific risks.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>P-E-C-F-L</strong> = Political, Economic, Cultural, Forex, Legal &#x2014; 5 types of international market risks</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Know the 5 types of risks and give examples for each. Risk assessment questions often ask for mitigation strategies too.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 risk types: Political, Economic, Cultural, Forex, Legal</li>
+<li>Assessment frameworks: Qualitative, Quantitative, Comparative</li>
+<li>Mitigation: Political risk insurance, hedging, JVs with locals, diversification</li>
+</ul></div>
+</div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Entry into International Markets</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<blockquote><strong>Licensing:</strong> An arrangement where a licensor grants rights to intangible property to a foreign licensee for a royalty fee</blockquote>
+<blockquote><strong>Franchising:</strong> A form of licensing where the franchisor provides a complete business system plus ongoing support</blockquote>
+<blockquote><strong>Wholly Owned Subsidiary (WOS):</strong> A foreign operation completely owned and controlled by the parent company</blockquote>
+<blockquote><strong>FDI:</strong> Investment in a foreign country that gives the investor significant management control</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Entry Modes (from lowest to highest risk/control)</h5>
+<table class="comparison-table"><tr><th>Mode</th><th>Risk</th><th>Control</th><th>Investment</th><th>Example</th></tr>
+<tr><td>Exporting</td><td>Low</td><td>Low</td><td>Low</td><td>Indian IT services exporting to US</td></tr>
+<tr><td>Licensing</td><td>Low</td><td>Low</td><td>Low</td><td>McDonald's recipe licensing</td></tr>
+<tr><td>Franchising</td><td>Medium</td><td>Medium</td><td>Medium</td><td>Subway franchise model</td></tr>
+<tr><td>Joint Venture</td><td>Medium</td><td>Shared</td><td>Medium</td><td>Maruti-Suzuki JV</td></tr>
+<tr><td>WOS</td><td>High</td><td>High</td><td>High</td><td>Tata's Jaguar/Land Rover acquisition</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Government Role</div>
+<ul>
+<li>Trade barriers: tariffs, quotas, embargoes</li>
+<li>Incentives for FDI: tax breaks, SEZs</li>
+<li>Trade agreements: WTO, bilateral treaties</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Entry Modes Spectrum (E-L-F-J-S)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">EXPORTING &#x2014; Low Risk, Low Control, Low Investment</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">LICENSING &#x2014; Low Risk, Low Control</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">FRANCHISING &#x2014; Medium Risk, Medium Control</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2193;</div>
+<div style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">JOINT VENTURE &#x2014; Medium Risk, Shared Control</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">WHOLLY OWNED SUBSIDIARY &#x2014; High Risk, High Control</div>
+</div></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Entry Modes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Gf5gYdS2d0A" title="Entry Modes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Licensing vs Franchising</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="License vs Franchise" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>IKEA</strong> entered India through a wholly owned subsidiary (high control, high investment) to maintain its global brand standards. <strong>McDonald's</strong> uses franchising globally &#x2014; local franchisees operate stores while McDonald's controls the brand and menu. <strong>Suzuki</strong> entered India via JV with Maruti (Maruti-Suzuki) to leverage local market knowledge.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>E-L-F-J-S</strong> = Export &#x2192; License &#x2192; Franchise &#x2192; JV &#x2192; Subsidiary</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Know entry modes in order of risk and control. Compare advantages/disadvantages.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Entry modes in order of risk/control: Export &#x2192; License &#x2192; Franchise &#x2192; JV &#x2192; WOS</li>
+<li>Government role: trade barriers, FDI incentives, trade agreements</li>
+<li>Choose based on risk appetite, control needs, and resource availability</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Strategic Enablers</h2>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: IT and Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>IT is strategically important due to: ubiquitous application, dramatic cost decline, universal ownership, exponential growth</li>
+</ul>
+<blockquote><strong>IT Architecture:</strong> The organized set of rules and standards that guide the design and implementation of information systems in an organization</blockquote>
+<blockquote><strong>E-Business:</strong> Conducting business processes using the internet and digital technologies</blockquote>
+<blockquote><strong>Digital Transformation:</strong> The integration of digital technology into all areas of a business, fundamentally changing how it operates and delivers value</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Steps in IT Architecture Design</h5>
+<div class="framework-diagram">Business Vision &#x2192; Business Objectives &#x2192; Business Processes &#x2192; Business Architecture &#x2192; IT Architecture &#x2192; IT Infrastructure</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Porter's Five Forces + IT Impact</h5>
+<table class="comparison-table"><tr><th>Force</th><th>IT Impact</th></tr>
+<tr><td>Supplier Power</td><td>IT reduces supplier power through e-procurement</td></tr>
+<tr><td>Buyer Power</td><td>IT increases buyer power through price comparison</td></tr>
+<tr><td>Threat of New Entrants</td><td>IT can be a barrier (high tech costs) or enabler (low entry with cloud)</td></tr>
+<tr><td>Threat of Substitutes</td><td>IT creates new substitutes (streaming vs DVD)</td></tr>
+<tr><td>Rivalry</td><td>IT intensifies competition through transparency</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Competitive Strategies via IT</div>
+<ul>
+<li>Cost leadership (automation, efficiency)</li>
+<li>Differentiation (unique digital services)</li>
+<li>Cost focus (niche market efficiency)</li>
+<li>Focused differentiation (premium digital experience)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; E-Business Models</div>
+<ul>
+<li>B2B (Business-to-Business) &#x2014; Alibaba</li>
+<li>B2C (Business-to-Consumer) &#x2014; Amazon</li>
+<li>E-Market Places &#x2014; online exchanges</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>IT and Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="IT Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Transformation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Digital Transform" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon</strong> leverages IT for competitive advantage across all Porter's forces: reduces supplier power through e-procurement platforms, increases buyer power via price comparison tools, creates barriers to entry with AWS infrastructure, substitutes physical retail with e-commerce, and intensifies rivalry through transparency.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>I-P-E-B</strong> = IT architecture, Porter's forces, E-business models, Competitive strategies via IT &#x2014; 4 key IT-strategy links</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Link IT to Porter's Five Forces. Know how IT changes each force. Questions often ask how IT creates competitive advantage.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>IT is strategically important: ubiquitous, declining cost, universal ownership, exponential growth</li>
+<li>IT impacts all 5 Porter's forces</li>
+<li>E-business models: B2B, B2C, E-Market Places</li>
+<li>Competitive strategies via IT: Cost leadership, Differentiation, Cost focus, Focused differentiation</li>
+</ul></div>
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Technology and R&amp;D</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Technology = R&amp;D + Development (translating research into marketable products)</li>
+<li>Need-push: Research driven by identified need</li>
+<li>Technology-push: Research driven by new knowledge seeking application</li>
+</ul>
+<blockquote><strong>R&amp;D:</strong> Systematic activities combining basic and applied research to discover new knowledge and develop new applications</blockquote>
+<blockquote><strong>Need-Push R&amp;D:</strong> Research driven by an identified market need or customer demand</blockquote>
+<blockquote><strong>Technology-Push R&amp;D:</strong> Research driven by new scientific knowledge seeking commercial application</blockquote>
+<blockquote><strong>Technology Package:</strong> The combination of product design, production technique, and management systems that together form a firm's technological capability</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Technology Package (3 elements)</div>
+<ul>
+<li><strong>Product Design</strong> &#x2014; what the product looks like and how it functions</li>
+<li><strong>Production Technique</strong> &#x2014; how the product is manufactured</li>
+<li><strong>Management Systems</strong> &#x2014; how operations are organized and controlled</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; R&amp;D Strategy Development</div>
+<ul>
+<li>Project identification &amp; selection is the most critical R&amp;D activity</li>
+<li>7 pre-requisites for effective R&amp;D strategy include: belief in strategy, planning staff, commitment</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Project Selection Criteria</div>
+<ul>
+<li>Technical feasibility</li>
+<li>Market potential</li>
+<li>Resource availability</li>
+<li>Strategic fit</li>
+<li>Risk-return tradeoff</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>R&amp;D Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/gD6MOm0hUuc" title="R&amp;D" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Technology Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Tech Mgmt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Tesla's</strong> R&amp;D strategy is technology-push &#x2014; battery technology innovations (from SpaceX materials science) drive new EV models. In contrast, <strong>Maruti Suzuki's</strong> R&amp;D is need-push &#x2014; developing CNG cars in response to India's fuel price concerns and environmental regulations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>N-T-P-M</strong> = Need-push, Technology-push, Project selection, Technology Package &#x2014; 4 R&amp;D strategy pillars</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Know the difference between need-push and technology-push R&amp;D. Questions often ask about R&amp;D project selection criteria.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Technology = R&amp;D + Development</li>
+<li>Need-push vs Technology-push R&amp;D</li>
+<li>Project selection criteria: feasibility, market potential, resources, strategic fit, risk-return</li>
+<li>Technology package: Product design + Production technique + Management systems</li>
+</ul></div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Knowledge Management (KM)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Knowledge = information + experience + context</li>
+<li>Two types: Tacit (personal, hard to formalize) vs Explicit (codified, documented)</li>
+</ul>
+<blockquote><strong>Knowledge Management:</strong> The process of creating, capturing, storing, sharing, and applying organizational knowledge to improve performance</blockquote>
+<blockquote><strong>Tacit Knowledge:</strong> Personal, context-specific knowledge that is hard to formalize and transfer (e.g., skills, intuitions)</blockquote>
+<blockquote><strong>Explicit Knowledge:</strong> Codified, documented knowledge that can be easily transmitted (e.g., manuals, databases)</blockquote>
+<blockquote><strong>SECI Model:</strong> Nonaka's model describing four modes of knowledge conversion between tacit and explicit forms</blockquote>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; SECI Knowledge Conversion Model</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem;max-width:600px;margin:0 auto">
+<div style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Socialization</strong><br>Tacit &#x2192; Tacit<br><em>(Training, mentoring, observation)</em></div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Externalization</strong><br>Tacit &#x2192; Explicit<br><em>(Documenting best practices, writing manuals)</em></div>
+<div style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Internalization</strong><br>Explicit &#x2192; Tacit<br><em>(Learning by doing, practice)</em></div>
+<div style="background:rgba(108,92,231,0.15);border:1px solid rgba(108,92,231,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Combination</strong><br>Explicit &#x2192; Explicit<br><em>(Combining databases, reports)</em></div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; KM Cycle</div>
+<p>Create &#x2192; Capture &#x2192; Store &#x2192; Share &#x2192; Apply</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; KM Framework (5 Levels)</div>
+<ul>
+<li>1. Creation of Strategy for KMS</li>
+<li>2. Technical Infrastructure &amp; Knowledge Resources</li>
+<li>3. Grouping of Knowledge</li>
+<li>4. Delivery of Knowledge</li>
+<li>5. Corporate &amp; Individual Performance</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Benefits &amp; Challenges of KM</div>
+<p><strong>Benefits:</strong> Reduced rework, Faster decision-making, Improved innovation, Competitive advantage</p>
+<p><strong>Challenges:</strong> Cultural resistance, Knowledge hoarding, Technology barriers, Measurement difficulties</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Knowledge Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="KM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SECI Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="SECI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Infosys</strong> uses "Knowledge Management System (KMS)" where employees document project learnings (Externalization), share best practices through wikis (Combination), learn through mentoring (Socialization), and apply knowledge by doing (Internalization). Their "InfyGuru" platform enables tacit knowledge transfer through video mentoring across global offices.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>S-E-C-I</strong> = Socialization (T&#x2192;T), Externalization (T&#x2192;E), Combination (E&#x2192;E), Internalization (E&#x2192;T)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>SECI model is a favorite exam question. Know all 4 conversions with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Knowledge = Information + Experience + Context</li>
+<li>Tacit (personal) vs Explicit (codified)</li>
+<li>SECI: 4 modes of knowledge conversion</li>
+<li>KM Cycle: Create &#x2192; Capture &#x2192; Store &#x2192; Share &#x2192; Apply</li>
+</ul></div>
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Innovation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Invention = idea converted to practice (technical feasibility demonstrated)</li>
+<li>Innovation = commercialization of invention (market success)</li>
+</ul>
+<blockquote><strong>Innovation:</strong> The process of translating an idea or invention into a good or service that creates value for which customers will pay</blockquote>
+<blockquote><strong>Radical Innovation:</strong> Breakthrough changes that create new markets or significantly alter existing ones</blockquote>
+<blockquote><strong>Incremental Innovation:</strong> Small, continuous improvements to existing products, services, or processes</blockquote>
+<blockquote><strong>Disruptive Innovation:</strong> Innovation that creates new market by displacing established competitors (Christensen)</blockquote>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Types of Innovation</div>
+<ul>
+<li><strong>Product innovation</strong> &#x2014; new/improved product</li>
+<li><strong>Process innovation</strong> &#x2014; new production method</li>
+<li><strong>Business model innovation</strong> &#x2014; new way of doing business</li>
+<li><strong>Social innovation</strong> &#x2014; solving social problems</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Innovation vs Invention</div>
+<ul>
+<li><strong>Invention</strong> = idea converted to practice (technical feasibility demonstrated)</li>
+<li><strong>Innovation</strong> = commercialization of invention (market success)</li>
+<li>Innovation = Invention + Commercialization</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Innovation Types Comparison</h5>
+<table class="comparison-table"><tr><th>Type</th><th>Risk</th><th>Impact</th><th>Example</th></tr>
+<tr><td>Radical</td><td>High</td><td>Market-creating</td><td>iPhone (2007)</td></tr>
+<tr><td>Incremental</td><td>Low</td><td>Improvement</td><td>iPhone 15 vs iPhone 14</td></tr>
+<tr><td>Disruptive</td><td>High</td><td>Market-displacing</td><td>Netflix vs Blockbuster</td></tr>
+<tr><td>Sustaining</td><td>Low</td><td>Maintains position</td><td>Intel chip upgrades</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Factors Influencing Innovation</div>
+<ul>
+<li>Organizational culture</li>
+<li>Leadership support</li>
+<li>Resources &amp; funding</li>
+<li>Collaboration &amp; teamwork</li>
+<li>Customer feedback</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Characteristics of Innovative Organizations</div>
+<ul>
+<li>Flat structure, open communication</li>
+<li>Risk-tolerant culture</li>
+<li>Cross-functional teams</li>
+<li>Continuous learning mindset</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4CB; Creativity Enhancement Techniques</div>
+<ul>
+<li>Brainstorming</li>
+<li>Mind mapping</li>
+<li>SCAMPER technique</li>
+<li>Lateral thinking</li>
+</ul></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Innovation Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="Innovation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Disruptive Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Disruptive" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Apple</strong> is innovation-driven &#x2014; iPhone (radical), AirPods (new category), Apple Watch (wearable). <strong>Google</strong> encourages innovation through "20% time" (now evolved). <strong>3M's</strong> "15% rule" produced Post-it Notes &#x2014; a failed adhesive became a billion-dollar product through innovative application.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>I-P-B-S-C</strong> = Invention vs Innovation, Product innovation, Business model innovation, Social innovation, Creativity techniques &#x2014; 5 innovation dimensions</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div><p>Distinguish between invention and innovation. Innovation = invention + commercialization. Know creativity techniques with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Innovation = Invention + Commercialization</li>
+<li>Types: Product, Process, Business model, Social</li>
+<li>Radical vs Incremental vs Disruptive vs Sustaining</li>
+<li>Innovative organizations: flat structure, risk-tolerant, cross-functional teams</li>
+</ul></div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<table class="comparison-table">
+<tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td>A-P-E-C-C</td><td>Adhocism &#x2192; Planned Policy &#x2192; Environment-Strategy &#x2192; Corporate Planning &#x2192; Corporate Management</td><td>5 paradigm shifts</td></tr>
+<tr><td>G-S-R-C</td><td>Growth, Stability, Retrenchment, Combination</td><td>4 corporate policy types</td></tr>
+<tr><td>M-M-P-D</td><td>Market Penetration &#x2192; Market Dev &#x2192; Product Dev &#x2192; Diversification</td><td>Ansoff's Grid risk order</td></tr>
+<tr><td>B-F-H-R-U</td><td>Backward, Forward, Horizontal, Related, Unrelated</td><td>5 integration types</td></tr>
+<tr><td>J-E-N-C</td><td>Joint Venture, Equity alliance, Non-equity alliance, Consortium</td><td>4 alliance types</td></tr>
+<tr><td>D-F-J-M-T</td><td>Domestic &#x2192; Foreign &#x2192; JV &#x2192; Multinational &#x2192; Transnational</td><td>5 internationalization stages</td></tr>
+<tr><td>P-E-C-F-L</td><td>Political, Economic, Cultural, Forex, Legal</td><td>5 international risks</td></tr>
+<tr><td>E-L-F-J-S</td><td>Export &#x2192; License &#x2192; Franchise &#x2192; JV &#x2192; Subsidiary</td><td>Entry modes</td></tr>
+<tr><td>S-E-C-I</td><td>Socialization, Externalization, Combination, Internalization</td><td>SECI model</td></tr>
+<tr><td>I-P-E-B</td><td>IT architecture, Porter's forces, E-business, Competitive strategies</td><td>IT-strategy links</td></tr>
+<tr><td>N-T-P-M</td><td>Need-push, Technology-push, Project selection, Technology Package</td><td>R&amp;D strategy pillars</td></tr>
+<tr><td>I-P-B-S-C</td><td>Invention, Product, Business model, Social, Creativity</td><td>Innovation dimensions</td></tr>
+</table>
+</div>
+
+<!-- KEY FRAMEWORKS -->
+<div class="unit" id="frameworks">
+<h3>Key Frameworks</h3>
+<div class="visual-diagram"><h5>&#x1F4CA; Ansoff's Product-Market Expansion Grid</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem;max-width:600px;margin:0 auto">
+<div style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Market Penetration</strong><br>Current Products + Current Markets<br><em>(Safest)</em></div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Product Development</strong><br>New Products + Current Markets</div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Market Development</strong><br>Current Products + New Markets</div>
+<div style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Diversification</strong><br>New Products + New Markets<br><em>(Riskiest)</em></div>
+</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Porter's Five Forces</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Threat of New Entrants</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:center">
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem">Supplier Power</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2192;</div>
+<div style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem;font-weight:700">Industry Rivalry</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2190;</div>
+<div style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem">Buyer Power</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2191;</div>
+<div style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Threat of Substitutes</div>
+</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; SECI Knowledge Conversion Model</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem;max-width:600px;margin:0 auto">
+<div style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Socialization</strong><br>Tacit &#x2192; Tacit<br><em>(Apprentice)</em></div>
+<div style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Externalization</strong><br>Tacit &#x2192; Explicit<br><em>(Writing docs)</em></div>
+<div style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Internalization</strong><br>Explicit &#x2192; Tacit<br><em>(Learning by doing)</em></div>
+<div style="background:rgba(108,92,231,0.15);border:1px solid rgba(108,92,231,0.3);padding:0.8rem;border-radius:8px;text-align:center;font-size:0.85rem"><strong>Combination</strong><br>Explicit &#x2192; Explicit<br><em>(Merging databases)</em></div>
+</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Value Chain (Porter)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem">Inbound Logistics</div>
+<div style="color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem">Operations</div>
+<div style="color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem">Outbound</div>
+<div style="color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem">Marketing</div>
+<div style="color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.5rem;border-radius:8px;font-size:0.8rem">Service</div>
+</div>
+<div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.5rem">Support: Firm Infrastructure | HR | Technology | Procurement</div>
+</div></div>
+</div>
+
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3>Quick Revision Sheet</h3>
+<div class="callout callout-tip"><div class="callout-label">&#x26A1; One-Liner Concepts</div>
+<ul>
+<li>Corporate Management = Planning + Implementation + Evaluation</li>
+<li>5 paradigm shifts: Adhocism &#x2192; Planned Policy &#x2192; Environment-Strategy &#x2192; Corporate Planning &#x2192; Corporate Management</li>
+<li>4 generic strategies: Stability, Growth, Retrenchment, Combination</li>
+<li>Ansoff's Grid: 2x2 matrix (Current/New Products x Current/New Markets)</li>
+<li>Market penetration = least risky; Diversification = most risky</li>
+<li>Vertical integration = moving up/down value chain</li>
+<li>Horizontal integration = same level (acquiring competitors)</li>
+<li>5 international stages: Domestic &#x2192; Foreign &#x2192; JV &#x2192; MNC &#x2192; Transnational</li>
+<li>MNC advantages: know-how, scale, low cost, brand, financing, risk offset</li>
+<li>Entry modes: Export (low risk) &#x2192; License &#x2192; Franchise &#x2192; JV &#x2192; Subsidiary (high risk)</li>
+<li>IT architecture: Vision &#x2192; Objectives &#x2192; Processes &#x2192; Business Arch &#x2192; IT Arch &#x2192; Infrastructure</li>
+<li>R&amp;D: Need-push vs Technology-push</li>
+<li>Tacit knowledge = personal, hard to formalize</li>
+<li>Explicit knowledge = codified, documented</li>
+<li>SECI: Socialization (T&#x2192;T), Externalization (T&#x2192;E), Combination (E&#x2192;E), Internalization (E&#x2192;T)</li>
+<li>Innovation = Invention + Commercialization</li>
+</ul></div>
+<div class="callout callout-tip"><div class="callout-label">&#x26A1; Key Comparisons</div>
+<table class="comparison-table">
+<tr><th>Feature</th><th>Vertical Integration</th><th>Horizontal Integration</th></tr>
+<tr><td>Direction</td><td>Up/down value chain</td><td>Same level</td></tr>
+<tr><td>Example</td><td>Manufacturer buying supplier</td><td>Company buying competitor</td></tr>
+<tr><td>Goal</td><td>Control supply chain</td><td>Market share</td></tr>
+<tr><td>Risk</td><td>High investment</td><td>Antitrust concerns</td></tr>
+</table>
+<table class="comparison-table" style="margin-top:1rem">
+<tr><th>Feature</th><th>Related Diversification</th><th>Unrelated Diversification</th></tr>
+<tr><td>Synergy</td><td>High</td><td>Low</td></tr>
+<tr><td>Risk</td><td>Medium</td><td>High</td></tr>
+<tr><td>Example</td><td>Tata Group</td><td>Berkshire Hathaway</td></tr>
+<tr><td>Benefit</td><td>Leverages existing capabilities</td><td>Portfolio risk reduction</td></tr>
+</table>
+<table class="comparison-table" style="margin-top:1rem">
+<tr><th>Entry Mode</th><th>Risk</th><th>Control</th><th>Investment</th><th>Speed</th></tr>
+<tr><td>Export</td><td>Low</td><td>Low</td><td>Low</td><td>Fast</td></tr>
+<tr><td>License</td><td>Low</td><td>Low</td><td>Low</td><td>Fast</td></tr>
+<tr><td>Franchise</td><td>Medium</td><td>Medium</td><td>Medium</td><td>Medium</td></tr>
+<tr><td>JV</td><td>Medium</td><td>Shared</td><td>Medium</td><td>Medium</td></tr>
+<tr><td>WOS</td><td>High</td><td>High</td><td>High</td><td>Slow</td></tr>
+</table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>Exam Focus</h3>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Most Frequently Asked Topics</div>
+<ul>
+<li><strong>Ansoff's Product-Market Expansion Grid</strong> (almost every exam)</li>
+<li><strong>5 Stages of Internationalization</strong> (D-F-J-M-T)</li>
+<li><strong>SECI Model of Knowledge Conversion</strong></li>
+<li><strong>Porter's Five Forces and IT impact</strong></li>
+<li><strong>Entry modes comparison</strong> (advantages/disadvantages)</li>
+<li><strong>Vertical vs Horizontal Integration</strong></li>
+<li><strong>Corporate Planning process and failure reasons</strong></li>
+<li><strong>MNC advantages and disadvantages</strong></li>
+</ul></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F4DD; Expected Question Patterns</div>
+<ul>
+<li>"Explain Ansoff's Grid with examples" (10 marks)</li>
+<li>"Discuss the stages of internationalization" (10 marks)</li>
+<li>"Compare and contrast tacit and explicit knowledge" (6 marks)</li>
+<li>"What are the entry modes for international markets?" (10 marks)</li>
+<li>"How does IT contribute to competitive advantage?" (10 marks)</li>
+<li>"Explain the SECI model" (8 marks)</li>
+</ul></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F4D6; Model Answer Structure</div>
+<ul>
+<li>1. Define the concept</li>
+<li>2. Draw the diagram/model</li>
+<li>3. Explain each component</li>
+<li>4. Give real-world examples</li>
+<li>5. Discuss advantages/limitations</li>
+<li>6. Conclude with relevance</li>
+</ul></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F517; Key Relationships to Remember</div>
+<ul>
+<li>Corporate Management &#x2283; Corporate Planning (management includes planning + implementation + control)</li>
+<li>Invention &#x2260; Innovation (invention = technical idea; innovation = commercialized invention)</li>
+<li>Knowledge &#x2260; Information (knowledge = information + context + experience)</li>
+<li>Strategy &#x2260; Policy (strategy = action plan; policy = decision guidelines)</li>
+</ul></div>
+</div>
+
+</main>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+
+  window.addEventListener('scroll',function(){var bar=document.getElementById('readingProgress');if(bar){var h=document.documentElement;bar.style.width=Math.min((h.scrollTop/(h.scrollHeight-h.clientHeight))*100,100)+'%';}var links=document.querySelectorAll('.sidebar-nav a[href^="#u"]');var sections=[];links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)sections.push({el:t,link:a});});var pos=window.scrollY+120;var current=null;sections.forEach(function(s){if(s.el.offsetTop<=pos)current=s.link;});links.forEach(function(a){a.classList.remove('active');});if(current)current.classList.add('active');});
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

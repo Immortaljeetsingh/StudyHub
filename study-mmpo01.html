@@ -11,12 +11,12 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(253,203,110,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
 @keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
 .study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
-.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
 .sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
-.sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}
-.sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}
+.study-sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.study-sidebar a:hover{background:rgba(255,255,255,.05);color:#fdcb6e;padding-left:1rem}
+.study-sidebar a.active{color:#fdcb6e;background:rgba(253,203,110,.1);font-weight:600}
 .study-header{background:linear-gradient(135deg,rgba(253,203,110,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:2rem;margin-bottom:2rem}
 .study-header h1{font-size:1.8rem;font-weight:800;color:#fdcb6e;margin:.5rem 0}
 .study-header p{color:rgba(255,255,255,.5);font-size:.9rem}
@@ -46,12 +46,26 @@ table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
 th{background:rgba(253,203,110,.15);color:#fdcb6e;padding:.6rem .8rem;text-align:left;border:1px solid rgba(255,255,255,.08)}
 td{padding:.6rem .8rem;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.78)}
 tr:hover{background:rgba(255,255,255,.02)}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(253,203,110,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#fdcb6e,#f8e71c);color:#1a1a2e;border:none;padding:0.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:0.9rem;font-weight:600;margin:1rem 0;transition:opacity 0.3s}.video-toggle:hover{opacity:0.85}.video-section-content{display:none}.video-section-content.active{display:block}
 </style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
-<body>
+<body class="subject-mmpo01">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-01'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
-<aside class="sidebar">
-<div class="sidebar-header"><h3>MMPO-01 Navigation</h3></div>
+<aside class="study-sidebar">
+<div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-01</span></div>
+<nav class="sidebar-nav">
 <a href="#u1">Unit 1: OR Overview</a>
 <a href="#u2">Unit 2: LP Formulation</a>
 <a href="#u3">Unit 3: Simplex Method</a>
@@ -71,13 +85,22 @@ tr:hover{background:rgba(255,255,255,.02)}
 <a href="#formulas">Key Formulas</a>
 <a href="#mnemonics">Master Mnemonics</a>
 <a href="#exam">Exam Focus</a>
-<a href="study-hub.html" class="back-link">Back to Hub</a>
+<a href="quiz-mmpo01.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav>
 </aside>
-<main class="study-content">
+<main class="study-content" id="main-content">
 <div class="study-header"><span class="subject-tag">MMPO-01</span><h1>Operations Research</h1><p>16 Units &bull; Optimization, Decision-Making &amp; Quantitative Methods &bull; IGNOU MBA</p></div>
 
 <!-- UNIT 1 -->
 <div class="unit" id="u1"><h3>Unit 1: Operations Research &mdash; An Overview</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to Operations Research</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sM9NSfqMLRk" title="OR Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>OR Phases and Model Building</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Eq-ufCMxSPs" title="OR Phases" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Operations Research:</strong> Application of scientific methods to problems involving control of organized systems for management decision-making.</p>
 <p><strong>Mathematical Model:</strong> Simplified representation of a real-world system using mathematical symbols.</p>
@@ -94,14 +117,22 @@ tr:hover{background:rgba(255,255,255,.02)}
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Manufacturer deciding optimal product mix to maximize profit given limited raw materials, labor, and machine capacity.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know the difference between deterministic and stochastic models. Examiners frequently ask about OR phases and model characteristics.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>MODE-SIM</strong> &mdash; Model, Objective, Decision variables, Environment, Solution, Implementation, Monitoring</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
 <li>OR uses mathematical models for optimal decisions</li>
 <li>Interdisciplinary approach combining math, stats, engineering, economics</li>
 <li>Five phases: Identify &rarr; Model &rarr; Solve &rarr; Validate &rarr; Implement</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u1">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 2 -->
 <div class="unit" id="u2"><h3>Unit 2: Linear Programming &mdash; Formulation &amp; Graphical Method</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>LP Formulation &amp; Graphical Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3GJQkGkYPCQ" title="LP Graphical Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>LP Special Cases</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/M8ZuD3qjFJQ" title="LP Special Cases" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Linear Programming:</strong> Mathematical technique for optimizing a linear objective function subject to linear constraints.</p>
 <p><strong>Feasible Solution:</strong> Solution satisfying all constraints.</p>
@@ -132,14 +163,22 @@ Subject to:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A bakery makes cakes (profit Rs 200) and pastries (profit Rs 100). Each cake needs 2 eggs, 3 cups flour; each pastry needs 1 egg, 2 cups flour. With 20 eggs and 30 cups flour available, LP graphical method finds optimal product mix.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Always formulate the problem first. Examiners give marks for correct formulation even if graphical solution has errors.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>FP-CP-SO</strong> &mdash; Formulate problem, Plot constraints, find Corner points, Select Optimal</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
 <li>LP optimizes linear objective function subject to linear constraints</li>
 <li>Graphical method for 2 variables, Simplex for multiple</li>
 <li>Special cases: Infeasible, Unbounded, Multiple Optimal, Degenerate</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u2">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 3 -->
 <div class="unit" id="u3"><h3>Unit 3: Simplex Method</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Simplex Method Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3JyABwVRxBU" title="Simplex Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Simplex Tableau Example</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7Hx3a5O3pGA" title="Simplex Tableau" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Simplex Method:</strong> Iterative algorithm moving along edges of feasible polyhedron from vertex to adjacent improved vertex.</p>
 <p><strong>Basic Variable:</strong> Variable in current solution (has a column in basis).</p>
@@ -170,14 +209,22 @@ Subject to:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A furniture manufacturer wants to maximize profit from tables and chairs given constraints on wood, labor, and machine hours. Simplex finds the optimal production mix that satisfies all constraints.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Practice 3-4 simplex numericals. Common mistakes: wrong pivot selection, arithmetic errors in row operations.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>SE-LE-PI-R</strong> &mdash; Select Entering variable, Leaving variable, Pivot, Repeat</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
 <li>Simplex iterates from vertex to improved vertex on feasible polyhedron</li>
 <li>Uses tableau format with Zj - Cj optimality check</li>
 <li>Big-M and Two-Phase methods handle artificial variables</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u3">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 4 -->
 <div class="unit" id="u4"><h3>Unit 4: Duality &amp; Sensitivity Analysis</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Duality in LP</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7yHkKqEJqkQ" title="LP Duality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sensitivity Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/YkHiJnGYJbI" title="Sensitivity Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Range of Optimality:</strong> Range over which objective coefficients can change without changing optimal basis.</p>
 <p><strong>Range of Feasibility:</strong> Range over which RHS can change without changing basis (shadow prices remain valid).</p>
@@ -205,14 +252,22 @@ Subject to:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A company uses shadow prices to decide whether to buy additional raw materials. If shadow price of material A is Rs 50/kg but market price is Rs 40/kg, buying more is profitable.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know primal-dual conversion rules. Sensitivity questions often ask "what if" scenarios.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>PDS-CSR</strong> &mdash; Primal-Dual relationship, Shadow prices, Complementary Slackness, Sensitivity Ranges</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
 <li>Every primal LP has a dual providing shadow prices</li>
 <li>Complementary slackness links primal and dual solutions</li>
 <li>Sensitivity analysis tests robustness of optimal solution</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u4">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 5 -->
 <div class="unit" id="u5"><h3>Unit 5: Transportation Problem</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transportation Problem &mdash; VAM Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9y7a5aGJnK4" title="Transportation VAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MODI Method for Optimality</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PLfKJn4PPjA" title="MODI Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Transportation Problem:</strong> Optimization to find minimum cost shipping schedule from m sources to n destinations.</p>
 <p><strong>Degenerate Solution:</strong> BFS with fewer than m+n-1 positive cells.</p>
@@ -235,14 +290,22 @@ Subject to:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A company has 3 factories (supply: 100, 150, 200 units) and 4 warehouses (demand: 80, 120, 130, 120 units). Transportation costs vary by route. VAM finds initial allocation, MODI optimizes to minimize total shipping cost.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Always check for degeneracy. If basic cells &lt; m+n-1, add epsilon to a non-basic cell with lowest cost.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>BL-VAM-MODI</strong> &mdash; Balance, Initial solution (VAM), Optimize (MODI), Degeneracy check, Iterate</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
 <li>Transportation minimizes cost from sources to destinations</li>
 <li>VAM gives best initial solution, MODI tests optimality</li>
 <li>Used by Indian Oil, Reliance for logistics optimization</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u5">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 6 -->
 <div class="unit" id="u6"><h3>Unit 6: Assignment Problem</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Hungarian Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4oGwaS5pXj4" title="Hungarian Method" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Assignment Problem Variants</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FxHd3bK7kKo" title="Assignment Variants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Assignment Problem:</strong> Special case of transportation where each source is assigned to exactly one destination to minimize total cost.</p>
 <p><strong>Hungarian Method:</strong> Algorithm using row and column reductions to find optimal one-to-one assignment.</p>
@@ -270,14 +333,22 @@ Subject to:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A hospital assigns 4 nurses to 4 wards to minimize total patient complaints. The cost matrix shows complaint scores for each nurse-ward combination, solved by Hungarian method.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Hungarian method is always asked. Practice the line-drawing step carefully.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>RCL-CEI-AL</strong> &mdash; Row min, Column min, Cover zeros, Equal lines = optimal, Increase zeros, Assign Lines</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
 <li>Assignment assigns tasks one-to-one to minimize cost</li>
 <li>Hungarian method is the optimal solution technique</li>
 <li>Used in job assignment, machine allocation, resource matching</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u6">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 7 -->
 <div class="unit" id="u7"><h3>Unit 7: Integer &amp; Goal Programming</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Branch and Bound Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5LqdnE3OQQQ" title="Branch and Bound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Goal Programming Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/m2HnYJqU5JE" title="Goal Programming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Integer Linear Programming (ILP):</strong> LP where variables are restricted to integer values.</p>
 <p><strong>Branch and Bound:</strong> Tree-based algorithm dividing feasible region into subproblems.</p>
@@ -298,14 +369,23 @@ Where P1 &gt;&gt; P2 (lexicographic priority)</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A logistics company uses integer programming to decide which warehouses to open (binary: 0 or 1) to minimize total cost while serving all demand regions. Goal programming balances minimizing cost with maximizing customer satisfaction.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Understand when to use IP vs LP relaxation. Know difference between goal constraints and hard constraints.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>BGP-SDP</strong> &mdash; Branch and Bound, Goals with Priorities, Satisficing, Deviation variables, Penalty</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
 <li>Integer programming: discrete variables, solved by Branch and Bound</li>
 <li>Goal programming handles multiple conflicting objectives with priorities</li>
 <li>Deviational variables (d+, d-) measure goal achievement</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u7">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 8 -->
 <div class="unit" id="u8"><h3>Unit 8: Queuing Theory</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Queuing Theory Basics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JPPUIqG_2QQ" title="Queuing Theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>M/M/1 Queue Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2bH5kGfC9Xk" title="M/M/1 Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Little's Law Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Z-OjEY7kX_4" title="Little's Law" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Kendall&rsquo;s Notation:</strong> A/B/c/K/N/D &mdash; Arrival/Service/Servers/Capacity/Population/Discipline.</p>
 <p><strong>Utilization Factor:</strong> rho = lambda/mu (must be &lt; 1 for stable system).</p>
@@ -328,14 +408,22 @@ Little&rsquo;s Law:       L = lambda &times; W,  Lq = lambda &times; Wq</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A bank teller counter: customers arrive at 10/hour (Poisson), service takes 4 minutes on average (Exponential). Using M/M/1: rho = 10/15 = 0.67, L = 2 customers in system, W = 12 min average time.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>M/M/1 formulas are always asked. Remember Little&rsquo;s Law works for ALL queuing models.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>ALQ-ULW</strong> &mdash; Arrival rate, Queue length, Utilization, Little&rsquo;s Law, Waiting time</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
 <li>Queuing optimizes service systems by balancing costs</li>
 <li>Little&rsquo;s Law: L = lambda &times; W</li>
 <li>Used in banks, hospitals, call centers, traffic management</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u8">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 9 -->
 <div class="unit" id="u9"><h3>Unit 9: Game Theory</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Game Theory Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NSU3g7KpgYk" title="Game Theory Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Saddle Point &amp; Mixed Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9kMz4u7kE3k" title="Saddle Point" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Saddle Point:</strong> Cell that is minimum in its row and maximum in its column.</p>
 <p><strong>Mixed Strategy:</strong> Players randomize with specific probabilities.</p>
@@ -360,14 +448,22 @@ Value = (ad - bc) / [(a + d) - (b + c)]</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Two competing airlines (A and B) choose between high or low fares. Payoff matrix shows profits for each combination. Saddle point exists at (Low, Low) with value Rs 5 crore each &mdash; Nash equilibrium.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Always check for saddle point first. For dominance, eliminate dominated strategies to reduce matrix.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>SD-MP-DV</strong> &mdash; Saddle point check, Mixed strategy Probabilities, Dominance, Value of game</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
 <li>Game theory analyzes strategic decisions in competition</li>
 <li>Zero-sum: one&rsquo;s gain = other&rsquo;s loss</li>
 <li>Nash equilibrium: no unilateral improvement possible</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u9">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 10 -->
 <div class="unit" id="u10"><h3>Unit 10: Simulation</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Monte Carlo Simulation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7ESK5SaP-bU" title="Monte Carlo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Simulation in OR</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OgOY3H0l0J4" title="Simulation in OR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Simulation:</strong> Imitation of a real-world system&rsquo;s behavior over time using a mathematical model.</p>
 <p><strong>Monte Carlo Technique:</strong> Uses random sampling to obtain numerical results for probabilistic problems.</p>
@@ -383,14 +479,22 @@ Value = (ad - bc) / [(a + d) - (b + c)]</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>An airline uses Monte Carlo simulation to model flight delays &mdash; random variables for weather, maintenance, and crew availability help estimate probability of on-time performance over 1000 simulated days.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know how to generate random numbers from uniform and other distributions.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>DBR-GRA-SVA</strong> &mdash; Define, Build, Random numbers, Generate, Run, Analyze, Validate</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
 <li>Simulation models systems using random numbers</li>
 <li>Monte Carlo: repeated random sampling for estimation</li>
 <li>Used in finance, manufacturing, healthcare, supply chain</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u10">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 11 -->
 <div class="unit" id="u11"><h3>Unit 11: Decision Theory</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Decision Theory &amp; EMV</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/rJNlLdE-MG4" title="Decision Theory EMV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Decision Trees</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/gStbTMaG5FY" title="Decision Trees" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Decision Theory:</strong> Framework for making rational choices under conditions of certainty, risk, or uncertainty.</p>
 <p><strong>Expected Monetary Value (EMV):</strong> Weighted average of payoffs using probabilities as weights.</p>
@@ -415,14 +519,23 @@ EVPI = EMV(with perfect info) - EMV(without perfect info)</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A farmer decides whether to plant wheat, rice, or corn based on weather probabilities. EMV calculations show wheat has highest expected profit (Rs 2.5 lakh) vs rice (Rs 2.1 lakh) vs corn (Rs 1.8 lakh). EVPI = Rs 0.3 lakh &mdash; worth paying for a reliable weather forecast.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Always calculate EVPI. Decision tree problems require backward induction.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>MEML-PI</strong> &mdash; Maximin, EMV, Maximax, Laplace, Perfect Information value</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
 <li>Decision theory provides framework for rational choices under uncertainty</li>
 <li>EMV uses probability-weighted payoffs</li>
 <li>EVPI quantifies value of perfect information</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u11">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 12 -->
 <div class="unit" id="u12"><h3>Unit 12: Network Analysis (PERT/CPM)</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PERT/CPM Full Tutorial</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7o8e8q2NJkQ" title="PERT/CPM Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Network Analysis & Crashing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IkH1aFqBBJc" title="Network Crashing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Critical Path:</strong> Longest path through the network; determines minimum project duration.</p>
 <p><strong>Slack/Float:</strong> Maximum time an activity can be delayed without delaying the project (Slack = LS - ES).</p>
@@ -452,14 +565,23 @@ Backward Pass: LF(i) = min[LS(j)]</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A software company planning a product launch uses PERT/CPM to schedule design (10 days), development (30 days), testing (15 days), and deployment (5 days). Critical path is Design &rarr; Development &rarr; Testing &rarr; Deployment = 60 days minimum.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Draw network diagram first. For PERT, calculate probability using Z-score.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>FBC-CCP</strong> &mdash; Forward pass, Backward pass, Critical path, Crashing, Cost, Probability</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
 <li>PERT handles uncertainty, CPM uses deterministic times</li>
 <li>Critical path = longest path = minimum project duration</li>
 <li>Crashing reduces duration by adding resources to critical activities</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u12">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 13 -->
 <div class="unit" id="u13"><h3>Unit 13: Dynamic Programming</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Dynamic Programming Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/oBt53YbR9Kk" title="Dynamic Programming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Knapsack Problem DP</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nLmhm060PAY" title="Knapsack DP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Stage:</strong> Each step in sequential decision process.</p>
 <p><strong>State:</strong> Description of system at any stage.</p>
@@ -475,14 +597,23 @@ Backward Pass: LF(i) = min[LS(j)]</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A delivery truck with 10-ton capacity must choose from packages with different weights and values. Dynamic programming finds the combination that maximizes total value without exceeding capacity (knapsack problem).</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Define stages, states, and decision variables clearly. Always work backward.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>SSD-BW</strong> &mdash; Stages, States, Decision variables, Backward recursion, Work forward to verify</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
 <li>DP breaks problems into overlapping subproblems</li>
 <li>Uses backward induction from last stage to first</li>
 <li>Applied in shortest path, inventory, resource allocation</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u13">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 14 -->
 <div class="unit" id="u14"><h3>Unit 14: Non-Linear Programming &amp; Metaheuristics</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>KKT Conditions Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MEPp5h5_iqU" title="KKT Conditions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Genetic Algorithm Tutorial</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kHyNqSnzP8Y" title="Genetic Algorithm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>NLP:</strong> Objective or constraints are non-linear. KKT conditions for constrained NLP.</p>
 <p><strong>Metaheuristics:</strong> GA (Genetic Algorithm), Simulated Annealing, Tabu Search.</p>
@@ -499,14 +630,23 @@ Backward Pass: LF(i) = min[LS(j)]</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>A telecom company optimizes cell tower placement (non-linear: signal strength varies non-linearly with distance). Genetic Algorithm evolves candidate solutions through generations until coverage is maximized at minimum cost.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know KKT conditions conceptually. For metaheuristics, understand exploration vs exploitation trade-off.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>KKT-GCSM</strong> &mdash; KKT conditions, GA: Chromosome, Selection, Crossover, Mutation</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
 <li>NLP: non-linear objective or constraints, solved by KKT conditions</li>
 <li>Genetic Algorithm: evolutionary approach with selection, crossover, mutation</li>
 <li>Metaheuristics for complex problems without analytical solutions</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u14">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 15 -->
 <div class="unit" id="u15"><h3>Unit 15: Network Analysis &mdash; Advanced (Resource Leveling &amp; Time-Cost Trade-Off)</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Resource Leveling & Crashing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3w2VzHfq7QI" title="Resource Leveling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Time-Cost Trade-Off</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/QsJLMJlNPeE" title="Time-Cost Trade-Off" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Resource Leveling:</strong> Technique to resolve resource conflicts by adjusting start/finish dates within float.</p>
 <p><strong>Cost Slope:</strong> Additional cost per unit time reduction for an activity.</p>
@@ -532,14 +672,23 @@ Crashing Procedure:
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Construction project delayed by 2 weeks. Crashing foundation work (cost slope Rs 5,000/day) is cheaper than steel erection (Rs 15,000/day). Optimal crash balances direct + indirect costs.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Always draw the time-cost curve. Numerical on crashing with 3-4 activities is very common. Remember: after each crash, re-check the critical path.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>CST-RCI</strong> &mdash; Cost Slope lowest first, Target duration, Recalculate path, Indirect cost balance</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
 <li>Resource leveling smooths resource usage within float</li>
 <li>Crashing reduces duration at minimum cost using cost slope</li>
 <li>Optimal crash point balances direct and indirect costs</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u15">&#x1F4AC; Ask AI</button></div>
 
 <!-- UNIT 16 -->
 <div class="unit" id="u16"><h3>Unit 16: Advanced Metaheuristics &amp; Modern OR Techniques</h3>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PSO & ACO Algorithms</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JhgUp9I4P4w" title="PSO & ACO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Multi-Objective Optimization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MOuR2kL3LkQ" title="Multi-Objective Optimization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">Definition</div>
 <p><strong>Pareto Optimal Solution:</strong> Solution where no objective can be improved without worsening another.</p>
 <p><strong>Pareto Front:</strong> Set of all Pareto optimal solutions.</p>
@@ -574,11 +723,12 @@ Until convergence</div>
 <div class="callout callout-example"><div class="callout-label">Real-World Example</div><p>Vehicle routing problem solved by ACO (Google Maps). Portfolio optimization with risk-return trade-off solved by multi-objective PSO.</p></div>
 <div class="callout callout-examtip"><div class="callout-label">Exam Tip</div><p>Know the difference between single-objective and multi-objective optimization. Pareto front diagrams are frequently asked. Understand when to use PSO vs ACO vs GA.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">Memory Aid</div><p><strong>PAP-MR</strong> &mdash; PSO, ACO, Pareto front, Multi-objective, Robust optimization</p></div>
-<div class="summary-box"><div class="summary-label">Summary</div><ul>
+<div class="summary-box"><h4>&#x2705; Unit 16 Summary</h4><ul>
 <li>PSO: particles update velocity using personal best and global best positions</li>
 <li>ACO: ants deposit pheromones; shortest path gets most pheromone</li>
 <li>Pareto front: set of solutions where no objective improves without worsening another</li>
-</ul></div></div>
+</ul></div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#u16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#u16">&#x1F4AC; Ask AI</button></div>
 
 <!-- KEY FORMULAS -->
 <div class="unit" id="formulas"><h3>Key Formulas Reference</h3>
@@ -594,6 +744,7 @@ Z = (Ts - Te) / sqrt(sum sigma&sup2; on critical path)</div>
 Value = (ad-bc)/[(a+d)-(b+c)]</div>
 <h4>Decision Theory</h4>
 <div class="formula-block">EMV = Sum(Pj &times; Payoff)    EVPI = EMV(perfect info) - EMV(best without info)</div>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#formulas">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#formulas">&#x1F4AC; Ask AI</button></div>
 </div>
 
 <!-- MASTER MNEMONICS -->
@@ -617,32 +768,148 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 <tr><td>CST-RCI</td><td>Cost Slope lowest first, Target duration, Recalculate path, Indirect cost balance</td><td>Crashing &amp; Time-Cost</td></tr>
 <tr><td>PAP-MR</td><td>PSO, ACO, Pareto front, Multi-objective, Robust optimization</td><td>Advanced Metaheuristics</td></tr>
 </table>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#mnemonics">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#mnemonics">&#x1F4AC; Ask AI</button></div>
 </div>
 
 <!-- EXAM FOCUS -->
-<div class="unit" id="exam"><h3>Exam Focus</h3>
-<h4>Top 10 Most Asked Topics</h4>
+<div class="unit" id="exam"><h3>&#x1F3AF; Exam Focus</h3>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Top 10 Most Asked Topics</div>
 <ol>
-<li>LP formulation and graphical method</li>
-<li>Simplex method (tableau format)</li>
-<li>Transportation problem (VAM + MODI)</li>
-<li>Assignment problem (Hungarian method)</li>
-<li>M/M/1 queuing model (all formulas)</li>
-<li>Game theory (saddle point + mixed strategy)</li>
-<li>PERT/CPM (forward/backward pass + crashing)</li>
-<li>Decision tree with EMV</li>
-<li>Duality and shadow prices</li>
-<li>Integer programming (Branch and Bound concept)</li>
-</ol>
-<h4>Question Patterns</h4>
-<ul>
-<li>Formulate and solve LP graphically (10 marks)</li>
-<li>Solve using Simplex method (15 marks)</li>
-<li>Transportation/Assignment numerical (10 marks)</li>
-<li>Queuing model calculations (10 marks)</li>
-<li>Game theory optimal strategies (10 marks)</li>
-<li>PERT/CPM network with crashing (15 marks)</li>
-</ul>
+<li><strong>LP formulation and graphical method</strong> &#x2014; identify decision variables, objective function, constraints, plot feasible region, evaluate corner points (10 marks)</li>
+<li><strong>Simplex method (tableau format)</strong> &#x2014; standard form, initial tableau, pivot operations, optimality test (15 marks)</li>
+<li><strong>Transportation problem (VAM + MODI)</strong> &#x2014; balanced/unbalanced, initial solution by VAM, optimality by MODI, degeneracy handling (10 marks)</li>
+<li><strong>Assignment problem (Hungarian method)</strong> &#x2014; row/column reduction, line drawing, optimal assignment (10 marks)</li>
+<li><strong>M/M/1 queuing model (all formulas)</strong> &#x2014; L, Lq, W, Wq, utilization, Little's Law (10 marks)</li>
+<li><strong>Game theory (saddle point + mixed strategy)</strong> &#x2014; maximin/minimax, dominance, mixed strategy probabilities (10 marks)</li>
+<li><strong>PERT/CPM (forward/backward pass + crashing)</strong> &#x2014; ES, EF, LS, LF, slack, critical path, crash cost slope (15 marks)</li>
+<li><strong>Decision tree with EMV</strong> &#x2014; draw tree, assign probabilities, calculate EMV, EVPI (10 marks)</li>
+<li><strong>Duality and shadow prices</strong> &#x2014; formulate dual, interpret shadow prices, complementary slackness (10 marks)</li>
+<li><strong>Integer programming (Branch and Bound concept)</strong> &#x2014; branching, bounding, LP relaxation (5 marks)</li>
+</ol></div>
+
+<h4>Model Answer Structure: LP Formulation (10 marks)</h4>
+<div class="expandable-content">
+<ol>
+<li><strong>Identify decision variables (2 marks):</strong> Let x1 = units of product A, x2 = units of product B</li>
+<li><strong>Write objective function (2 marks):</strong> Maximize Z = 5x1 + 4x2 (profit per unit)</li>
+<li><strong>Write constraints (3 marks):</strong> 2x1 + 3x2 <= 120 (raw material), x1 + x2 <= 60 (labor), x1, x2 >= 0</li>
+<li><strong>Plot graph and identify feasible region (2 marks):</strong> Shade area satisfying all constraints</li>
+<li><strong>Evaluate corner points (1 mark):</strong> Calculate Z at each corner point, select maximum</li>
+</ol></div>
+
+<h4>Model Answer Structure: Simplex Method (15 marks)</h4>
+<div class="expandable-content">
+<ol>
+<li><strong>Convert to standard form (2 marks):</strong> Add slack variables, set up initial tableau</li>
+<li><strong>Initial tableau (3 marks):</strong> Identify basis, calculate Zj and Cj-Zj</li>
+<li><strong>Iteration 1 (4 marks):</strong> Select entering variable (most negative Cj-Zj), leaving variable (min ratio), pivot</li>
+<li><strong>Iteration 2 (4 marks):</strong> Repeat until all Cj-Zj >= 0</li>
+<li><strong>Optimal solution (2 marks):</strong> Read solution from final tableau, state optimal Z</li>
+</ol></div>
+
+<h4>Model Answer Structure: Transportation (10 marks)</h4>
+<div class="expandable-content">
+<ol>
+<li><strong>Check balance (1 mark):</strong> Total supply vs total demand, add dummy if needed</li>
+<li><strong>Initial solution by VAM (4 marks):</strong> Calculate penalty for each row/column, allocate to lowest cost cell in highest penalty row/column</li>
+<li><strong>Optimality check by MODI (4 marks):</strong> Calculate ui, vj for occupied cells, compute dij for unoccupied cells</li>
+<li><strong>Optimal solution (1 mark):</strong> All dij >= 0, calculate total transportation cost</li>
+</ol></div>
+
+<h4>Model Answer Structure: Queuing Theory (10 marks)</h4>
+<div class="expandable-content">
+<ol>
+<li><strong>Identify model (2 marks):</strong> M/M/1, M/M/c, etc. State arrival rate (lambda), service rate (mu)</li>
+<li><strong>Calculate utilization (2 marks):</strong> rho = lambda/mu, check stability (rho < 1)</li>
+<li><strong>Calculate performance measures (4 marks):</strong> L = lambda/(mu-lambda), Lq = rho*L, W = 1/(mu-lambda), Wq = rho*W</li>
+<li><strong>Interpret results (2 marks):</strong> Average queue length, waiting time, system performance</li>
+</ol></div>
+
+<h4>Model Answer Structure: PERT/CPM (15 marks)</h4>
+<div class="expandable-content">
+<ol>
+<li><strong>Draw network (2 marks):</strong> Activities, dependencies, node numbering</li>
+<li><strong>Forward pass (3 marks):</strong> Calculate ES, EF for all activities</li>
+<li><strong>Backward pass (3 marks):</strong> Calculate LS, LF for all activities</li>
+<li><strong>Identify critical path (2 marks):</strong> Activities with zero slack, longest path</li>
+<li><strong>Calculate project duration (1 mark):</strong> Sum of critical path durations</li>
+<li><strong>Crashing (4 marks):</strong> Calculate crash cost slope, crash critical activities, recalculate</li>
+</ol></div>
+
+<h4>Key Formulas Quick Reference</h4>
+<div class="expandable-content">
+<div class="formula-block">QUEUING THEORY:
+rho = lambda/mu (utilization)
+L = lambda/(mu - lambda) (avg in system)
+Lq = lambda^2/[mu(mu-lambda)] (avg in queue)
+W = 1/(mu - lambda) (time in system)
+Wq = lambda/[mu(mu-lambda)] (time in queue)
+Little's Law: L = lambda * W, Lq = lambda * Wq
+
+PERT:
+te = (a + 4m + b) / 6
+Variance = [(b - a) / 6]^2
+Z = (Ts - Te) / sqrt(sum of variances on critical path)
+
+GAME THEORY:
+Mixed strategy for Player 1: p = (d - c) / (a + d - b - c)
+Mixed strategy for Player 2: q = (d - b) / (a + d - b - c)
+Game value: v = (ad - bc) / (a + d - b - c)
+
+DECISION THEORY:
+EMV = sum(probability x payoff)
+EVPI = Expected with perfect info - Best EMV
+EOL = Expected Opportunity Loss
+
+TRANSPORTATION:
+MODI: dij = cij - (ui + vj) for unoccupied cells
+Crash cost slope = (Crash cost - Normal cost) / (Normal time - Crash time)
+</div></div>
+
+<h4>Comparison Tables for Quick Revision</h4>
+
+<h5>CPM vs PERT</h5>
+<table>
+<tr><th>Feature</th><th>CPM</th><th>PERT</th></tr>
+<tr><td><strong>Time Estimates</strong></td><td>Deterministic (single)</td><td>Probabilistic (a, m, b)</td></tr>
+<tr><td><strong>Focus</strong></td><td>Time-cost trade-off</td><td>Time uncertainty</td></tr>
+<tr><td><strong>Activity Times</strong></td><td>Known with certainty</td><td>Expected time calculated</td></tr>
+<tr><td><strong>Applications</strong></td><td>Construction, manufacturing</td><td>R&D, new product development</td></tr>
+<tr><td><strong>Crashing</strong></td><td>Yes (cost consideration)</td><td>Limited</td></tr>
+</table>
+
+<h5>Simplex vs Graphical Method</h5>
+<table>
+<tr><th>Feature</th><th>Graphical Method</th><th>Simplex Method</th></tr>
+<tr><td><strong>Variables</strong></td><td>2 only</td><td>Any number</td></tr>
+<tr><td><strong>Constraints</strong></td><td>Limited</td><td>Any number</td></tr>
+<tr><td><strong>Solution</strong></td><td>Visual (corner points)</td><td>Algebraic (tableau)</td></tr>
+<tr><td><strong>Accuracy</strong></td><td>Approximate</td><td>Exact</td></tr>
+<tr><td><strong>Complexity</strong></td><td>Simple</td><td>Complex but systematic</td></tr>
+</table>
+
+<h5>Transportation vs Assignment Problem</h5>
+<table>
+<tr><th>Feature</th><th>Transportation</th><th>Assignment</th></tr>
+<tr><td><strong>Objective</strong></td><td>Min cost of shipping</td><td>Min cost of assignment</td></tr>
+<tr><td><strong>Supply/Demand</strong></td><td>Multiple units</td><td>One-to-one (unit supply/demand)</td></tr>
+<tr><td><strong>Solution Method</strong></td><td>VAM + MODI</td><td>Hungarian method</td></tr>
+<tr><td><strong>Special Case</strong></td><td>General problem</td><td>Special case of transportation</td></tr>
+</table>
 </div>
 
-</main></div></body></html>
+</main></div>
+<script>
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('h3[id^="u"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic,.formula-block,.expandable-content').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});
+document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})})();
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.querySelector(".reading-progress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body></html>

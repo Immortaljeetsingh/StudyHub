@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPM-03: Product &amp; Brand Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+/* ============ MMPM-03 ENHANCED STYLES ============ */
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(253,203,110,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(253,203,110,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(253,203,110,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #fdcb6e, #fdcb6ecc, #00d4ff, #fdcb6e);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #fdcb6e, #fdcb6ecc);
+  border-radius: 2px;
+}
+
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(253,203,110,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(253,203,110,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #fdcb6e !important;
+  background: linear-gradient(135deg, rgba(253,203,110,0.05), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #fdcb6ecc !important;
+}
+.callout-examtip {
+  border-left-color: #FFD700 !important;
+  background: rgba(255,215,0,0.06) !important;
+}
+.callout-examtip .callout-label {
+  color: #FFD700 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+
+.study-header {
+  background: linear-gradient(135deg, rgba(253,203,110,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(253,203,110,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+.summary-box {
+  border: 1px solid rgba(253,203,110,0.3) !important;
+  background: linear-gradient(135deg, rgba(253,203,110,0.05), rgba(255,215,0,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(253,203,110,0.15) !important;
+}
+
+.subject-tag {
+  background: linear-gradient(135deg, #fdcb6e, #fdcb6ecc) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(253,203,110,0.08), rgba(0,210,255,0.06));
+  border: 1px solid rgba(253,203,110,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fdcb6e, #fdcb6ecc, #FFD700);
+}
+.visual-diagram h5 {
+  color: #fdcb6e;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(253,203,110,0.3);
+}
+.vd-arrow {
+  display: inline-block;
+  color: #fdcb6e;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(253,203,110,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(253,203,110,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #fdcb6e, #fdcb6ecc); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(253,203,110,0.3);
+}
+.flow-visual .arrow {
+  color: #fdcb6e;
+  font-size: 1.4rem;
+}
+
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpm03">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-03'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPM-03</span></div>
+<nav class="sidebar-nav">
+<a href="#u1">Unit 1: Product Concept &amp; Mix</a>
+<a href="#u2">Unit 2: Product Line Decisions</a>
+<a href="#u3">Unit 3: Product Life Cycle</a>
+<a href="#u4">Unit 4: Product Strategy &amp; NPD Planning</a>
+<a href="#u5">Unit 5: Organizing for NPD</a>
+<a href="#u6">Unit 6: Idea Generation &amp; Screening</a>
+<a href="#u7">Unit 7: Concept Development &amp; Testing</a>
+<a href="#u8">Unit 8: New Product Launch</a>
+<a href="#u9">Unit 9: Brand Concepts &amp; Evolution</a>
+<a href="#u10">Unit 10: Brand Equity</a>
+<a href="#u11">Unit 11: Brand Identity &amp; Positioning</a>
+<a href="#u12">Unit 12: Brand Architecture &amp; Extension</a>
+<a href="#u13">Unit 13: Enhancing Brand Equity</a>
+<a href="#u14">Unit 14: Managing Brands Over Time</a>
+<a href="#u15">Unit 15: Measuring Brand Equity</a>
+<a href="#mnemonics">Master Mnemonics</a>
+<a href="quiz-mmpm03.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPM-03</span><h1>Product &amp; Brand Management</h1><p>Comprehensive Study Notes &#x2014; 15 Units &#x2022; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== UNIT 1 ==================== -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Product Concept &amp; Product Mix Decisions</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Concept & Levels</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kG9YwMG-GmQ" title="Product Concept & Levels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Mix Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NpyA3FBN-sI" title="Product Mix Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>A <strong>Product</strong> is anything offered to a market for attention, acquisition, use, or consumption. Theodore Levitt: "Products are almost always a combination of the tangible and the intangible." A product is a <strong>complex cluster of value satisfactions</strong>.</p></div>
+
+<h4>Kotler's 5 Product Levels</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; The 5 Product Levels (Core to Potential)</h5>
+<div class="vd-row">
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>Level 1:</strong> Core Benefit</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Level 2:</strong> Basic Product</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Level 3:</strong> Expected Product</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Level 4:</strong> Augmented Product</div>
+<div class="vd-arrow">&#x2192;</div>
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)"><strong>Level 5:</strong> Potential Product</div>
+</div>
+</div>
+
+<h4>Product Classification</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F6D2; Consumer Goods</h5><ul>
+<li><strong>Convenience:</strong> Frequent, low effort (Parle-G, Colgate)</li>
+<li><strong>Shopping:</strong> Comparison on quality/price (Allen Solly, Godrej Furniture)</li>
+<li><strong>Specialty:</strong> Brand loyalty, unique (Rolex, BMW, Tanishq)</li>
+<li><strong>Unsought:</strong> Not actively sought (LIC, Amway)</li>
+</ul></div>
+<div class="cc"><h5>&#x1F3ED; Industrial Goods</h5><ul>
+<li><strong>Materials &amp; Parts:</strong> Raw materials, components</li>
+<li><strong>Capital Items:</strong> Installations, equipment</li>
+<li><strong>Supplies &amp; Services:</strong> Maintenance, operating supplies</li>
+</ul></div>
+</div>
+
+<h4>Product Mix Dimensions</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Dimension</th><th>Measures</th><th>Example (Amul)</th></tr></thead>
+<tbody>
+<tr><td><strong>Width</strong></td><td>Number of product lines</td><td>Butter, Cheese, Milk, Ice Cream, Chocolate</td></tr>
+<tr><td><strong>Length</strong></td><td>Total items across lines</td><td>200+ ice cream SKUs</td></tr>
+<tr><td><strong>Depth</strong></td><td>Variants per product</td><td>Butter: 10g, 100g, 500g, 1kg</td></tr>
+<tr><td><strong>Consistency</strong></td><td>Relatedness of lines</td><td>All dairy-based = high consistency</td></tr>
+</tbody></table></div>
+
+<h4>Line Stretching</h4>
+<ul>
+<li><strong>Downward:</strong> Premium to lower (Surf Excel &#x2192; Wheel)</li>
+<li><strong>Upward:</strong> Entry to premium (Lifebuoy &#x2192; premium liquid handwash)</li>
+<li><strong>Two-way:</strong> Both directions (LG: Rs 6,000 economy to Rs 1,55,000 premium)</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CB-EPAP"</strong> &#x2014; Core, Basic, Expected, Augmented, Potential (Kotler's 5 Levels). <strong>"WLDC"</strong> &#x2014; Width, Length, Depth, Consistency.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Group:</strong> Wide product mix (cars, IT, steel, tea). Each Tata brand has dedicated product managers managing the product lifecycle end-to-end.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Always draw Kotler's 5 levels as a concentric circle diagram. Explain each level with examples. Product Manager concept originated at P&amp;G in 1931 (McElroy Memo).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Kotler's 5 levels: Core &#x2192; Basic &#x2192; Expected &#x2192; Augmented &#x2192; Potential</li>
+<li>Products classified as Consumer (CSSU) and Industrial (MCS) goods</li>
+<li>Product Mix: Width, Length, Depth, Consistency</li>
+<li>Line stretching: downward, upward, two-way</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 2 ==================== -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Product Line Decisions</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Line Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Product Line Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Line Length</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hHWGBkNJKOs" title="Product Line Length" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Product Line</strong> = group of closely related products. Product line length is optimal when adding an item increases total profit.</p></div>
+
+<h4>Product Line Strategies</h4>
+<div class="cg">
+<div class="cc"><h5>&#x2B07; Stretching</h5><ul>
+<li><strong>Upward:</strong> Entering premium (Toyota &#x2192; Lexus)</li>
+<li><strong>Downward:</strong> Entering lower-end (Mercedes &#x2192; A-Class)</li>
+<li><strong>Two-way:</strong> Both ends (Maruti: Alto + Ciaz)</li>
+</ul></div>
+<div class="cc"><h5>&#x2699; Other Strategies</h5><ul>
+<li><strong>Filling:</strong> Adding items within current range</li>
+<li><strong>Modernization:</strong> Updating technology/features</li>
+<li><strong>Featuring:</strong> Highlighting specific items</li>
+<li><strong>Pruning:</strong> Removing weak items (HUL: 110+ &#x2192; ~30 power brands)</li>
+</ul></div>
+</div>
+
+<h4>Line Extension: Advantages vs Disadvantages</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Advantages (7)</th><th>Disadvantages (6)</th></tr></thead>
+<tbody>
+<tr><td>Consumer variety-seeking</td><td>Weaker line logic</td></tr>
+<tr><td>Increased shelf space</td><td>Lower brand loyalty</td></tr>
+<tr><td>Pricing breadth</td><td>Underexploited ideas</td></tr>
+<tr><td>Short-term sales gains</td><td>Stagnant category demand</td></tr>
+<tr><td>Competitive defense</td><td>Poorer trade relations</td></tr>
+<tr><td>Capacity utilization</td><td>More competitor opportunities</td></tr>
+<tr><td>Full line offering</td><td>&#x2014;</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-F-M-F-P"</strong> &#x2014; Stretching, Filling, Modernization, Featuring, Pruning.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Samsung:</strong> Stretches phones upward (Galaxy S Ultra), mid-range (Galaxy A), budget (Galaxy M) simultaneously.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Line extensions rarely expand total category demand &#x2014; they mainly redistribute market share. Mention cannibalization risk.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Strategies: Stretching, Filling, Modernization, Featuring, Pruning</li>
+<li>Extensions have 7 advantages and 6 disadvantages</li>
+<li>Successful pruning (HUL, Titan) keeps portfolios profitable</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 3 ==================== -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Product Life Cycle (PLC)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>NPD Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="NPD Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Idea Generation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PcSMqJMBXNg" title="Idea Generation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>PLC describes the stages a product goes through from launch to withdrawal. Each stage requires different marketing strategies.</p></div>
+
+<h4>PLC Stages</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; PLC Curve</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>Introduction</strong><br><small>Low sales, negative profits</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Growth</strong><br><small>Rapid rise, peak profits</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Maturity</strong><br><small>Plateau, declining profits</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Decline</strong><br><small>Falling sales, low profits</small></div>
+</div>
+</div>
+
+<h4>Strategy at Each Stage</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Element</th><th>Introduction</th><th>Growth</th><th>Maturity</th><th>Decline</th></tr></thead>
+<tbody>
+<tr><td><strong>Objective</strong></td><td>Create awareness</td><td>Maximize share</td><td>Maximize profit</td><td>Reduce expenditure</td></tr>
+<tr><td><strong>Price</strong></td><td>Skimming/penetration</td><td>Competitive</td><td>Price wars</td><td>Deep discounts</td></tr>
+<tr><td><strong>Distribution</strong></td><td>Selective</td><td>Intensive</td><td>Losing outlets</td><td>Phase out weak</td></tr>
+<tr><td><strong>Advertising</strong></td><td>Inform</td><td>Brand merits</td><td>Differentiation</td><td>Minimal</td></tr>
+</tbody></table></div>
+
+<h4>Rogers' Diffusion of Innovation</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F30F; Adopter Categories</h5><ul>
+<li><strong>Innovators (2.5%)</strong></li>
+<li><strong>Early Adopters (13.5%)</strong></li>
+<li><strong>Early Majority (34%)</strong></li>
+<li><strong>Late Majority (34%)</strong></li>
+<li><strong>Laggards (16%)</strong></li>
+</ul></div>
+<div class="cc"><h5>&#x2699; Adoption Factors</h5><ul>
+<li><strong>Relative Advantage</strong></li>
+<li><strong>Compatibility</strong></li>
+<li><strong>Complexity</strong></li>
+<li><strong>Trialability</strong></li>
+<li><strong>Observability</strong></li>
+</ul></div>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"IGMD"</strong> &#x2014; Introduction, Growth, Maturity, Decline. <strong>"RCCTO"</strong> &#x2014; Relative advantage, Compatibility, Complexity, Trialability, Observability.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Jio (2016-2023):</strong> Introduction &#x2192; free data (penetration pricing). Growth &#x2192; 300M+ subscribers. Maturity &#x2192; ARPU stabilization, JioFiber, JioMart.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>PLC must be understood at 3 levels: Product Class (longest), Product Form (most predictable), Brand (shortest). Always mention limitations.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>PLC: Introduction, Growth, Maturity, Decline</li>
+<li>Each stage requires different product, price, promotion, distribution strategies</li>
+<li>Rogers' 5 adopter categories and 5 adoption factors</li>
+<li>PLC is useful as planning tool but has limitations</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 4 ==================== -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Product Strategy &amp; New Product Planning</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Launch Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Product Launch Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Test Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="Test Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Ansoff's Growth Matrix defines four growth strategies. ~80-90% of new products fail due to poor market research, overestimating demand, or wrong positioning.</p></div>
+
+<h4>Ansoff's Growth Matrix</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Ansoff Matrix (2x2)</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Market Penetration</strong><br><small>Existing Products + Existing Markets</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Product Development</strong><br><small>New Products + Existing Markets</small></div>
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>Market Development</strong><br><small>Existing Products + New Markets</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Diversification</strong><br><small>New Products + New Markets</small></div>
+</div>
+</div>
+
+<h4>New Product Categories</h4>
+<ul>
+<li><strong>New-to-the-world:</strong> True innovations (iPhone 2007)</li>
+<li><strong>New product lines:</strong> Tata entering telecom</li>
+<li><strong>Additions to existing lines:</strong> New Oreo flavor</li>
+<li><strong>Repositioning:</strong> Old Spice rebranding</li>
+<li><strong>Cost reductions:</strong> Cheaper manufacturing versions</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"MMPD"</strong> &#x2014; Market penetration, Market development, Product development, Diversification.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Google Glass</strong> failed (poor timing, privacy concerns). <strong>Maggi</strong> succeeded through market penetration (affordable pricing).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw Ansoff Matrix as 2x2 grid. Give Indian examples for each quadrant. Discuss first-mover vs fast-follower.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Ansoff Matrix: Penetration, Product Dev, Market Dev, Diversification</li>
+<li>5 new product categories with examples</li>
+<li>~80-90% new products fail; key reasons identified</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 5 ==================== -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Organizing for New Product Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Life Cycle</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Product Life Cycle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>PLC Stages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hHWGBkNJKOs" title="PLC Stages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>NPD organization structure must match company's innovation needs. Responsibility levels: Corporate (strategic), Divisional (product-line), Operational (functional).</p></div>
+
+<h4>Organizational Structures for NPD</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Structure</th><th>Level</th><th>Duration</th><th>Character</th></tr></thead>
+<tbody>
+<tr><td><strong>New Product Department</strong></td><td>Corporate</td><td>Permanent</td><td>Dedicated, strategic</td></tr>
+<tr><td><strong>New Product Committee</strong></td><td>Corporate</td><td>Permanent</td><td>Cross-functional</td></tr>
+<tr><td><strong>Ad Hoc Committee</strong></td><td>Division</td><td>Temporary</td><td>Specific project</td></tr>
+<tr><td><strong>Task Force</strong></td><td>Operations</td><td>Temporary</td><td>Tactical, focused</td></tr>
+<tr><td><strong>Venture Team</strong></td><td>Corporate</td><td>Temporary</td><td>Entrepreneurial</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Product Manager System:</strong> One manager per brand/product (P&amp;G model)</li>
+<li><strong>Matrix Organization:</strong> Product managers + Marketing managers dual reporting</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"DCA-TV"</strong> &#x2014; Department, Committee, Ad hoc, Task force, Venture team.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Apple</strong> uses functional structure with dedicated product teams. <strong>P&amp;G</strong> uses brand managers for each product.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare centralized vs decentralized NPD structures with advantages/disadvantages.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>5 NPD structures: Department, Committee, Ad Hoc, Task Force, Venture Team</li>
+<li>Product Manager System and Matrix Organization models</li>
+<li>Structure must match innovation needs and company size</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 6 ==================== -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Idea Generation, Screening &amp; Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand vs Product</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/KsEAn8A-tBQ" title="Brand vs Product" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Branding Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MjSqQcNQqXE" title="Branding Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Idea generation sources include internal (R&amp;D, employees) and external (customers, competitors). Creative techniques: Brainstorming, Synectics, Attribute listing, Mind mapping.</p></div>
+
+<h4>Drop/Error Matrix</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Screening Decision Matrix</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(52,211,153,0.3);border:1px solid rgba(52,211,153,0.5)"><strong>Good Idea + Accept</strong><br><small>Correct Decision &#x2714;</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.3);border:1px solid rgba(248,113,113,0.5)"><strong>Good Idea + Drop</strong><br><small>Error of Omission &#x2718;</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.3);border:1px solid rgba(248,113,113,0.5)"><strong>Bad Idea + Accept</strong><br><small>Error of Commission &#x2718;</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.3);border:1px solid rgba(52,211,153,0.5)"><strong>Bad Idea + Drop</strong><br><small>Correct Decision &#x2714;</small></div>
+</div>
+</div>
+
+<h4>NPD Process Steps</h4>
+<div class="flow-visual">
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Idea Generation</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Screening</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Concept Development</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Business Analysis</div>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-S-C-B"</strong> &#x2014; Idea generation, Screening, Concept development, Business analysis.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Post-it Notes</strong> came from a failed adhesive experiment at 3M &#x2014; the "error of omission" was avoided.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain the Drop/Error matrix with examples. Examiners love this concept.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Idea sources: Internal (R&amp;D, employees) and External (VOC, competitors)</li>
+<li>Drop/Error Matrix: 4 quadrants for screening decisions</li>
+<li>NPD Process: Idea &#x2192; Screening &#x2192; Concept &#x2192; Business Analysis</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 7 ==================== -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Concept Development, Testing &amp; Physical Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Equity - Aaker</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FsFNrbfSnM8" title="Brand Equity - Aaker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Keller CBBE</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Keller CBBE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Concept testing methods include statements, boards, and prototypes. Quality Function Deployment (QFD) translates customer needs into technical requirements.</p></div>
+
+<h4>Test Marketing Types</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Validity</th><th>Cost</th></tr></thead>
+<tbody>
+<tr><td><strong>Standard Test Market</strong></td><td>Full market test</td><td>Highest</td><td>High</td></tr>
+<tr><td><strong>Controlled Test Market</strong></td><td>Limited distribution</td><td>Medium</td><td>Medium</td></tr>
+<tr><td><strong>Simulated Test Market</strong></td><td>Lab-based</td><td>Lower</td><td>Lowest</td></tr>
+</tbody></table></div>
+
+<h4>Product Development Steps</h4>
+<div class="flow-visual">
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Prototype</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Lab Testing</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">User/Beta Testing</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Market Testing</div>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-L-U-M"</strong> &#x2014; Concept testing, Lab testing, User testing, Market testing.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Gmail</strong> was in beta for 5 years. <strong>Maruti</strong> tests new models in controlled environments before launch.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare three test marketing types in a table. Explain QFD's House of Quality structure.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Concept testing: statements, boards, prototypes</li>
+<li>3 test marketing types: Standard, Controlled, Simulated</li>
+<li>QFD translates customer needs to technical requirements</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 8 ==================== -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: New Product Launch</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Positioning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Brand Positioning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Positioning Maps</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="Positioning Maps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Launch decisions follow W-W-W-H: When (timing), Where (geographic), To Whom (target), How (marketing mix).</p></div>
+
+<h4>Launch Timing Strategies</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Strategy</th><th>Description</th><th>Advantage</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>First Entry</strong></td><td>Pioneer/first-mover</td><td>Brand recognition, lock-in</td><td>Apple iPhone</td></tr>
+<tr><td><strong>Parallel Entry</strong></td><td>Same time as competitors</td><td>Ride competitor awareness</td><td>Samsung Galaxy</td></tr>
+<tr><td><strong>Late Entry</strong></td><td>After competitors</td><td>Learn from pioneer mistakes</td><td>Jio in telecom</td></tr>
+</tbody></table></div>
+
+<h4>Rollout Strategy</h4>
+<ul>
+<li>Phased: Pilot market &#x2192; Regional &#x2192; National &#x2192; International</li>
+<li><strong>Pioneer Advantage:</strong> Brand recognition, distribution lock-in, switching costs</li>
+<li><strong>Fast Follower:</strong> Second entrant learns from pioneer's mistakes (Samsung followed Apple)</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"W-W-W-H"</strong> &#x2014; When, Where, To Whom, How.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Jio</strong> was a late entrant but used aggressive pricing to disrupt telecom. <strong>Apple</strong> was a smartphone pioneer.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss first-mover vs fast-follower with Indian market examples.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>W-W-W-H: When, Where, To Whom, How</li>
+<li>First entry, parallel entry, late entry strategies</li>
+<li>Rollout: Pilot &#x2192; Regional &#x2192; National &#x2192; International</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 9 ==================== -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Brand Concepts &amp; Evolution</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Architecture</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NpyA3FBN-sI" title="Brand Architecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Extensions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="Brand Extensions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Brand</strong> = name, term, design, symbol, or feature that distinguishes one seller's product. Functions: Identification, Quality assurance, Risk reducer, Status symbol.</p></div>
+
+<h4>Brand Name Types</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Descriptive</strong></td><td>Describes product</td><td>Clean &amp; Clear</td></tr>
+<tr><td><strong>Suggestive</strong></td><td>Suggests benefit</td><td>Surya (lighting)</td></tr>
+<tr><td><strong>Arbitrary</strong></td><td>Real word, unrelated</td><td>Apple (computers)</td></tr>
+<tr><td><strong>Fanciful</strong></td><td>Invented word</td><td>Kodak, Xerox</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Family Branding:</strong> Umbrella (Tata, Reliance)</li>
+<li><strong>Individual Branding:</strong> Separate brands (P&amp;G: Tide, Ariel)</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"DSAF"</strong> &#x2014; Descriptive, Suggestive, Arbitrary, Fanciful.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Amul</strong> uses family branding across butter, milk, ice cream. <strong>P&G</strong> uses individual branding.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the difference between descriptive, suggestive, arbitrary, and fanciful brand names. Give 2 Indian examples of each. Family branding (Tata, Reliance) vs individual branding (P&amp;G: Tide, Pampers) is a common comparison question.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>Brand functions: Identification, Quality, Risk reduction, Status</li>
+<li>4 name types: Descriptive, Suggestive, Arbitrary, Fanciful</li>
+<li>Family vs Individual branding strategies</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 10 ==================== -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Brand Equity</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Managing Brands</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kG9YwMG-GmQ" title="Managing Brands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Revitalization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Brand Revitalization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Brand Equity</strong> = differential effect of brand knowledge on consumer response to marketing.</p></div>
+
+<h4>Aaker's Brand Equity Model (5 Components)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Aaker's 5 Components</h5>
+<div class="vd-row">
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Brand Awareness</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Brand Associations</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Perceived Quality</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Brand Loyalty</div>
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">Proprietary Assets</div>
+</div>
+</div>
+
+<h4>Keller's CBBE Model (6 Building Blocks)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Keller's CBBE Pyramid</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(253,203,110,0.3);border:1px solid rgba(253,203,110,0.5);width:50%;text-align:center"><strong>Brand Resonance</strong> (Peak: loyalty, community)</div>
+<div style="font-size:1.2rem;color:rgba(253,203,110,0.6)">&#x2191;</div>
+<div style="display:flex;gap:0.5rem">
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Judgments</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Feelings</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,0.6)">&#x2191;</div>
+<div style="display:flex;gap:0.5rem">
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Performance</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Imagery</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(52,211,153,0.6)">&#x2191;</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);width:70%;text-align:center"><strong>Brand Salience</strong> (Foundation: awareness)</div>
+</div>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"BAPLP"</strong> &#x2014; Brand awareness, Associations, Perceived quality, Loyalty, Proprietary assets.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Apple</strong> has massive brand equity &#x2014; consumers pay premium for iPhone vs comparable Android phones.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw both Aaker's and Keller's models. Compare them in a table.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Aaker's 5 components: Awareness, Associations, Quality, Loyalty, Proprietary</li>
+<li>Keller's CBBE: Salience &#x2192; Performance/Imagery &#x2192; Judgments/Feelings &#x2192; Resonance</li>
+<li>Measurement: Financial and Consumer-based approaches</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 11 ==================== -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Brand Identity, Image &amp; Positioning</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Packaging Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/KsEAn8A-tBQ" title="Packaging Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Labeling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MjSqQcNQqXE" title="Labeling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Brand Identity</strong> = how brand WANTS to be perceived. <strong>Brand Image</strong> = how consumers ACTUALLY perceive it. <strong>Brand Positioning</strong> = designing offer to occupy distinctive place in mind.</p></div>
+
+<h4>Positioning Strategies</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Strategy</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>By attribute/feature</td><td>Volvo = safety</td></tr>
+<tr><td>By benefit</td><td>Colgate = cavity protection</td></tr>
+<tr><td>By use/application</td><td>Red Bull = energy</td></tr>
+<tr><td>By user category</td><td>Tropicana = health-conscious</td></tr>
+<tr><td>By competitor</td><td>Pepsi vs Coca-Cola</td></tr>
+<tr><td>By price/quality</td><td>Luxury vs Economy</td></tr>
+</tbody></table></div>
+
+<h4>Kapferer's Brand Identity Prism (6 Dimensions)</h4>
+<div class="vd-row">
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Physique</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Personality</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Culture</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Relationship</div>
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">Reflection</div>
+<div class="vd-node" style="background:rgba(253,203,110,0.15);border:1px solid rgba(253,203,110,0.3)">Self-image</div>
+</div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"IIP"</strong> &#x2014; Identity, Image, Positioning.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Maggi</strong> positioned as "2-minute noodles" &#x2014; use/application positioning.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Kapferer's Brand Identity Prism has 6 dimensions &#x2014; always draw the diagram. Key distinction: Identity is how the COMPANY wants to be perceived; Image is how CONSUMERS actually perceive it. Positioning maps are frequently asked.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>Identity (company view) vs Image (consumer view)</li>
+<li>6 positioning strategies with examples</li>
+<li>Kapferer's 6-dimension Brand Identity Prism</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 12 ==================== -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Brand Architecture &amp; Brand Extension</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Warranties & Guarantees</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FsFNrbfSnM8" title="Warranties & Guarantees" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Service Quality</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Service Quality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Brand Architecture</strong> = hierarchy of brands within a company. Brand Extension = using existing brand name for new product category.</p></div>
+
+<h4>Brand Architecture Strategies</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Strategy</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Branded House</strong></td><td>Single master brand</td><td>Google, Virgin</td></tr>
+<tr><td><strong>House of Brands</strong></td><td>Separate brands</td><td>P&amp;G (Tide, Pampers)</td></tr>
+<tr><td><strong>Endorsed Brands</strong></td><td>Parent endorses sub-brands</td><td>Marriott Bonvoy</td></tr>
+<tr><td><strong>Sub-brands</strong></td><td>Variant within master brand</td><td>iPhone Pro Max</td></tr>
+</tbody></table></div>
+
+<h4>Brand Extension Types</h4>
+<ul>
+<li><strong>Line Extension:</strong> Same category, new variant (Coca-Cola Zero)</li>
+<li><strong>Category Extension:</strong> New category (Maruti insurance)</li>
+<li><strong>Co-branding:</strong> Two brands together (Nike + Apple)</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"BH-HE-ES"</strong> &#x2014; Branded House, House of Brands, Endorsed Brands, Sub-brands.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata</strong> successfully extends across salt, tea, cars, IT. <strong>Virgin</strong> extends to airlines, music, mobile.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Brand architecture has 4 strategies &#x2014; draw a comparison table. Always discuss risks of brand extension: brand dilution, cannibalization. Co-branding examples (Nike+Apple, Tata+Starbucks) score extra marks.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>4 architecture strategies: Branded House, House of Brands, Endorsed, Sub-brands</li>
+<li>Line vs Category extension with success factors and risks</li>
+<li>Co-branding examples and benefits</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 13 ==================== -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Enhancing Brand Equity</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Marketing Mix - Product</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Marketing Mix - Product" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>4Ps of Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="4Ps of Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Brand equity is enhanced through: selecting brand elements, delivering on brand promise, building associations, and deepening emotional connect.</p></div>
+
+<h4>Levers for Enhancing Brand Equity</h4>
+<div class="flow-visual">
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Select Elements</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Deliver Promise</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Build Associations</div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Deepen Connect</div>
+</div>
+
+<ul>
+<li><strong>IMC Tools:</strong> Advertising, PR, Sales promotion, Direct marketing, Digital marketing, Events</li>
+<li><strong>Brand Authenticity:</strong> Being genuine, transparent, consistent</li>
+<li><strong>Brand Advocacy:</strong> Loyal customers who actively promote</li>
+<li><strong>Crisis Management:</strong> Protecting equity during negative events</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-D-B-D"</strong> &#x2014; Select elements, Deliver promise, Build associations, Deepen connect.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Amul</strong> built brand equity through consistent advertising (Amul Girl) for decades.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>IMC (Integrated Marketing Communication) ensures all brand touchpoints deliver a consistent message. Use the S-D-B-D mnemonic. Crisis management is a growing exam topic &#x2014; mention Maggi ban (2015) and its comeback as a classic case.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>4 levers: Select, Deliver, Build, Deepen</li>
+<li>IMC tools work together for consistent messaging</li>
+<li>Authenticity and advocacy strengthen equity</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 14 ==================== -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Managing Brands Over Time &amp; Geographies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Digital Product Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NpyA3FBN-sI" title="Digital Product Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>SaaS Products</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="SaaS Products" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p><strong>Brand Reinforcement:</strong> Consistent positioning, innovation, heritage. <strong>Brand Revitalization:</strong> Expand usage, enter new markets, reposition. <strong>Glocalization:</strong> Thinking globally, acting locally.</p></div>
+
+<h4>Global Branding Approaches</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Approach</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Standardization</strong></td><td>Same brand everywhere</td><td>Coca-Cola</td></tr>
+<tr><td><strong>Adaptation</strong></td><td>Local modifications</td><td>McDonald's McAloo Tikki</td></tr>
+<tr><td><strong>Glocalization</strong></td><td>Global strategy, local execution</td><td>KFC menu adaptation</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"R-GA"</strong> &#x2014; Reinforce, Revitalize, Global Adaptation.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>McDonald's</strong> glocalizes (McAloo Tikki in India, Teriyaki in Japan). <strong>KFC</strong> adapts menus globally.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Standardization vs Adaptation is a classic exam debate. Always give Indian examples: McDonald's McAloo Tikki (adaptation), Coca-Cola (standardization). Glocalization is the best-of-both answer. Mention brand revitalization with real cases.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>Reinforcement and revitalization strategies</li>
+<li>Standardization vs Adaptation debate</li>
+<li>Glocalization: think global, act local</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== UNIT 15 ==================== -->
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Measuring Brand Equity</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Case Studies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kG9YwMG-GmQ" title="Case Studies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Indian Brands</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Indian Brands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+<p>Brand equity measurement approaches: Financial (price premium, royalty relief), Consumer-based (awareness, associations, loyalty), and Tracking studies.</p></div>
+
+<h4>Measurement Approaches</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Approach</th><th>Methods</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td><strong>Financial</strong></td><td>Price premium, royalty relief, stock market</td><td>Objective, comparable</td><td>Ignores consumer perception</td></tr>
+<tr><td><strong>Consumer-based</strong></td><td>Awareness, associations, loyalty metrics</td><td>Captures perception</td><td>Subjective, hard to monetize</td></tr>
+<tr><td><strong>Combined</strong></td><td>Interbrand model (financial + brand role + strength)</td><td>Holistic view</td><td>Complex methodology</td></tr>
+</tbody></table></div>
+
+<h4>Brand Equity Models</h4>
+<ul>
+<li><strong>Aaker's Brand Equity Ten:</strong> 10 measures across 5 categories</li>
+<li><strong>Keller's CBBE Model:</strong> 6 dimensions from Salience to Resonance</li>
+<li><strong>Interbrand Model:</strong> Financial + brand role + brand strength</li>
+<li><strong>Brand Tracking Studies:</strong> Ongoing monitoring of brand health metrics</li>
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"F-C-T"</strong> &#x2014; Financial, Consumer-based, Tracking.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Interbrand</strong> valued Apple at $400+ billion, making it the world's most valuable brand.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare financial vs consumer-based measurement approaches. Always mention Interbrand model for higher marks.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
+<li>3 approaches: Financial, Consumer-based, Combined</li>
+<li>Key models: Aaker's Ten, Keller's CBBE, Interbrand</li>
+<li>Brand tracking studies for ongoing monitoring</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== MASTER MNEMONICS TABLE ==================== -->
+<div class="unit" id="mnemonics">
+<h3>Master Mnemonics Table</h3>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>CB-EPAP</strong></td><td>Core, Basic, Expected, Augmented, Potential</td><td>Kotler's 5 Product Levels</td></tr>
+<tr><td><strong>S-F-M-F-P</strong></td><td>Stretching, Filling, Modernization, Featuring, Pruning</td><td>Product Line Strategies</td></tr>
+<tr><td><strong>IGMD</strong></td><td>Introduction, Growth, Maturity, Decline</td><td>Product Life Cycle</td></tr>
+<tr><td><strong>MMPD</strong></td><td>Market penetration, Market dev, Product dev, Diversification</td><td>Ansoff Matrix</td></tr>
+<tr><td><strong>DCA-TV</strong></td><td>Department, Committee, Ad hoc, Task force, Venture</td><td>NPD Structures</td></tr>
+<tr><td><strong>I-S-C-B</strong></td><td>Idea generation, Screening, Concept development, Business analysis</td><td>NPD Process</td></tr>
+<tr><td><strong>C-L-U-M</strong></td><td>Concept, Lab, User, Market testing</td><td>Product Development Steps</td></tr>
+<tr><td><strong>W-W-W-H</strong></td><td>When, Where, To Whom, How</td><td>Launch Decisions</td></tr>
+<tr><td><strong>DSAF</strong></td><td>Descriptive, Suggestive, Arbitrary, Fanciful</td><td>Brand Name Types</td></tr>
+<tr><td><strong>BAPLP</strong></td><td>Awareness, Associations, Perceived quality, Loyalty, Proprietary</td><td>Aaker's Brand Equity</td></tr>
+<tr><td><strong>IIP</strong></td><td>Identity, Image, Positioning</td><td>Brand Building Blocks</td></tr>
+<tr><td><strong>BH-HE-ES</strong></td><td>Branded House, House of Brands, Endorsed, Sub-brands</td><td>Brand Architecture</td></tr>
+<tr><td><strong>S-D-B-D</strong></td><td>Select, Deliver, Build, Deepen</td><td>Enhancing Brand Equity</td></tr>
+<tr><td><strong>R-GA</strong></td><td>Reinforce, Revitalize, Global Adaptation</td><td>Brand Management Over Time</td></tr>
+<tr><td><strong>F-C-T</strong></td><td>Financial, Consumer-based, Tracking</td><td>Measuring Brand Equity</td></tr>
+</tbody></table></div>
+</div>
+
+</main>
+</div>
+
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll progress bar
+window.addEventListener('scroll', function() {
+  var scrolled = window.scrollY;
+  var total = document.documentElement.scrollHeight - window.innerHeight;
+  var progress = (scrolled / total) * 100;
+  var bar = document.querySelector('.reading-progress');
+  if (bar) bar.style.width = progress + '%';
+});
+
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic, .callout-examtip').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+})();
+
+function toggleMobileSidebar() {
+  document.querySelector('.study-sidebar').classList.toggle('open');
+}
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

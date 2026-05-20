@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-13: Business Law | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,0.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,0.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,0.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,0.12),transparent),radial-gradient(1px 1px at 10% 80%,rgba(0,210,255,0.15),transparent),radial-gradient(2px 2px at 90% 40%,rgba(255,215,0,0.2),transparent),radial-gradient(1px 1px at 50% 50%,rgba(214,48,49,0.15),transparent),radial-gradient(1.5px 1.5px at 30% 90%,rgba(0,210,255,0.2),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}
+.study-content{flex:1;padding:2rem;min-width:0}
+.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.25rem}
+.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}
+.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(214,48,49,0.15),rgba(0,210,255,0.1));border:1px solid rgba(200,200,200,0.12);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(214,48,49,0.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
+@keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:0.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:0.8}}
+.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em;position:relative}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
+.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#e74c3c);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem;border:none}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.unit.visible{opacity:1;transform:translateY(0)}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}
+h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#e74c3c,#00d4ff,#d63031);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.section{margin-bottom:1.25rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}
+.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}
+.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
+.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,0.12)}
+.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}
+.callout-important{background:rgba(255,215,0,.06);border-color:#FFD700}
+.callout-important .callout-label{color:#FFD700}
+.callout-example{background:rgba(176,176,176,.06);border-color:#b0b0b0}
+.callout-mnemonic{background:linear-gradient(135deg,rgba(200,200,200,.05),rgba(0,210,255,.05));border-color:#c8c8c8}
+.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}
+.kt strong{color:#ffd700}
+.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
+.s-b{background:rgba(214,48,49,.15);color:#ff7675;border:1px solid rgba(214,48,49,.3)}
+.fc{display:flex;flex-direction:column;align-items:center;gap:0;margin:1.5rem 0}
+.fc-s{display:flex;align-items:center;gap:.75rem;padding:.75rem 1.25rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;min-width:280px;transition:transform .2s,background .2s}
+.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2);background:rgba(255,255,255,.05)}
+.fc-n{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#d63031,#e74c3c);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.fc-l{font-size:.9rem;color:rgba(255,255,255,.85)}.fc-l small{color:rgba(255,255,255,.5);font-size:.78rem}
+.fc-a{font-size:1.2rem;color:rgba(214,48,49,.6);margin:.15rem 0}
+.db{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.25rem;margin:1rem 0;overflow-x:auto}
+.db table{width:100%;border-collapse:collapse}
+.db th,.db td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);font-size:.88rem}
+.db th{color:#ffd700;font-weight:700;background:rgba(255,255,255,.03)}.db td{color:rgba(255,255,255,.72)}
+.db tr:hover td{background:rgba(255,255,255,.02)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem;transition:color .2s}
+.back-link:hover{color:#d63031}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(10px)}
+.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}
+.skip-link:focus{top:0}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#e74c3c);z-index:9999;transition:width .1s;width:0%}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95);backdrop-filter:blur(20px)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(214,48,49,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#d63031;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-section-content{display:none}.video-section-content.active{display:block}
+.summary-box{border:1px solid rgba(0,210,255,.3)!important;background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(108,99,255,.05))!important;transition:transform .3s ease,box-shadow .3s ease!important;padding:1.25rem;border-radius:12px;margin:1.25rem 0}.summary-box:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(0,210,255,.15)!important}.summary-label{font-weight:700;font-size:1rem;color:#00d4ff;margin-bottom:.6rem}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.78);margin-bottom:.4rem;line-height:1.5;font-size:.9rem}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem;font-size:1.5rem;font-weight:700;color:#d63031;margin:2rem 0 1rem}
+h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#d63031,#e74c3c);border-radius:2px}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc13">
+<a href="#main-content" class="skip-link">Skip to main content</a><div id="readingProgress" class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-13'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-13</span></div>
+<nav class="sidebar-nav">
+  <a href="#block1">Block-01 Foundations</a>
+  <a href="#u1">Unit 1: Intro to Business Law</a>
+  <a href="#u2">Unit 2: Concepts and Principles</a>
+  <a href="#u3">Unit 3: Partnership Act 1932</a>
+  <a href="#block2">Block-02 Corporate &amp; Contract</a>
+  <a href="#u4">Unit 4: Companies Act 2013</a>
+  <a href="#u5">Unit 5: Contract Principles</a>
+  <a href="#block3">Block-03 International &amp; Banking</a>
+  <a href="#u6">Unit 6: International Contracts</a>
+  <a href="#u7">Unit 7: Banking Regulations</a>
+  <a href="#block4">Block-04 Forex &amp; IP</a>
+  <a href="#u8">Unit 8: FEMA</a>
+  <a href="#u9">Unit 9: IPR</a>
+  <a href="#block5">Block-05 Data &amp; Environment</a>
+  <a href="#u10">Unit 10: Data Protection</a>
+  <a href="#u11">Unit 11: Environmental Law</a>
+  <a href="#block6">Block-06 CSR, Competition &amp; Consumer</a>
+  <a href="#u12">Unit 12: CSR</a>
+  <a href="#u13">Unit 13: Competition Law</a>
+  <a href="#u14">Unit 14: Consumer Protection</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#frameworks">Key Frameworks</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#exam">Exam Focus</a>
+  <a href="quiz-mmpc13.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-13</span><h1>Business Law</h1>
+<p>6 Blocks, 14 Units &#x2022; Contract, Partnership, Company, IP, Banking &amp; Sustainability Law &#x2022; IGNOU MBA</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Foundations of Business Law</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Introduction to Business Law</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Business Law:</strong> That portion of the legal system which guarantees orderly conduct of business affairs and settlement of legitimate disputes in a just manner. It is the body of rules governing commercial relationships.</p><p><strong>Three Pillars:</strong> <strong>Law</strong> (formal social force, rules laid down by state, backed by enforcement), <strong>Rule of Law</strong> (laws apply equally to all members of society), <strong>Property</strong> (right to possess, use, and transfer private resources).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to Business Law</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5k4cEw6Oc-k" title="Business Law Intro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sources of Indian Law</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sJ7nX0jOgKs" title="Sources of Law" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Sources of Business Law</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Constitution of India</div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Legislatures (Parliament, State)</div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Regulatory Bodies (SEBI, RBI, CCI)</div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Courts (SC, HC, Tribunals)</div>
+</div></div>
+<div class="db"><table>
+<thead><tr><th>Factor Type</th><th>Description</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Internal Factors</td><td>Controllable by management</td><td>Management, resources, culture</td></tr>
+<tr><td>External Factors</td><td>Uncontrollable, external environment</td><td>Laws, economy, technology, politics</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 12 Objectives of Business Law</div><p>1. Universal standards for business conduct 2. Promoting industrial growth 3. Procedure for establishment of business 4. Enforcement of rights 5. Building healthy business relationships 6. Reduced possibilities of fraud 7. Maintaining equilibrium 8. Ethical conduct 9. Social responsibility 10. Evolving with changing standards 11. Penalties for violations 12. Insurance against risks</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Satyam Scam (2009):</strong> Led to sweeping changes in Companies Act, 2013 &#x2014; mandated 1/3 Independent Directors, strict related party transactions, class action suits.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"LRP-SEC"</strong> = Law &#x2014; Rule of Law &#x2014; Property + Sources &#x2014; Environment &#x2014; Courts</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Questions often ask about the significance of business law in the current economic scenario. Focus on the 12 objectives and explain each with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Business Law = orderly conduct of business + dispute settlement</li>
+<li>3 Pillars: Law, Rule of Law, Property</li>
+<li>Sources: Constitution, Legislatures, Regulatory Bodies, Courts</li>
+<li>12 objectives including universal standards, industrial growth, ethical conduct</li>
+<li>Internal factors (controllable) vs External factors (uncontrollable)</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Concepts and Principles</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 5 Principles of Business Law</div><p>1. <strong>Law and Morality</strong> (Natural Law School) 2. <strong>Business Ethics</strong> 3. <strong>Common Law</strong> (judicial precedents) 4. <strong>Natural Law</strong> (ethical laws above human-made) 5. <strong>Contractual Principles</strong></p><p><strong>Key Business Concepts:</strong> Contracts, Partnerships, Companies, Negotiable Instruments, Insurance, IP</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ADR Methods Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8FYpXw7s0VU" title="ADR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics and Law</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5k4cEw6Oc-k" title="Business Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>ADR Method</th><th>Description</th><th>Key Feature</th></tr></thead>
+<tbody>
+<tr><td>Arbitration</td><td>Neutral third party makes binding decision</td><td>Binding</td></tr>
+<tr><td>Mediation</td><td>Facilitator helps parties reach agreement</td><td>Non-binding</td></tr>
+<tr><td>Conciliation</td><td>Conciliator proposes settlement</td><td>Suggestion</td></tr>
+<tr><td>Negotiation</td><td>Direct discussion between parties</td><td>Direct</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Litigation</th><th>ADR</th></tr></thead>
+<tbody>
+<tr><td>Speed</td><td>Slow</td><td>Fast</td></tr>
+<tr><td>Cost</td><td>High</td><td>Low</td></tr>
+<tr><td>Formality</td><td>High</td><td>Flexible</td></tr>
+<tr><td>Confidentiality</td><td>Public</td><td>Private</td></tr>
+<tr><td>Binding</td><td>Yes</td><td>Depends</td></tr>
+</tbody></table></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"LBNCC"</strong> = Law &amp; Morality &#x2014; Business Ethics &#x2014; Natural Law &#x2014; Common Law &#x2014; Contractual</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare ADR methods and explain when each is appropriate. Know the 4 types with their key features. Explain the difference between litigation and ADR.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 Principles: Law &amp; Morality, Ethics, Common Law, Natural Law, Contractual</li>
+<li>ADR: Arbitration (binding), Mediation (agreement), Conciliation (proposal), Negotiation (direct)</li>
+<li>ADR is faster, cheaper, more flexible than litigation</li>
+<li>Key business concepts: Contracts, Partnerships, Companies, IP</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: The Partnership Act, 1932</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Partnership (Section 4)</div><p>Relationship between persons agreeing to share profits of business carried on by all or any of them. <strong>Firm:</strong> Collective name for partners. <strong>Partnership Deed:</strong> Written agreement containing terms.</p><p><strong>5 Essentials:</strong> 1. Minimum 2 persons (max 50 per Companies Act, 2013) 2. Agreement (contract) 3. Share profits 4. Business carried on by all or any acting for all 5. Mutual agency</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Partnership Act 1932</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NKqPQwXhMLo" title="Partnership Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Partners</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/f3k0aLnCWnI" title="Partners Types" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Type of Partner</th><th>Description</th><th>Liability</th><th>Notice for Retirement</th></tr></thead>
+<tbody>
+<tr><td>Active/Ostensible</td><td>Participates in management</td><td>Unlimited</td><td>Public notice required</td></tr>
+<tr><td>Sleeping/Dormant</td><td>Invests money, no management</td><td>Unlimited</td><td>No notice required</td></tr>
+<tr><td>Nominal</td><td>Only gives name</td><td>Unlimited</td><td>Public notice required</td></tr>
+<tr><td>Partner in Profits Only</td><td>Shares profits, not losses</td><td>Unlimited</td><td>-</td></tr>
+<tr><td>Sub-Partner</td><td>Shares partner's profits</td><td>No liability to firm</td><td>-</td></tr>
+<tr><td>Partner by Estoppel</td><td>Held out as partner</td><td>Liable to third parties</td><td>-</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Position of Minor</div><p>Can be admitted to <strong>benefits</strong> of partnership (not as partner). Rights: Share of profits, access to accounts. Liability: Limited to share in firm. On attaining majority: <strong>6 months</strong> to decide (become partner or leave). If no notice given: deemed to become partner.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Registration &amp; Dissolution</div><p><strong>Registration:</strong> Not mandatory, but consequences: Cannot sue third parties, cannot enforce rights against other partners. <strong>Dissolution:</strong> By agreement, Compulsory (illegal business), By court, By notice (partnership at will).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; LLP (Limited Liability Partnership Act, 2008)</div><p>Separate legal entity. Limited liability of partners. Perpetual succession. Minimum 2 partners, no maximum. No requirement of partnership deed (LLP Agreement required).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A law firm with 3 partners: one active (manages cases), one sleeping (invested capital), one nominal (gave name for reputation). All liable to third parties, but only active partner manages daily operations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PARTNER"</strong> = Profit sharing &#x2014; Agreement &#x2014; Registration &#x2014; Types &#x2014; Nominal &#x2014; Equity &#x2014; Reconstitution</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare partnership types and explain the difference between reconstitution and dissolution. Know the 6 types of partners with their liability and notice requirements.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Partnership: 2+ persons, agreement, profit sharing, mutual agency</li>
+<li>6 types of partners: Active, Sleeping, Nominal, Profit-only, Sub, Estoppel</li>
+<li>Minor can only be admitted to benefits, not as partner</li>
+<li>LLP: Separate entity, limited liability, perpetual succession</li>
+<li>Registration not mandatory but required to sue third parties</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Corporate &amp; Contract Law</h2>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: The Companies Act, 2013</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Company (Section 2(20))</div><p>"An incorporated association, which is an artificial person created by law, having a separate entity, with perpetual succession and a common seal" &#x2014; Prof. Haney. Key case: <strong>Salomon v Salomon</strong> (separate legal entity).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Companies Act 2013 Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yDc3J5kZc3Q" title="Companies Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MOA vs AOA Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8FYpXw7s0VU" title="MOA AOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Description</th><th>Key Case</th></tr></thead>
+<tbody>
+<tr><td>Incorporated Association</td><td>Registration mandatory</td><td>-</td></tr>
+<tr><td>Separate Legal Entity</td><td>Own name, own assets</td><td>Salomon v Salomon</td></tr>
+<tr><td>Perpetual Succession</td><td>Members come and go, company continues</td><td>-</td></tr>
+<tr><td>Limited Liability</td><td>Limited to shares</td><td>-</td></tr>
+<tr><td>Artificial Person</td><td>Can own property, sue/be sued</td><td>-</td></tr>
+<tr><td>Common Seal</td><td>Optional after 2015 amendment</td><td>-</td></tr>
+<tr><td>Transferability of Shares</td><td>Movable property (Section 44)</td><td>-</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Basis</th><th>Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Liability</td><td>Limited by Shares</td><td>Liability limited to unpaid amount on shares</td></tr>
+<tr><td>Liability</td><td>Limited by Guarantee</td><td>Liability limited to guaranteed amount</td></tr>
+<tr><td>Liability</td><td>Unlimited</td><td>No limit on liability</td></tr>
+<tr><td>Members</td><td>OPC</td><td>One person, separate entity</td></tr>
+<tr><td>Members</td><td>Private (min 2)</td><td>Restricts share transfer, max 200 members</td></tr>
+<tr><td>Members</td><td>Public (min 7)</td><td>No restriction on share transfer</td></tr>
+<tr><td>Control</td><td>Holding/Subsidiary</td><td>Controls &gt;50% share capital or Board</td></tr>
+<tr><td>Control</td><td>Associate</td><td>20%+ voting power</td></tr>
+<tr><td>Capital</td><td>Listed</td><td>Securities on stock exchange</td></tr>
+<tr><td>Capital</td><td>Unlisted</td><td>Not on stock exchange</td></tr>
+<tr><td>Other</td><td>Government</td><td>51%+ government holding</td></tr>
+<tr><td>Other</td><td>Foreign</td><td>Incorporated outside India</td></tr>
+<tr><td>Other</td><td>Section 8</td><td>Charitable objects</td></tr>
+<tr><td>Other</td><td>Dormant</td><td>Future project, no transactions</td></tr>
+<tr><td>Other</td><td>Nidhi</td><td>Mutual benefit, lending/borrowing</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Formation Stages</div><p>1. <strong>Promotion:</strong> Idea conception by promoter. 2. <strong>Registration/Incorporation:</strong> Filing documents with Registrar. 3. <strong>Commencement of Business:</strong> Declaration within 180 days (Section 10A).</p></div>
+<div class="db"><table>
+<thead><tr><th>Document</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>MOA (Memorandum of Association)</td><td>Charter defining company's relationship with outside world (6 clauses: Name, Registered Office, Objects, Liability, Capital, Subscription)</td></tr>
+<tr><td>AOA (Articles of Association)</td><td>Internal rules governing company management</td></tr>
+<tr><td>Prospectus</td><td>Document offering shares to public</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Share Capital Type</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Authorized</td><td>Maximum capital allowed by MOA</td></tr>
+<tr><td>Issued</td><td>Part of authorized offered to public</td></tr>
+<tr><td>Subscribed</td><td>Part of issued taken by public</td></tr>
+<tr><td>Paid-up</td><td>Amount actually paid by shareholders</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>TATA Group:</strong> Exists for over 100 years due to perpetual succession. Members have changed, but company continues.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"SPPL-CDW"</strong> = Separate entity &#x2014; Perpetual succession &#x2014; Person artificial &#x2014; Limited liability + Company types &#x2014; Directors &#x2014; Winding up</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare MOA vs AOA, and explain the 7 features of a company with cases. Know the types of companies and share capital types.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>7 Features: Separate entity, Perpetual succession, Artificial person, Limited liability, Common seal, Transferability, Incorporated</li>
+<li>Types: OPC, Private (2+), Public (7+) based on members</li>
+<li>Key docs: MOA (charter) vs AOA (internal rules)</li>
+<li>Formation: Promotion &#x2192; Registration &#x2192; Commencement of Business</li>
+<li>Share Capital: Authorized, Issued, Subscribed, Paid-up</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: General Principles of Contracts</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Contract (Section 2(h))</div><p>Agreement enforceable by law. <strong>All contracts are agreements, but not all agreements are contracts.</strong></p><p><strong>Essentials (Section 10):</strong> 1. Free consent 2. Competency of parties 3. Lawful consideration 4. Lawful object 5. Not expressly void</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Indian Contract Act Basics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OBwJkT9WfX0" title="Contract Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Vitiating Elements of Contract</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NKqPQwXhMLo" title="Vitiating Elements" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Offer, Acceptance &amp; Consideration</div><p><strong>Offer (Section 2(a)):</strong> Willingness to do/abstain from doing something. Must be communicated, create legal relations, terms must be certain. Different from invitation to offer.</p><p><strong>Acceptance (Section 2(b)):</strong> Must be absolute, unqualified, communicated, in prescribed manner.</p><p><strong>Consideration (Section 2(d)):</strong> Price for promise. Need not be adequate, must be lawful.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Capacity (Section 11)</div><p>Major (18+), Sound mind, Not disqualified by law.</p></div>
+<div class="db"><table>
+<thead><tr><th>Vitiating Factor</th><th>Description</th><th>Section</th></tr></thead>
+<tbody>
+<tr><td>Coercion</td><td>Threat of harm</td><td>15</td></tr>
+<tr><td>Undue Influence</td><td>Dominant position misuse</td><td>16</td></tr>
+<tr><td>Fraud</td><td>Intentional deception</td><td>17</td></tr>
+<tr><td>Misrepresentation</td><td>Unintentional false statement</td><td>18</td></tr>
+<tr><td>Mistake</td><td>Error of fact</td><td>20-22</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Breach Type</th><th>Description</th><th>Remedies</th></tr></thead>
+<tbody>
+<tr><td>Anticipatory</td><td>Before performance due</td><td>Damages, Specific Performance</td></tr>
+<tr><td>Actual</td><td>Failure to perform</td><td>Damages, Injunction</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Doctrine of Frustration (Section 56)</div><p>Contract becomes impossible to perform due to supervening impossibility. Both parties discharged. Example: A agrees to sell house to B. Before sale, house destroyed by fire. Contract frustrated &#x2014; both parties discharged.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A agrees to sell his house to B. Before sale, house destroyed by fire. Contract frustrated &#x2014; both parties discharged. This illustrates supervening impossibility under Section 56.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"ECLAB-OC"</strong> = Essentials &#x2014; Consent &#x2014; Lawful &#x2014; Agreement &#x2014; Breach + Offer &#x2014; Capacity</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Focus on the 5 vitiating elements of consent and their differences. Know breach remedies. Explain the difference between agreement and contract.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Contract = Agreement + Enforceability by law</li>
+<li>5 Essentials: Consent, Competency, Lawful consideration, Lawful object, Not void</li>
+<li>5 Vitiating elements: Coercion, Undue Influence, Fraud, Misrepresentation, Mistake</li>
+<li>Breach: Anticipatory vs Actual &#x2014; Remedies: Damages, Specific Performance, Injunction</li>
+<li>Doctrine of Frustration: Impossibility discharges both parties</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: International &amp; Banking Law</h2>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: International Contracts of Sale</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; CISG</div><p>UN Convention on Contracts for International Sale of Goods. Most widely adopted treaty &#x2014; 94 countries ratified as of 2020. Applies to commercial cross-border sale of goods. Does NOT apply to: consumer goods, auctions, ships, electricity.</p><p><strong>History:</strong> Ernst Rabel (1930s) &#x2192; UNIDROIT &#x2192; Hague Conference (1964) &#x2192; UNCITRAL &#x2192; CISG (1980, effective 1988).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CISG Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5k4cEw6Oc-k" title="CISG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Principle</div><p><strong>Party Autonomy:</strong> Parties can adopt or exclude CISG provisions. Choice of law allowed. This is the fundamental principle of CISG.</p></div>
+<div class="db"><table>
+<thead><tr><th>Source</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>CISG</td><td>International sale of goods</td></tr>
+<tr><td>Limitation Convention</td><td>4-year limitation period</td></tr>
+<tr><td>Electronic Communications Convention</td><td>Digital adaptations</td></tr>
+<tr><td>National Laws</td><td>English, Swiss, German commonly chosen</td></tr>
+<tr><td>Soft Law</td><td>UNIDROIT Principles, INCOTERMS</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Provisions</div><p>Formation of contract, Obligations of seller/buyer, Remedies for breach, Risk transfer.</p><p><strong>COVID-19 Impact:</strong> Force majeure provisions, Hardship clauses, Digital adaptations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CISG-3C"</strong> = Convention &#x2014; International &#x2014; Sale &#x2014; Goods + Cross-border &#x2014; Commercial &#x2014; Consent</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare CISG with Indian Sale of Goods Act. Know the scope and exclusions. Explain the principle of party autonomy.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>CISG: 94 countries, commercial cross-border goods sales</li>
+<li>Party autonomy: can adopt or exclude provisions</li>
+<li>Key provisions: Formation, Obligations, Remedies, Risk transfer</li>
+<li>COVID-19 impact: Force majeure, hardship clauses</li>
+<li>Does NOT apply to: consumer goods, auctions, ships, electricity</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Banking and Allied Regulations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Banking Regulation Act, 1949</div><p>RBI = Primary regulator, lender of last resort. Key characteristics: Demand deposits, Payment mechanism, Maturity transformation (short-term liabilities vs long-term assets).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Banking Regulation in India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sJ7nX0jOgKs" title="Banking Regulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Basel Norms Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yDc3J5kZc3Q" title="Basel Norms" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Bank Type</th><th>Description</th><th>Key Feature</th></tr></thead>
+<tbody>
+<tr><td>Payment Banks</td><td>Limited banking, no lending</td><td>Max balance Rs. 2 lakhs</td></tr>
+<tr><td>Small Finance Banks</td><td>Small loans, priority sector</td><td>75% priority sector lending</td></tr>
+<tr><td>Commercial Banks</td><td>Full banking services</td><td>Universal banking</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Basel Norms</div><p><strong>Basel I (1988):</strong> Risk-weighted assets, minimum 8% capital adequacy. <strong>Basel II (2004):</strong> Three pillars (minimum capital, supervisory review, market discipline). <strong>Basel III (2010):</strong> Higher capital requirements, liquidity ratios, leverage ratio.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; FATF &amp; NBFC</div><p><strong>FATF:</strong> Financial Action Task Force &#x2014; Anti-money laundering guidelines. <strong>NBFC:</strong> RBI given regulatory powers over Non-Banking Financial Companies. Cannot accept demand deposits.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Deposit Insurance</div><p>DICGC insures deposits up to <strong>Rs. 5 lakhs</strong> per depositor, per bank.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Yes Bank crisis (2020):</strong> RBI imposed moratorium, deposits insured up to Rs. 5 lakhs per depositor. Demonstrates the importance of deposit insurance.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"RBI-FLB"</strong> = Reserve Bank &#x2014; Banking Regulation &#x2014; Insurance + Fragility &#x2014; Licensing &#x2014; Basel</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare Payment Banks vs Small Finance Banks vs Commercial Banks. Know Basel norms progression. Explain the role of DICGC.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Banking Regulation Act 1949 &#x2014; RBI as primary regulator</li>
+<li>3 bank types: Payment, Small Finance, Commercial</li>
+<li>Basel I/II/III: Progressive capital adequacy standards</li>
+<li>DICGC: Rs. 5 lakhs deposit insurance</li>
+<li>FATF: Anti-money laundering guidelines</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Foreign Exchange &amp; IP Law</h2>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Foreign Exchange Management (FEMA)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; FEMA 1999</div><p>Replaced FERA 1973. Shift from regulation to management. <strong>7 chapters, 49 sections.</strong> 6 Rules (Central Government), 23 Regulations (RBI). Objective: Facilitate external trade, orderly forex market.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>FEMA vs FERA Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OBwJkT9WfX0" title="FEMA FERA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>FERA (1973)</th><th>FEMA (1999)</th></tr></thead>
+<tbody>
+<tr><td>Approach</td><td>Restrictive</td><td>Liberal</td></tr>
+<tr><td>Objective</td><td>Conservation</td><td>Management</td></tr>
+<tr><td>Offences</td><td>Criminal</td><td>Civil</td></tr>
+<tr><td>Presumption</td><td>Guilty until proven innocent</td><td>Innocent until proven guilty</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Transaction Type</th><th>Description</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Capital Account</td><td>Alters assets/liabilities</td><td>FDI, FPI, external borrowing</td></tr>
+<tr><td>Current Account</td><td>Regular transactions</td><td>Exports, imports, remittances</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Definitions</div><p><strong>Person Resident in India:</strong> 182+ days in preceding financial year, or registered/incorporated in India. <strong>Authorized Person:</strong> Entity authorized to deal in foreign exchange. <strong>Foreign Currency:</strong> Any currency other than Indian Rupee.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Penalties &amp; Enforcement</div><p>Contravention penalties, Adjudication process, Compounding of offences. Enforcement Directorate investigates FEMA violations.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>FDI in India:</strong> FEMA allows 100% FDI in most sectors through automatic route, some sectors need government approval.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"FEMA-CCA"</strong> = Foreign Exchange Management Act + Capital &#x2014; Current &#x2014; Authorized</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare FEMA vs FERA and explain capital vs current account transactions. Know the structure of FEMA (7 chapters, 49 sections).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>FEMA 1999 replaced FERA 1973 &#x2014; Liberal approach</li>
+<li>FERA vs FEMA: Restrictive&#x2192;Liberal, Criminal&#x2192;Civil, Guilty&#x2192;Innocent</li>
+<li>Capital Account (FDI, FPI) vs Current Account (exports, imports)</li>
+<li>100% FDI in most sectors via automatic route</li>
+<li>Structure: 7 chapters, 49 sections, 6 Rules, 23 Regulations</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Intellectual Property Rights</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; IPR</div><p>Legal rights protecting creations of the mind. Not a single body of law, but a collection of distinct legal doctrines. <strong>Justification:</strong> Incentive theory (encourages creation), Non-rivalrous consumption, Trademarks reduce search costs.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>IPR Types Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/f3k0aLnCWnI" title="IPR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Patent vs Copyright vs Trademark</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8FYpXw7s0VU" title="Patent Copyright" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Protection</th><th>Duration</th><th>Law</th></tr></thead>
+<tbody>
+<tr><td>Patents</td><td>Inventions</td><td>20 years from filing</td><td>Patents Act, 1970</td></tr>
+<tr><td>Trademarks</td><td>Brand identity</td><td>10 years, renewable</td><td>Trade Marks Act, 1999</td></tr>
+<tr><td>Copyrights</td><td>Literary, artistic, musical works</td><td>Author's life + 60 years</td><td>Copyright Act, 1957</td></tr>
+<tr><td>Trade Secrets</td><td>Confidential business information</td><td>Unlimited (if maintained)</td><td>Common law</td></tr>
+<tr><td>Industrial Designs</td><td>Aesthetic aspects of articles</td><td>15 years</td><td>Designs Act, 2000</td></tr>
+<tr><td>Geographical Indications</td><td>Products from specific regions</td><td>10 years, renewable</td><td>GI Act, 1999</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Patent Requirements</div><p>1. <strong>Novelty:</strong> Not anticipated by prior art. 2. <strong>Inventive Step:</strong> Not obvious to PSITA (Person Skilled In The Art). 3. <strong>Industrial Application:</strong> Capable of industrial use.</p><p><strong>Exclusions from Patent (Section 3):</strong> Business methods, computer programmes per se, traditional knowledge, plants/animals.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Copyright Rights &amp; Moral Rights</div><p><strong>Copyright Rights:</strong> Reproduce, issue copies, perform, translate, adapt. <strong>Moral Rights:</strong> 1. Right of attribution (be named as author) 2. Right of integrity (prevent harmful changes).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; TRIPS Agreement</div><p>WTO framework for IP protection. Minimum standards for all member countries. Dispute settlement mechanism. Allows compulsory licensing for public health emergencies.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>COVID-19 vaccine patent:</strong> 20-year protection, but compulsory licensing allowed under TRIPS for public health emergencies.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PTCG-TD"</strong> = Patents &#x2014; Trademarks &#x2014; Copyrights &#x2014; Geographical + TRIPS &#x2014; Designs</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare the 6 types of IP with their duration and governing law. Know patent requirements and TRIPS provisions.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>6 types: Patents (20yr), Trademarks (10yr), Copyrights (life+60yr), Designs (15yr), GI (10yr), Trade Secrets (unlimited)</li>
+<li>Patent requirements: Novelty, Inventive Step, Industrial Application</li>
+<li>TRIPS: WTO framework for IP protection, minimum standards</li>
+<li>Moral Rights: Attribution + Integrity</li>
+<li>Justification: Incentive theory, non-rivalrous consumption</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== BLOCK 05 ==================== -->
+<h2 id="block5">Block-05: Data Protection &amp; Environmental Law</h2>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Data Protection and Privacy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Data Protection</div><p>Safeguarding personal information from misuse. <strong>Data Principal:</strong> Individual whose data is processed. <strong>Data Fiduciary:</strong> Entity determining purpose of processing. <strong>Data Processor:</strong> Processes on behalf of fiduciary.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>DPDP Act 2023</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/yDc3J5kZc3Q" title="DPDP Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 6 Key Principles</div><p>1. Lawfulness 2. Purpose limitation 3. Data minimization 4. Accuracy 5. Storage limitation 6. Integrity &amp; confidentiality</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Consent Requirements</div><p>Free, Informed, Specific, Unambiguous, Withdrawable.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Rights of Data Principal</div><p>1. Right to access 2. Right to correction 3. Right to erasure 4. Right to portability 5. Right to object</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; DPDP Act</div><p>India's data protection framework. Applies to digital personal data. Extraterritorial application. Data breach: Unauthorized access, disclosure, or loss. Notification requirements. Significant penalties for non-compliance.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Aadhaar data protection:</strong> Supreme Court upheld right to privacy as fundamental right (Puttaswamy case), leading to DPDP Act.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"DPC-CLR"</strong> = Data Protection Consent + Correction &#x2014; Lawfulness &#x2014; Rights</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare GDPR (EU) with India's DPDP Act. Know the 6 principles and consent requirements. Explain the rights of data principal.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Key roles: Data Principal, Data Fiduciary, Data Processor</li>
+<li>6 Principles: Lawfulness, Purpose limitation, Minimization, Accuracy, Storage limitation, Integrity</li>
+<li>Consent: Free, Informed, Specific, Unambiguous, Withdrawable</li>
+<li>DPDP Act: India's data protection framework, extraterritorial application</li>
+<li>Rights: Access, Correction, Erasure, Portability, Object</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Environmental Law and Business</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Environmental Protection Act, 1986</div><p>Umbrella legislation. <strong>Sustainable Development:</strong> Meeting present needs without compromising future. <strong>Constitutional:</strong> Art 48A (State shall protect), Art 51A(g) (Fundamental duty).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Environmental Law in India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NKqPQwXhMLo" title="Environmental Law" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Act</th><th>Year</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>Water (Prevention) Act</td><td>1974</td><td>Water pollution</td></tr>
+<tr><td>Air (Prevention) Act</td><td>1981</td><td>Air pollution</td></tr>
+<tr><td>Environment Protection Act</td><td>1986</td><td>Umbrella legislation</td></tr>
+<tr><td>Forest Conservation Act</td><td>1980</td><td>Forest protection</td></tr>
+<tr><td>National Green Tribunal Act</td><td>2010</td><td>Environmental adjudication</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Pollution Control &amp; EIA</div><p><strong>Pollution Control Boards:</strong> CPCB (Central, national level), SPCB (State, state level).</p><p><strong>Environmental Impact Assessment (EIA):</strong> Mandatory for development projects. Categories: A (central), B1/B2 (state). Public hearing required.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Corporate Environmental Responsibility</div><p>Sustainable practices, Green initiatives, Carbon footprint reduction. <strong>Penalties:</strong> Fines, Imprisonment, Closure of operations.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Sterlite Copper plant closure (Tamil Nadu):</strong> NGT ordered closure due to environmental violations, demonstrating strict enforcement.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"EPA-NGT"</strong> = Environmental Protection Act + National Green Tribunal</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain the relationship between constitutional provisions and environmental laws. Know the EIA process and penalties.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>EPA 1986: Umbrella legislation for environment</li>
+<li>Constitutional: Art 48A (State duty), Art 51A(g) (Citizen duty)</li>
+<li>EIA: Mandatory for development projects, public hearing required</li>
+<li>Penalties: Fines, imprisonment, closure of operations</li>
+<li>Pollution Control: CPCB (Central), SPCB (State)</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ==================== BLOCK 06 ==================== -->
+<h2 id="block6">Block-06: CSR, Competition &amp; Consumer Protection</h2>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Corporate Social Responsibility (CSR)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; CSR (Section 135)</div><p>Companies must spend <strong>2% of average net profits</strong> on CSR. Applicable if: Net worth &#x2265; Rs. 500 crore, OR Turnover &#x2265; Rs. 1000 crore, OR Net profit &#x2265; Rs. 5 crore.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CSR in India Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OBwJkT9WfX0" title="CSR India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; CSR Committee</div><p>Board committee to oversee CSR activities. Minimum 3 directors, At least 1 independent director.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Schedule VII Activities</div><p>1. Education 2. Healthcare 3. Environment 4. Rural development 5. Slum area development 6. Gender equality, women empowerment 7. Contributions to PM funds 8. Disaster management 9. Protection of national heritage 10. Armed forces welfare</p></div>
+<div class="db"><table>
+<thead><tr><th>Standard</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>UN Global Compact</td><td>10 principles for responsible business</td></tr>
+<tr><td>ISO 26000</td><td>Social responsibility guidance</td></tr>
+<tr><td>GRI Standards</td><td>Sustainability reporting</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Reporting &amp; Penalty</div><p>Annual CSR report in Board's report. CSR policy disclosure. Spending disclosure. Non-compliance requires disclosure of reasons. No specific penalty for not spending.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Reliance Industries:</strong> Spends Rs. 1000+ crore annually on CSR through Reliance Foundation on education, healthcare, rural development.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CSR-2%"</strong> = Company Social Responsibility = 2% of profits</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain the 2% rule and Schedule VII activities. Know the CSR committee composition. Compare global standards.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Section 135: 2% of average net profits on CSR</li>
+<li>CSR Committee: Min 3 directors, 1 independent</li>
+<li>Schedule VII: 10 activity areas</li>
+<li>Non-compliance: Must disclose reasons, no specific penalty</li>
+<li>Global Standards: UN Global Compact, ISO 26000, GRI</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Competition Law</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Competition Act, 2002</div><p>Replaced MRTP Act, 1969. <strong>CCI</strong> (Competition Commission of India) regulates competition. Objectives: Prevent anti-competitive practices, Promote competition, Protect consumer interests, Ensure freedom of trade.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Competition Act 2002</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5k4cEw6Oc-k" title="Competition Act" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Agreement Type</th><th>Between</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Horizontal</td><td>Competitors</td><td>Price fixing, market allocation, bid rigging</td></tr>
+<tr><td>Vertical</td><td>Different levels</td><td>Tie-in arrangements, exclusive dealing, refusal to deal</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Abuse of Dominant Position</div><p>Unfair pricing, Predatory pricing, Denial of market access, Limiting production, Imposing supplementary obligations.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Combination Regulation</div><p>Mergers/acquisitions above threshold need CCI approval. Threshold: Asset value or turnover. CCI examines: market share, competition, consumer interest.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Penalties &amp; Leniency</div><p>Up to <strong>10% of average turnover</strong> for anti-competitive agreements. Up to <strong>3x profits</strong> for cartel participation. <strong>Leniency Program:</strong> First applicant up to 100% reduction, subsequent up to 50% reduction.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>CCI fined Google Rs. 136 crore</strong> for abusing dominant position in Android mobile ecosystem (2018).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CCI-HVAC"</strong> = Competition Commission of India + Horizontal &#x2014; Vertical &#x2014; Abuse &#x2014; Combination</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare horizontal vs vertical agreements and explain abuse of dominance. Know the leniency program and penalties.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Competition Act 2002 &#x2014; CCI as regulator</li>
+<li>Horizontal (competitors) vs Vertical (different levels) agreements</li>
+<li>Abuse of dominance: Unfair pricing, predatory pricing, denial of market</li>
+<li>Penalties: 10% turnover / 3x profits for cartels</li>
+<li>Leniency: Up to 100% reduction for first applicant</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 14 -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Consumer Protection and Sustainability</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Consumer Protection Act, 2019</div><p>Replaced CPA 1986. <strong>Consumer Rights (JFK, 1962):</strong> Safety, Informed, Choose, Heard. <strong>Triple Bottom Line:</strong> People, Planet, Profit.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Consumer Protection Act 2019</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/f3k0aLnCWnI" title="CPA 2019" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ESG Framework Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8FYpXw7s0VU" title="ESG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Forum</th><th>Pecuniary Jurisdiction</th><th>Appeal To</th></tr></thead>
+<tbody>
+<tr><td>District</td><td>Up to Rs. 1 crore</td><td>State Commission</td></tr>
+<tr><td>State</td><td>Rs. 1-10 crore</td><td>National Commission</td></tr>
+<tr><td>National</td><td>Above Rs. 10 crore</td><td>Supreme Court</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Who Can File Complaint</div><p>Consumer, Voluntary consumer association, Central/State Government, CCPA, Legal heir (in case of death), Parent/guardian (for minor).</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Grounds for Complaint</div><p>1. Unfair trade practice 2. Defective goods 3. Deficient services 4. Excess pricing 5. Hazardous goods/services 6. Product liability</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; E-Commerce Rules, 2020</div><p>Applies to online marketplaces. Display seller details, Return/refund policy, Grievance officer.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; ESG Framework</div><p><strong>Environmental</strong> (carbon, waste), <strong>Social</strong> (labor, community), <strong>Governance</strong> (board, ethics). <strong>Circular Economy:</strong> Reduce, Reuse, Recycle. <strong>UN SDGs:</strong> 17 goals for 2030.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Online shopping complaint: Consumer can file complaint at their own residence district commission (new provision in 2019 Act).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"ESG-PPP"</strong> = Environmental &#x2014; Social &#x2014; Governance + People &#x2014; Planet &#x2014; Profit</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare CPA 1986 vs CPA 2019 and explain ESG framework. Know the three-tier consumer forum system.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>CPA 2019: Three-tier system (District/State/National)</li>
+<li>Consumer Rights: Safety, Informed, Choose, Heard</li>
+<li>ESG: Environmental, Social, Governance</li>
+<li>Triple Bottom Line: People, Planet, Profit</li>
+<li>E-Commerce Rules: Online marketplace regulations</li>
+</ul></div>
+</div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>LRP-SEC</strong></td><td>Law - Rule of Law - Property + Sources - Environment - Courts</td><td>Unit 1: Business Law basics</td></tr>
+<tr><td><strong>LBNCC</strong></td><td>Law &amp; Morality - Business Ethics - Natural Law - Common Law - Contractual</td><td>Unit 2: 5 Principles</td></tr>
+<tr><td><strong>PARTNER</strong></td><td>Profit sharing - Agreement - Registration - Types - Nominal - Equity - Reconstitution</td><td>Unit 3: Partnership Act</td></tr>
+<tr><td><strong>SPPL-CDW</strong></td><td>Separate entity - Perpetual succession - Person artificial - Limited liability + Company types - Directors - Winding up</td><td>Unit 4: Companies Act</td></tr>
+<tr><td><strong>ECLAB-OC</strong></td><td>Essentials - Consent - Lawful - Agreement - Breach + Offer - Capacity</td><td>Unit 5: Contracts</td></tr>
+<tr><td><strong>CISG-3C</strong></td><td>Convention - International - Sale - Goods + Cross-border - Commercial - Consent</td><td>Unit 6: International Contracts</td></tr>
+<tr><td><strong>RBI-FLB</strong></td><td>Reserve Bank - Banking Regulation - Insurance + Fragility - Licensing - Basel</td><td>Unit 7: Banking</td></tr>
+<tr><td><strong>FEMA-CCA</strong></td><td>Foreign Exchange Management Act + Capital - Current - Authorized</td><td>Unit 8: FEMA</td></tr>
+<tr><td><strong>PTCG-TD</strong></td><td>Patents - Trademarks - Copyrights - Geographical + TRIPS - Designs</td><td>Unit 9: IPR</td></tr>
+<tr><td><strong>DPC-CLR</strong></td><td>Data Protection Consent + Correction - Lawfulness - Rights</td><td>Unit 10: Data Protection</td></tr>
+<tr><td><strong>EPA-NGT</strong></td><td>Environmental Protection Act + National Green Tribunal</td><td>Unit 11: Environmental Law</td></tr>
+<tr><td><strong>CSR-2%</strong></td><td>Company Social Responsibility = 2% of profits</td><td>Unit 12: CSR</td></tr>
+<tr><td><strong>CCI-HVAC</strong></td><td>Competition Commission of India + Horizontal - Vertical - Abuse - Combination</td><td>Unit 13: Competition Law</td></tr>
+<tr><td><strong>ESG-PPP</strong></td><td>Environmental - Social - Governance + People - Planet - Profit</td><td>Unit 14: Sustainability</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- KEY FRAMEWORKS -->
+<div class="unit" id="frameworks">
+<h3>Key Frameworks and Comparisons</h3>
+<h4>Partnership vs Company vs LLP</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Partnership</th><th>Company</th><th>LLP</th></tr></thead>
+<tbody>
+<tr><td>Legal Entity</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Liability</td><td>Unlimited</td><td>Limited</td><td>Limited</td></tr>
+<tr><td>Members</td><td>2-50</td><td>1 (OPC) to unlimited</td><td>2+ (no max)</td></tr>
+<tr><td>Registration</td><td>Optional</td><td>Mandatory</td><td>Mandatory</td></tr>
+<tr><td>Perpetual Succession</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Governance</td><td>Partnership Act</td><td>Companies Act</td><td>LLP Act</td></tr>
+<tr><td>Document</td><td>Deed</td><td>MOA/AOA</td><td>LLP Agreement</td></tr>
+</tbody></table></div>
+<h4>MOA vs AOA</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>MOA</th><th>AOA</th></tr></thead>
+<tbody>
+<tr><td>Purpose</td><td>Charter document</td><td>Internal rules</td></tr>
+<tr><td>Relationship</td><td>With outside world</td><td>Between members</td></tr>
+<tr><td>Content</td><td>6 clauses</td><td>Regulations</td></tr>
+<tr><td>Alteration</td><td>Special resolution</td><td>Ordinary resolution</td></tr>
+<tr><td>Supremacy</td><td>Supreme</td><td>Subordinate to MOA</td></tr>
+</tbody></table></div>
+<h4>Capital vs Current Account</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Capital Account</th><th>Current Account</th></tr></thead>
+<tbody>
+<tr><td>Nature</td><td>Assets/liabilities changes</td><td>Regular transactions</td></tr>
+<tr><td>Examples</td><td>FDI, FPI, borrowing</td><td>Exports, imports, remittances</td></tr>
+<tr><td>Regulation</td><td>RBI approval needed</td><td>Generally free</td></tr>
+<tr><td>Restrictions</td><td>More restrictive</td><td>Less restrictive</td></tr>
+</tbody></table></div>
+<h4>Patent vs Copyright vs Trademark</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Patent</th><th>Copyright</th><th>Trademark</th></tr></thead>
+<tbody>
+<tr><td>Protects</td><td>Inventions</td><td>Creative works</td><td>Brand identity</td></tr>
+<tr><td>Duration</td><td>20 years</td><td>Life + 60 years</td><td>10 years (renewable)</td></tr>
+<tr><td>Registration</td><td>Mandatory</td><td>Automatic</td><td>Mandatory</td></tr>
+<tr><td>Law</td><td>Patents Act 1970</td><td>Copyright Act 1957</td><td>TM Act 1999</td></tr>
+<tr><td>Requirement</td><td>Novelty, Inventive step, Industrial application</td><td>Originality</td><td>Distinctiveness</td></tr>
+</tbody></table></div>
+<h4>Consumer Forum Jurisdiction</h4>
+<div class="db"><table>
+<thead><tr><th>Forum</th><th>Pecuniary</th><th>Appeal To</th></tr></thead>
+<tbody>
+<tr><td>District</td><td>Up to Rs. 1 crore</td><td>State Commission</td></tr>
+<tr><td>State</td><td>Rs. 1-10 crore</td><td>National Commission</td></tr>
+<tr><td>National</td><td>Above Rs. 10 crore</td><td>Supreme Court</td></tr>
+</tbody></table></div>
+<h4>Horizontal vs Vertical Agreements</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Horizontal</th><th>Vertical</th></tr></thead>
+<tbody>
+<tr><td>Between</td><td>Competitors</td><td>Different levels</td></tr>
+<tr><td>Examples</td><td>Price fixing, market allocation</td><td>Tie-in, exclusive dealing</td></tr>
+<tr><td>Presumption</td><td>Per se illegal</td><td>Rule of reason</td></tr>
+<tr><td>Harm</td><td>Direct competition</td><td>Indirect competition</td></tr>
+</tbody></table></div>
+<h4>FERA vs FEMA</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>FERA (1973)</th><th>FEMA (1999)</th></tr></thead>
+<tbody>
+<tr><td>Approach</td><td>Restrictive</td><td>Liberal</td></tr>
+<tr><td>Objective</td><td>Conservation</td><td>Management</td></tr>
+<tr><td>Offences</td><td>Criminal</td><td>Civil</td></tr>
+<tr><td>Presumption</td><td>Guilty until proven innocent</td><td>Innocent until proven guilty</td></tr>
+</tbody></table></div>
+<h4>CPA 1986 vs CPA 2019</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>CPA 1986</th><th>CPA 2019</th></tr></thead>
+<tbody>
+<tr><td>Coverage</td><td>Goods and services</td><td>Goods, services, e-commerce</td></tr>
+<tr><td>Complaint Filing</td><td>In person</td><td>Online also</td></tr>
+<tr><td>Jurisdiction</td><td>Place of business</td><td>Consumer's residence also</td></tr>
+<tr><td>Product Liability</td><td>Not included</td><td>Included</td></tr>
+<tr><td>Mediation</td><td>Not available</td><td>Available</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- QUICK REVISION SHEET -->
+<div class="unit" id="revision">
+<h3>Quick Revision Sheet</h3>
+<h4>Key Sections of Important Acts</h4>
+<div class="db"><table>
+<thead><tr><th>Act</th><th>Section</th><th>Provision</th></tr></thead>
+<tbody>
+<tr><td>Indian Contract Act</td><td>2(h)</td><td>Contract = Agreement enforceable by law</td></tr>
+<tr><td>Indian Contract Act</td><td>10</td><td>Essentials of valid contract</td></tr>
+<tr><td>Indian Contract Act</td><td>14</td><td>Free consent</td></tr>
+<tr><td>Indian Contract Act</td><td>56</td><td>Doctrine of frustration</td></tr>
+<tr><td>Partnership Act</td><td>4</td><td>Definition of partnership</td></tr>
+<tr><td>Partnership Act</td><td>30</td><td>Minor admitted to benefits</td></tr>
+<tr><td>Companies Act</td><td>2(20)</td><td>Definition of company</td></tr>
+<tr><td>Companies Act</td><td>2(68)</td><td>Private company</td></tr>
+<tr><td>Companies Act</td><td>2(71)</td><td>Public company</td></tr>
+<tr><td>Companies Act</td><td>135</td><td>CSR provisions</td></tr>
+<tr><td>FEMA</td><td>2</td><td>Key definitions</td></tr>
+<tr><td>FEMA</td><td>6</td><td>Capital account transactions</td></tr>
+<tr><td>Competition Act</td><td>3</td><td>Anti-competitive agreements</td></tr>
+<tr><td>Competition Act</td><td>4</td><td>Abuse of dominant position</td></tr>
+<tr><td>CPA 2019</td><td>2(5)</td><td>Definition of complainant</td></tr>
+<tr><td>CPA 2019</td><td>2(7)</td><td>Definition of consumer</td></tr>
+</tbody></table></div>
+<h4>Key Numbers</h4>
+<div class="db"><table>
+<thead><tr><th>Item</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Minimum partners (Partnership)</td><td>2</td></tr>
+<tr><td>Maximum partners (Partnership)</td><td>50</td></tr>
+<tr><td>Minimum directors (Public company)</td><td>3</td></tr>
+<tr><td>Minimum directors (Private company)</td><td>2</td></tr>
+<tr><td>Minimum members (Public company)</td><td>7</td></tr>
+<tr><td>Minimum members (Private company)</td><td>2</td></tr>
+<tr><td>CSR spending</td><td>2% of average net profits</td></tr>
+<tr><td>Patent duration</td><td>20 years</td></tr>
+<tr><td>Copyright duration</td><td>Life + 60 years</td></tr>
+<tr><td>Trademark duration</td><td>10 years (renewable)</td></tr>
+<tr><td>Design duration</td><td>15 years</td></tr>
+<tr><td>GI duration</td><td>10 years (renewable)</td></tr>
+<tr><td>Deposit insurance</td><td>Rs. 5 lakhs</td></tr>
+<tr><td>Competition penalty</td><td>Up to 10% of turnover</td></tr>
+<tr><td>Consumer District limit</td><td>Rs. 1 crore</td></tr>
+<tr><td>Consumer State limit</td><td>Rs. 1-10 crore</td></tr>
+<tr><td>Consumer National limit</td><td>Above Rs. 10 crore</td></tr>
+<tr><td>Complaint limitation</td><td>2 years</td></tr>
+<tr><td>FDI (most sectors)</td><td>100% automatic</td></tr>
+<tr><td>FEMA structure</td><td>7 chapters, 49 sections</td></tr>
+</tbody></table></div>
+<h4>One-Liner Definitions</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Quick Reference</div>
+<p><strong>Contract:</strong> Agreement enforceable by law (Section 2(h))</p>
+<p><strong>Partnership:</strong> Relationship between persons agreeing to share profits (Section 4)</p>
+<p><strong>Company:</strong> Incorporated association, artificial person, separate legal entity</p>
+<p><strong>MOA:</strong> Charter document defining company's relationship with outside world</p>
+<p><strong>AOA:</strong> Internal rules governing company management</p>
+<p><strong>Consideration:</strong> Price for promise (Section 2(d))</p>
+<p><strong>Free Consent:</strong> Consent without coercion, undue influence, fraud, misrepresentation, mistake</p>
+<p><strong>CISG:</strong> UN Convention on International Sale of Goods</p>
+<p><strong>FEMA:</strong> Foreign Exchange Management Act, 1999</p>
+<p><strong>IPR:</strong> Legal rights protecting creations of the mind</p>
+<p><strong>CSR:</strong> Company's obligation to spend 2% profits on social welfare</p>
+<p><strong>CCI:</strong> Competition Commission of India</p>
+<p><strong>ESG:</strong> Environmental, Social, Governance framework</p>
+<p><strong>ADR:</strong> Alternative Dispute Resolution mechanisms</p>
+<p><strong>CCPA:</strong> Central Consumer Protection Authority</p>
+</div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>Exam Focus</h3>
+<h4>Most Frequently Asked Topics</h4>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Top 10 Exam Topics</div>
+<p>1. <strong>Partnership Act:</strong> Types of partners, rights and duties, reconstitution vs dissolution</p>
+<p>2. <strong>Companies Act:</strong> Features of company, MOA vs AOA, types of companies</p>
+<p>3. <strong>Contract Law:</strong> Essentials of valid contract, vitiating elements, breach remedies</p>
+<p>4. <strong>FEMA:</strong> Capital vs current account, FEMA vs FERA comparison</p>
+<p>5. <strong>IPR:</strong> Types of IP, patent requirements, copyright vs trademark</p>
+<p>6. <strong>Competition Law:</strong> Horizontal vs vertical agreements, abuse of dominance</p>
+<p>7. <strong>Consumer Protection:</strong> Three-tier system, who can file complaint, reliefs</p>
+<p>8. <strong>CSR:</strong> Section 135, 2% rule, Schedule VII activities</p>
+<p>9. <strong>Environmental Law:</strong> Constitutional provisions, EPA 1986, EIA</p>
+<p>10. <strong>Data Protection:</strong> Key principles, consent, data principal rights</p>
+</div>
+<h4>Expected Question Patterns</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Question Types</div>
+<p><strong>Compare and Contrast:</strong> Partnership vs Company, FEMA vs FERA, CPA 1986 vs 2019</p>
+<p><strong>Explain with Cases:</strong> Salomon v Salomon, Macaura v Northern Assurance</p>
+<p><strong>List and Explain:</strong> Features of company, essentials of contract, types of partners</p>
+<p><strong>Short Notes:</strong> ADR, LLP, CISG, CCI, ESG</p>
+<p><strong>Case Study:</strong> Apply provisions to practical scenarios</p>
+</div>
+<h4>Model Answer Structure</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l"><strong>Introduction</strong><br><small>Define the concept</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l"><strong>Legal Provisions</strong><br><small>Cite relevant sections/acts</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l"><strong>Explanation</strong><br><small>Detailed analysis</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l"><strong>Case Laws</strong><br><small>Support with judicial decisions</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l"><strong>Comparison</strong><br><small>If applicable</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l"><strong>Conclusion</strong><br><small>Summarize key points</small></div></div>
+</div>
+</div>
+
+</main>
+</div>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.unit, .visual-diagram, .case-study, .summary-box, .callout, h2[id^="block"]').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    var rp = document.getElementById('readingProgress');
+    if (rp) rp.style.width = p + '%';
+    var units = document.querySelectorAll('.unit');
+    var links = document.querySelectorAll('.sidebar-nav a[href^="#u"]');
+    var current = '';
+    units.forEach(function(u) { if (u.getBoundingClientRect().top < 200) current = u.id; });
+    links.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+  });
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-11: Social Processes and Behavioural Issues | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+/* ============ MMPC-11 ENHANCED STYLES ============ */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(225,112,85,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(225,112,85,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift { 0%{background-position:0 0}100%{background-position:600px 600px} }
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}
+.animate-on-scroll:nth-child(4){transition-delay:.3s}.animate-on-scroll:nth-child(5){transition-delay:.4s}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem}
+h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}
+h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);border-radius:2px}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}
+.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(225,112,85,.25),0 0 20px rgba(0,210,255,.1)!important;border-color:rgba(225,112,85,.4)!important}
+.callout{transition:transform .3s ease,box-shadow .3s ease!important}
+.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}
+.callout-important{border-left-color:#FFD700!important}
+.callout-important .callout-label{color:#FFD700!important}
+.callout-mnemonic{border-left-color:#e17055!important;background:linear-gradient(135deg,rgba(225,112,85,.05),rgba(0,210,255,.05))!important}
+.callout-example{border-left-color:#00d4ff!important}
+h1,h2,h3,h4,h5{letter-spacing:-.02em!important}
+.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1))!important;border:1px solid rgba(200,200,200,.12)!important;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(225,112,85,.15),transparent 70%);animation:headerGlow 8s ease-in-out infinite alternate}
+@keyframes headerGlow{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
+.summary-box{border:1px solid rgba(0,210,255,.3)!important;background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(225,112,85,.05))!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.summary-box:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(0,210,255,.15)!important}
+.subject-tag{background:linear-gradient(135deg,#e17055,#e17055cc)!important;color:#fff!important;font-weight:600!important;letter-spacing:.05em}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}
+.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(225,112,85,.05)}
+.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}
+.video-icon{color:#FF0000;font-size:1.2rem}
+.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.video-toggle{background:linear-gradient(135deg,#e17055,#e17055cc);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}
+.video-toggle:hover{opacity:.85}
+.video-section-content{display:none}.video-section-content.active{display:block}
+.expandable-content{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.expandable-content.expanded{max-height:5000px}
+.expand-toggle{display:inline-block;padding:.4rem 1rem;background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(225,112,85,.3);border-radius:6px;color:#c8c8c8;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .3s ease}
+.expand-toggle:hover{background:linear-gradient(135deg,rgba(225,112,85,.25),rgba(0,210,255,.15));box-shadow:0 2px 10px rgba(200,200,200,.12)}
+.visual-diagram{background:linear-gradient(135deg,rgba(225,112,85,.08),rgba(255,107,107,.06));border:1px solid rgba(225,112,85,.2);border-radius:16px;padding:24px;margin:20px 0;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.visual-diagram:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(225,112,85,.2)}
+.visual-diagram::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#FFD700)}
+.visual-diagram h5{color:#e17055;margin-bottom:16px;font-size:1.1em}
+.vd-node{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;margin:.3rem;transition:transform .2s ease,box-shadow .2s ease}
+.vd-node:hover{transform:scale(1.05);box-shadow:0 4px 15px rgba(225,112,85,.3)}
+.vd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem}
+.flow-visual{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem;padding:1rem}
+.flow-visual .step{padding:.6rem 1rem;border-radius:10px;font-size:.8rem;font-weight:500;text-align:center;min-width:100px;transition:transform .2s ease,box-shadow .2s ease}
+.flow-visual .step:hover{transform:translateY(-3px);box-shadow:0 4px 15px rgba(225,112,85,.3)}
+.flow-visual .arrow{color:#c8c8c8;font-size:1.4rem}
+.case-study{background:linear-gradient(135deg,rgba(255,215,0,.06),rgba(225,112,85,.04));border:1px solid rgba(255,215,0,.2);border-left:4px solid #FFD700;border-radius:8px;padding:1.2rem;margin:1rem 0}
+.case-study h5{color:#FFD700;margin-bottom:.5rem;font-weight:600}
+</style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc11">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-11'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-11</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01: Individual &amp; Group Processes</a>
+<a href="#u1">Unit 1: Individual Behaviour &amp; Personality</a>
+<a href="#u2">Unit 2: Motivation Theories</a>
+<a href="#u3">Unit 3: Group Dynamics &amp; Teams</a>
+<a href="#u4">Unit 4: Leadership Theories</a>
+<a href="#u5">Unit 5: Org Culture &amp; Climate</a>
+<a href="#block2">Block-02: Organizational Processes</a>
+<a href="#u6">Unit 6: Org Change &amp; Development</a>
+<a href="#u7">Unit 7: Conflict Management</a>
+<a href="#u8">Unit 8: Power, Politics &amp; Influence</a>
+<a href="#u9">Unit 9: Interpersonal Relations</a>
+<a href="#u10">Unit 10: Stress Management</a>
+<a href="#block3">Block-03: Contemporary Issues</a>
+<a href="#u11">Unit 11: Org Justice &amp; Ethics</a>
+<a href="#u12">Unit 12: Diversity &amp; Inclusion</a>
+<a href="#u13">Unit 13: Career Development</a>
+<a href="#u14">Unit 14: Employee Engagement</a>
+<a href="#u15">Unit 15: Contemporary Issues in OB</a>
+<a href="quiz-mmpc11.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-11</span><h1>Social Processes and Behavioural Issues</h1><p>Comprehensive Study Notes &#x2014; Videos &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== UNIT 1 ==================== -->
+<h2 id="block1">Block-01: Individual and Group Processes</h2>
+
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Individual Behaviour and Personality</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Individual Behaviour and Personality</div><p>Individual behaviour is influenced by personality, perception, learning, and attitudes. Personality theories (Big Five, Myers-Briggs) help understand individual differences in organizations. OB studies human behaviour at three levels: individual, group, and organizational.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to Organizational Behaviour</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="OB Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Big Five Personality Traits (OCEAN)</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Big Five Personality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Definition and Scope of OB</h4>
+<ul>
+<li><strong>Organizational Behaviour</strong> = Study of human behaviour in organizational context to improve effectiveness</li>
+<li>Three levels of analysis: <strong>Individual</strong> (personality, perception), <strong>Group</strong> (dynamics, teams), <strong>Organization</strong> (culture, structure)</li>
+<li>Micro OB focuses on people inside the organization; Macro OB focuses on the organization in its environment</li>
+<li>OB draws from Psychology, Sociology, Anthropology, and Management disciplines</li>
+</ul>
+
+<h4>Point 2: Big Five Personality Traits (OCEAN)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Big Five Personality Traits (OCEAN)</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4)"><strong>O</strong>penness</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>C</strong>onscientiousness</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>E</strong>xtraversion</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>A</strong>greeableness</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>N</strong>euroticism</div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">The Big Five model is the most widely accepted framework for understanding personality differences in organizations.</p>
+</div>
+
+<h4>Point 3: Personality vs Temperament vs Attitude</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Concept</th><th>Definition</th><th>Stability</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Personality</strong></td><td>Unique psychological characteristics</td><td>Relatively stable</td><td>Introversion, dominance</td></tr>
+<tr><td><strong>Temperament</strong></td><td>Biologically-based emotional tendencies</td><td>Innate, stable</td><td>Activity level, mood</td></tr>
+<tr><td><strong>Attitude</strong></td><td>Evaluative statements about objects/people</td><td>Changeable</td><td>Job satisfaction, commitment</td></tr>
+</tbody></table></div>
+
+<h4>Point 4: Perception and Attribution</h4>
+<ul>
+<li><strong>Perception</strong> = Process of organizing and interpreting sensory information</li>
+<li><strong>Attribution Theory</strong> (Kelley): People attribute causes to behaviour based on consistency, distinctiveness, consensus</li>
+<li><strong>Fundamental Attribution Error</strong>: Overestimate internal factors, underestimate external factors</li>
+<li><strong>Self-Serving Bias</strong>: Attribute success to internal factors, failure to external factors</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> uses personality assessments (Big Five) in recruitment to evaluate cultural fit. <strong>Tata Group</strong> emphasizes attitude over skills in hiring, believing skills can be taught but attitude is innate.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Big Five traits: OCEAN (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism). Questions ask about perception errors and attribution theory.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>OCEAN:</strong> <strong>O</strong>penness, <strong>C</strong>onscientiousness, <strong>E</strong>xtraversion, <strong>A</strong>greeableness, <strong>N</strong>euroticism</p></div>
+
+
+<h4>Detailed Explanation: Personality Theories Comparison</h4>
+<div class="db"><table><thead><tr><th>Theory</th><th>Key Idea</th><th>Proponent</th><th>Application</th></tr></thead><tbody>
+<tr><td>Big Five (OCEAN)</td><td>5 personality dimensions</td><td>Multiple</td><td>Recruitment, team building</td></tr>
+<tr><td>Psychoanalytic</td><td>Id, Ego, Superego</td><td>Freud</td><td>Understanding unconscious motives</td></tr>
+<tr><td>Self-Theory</td><td>Self-concept, ideal self</td><td>Carl Rogers</td><td>Personal development</td></tr>
+<tr><td>Type A/B</td><td>Competitive vs Relaxed</td><td>Friedman</td><td>Stress management</td></tr>
+</tbody></table></div>
+
+<h4>Perceptual Errors — Detailed</h4>
+<div class="db"><table><thead><tr><th>Error</th><th>Description</th><th>Example</th></tr></thead><tbody>
+<tr><td>Halo Effect</td><td>One trait influences overall impression</td><td>Good speaker = competent manager</td></tr>
+<tr><td>Stereotyping</td><td>Generalizing about a group</td><td>"Young employees are lazy"</td></tr>
+<tr><td>Projection</td><td>Attributing own feelings to others</td><td>"I'm stressed, so everyone is"</td></tr>
+<tr><td>Primacy Effect</td><td>First impression dominates</td><td>Interview appearance matters</td></tr>
+<tr><td>Recency Effect</td><td>Last impression dominates</td><td>Recent performance overrides history</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Big Five personality traits</td><td>10</td><td>OCEAN with examples, organizational application</td></tr>
+<tr><td>Compare personality, temperament, attitude</td><td>5</td><td>Table: definition, stability, example</td></tr>
+<tr><td>Discuss perception errors in organizations</td><td>5</td><td>Halo, stereotyping, projection with examples</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; OCEAN = Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism.</strong> Personality is stable; attitudes are changeable. Attribution Theory explains how we assign causes. Fundamental Attribution Error = overestimate internal, underestimate external.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain Big Five personality traits":</strong> Definition (2) + OCEAN details (5) + organizational application (2) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>OB = Study of human behaviour at individual, group, and organizational levels</li>
+<li>Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism</li>
+<li>Personality is relatively stable; attitudes are changeable</li>
+<li>Perception: how we interpret sensory information; Attribution: how we explain causes</li>
+<li>Fundamental Attribution Error: overestimate internal, underestimate external factors</li>
+<li>Infosys uses Big Five in recruitment; Tata Group values attitude over skills</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 2 ==================== -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Motivation &#x2014; Theories and Applications</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: Motivation &#x2014; Theories and Applications</div><p>Motivation drives behaviour towards goals. Content theories (Maslow, Herzberg, McClelland) explain what motivates. Process theories (Vroom, Adams) explain how motivation works.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Maslow's Hierarchy of Needs</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Maslow Hierarchy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Herzberg Two-Factor Theory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Herzberg Theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Vroom Expectancy Theory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Vroom Theory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Content Theories of Motivation</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Maslow's Hierarchy of Needs</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);width:35%;text-align:center">&#x1F31F; <strong>Self-Actualization</strong><br><small>Realize potential</small></div>
+<div class="vd-node" style="background:rgba(251,191,36,0.2);border:1px solid rgba(251,191,36,0.4);width:50%;text-align:center">&#x1F451; <strong>Esteem</strong><br><small>Recognition, status</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);width:65%;text-align:center">&#x1F465; <strong>Love/Belonging</strong><br><small>Social connections</small></div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center">&#x1F6E1; <strong>Safety</strong><br><small>Security, stability</small></div>
+<div class="vd-node" style="background:rgba(200,200,200,0.2);border:1px solid rgba(200,200,200,0.4);width:95%;text-align:center">&#x1F34E; <strong>Physiological</strong><br><small>Food, water, shelter</small></div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">Maslow's hierarchy: lower needs must be satisfied before higher needs can motivate behaviour.</p>
+</div>
+
+<h4>Point 2: Herzberg Two-Factor Theory</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F6AB; Hygiene Factors</h5><ul><li>Salary, working conditions, company policy</li><li>Prevent dissatisfaction (but don't motivate)</li><li>Must be adequate to avoid demotivation</li></ul></div>
+<div class="cc"><h5>&#x1F31F; Motivators</h5><ul><li>Achievement, recognition, responsibility</li><li>Drive satisfaction and motivation</li><li>Must be present for true motivation</li></ul></div>
+</div>
+
+<h4>Point 3: Process Theories</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Theory</th><th>Key Idea</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td><strong>Vroom Expectancy</strong></td><td>Effort depends on expected outcomes</td><td>Motivation = E x I x V</td></tr>
+<tr><td><strong>Adams Equity</strong></td><td>Fairness of reward relative to inputs</td><td>Compare own ratio to others</td></tr>
+<tr><td><strong>Locke Goal Setting</strong></td><td>Specific, challenging goals improve performance</td><td>SMART goals</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Google India</strong> offers 20% time for personal projects, applying Herzberg motivators (achievement, responsibility). <strong>TCS</strong> uses McClelland achievement motivation in leadership training programs.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare Maslow vs Herzberg. Know Vroom expectancy theory: Motivation = Expectancy x Instrumentality x Valence. Questions ask about hygiene vs motivator factors.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MASLOW:</strong> <strong>P</strong>hysiological, <strong>S</strong>afety, <strong>L</strong>ove, <strong>E</strong>steem, <strong>S</strong>elf-actualization<br><strong>HERZBERG:</strong> Hygiene factors prevent dissatisfaction; Motivators drive satisfaction</p></div>
+
+
+<h4>Detailed Explanation: Motivation Theories Comparison</h4>
+<div class="db"><table><thead><tr><th>Theory</th><th>Type</th><th>Key Idea</th><th>Formula/Model</th></tr></thead><tbody>
+<tr><td>Maslow</td><td>Content</td><td>5-level hierarchy</td><td>Physiological → Self-Actualization</td></tr>
+<tr><td>Herzberg</td><td>Content</td><td>Hygiene vs Motivators</td><td>Two-factor model</td></tr>
+<tr><td>McClelland</td><td>Content</td><td>3 needs</td><td>Achievement, Affiliation, Power</td></tr>
+<tr><td>Alderfer</td><td>Content</td><td>3 needs</td><td>Existence, Relatedness, Growth</td></tr>
+<tr><td>Vroom</td><td>Process</td><td>Expectancy theory</td><td>M = E × I × V</td></tr>
+<tr><td>Adams</td><td>Process</td><td>Equity theory</td><td>Compare input/output ratios</td></tr>
+<tr><td>Locke</td><td>Process</td><td>Goal setting</td><td>SMART goals</td></tr>
+</tbody></table></div>
+
+<h4>Intrinsic vs Extrinsic Motivation</h4>
+<div class="db"><table><thead><tr><th>Aspect</th><th>Intrinsic</th><th>Extrinsic</th></tr></thead><tbody>
+<tr><td>Source</td><td>Within (satisfaction, mastery)</td><td>External (pay, praise)</td></tr>
+<tr><td>Duration</td><td>Long-lasting</td><td>Short-term</td></tr>
+<tr><td>Example</td><td>Learning new skills</td><td>Bonus, promotion</td></tr>
+<tr><td>Risk</td><td>None</td><td>Can undermine intrinsic</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Compare Maslow and Herzberg theories</td><td>10</td><td>Hierarchy vs Two-factor, similarities, differences</td></tr>
+<tr><td>Explain Vroom's expectancy theory</td><td>5</td><td>M = E × I × V with examples</td></tr>
+<tr><td>Discuss content vs process theories</td><td>5</td><td>What vs How motivation works</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; Maslow = 5-level hierarchy. Herzberg = Hygiene vs Motivators. Vroom = M × E × I × V.</strong> Content theories explain WHAT motivates. Process theories explain HOW motivation works. Google India uses 20% time (Herzberg motivators).</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Compare Maslow and Herzberg":</strong> Definitions (2) + comparison table (4) + differences (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Content theories explain WHAT motivates: Maslow, Herzberg, McClelland</li>
+<li>Process theories explain HOW motivation works: Vroom, Adams, Locke</li>
+<li>Maslow: 5-level hierarchy (Physiological to Self-Actualization)</li>
+<li>Herzberg: Hygiene factors prevent dissatisfaction, motivators drive satisfaction</li>
+<li>Vroom: Motivation = Expectancy x Instrumentality x Valence</li>
+<li>Google India: 20% time (Herzberg motivators); TCS: McClelland achievement training</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 3 ==================== -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Group Dynamics and Team Building</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Group Dynamics and Team Building</div><p>Groups form, storm, norm, perform, and adjourn (Tuckman model). Team building develops shared goals, trust, and complementary skills. Group dynamics influence productivity and satisfaction.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Tuckman's Group Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Tuckman Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Team Building Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Team Building" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Tuckman's Group Development Model</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Tuckman's 5 Stages of Group Development</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4)"><strong>Forming</strong><br><small>Getting acquainted</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Storming</strong><br><small>Conflicts emerge</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Norming</strong><br><small>Establishing rules</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Performing</strong><br><small>Peak productivity</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(200,200,200,0.2);border:1px solid rgba(200,200,200,0.4)"><strong>Adjourning</strong><br><small>Task complete</small></div>
+</div>
+</div>
+
+<h4>Point 2: Group vs Team</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Group</th><th>Team</th></tr></thead>
+<tbody>
+<tr><td><strong>Goals</strong></td><td>Individual goals</td><td>Shared goals</td></tr>
+<tr><td><strong>Accountability</strong></td><td>Individual</td><td>Mutual</td></tr>
+<tr><td><strong>Skills</strong></td><td>Similar or varied</td><td>Complementary</td></tr>
+<tr><td><strong>Synergy</strong></td><td>Independent</td><td>Interdependent</td></tr>
+</tbody></table></div>
+
+<h4>Point 3: Team Roles (Belbin)</h4>
+<div class="br"><span class="sb s-b">Plant</span><span class="sb s-b">Resource Investigator</span><span class="sb s-b">Coordinator</span><span class="sb s-b">Shaper</span><span class="sb s-b">Monitor Evaluator</span><span class="sb s-b">Teamworker</span><span class="sb s-b">Implementer</span><span class="sb s-b">Completer Finisher</span><span class="sb s-b">Specialist</span></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Wipro</strong> uses Tuckman model in team development programs. Indian cricket team exemplifies high-performing team dynamics with complementary roles (batsmen, bowlers, all-rounders).</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Tuckman stages: Forming, Storming, Norming, Performing, Adjourning. Questions ask about group vs team differences and Belbin team roles.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>FNSPA:</strong> <strong>F</strong>orming, <strong>S</strong>torming, <strong>N</strong>orming, <strong>P</strong>erforming, <strong>A</strong>journing</p></div>
+
+
+<h4>Detailed Explanation: Tuckman's Stages — Deep Dive</h4>
+<div class="db"><table><thead><tr><th>Stage</th><th>Characteristics</th><th>Leader Role</th><th>Duration</th></tr></thead><tbody>
+<tr><td>Forming</td><td>Ambiguity, dependence, politeness</td><td>Direct, clarify goals</td><td>Short</td></tr>
+<tr><td>Storming</td><td>Conflict, power struggles, cliques</td><td>Coach, mediate</td><td>Variable</td></tr>
+<tr><td>Norming</td><td>Cohesion, consensus, trust</td><td>Facilitate, empower</td><td>Moderate</td></tr>
+<tr><td>Performing</td><td>Maturity, task focus, synergy</td><td>Delegate, support</td><td>Longest</td></tr>
+<tr><td>Adjourning</td><td>Task complete, closure</td><td>Recognize, celebrate</td><td>Short</td></tr>
+</tbody></table></div>
+
+<h4>Group vs Team — Detailed</h4>
+<div class="db"><table><thead><tr><th>Aspect</th><th>Group</th><th>Team</th></tr></thead><tbody>
+<tr><td>Goals</td><td>Individual</td><td>Shared</td></tr>
+<tr><td>Accountability</td><td>Individual</td><td>Mutual</td></tr>
+<tr><td>Skills</td><td>Similar/varied</td><td>Complementary</td></tr>
+<tr><td>Synergy</td><td>Independent</td><td>Interdependent</td></tr>
+<tr><td>Decision Making</td><td>Individual</td><td>Collaborative</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Tuckman's group development stages</td><td>10</td><td>5 stages with characteristics, leader role</td></tr>
+<tr><td>Compare groups and teams</td><td>5</td><td>Goals, accountability, skills, synergy</td></tr>
+<tr><td>Discuss Belbin's team roles</td><td>5</td><td>9 roles with examples</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; FNSPA = Forming, Storming, Norming, Performing, Adjourning.</strong> Groups have individual goals; teams have shared goals. Belbin: 9 team roles for balanced teams. Social loafing = individual effort decreases in group.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain Tuckman's stages":</strong> 5 stages (5) + characteristics (3) + Indian example (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Group dynamics influence productivity and satisfaction</li>
+<li>Tuckman stages: Forming, Storming, Norming, Performing, Adjourning</li>
+<li>Groups vs Teams: teams have shared goals, complementary skills, mutual accountability</li>
+<li>Belbin: 9 team roles for balanced teams</li>
+<li>Team building develops trust, shared vision, and collaboration</li>
+<li>Wipro uses Tuckman model; Indian cricket team as high-performing team</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 4 ==================== -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Leadership &#x2014; Theories and Styles</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Leadership &#x2014; Theories and Styles</div><p>Leadership influences others towards goals. Trait theories identify leader characteristics. Behavioural theories (Blake-Mouton, Likert) focus on leader actions. Contingency theories match style to situation.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Leadership Theories Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Leadership Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transformational vs Transactional</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Leadership Styles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Leadership Theories</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Theory</th><th>Focus</th><th>Key Idea</th><th>Limitation</th></tr></thead>
+<tbody>
+<tr><td><strong>Trait</strong></td><td>Characteristics</td><td>Leaders are born with certain traits</td><td>No universal trait list</td></tr>
+<tr><td><strong>Behavioural</strong></td><td>Actions</td><td>Leaders can be trained</td><td>Ignores situation</td></tr>
+<tr><td><strong>Contingency</strong></td><td>Situation</td><td>Best style depends on context</td><td>Complex to apply</td></tr>
+<tr><td><strong>Transformational</strong></td><td>Inspiration</td><td>Inspire followers to exceed expectations</td><td>Can be manipulative</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Blake-Mouton Managerial Grid</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Blake-Mouton Managerial Grid</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(200,200,200,0.2);border:1px solid rgba(200,200,200,0.4)"><strong>(1,1)</strong> Impoverished</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>(1,9)</strong> Country Club</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>(5,5)</strong> Middle-of-Road</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>(9,1)</strong> Authority-Compliance</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>(9,9)</strong> Team Management</div>
+</div>
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">(9,9) Team Management is the ideal style - high concern for both people and production.</p>
+</div>
+
+<h4>Point 3: Transformational vs Transactional Leadership</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4AB; Transformational</h5><ul><li>Inspire and motivate followers</li><li>Intellectual stimulation</li><li>Individualized consideration</li><li>Idealized influence</li></ul></div>
+<div class="cc"><h5>&#x1F4B0; Transactional</h5><ul><li>Contingent rewards</li><li>Management by exception</li><li>Clear expectations</li><li>Exchange-based</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Ratan Tata</strong> practiced transformational leadership (JLR acquisition vision). <strong>Narayana Murthy</strong> of Infosys demonstrated servant leadership. <strong>Sundar Pichai</strong> shows situational leadership at Google.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Blake-Mouton Managerial Grid (9,9 is ideal). Compare transformational vs transactional leadership. Questions ask about contingency theories (Fiedler, Hersey-Blanchard).</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>LEAD:</strong> <strong>L</strong>isten, <strong>E</strong>mpower, <strong>A</strong>dapt, <strong>D</strong>irect &#x2014; situational leadership model</p></div>
+
+
+<h4>Detailed Explanation: Leadership Theories Comparison</h4>
+<div class="db"><table><thead><tr><th>Theory</th><th>Focus</th><th>Key Idea</th><th>Limitation</th></tr></thead><tbody>
+<tr><td>Trait</td><td>Characteristics</td><td>Leaders are born</td><td>No universal trait list</td></tr>
+<tr><td>Behavioural</td><td>Actions</td><td>Leaders can be trained</td><td>Ignores situation</td></tr>
+<tr><td>Contingency</td><td>Situation</td><td>Best style depends on context</td><td>Complex to apply</td></tr>
+<tr><td>Transformational</td><td>Inspiration</td><td>Inspire followers</td><td>Can be manipulative</td></tr>
+</tbody></table></div>
+
+<h4>Blake-Mouton Managerial Grid — Detailed</h4>
+<div class="db"><table><thead><tr><th>Style</th><th>Concern for People</th><th>Concern for Production</th><th>Result</th></tr></thead><tbody>
+<tr><td>(1,1) Impoverished</td><td>Low</td><td>Low</td><td>Minimum effort</td></tr>
+<tr><td>(1,9) Country Club</td><td>High</td><td>Low</td><td>Happy but unproductive</td></tr>
+<tr><td>(5,5) Middle-of-Road</td><td>Medium</td><td>Medium</td><td>Adequate performance</td></tr>
+<tr><td>(9,1) Authority</td><td>Low</td><td>High</td><td>Efficient but unhappy</td></tr>
+<tr><td>(9,9) Team</td><td>High</td><td>High</td><td>Ideal — high performance</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Compare transformational and transactional leadership</td><td>10</td><td>Inspiration vs rewards, examples</td></tr>
+<tr><td>Explain Blake-Mouton Managerial Grid</td><td>5</td><td>5 styles, (9,9) is ideal</td></tr>
+<tr><td>Discuss contingency theories of leadership</td><td>5</td><td>Fiedler, Hersey-Blanchard</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; (9,9) Team Management = ideal style.</strong> Transformational = inspire. Transactional = rewards. Ratan Tata = transformational. Narayana Murthy = servant leadership. Contingency theories match style to situation.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Compare leadership theories":</strong> Trait, Behavioural, Contingency, Transformational (6) + Blake-Mouton (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Leadership influences others towards organizational goals</li>
+<li>Trait theories: identify characteristics of effective leaders</li>
+<li>Behavioural theories: Blake-Mouton Grid (9,9 ideal), Likert systems</li>
+<li>Contingency theories: match leadership style to situation</li>
+<li>Transformational vs Transactional: inspiration vs rewards/punishments</li>
+<li>Indian leaders: Ratan Tata (transformational), Murthy (servant), Pichai (situational)</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 5 ==================== -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Organisational Culture and Climate</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 5: Organisational Culture and Climate</div><p>Organisational culture is the shared values, beliefs, and norms. Climate is the perceived work environment. Culture is deep and stable; climate is surface-level and changeable.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organizational Culture Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Org Culture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Culture vs Climate</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Culture</th><th>Climate</th></tr></thead>
+<tbody>
+<tr><td><strong>Depth</strong></td><td>Deep (values, assumptions)</td><td>Surface (perceptions)</td></tr>
+<tr><td><strong>Stability</strong></td><td>Stable, hard to change</td><td>Changeable, short-term</td></tr>
+<tr><td><strong>Focus</strong></td><td>Shared values and norms</td><td>Work environment</td></tr>
+<tr><td><strong>Measurement</strong></td><td>Qualitative (ethnography)</td><td>Quantitative (surveys)</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Schein's 3 Levels of Culture</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Schein's Culture Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4);width:40%;text-align:center"><strong>Artifacts</strong><br><small>Visible (dress code, office layout)</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);width:60%;text-align:center"><strong>Values</strong><br><small>Stated beliefs and strategies</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center"><strong>Basic Assumptions</strong><br><small>Core beliefs (unconscious)</small></div>
+</div>
+</div>
+
+<h4>Point 3: Culture Types (Cameron & Quinn)</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F3E0; Clan</h5><ul><li>Family-like, collaborative</li><li>Focus: mentorship, teamwork</li><li>Example: Google, Infosys</li></ul></div>
+<div class="cc"><h5>&#x1F680; Adhocracy</h5><ul><li>Dynamic, entrepreneurial</li><li>Focus: innovation, risk-taking</li><li>Example: Startups, Tesla</li></ul></div>
+</div>
+<div class="cg">
+<div class="cc"><h5>&#x1F4CA; Market</h5><ul><li>Results-oriented, competitive</li><li>Focus: achievement, winning</li><li>Example: Amazon, Flipkart</li></ul></div>
+<div class="cc"><h5>&#x1F3DB; Hierarchy</h5><ul><li>Structured, controlled</li><li>Focus: efficiency, consistency</li><li>Example: Government, banks</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>TCS</strong> has a strong innovation culture (Adhocracy). <strong>Infosys</strong> promotes meritocracy (Market). <strong>Tata Group</strong> values integrity and nation-building (Clan).</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Distinguish culture vs climate. Know Schein 3 levels: Artifacts, Values, Assumptions. Questions ask about culture types and their organizational impact.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CULTURE:</strong> <strong>C</strong>ommunication, <strong>U</strong>nwritten rules, <strong>L</strong>eadership style, <strong>T</strong>raditions, <strong>U</strong>nity, <strong>R</strong>ituals, <strong>E</strong>thics</p></div>
+
+
+<h4>Detailed Explanation: Culture Types (Cameron & Quinn)</h4>
+<div class="db"><table><thead><tr><th>Type</th><th>Focus</th><th>Characteristics</th><th>Indian Example</th></tr></thead><tbody>
+<tr><td>Clan</td><td>Collaboration</td><td>Family-like, mentorship</td><td>Infosys, Google India</td></tr>
+<tr><td>Adhocracy</td><td>Innovation</td><td>Dynamic, risk-taking</td><td>Startups, Tesla</td></tr>
+<tr><td>Market</td><td>Results</td><td>Competitive, achievement</td><td>Amazon, Flipkart</td></tr>
+<tr><td>Hierarchy</td><td>Control</td><td>Structured, efficient</td><td>Government, banks</td></tr>
+</tbody></table></div>
+
+<h4>Schein's 3 Levels of Culture — Detailed</h4>
+<div class="db"><table><thead><tr><th>Level</th><th>Visibility</th><th>Examples</th><th>Changeability</th></tr></thead><tbody>
+<tr><td>Artifacts</td><td>Visible</td><td>Dress code, office layout</td><td>Easy to change</td></tr>
+<tr><td>Values</td><td>Partially visible</td><td>Stated beliefs, strategies</td><td>Moderate</td></tr>
+<tr><td>Assumptions</td><td>Invisible</td><td>Core beliefs, unconscious</td><td>Very hard to change</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Compare organizational culture and climate</td><td>10</td><td>Depth, stability, focus, measurement</td></tr>
+<tr><td>Explain Schein's 3 levels of culture</td><td>5</td><td>Artifacts, Values, Assumptions</td></tr>
+<tr><td>Discuss culture types with examples</td><td>5</td><td>Clan, Adhocracy, Market, Hierarchy</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; Culture = deep, stable. Climate = surface, changeable.</strong> Schein: Artifacts → Values → Assumptions. Culture types: Clan, Adhocracy, Market, Hierarchy. TCS = innovation culture. Infosys = meritocracy.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain organizational culture":</strong> Definition (2) + Schein's 3 levels (3) + culture types (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Organisational culture: shared values, beliefs, and norms (deep, stable)</li>
+<li>Climate: perceived work environment (surface-level, changeable)</li>
+<li>Schein's 3 levels: Artifacts (visible), Values (stated), Assumptions (core beliefs)</li>
+<li>Culture types: Clan, Adhocracy, Market, Hierarchy (Cameron & Quinn)</li>
+<li>TCS: innovation culture; Infosys: meritocracy; Tata Group: integrity</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 6 ==================== -->
+<h2 id="block2">Block-02: Organizational Processes</h2>
+
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Organisational Change and Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 6: Organisational Change and Development</div><p>Organizational Change is the movement from present state to desired state. OD is a planned, systematic approach to improving organizational effectiveness through behavioral science.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Managing Organizational Change</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Org Change" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Lewin's Change Model</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Lewin's 3-Step Change Model</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Unfreeze</strong><br><small>Prepare for change</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Change</strong><br><small>Implement new methods</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Refreeze</strong><br><small>Stabilize new state</small></div>
+</div>
+</div>
+
+<h4>Point 2: Kotter's 8-Step Model</h4>
+<div class="br"><span class="sb s-b">Create Urgency</span><span class="sb s-b">Build Coalition</span><span class="sb s-b">Form Vision</span><span class="sb s-b">Communicate</span><span class="sb s-b">Empower Action</span><span class="sb s-b">Quick Wins</span><span class="sb s-b">Consolidate</span><span class="sb s-b">Anchor Culture</span></div>
+
+<h4>Point 3: Resistance to Change</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F6AB; Individual Resistance</h5><ul><li>Habit, security, fear of unknown</li><li>Economic factors, selective perception</li></ul></div>
+<div class="cc"><h5>&#x1F3DB; Organizational Resistance</h5><ul><li>Structural inertia, group inertia</li><li>Threat to power, resource constraints</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> managed change during digital transformation by using Kotter's model: created urgency (market disruption), built coalition (leadership team), and anchored in culture (values-driven).</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Lewin's 3-step model and Kotter's 8 steps. Questions ask about resistance to change and how to overcome it.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>LEWIN:</strong> <strong>U</strong>nfreeze, <strong>C</strong>hange, <strong>R</strong>efreeze</p></div>
+
+
+<h4>Detailed Explanation: Change Models Comparison</h4>
+<div class="db"><table><thead><tr><th>Model</th><th>Steps</th><th>Focus</th><th>Best For</th></tr></thead><tbody>
+<tr><td>Lewin</td><td>3 (Unfreeze, Change, Refreeze)</td><td>Process</td><td>Simple changes</td></tr>
+<tr><td>Kotter</td><td>8 steps</td><td>Implementation</td><td>Large-scale change</td></tr>
+<tr><td>ADKAR</td><td>5 (Awareness, Desire, Knowledge, Ability, Reinforcement)</td><td>Individual</td><td>People-focused change</td></tr>
+</tbody></table></div>
+
+<h4>Resistance to Change — Detailed</h4>
+<div class="db"><table><thead><tr><th>Source</th><th>Reasons</th><th>Overcoming Strategy</th></tr></thead><tbody>
+<tr><td>Individual</td><td>Habit, fear, security</td><td>Communication, training</td></tr>
+<tr><td>Organizational</td><td>Structural inertia, power</td><td>Participation, negotiation</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Lewin's 3-step change model</td><td>5</td><td>Unfreeze, Change, Refreeze</td></tr>
+<tr><td>Describe Kotter's 8-step model</td><td>10</td><td>All 8 steps with examples</td></tr>
+<tr><td>Discuss resistance to change</td><td>5</td><td>Individual + organizational sources</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; Lewin: Unfreeze → Change → Refreeze.</strong> Kotter: 8-step model for large-scale change. Resistance: individual (habit, fear) + organizational (inertia, power). Infosys used Kotter's model for digital transformation.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Describe change models":</strong> Lewin 3-step (3) + Kotter 8-step (5) + resistance (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Change: movement from present to desired state</li>
+<li>Lewin: Unfreeze, Change, Refreeze</li>
+<li>Kotter: 8-step model for implementing change</li>
+<li>Resistance: individual (habit, fear) and organizational (inertia, power)</li>
+<li>OD: planned, systematic approach using behavioral science</li>
+<li>Infosys: digital transformation using Kotter's model</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 7 ==================== -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Conflict Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 7: Conflict Management</div><p>Conflict is a process that begins when one party perceives another has frustrated or is about to frustrate a major concern. Functional conflict improves decisions; dysfunctional conflict harms relationships.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Conflict Management Styles</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Conflict Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Types of Conflict</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Focus</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td><strong>Functional</strong></td><td>Task-related</td><td>Improves decisions, creativity</td></tr>
+<tr><td><strong>Dysfunctional</strong></td><td>Personal/emotional</td><td>Harms relationships, productivity</td></tr>
+<tr><td><strong>Intrapersonal</strong></td><td>Within individual</td><td>Role conflict, stress</td></tr>
+<tr><td><strong>Interpersonal</strong></td><td>Between individuals</td><td>Personality clashes</td></tr>
+<tr><td><strong>Intergroup</strong></td><td>Between teams/departments</td><td>Silos, competition</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Conflict Resolution Styles (Thomas-Kilmann)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Thomas-Kilmann Conflict Modes</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Competing</strong><br><small>Win-Lose</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Collaborating</strong><br><small>Win-Win</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Compromising</strong><br><small>Lose-Lose</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Avoiding</strong><br><small>Lose-Leave</small></div>
+<div class="vd-node" style="background:rgba(200,200,200,0.2);border:1px solid rgba(200,200,200,0.4)"><strong>Accommodating</strong><br><small>Yield-Lose</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Group</strong> uses collaborating style for inter-departmental conflicts. <strong>Indian government</strong> uses compromising style in labor disputes between unions and management.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Thomas-Kilmann 5 styles: Competing, Collaborating, Compromising, Avoiding, Accommodating. Questions ask about functional vs dysfunctional conflict.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>5C:</strong> <strong>C</strong>ompeting, <strong>C</strong>ollaborating, <strong>C</strong>ompromising, <strong>A</strong>voiding, <strong>A</strong>ccommodating</p></div>
+
+
+<h4>Detailed Explanation: Thomas-Kilmann Conflict Modes</h4>
+<div class="db"><table><thead><tr><th>Style</th><th>Assertiveness</th><th>Cooperativeness</th><th>Best When</th></tr></thead><tbody>
+<tr><td>Competing</td><td>High</td><td>Low</td><td>Quick action needed</td></tr>
+<tr><td>Collaborating</td><td>High</td><td>High</td><td>Both concerns important</td></tr>
+<tr><td>Compromising</td><td>Medium</td><td>Medium</td><td>Equal power, time pressure</td></tr>
+<tr><td>Avoiding</td><td>Low</td><td>Low</td><td>Issue trivial</td></tr>
+<tr><td>Accommodating</td><td>Low</td><td>High</td><td>Preserving relationship</td></tr>
+</tbody></table></div>
+
+<h4>Conflict Process — Stages</h4>
+<div class="db"><table><thead><tr><th>Stage</th><th>Description</th><th>Intervention</th></tr></thead><tbody>
+<tr><td>Potential Opposition</td><td>Conditions exist</td><td>Prevent</td></tr>
+<tr><td>Cognition</td><td>Conflict perceived</td><td>Acknowledge</td></tr>
+<tr><td>Personalization</td><td>Felt emotionally</td><td>Manage emotions</td></tr>
+<tr><td>Behaviour</td><td>Action taken</td><td>Resolve</td></tr>
+<tr><td>Outcomes</td><td>Result</td><td>Learn</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Thomas-Kilmann conflict modes</td><td>10</td><td>5 styles with assertiveness/cooperativeness</td></tr>
+<tr><td>Compare functional and dysfunctional conflict</td><td>5</td><td>Task-related vs personal/emotional</td></tr>
+<tr><td>Discuss conflict resolution strategies</td><td>5</td><td>When to use each style</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; 5C: Competing, Collaborating, Compromising, Avoiding, Accommodating.</strong> Collaborating = win-win (ideal). Compromising = lose-lose (practical). Functional conflict improves decisions. Dysfunctional harms relationships.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain conflict management styles":</strong> 5 Thomas-Kilmann styles (5) + when to use each (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Conflict: process when one party perceives frustration of concerns</li>
+<li>Functional (improves decisions) vs Dysfunctional (harms relationships)</li>
+<li>Thomas-Kilmann: Competing, Collaborating, Compromising, Avoiding, Accommodating</li>
+<li>Collaborating is ideal for important issues; Compromising for moderate issues</li>
+<li>Tata Group: collaborating style; Indian government: compromising in labor disputes</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 8 ==================== -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Power, Politics, and Influence</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 8: Power, Politics, and Influence</div><p>Power is the ability to influence others. Organizational politics involves using power to achieve goals. Influence tactics are strategies used to affect others' behaviour.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Power and Influence in Organizations</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Power Influence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: French and Raven's 5 Bases of Power</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; 5 Bases of Power</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Coercive</strong><br><small>Punishment</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Reward</strong><br><small>Incentives</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Legitimate</strong><br><small>Position authority</small></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Expert</strong><br><small>Knowledge/skills</small></div>
+<div class="vd-node" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4)"><strong>Referent</strong><br><small>Charisma/attraction</small></div>
+</div>
+</div>
+
+<h4>Point 2: Influence Tactics</h4>
+<div class="br"><span class="sb s-b">Rational Persuasion</span><span class="sb s-b">Inspirational Appeals</span><span class="sb s-b">Consultation</span><span class="sb s-b">Ingratiation</span><span class="sb s-b">Exchange</span><span class="sb s-b">Coalition</span><span class="sb s-b">Pressure</span><span class="sb s-b">Legitimating</span></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Ratan Tata</strong> used referent power (charisma, trust) to lead Tata Group. <strong>Elon Musk</strong> uses expert power (technical knowledge) in Tesla and SpaceX decisions.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know French and Raven's 5 bases: Coercive, Reward, Legitimate, Expert, Referent. Questions ask about organizational politics and influence tactics.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CRLE-R:</strong> <strong>C</strong>oercive, <strong>R</strong>eward, <strong>L</strong>egitimate, <strong>E</strong>xpert, <strong>R</strong>eferent</p></div>
+
+
+<h4>Detailed Explanation: Power Bases — Detailed</h4>
+<div class="db"><table><thead><tr><th>Power</th><th>Source</th><th>Effect</th><th>Example</th></tr></thead><tbody>
+<tr><td>Coercive</td><td>Punishment threat</td><td>Compliance (resentful)</td><td>Demotion threat</td></tr>
+<tr><td>Reward</td><td>Incentives</td><td>Compliance (conditional)</td><td>Bonus, promotion</td></tr>
+<tr><td>Legitimate</td><td>Position authority</td><td>Compliance (obligation)</td><td>Manager's directive</td></tr>
+<tr><td>Expert</td><td>Knowledge/skills</td><td>Commitment (trust)</td><td>Doctor's advice</td></tr>
+<tr><td>Referent</td><td>Charisma/attraction</td><td>Commitment (admiration)</td><td>Celebrity endorsement</td></tr>
+</tbody></table></div>
+
+<h4>Influence Tactics — Effectiveness</h4>
+<div class="db"><table><thead><tr><th>Tactic</th><th>Description</th><th>Effectiveness</th></tr></thead><tbody>
+<tr><td>Rational Persuasion</td><td>Logic, evidence</td><td>High</td></tr>
+<tr><td>Inspirational Appeals</td><td>Emotions, values</td><td>High</td></tr>
+<tr><td>Consultation</td><td>Involve in decision</td><td>High</td></tr>
+<tr><td>Ingratiation</td><td>Flattery, favors</td><td>Medium</td></tr>
+<tr><td>Exchange</td><td>Quid pro quo</td><td>Medium</td></tr>
+<tr><td>Coalition</td><td>Get others' support</td><td>Medium</td></tr>
+<tr><td>Pressure</td><td>Demands, threats</td><td>Low</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain French and Raven's 5 bases of power</td><td>10</td><td>Coercive, Reward, Legitimate, Expert, Referent</td></tr>
+<tr><td>Discuss influence tactics in organizations</td><td>5</td><td>8 tactics with effectiveness</td></tr>
+<tr><td>Compare personal and positional power</td><td>5</td><td>Expert/Referent vs Coercive/Reward/Legitimate</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; CRLE-R: Coercive, Reward, Legitimate, Expert, Referent.</strong> Expert and Referent = personal power (most effective). Ratan Tata = referent power. Elon Musk = expert power. Influence tactics: rational persuasion most effective.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain power bases":</strong> French & Raven 5 bases (5) + influence tactics (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>Power: ability to influence others</li>
+<li>French & Raven: Coercive, Reward, Legitimate, Expert, Referent</li>
+<li>Organizational politics: using power to achieve goals</li>
+<li>Influence tactics: rational persuasion, inspiration, consultation, etc.</li>
+<li>Ratan Tata: referent power; Elon Musk: expert power</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 9 ==================== -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Interpersonal Relations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 9: Interpersonal Relations</div><p>Interpersonal relations are the connections between people in organizations. Trust, communication, and emotional intelligence are key factors that influence the quality of workplace relationships.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Emotional Intelligence at Work</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Emotional Intelligence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Emotional Intelligence (Goleman)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; 5 Components of Emotional Intelligence</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4)"><strong>Self-Awareness</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Self-Regulation</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Motivation</strong></div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Empathy</strong></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Social Skills</strong></div>
+</div>
+</div>
+
+<h4>Point 2: Trust in Organizations</h4>
+<ul>
+<li><strong>Trust</strong> = Willingness to be vulnerable to another's actions</li>
+<li>Components: Integrity, Competence, Consistency, Loyalty, Openness</li>
+<li>Trust is built slowly but destroyed quickly</li>
+<li>High-trust organizations have lower turnover and higher engagement</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> built a high-trust culture through transparency (open communication, ethical leadership). <strong>Tata Group</strong> has maintained trust for 150+ years through consistent ethical behaviour.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Goleman's 5 components of EI: Self-Awareness, Self-Regulation, Motivation, Empathy, Social Skills. Questions ask about trust building and interpersonal communication.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>EQ-5:</strong> <strong>S</strong>elf-Awareness, <strong>S</strong>elf-Regulation, <strong>M</strong>otivation, <strong>E</strong>mpathy, <strong>S</strong>ocial Skills</p></div>
+
+
+<h4>Detailed Explanation: Emotional Intelligence Models</h4>
+<div class="db"><table><thead><tr><th>Model</th><th>Components</th><th>Focus</th></tr></thead><tbody>
+<tr><td>Goleman</td><td>Self-awareness, Self-regulation, Motivation, Empathy, Social skills</td><td>Leadership</td></tr>
+<tr><td>Mayer-Salovey</td><td>Perceiving, Using, Understanding, Managing</td><td>Cognitive</td></tr>
+</tbody></table></div>
+
+<h4>Trust Components — Detailed</h4>
+<div class="db"><table><thead><tr><th>Component</th><th>Description</th><th>Building Strategy</th></tr></thead><tbody>
+<tr><td>Integrity</td><td>Honesty, ethical behaviour</td><td>Consistent actions</td></tr>
+<tr><td>Competence</td><td>Ability to deliver</td><td>Demonstrate skills</td></tr>
+<tr><td>Consistency</td><td>Reliable behaviour</td><td>Follow through</td></tr>
+<tr><td>Loyalty</td><td>Support and protect</td><td>Stand by team</td></tr>
+<tr><td>Openness</td><td>Transparent communication</td><td>Share information</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Goleman's EI model</td><td>10</td><td>5 components with examples</td></tr>
+<tr><td>Discuss trust in organizations</td><td>5</td><td>Components, building strategies</td></tr>
+<tr><td>Compare EI models</td><td>5</td><td>Goleman vs Mayer-Salovey</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; EI = Self-awareness, Self-regulation, Motivation, Empathy, Social Skills.</strong> Trust = Integrity + Competence + Consistency + Loyalty + Openness. High-trust orgs have lower turnover. Infosys = transparency culture.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Discuss emotional intelligence":</strong> Goleman 5 components (5) + trust components (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>Interpersonal relations: connections between people in organizations</li>
+<li>Emotional Intelligence (Goleman): Self-Awareness, Self-Regulation, Motivation, Empathy, Social Skills</li>
+<li>Trust: Integrity, Competence, Consistency, Loyalty, Openness</li>
+<li>High-trust organizations: lower turnover, higher engagement</li>
+<li>Infosys: transparency culture; Tata Group: 150+ years of trust</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 10 ==================== -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Stress Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 10: Stress Management</div><p>Stress is the body's response to demands. Eustress (positive) motivates; distress (negative) harms health and performance. Sources include role ambiguity, workload, and interpersonal conflict.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Workplace Stress Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Stress Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Types of Stress</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4AA; Eustress</h5><ul><li>Positive stress that motivates</li><li>Challenges that drive performance</li><li>Example: promotion, new project</li></ul></div>
+<div class="cc"><h5>&#x1F614; Distress</h5><ul><li>Negative stress that harms</li><li>Excessive demands beyond capacity</li><li>Example: job insecurity, burnout</li></ul></div>
+</div>
+
+<h4>Point 2: Sources of Workplace Stress</h4>
+<div class="br"><span class="sb s-b">Role Ambiguity</span><span class="sb s-b">Role Conflict</span><span class="sb s-b">Workload</span><span class="sb s-b">Job Insecurity</span><span class="sb s-b">Interpersonal Conflict</span><span class="sb s-b">Career Development</span></div>
+
+<h4>Point 3: Stress Management Strategies</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F9D8; Individual Strategies</h5><ul><li>Time management, exercise, meditation</li><li>Cognitive restructuring, social support</li><li>Work-life balance</li></ul></div>
+<div class="cc"><h5>&#x1F3E2; Organizational Strategies</h5><ul><li>Job redesign, role clarity</li><li>Employee assistance programs (EAP)</li><li>Flexible work arrangements</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Google India</strong> provides meditation rooms, fitness centers, and flexible hours to manage employee stress. <strong>TCS</strong> offers employee assistance programs with counseling services.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know eustress vs distress. Questions ask about sources of stress and management strategies. Remember: organizational strategies are more effective than individual ones.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>STRESS:</strong> <strong>S</strong>ources, <strong>T</strong>ype, <strong>R</strong>esponse, <strong>E</strong>ffects, <strong>S</strong>trategies, <strong>S</strong>upport</p></div>
+
+
+<h4>Detailed Explanation: General Adaptation Syndrome (GAS)</h4>
+<div class="db"><table><thead><tr><th>Stage</th><th>Body Response</th><th>Duration</th><th>Outcome</th></tr></thead><tbody>
+<tr><td>Alarm</td><td>Mobilize defences</td><td>Short</td><td>Fight or flight</td></tr>
+<tr><td>Resistance</td><td>Maximum adaptation</td><td>Variable</td><td>Coping</td></tr>
+<tr><td>Exhaustion</td><td>Resources depleted</td><td>Long-term</td><td>Burnout, illness</td></tr>
+</tbody></table></div>
+
+<h4>Stress Types — Detailed</h4>
+<div class="db"><table><thead><tr><th>Type</th><th>Effect</th><th>Example</th></tr></thead><tbody>
+<tr><td>Eustress</td><td>Positive, motivating</td><td>New challenge, promotion</td></tr>
+<tr><td>Distress</td><td>Negative, harmful</td><td>Job insecurity, overload</td></tr>
+<tr><td>Hypostress</td><td>Under-stimulation</td><td>Boredom, monotony</td></tr>
+<tr><td>Hyperstress</td><td>Over-stimulation</td><td>Burnout, breakdown</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain GAS model of stress</td><td>5</td><td>Alarm, Resistance, Exhaustion</td></tr>
+<tr><td>Discuss stress management strategies</td><td>10</td><td>Individual + organizational</td></tr>
+<tr><td>Compare eustress and distress</td><td>5</td><td>Positive vs negative stress</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; GAS: Alarm → Resistance → Exhaustion.</strong> Eustress = positive. Distress = negative. Inverted-U: moderate arousal = peak performance. Individual strategies: exercise, meditation. Organizational: job redesign, EAP.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain stress management":</strong> GAS model (3) + stress types (2) + strategies (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Stress: body's response to demands</li>
+<li>Eustress (positive, motivating) vs Distress (negative, harmful)</li>
+<li>Sources: role ambiguity, workload, job insecurity, interpersonal conflict</li>
+<li>Individual strategies: time management, exercise, meditation</li>
+<li>Organizational strategies: job redesign, EAP, flexible work</li>
+<li>Google India: meditation rooms, fitness; TCS: EAP counseling</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 11 ==================== -->
+<h2 id="block3">Block-03: Contemporary Issues and Ethics</h2>
+
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Organisational Justice and Ethics</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 11: Organisational Justice and Ethics</div><p>Organizational justice refers to perceived fairness in the workplace. Ethics involves moral principles guiding behaviour. Both influence trust, commitment, and organizational citizenship behaviour.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organizational Justice</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0t2Maqm5DSk" title="Org Justice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Types of Organizational Justice</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Focus</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Distributive</strong></td><td>Fairness of outcomes</td><td>Equal pay for equal work</td></tr>
+<tr><td><strong>Procedural</strong></td><td>Fairness of processes</td><td>Transparent promotion criteria</td></tr>
+<tr><td><strong>Interactional</strong></td><td>Fairness in treatment</td><td>Respectful communication</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Ethics in Organizations</h4>
+<ul>
+<li><strong>Ethical Behaviour</strong> = Actions consistent with moral principles and societal norms</li>
+<li>Ethical dilemmas: situations where right and wrong are unclear</li>
+<li>Code of ethics: formal document stating organizational values</li>
+<li>Whistleblowing: reporting unethical behaviour to authorities</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Group</strong> has a strong ethical code (integrity, excellence, responsibility). <strong>Infosys</strong> was first Indian company to adopt corporate governance code. <strong>Satyam scandal</strong> (2009) showed consequences of ethical failure.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know 3 types of justice: Distributive, Procedural, Interactional. Questions ask about ethical dilemmas and whistleblowing.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DPI:</strong> <strong>D</strong>istributive, <strong>P</strong>rocedural, <strong>I</strong>nteractional justice</p></div>
+
+
+<h4>Detailed Explanation: Organizational Justice Types</h4>
+<div class="db"><table><thead><tr><th>Type</th><th>Focus</th><th>Example</th><th>Impact</th></tr></thead><tbody>
+<tr><td>Distributive</td><td>Fairness of outcomes</td><td>Equal pay for equal work</td><td>Satisfaction</td></tr>
+<tr><td>Procedural</td><td>Fairness of processes</td><td>Transparent promotion criteria</td><td>Trust</td></tr>
+<tr><td>Interactional</td><td>Fairness in treatment</td><td>Respectful communication</td><td>Commitment</td></tr>
+</tbody></table></div>
+
+<h4>Ethical Decision Framework</h4>
+<div class="db"><table><thead><tr><th>Principle</th><th>Description</th><th>Application</th></tr></thead><tbody>
+<tr><td>Utilitarian</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td></tr>
+<tr><td>Rights</td><td>Respect individual rights</td><td>Privacy, due process</td></tr>
+<tr><td>Justice</td><td>Fair distribution of benefits</td><td>Equal opportunity</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain types of organizational justice</td><td>5</td><td>Distributive, Procedural, Interactional</td></tr>
+<tr><td>Discuss ethics in organizations</td><td>10</td><td>Code of ethics, whistleblowing, dilemmas</td></tr>
+<tr><td>Compare ethical decision frameworks</td><td>5</td><td>Utilitarian, Rights, Justice</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; DPI: Distributive, Procedural, Interactional justice.</strong> Ethics = moral principles. Code of ethics = formal values document. Whistleblowing = reporting unethical behaviour. Tata Group = integrity-driven. Satyam = ethical failure.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Discuss organizational justice":</strong> 3 types (3) + ethics (3) + Indian examples (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>Organizational justice: perceived fairness in workplace</li>
+<li>Types: Distributive (outcomes), Procedural (processes), Interactional (treatment)</li>
+<li>Ethics: moral principles guiding behaviour</li>
+<li>Code of ethics, whistleblowing, ethical dilemmas</li>
+<li>Tata Group: integrity-driven; Infosys: governance pioneer; Satyam: ethical failure</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 12 ==================== -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Diversity and Inclusion</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 12: Diversity and Inclusion</div><p>Diversity refers to differences among people (gender, age, culture, religion). Inclusion is creating an environment where all people feel valued and respected. Diversity management leverages differences for organizational benefit.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Diversity and Inclusion at Work</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7fMvtPz2pl0" title="Diversity Inclusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Types of Diversity</h4>
+<div class="br"><span class="sb s-b">Gender</span><span class="sb s-b">Age</span><span class="sb s-b">Ethnicity</span><span class="sb s-b">Religion</span><span class="sb s-b">Disability</span><span class="sb s-b">Sexual Orientation</span><span class="sb s-b">Education</span></div>
+
+<h4>Point 2: Benefits of Diversity</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4CA; Organizational Benefits</h5><ul><li>Better decision-making (multiple perspectives)</li><li>Increased creativity and innovation</li><li>Better understanding of diverse markets</li><li>Improved employer brand</li></ul></div>
+<div class="cc"><h5>&#x1F465; Individual Benefits</h5><ul><li>Personal growth and learning</li><li>Broader perspectives</li><li>Enhanced creativity</li><li>Better problem-solving</li></ul></div>
+</div>
+
+<h4>Point 3: Inclusion Strategies</h4>
+<ul>
+<li><strong>Unconscious bias training:</strong> Address hidden prejudices</li>
+<li><strong>Mentorship programs:</strong> Support underrepresented groups</li>
+<li><strong>Inclusive policies:</strong> Flexible work, parental leave</li>
+<li><strong>Diverse hiring:</strong> Blind recruitment, diverse panels</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> has 38% women in workforce (target: 45%). <strong>TCS</strong> has diversity programs for LGBTQ+ employees. <strong>Godrej</strong> promotes gender diversity at all levels.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know surface-level vs deep-level diversity. Questions ask about benefits of diversity and inclusion strategies. Remember: diversity is about differences; inclusion is about belonging.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DIVERSE:</strong> <strong>D</strong>ifferences, <strong>I</strong>nclusion, <strong>V</strong>alues, <strong>E</strong>quity, <strong>R</strong>espect, <strong>S</strong>upport, <strong>E</strong>ngagement</p></div>
+
+
+<h4>Detailed Explanation: Diversity Types</h4>
+<div class="db"><table><thead><tr><th>Type</th><th>Examples</th><th>Visibility</th><th>Management</th></tr></thead><tbody>
+<tr><td>Surface-level</td><td>Age, gender, race</td><td>Visible</td><td>Policies, training</td></tr>
+<tr><td>Deep-level</td><td>Values, beliefs, personality</td><td>Invisible</td><td>Communication, inclusion</td></tr>
+</tbody></table></div>
+
+<h4>Benefits of Diversity — Organizational Impact</h4>
+<div class="db"><table><thead><tr><th>Benefit</th><th>Mechanism</th><th>Evidence</th></tr></thead><tbody>
+<tr><td>Better decisions</td><td>Multiple perspectives</td><td>McKinsey: 35% more likely to outperform</td></tr>
+<tr><td>Innovation</td><td>Creative碰撞</td><td>Diverse teams file more patents</td></tr>
+<tr><td>Market understanding</td><td>Reflect customer base</td><td>Better customer service</td></tr>
+<tr><td>Employer brand</td><td>Attract top talent</td><td>Preferred employer status</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Discuss diversity management in organizations</td><td>10</td><td>Types, benefits, strategies</td></tr>
+<tr><td>Compare surface-level and deep-level diversity</td><td>5</td><td>Visibility, examples, management</td></tr>
+<tr><td>Explain inclusion strategies</td><td>5</td><td>Training, mentorship, policies</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; Diversity = differences. Inclusion = belonging.</strong> Benefits: better decisions, creativity, market understanding. Strategies: unconscious bias training, mentorship, inclusive policies. Infosys: 38% women in workforce.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Discuss diversity management":</strong> Types (2) + benefits (3) + strategies (3) + Indian examples (1) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Diversity: differences among people (gender, age, culture, religion)</li>
+<li>Inclusion: environment where all feel valued and respected</li>
+<li>Benefits: better decisions, creativity, market understanding, employer brand</li>
+<li>Strategies: unconscious bias training, mentorship, inclusive policies</li>
+<li>Infosys: 38% women; TCS: LGBTQ+ programs; Godrej: gender diversity</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 13 ==================== -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Career Development</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 13: Career Development</div><p>Career development is the lifelong process of managing learning, work, and transitions. Career stages include exploration, establishment, maintenance, and decline. Organizations support careers through mentoring, training, and succession planning.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Career Development Stages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9g59YW_rty4" title="Career Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Career Stages (Super)</h4>
+<div class="visual-diagram">
+<h5>&#x1F4CA; Super's Career Stages</h5>
+<div class="flow-visual">
+<div class="step" style="background:rgba(225,112,85,0.2);border:1px solid rgba(225,112,85,0.4)"><strong>Growth</strong><br><small>Childhood</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Exploration</strong><br><small>15-24 years</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Establishment</strong><br><small>25-44 years</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Maintenance</strong><br><small>45-64 years</small></div>
+<div class="arrow">&#x2192;</div>
+<div class="step" style="background:rgba(200,200,200,0.2);border:1px solid rgba(200,200,200,0.4)"><strong>Decline</strong><br><small>65+ years</small></div>
+</div>
+</div>
+
+<h4>Point 2: Career Anchors (Schein)</h4>
+<div class="br"><span class="sb s-b">Technical/Functional</span><span class="sb s-b">Managerial Competence</span><span class="sb s-b">Autonomy</span><span class="sb s-b">Security</span><span class="sb s-b">Entrepreneurial</span></div>
+
+<h4>Point 3: Organizational Career Support</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4DA; Development Activities</h5><ul><li>Training programs, workshops</li><li>Job rotation, cross-functional projects</li><li>Leadership development programs</li></ul></div>
+<div class="cc"><h5>&#x1F91D; Support Systems</h5><ul><li>Mentoring, coaching</li><li>Succession planning</li><li>Career counseling</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys</strong> has Global Education Center in Mysore for career development. <strong>Tata Group</strong> has structured leadership pipeline programs. <strong>Wipro</strong> offers career counseling and mentoring.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Super's 5 career stages and Schein's career anchors. Questions ask about organizational support for career development.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>GEEMA:</strong> <strong>G</strong>rowth, <strong>E</strong>xploration, <strong>E</strong>stablishment, <strong>M</strong>aintenance, <strong>A</strong>bandonment (decline)</p></div>
+
+
+<h4>Detailed Explanation: Super's Career Stages</h4>
+<div class="db"><table><thead><tr><th>Stage</th><th>Age</th><th>Characteristics</th><th>Organizational Support</th></tr></thead><tbody>
+<tr><td>Growth</td><td>0-14</td><td>Self-concept development</td><td>N/A</td></tr>
+<tr><td>Exploration</td><td>15-24</td><td>Trying different roles</td><td>Internships, mentoring</td></tr>
+<tr><td>Establishment</td><td>25-44</td><td>Building career</td><td>Training, promotions</td></tr>
+<tr><td>Maintenance</td><td>45-64</td><td>Consolidating</td><td>Continuing education</td></tr>
+<tr><td>Decline</td><td>65+</td><td>Reducing involvement</td><td>Succession planning</td></tr>
+</tbody></table></div>
+
+<h4>Schein's Career Anchors</h4>
+<div class="db"><table><thead><tr><th>Anchor</th><th>Motivation</th><th>Career Path</th></tr></thead><tbody>
+<tr><td>Technical/Functional</td><td>Expertise</td><td>Specialist, consultant</td></tr>
+<tr><td>Managerial Competence</td><td>Managing others</td><td>General management</td></tr>
+<tr><td>Autonomy</td><td>Independence</td><td>Entrepreneur, freelancer</td></tr>
+<tr><td>Security</td><td>Stability</td><td>Government, large corp</td></tr>
+<tr><td>Entrepreneurial</td><td>Creating something</td><td>Startup founder</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain Super's career stages</td><td>5</td><td>5 stages with age ranges</td></tr>
+<tr><td>Discuss Schein's career anchors</td><td>10</td><td>5 anchors with career paths</td></tr>
+<tr><td>Describe organizational career support</td><td>5</td><td>Training, mentoring, succession</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; GEEMA: Growth, Exploration, Establishment, Maintenance, Decline.</strong> Schein: Technical, Managerial, Autonomy, Security, Entrepreneurial anchors. Infosys Mysore campus for career development. Tata: leadership pipeline.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Explain career development":</strong> Super's stages (3) + Schein's anchors (3) + organizational support (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Career development: lifelong process of managing learning and work</li>
+<li>Super's stages: Growth, Exploration, Establishment, Maintenance, Decline</li>
+<li>Schein's career anchors: Technical, Managerial, Autonomy, Security, Entrepreneurial</li>
+<li>Organizational support: training, mentoring, succession planning</li>
+<li>Infosys: Mysore campus; Tata: leadership pipeline; Wipro: career counseling</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 14 ==================== -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Employee Engagement</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 14: Employee Engagement</div><p>Employee engagement is the emotional commitment employees have to the organization and its goals. Engaged employees are enthusiastic, involved, and committed. Disengaged employees are just going through the motions.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Employee Engagement Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3lCgY7ir174" title="Employee Engagement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Levels of Employee Engagement</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Level</th><th>Characteristics</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>Engaged</strong></td><td>Enthusiastic, committed, go extra mile</td><td>High productivity, innovation</td></tr>
+<tr><td><strong>Not Engaged</strong></td><td>Going through motions, checked out</td><td>Low productivity, presenteeism</td></tr>
+<tr><td><strong>Actively Disengaged</strong></td><td>Unhappy, spreading negativity</td><td>Damage to morale, turnover</td></tr>
+</tbody></table></div>
+
+<h4>Point 2: Drivers of Engagement</h4>
+<div class="br"><span class="sb s-b">Meaningful Work</span><span class="sb s-b">Supportive Manager</span><span class="sb s-b">Positive Environment</span><span class="sb s-b">Growth Opportunities</span><span class="sb s-b">Recognition</span><span class="sb s-b">Trust</span></div>
+
+<h4>Point 3: Engagement Strategies</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4DD; Measurement</h5><ul><li>Annual engagement surveys</li><li>Pulse surveys (frequent, short)</li><li>Stay interviews, exit interviews</li></ul></div>
+<div class="cc"><h5>&#x1F680; Improvement</h5><ul><li>Recognition programs</li><li>Career development opportunities</li><li>Work-life balance initiatives</li></ul></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Google India</strong> consistently ranks as top employer with high engagement (free meals, flexible work, innovation time). <strong>TCS</strong> uses annual engagement surveys and action plans. <strong>Infosys</strong> has recognition programs and career development.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know levels: Engaged, Not Engaged, Actively Disengaged. Questions ask about drivers of engagement and strategies to improve it.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ENGAGE:</strong> <strong>E</strong>mpower, <strong>N</strong>urture, <strong>G</strong>row, <strong>A</strong>ppreciate, <strong>G</strong>oal-set, <strong>E</strong>valuate</p></div>
+
+
+<h4>Detailed Explanation: Employee Engagement Levels</h4>
+<div class="db"><table><thead><tr><th>Level</th><th>Characteristics</th><th>Productivity</th><th>Action</th></tr></thead><tbody>
+<tr><td>Engaged</td><td>Enthusiastic, committed</td><td>High</td><td>Recognize, retain</td></tr>
+<tr><td>Not Engaged</td><td>Going through motions</td><td>Low</td><td>Re-engage</td></tr>
+<tr><td>Actively Disengaged</td><td>Unhappy, spreading negativity</td><td>Negative</td><td>Address or exit</td></tr>
+</tbody></table></div>
+
+<h4>Engagement Drivers — Detailed</h4>
+<div class="db"><table><thead><tr><th>Driver</th><th>Description</th><th>Strategy</th></tr></thead><tbody>
+<tr><td>Meaningful Work</td><td>Purpose and impact</td><td>Connect to mission</td></tr>
+<tr><td>Supportive Manager</td><td>Trust and guidance</td><td>Leadership training</td></tr>
+<tr><td>Growth Opportunities</td><td>Learning and advancement</td><td>Career paths</td></tr>
+<tr><td>Recognition</td><td>Acknowledgment</td><td>Reward programs</td></tr>
+<tr><td>Work-Life Balance</td><td>Flexibility</td><td>Remote work, flex hours</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Explain employee engagement levels</td><td>5</td><td>Engaged, Not Engaged, Actively Disengaged</td></tr>
+<tr><td>Discuss engagement drivers and strategies</td><td>10</td><td>6 drivers with organizational actions</td></tr>
+<tr><td>Compare engagement and satisfaction</td><td>5</td><td>Emotional commitment vs contentment</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; ENGAGE: Empower, Nurture, Grow, Appreciate, Goal-set, Evaluate.</strong> Levels: Engaged, Not Engaged, Actively Disengaged. Drivers: meaningful work, supportive manager, growth, recognition. Google India = top employer.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Discuss employee engagement":</strong> Levels (3) + drivers (3) + strategies (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>Employee engagement: emotional commitment to organization</li>
+<li>Levels: Engaged, Not Engaged, Actively Disengaged</li>
+<li>Drivers: meaningful work, supportive manager, growth, recognition</li>
+<li>Strategies: surveys, recognition programs, career development</li>
+<li>Google India: top employer; TCS: engagement surveys; Infosys: recognition</li>
+</ul></div>
+
+
+</div>
+
+<!-- ==================== UNIT 15 ==================== -->
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Contemporary Issues in OB</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 15: Contemporary Issues in OB</div><p>Contemporary OB issues include remote work, gig economy, AI and automation, work-life balance, and managing millennials/Gen Z. Organizations must adapt to these changing dynamics.</p></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Future of Work</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Y4xZOeAXvP4" title="Future of Work" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<h4>Point 1: Remote Work and Hybrid Models</h4>
+<ul>
+<li><strong>Remote Work:</strong> Working from outside office (home, co-working spaces)</li>
+<li><strong>Hybrid Model:</strong> Combination of office and remote work</li>
+<li>Benefits: flexibility, reduced commute, better work-life balance</li>
+<li>Challenges: isolation, communication gaps, boundary management</li>
+</ul>
+
+<h4>Point 2: Gig Economy</h4>
+<div class="cg">
+<div class="cc"><h5>&#x1F4BC; Gig Workers</h5><ul><li>Freelancers, contractors, consultants</li><li>Flexible work arrangements</li><li>No job security or benefits</li></ul></div>
+<div class="cc"><h5>&#x1F3E2; Organizations</h5><ul><li>Access to specialized skills</li><li>Cost-effective (no benefits)</li><li>Managing remote/gig teams</li></ul></div>
+</div>
+
+<h4>Point 3: Managing Millennials and Gen Z</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Millennials</th><th>Gen Z</th></tr></thead>
+<tbody>
+<tr><td><strong>Born</strong></td><td>1981-1996</td><td>1997-2012</td></tr>
+<tr><td><strong>Values</strong></td><td>Purpose, work-life balance</td><td>Security, diversity</td></tr>
+<tr><td><strong>Communication</strong></td><td>Email, social media</td><td>Instant messaging, video</td></tr>
+<tr><td><strong>Career</strong></td><td>Job-hopping acceptable</td><td>Entrepreneurial mindset</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Swiggy, Zomato</strong> manage gig workers through technology platforms. <strong>Infosys, TCS</strong> have hybrid work models post-COVID. <strong>Startups</strong> attract Gen Z with purpose-driven culture and flexible work.</p></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know remote work challenges, gig economy characteristics, and generational differences. Questions ask about managing contemporary workforce issues.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>REMOTE:</strong> <strong>R</strong>elationships, <strong>E</strong>ngagement, <strong>M</strong>anagement, <strong>O</strong>utput-focus, <strong>T</strong>echnology, <strong>E</strong>quity</p></div>
+
+
+<h4>Detailed Explanation: Generational Differences</h4>
+<div class="db"><table><thead><tr><th>Aspect</th><th>Millennials</th><th>Gen Z</th></tr></thead><tbody>
+<tr><td>Born</td><td>1981-1996</td><td>1997-2012</td></tr>
+<tr><td>Values</td><td>Purpose, work-life balance</td><td>Security, diversity</td></tr>
+<tr><td>Communication</td><td>Email, social media</td><td>Instant messaging</td></tr>
+<tr><td>Career</td><td>Job-hopping acceptable</td><td>Entrepreneurial</td></tr>
+<tr><td>Technology</td><td>Digital immigrants</td><td>Digital natives</td></tr>
+</tbody></table></div>
+
+<h4>Remote Work Challenges — Detailed</h4>
+<div class="db"><table><thead><tr><th>Challenge</th><th>Impact</th><th>Solution</th></tr></thead><tbody>
+<tr><td>Isolation</td><td>Reduced belonging</td><td>Virtual team activities</td></tr>
+<tr><td>Communication</td><td>Misunderstandings</td><td>Clear protocols</td></tr>
+<tr><td>Boundary</td><td>Work-life blur</td><td>Set work hours</td></tr>
+<tr><td>Trust</td><td>Micro-management</td><td>Output-focused</td></tr>
+</tbody></table></div>
+
+<h4>Exam Practice Questions</h4>
+<div class="db"><table><thead><tr><th>Question</th><th>Marks</th><th>Key Points</th></tr></thead><tbody>
+<tr><td>Discuss contemporary OB issues</td><td>10</td><td>Remote work, gig economy, generations</td></tr>
+<tr><td>Compare millennials and Gen Z</td><td>5</td><td>Values, communication, career</td></tr>
+<tr><td>Explain gig economy challenges</td><td>5</td><td>Flexibility vs security</td></tr>
+</tbody></table></div>
+
+
+<h4>Key Takeaway</h4>
+<div class="kt"><p><strong>ἺF; REMOTE: Relationships, Engagement, Management, Output-focus, Technology, Equity.</strong> Gig economy = flexibility + no security. Millennials: purpose-driven. Gen Z: security-focused. Swiggy/Zomato manage gig workers via tech.</p></div>
+
+
+<h4>Model Answer (10 Marks)</h4>
+<div class="kt"><p><strong>"Discuss contemporary OB issues":</strong> Remote work (3) + gig economy (3) + generations (3) + conclusion (1).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
+<li>Remote work: flexibility but isolation challenges</li>
+<li>Gig economy: freelancers, contractors (flexible but no security)</li>
+<li>Millennials vs Gen Z: different values, communication styles</li>
+<li>AI and automation: changing job nature, need for reskilling</li>
+<li>Swiggy/Zomato: gig management; Infosys/TCS: hybrid models</li>
+</ul></div>
+
+
+</div>
+
+
+<!-- ==================== QUICK REVISION ==================== -->
+<div class="unit" id="revision">
+<h3>Quick Revision Sheet</h3>
+
+<h4>One-Liner Concepts</h4>
+<div class="db"><table><thead><tr><th>Topic</th><th>Key Point</th></tr></thead><tbody>
+<tr><td>OB</td><td>Study of human behaviour in organizations</td></tr>
+<tr><td>Big Five</td><td>OCEAN: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism</td></tr>
+<tr><td>Maslow</td><td>5-level hierarchy: Physiological → Safety → Social → Esteem → Self-Actualization</td></tr>
+<tr><td>Herzberg</td><td>Hygiene (prevent dissatisfaction) vs Motivators (create satisfaction)</td></tr>
+<tr><td>Vroom</td><td>Motivation = Expectancy × Instrumentality × Valence</td></tr>
+<tr><td>Tuckman</td><td>Forming → Storming → Norming → Performing → Adjourning</td></tr>
+<tr><td>Lewin</td><td>Unfreeze → Change → Refreeze</td></tr>
+<tr><td>Thomas-Kilmann</td><td>Competing, Collaborating, Compromising, Avoiding, Accommodating</td></tr>
+<tr><td>French & Raven</td><td>Coercive, Reward, Legitimate, Expert, Referent</td></tr>
+<tr><td>Goleman EI</td><td>Self-awareness, Self-regulation, Motivation, Empathy, Social Skills</td></tr>
+<tr><td>GAS</td><td>Alarm → Resistance → Exhaustion</td></tr>
+<tr><td>Justice</td><td>Distributive, Procedural, Interactional</td></tr>
+<tr><td>OCB</td><td>Altruism, Conscientiousness, Sportsmanship, Courtesy, Civic Virtue</td></tr>
+<tr><td>Super</td><td>Growth, Exploration, Establishment, Maintenance, Decline</td></tr>
+<tr><td>Engagement</td><td>Engaged, Not Engaged, Actively Disengaged</td></tr>
+</tbody></table></div>
+
+<h4>Key Formulas</h4>
+<div class="kt"><p><strong>Vroom's Expectancy:</strong> M = E × I × V</p>
+<p><strong>SWB:</strong> Satisfaction with Life + Affect</p>
+<p><strong>OCB Impact:</strong> 18-38% increase in organizational effectiveness</p></div>
+</div>
+
+
+<!-- ==================== EXAM FOCUS ==================== -->
+<div class="unit" id="exam">
+<h3>Exam Focus — High-Frequency Topics</h3>
+
+<div class="db"><table><thead><tr><th>Topic</th><th>Frequency</th><th>Marks</th><th>Key Mnemonic</th></tr></thead><tbody>
+<tr><td>Maslow vs Herzberg</td><td>Every year</td><td>10</td><td>MHE-EVIL</td></tr>
+<tr><td>Tuckman's Stages</td><td>Very high</td><td>5-10</td><td>FNSPA</td></tr>
+<tr><td>Big Five Traits</td><td>Very high</td><td>5-10</td><td>OCEAN</td></tr>
+<tr><td>Leadership Theories</td><td>High</td><td>10</td><td>LEAD</td></tr>
+<tr><td>Conflict Styles</td><td>High</td><td>5-10</td><td>5C</td></tr>
+<tr><td>Emotional Intelligence</td><td>High</td><td>5</td><td>EQ-5</td></tr>
+<tr><td>Organizational Culture</td><td>Medium</td><td>5-10</td><td>CULTURE</td></tr>
+<tr><td>Power Bases</td><td>Medium</td><td>5</td><td>CRLE-R</td></tr>
+</tbody></table></div>
+</div>
+
+</main>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) { target.classList.toggle('expanded'); this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More'; }
+    });
+  });
+})();
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body>
+</html>

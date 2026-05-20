@@ -6,21 +6,30 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="manifest" href="manifest.json">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(9,132,227,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(9,132,227,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#0984e3;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#0984e3,#0984e3cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc,#00d4ff,#0984e3);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#0984e3;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(9,132,227,.08);border-color:#0984e3}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(162,155,254,.08);border-color:#a29bfe}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(9,132,227,.15);color:#0984e3cc;border:1px solid rgba(9,132,227,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#0984e3}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#0984e3;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(9,132,227,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(9,132,227,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#0984e3;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#0984e3,#0984e3cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc,#00d4ff,#0984e3);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#0984e3;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(9,132,227,.08);border-color:#0984e3}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(162,155,254,.08);border-color:#a29bfe}.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul,.summary-box ol{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(9,132,227,.15);color:#0984e3cc;border:1px solid rgba(9,132,227,.3)}.db{overflow-x:auto;margin:1rem 0}.db table{width:100%;border-collapse:collapse;font-size:.88rem;color:rgba(255,255,255,.8)}.db th{padding:.6rem .8rem;text-align:left;font-weight:700;color:#0984e3;border-bottom:2px solid rgba(9,132,227,.3);background:rgba(9,132,227,.05)}.db td{padding:.5rem .8rem;border-bottom:1px solid rgba(255,255,255,.06)}.db tr:hover td{background:rgba(255,255,255,.02)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#0984e3}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#0984e3;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc);z-index:9999;transition:width .1s;width:0%}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#0984e3;font-size:1rem;margin-bottom:.75rem}.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(9,132,227,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#0984e3;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.video-section-content{display:none}.video-section-content.active{display:block}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpm05">
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-05'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
 <nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPM-05</h3></div>
+  <a href="quiz-mmpm05.html" class="back-link">&#x1F4DD; Take Quiz</a>
+  <a href="study-hub.html">&#x1F3E0; Back to StudyHub</a>
+  <div class="sidebar-header"><h3>MMPM-05 Marketing of Services</h3></div>
   <a href="#u1">Unit 1: Introduction to Services</a>
-  <a href="#u2">Unit 2: Conceptual Framework</a>
+  <a href="#u2">Unit 2: Conceptual Framework (7Ps)</a>
   <a href="#u3">Unit 3: Consumer Behaviour</a>
   <a href="#u4">Unit 4: Product Decisions</a>
   <a href="#u5">Unit 5: Pricing Decisions</a>
@@ -29,59 +38,126 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
   <a href="#u8">Unit 8: Managing People</a>
   <a href="#u9">Unit 9: Physical Evidence</a>
   <a href="#u10">Unit 10: Service Process</a>
-  <a href="#u11">Unit 11: Service Quality</a>
-  <a href="#u12">Unit 12: International Trade</a>
-  <a href="#u13">Unit 13: Demand and Capacity</a>
+  <a href="#u11">Unit 11: Service Quality (SERVQUAL)</a>
+  <a href="#u12">Unit 12: International Trade (GATS)</a>
+  <a href="#u13">Unit 13: Demand &amp; Capacity</a>
   <a href="#u14">Unit 14: Emerging Issues</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#frameworks">Key Frameworks</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#exam">Exam Focus</a>
 </nav>
 <main class="study-content" id="main-content">
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
 <div class="study-header"><span class="subject-tag">MMPM-05</span><h1>Marketing of Services</h1>
-<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; 4 Blocks &#x2022; IGNOU MBA</p></div>
+<p>4 Blocks, 14 Units &#x2022; Service Marketing Mix, Quality, GATS, Emerging Trends &#x2022; IGNOU MBA</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Subject Overview</div>
+<p><strong>Why study Services Marketing?</strong> India's services sector contributes 55%+ to GDP and employs 32%+ of the workforce. Understanding service marketing is essential for MBA graduates entering industries like IT, banking, healthcare, hospitality, telecom, and e-commerce.</p>
+<p><strong>Block 1 (Units 1-3):</strong> Foundation &#x2014; What makes services different? IHIP characteristics, consumer behavior, zone of tolerance. <strong>Block 2 (Units 4-7):</strong> Traditional Marketing Mix &#x2014; Product, Price, Place, Promotion for services. <strong>Block 3 (Units 8-10):</strong> Extended Mix &#x2014; People, Process, Physical Evidence. <strong>Block 4 (Units 11-14):</strong> Strategy &#x2014; SERVQUAL, GATS, demand management, digital transformation.</p>
+</div>
 
+<!-- ==================== UNIT 1 ==================== -->
 <div class="unit" id="u1">
 <h3>Unit 1: Marketing of Services &#x2014; An Introduction</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Services Marketing Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Services Marketing Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>TIPS-NP Characteristics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="TIPS-NP Characteristics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Services vs Goods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xGxIeysUeYg" title="Services vs Goods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
 <p><strong>Service (Kotler):</strong> "Any activity or benefit that one party can offer to another that is essentially intangible and does not result in the ownership of anything."</p>
 <p><strong>Service (W.J. Stanton):</strong> "Separately identifiable, essentially intangible activities which provide want-satisfaction, not necessarily tied to the sale of a product."</p>
+<p><strong>Information:</strong> Processed data put into meaningful context, used for decision-making. <strong>Data:</strong> Raw facts and figures without context. <strong>Information System (IS):</strong> Integrated system of man and machine for providing information to support operations, management, and decision-making.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Characteristics of Services &#x2014; TIPS-NP</h5>
+<div class="db"><table>
+<thead><tr><th>Letter</th><th>Characteristic</th><th>Meaning</th><th>Marketing Implication</th></tr></thead>
+<tbody>
+<tr><td><strong>T</strong></td><td>Tangibility spectrum</td><td>Range from pure goods to pure services</td><td>Need to tangibilize the intangible</td></tr>
+<tr><td><strong>I</strong></td><td>Inseparability</td><td>Production = Consumption simultaneously</td><td>Customer must be present; limits scalability</td></tr>
+<tr><td><strong>P</strong></td><td>Perishability</td><td>Cannot be stored/inventoried</td><td>Revenue lost if capacity unused</td></tr>
+<tr><td><strong>S</strong></td><td>Simultaneity</td><td>Producer and consumer interact</td><td>People quality = service quality</td></tr>
+<tr><td><strong>N</strong></td><td>Non-ownership</td><td>No transfer of title</td><td>Pricing based on experience, not possession</td></tr>
+<tr><td><strong>P</strong></td><td>People as product</td><td>Human element crucial</td><td>Training and empowerment essential</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Dimension</th><th>Goods</th><th>Services</th></tr></thead>
+<tbody>
+<tr><td>Tangibility</td><td>Tangible, can be seen/felt</td><td>Intangible, experienced</td></tr>
+<tr><td>Ownership</td><td>Transfers to buyer</td><td>No transfer</td></tr>
+<tr><td>Quality</td><td>Standardized, consistent</td><td>Variable, heterogeneous</td></tr>
+<tr><td>Storage</td><td>Can be inventoried</td><td>Perishable</td></tr>
+<tr><td>Production</td><td>Produced first, consumed later</td><td>Produced and consumed simultaneously</td></tr>
+<tr><td>Returns</td><td>Can be returned</td><td>Cannot be returned once performed</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; IHIP Framework &#x2014; The 4 Defining Characteristics</div>
+<p>The <strong>IHIP Framework</strong> is the most widely cited model for understanding services in academic literature. It identifies four unique characteristics that distinguish services from goods:</p>
+<p><strong>I &#x2014; Intangibility:</strong> Services cannot be seen, touched, or felt before purchase. A consulting session, a haircut, or a flight cannot be sampled in advance. This makes evaluation difficult and forces marketers to use tangible cues (branded uniforms, office d&#xE9;cor, professional websites) to reduce perceived risk. <strong>Indian example:</strong> Apollo Hospitals invests heavily in modern lobbies and branded scrubs to make its healthcare service feel tangible.</p>
+<p><strong>H &#x2014; Heterogeneity (Variability):</strong> No two service encounters are identical. The quality depends on who provides it, when, where, and to whom. A Domino's pizza delivery experience in Mumbai may differ from one in Lucknow. <strong>Indian example:</strong> HDFC Bank works to standardize its service across 6,000+ branches through rigorous training, yet branch-level variability still exists.</p>
+<p><strong>I &#x2014; Inseparability:</strong> Services are produced and consumed at the same time. The provider and customer must both be present. You cannot "inventory" a doctor's consultation. This limits scalability and makes the service encounter (moment of truth) critical. <strong>Indian example:</strong> A Zomato delivery partner's interaction with the customer is the brand experience itself.</p>
+<p><strong>P &#x2014; Perishability:</strong> Services cannot be stored. An empty hotel room tonight is revenue lost forever. An empty airline seat at departure generates zero income. This forces dynamic pricing and demand management strategies. <strong>Indian example:</strong> IRCTC uses dynamic pricing on premium trains (Vande Bharat, Rajdhani) to manage demand and maximize revenue per seat.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; India's Service Sector &#x2014; Key Statistics</div>
+<p><strong>GDP contribution:</strong> Services contribute 55%+ to India's GDP (up from 30% in 1950). India is the 5th largest services economy globally. <strong>Employment:</strong> 32%+ of India's workforce is in services (up from 15% in 1990). IT-BPM alone employs 5 million+ people. <strong>Exports:</strong> India's services exports crossed $340 billion in 2023-24. IT services are the largest component ($194 billion). <strong>FDI:</strong> Services sector attracts 60%+ of India's FDI inflows. IT, telecom, and financial services are top attractors.</p>
+<p><strong>Key growth drivers:</strong> 1. IT revolution (Bangalore, Hyderabad, Pune). 2. Telecom boom (Jio, 800M+ internet users). 3. Financial inclusion (Jan Dhan, UPI). 4. Healthcare expansion (Apollo, Fortis). 5. Education growth (Byju's, Unacademy). 6. E-commerce (Flipkart, Amazon India). 7. Tourism (Incredible India). 8. Start-up ecosystem (100+ unicorns).</p>
+<p><strong>Challenges:</strong> Quality variability, infrastructure gaps, regulatory complexity, skilled labor shortage in Tier-2/3 cities, digital divide between urban and rural India.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Reasons for Growth of Service Industries</div>
+<p>1. Increasing affluence &#x2192; more demand for convenience services. 2. More leisure time &#x2192; recreation, entertainment, travel. 3. Higher % of women in workforce &#x2192; cr&#xE8;ches, domestic help, childcare. 4. Greater life expectancy &#x2192; healthcare, nursing homes. 5. Increasing complexity of life &#x2192; credit cards, professional services. 6. Technology advancement &#x2192; IT, digital services.</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Economy Evolution</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>T</strong> &#x2014; Tangibility Spectrum</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Primary Sector</strong> &#x2014; Agriculture, Mining, Fishing</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>I</strong> &#x2014; Inseparability (Production = Consumption)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Secondary Sector</strong> &#x2014; Manufacturing, Construction</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>P</strong> &#x2014; Perishability (Cannot be stored)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>S</strong> &#x2014; Simultaneity (Producer + Consumer interact)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>N</strong> &#x2014; Non-ownership (No transfer of title)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>P</strong> &#x2014; People as Product (Human element crucial)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Tertiary Sector (Services)</strong> &#x2014; IT, Healthcare, Banking, Education</div>
 </div></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Urban Company</strong> (formerly UrbanClap) created a platform connecting service providers (beauty, repair, cleaning) with customers &#x2014; demonstrating how technology enables service delivery at scale.</p>
+<p><strong>Urban Company</strong> (formerly UrbanClap) created a platform connecting service providers (beauty, repair, cleaning) with customers &#x2014; demonstrating how technology enables service delivery at scale. Daniel Bell coined "post-industrial society" &#x2014; quality of life through services.</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"TIPS-NP"</strong> &#x2014; Tangibility, Inseparability, Perishability, Simultaneity, Non-ownership, People</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Economy: Primary (agriculture) &#x2192; Secondary (manufacturing) &#x2192; Tertiary (services)</li>
-<li>USA became first "service economy" post-WWII with >50% workforce in services</li>
+<li>USA became first "service economy" post-WWII with >50% workforce in services; now >80%</li>
 <li>Services have 6 characteristics: TIPS-NP</li>
 <li>Key difference from goods: intangible, perishable, inseparable, no ownership transfer</li>
+<li>India's services sector contributes ~55% of GDP</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 2 ==================== -->
 <div class="unit" id="u2">
 <h3>Unit 2: Conceptual Framework for Services Marketing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>7Ps of Services Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="7Ps of Services Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Marketing Triangle</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Service Marketing Triangle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Traditional 4Ps (Product, Price, Place, Promotion) are insufficient for services. Extended to <strong>7Ps</strong> with addition of People, Process, Physical Evidence.</p>
+<p>Traditional 4Ps (Product, Price, Place, Promotion) are insufficient for services. Extended to <strong>7Ps</strong> with addition of People, Process, Physical Evidence. <strong>Service Marketing Triangle</strong> &#x2014; 3 types of marketing must align: External (Company &#x2192; Customer), Internal (Company &#x2192; Employee), Interactive (Employee &#x2192; Customer).</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>P</th><th>Element</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Product</strong></td><td>Core service + supplementary services</td></tr>
+<tr><td>2</td><td><strong>Price</strong></td><td>Value-based, cost-based, competition-based</td></tr>
+<tr><td>3</td><td><strong>Place</strong></td><td>Distribution channels, accessibility</td></tr>
+<tr><td>4</td><td><strong>Promotion</strong></td><td>Communication strategies</td></tr>
+<tr><td>5</td><td><strong>People</strong></td><td>Service employees and customers</td></tr>
+<tr><td>6</td><td><strong>Process</strong></td><td>Service delivery procedures</td></tr>
+<tr><td>7</td><td><strong>Physical Evidence</strong></td><td>Tangible cues, environment</td></tr>
+</tbody></table></div>
 <div class="visual-diagram"><h5>&#x1F4CA; Service Marketing Triangle</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>COMPANY</strong></div>
@@ -90,88 +166,156 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>CUSTOMER</strong></div>
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>EMPLOYEES</strong></div>
 </div>
-<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">Interactive Marketing</div>
+<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">Interactive Marketing (&#x201C;Moment of Truth&#x201D;)</div>
 </div></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; 7Ps in Action &#x2014; Indian Examples</div>
+<p><strong>Product:</strong> Ola offers multiple service tiers &#x2014; Mini, Prime, Auto, Rentals, Outstation. Each targets a different customer need. <strong>Price:</strong> Jio launched with free data (penetration pricing), disrupted the telecom market, then raised prices after gaining 400M+ subscribers. <strong>Place:</strong> Practo (health-tech) delivers doctor consultations via app, eliminating the need for physical clinics. <strong>Promotion:</strong> Amul's "Utterly Butterly" campaigns tangibilize a commodity dairy product through iconic advertising. <strong>People:</strong> The Taj Hotels group is legendary for training staff in hospitality &#x2014; the "Tajness" philosophy ensures every employee embodies service excellence. <strong>Process:</strong> Swiggy's order tracking from kitchen to doorstep is a visible service process that builds trust. <strong>Physical Evidence:</strong> Apple Stores in India use minimalist design, open product tables, and the Genius Bar to create an experience that reinforces the brand's premium positioning.</p>
+</div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>A hospital's external marketing promises "world-class care" (advertising), internal marketing trains nurses for empathy (HR), interactive marketing is the actual patient experience at the reception.</p>
+<p>A hospital's external marketing promises "world-class care" (advertising), internal marketing trains nurses for empathy (HR), interactive marketing is the actual patient experience at the reception. <strong>Lovelock's classification:</strong> People-based vs. Equipment-based; Tangible actions vs. Intangible actions; High contact vs. Low contact.</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"EII"</strong> &#x2014; External, Interactive, Internal (3 types of service marketing)</p>
 </div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Lovelock's Service Classification</div>
+<p><strong>People-based vs. Equipment-based:</strong> People-based = consulting, teaching, medical practice (human expertise). Equipment-based = ATM, vending machine, online banking (technology-driven). <strong>Tangible actions vs. Intangible actions:</strong> Tangible actions = hairdressing, freight transport, cleaning (on physical objects). Intangible actions = education, insurance, entertainment (on minds/perceptions). <strong>High contact vs. Low contact:</strong> High contact = hotels, hospitals, restaurants (customer present throughout). Low contact = mail sorting, credit card processing (minimal customer involvement).</p>
+<p><strong>Marketing implications:</strong> High-contact services need more investment in people, physical evidence, and process. Low-contact services can focus on technology and efficiency. Equipment-based services can scale faster but may feel impersonal.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>7Ps: Product, Price, Place, Promotion, People, Process, Physical Evidence</li>
-<li>Service Triangle: 3 types of marketing must align</li>
-<li>External Marketing = promises; Internal Marketing = training; Interactive Marketing = delivery</li>
+<li>Service Triangle: External (promises), Internal (training), Interactive (delivery)</li>
+<li>External Marketing = promises to customers; Internal Marketing = motivating employees</li>
+<li>Interactive Marketing = actual service delivery ("moment of truth")</li>
+<li>Lovelock classifies services by: people/equipment, tangible/intangible, high/low contact</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 3 ==================== -->
 <div class="unit" id="u3">
 <h3>Unit 3: Consumer Behaviour in Services</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Consumer Behaviour in Services</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Consumer Behaviour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Zone of Tolerance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Zone of Tolerance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Service consumers evaluate based on <strong>expectations vs. perceptions</strong>. Three types of service qualities determine evaluation.</p>
+<p>Service consumers evaluate based on <strong>expectations vs. perceptions</strong>. Three types of service qualities determine how consumers evaluate. <strong>Zone of Tolerance</strong> = range of acceptable service levels between desired service and adequate service. Wider for less important attributes; narrows when service is critical.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Service Quality Evaluation Types</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Search Qualities</strong> &#x2014; Evaluate BEFORE purchase (restaurant decor)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Experience Qualities</strong> &#x2014; Evaluate DURING consumption (food taste)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Credence Qualities</strong> &#x2014; Hard to evaluate EVEN AFTER (medical diagnosis)</div>
-</div></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Definition</th><th>Example</th><th>When Evaluated</th></tr></thead>
+<tbody>
+<tr><td><strong>Search qualities</strong></td><td>Can evaluate before purchase</td><td>Restaurant decor, hotel lobby</td><td>Before purchase</td></tr>
+<tr><td><strong>Experience qualities</strong></td><td>Evaluate only during consumption</td><td>Food taste, flight comfort</td><td>During consumption</td></tr>
+<tr><td><strong>Credence qualities</strong></td><td>Difficult to evaluate even after</td><td>Medical diagnosis, legal advice</td><td>Hard to judge ever</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Consumer Behaviour in Services &#x2014; Key Framework</div>
+<p><strong>How do customers evaluate services?</strong> Unlike goods, services cannot be inspected before purchase. Customers use three types of quality cues:</p>
+<p><strong>Search qualities:</strong> Attributes that can be evaluated before purchase. Examples: restaurant decor, hotel lobby appearance, website design, brand reputation. <strong>Marketing implication:</strong> Invest in tangible cues &#x2014; clean premises, professional staff appearance, modern website. <strong>Indian example:</strong> Tanishq stores use gold-toned interiors and immaculate display cases that signal premium quality before any purchase.</p>
+<p><strong>Experience qualities:</strong> Attributes that can be evaluated only during or after consumption. Examples: food taste, flight comfort, doctor's bedside manner, amusement park thrill. <strong>Marketing implication:</strong> Focus on service delivery excellence and encourage trial. <strong>Indian example:</strong> Domino's "30-minute delivery or free" guarantee is a commitment to experience quality.</p>
+<p><strong>Credence qualities:</strong> Attributes that are difficult to evaluate even after consumption. Examples: medical diagnosis accuracy, legal advice quality, financial planning effectiveness. <strong>Marketing implication:</strong> Use trust signals &#x2014; certifications, qualifications, testimonials, case studies. <strong>Indian example:</strong> Byju's displays student success stories and IIT-JEE topper testimonials to build credibility for its education service.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Zone of Tolerance &#x2014; Detailed Explanation</div>
+<p>The <strong>Zone of Tolerance (ZOT)</strong> is the range between <strong>desired service</strong> (what the customer hopes to receive) and <strong>adequate service</strong> (the minimum acceptable level). When service falls within this zone, customers are satisfied. When it drops below adequate, customers become dissatisfied. When it exceeds desired, customers are delighted.</p>
+<p><strong>Key dynamics of ZOT:</strong></p>
+<p>1. <strong>Wider for less important attributes:</strong> A customer may tolerate slow Wi-Fi in a hotel lobby (low importance) but will not tolerate a dirty room (high importance). The ZOT for cleanliness is narrow.</p>
+<p>2. <strong>Narrows for critical services:</strong> In emergency healthcare, the ZOT is extremely narrow &#x2014; patients expect near-perfect service with no room for delay or error.</p>
+<p>3. <strong>Varies by customer segment:</strong> Business travelers have a narrower ZOT for flight punctuality than leisure travelers.</p>
+<p>4. <strong>Shifts over time:</strong> As customers gain experience with a service provider, their adequate service level rises (they become harder to please), narrowing the ZOT.</p>
+<p><strong>Indian example:</strong> A first-time Zomato customer may tolerate a 10-minute delay (wide ZOT), but a loyal Zorder Gold member expects on-time delivery every time (narrow ZOT).</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Consumer Expectations Influenced By</div>
+<p>1. Word-of-mouth communications. 2. Past personal experience. 3. Personal needs. 4. External communications (advertising, PR).</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>A restaurant's decor (search quality) can be evaluated before visiting, but food taste (experience quality) only during the meal. A doctor's diagnosis (credence quality) is hard to evaluate even after treatment &#x2014; you trust the expertise. <strong>Indian context:</strong> Byju's tutoring is a credence quality service &#x2014; parents cannot easily judge whether learning is effective even after months of use, which is why certifications and exam results are critical marketing tools.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Zone of Tolerance = range between desired and adequate service levels</li>
-<li>Consumer expectations shaped by: word-of-mouth, past experience, needs, external communications</li>
+<li>ZOT narrows for critical services (healthcare) and loyal customers (Zomato Gold)</li>
+<li>ZOT widens for less important attributes and shifts over time with experience</li>
 <li>Search, experience, and credence qualities require different marketing strategies</li>
+<li>For credence quality services, trust signals (certifications, testimonials) are critical</li>
+<li>4 expectation influences: Word-of-mouth, Past experience, Personal needs, External communications</li>
+<li>Indian example: Byju's is credence quality &#x2014; parents cannot judge learning effectiveness</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 4 ==================== -->
 <div class="unit" id="u4">
 <h3>Unit 4: Product Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Kotler 5 Product Levels</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Kotler 5 Product Levels" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Product Design</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Service Product Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Service product has multiple layers. Kotler's 5 Product Levels + Gronroos' 3-Level model define service architecture.</p>
+<p>Service product has multiple layers. <strong>Kotler's 5 Product Levels</strong> + <strong>Gronroos' 3-Level model</strong> define service architecture. New service development follows 5 stages.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Kotler's 5 Product Levels (Hotel Example)</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Level 5:</strong> Potential Product (loyalty programs, all-suite)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Level 4:</strong> Augmented Product (room service, music)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Level 3:</strong> Expected Product (clean room, towels)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Level 2:</strong> Basic Product (room, bed, bathroom)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Level 1:</strong> Core Benefit (rest and sleep)</div>
-</div></div>
+<div class="db"><table>
+<thead><tr><th>Level</th><th>Name</th><th>Hotel Example</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Core Benefit</td><td>Rest and sleep</td></tr>
+<tr><td>2</td><td>Basic Product</td><td>Room, bed, bathroom</td></tr>
+<tr><td>3</td><td>Expected Product</td><td>Clean room, towels, quietness</td></tr>
+<tr><td>4</td><td>Augmented Product</td><td>Prompt room service, music, check-in/out</td></tr>
+<tr><td>5</td><td>Potential Product</td><td>All-suite hotel, loyalty programs</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Gronroos' 3-Level Service Product Model</div>
+<p><strong>Level 1: Basic Service Package</strong> &#x2014; Core service + Facilitating services (mandatory) + Supporting services (differentiators). <strong>Level 2: Augmented Service Offering</strong> &#x2014; Accessibility + Interaction + Customer participation. <strong>Level 3: Market Communication</strong> &#x2014; Image management through all channels.</p>
+</div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>A hotel's core service is lodging; facilitating = bell boy, check-in; supporting = spa, car rental. Remove facilitating = service collapses. Remove supporting = still functional but less competitive.</p>
+<p>A hotel's core service is lodging; facilitating = bell boy, check-in; supporting = spa, car rental. Remove facilitating = service collapses. Remove supporting = still functional but less competitive. <strong>5 Stages of New Service Development:</strong> Customer Benefit Concept &#x2192; Service Concept &#x2192; Service Offer &#x2192; Service Forms &#x2192; Service Delivery System.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Service Product Layers &#x2014; Indian Examples</div>
+<p><strong>Kotler's Levels with Indian Context:</strong></p>
+<p><strong>Level 1 (Core Benefit):</strong> For OYO Rooms, the core benefit is affordable accommodation. For Practo, it is access to healthcare advice. <strong>Level 2 (Basic Product):</strong> OYO provides a room with bed, bathroom, and Wi-Fi. Practo provides a video consultation with a doctor. <strong>Level 3 (Expected Product):</strong> OYO guests expect clean linens, working AC, and check-in within 10 minutes. Practo users expect prescriptions delivered digitally. <strong>Level 4 (Augmented Product):</strong> OYO offers OYO Wizard loyalty program, early check-in, and complimentary breakfast. Practo offers medicine delivery and follow-up reminders. <strong>Level 5 (Potential Product):</strong> OYO could integrate travel planning, local experiences. Practo could offer AI-driven health monitoring wearables.</p>
+<p><strong>Gronroos' Model with Indian Context:</strong> For an ICICI Bank savings account: <strong>Basic Package</strong> = account + debit card + passbook (facilitating) + rewards points (supporting). <strong>Augmented Offering</strong> = 24/7 customer care accessibility + personalized interaction at branch + customer participation via iMobile app. <strong>Market Communication</strong> = ICICI brand image, "Hum Hai Na" tagline, consistent premium positioning.</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 Stages of New Service Development: Customer Benefit Concept &#x2192; Service Concept &#x2192; Service Offer &#x2192; Service Forms &#x2192; Service Delivery System</li>
-<li>Gronroos: Basic Service Package + Augmented Service Offering + Market Communication</li>
+<li>Kotler's 5 levels: Core, Basic, Expected, Augmented, Potential</li>
+<li>Gronroos: Basic Package + Augmented Offering + Market Communication</li>
 <li>Compare Kotler (5 levels) vs Gronroos (3 levels) in exams</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 5 ==================== -->
 <div class="unit" id="u5">
 <h3>Unit 5: Pricing Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Pricing Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Pricing Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Yield Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Yield Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Services pricing is harder than goods pricing due to intangibility. Three basic methods + eight specific strategies.</p>
+<p>Services pricing is harder than goods pricing due to intangibility. Three basic methods: Cost-based (cost + markup), Competition-based (match/beat competitors), Value-based (customer perceived value).</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; 8 Pricing Strategies for Services</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Skimming</strong> &#x2014; High initial, lowers over time</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Penetration</strong> &#x2014; Low initial to gain share (Jio)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Diversionary</strong> &#x2014; Low basic, charge for extras (budget airlines)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Guaranteed</strong> &#x2014; Pay only on results</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Loss Leader</strong> &#x2014; Low initial, hope for repeat (gym trials)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Offset</strong> &#x2014; Low basic, high for extras</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>High Price Maintenance</strong> &#x2014; Premium for perceived quality</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Yield Management</strong> &#x2014; Dynamic pricing by demand (airlines, Uber)</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Jio</strong> entered with penetration pricing (free data), disrupted the market, then gradually increased prices after gaining 400M+ subscribers.</p>
+<div class="db"><table>
+<thead><tr><th>Strategy</th><th>Description</th><th>Real Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Skimming</strong></td><td>High initial, lowers over time</td><td>Premium consulting, new tech</td></tr>
+<tr><td><strong>Penetration</strong></td><td>Low initial to gain share</td><td>Jio's free launch</td></tr>
+<tr><td><strong>Diversionary</strong></td><td>Low basic, charge for extras</td><td>Budget airline base fare</td></tr>
+<tr><td><strong>Guaranteed</strong></td><td>Pay only on results</td><td>Employment agencies</td></tr>
+<tr><td><strong>Loss Leader</strong></td><td>Low initial, hope for repeat</td><td>Gym trial memberships</td></tr>
+<tr><td><strong>Offset</strong></td><td>Low basic, high for extras</td><td>Gynecologist consultation fees</td></tr>
+<tr><td><strong>High Price Maintenance</strong></td><td>Premium for perceived quality</td><td>Top surgeons, luxury hotels</td></tr>
+<tr><td><strong>Yield Management</strong></td><td>Dynamic pricing by demand</td><td>Airlines, hotels, Uber surge</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Pricing Strategies &#x2014; Indian Examples</div>
+<p><strong>Jio</strong> entered with penetration pricing (free data), disrupted the market, then gradually increased prices after gaining 400M+ subscribers. <strong>Uber's</strong> surge pricing during rain = yield management. Additional Indian examples:</p>
+<p><strong>Skimming:</strong> Apple launches iPhones in India at premium prices (Rs 79,900+), then reduces prices for older models. Tata Neu launched premium services first. <strong>Penetration:</strong> Ola offered Rs 1 rides during launch to gain market share from Uber. Flipkart's Big Billion Days use deep discounts to drive volume. <strong>Diversionary:</strong> SpiceJet and IndiGo advertise Rs 999 base fares but charge extra for seats, meals, baggage, and check-in. <strong>Guaranteed:</strong> Urbanclap (Urban Company) offers a satisfaction guarantee &#x2014; if you are not happy, they redo the service free. <strong>Loss Leader:</strong> Hotstar offered free IPL streaming to build user base before monetizing through ads and premium subscriptions. <strong>Offset:</strong> Private hospitals in India charge nominal consultation fees (Rs 200&#x2013;500) but earn significantly from diagnostic tests and procedures. <strong>High Price Maintenance:</strong> The Taj and Oberoi hotel chains maintain premium pricing to reinforce their luxury positioning, never discounting even during off-season. <strong>Yield Management:</strong> IRCTC dynamic pricing on Shatabdi and Rajdhani trains; MakeMyTrip showing different hotel prices based on search history.</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"SPY GOOD"</strong> &#x2014; Skimming, Penetration, Yield, Guaranteed, Offset, Other (diversionary, loss leader), Dynamic</p>
@@ -180,63 +324,127 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>3 Methods: Cost-based, Competition-based, Value-based</li>
 <li>8 Strategies: Skimming, Penetration, Diversionary, Guaranteed, Loss Leader, Offset, High Price, Yield Management</li>
 <li>Always give real-world examples for each strategy in exams</li>
+<li>Indian examples: Jio (penetration), Apple (skimming), SpiceJet (diversionary), Urban Company (guaranteed), Hotstar (loss leader), hospitals (offset), Taj (high price), IRCTC (yield)</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 6 ==================== -->
 <div class="unit" id="u6">
 <h3>Unit 6: Place Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Distribution</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Service Distribution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Place Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Place Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Distribution channels for services are shorter due to inseparability. Three main channel types: Direct, Electronic, Intermediaries.</p>
+<p>Distribution channels for services are shorter due to inseparability. Three main channel types: Direct (hospital, salon), Electronic (Netflix, banking apps), Intermediaries (travel agents, McDonald's franchise).</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Distribution Channels</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Direct Channels</strong> &#x2014; Company delivers directly (hospital, salon)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Electronic Channels</strong> &#x2014; Website, app, digital (Netflix, banking)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Intermediaries</strong> &#x2014; Agents, brokers, franchises (travel agents, McDonald's)</div>
-</div></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Direct channels</strong></td><td>Most common; company delivers directly</td><td>Hospital, salon</td></tr>
+<tr><td><strong>Electronic channels</strong></td><td>Website, app, digital delivery</td><td>Netflix, banking apps</td></tr>
+<tr><td><strong>Intermediaries</strong></td><td>Agents, brokers, franchises</td><td>Travel agents, McDonald's</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Distribution &#x2014; Indian Examples</div>
+<p><strong>Netflix</strong> eliminated intermediaries entirely &#x2014; direct digital delivery to consumers. <strong>McDonald's</strong> uses franchising as intermediary model for global expansion. Additional Indian examples:</p>
+<p><strong>Direct channels:</strong> Apollo Hospitals has 70+ hospitals across India, each delivering services directly. VLCC runs its own wellness centers. Tata 1mg operates direct online pharmacy delivery. <strong>Electronic channels:</strong> PhonePe and Paytm deliver financial services entirely through apps. Zerodha (stock brokerage) is 100% digital with no physical branches. Aarogya Setu delivered COVID health services digitally. <strong>Intermediaries:</strong> Policybazaar acts as an insurance aggregator (intermediary between customers and insurers). MakeMyTrip and Goibibo are intermediaries for hotel and flight bookings. Ola franchises its fleet to individual drivers who act as micro-intermediaries. <strong>Multi-channel:</strong> HDFC Bank combines 6,000+ branches (direct), NetBanking (electronic), and business correspondents in rural areas (intermediaries) for comprehensive coverage.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Distribution Strategy Comparison</div>
+<table style="width:100%;font-size:0.85rem;border-collapse:collapse">
+<tr style="background:rgba(9,132,227,0.15)"><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Strategy</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Control</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Reach</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Indian Example</th></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Direct (own outlets)</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">High</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Limited</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Apollo Hospitals (70+ own hospitals)</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Electronic (app/web)</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Medium</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Very high</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Zerodha (100% digital brokerage)</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Franchise</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Medium</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">High</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">VLCC (franchise wellness centers)</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Aggregator</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Low</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Very high</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Policybazaar (insurance aggregator)</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Multi-channel</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Mixed</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Maximum</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">HDFC (branches + app + correspondents)</td></tr>
+</table>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Inseparability makes direct channels most common in services</li>
 <li>Key decisions: location, accessibility, multi-channel integration</li>
 <li>Technology enables 24/7 availability through electronic channels</li>
+<li>Multi-channel strategy maximizes reach (HDFC: branches + app + rural correspondents)</li>
+<li>Aggregator model growing rapidly in India (Policybazaar, MakeMyTrip, OYO)</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 7 ==================== -->
 <div class="unit" id="u7">
 <h3>Unit 7: Promotion Decisions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Promoting Services</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Promoting Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Tangibilizing Intangibles</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Tangibilizing Intangibles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Intangibility makes service communication challenging. Must <strong>"tangibilize the intangible"</strong> through tangible cues, testimonials, and guarantees.</p>
+<p>Intangibility makes service communication challenging. Must <strong>"tangibilize the intangible"</strong> through tangible cues, testimonials, guarantees. <strong>Challenges:</strong> Cannot show service before purchase; must rely on tangible cues; need to manage expectations (avoid overpromising).</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Promotion Mix for Services</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Advertising</strong> &#x2014; Use tangible cues, testimonials</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Personal Selling</strong> &#x2014; Critical for high-contact services</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Sales Promotion</strong> &#x2014; Trial offers, free consultations</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Public Relations</strong> &#x2014; Reputation management</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Direct Marketing</strong> &#x2014; Personalized communication</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Amul's advertising uses tangible imagery (the Amul girl) to make a service (dairy) feel tangible and familiar &#x2014; decades of consistent branding.</p>
+<div class="db"><table>
+<thead><tr><th>Tool</th><th>Approach for Services</th></tr></thead>
+<tbody>
+<tr><td>Advertising</td><td>Use tangible cues, testimonials, locations</td></tr>
+<tr><td>Personal Selling</td><td>Critical for high-contact services</td></tr>
+<tr><td>Sales Promotion</td><td>Trial offers, free consultations</td></tr>
+<tr><td>Public Relations</td><td>Reputation management, events</td></tr>
+<tr><td>Direct Marketing</td><td>Personalized communication</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Promotion &#x2014; Indian Examples</div>
+<p>Amul's advertising uses tangible imagery (the Amul girl) to make a service (dairy) feel tangible and familiar &#x2014; decades of consistent branding. <strong>Word-of-mouth</strong> is the most powerful (and least controllable) tool. Additional Indian examples:</p>
+<p><strong>Tangibilizing through people:</strong> Byju's uses Shah Rukh Khan and Lionel Messi as brand ambassadors to make education feel aspirational and tangible. <strong>Tangibilizing through physical evidence:</strong> Lenskart offers free home eye check-ups and lets you try frames virtually &#x2014; making an intangible service (eye testing) tangible. <strong>Tangibilizing through testimonials:</strong> WhiteHat Jr (before controversies) used parent testimonials showing children's coding projects. <strong>Tangibilizing through guarantees:</strong> Urban Company offers "100% satisfaction or free redo" &#x2014; reducing perceived risk of intangible services. <strong>Integrated Communications:</strong> PhonePe runs consistent campaigns across TV, digital, and in-app &#x2014; the "PhonePe karo" jingle is recognized by 90%+ of Indian urban consumers. <strong>IMC example:</strong> SBI's "Youth and Dreams" campaign runs consistently across TV ads, branch displays, ATM screens, and YONO app promotions.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 6 Tangibilization Strategies</div>
+<table style="width:100%;font-size:0.85rem;border-collapse:collapse">
+<tr style="background:rgba(9,132,227,0.15)"><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Strategy</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Description</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Indian Example</th></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>1. Association</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Use celebrities, symbols, familiar objects</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Byju's with Shah Rukh Khan</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>2. Physical representation</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Tangible symbols of the service</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Amul girl mascot</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>3. Documentation</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Reports, certificates, awards</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">ISO certifications displayed</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>4. Visualization</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Show the service in action</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Lenskart virtual try-on</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>5. Place</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Impressive physical facilities</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Tanishq gold-toned interiors</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>6. People</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Professional, well-trained staff</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Taj Hotels' "Tajness" staff</td></tr>
+</table>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Challenge: cannot show service before purchase</li>
-<li>Solution: tangible cues, people, locations, testimonials</li>
-<li>Word-of-mouth is most powerful but least controllable</li>
+<li>Solution: 6 tangibilization strategies (Association, Physical representation, Documentation, Visualization, Place, People)</li>
+<li>Integrated service communications must be consistent across all touchpoints (IMC)</li>
+<li>Word-of-mouth is the most powerful (and least controllable) promotion tool</li>
+<li>Indian examples: Byju's (celebrity), Amul (mascot), Lenskart (visualization), Taj (people)</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 8 ==================== -->
 <div class="unit" id="u8">
 <h3>Unit 8: Managing People</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Employees</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Service Employees" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Profit Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Service Profit Chain" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>People = 5th P. Service employees are <strong>"boundary spanners"</strong> between company and customer. Emotional labour is unique to service jobs.</p>
+<p>People = 5th P. Service employees are <strong>"boundary spanners"</strong> between company and customer. Emotional labour = displaying emotions not genuinely felt. <strong>Internal Marketing:</strong> Treat employees as internal customers. Train, motivate, and empower them.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>Challenge</th><th>Definition</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Boundary spanning</strong></td><td>Bridge between org and customer</td><td>Front desk staff</td></tr>
+<tr><td><strong>Emotional labour</strong></td><td>Displaying emotions not genuinely felt</td><td>Air hostess smiling at rude passengers</td></tr>
+<tr><td><strong>Person/role conflict</strong></td><td>Personal values vs. job demands</td><td>Being polite to rude customers</td></tr>
+<tr><td><strong>Organization/client conflict</strong></td><td>Company rules vs. customer needs</td><td>Sales targets vs. honest advice</td></tr>
+<tr><td><strong>Inter-client conflict</strong></td><td>Different customer expectations</td><td>Students wanting different teaching styles</td></tr>
+</tbody></table></div>
 <div class="visual-diagram"><h5>&#x1F4CA; Service Profit Chain</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Employee Satisfaction</strong></div>
@@ -247,8 +455,18 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
 <div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Revenue Growth</strong></div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Ritz-Carlton</strong> empowers every employee with $2,000 per guest per day to resolve problems without manager approval &#x2014; demonstrating trust and empowerment.</p>
+<div class="db"><table>
+<thead><tr><th>Cycle of Failure</th><th>Cycle of Success</th></tr></thead>
+<tbody>
+<tr><td>Low wages</td><td>Invest in people</td></tr>
+<tr><td>Low morale</td><td>Better service</td></tr>
+<tr><td>Poor service</td><td>Customer loyalty</td></tr>
+<tr><td>Customer dissatisfaction</td><td>Higher revenue</td></tr>
+<tr><td>Reduced revenue &#x2192; Cost cutting</td><td>More investment &#x2192; Continuous improvement</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; People Management &#x2014; Indian Examples</div>
+<p><strong>Ritz-Carlton</strong> empowers every employee with $2,000 per guest per day to resolve problems without manager approval &#x2014; demonstrating trust and empowerment. Indian examples:</p>
+<p><strong>Emotional labour in India:</strong> IndiGo cabin crew must smile and remain polite even during turbulence and irate passengers. BPO employees working night shifts for US clients must maintain enthusiasm despite fatigue. <strong>Boundary spanning:</strong> Zomato and Swiggy delivery partners are the brand's face &#x2014; they bridge the platform (company) and the hungry customer. A rude delivery experience reflects on Zomato, not the individual rider. <strong>Internal marketing:</strong> Infosys runs extensive training programs at its Mysore campus &#x2014; the largest corporate training center in the world. New hires undergo months of training before client-facing work. <strong>Cycle of Success:</strong> Taj Hotels invests heavily in employee welfare (housing, education, healthcare) which leads to legendary service quality, loyal customers, and premium pricing power. <strong>Cycle of Failure:</strong> Many Indian call centers experience high attrition (40&#x2013;60% annually) due to low wages and stress, leading to inconsistent service quality and client dissatisfaction.</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"HIRE"</strong> &#x2014; Hire the right people, Invest in training, Retain the best, Empower with support systems</p>
@@ -257,142 +475,294 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <li>5 Challenges: Boundary spanning, Emotional labour, Person/role conflict, Org/client conflict, Inter-client conflict</li>
 <li>Cycle of Failure: Low wages &#x2192; Low morale &#x2192; Poor service &#x2192; Reduced revenue</li>
 <li>Cycle of Success: Invest in people &#x2192; Better service &#x2192; Customer loyalty &#x2192; Higher revenue</li>
+<li>HIRE strategy: Hire right, Invest in training, Retain best, Empower with support</li>
+<li>Gronroos' internal marketing: treat employees as internal customers</li>
+<li>Indian examples: Taj Hotels (cycle of success), Infosys (training), BPOs (cycle of failure)</li>
+<li>Zomato/Swiggy delivery partners are boundary spanners &#x2014; the brand's face</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 9 ==================== -->
 <div class="unit" id="u9">
 <h3>Unit 9: Managing Physical Evidence</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Physical Evidence</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Physical Evidence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Servicescape</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Servicescape" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Physical evidence = tangible cues customers use to evaluate service. <strong>Servicescape</strong> affects customer perceptions and behavior.</p>
+<p>Physical evidence = tangible cues customers use to evaluate service. <strong>Servicescape</strong> affects customer perceptions and behavior. Physical evidence strategy: Recognize impact &#x2192; Map journey &#x2192; Clarify roles &#x2192; Co-create &#x2192; Update regularly.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Types of Physical Evidence</h5>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Components</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Ambient conditions</strong></td><td>Temperature, lighting, music, scent</td><td>Hotel lobby fragrance</td></tr>
+<tr><td><strong>Spatial layout</strong></td><td>Furniture, equipment, arrangement</td><td>Restaurant seating</td></tr>
+<tr><td><strong>Signs, symbols, artifacts</strong></td><td>Logos, dress code, d&#xE9;cor</td><td>Bank's professional look</td></tr>
+<tr><td><strong>Other customers</strong></td><td>Who else is using the service</td><td>Exclusive club membership</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Physical Evidence &#x2014; Indian Examples</div>
+<p><strong>Starbucks</strong> uses warm lighting, comfortable seating, and the smell of coffee to create a "third place" between home and work. <strong>Apple Stores:</strong> minimalist design, open tables for product interaction, Genius Bar for support. Indian examples:</p>
+<p><strong>Ambient conditions:</strong> Fabindia stores use earthy tones, natural wood, and traditional Indian music to create a "desi premium" atmosphere. Tanishq (Tata jewelry) uses soft gold lighting and plush seating to signal luxury. <strong>Spatial layout:</strong> Shoppers Stop arranges stores with clear pathways, prominent brand sections, and trial rooms strategically placed to encourage browsing. <strong>Signs and symbols:</strong> ICICI Bank uses consistent blue branding across branches, ATMs, debit cards, and app &#x2014; the color becomes a trust signal. Air India's Maharaja logo is a powerful symbol of Indian hospitality. <strong>Other customers:</strong> Exclusive gyms like Gold's Gym and Cult.fit use member demographics as physical evidence &#x2014; seeing fit, motivated members reinforces the brand promise. <strong>Digital physical evidence:</strong> CRED's app design (dark theme, minimalist, premium feel) creates physical evidence of exclusivity for its credit card rewards platform.</p>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Servicescape Framework</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Ambient Conditions</strong> &#x2014; Temperature, lighting, music, scent</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Spatial Layout</strong> &#x2014; Furniture, equipment, arrangement</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Signs, Symbols, Artifacts</strong> &#x2014; Logos, dress code, d&#xE9;cor</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Other Customers</strong> &#x2014; Who else is using the service</div>
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Ambient Conditions</strong> &#x2014; Temperature, lighting, music, scent, air quality</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Spatial Layout &amp; Functionality</strong> &#x2014; Furniture, equipment, arrangement, aisle width</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Signs, Symbols &amp; Artifacts</strong> &#x2014; Logos, dress code, d&#xE9;cor, art, parking</div>
+<div style="font-size:0.85rem;color:rgba(255,215,0,0.6);margin-top:0.3rem">Affects both customer and employee behavior</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Starbucks</strong> uses warm lighting, comfortable seating, and the smell of coffee to create a "third place" between home and work.</p>
-</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Physical evidence strategy: Recognize impact &#x2192; Map journey &#x2192; Clarify roles &#x2192; Co-create &#x2192; Update regularly</li>
+<li>Physical evidence strategy: Recognize impact &#x2192; Map journey &#x2192; Clarify roles &#x2192; Co-create &#x2192; Update</li>
+<li>Servicescape framework: Ambient conditions + Spatial layout + Signs/symbols/artifacts</li>
 <li>Link to SERVQUAL "Tangibles" dimension</li>
+<li>Visual merchandising drives impulse purchases</li>
+<li>Indian examples: Fabindia (ambient), Tanishq (lighting), ICICI (signs), CRED (digital evidence)</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 10 ==================== -->
 <div class="unit" id="u10">
 <h3>Unit 10: Managing Service Process</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Service Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Blueprinting</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Service Blueprinting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Service process classification based on what is being processed. <strong>Service blueprinting</strong> maps the entire delivery process.</p>
+<p>Service process classification based on what is being processed. <strong>Service blueprinting</strong> maps the entire delivery process with fail points and wait points identified.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Service Process Classification</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>People Processing</strong> &#x2014; Customer must be present (healthcare, haircut)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Possession Processing</strong> &#x2014; Customer's belongings (repair, dry cleaning)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Mental Stimulus Processing</strong> &#x2014; Customer's mind (education, entertainment)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Information Processing</strong> &#x2014; Data (insurance, consulting)</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Amazon's</strong> service blueprint: browsing &#x2192; order &#x2192; payment &#x2192; delivery &#x2192; returns. Each step has fail points identified and recovery processes built in.</p>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>What's Processed</th><th>Customer Presence</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>People processing</strong></td><td>Customer's body</td><td>Must be present</td><td>Healthcare, haircut</td></tr>
+<tr><td><strong>Possession processing</strong></td><td>Customer's belongings</td><td>Not required</td><td>Repair, dry cleaning</td></tr>
+<tr><td><strong>Mental stimulus processing</strong></td><td>Customer's mind</td><td>Not required</td><td>Education, entertainment</td></tr>
+<tr><td><strong>Information processing</strong></td><td>Data</td><td>Not required</td><td>Insurance, consulting</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Customer Switching Reasons (8)</div>
+<p>1. Pricing issues. 2. Inconvenience. 3. Core service failure. 4. Service encounter failures. 5. Response to failed recovery. 6. Competition. 7. Ethical problems. 8. Involuntary switching.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Service Recovery &#x2014; Strategies &amp; Guarantees</div>
+<p><strong>5 Recovery Strategies:</strong></p>
+<p><strong>1. Fix immediately:</strong> Zomato's instant refund for wrong/missing items. <strong>2. Compensate:</strong> Ola gives ride credits for delayed pickups. <strong>3. Follow up:</strong> Flipkart's post-return satisfaction survey. <strong>4. Empower frontline:</strong> Taj Hotels allows managers to offer complimentary stays for failures. <strong>5. Learn from failures:</strong> OYO uses guest feedback to delist poor properties.</p>
+<p><strong>Service Guarantee Criteria (5):</strong> Unconditional (no fine print), Easy to understand, Meaningful (real compensation), Easy to invoke (no bureaucracy), Credible (brand reputation). <strong>Indian example:</strong> Urban Company's "100% satisfaction or free redo" meets all 5 criteria.</p>
+<p><strong>Recovery paradox:</strong> Customers who experience a failure and receive excellent recovery may be MORE satisfied than those who never experienced a failure. <strong>Indian example:</strong> A Zomato customer whose order was late but received instant refund + free dessert may become more loyal than one with a perfect experience.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Service Process &#x2014; Indian Examples</div>
+<p><strong>Amazon's</strong> service blueprint: browsing &#x2192; order &#x2192; payment &#x2192; delivery &#x2192; returns. Each step has fail points identified and recovery processes built in. Indian examples:</p>
+<p><strong>People processing:</strong> VLCC weight loss programs require customer presence at every session. Cult.fit fitness classes need physical attendance. <strong>Possession processing:</strong> Cashify repairs and refurbishes phones &#x2014; customer's device is processed without customer presence. <strong>Mental stimulus processing:</strong> Unacademy and BYJU'S process knowledge into the student's mind through online video lectures (customer presence not required). <strong>Information processing:</strong> Policybazaar processes customer data to recommend insurance policies. ClearTax processes financial data for tax filing. <strong>Service recovery (Indian context):</strong> Zomato's "100% food refund" policy is a service recovery mechanism. Flipkart's easy return policy (especially during Big Billion Days) reduces switching. Ola's in-app SOS button for safety is a fail-point recovery. <strong>Service blueprint for Indian restaurant:</strong> Customer arrives &#x2192; waits for table (fail: long wait) &#x2192; seated by host (fail: rude greeting) &#x2192; orders from menu (fail: item unavailable) &#x2192; food prepared in kitchen (back-stage) &#x2192; food served (fail: wrong order) &#x2192; bill generated (fail: billing errors) &#x2192; payment (fail: UPI down) &#x2192; customer leaves (follow-up: Zomato review).</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>4 Process types: People processing, Possession processing, Mental stimulus, Information processing</li>
 <li>Blueprint elements: Customer actions, Front-stage, Back-stage, Support processes, Fail points</li>
 <li>Service recovery: Fix problem, provide compensation, follow up</li>
-<li>8 Customer switching reasons: pricing, inconvenience, core failure, encounter failures, recovery response, competition, ethics, involuntary</li>
+<li>8 Customer switching reasons: Pricing, Inconvenience, Core failure, Encounter failure, Failed recovery, Competition, Ethics, Involuntary</li>
+<li>Service guarantees reduce perceived risk &#x2014; Zomato "100% refund" is an Indian example</li>
+<li>Indian blueprint example: Restaurant journey with 6 fail points identified</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 11 ==================== -->
 <div class="unit" id="u11">
 <h3>Unit 11: Managing Service Quality</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SERVQUAL Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="SERVQUAL Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Gap Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Gap Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Service quality = perceptions vs. expectations. Two major models: <strong>Gronroos</strong> (Nordic) and <strong>PZB/SERVQUAL</strong> (American).</p>
+<p>Service quality = perceptions vs. expectations. Two major models: <strong>Gronroos</strong> (Nordic) and <strong>PZB/SERVQUAL</strong> (American). <strong>Reliability is the MOST important dimension.</strong></p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; SERVQUAL Model &#x2014; 5 Dimensions (RATER)</h5>
+<div class="db"><table>
+<thead><tr><th>Dimension</th><th>Definition</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>R</strong>eliability</td><td>Perform promised service dependably</td><td>Flights on schedule</td></tr>
+<tr><td><strong>A</strong>ssurance</td><td>Knowledge, courtesy, trust</td><td>Bank staff expertise</td></tr>
+<tr><td><strong>T</strong>angibles</td><td>Physical facilities, equipment</td><td>Clean hospital rooms</td></tr>
+<tr><td><strong>E</strong>mpathy</td><td>Caring, individualized attention</td><td>Remembering patient's name</td></tr>
+<tr><td><strong>R</strong>esponsiveness</td><td>Willingness to help promptly</td><td>Quick complaint resolution</td></tr>
+</tbody></table></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Service Quality Gap Model (5 Gaps)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>R</strong>eliability &#x2014; Perform promised service dependably (MOST important)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>A</strong>ssurance &#x2014; Knowledge, courtesy, trust</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>T</strong>angibles &#x2014; Physical facilities, equipment</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>E</strong>mpathy &#x2014; Caring, individualized attention</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>R</strong>esponsiveness &#x2014; Willingness to help promptly</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Customer Gap (Gap 5)</strong> &#x2014; Expected Service &#x2260; Perceived Service</div>
+<div style="font-size:0.85rem;color:rgba(255,107,107,0.6)">Caused by 4 Provider Gaps:</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Gap 1:</strong> Not knowing what customers expect (Listening)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Gap 2:</strong> Not setting right standards (Design)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Gap 3:</strong> Not delivering to standards (Delivery)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Gap 4:</strong> Not matching promises (Communication)</div>
 </div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; SERVQUAL &#x2014; Detailed Explanation</div>
+<p><strong>SERVQUAL</strong> (Parasuraman, Zeithaml, Berry) is the most widely used service quality measurement instrument. It uses a <strong>22-item questionnaire</strong> measuring 5 dimensions. Each item is measured twice &#x2014; once for <strong>expectations</strong> and once for <strong>perceptions</strong>. The gap between the two scores reveals service quality.</p>
+<p><strong>Scoring:</strong> SERVQUAL Score = Perception Score &#x2013; Expectation Score. A positive score means service exceeds expectations. A negative score means service falls short. Scores are calculated for each dimension and overall.</p>
+<p><strong>Dimension breakdown with sample items:</strong></p>
+<p><strong>Reliability (5 items):</strong> "When XYZ promises to do something by a certain time, it does so." "When you have a problem, XYZ shows a sincere interest in solving it." This is the MOST important dimension &#x2014; research consistently shows it explains the largest variance in overall service quality. <strong>Indian example:</strong> Flipkart's reliable delivery within promised timelines builds trust.</p>
+<p><strong>Assurance (4 items):** "Employees of XYZ are consistently courteous." "Employees of XYZ have the knowledge to answer your questions." <strong>Indian example:</strong> HDFC Bank's trained relationship managers who can explain complex financial products build assurance.</p>
+<p><strong>Tangibles (4 items):** "XYZ has modern-looking equipment." "XYZ's physical facilities are visually appealing." <strong>Indian example:</strong> Tanishq's gold-toned interiors and immaculate display cases signal premium quality.</p>
+<p><strong>Empathy (5 items):** "XYZ gives you individual attention." "XYZ has operating hours convenient to all customers." <strong>Indian example:</strong> Apollo Hospitals assigns a dedicated care coordinator to each patient.</p>
+<p><strong>Responsiveness (4 items):** "Employees of XYZ give you prompt service." "Employees of XYZ are always willing to help." <strong>Indian example:</strong> Amazon India's 24/7 chat support resolves queries within minutes.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Gap Model &#x2014; Indian Application</div>
+<p><strong>Gap 1 (Knowledge Gap):</strong> Indian airlines often do not understand that passengers value on-time performance more than in-flight meals. <strong>Fix:</strong> Regular customer surveys, mystery shopping, social media listening. <strong>Gap 2 (Standards Gap):</strong> Many Indian hospitals have cleanliness standards on paper but fail to translate them into actionable SOPs. <strong>Fix:</strong> Process redesign, Six Sigma, clear SOPs with accountability. <strong>Gap 3 (Delivery Gap):</strong> Call center agents may know the script but lack empowerment to resolve issues. <strong>Fix:</strong> Employee training, empowerment (like Ritz-Carlton's $2,000 rule), better HR policies. <strong>Gap 4 (Communication Gap):</strong> E-commerce sites promise "2-day delivery" but take 5 days. <strong>Fix:</strong> Under-promise and over-deliver; align marketing promises with operations capability. <strong>Technology closing gaps:</strong> Zomato's real-time tracking (Gap 4), Practo's patient feedback system (Gap 1), HDFC Bank's chatbot Eva (Gap 3).</p>
+</div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Domino's Pizza Tracker</strong> lets customers track their order in real-time &#x2014; reducing Gap 4 by being transparent about delivery process.</p>
+<p><strong>Domino's Pizza Tracker</strong> lets customers track their order in real-time &#x2014; reducing Gap 4 by being transparent about delivery process. <strong>Gronroos model:</strong> Technical Quality (WHAT) + Functional Quality (HOW) + Image. <strong>Indian context:</strong> OYO Rooms improved from 2.5 to 4+ ratings by addressing Gap 2 (setting quality standards for franchise partners) and Gap 3 (deploying mystery auditors to check compliance).</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"RATER"</strong> &#x2014; Reliability, Assurance, Tangibles, Empathy, Responsiveness<br>
 <strong>"KSCDC"</strong> &#x2014; Knowledge (Gap 1), Standards (Gap 2), Communication (Gap 4), Delivery (Gap 3), Customer (Gap 5)</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>SERVQUAL uses 22-item questionnaire measuring 5 RATER dimensions</li>
+<li>Scoring: Perception Score &#x2013; Expectation Score = Service Quality Score</li>
 <li>Gap Model: Customer Gap (Gap 5) caused by 4 Provider Gaps</li>
-<li>Gap 1: Listening; Gap 2: Design; Gap 3: Delivery; Gap 4: Communication</li>
+<li>Gap 1: Listening (market research); Gap 2: Design (SOPs); Gap 3: Delivery (training); Gap 4: Communication (realistic promises)</li>
 <li>Gronroos: Technical Quality (WHAT) + Functional Quality (HOW) + Image</li>
-<li>Reliability is the MOST important SERVQUAL dimension</li>
+<li>Technology closes gaps: SSTs (Gap 3), Online feedback (Gap 1), Social media (Gap 4)</li>
+<li>Reliability is the MOST important SERVQUAL dimension &#x2014; largest variance in quality</li>
+<li>Indian examples: Flipkart (reliability), HDFC (assurance), Tanishq (tangibles), Apollo (empathy), Amazon (responsiveness)</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 12 ==================== -->
 <div class="unit" id="u12">
 <h3>Unit 12: International Trade in Services</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>GATS 4 Modes</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="GATS 4 Modes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>India IT Services</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="India IT Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Services trade governed by <strong>GATS</strong> (General Agreement on Trade in Services). India is a major player in global services.</p>
+<p>Services trade governed by <strong>GATS</strong> (General Agreement on Trade in Services). India is a major player in global services. India's IT-BPM sector exports $194 billion annually, employing 5 million people.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; GATS 4 Modes of Service Trade</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Mode 1: Cross-border</strong> &#x2014; Service crosses border, provider stays (BPO, IT)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Mode 2: Consumption Abroad</strong> &#x2014; Customer moves to provider (tourism, education)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Mode 3: Commercial Presence</strong> &#x2014; Provider sets up in another country (FDI)</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Mode 4: Movement of Persons</strong> &#x2014; Individual providers move (IT professionals)</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>India's IT-BPM sector exports $194 billion annually, employing 5 million people &#x2014; Mode 1 (cross-border) dominant.</p>
+<div class="db"><table>
+<thead><tr><th>Mode</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Mode 1: Cross-border</strong></td><td>Service crosses border, provider stays</td><td>BPO, IT services, consulting</td></tr>
+<tr><td><strong>Mode 2: Consumption abroad</strong></td><td>Customer moves to provider's country</td><td>Tourism, medical tourism, education</td></tr>
+<tr><td><strong>Mode 3: Commercial presence</strong></td><td>Provider sets up in another country</td><td>FDI, Starbucks in India</td></tr>
+<tr><td><strong>Mode 4: Movement of persons</strong></td><td>Individual service providers move</td><td>IT professionals abroad, chefs</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; GATS Modes &#x2014; Detailed Indian Examples</div>
+<p>India's service sector strengths: IT and software (Infosys, TCS, Wipro), BPO/KPO, Healthcare and medical tourism, Education and research, Financial services. Mode 1 (cross-border) is dominant for India. Detailed examples by mode:</p>
+<p><strong>Mode 1 (Cross-border):</strong> TCS develops software for British banks from Bangalore. Genpact processes insurance claims for US companies from Gurgaon. Wipro provides remote IT infrastructure management for European clients. India's IT-BPM exports crossed $194 billion in 2023. <strong>Mode 2 (Consumption abroad):</strong> Over 10 million foreign tourists visit India annually. Medical tourism is booming &#x2014; Apollo, Fortis, and Narayana Health attract patients from Africa, Middle East, and Southeast Asia for cardiac surgeries at 1/10th the cost of the US. India's education sector attracts 50,000+ international students. <strong>Mode 3 (Commercial presence):</strong> Starbucks entered India through a JV with Tata (Tata Starbucks). Amazon invested $6.5 billion in India. Google, Microsoft, and Facebook have large India offices. <strong>Mode 4 (Movement of persons):</strong> Indian IT professionals on H-1B visas in the US (over 500,000). Indian chefs working in UK curry restaurants. Indian nurses working in Gulf countries. Indian management consultants on global assignments.</p>
+<p><strong>India's competitive advantages in services:</strong> Large English-speaking population, cost arbitrage (salaries 1/5th of US), STEM talent pipeline (1.5 million engineers/year), time zone advantage for US/Europe, established IT infrastructure (Bangalore, Hyderabad, Pune corridors).</p>
 </div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>"CCMM"</strong> &#x2014; Cross-border, Consumption abroad, Commercial presence, Movement of persons</p>
 </div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; GATS Principles &amp; India's Position</div>
+<p><strong>3 Core GATS Principles:</strong></p>
+<p><strong>1. Most Favoured Nation (MFN):</strong> Every WTO member must treat all other members equally. Cannot give preferential treatment to one country's services over another. <strong>Exception:</strong> Regional trade agreements (like SAFTA) are allowed.</p>
+<p><strong>2. Transparency:</strong> Members must publish all laws, regulations, and practices affecting trade in services. Must notify WTO of any changes. <strong>Indian example:</strong> India publishes FDI policy changes on DPIIT website.</p>
+<p><strong>3. National Treatment:</strong> Foreign service providers must be treated no less favorably than domestic providers (once market access is granted). <strong>Indian example:</strong> Foreign banks in India must follow same RBI regulations as Indian banks.</p>
+<p><strong>India's commitments:</strong> India has made commitments in 11 out of 12 service sectors. India is a leading voice for developing countries in WTO services negotiations. India opposes "Mode 4" restrictions (visa barriers for IT professionals) and pushes for easier movement of natural persons.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>India strengths: IT services, BPO/KPO, medical tourism, education, financial services</li>
+<li>GATS 4 Modes: Cross-border, Consumption abroad, Commercial presence, Movement of persons</li>
+<li>India leads in Mode 1 (cross-border) via IT services (TCS, Infosys, Wipro) &#x2014; $194B+ exports</li>
+<li>Mode 2: Medical tourism (Apollo, Fortis) and education (50,000+ international students)</li>
+<li>Mode 3: Starbucks-Tata JV, Amazon's $6.5B investment in India</li>
+<li>Mode 4: 500,000+ Indian IT professionals on H-1B visas in US</li>
+<li>India's advantages: English speakers, cost arbitrage (1/5th salaries), STEM talent (1.5M engineers/year), time zone, IT corridors</li>
+<li>GATS Principles: MFN, Transparency, National Treatment</li>
+<li>India opposes visa barriers for IT professionals (Mode 4 restrictions)</li>
 <li>Always give India-specific examples for GATS modes in exams</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 13 ==================== -->
 <div class="unit" id="u13">
 <h3>Unit 13: Managing Demand and Capacity</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Demand Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Demand Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Capacity Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Capacity Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Services are perishable &#x2192; unused capacity = lost revenue. Two strategies: <strong>change demand</strong> OR <strong>change supply</strong>.</p>
+<p>Services are perishable &#x2192; unused capacity = lost revenue. Two strategies: <strong>change demand</strong> OR <strong>change supply</strong>. <strong>Yield Management:</strong> Dynamic pricing based on demand, time, and capacity to maximize revenue per available unit.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Demand-Capacity Strategies</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Change Demand to Fit Supply</strong></div>
-<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">Differential pricing | Promotion | Reservation systems | Yield management</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Change Supply to Fit Demand</strong></div>
-<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">Part-time staff | Cross-training | Capacity sharing | Expansion</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Uber's</strong> surge pricing during rain or rush hour is yield management &#x2014; higher prices attract more drivers and manage demand.</p>
+<div class="db"><table>
+<thead><tr><th>Strategy</th><th>Approach</th><th>Techniques</th></tr></thead>
+<tbody>
+<tr><td><strong>Change Demand to Fit Supply</strong></td><td>Shift demand timing</td><td>Differential pricing, Promotion, Reservation systems, Yield management</td></tr>
+<tr><td><strong>Change Supply to Fit Demand</strong></td><td>Flexible capacity</td><td>Part-time employees, Cross-training, Capacity sharing, Expansion</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Waiting Line Approach</th><th>Techniques</th></tr></thead>
+<tbody>
+<tr><td>Operations management</td><td>Reduce actual wait time, improve process</td></tr>
+<tr><td>Perception management</td><td>Make wait feel shorter (entertainment, feedback)</td></tr>
+<tr><td>Virtual queuing</td><td>Allow customers to wait elsewhere</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Demand &amp; Capacity &#x2014; Indian Examples</div>
+<p><strong>Uber's</strong> surge pricing during rain or rush hour is yield management &#x2014; higher prices attract more drivers and manage demand. Airlines sell the same seat at different prices based on booking time. Indian examples:</p>
+<p><strong>Change Demand to Fit Supply:</strong> <strong>Differential pricing:</strong> IRCTC charges more for tatkal (last-minute) bookings and less for advance bookings. Movie theaters offer cheaper morning shows (Rs 100&#x2013;150) vs evening shows (Rs 250&#x2013;400). <strong>Promotion:</strong> BookMyShow pushes "Monday deals" to shift entertainment demand away from weekends. Domino's "Buy 1 Get 1 free on Tuesdays" smooths weekly demand. <strong>Reservation systems:</strong> Swiggy accepts scheduled orders for later delivery, shifting demand. DMV-like government services use appointment systems (e.g., passport Seva Kendra). <strong>Yield management:</strong> Ola and Uber use dynamic pricing based on demand, weather, events. Hotel aggregators like OYO show different prices for the same room at different times.</p>
+<p><strong>Change Supply to Fit Demand:</strong> <strong>Part-time employees:</strong> McDonald's India hires part-time staff during lunch rush. Retail stores hire temporary staff during Diwali/Dussehra season. <strong>Cross-training:</strong> ICICI Bank trains employees to handle multiple roles (teller, loan officer) during peak hours. <strong>Capacity sharing:</strong> Co-working spaces like WeWork and 91springboard share office capacity. Hospital chains share specialist doctors across branches. <strong>Facility expansion:</strong> Zomato expanded dark stores (Zomato Instant) to increase food delivery capacity during peak lunch hours.</p>
+<p><strong>Managing Waiting Lines in India:</strong> <strong>Operations:</strong> Big Bazaar uses express counters for customers with fewer than 10 items. <strong>Perception:</strong> Multiplexes play trailers and ads in waiting areas. Banks provide token systems with estimated wait times. <strong>Virtual queuing:</strong> Practo lets you "check in" online before visiting a doctor, reducing physical wait time.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Yield Management &#x2014; Detailed Explanation</div>
+<p><strong>Yield Management (Revenue Management)</strong> is the practice of dynamically pricing a perishable service based on demand, time, and capacity to maximize revenue per available unit.</p>
+<p><strong>Conditions for Yield Management:</strong> 1. Fixed capacity (airline seats, hotel rooms). 2. Perishable inventory (unsold = lost). 3. Varying demand (peak vs. off-peak). 4. Segmentable customers (business vs. leisure). 5. Advance booking possible.</p>
+<p><strong>How it works:</strong> Airlines use algorithms to set prices based on booking velocity, days to departure, and historical demand. Early bookings are cheap (fill base). Last-minute bookings are expensive (capture high willingness-to-pay). Business travelers pay more (inflexible dates). Leisure travelers pay less (flexible dates).</p>
+<p><strong>Indian examples:</strong> IRCTC: Tatkal (last-minute) tickets cost 1.5&#x2013;2x advance tickets. Airlines: IndiGo, SpiceJet, Air India charge different prices for same seat based on booking time and demand. Hotels: OYO and Treebo increase prices during festivals (Diwali, Dussehra) and decrease during off-season. Events: IPL match tickets are cheaper for weekday games than weekend games.</p>
+<p><strong>Risks of Yield Management:</strong> Customer dissatisfaction if they discover different prices for same service. Perceived unfairness. Brand damage if pricing seems exploitative.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Waiting Line Psychology (Maister's 8 Rules)</div>
+<p><strong>Rule 1: Unoccupied time feels longer.</strong> &#x2192; Provide entertainment. Indian example: Multiplexes play trailers in waiting areas. <strong>Rule 2: Pre-process waits feel longer.</strong> &#x2192; Let customers start the process. Indian example: Practo's online check-in before visiting doctor. <strong>Rule 3: Anxiety makes waits seem longer.</strong> &#x2192; Provide information. Indian example: Banks show estimated wait time on token. <strong>Rule 4: Uncertain waits are longer.</strong> &#x2192; Give updates. Indian example: Swiggy's real-time delivery tracking. <strong>Rule 5: Unexplained waits are longer.</strong> &#x2192; Explain delays. Indian example: Airlines announcing "delay due to air traffic control." <strong>Rule 6: Unfair waits are longer.</strong> &#x2192; Ensure fairness. Indian example: Token systems at government offices. <strong>Rule 7: The more valuable the service, the longer the wait.</strong> &#x2192; Customers tolerate waits for premium services. Indian example: 2-hour wait at popular dhabas. <strong>Rule 8: Solo waits feel longer.</strong> &#x2192; Group waiting feels faster. Indian example: Waiting rooms at hospitals.</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Yield Management: dynamic pricing to maximize revenue per available unit</li>
-<li>Waiting line management: Operations (reduce actual time), Perception (make wait feel shorter), Virtual queuing</li>
-<li>Common in airlines, hotels, car rentals, events</li>
+<li>Yield Management: dynamic pricing to maximize revenue per available unit (IRCTC, airlines, hotels)</li>
+<li>Conditions: Fixed capacity, perishable, varying demand, segmentable, advance booking</li>
+<li>Demand strategies: Differential pricing, Promotion, Reservation, Yield management</li>
+<li>Supply strategies: Part-time staff, Cross-training, Capacity sharing, Expansion</li>
+<li>Waiting line management: Operations, Perception, Virtual queuing (Maister's 8 rules)</li>
+<li>Common in airlines, hotels, car rentals, events, restaurants</li>
 </ul></div>
 </div>
 
+<!-- ==================== UNIT 14 ==================== -->
 <div class="unit" id="u14">
 <h3>Unit 14: Emerging Issues in Marketing of Services</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14" class="ai-response-box" style="display:none;"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Transformation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Digital Transformation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SSTs and CRM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="SSTs and CRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
-<p>Digital transformation is reshaping service delivery. Self-service technologies (SSTs), CRM, and omnichannel are key trends.</p>
+<p>Digital transformation is reshaping service delivery. Key trends: Self-Service Technologies (SSTs), CRM, Customer Retention (5x cheaper than acquisition), Omnichannel, Service Ecosystems, Sustainability.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Digital Service Trends &#x2014; 6 Key Areas</div>
+<p><strong>1. Self-Service Technologies (SSTs):</strong> Customers perform service themselves using technology. Benefits: 24/7 availability, lower cost, consistency. Risks: Technology failures, customer frustration, digital divide. <strong>Indian SST examples:</strong> UPI (10B+ monthly transactions), IRCTC (1M+ daily tickets), FASTag (toll automation), DigiLocker (government docs), self-checkout at Decathlon stores.</p>
+<p><strong>2. CRM (Customer Relationship Management):</strong> Using data to manage customer interactions, personalize offers, and build loyalty. <strong>Indian CRM examples:</strong> Flipkart (recommendation engine = 35% sales), HDFC (personalized app offers), Zomato (birthday offers, restaurant suggestions).</p>
+<p><strong>3. Customer Retention:</strong> Acquiring a new customer costs 5x more than retaining an existing one. Retention strategies: Loyalty programs, personalization, switching costs, relationship building. <strong>Indian examples:</strong> Amazon Prime (bundles video/music/delivery), CRED (coins for bill payments), Zomato Gold (free delivery + discounts).</p>
+<p><strong>4. Omnichannel:</strong> Seamless integration across all customer touchpoints (online, offline, mobile, social). <strong>Indian examples:</strong> Tanishq (online browse + virtual try-on + in-store buy), Lenskart (home eye test + app selection + store pickup), Nykaa (stores + app + YouTube tutorials).</p>
+<p><strong>5. Service Ecosystems (Super-apps):</strong> Multiple services bundled into one platform, increasing switching cost and lifetime value. <strong>Indian examples:</strong> Tata Neu (airlines + hotels + shopping + grocery + payments), Reliance Jio (telecom + entertainment + shopping + payments), Paytm (payments + shopping + financial services).</p>
+<p><strong>6. Sustainability:</strong> Services designed for environmental and social sustainability. <strong>Indian examples:</strong> Amul (direct procurement from 3.6M farmers), Ola Electric (EV adoption), ITC (sustainable agriculture programs), Infosys (carbon-neutral operations).</p>
 </div>
 <div class="visual-diagram"><h5>&#x1F4CA; Customer Path to Purchase</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
@@ -400,16 +770,232 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Interest &#x2192; Consideration &#x2192; Purchase</strong></div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Retention &#x2192; Advocacy</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Retention &#x2192; Advocacy</strong></div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p><strong>Swiggy</strong> uses AI for personalized recommendations, real-time tracking, and instant refunds &#x2014; exemplifying digital service transformation.</p>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Emerging Issues &#x2014; Indian Examples</div>
+<p><strong>Swiggy</strong> uses AI for personalized recommendations, real-time tracking, and instant refunds &#x2014; exemplifying digital service transformation. Platform-based services (Uber, Airbnb) are reshaping industries. Detailed Indian examples:</p>
+<p><strong>Self-Service Technologies (SSTs):</strong> India's UPI (Unified Payments Interface) processed 10+ billion transactions monthly in 2023 &#x2014; the world's largest SST for payments. IRCTC online booking handles 1 million+ tickets daily. FASTag eliminated toll booth queues across Indian highways. DigiLocker stores government documents digitally, reducing physical paperwork. <strong>Customer Relationship Management (CRM):</strong> Flipkart's recommendation engine ("Customers who bought this also bought...") drives 35% of sales. HDFC Bank's mobile app personalizes offers based on transaction history. Zomato uses CRM data to send personalized restaurant recommendations and offers on birthdays. <strong>Customer Retention:</strong> Amazon Prime in India bundles video, music, free delivery, and reading &#x2014; increasing switching cost and retention. CRED rewards credit card bill payments with coins redeemable for products, creating a retention loop. <strong>Omnichannel:</strong> Tanishq allows online browsing, virtual try-on, and in-store purchase. Lenskart offers home eye tests, app-based frame selection, and store pickup. Nykaa runs beauty stores, an app, and YouTube tutorials as one integrated ecosystem. <strong>Service ecosystems:</strong> Tata ecosystem (Tata Neu app) integrates airlines (AirAsia India), hotels (IHCL), shopping (Croma), jewelry (Tanishq), grocery (BigBasket), and payments (Tata Pay) into one super-app. Reliance Jio ecosystem bundles telecom, entertainment (JioCinema), shopping (JioMart), and payments. <strong>Sustainability:</strong> Amul's direct milk procurement from 3.6 million farmers is a sustainable service ecosystem. Ola Electric promotes EV adoption through its ride-hailing platform.</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>6 Key Trends: SSTs, CRM, Customer Retention, Omnichannel, Service Ecosystems, Sustainability</li>
+<li>UPI processes 10+ billion transactions/month &#x2014; world's largest SST for payments</li>
 <li>Customer retention is 5x cheaper than acquisition</li>
-<li>Platform-based services (Uber, Airbnb) are reshaping industries</li>
+<li>Tata Neu and Reliance Jio are India's leading service ecosystems (super-apps)</li>
+<li>Omnichannel: Tanishq, Lenskart, and Nykaa integrate online + offline seamlessly</li>
+<li>AI and chatbots improve all service quality gaps (HDFC Eva, Zomato AI support)</li>
+<li>Sustainability: Amul's direct procurement from 3.6M farmers is a sustainable model</li>
 </ul></div>
+</div>
+
+<!-- ==================== MASTER MNEMONICS ==================== -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>TIPS-NP</strong></td><td>Tangibility, Inseparability, Perishability, Simultaneity, Non-ownership, People</td><td>Service characteristics</td></tr>
+<tr><td><strong>EII</strong></td><td>External, Interactive, Internal</td><td>Service triangle</td></tr>
+<tr><td><strong>SPY GOOD</strong></td><td>Skimming, Penetration, Yield, Guaranteed, Offset, Other, Dynamic</td><td>Pricing strategies</td></tr>
+<tr><td><strong>RATER</strong></td><td>Reliability, Assurance, Tangibles, Empathy, Responsiveness</td><td>SERVQUAL dimensions</td></tr>
+<tr><td><strong>KSCDC</strong></td><td>Knowledge, Standards, Communication, Delivery, Customer</td><td>Quality gaps 1-4 + Gap 5</td></tr>
+<tr><td><strong>HIRE</strong></td><td>Hire, Invest, Retain, Empower</td><td>People management</td></tr>
+<tr><td><strong>CCMM</strong></td><td>Cross-border, Consumption abroad, Commercial presence, Movement</td><td>GATS modes</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; IHIP &#x2014; Marketing Implications</div>
+<table style="width:100%;font-size:0.85rem;border-collapse:collapse">
+<tr style="background:rgba(9,132,227,0.15)"><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Characteristic</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Marketing Problem</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Strategy</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Indian Example</th></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Intangibility</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Cannot patent, hard to communicate</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Tangible cues, branding, testimonials</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Apollo's modern lobbies</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Heterogeneity</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Inconsistent quality</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Standardization, training, automation</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">HDFC's 6,000+ branch SOPs</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Inseparability</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Limited scalability</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Multi-site, tech, self-service</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Zomato delivery = brand face</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Perishability</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Revenue lost if unused</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Dynamic pricing, yield management</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">IRCTC tatkal pricing</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ==================== KEY FRAMEWORKS ==================== -->
+<div class="unit" id="frameworks">
+<h3>&#x1F4CA; Key Frameworks &amp; Diagrams</h3>
+<div class="visual-diagram"><h5>Service Quality Models Comparison</h5>
+<div style="overflow-x:auto">
+<table style="width:100%;font-size:0.85rem;border-collapse:collapse">
+<tr style="background:rgba(9,132,227,0.15)"><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Model</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Focus</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Dimensions</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Key Idea</th></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>SERVQUAL (PZB)</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Gap between expectations and perceptions</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">RATER (5)</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Perception &#x2013; Expectation = Quality</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Gronroos</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Technical + Functional quality</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">2 + Image</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Image filters all perceptions</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Gap Model (PZB)</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">5 provider gaps causing customer gap</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">4 internal + 1 external</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Fix Gaps 1-4 to close Gap 5</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Service Profit Chain</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Employee satisfaction &#x2192; Profit</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">5 links</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Happy employees = happy customers</td></tr>
+</table>
+</div></div>
+<div class="visual-diagram"><h5>Lovelock's Service Classification</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="display:flex;justify-content:space-between;width:80%">
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>People-based</strong><br>Teaching, consulting, medical</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>Equipment-based</strong><br>ATM, vending, online banking</div>
+</div>
+<div style="display:flex;justify-content:space-between;width:80%">
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>Tangible actions</strong><br>Hairdressing, freight, cleaning</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>Intangible actions</strong><br>Education, insurance, entertainment</div>
+</div>
+<div style="display:flex;justify-content:space-between;width:80%">
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>High contact</strong><br>Hotels, hospitals, restaurants</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem"><strong>Low contact</strong><br>Mail sorting, credit processing</div>
+</div>
+</div></div>
+<div class="visual-diagram"><h5>IHIP Framework &#x2014; Service Characteristics</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>I &#x2014; Intangibility</strong> &#x2014; Cannot see, touch, or feel before purchase</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>H &#x2014; Heterogeneity</strong> &#x2014; Every service encounter is different (variability)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>I &#x2014; Inseparability</strong> &#x2014; Production and consumption happen simultaneously</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>P &#x2014; Perishability</strong> &#x2014; Cannot be stored or inventoried</div>
+<div style="font-size:0.85rem;color:rgba(255,215,0,0.6);margin-top:0.3rem">Each characteristic demands a unique marketing strategy</div>
+</div></div>
+<div class="visual-diagram"><h5>Service Marketing Triangle</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>COMPANY</strong></div>
+<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">&#x2198; External Marketing &#x2199; Internal Marketing</div>
+<div style="display:flex;justify-content:space-between;width:80%">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>CUSTOMER</strong></div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:45%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>EMPLOYEES</strong></div>
+</div>
+<div style="font-size:0.85rem;color:rgba(0,184,148,0.6)">Interactive Marketing</div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Service Marketing Triangle &#x2014; Detailed Explanation</div>
+<p><strong>External Marketing:</strong> Company-to-customer communication. Includes advertising, PR, pricing, branding, websites. This is where promises are made. <strong>Indian example:</strong> SBI's "Youth and Dreams" campaign, HDFC's "We understand your world" tagline, Swiggy's "Why cook when you can Swiggy?" ads.</p>
+<p><strong>Internal Marketing:</strong> Company-to-employee communication. Training, motivation, empowerment, service culture. This is enabling employees to deliver on promises. <strong>Indian example:</strong> Infosys Mysore training campus (largest corporate training center globally), Taj Hotels' "Tajness" service philosophy training, ICICI Bank's structured induction program.</p>
+<p><strong>Interactive Marketing:</strong> Employee-to-customer interaction. The "moment of truth" where promises are kept (or broken). This is the actual service delivery experience. <strong>Indian example:</strong> A Zomato delivery partner's interaction with a customer, a Tanishq jeweler's personalized consultation, a Cult.fit trainer's energy during a fitness class.</p>
+<p><strong>Critical insight:</strong> If external marketing overpromises (e.g., "30-minute delivery guaranteed") but interactive marketing underdelivers (actually takes 50 minutes), the company loses credibility. All three must be aligned.</p>
+</div>
+<div class="visual-diagram"><h5>Service Profit Chain</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Employee Satisfaction &#x2192; Service Quality &#x2192; Customer Satisfaction &#x2192; Loyalty &#x2192; Revenue Growth</div>
+</div></div>
+<div class="visual-diagram"><h5>SERVQUAL Gap Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(9,132,227,0.15);border:1px solid rgba(9,132,227,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Customer Expectations</strong> (Word-of-mouth, Past experience, Needs)</div>
+<div style="font-size:0.85rem;color:rgba(255,107,107,0.6)">Gap 1: Knowledge Gap (not knowing expectations)</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.15);border:1px solid rgba(255,107,107,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Company</strong> &#x2014; Gap 2: Design Gap (wrong standards) &#x2192; Gap 4: Communication Gap (overpromising)</div>
+<div style="font-size:0.85rem;color:rgba(255,107,107,0.6)">Gap 3: Delivery Gap (not delivering to standards)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Customer Perceptions</strong></div>
+<div style="font-size:0.85rem;color:rgba(255,107,107,0.6);margin-top:0.3rem">Gap 5 = Customer Gap = Expected Service &#x2260; Perceived Service</div>
+</div></div>
+<div class="visual-diagram"><h5>Gronroos Perceived Service Quality Model</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Technical Quality (WHAT)</strong> &#x2014; The outcome the customer receives</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Functional Quality (HOW)</strong> &#x2014; The process of service delivery</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Image</strong> &#x2014; Filters perception (good image forgives minor errors)</div>
+<div style="font-size:0.85rem;color:rgba(255,215,0,0.6);margin-top:0.3rem">Total Perceived Quality = Experienced Quality &#x2013; Expected Quality</div>
+</div></div>
+<div class="visual-diagram"><h5>Kotler's 5 Product Levels</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Level 5: Potential Product (future evolution)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Level 4: Augmented Product (exceeds expectations)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Level 3: Expected Product (normal expectations)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Level 2: Basic Product (functional attributes)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Level 1: Core Benefit (fundamental need)</div>
+</div></div>
+</div>
+
+<!-- ==================== QUICK REVISION ==================== -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; One-Liner Definitions</div>
+<p><strong>Service:</strong> Intangible activity, no ownership transfer (Kotler). <strong>Service Quality:</strong> Perceptions vs. expectations. <strong>SERVQUAL:</strong> 5-dimensional quality measurement (RATER). <strong>Internal Marketing:</strong> Treating employees as internal customers. <strong>Yield Management:</strong> Dynamic pricing to maximize revenue. <strong>Service Blueprint:</strong> Visual map of service process. <strong>Zone of Tolerance:</strong> Range of acceptable service levels. <strong>GATS:</strong> WTO framework for international service trade (4 modes). <strong>Emotional Labour:</strong> Displaying required emotions not genuinely felt. <strong>Boundary Spanners:</strong> Employees bridging company and customer. <strong>IHIP:</strong> Intangibility, Heterogeneity, Inseparability, Perishability. <strong>Servicescape:</strong> Physical environment where service is delivered. <strong>Moment of Truth:</strong> Any point of customer-company interaction. <strong>Service Recovery:</strong> Actions taken to resolve a service failure. <strong>Blueprint:</strong> Flowchart mapping front-stage and back-stage activities. <strong>Augmented Service:</strong> Service that exceeds basic expectations (Gronroos Level 2).</p>
+</div>
+<div class="db"><table>
+<thead><tr><th>Concept</th><th>Model A</th><th>Model B</th></tr></thead>
+<tbody>
+<tr><td>Quality dimensions</td><td>Gronroos: Technical + Functional</td><td>PZB: RATER (5 dimensions)</td></tr>
+<tr><td>Product levels</td><td>Kotler: 5 levels</td><td>Gronroos: 3 levels</td></tr>
+<tr><td>Marketing mix</td><td>Traditional: 4Ps</td><td>Services: 7Ps</td></tr>
+<tr><td>Demand strategies</td><td>Change demand</td><td>Change supply</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Formulas &amp; Relationships</div>
+<p><strong>Perceived Quality = Perceived Service - Expected Service</strong> (positive = exceeds expectations, negative = falls short)<br>
+<strong>Customer Gap (Gap 5) = Expected Service - Perceived Service</strong> (close Gap 5 by fixing Gaps 1-4)<br>
+<strong>SERVQUAL Score = Perception Score - Expectation Score</strong> (for each of 22 items, across 5 dimensions)<br>
+<strong>Service Profit Chain:</strong> Employee satisfaction &#x2192; Service quality &#x2192; Customer satisfaction &#x2192; Customer loyalty &#x2192; Revenue growth &#x2192; Profitability<br>
+<strong>Zone of Tolerance:</strong> Desired Service (upper limit) - Adequate Service (lower limit) = acceptable range<br>
+<strong>Yield Management:</strong> Revenue = Price x Quantity sold (dynamic pricing maximizes revenue per available unit)</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Quick Comparison: Gronroos vs. PZB</div>
+<table style="width:100%;font-size:0.85rem;border-collapse:collapse">
+<tr style="background:rgba(9,132,227,0.15)"><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Aspect</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">Gronroos (1984)</th><th style="padding:0.5rem;text-align:left;border:1px solid rgba(255,255,255,0.1)">PZB/SERVQUAL (1988)</th></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Dimensions</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">2 (Technical + Functional) + Image</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">5 (Reliability, Assurance, Tangibles, Empathy, Responsiveness)</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Measurement</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Not standardized</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">22-item standardized questionnaire</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Key insight</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Image filters all perceptions</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Reliability is the most important dimension</td></tr>
+<tr><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)"><strong>Scoring</strong></td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Experienced - Expected</td><td style="padding:0.5rem;border:1px solid rgba(255,255,255,0.1)">Perception - Expectation</td></tr>
+</table>
+</div>
+</div>
+
+<!-- ==================== EXAM FOCUS ==================== -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<p>1. <strong>Characteristics of services</strong> with marketing implications (every exam &#x2014; use IHIP framework)<br>
+2. <strong>SERVQUAL model</strong> &#x2014; explain all 5 RATER dimensions with Indian examples<br>
+3. <strong>Gap Model</strong> &#x2014; draw diagram, explain all 5 gaps with Indian context<br>
+4. <strong>7Ps of service marketing</strong> &#x2014; compare with traditional 4Ps, give Indian examples<br>
+5. <strong>Service Triangle</strong> &#x2014; 3 types of marketing (External, Internal, Interactive)<br>
+6. <strong>Internal Marketing</strong> &#x2014; cycle of failure vs. success with Indian examples<br>
+7. <strong>Yield Management</strong> &#x2014; explain with IRCTC/airline/hotel pricing examples<br>
+8. <strong>GATS 4 modes</strong> &#x2014; with India's position and examples<br>
+9. <strong>Service Blueprinting</strong> &#x2014; draw diagram with fail points and recovery<br>
+10. <strong>Pricing strategies</strong> &#x2014; compare at least 4 strategies with Indian examples</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Question Patterns</div>
+<p>&#x2022; "Explain with examples..." (need real-world cases, especially Indian)<br>
+&#x2022; "Compare and contrast..." (model comparisons &#x2014; Gronroos vs. PZB, 4Ps vs. 7Ps)<br>
+&#x2022; "Draw and explain..." (diagrams mandatory &#x2014; Gap Model, Service Triangle, Blueprint)<br>
+&#x2022; "Discuss the marketing implications of..." (apply theory to practice with examples)<br>
+&#x2022; "Critically evaluate..." (present both strengths and limitations of a model)<br>
+&#x2022; "With reference to Indian context..." (use Indian companies and statistics)</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Model Answer Structure</div>
+<p>1. Define the concept. 2. Explain with framework/model. 3. Draw diagram if applicable. 4. Give 2-3 real-world examples. 5. Link to marketing implications. 6. Conclude with significance.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 15-Mark Answer Template</div>
+<p><strong>For a 15-mark question on "Explain SERVQUAL model with examples":</strong></p>
+<p><strong>Para 1 (3 marks):</strong> Define service quality. State that SERVQUAL was developed by Parasuraman, Zeithaml, and Berry (1988). Mention it measures perceptions minus expectations across 5 dimensions.</p>
+<p><strong>Para 2 (5 marks):</strong> List and explain all 5 RATER dimensions with 1 example each: Reliability (Flipkart delivery), Assurance (HDFC Bank staff), Tangibles (Tanishq store design), Empathy (Apollo Hospital care coordinator), Responsiveness (Amazon chat support).</p>
+<p><strong>Para 3 (3 marks):</strong> Draw the Gap Model diagram. Label all 5 gaps. Explain how Gap 5 is caused by Gaps 1&#x2013;4.</p>
+<p><strong>Para 4 (2 marks):</strong> Give an Indian application &#x2014; how Zomato uses real-time tracking (Gap 4), customer feedback (Gap 1), and delivery partner training (Gap 3) to improve quality.</p>
+<p><strong>Para 5 (2 marks):</strong> Conclude by stating that Reliability is the most important dimension and link to competitive advantage in Indian market.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Top 5 Exam Predictions</div>
+<p><strong>1.</strong> "Explain IHIP characteristics of services with Indian examples" &#x2014; Define each with 2 examples. <strong>2.</strong> "Compare Gronroos and PZB models of service quality" &#x2014; Side-by-side comparison table. <strong>3.</strong> "Discuss the 7Ps of service marketing mix with examples from Indian hospitality industry" &#x2014; Each P with Taj/Oberoi example. <strong>4.</strong> "Explain how technology is changing service delivery in India" &#x2014; SSTs, UPI, AI, omnichannel. <strong>5.</strong> "Discuss demand management strategies for perishable services" &#x2014; Yield management, differential pricing, reservation systems with IRCTC/airline examples.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Common Exam Mistakes to Avoid</div>
+<p><strong>1. Confusing IHIP with TIPS-NP:</strong> IHIP is the standard 4-characteristic framework (most exams expect this). TIPS-NP adds Non-ownership and People as separate characteristics. Use IHIP unless specifically asked about TIPS-NP.</p>
+<p><strong>2. Forgetting to draw diagrams:</strong> For Gap Model, Service Triangle, and Blueprint questions, diagrams are mandatory and carry 3-5 marks. Always label all components clearly.</p>
+<p><strong>3. Not giving Indian examples:</strong> Examiners expect India-specific examples. Generic "McDonald's" or "Amazon US" examples score less than "Zomato," "HDFC Bank," or "Taj Hotels."</p>
+<p><strong>4. Mixing up Gronroos and PZB:</strong> Gronroos has 2 dimensions (Technical + Functional) + Image. PZB/SERVQUAL has 5 dimensions (RATER). Do not confuse them.</p>
+<p><strong>5. Ignoring the "marketing implications" part:</strong> When asked about IHIP or any framework, always conclude with "Therefore, marketers should..." to show application of theory.</p>
+<p><strong>6. Not knowing SERVQUAL scoring:</strong> SERVQUAL Score = Perception &#x2013; Expectation. Positive = exceeds expectations. Negative = falls short. Mention this in SERVQUAL answers.</p>
+<p><strong>7. Writing generic answers:</strong> Avoid textbook-only answers. Examiners reward application &#x2014; link theory to real companies and current trends (UPI, super-apps, omnichannel).</p>
+<p><strong>8. Missing the "compare" part:</strong> When asked to "compare," always present a structured table or side-by-side analysis, not just descriptions of each model separately.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Theorists to Remember</div>
+<p><strong>Kotler:</strong> 5 product levels (core, basic, expected, augmented, potential). <strong>Gronroos:</strong> Perceived service quality model (technical + functional + image), internal marketing concept. <strong>Parasuraman, Zeithaml, Berry (PZB):</strong> SERVQUAL, Gap Model, Zone of Tolerance. <strong>Lovelock:</strong> Service classification (people/equipment, tangible/intangible, high/low contact). <strong>Heskett:</strong> Service Profit Chain (employee satisfaction &#x2192; quality &#x2192; customer satisfaction &#x2192; revenue). <strong>Bitner:</strong> Servicescape framework (ambient conditions, spatial layout, signs/symbols). <strong>Maister:</strong> 8 rules of waiting line psychology.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Last-Minute Revision Checklist</div>
+<p>&#x2713; Can you list and explain all 4 IHIP characteristics with Indian examples?<br>
+&#x2713; Can you draw the Gap Model diagram and label all 5 gaps?<br>
+&#x2713; Can you name all 5 SERVQUAL (RATER) dimensions?<br>
+&#x2713; Can you compare Gronroos model with PZB model?<br>
+&#x2713; Can you list all 7Ps with service examples?<br>
+&#x2713; Can you explain the Service Triangle with external, internal, and interactive marketing?<br>
+&#x2713; Can you name all 4 GATS modes with India examples?<br>
+&#x2713; Can you explain yield management with IRCTC/airline pricing?<br>
+&#x2713; Can you draw a service blueprint with front-stage and back-stage?<br>
+&#x2713; Can you explain the Service Profit Chain?<br>
+&#x2713; Can you list 6 tangibilization strategies with examples?<br>
+&#x2713; Can you explain Zone of Tolerance and what narrows/widens it?<br>
+&#x2713; Can you name 8 customer switching reasons?<br>
+&#x2713; Can you describe Maister's 8 waiting line rules?<br>
+&#x2713; Can you explain 6 digital service trends (SSTs, CRM, Retention, Omnichannel, Ecosystems, Sustainability)?<br>
+&#x2713; Can you explain IHIP marketing implications with a table of strategies?<br>
+&#x2713; Can you name Maister's 8 rules of waiting line psychology?</p>
+</div>
 </div>
 
 </main>
@@ -420,6 +1006,11 @@ var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersec
 document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
 window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

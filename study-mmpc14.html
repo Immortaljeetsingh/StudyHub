@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-14: Financial Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+/* MMPC-14 ENHANCED STYLES */
+
+/* --- Background Particles --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(0,206,201,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(0,206,201,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Section Heading Gradient Underline --- */
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #00cec9, #00b4d8, #00d4ff, #00cec9);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #00cec9, #00b4d8);
+  border-radius: 2px;
+}
+
+/* --- Card Hover Effects --- */
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(0,206,201,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(0,206,201,0.4) !important;
+}
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #c8c8c8 !important;
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #b0b0b0 !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+
+/* --- Study Header Enhancement --- */
+.study-header {
+  background: linear-gradient(135deg, rgba(0,206,201,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(0,206,201,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+/* --- Badge/Tag Styling --- */
+.subject-tag {
+  background: linear-gradient(135deg, #00cec9, #00b4d8) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Visual Diagram Boxes --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(0,206,201,0.08), rgba(255,107,107,0.06));
+  border: 1px solid rgba(0,206,201,0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00cec9, #00b4d8, #FFD700);
+}
+.visual-diagram h5 {
+  color: #00cec9;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,206,201,0.3);
+}
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(0,206,201,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(0,206,201,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #00cec9, #00b4d8); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+/* --- Touch targets 44px minimum --- */
+.btn, button, .video-toggle, .expand-toggle, .sidebar a, .back-link, .mobile-nav-toggle {
+  min-height: 44px;
+  min-width: 44px;
+}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc14">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-14'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-14</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Foundations</a>
+<a href="#u1">Unit 1: FM Overview</a>
+<a href="#u2">Unit 2: Time Value of Money</a>
+<a href="#u3">Unit 3: Risk and Return</a>
+<a href="#block2">Block-02 Investment Decisions</a>
+<a href="#u4">Unit 4: Valuation of Securities</a>
+<a href="#u5">Unit 5: Cost of Capital</a>
+<a href="#u6">Unit 6: Capital Budgeting</a>
+<a href="#u7">Unit 7: Working Capital</a>
+<a href="#block3">Block-03 Financial Markets &amp; Sources</a>
+<a href="#u8">Unit 8: Financial Markets</a>
+<a href="#u9">Unit 9: Sources of Finance</a>
+<a href="#block4">Block-04 Capital Structure &amp; Dividend</a>
+<a href="#u10">Unit 10: Capital Structure</a>
+<a href="#u11">Unit 11: Leverage Analysis</a>
+<a href="#u12">Unit 12: Dividend Theories</a>
+<a href="#u13">Unit 13: Dividend Policies</a>
+<a href="#block5">Block-05 Advanced Topics</a>
+<a href="#u14">Unit 14: Behavioural Finance</a>
+<a href="#u15">Unit 15: Financial Restructuring</a>
+<a href="#formulas">Key Formulas</a>
+<a href="#revision">Quick Revision</a>
+<a href="#exam">Exam Focus</a>
+<a href="quiz-mmpc14.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-14</span><h1>Financial Management</h1>
+<p>5 Blocks, 15 Units &#x2022; Cost of Capital, Investment Decisions, Financing, Dividend Policy &amp; Emerging Finance &#x2022; IGNOU MBA</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Foundations of Financial Management</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Financial Management &#x2014; An Introduction</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Financial Management</div><p><strong>Financial Management:</strong> Planning, organizing, directing, and controlling financial activities in an organization. Finance is the <strong>lifeblood</strong> of any business &#x2014; needed even before a firm begins operations.</p><p>Three key decisions determine firm value: <strong>V = f [I, F, D]</strong> &#x2014; <strong>I</strong>nvestment Decision (where to invest funds), <strong>F</strong>inancing Decision (how to raise funds &#x2014; debt vs equity mix), <strong>D</strong>ividend Decision (how much profit to distribute vs retain).</p><p><strong>Net Worth = Assets &#x2014; Liabilities</strong> (market value basis)</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Financial Management Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="FM Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Profit vs Wealth Maximization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Profit vs Wealth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>Traditional (pre-1950s)</th><th>Modern (post-1950s)</th></tr></thead>
+<tbody>
+<tr><td>Focus</td><td>Raising funds</td><td>Efficient fund management</td></tr>
+<tr><td>Perspective</td><td>Outsider (investors, banks)</td><td>Insider (management)</td></tr>
+<tr><td>Scope</td><td>Episodic events (IPOs, mergers)</td><td>Day-to-day financial decisions</td></tr>
+<tr><td>Time frame</td><td>Long-term only</td><td>Both long-term and short-term</td></tr>
+<tr><td>Analytical depth</td><td>Descriptive, lacks analysis</td><td>Analytical, decision-oriented</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Criterion</th><th>Profit Maximization</th><th>Wealth Maximization</th></tr></thead>
+<tbody>
+<tr><td>Focus</td><td>Accounting profits</td><td>Market value of shares</td></tr>
+<tr><td>Time value</td><td>Ignored</td><td>Considered (discounting)</td></tr>
+<tr><td>Risk</td><td>Ignored</td><td>Considered (risk-return tradeoff)</td></tr>
+<tr><td>Ambiguity</td><td>"Profit" is ambiguous</td><td>Clear &#x2014; share price maximization</td></tr>
+<tr><td>Verdict</td><td>Flawed</td><td>Superior objective</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Agency Theory</div><p><strong>Principal-Agent Problem:</strong> Owners (principals) hire managers (agents) who may pursue self-interest. <strong>Agency Cost:</strong> Monitoring costs + bonding costs + residual loss. Solution: Incentive alignment, performance-linked pay, governance mechanisms.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Infosys</strong> uses stock options (ESOPs) to align manager interests with shareholders &#x2014; reducing agency costs. <strong>Tata Group</strong> prioritizes wealth maximization over short-term profits, investing heavily in R&amp;D and sustainability.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-F-D"</strong> = <strong>I</strong>nvestment, <strong>F</strong>inancing, <strong>D</strong>ividend &#x2014; the 3 key financial decisions that determine firm value.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Finance = Lifeblood of business; 3 decisions: Investment, Financing, Dividend</li>
+<li>Traditional vs Modern: Raising funds vs Efficient fund management</li>
+<li>Wealth maximization &gt; Profit maximization (considers TVM and risk)</li>
+<li>Agency theory: Aligning manager interests with owner interests</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Time Value of Money</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Time Value of Money</div><p>A rupee today is worth more than a rupee tomorrow due to <strong>earning power</strong>, <strong>inflation</strong>, and <strong>uncertainty</strong>. <strong>Compounding:</strong> Finding future value of present money. <strong>Discounting:</strong> Finding present value of future money.</p><p><strong>Annuity:</strong> Equal cash flows occurring at regular intervals for a specified period. <strong>Perpetuity:</strong> Annuity that continues forever; PV = A / r.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Time Value of Money Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nTDL4JwwlJQ" title="TVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Present Value and Future Value</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6-bVJlhNjGI" title="PV FV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Formula</th><th>Equation</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>FV (Simple)</td><td>FV = P &#xD7; (1 + R &#xD7; T)</td><td>&#x20B9;1000 at 10% for 3 yrs = &#x20B9;1,300</td></tr>
+<tr><td>FV (Compound)</td><td>FV = P &#xD7; (1 + R)^T</td><td>&#x20B9;1000 at 10% for 3 yrs = &#x20B9;1,331</td></tr>
+<tr><td>Present Value</td><td>PV = FV / (1 + r)^n</td><td>&#x20B9;1,331 in 3 yrs at 10% = &#x20B9;1,000</td></tr>
+<tr><td>FV of Annuity</td><td>FVA = A &#xD7; [(1+r)^n - 1]/r</td><td>&#x20B9;100/yr for 5 yrs at 10% = &#x20B9;610.51</td></tr>
+<tr><td>PV of Annuity</td><td>PVA = A &#xD7; [1 - (1+r)^-n]/r</td><td>&#x20B9;100/yr for 5 yrs at 10% = &#x20B9;379.08</td></tr>
+<tr><td>Rule of 72</td><td>Doubling Period = 72 / Rate</td><td>At 8% &#x2192; doubles in 9 years</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Compounding Frequency Impact</div><p>More frequent compounding = Higher FV. <strong>Effective Annual Rate (EAR) = (1 + r/m)^m - 1</strong>. Order: Continuous &gt; Daily &gt; Monthly &gt; Quarterly &gt; Annual.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>SIP Investment:</strong> &#x20B9;5,000/month for 20 years at 12% returns = &#x20B9;49.9 lakhs (invested &#x20B9;12 lakhs). Power of compounding!</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"72/r"</strong> = Quick doubling time calculation. At 12%, money doubles in 6 years.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>TVM: A rupee today &gt; rupee tomorrow (earning power + inflation + uncertainty)</li>
+<li>Compounding: FV = PV &#xD7; (1+r)^n; Discounting: PV = FV / (1+r)^n</li>
+<li>Annuity: Equal cash flows at regular intervals; Perpetuity: PV = A/r</li>
+<li>Rule of 72: Doubling period = 72 / rate</li>
+<li>EAR: More frequent compounding = Higher effective return</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Risk and Return</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Risk and Return</div><p><strong>Risk</strong> = Variability/uncertainty of returns (not just negative outcomes). Higher risk demands higher return (risk-return tradeoff). <strong>Beta (&#x3B2;)</strong> measures systematic risk relative to the market.</p><p><strong>Risk Preferences:</strong> Risk-Averse (prefers lower risk for same return &#x2014; most investors), Risk-Indifferent (only cares about return), Risk-Seeking (prefers higher risk for higher return).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Risk and Return Concepts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/y7LvJ0TuXJA" title="Risk Return" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CAPM and Beta Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nTDL4JwwlJQ" title="CAPM Beta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Risk Classification</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Total Risk</div>
+<div style="font-size:1.2rem;color:rgba(0,206,201,0.6)">&#x2193;</div>
+<div style="display:flex;gap:1rem;width:80%">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem">Systematic (Market) &#x2014; CANNOT diversify<br><small>Interest Rate, Inflation, Market, Political</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);flex:1;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem">Unsystematic (Firm) &#x2014; CAN diversify<br><small>Business, Financial, Management, Liquidity</small></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>&#x3B2; Value</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>&#x3B2; = 1</td><td>Moves with market</td><td>Index fund</td></tr>
+<tr><td>&#x3B2; &gt; 1</td><td>More volatile than market</td><td>Tech stocks (&#x3B2; = 1.5)</td></tr>
+<tr><td>&#x3B2; &lt; 1</td><td>Less volatile than market</td><td>Utility stocks (&#x3B2; = 0.6)</td></tr>
+<tr><td>&#x3B2; = 0</td><td>No market risk</td><td>Risk-free asset</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>TCS</strong> (&#x3B2; ~0.8) is less volatile than the market &#x2014; defensive stock. <strong>Adani Enterprises</strong> (&#x3B2; ~1.5) is more volatile &#x2014; aggressive stock. Diversifying across both reduces portfolio risk.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-U"</strong> = <strong>S</strong>ystematic (can't diversify) vs <strong>U</strong>nsystematic (can diversify). Systematic = Market risk; Unsystematic = Firm-specific.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Risk = Variability of returns; Higher risk demands higher return</li>
+<li>Systematic risk (market, can't diversify) vs Unsystematic risk (firm-specific, can diversify)</li>
+<li>Beta (&#x3B2;): Systematic risk measure; &#x3B2; = 1 is market benchmark</li>
+<li>Risk preferences: Averse (most), Indifferent, Seeking</li>
+<li>Diversification reduces unsystematic risk only</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Investment Decisions</h2>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Valuation of Securities</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Valuation Approaches</div><p>Three approaches: <strong>Income</strong> (DCF), <strong>Market</strong> (comparable companies), <strong>Asset</strong> (book value). Three-step analysis: Economy &#x2192; Industry &#x2192; Company.</p><p><strong>Intrinsic Value:</strong> True worth of a security based on fundamental analysis, may differ from market price. <strong>Required Rate of Return:</strong> Minimum return an investor expects for investing in a security.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Bond Valuation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mTkNCRwVztE" title="Bond Valuation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Gordon Growth Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0bIRGMBJGBA" title="Gordon Growth" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Security</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Bond</td><td>&#x2211; [Interest/(1+r)^t] + [Redemption/(1+r)^n]</td><td>Premium if coupon &gt; market rate</td></tr>
+<tr><td>Preference Share (Irredeemable)</td><td>P = D / Kp</td><td>Dividend / Required return</td></tr>
+<tr><td>Equity (Zero Growth)</td><td>P = D / Ke</td><td>Constant dividend forever</td></tr>
+<tr><td>Equity (Gordon)</td><td>P = D&#x2081; / (Ke - g)</td><td>Constant growth rate g</td></tr>
+<tr><td>Equity (Variable Growth)</td><td>Multi-stage DDM</td><td>Different growth phases</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Bond Pricing Rule</div><p>Coupon rate &gt; Market rate &#x2192; <strong>PREMIUM</strong>. Coupon rate &lt; Market rate &#x2192; <strong>DISCOUNT</strong>. Coupon rate = Market rate &#x2192; <strong>PAR</strong>.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Cootner Hypothesis</div><p>Market prices adjust to new information gradually in steps, not instantaneously. This explains why prices don't always reflect all available information immediately.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Government of India Bonds:</strong> 7.25% coupon when market rate is 7% &#x2192; trades at PREMIUM. <strong>TCS Share:</strong> Using Gordon model with D&#x2081; = &#x20B9;40, Ke = 12%, g = 8% &#x2192; P = 40/(0.12-0.08) = &#x20B9;1,000.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-M-A"</strong> = <strong>I</strong>ncome, <strong>M</strong>arket, <strong>A</strong>sset &#x2014; three valuation approaches.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 approaches: Income (DCF), Market (comparable), Asset (book value)</li>
+<li>Bond valuation: PV of coupons + PV of redemption</li>
+<li>Gordon Growth Model: P = D&#x2081;/(Ke - g) for constant growth</li>
+<li>Cootner Hypothesis: Prices adjust to new info gradually in steps</li>
+<li>Bond pricing: Premium, Discount, or Par based on coupon vs market rate</li>
+</ul></div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Cost of Capital</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cost of Capital</div><p><strong>Cost of Capital</strong> = Minimum rate of return to keep firm value intact. It is the <strong>opportunity cost</strong> of investing in a project vs alternative investments. Used as <strong>discount rate</strong> in capital budgeting.</p><p><strong>Components Formula:</strong> K = r&#x2080; + b + f (Risk-free return + Business risk premium + Financial risk premium). Hierarchy: Cost with financial risk &gt; Cost with business risk &gt; Risk-free cost.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>WACC Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3HsV7gAHqk4" title="WACC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost of Equity CAPM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nTDL4JwwlJQ" title="CAPM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Source</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Debt (Kd)</td><td>Kd = I(1-T) / Np</td><td>After-tax; interest is tax-deductible</td></tr>
+<tr><td>Preference (Kp)</td><td>Kp = Dp / Pp</td><td>Dividend / Market price</td></tr>
+<tr><td>Equity (Ke)</td><td>CAPM: Ke = Rf + &#x3B2;(Rm - Rf)</td><td>Or DDM: Ke = D&#x2081;/P&#x2080; + g</td></tr>
+<tr><td>Retained Earnings (Kr)</td><td>Similar to Ke</td><td>No flotation costs</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; WACC Formula</div><p><strong>WACC = &#x2211; (w&#x1D62; &#xD7; k&#x1D62;)</strong>. Weights based on market value. Example: 30% Equity at 12% + 70% Debt at 10% &#x2192; WACC = 3.6% + 7% = <strong>10.6%</strong>.</p></div>
+<div class="db"><table>
+<thead><tr><th>Cost Type</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>Explicit vs Implicit</td><td>Actual payment vs opportunity foregone</td></tr>
+<tr><td>Average vs Marginal</td><td>Weighted avg of existing vs cost of new funds</td></tr>
+<tr><td>Historical vs Future</td><td>Past cost vs expected future cost</td></tr>
+<tr><td>Specific vs Combined</td><td>Individual source vs overall WACC</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Reliance Industries</strong> WACC ~9-10% due to high debt component (lower cost). <strong>TCS</strong> WACC ~12-13% due to zero debt (equity-heavy). Lower WACC &#x2192; More projects viable.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"K = r&#x2080; + b + f"</strong> = Risk-free + Business risk + Financial risk &#x2014; cost of capital components.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Cost of Capital = Opportunity cost of investing in project vs alternatives</li>
+<li>Components: Kd (debt), Kp (preference), Ke (equity), Kr (retained)</li>
+<li>WACC = Weighted average of all source costs (market value weights)</li>
+<li>WACC numericals are guaranteed in exams</li>
+<li>Flotation costs: Costs incurred in issuing new securities</li>
+</ul></div>
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Investment Appraisal Methods</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Capital Budgeting</div><p><strong>Capital Budgeting</strong> = Long-term investment decision-making. Evaluating projects where cash flows occur over multiple years. <strong>Hurdle Rate</strong> = Minimum acceptable rate (usually WACC).</p><p><strong>Payback Period Formula:</strong> Payback = Year before full recovery + (Unrecovered cost / Cash flow in recovery year)</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>NPV vs IRR</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3Rd-cFER0jI" title="NPV IRR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Capital Budgeting Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SGjCEVMBEH0" title="Capital Budgeting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Method</th><th>Formula</th><th>Accept If</th><th>Strength</th><th>Weakness</th></tr></thead>
+<tbody>
+<tr><td>Payback Period</td><td>P = E + B/C</td><td>Within target</td><td>Simple, liquidity focus</td><td>Ignores TVM &amp; post-payback CFs</td></tr>
+<tr><td>ARR</td><td>Avg Profit / Avg Investment</td><td>Above cutoff</td><td>Uses accounting data</td><td>Ignores TVM, arbitrary cutoff</td></tr>
+<tr><td>NPV</td><td>&#x2211; CFt/(1+r)^t - Investment</td><td>NPV &gt; 0</td><td>Best measure, considers TVM</td><td>Requires discount rate</td></tr>
+<tr><td>IRR</td><td>Rate where NPV = 0</td><td>IRR &gt; WACC</td><td>Easy to communicate</td><td>Multiple IRRs possible</td></tr>
+<tr><td>PI</td><td>PV Inflows / PV Outflows</td><td>PI &gt; 1</td><td>Capital rationing</td><td>Can conflict with NPV</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; NPV vs IRR &#x2014; When They Conflict</div><p><strong>NPV is ALWAYS preferred</strong> &#x2014; directly measures wealth increase. Conflicts arise with mutually exclusive projects or different scales. <strong>Reinvestment assumption:</strong> NPV assumes reinvestment at WACC (realistic); IRR assumes at IRR (unrealistic).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Mumbai Metro project:</strong> Government used NPV analysis to justify &#x20B9;33,000 crore investment. NPV = &#x20B9;8,500 crore positive over 30 years &#x2192; Project approved.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"N-I-P"</strong> = <strong>N</strong>PV, <strong>I</strong>RR, <strong>P</strong>I &#x2014; the three DCF methods. NPV is king!</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 methods: Payback, ARR, NPV, IRR, PI</li>
+<li>NPV &gt; 0 &#x2192; Accept; IRR &gt; WACC &#x2192; Accept; PI &gt; 1 &#x2192; Accept</li>
+<li>NPV is preferred over IRR (considers project size, realistic reinvestment)</li>
+<li>Payback ignores TVM; ARR uses accounting data not cash flows</li>
+<li>Payback formula: Year before recovery + (Unrecovered/CF in recovery year)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Management of Working Capital</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Working Capital</div><p><strong>Working Capital = Current Assets - Current Liabilities</strong>. <strong>Gross WC</strong> = Total Current Assets; <strong>Net WC</strong> = Current Assets - Current Liabilities. Balance between <strong>profitability</strong> and <strong>liquidity</strong>.</p><p><strong>Operating Cycle:</strong> Cash &#x2192; Raw Materials &#x2192; WIP &#x2192; Finished Goods &#x2192; Debtors &#x2192; Cash. Longer cycle = More WC needed.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Working Capital Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/uJq2bpEr2b8" title="Working Capital" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Operating Cycle</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Cash &#x2192; Raw Materials &#x2192; WIP &#x2192; Finished Goods &#x2192; Debtors &#x2192; Cash</div>
+</div></div>
+<div class="db"><table>
+<thead><tr><th>Approach</th><th>Description</th><th>Risk Level</th></tr></thead>
+<tbody>
+<tr><td>Conservative</td><td>More current assets, less short-term debt</td><td>Low risk, low return</td></tr>
+<tr><td>Moderate</td><td>Balanced mix</td><td>Medium risk-return</td></tr>
+<tr><td>Aggressive</td><td>Fewer current assets, more short-term debt</td><td>High risk, high return</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; WC Components</div><p><strong>Cash Management:</strong> Baumol model, Miller-Orr model. <strong>Receivables Management:</strong> Credit policy (5 Cs: Character, Capacity, Capital, Conditions, Collateral). <strong>Inventory Management:</strong> EOQ model, JIT, ABC analysis.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>DMart</strong> follows aggressive WC &#x2014; minimal inventory, fast collection. <strong>Reliance Retail</strong> uses conservative WC with large cash reserves. Both successful with different strategies.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-R-I-M"</strong> = <strong>C</strong>ash, <strong>R</strong>eceivables, <strong>I</strong>nventory, <strong>M</strong>arketable securities &#x2014; WC components.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>WC = Current Assets - Current Liabilities; balance profitability vs liquidity</li>
+<li>Operating cycle: Cash &#x2192; RM &#x2192; WIP &#x2192; FG &#x2192; Debtors &#x2192; Cash</li>
+<li>3 approaches: Conservative (low risk), Moderate, Aggressive (high risk)</li>
+<li>Components: Cash, Receivables, Inventory management</li>
+<li>Credit 5 Cs: Character, Capacity, Capital, Conditions, Collateral</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Financial Markets &amp; Sources of Finance</h2>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Financial Markets and Institutions</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Financial Markets</div><p>Financial markets channel funds from <strong>savers</strong> to <strong>investors</strong>. Enable <strong>price discovery</strong>, <strong>liquidity</strong>, and <strong>cost reduction</strong>. SEBI regulates Indian capital markets, protects investor interests, prevents fraud.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Financial Markets Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mTkNCRwVztE" title="Financial Markets" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="visual-diagram"><h5>&#x1F4CA; Market Structure</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Financial Markets</div>
+<div style="font-size:1.2rem;color:rgba(0,206,201,0.6)">&#x2193;</div>
+<div style="display:flex;gap:1rem;width:80%">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem">Money Market (&#x2264;1 year)<br><small>T-Bills, CP, CD, Call Money</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);flex:1;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.85rem">Capital Market (&gt;1 year)<br><small>Primary (IPO) + Secondary (BSE, NSE)</small></div>
+</div></div></div>
+<div class="db"><table>
+<thead><tr><th>Instrument</th><th>Issuer</th><th>Maturity</th><th>Feature</th></tr></thead>
+<tbody>
+<tr><td>T-Bills</td><td>RBI/Govt</td><td>91, 182, 364 days</td><td>Zero coupon, safest</td></tr>
+<tr><td>Commercial Paper</td><td>Corporates</td><td>7 days - 1 year</td><td>Unsecured, short-term</td></tr>
+<tr><td>Certificate of Deposit</td><td>Banks</td><td>7 days - 1 year</td><td>Negotiable, tradable</td></tr>
+<tr><td>Call Money</td><td>Banks</td><td>1 day (overnight)</td><td>Interbank lending</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>NSE (National Stock Exchange):</strong> India's largest stock exchange, handles 95%+ of equity trading. <strong>SEBI:</strong> Regulates markets, protects investors, prevents fraud (e.g., banned insider trading).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-C-C-C"</strong> = <strong>T</strong>-Bills, <strong>C</strong>P, <strong>C</strong>D, <strong>C</strong>all money &#x2014; money market instruments.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Money Market (short-term) vs Capital Market (long-term)</li>
+<li>Money market: T-Bills, CP, CD, Call money</li>
+<li>Capital market: Primary (IPO) vs Secondary (BSE, NSE)</li>
+<li>SEBI regulates Indian capital markets</li>
+<li>Capital market functions: Efficiency, lower costs, broader ownership</li>
+</ul></div>
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Sources of Finance</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Sources of Finance</div><p>Funds can be raised from multiple sources: <strong>Long-term</strong> (equity, preference, debentures, retained earnings, VC, leasing), <strong>Short-term</strong> (trade credit, bank overdraft, CP, factoring), <strong>Emerging</strong> (crowdfunding, angel investors, asset securitisation).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Equity vs Debt Financing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="Equity vs Debt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Equity</th><th>Debt</th></tr></thead>
+<tbody>
+<tr><td>Ownership</td><td>Diluted</td><td>No dilution</td></tr>
+<tr><td>Cost</td><td>Higher (dividends not fixed)</td><td>Lower (interest fixed + tax deductible)</td></tr>
+<tr><td>Risk</td><td>Lower financial risk</td><td>Higher financial risk</td></tr>
+<tr><td>Control</td><td>Voting rights shared</td><td>No control given</td></tr>
+<tr><td>Claim</td><td>Residual</td><td>Priority claim</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Definitions</div><p><strong>Factoring:</strong> Selling accounts receivable to a third party (factor) at a discount. <strong>Asset Securitisation:</strong> Converting illiquid assets into tradable securities.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Zomato IPO (2021):</strong> Raised &#x20B9;9,375 crore through equity. <strong>Adani Group:</strong> Uses heavy debt financing (lower cost) for infrastructure projects. <strong>Startups:</strong> Use angel/VC funding initially.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"E-P-D-V-L"</strong> = <strong>E</strong>quity, <strong>P</strong>reference, <strong>D</strong>ebentures, <strong>V</strong>enture capital, <strong>L</strong>easing &#x2014; long-term sources.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Long-term: Equity, Preference, Debentures, Retained Earnings, VC, Leasing</li>
+<li>Short-term: Trade Credit, CP, Bank OD, Factoring, Public Deposits</li>
+<li>Equity vs Debt: Ownership vs No dilution; Higher cost vs Lower cost</li>
+<li>Emerging: Crowdfunding, Angel financing, Asset securitisation</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Capital Structure &amp; Dividend Policy</h2>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Capital Structure</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Capital Structure</div><p><strong>Capital Structure</strong> = Mix of long-term debt and equity financing. <strong>Optimal Capital Structure</strong> = Mix that minimizes WACC and maximizes firm value.</p><p><strong>Features of Appropriate Structure:</strong> 1. Profitability (minimize cost of capital) 2. Solvency (ability to meet obligations) 3. Flexibility (ability to raise additional funds)</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Capital Structure Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SGjCEVMBEH0" title="Capital Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Factor</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td>Leverage</td><td>Debt boosts EPS when ROI &gt; cost of debt (Trading on Equity)</td></tr>
+<tr><td>Cost of Capital</td><td>Debt is cheaper (tax shield on interest)</td></tr>
+<tr><td>Cash Flow</td><td>Must service fixed charges (interest + principal)</td></tr>
+<tr><td>Control</td><td>Equity dilutes control; debt doesn't</td></tr>
+<tr><td>Size</td><td>Larger firms can access debt markets easily</td></tr>
+<tr><td>Marketability</td><td>Market conditions affect choice</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; EBIT-EPS Analysis</div><p><strong>Indifference Point:</strong> EBIT level where EPS is same under two financing alternatives. Formula: (EBIT - I&#x2081;)(1-T)/N&#x2081; = (EBIT - I&#x2082;)(1-T)/N&#x2082;</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Infrastructure companies</strong> (Adani, L&amp;T) use high debt (leverage) because their ROI consistently exceeds cost of debt. <strong>IT companies</strong> (TCS, Infosys) prefer equity to maintain flexibility.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-S-C-F"</strong> = <strong>P</strong>rofitability, <strong>S</strong>olvency, <strong>C</strong>ontrol, <strong>F</strong>lexibility &#x2014; capital structure determinants.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Capital Structure = Mix of long-term debt and equity</li>
+<li>Optimal structure minimizes WACC, maximizes firm value</li>
+<li>EBIT-EPS indifference point for financing decisions</li>
+<li>Trading on equity: Using debt to boost equity returns</li>
+<li>Determinants: Profitability, Solvency, Control, Flexibility</li>
+</ul></div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Leverage Analysis</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Leverage Analysis</div><p>Leverage = Use of fixed costs to magnify returns. Three types: Operating (DOL), Financial (DFL), and Combined (DCL).</p><p><strong>Leverage Measures:</strong> Debt-Equity Ratio = Total Debt / Total Equity. Interest Coverage Ratio = EBIT / Interest (higher = safer).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Leverage Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3HsV7gAHqk4" title="Leverage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Leverage</th><th>Formula</th><th>Measures</th></tr></thead>
+<tbody>
+<tr><td>Operating (DOL)</td><td>Contribution / EBIT</td><td>Sensitivity of EBIT to Sales changes</td></tr>
+<tr><td>Financial (DFL)</td><td>EBIT / (EBIT - Interest)</td><td>Sensitivity of EPS to EBIT changes</td></tr>
+<tr><td>Combined (DCL)</td><td>DOL &#xD7; DFL</td><td>Sensitivity of EPS to Sales changes</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Leverage Interpretation</div><p>High DOL &#x2192; Small sales change &#x2192; Large EBIT change (high business risk). High DFL &#x2192; Small EBIT change &#x2192; Large EPS change (high financial risk). High DCL &#x2192; Small sales change &#x2192; Large EPS change (high total risk).</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>High DOL firms (airlines, telecom) have high fixed costs &#x2014; small sales drops cause large profit swings. High DFL firms (leveraged buyouts) amplify EPS volatility through debt.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>O-F-C = C/E &#xD7; E/(E-I) &#xD7; C/(E-I)</strong> &#x2014; Operating, Financial, Combined leverage formulas.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>DOL measures EBIT sensitivity to sales changes</li>
+<li>DFL measures EPS sensitivity to EBIT changes</li>
+<li>DCL = DOL &#xD7; DFL measures EPS sensitivity to sales changes</li>
+<li>Debt-Equity Ratio and Interest Coverage are key leverage measures</li>
+<li>High leverage = high risk but potential for higher returns</li>
+</ul></div>
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Dividend Theories</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Dividend Theories</div><p>Does dividend policy affect firm value? Two schools: <strong>Relevance</strong> (Walter, Gordon) says YES; <strong>Irrelevance</strong> (MM) says NO in perfect markets.</p><p><strong>Dividend Payout Ratio:</strong> Proportion of earnings distributed as dividends (D/E). <strong>Retention Ratio:</strong> Proportion of earnings retained in the business (1 - D/E).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Dividend Theories</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0bIRGMBJGBA" title="Dividend Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Theory</th><th>Key Idea</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>Graham &amp; Dodd</td><td>Liberal dividends preferred; weight to dividends = 4&#xD7; retained earnings</td><td>&#x2014;</td></tr>
+<tr><td>Walter</td><td>If r &gt; k &#x2192; retain; r &lt; k &#x2192; distribute</td><td>P = D/K + (E-D)r/K&#xB2;</td></tr>
+<tr><td>Gordon</td><td>"Bird in the hand" &#x2014; dividends less risky</td><td>P = E(1-b)/(k-br)</td></tr>
+<tr><td>MM Hypothesis</td><td>Dividend irrelevant in perfect markets</td><td>Homemade dividends</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; MM Hypothesis Assumptions</div><p>No taxes, no transaction costs, no flotation costs, rational investors. Investors can create "homemade dividends" by selling shares.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian IT companies like <strong>Infosys</strong> and <strong>TCS</strong> pay generous dividends (relevance theory), while high-growth startups retain all earnings (supports Gordon's model when r &gt; k).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>W-G-M</strong> = Walter, Gordon, MM &#x2014; Walter &amp; Gordon = Relevance, MM = Irrelevance.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Walter &amp; Gordon: dividend policy affects firm value (Relevance)</li>
+<li>MM: in perfect markets, dividend policy is irrelevant</li>
+<li>Dividend Payout Ratio = D/E; Retention Ratio = 1 - D/E</li>
+<li>"Bird in the hand" &#x2014; dividends are less risky than capital gains</li>
+<li>MM assumes: No taxes, no transaction costs, rational investors</li>
+</ul></div>
+</div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Dividend Policies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Dividend Policies</div><p>Forms: Cash Dividend, Stock Dividend (Bonus Shares), Stock Split, Stock Buyback, Property Dividend, Scrip Dividend.</p><p>Policies: Stable Rupee Dividend (fixed amount per share), Incremental Dividend (gradually increasing), Stable Payout Ratio (fixed % of earnings), Residual Dividend (pay from leftover after investment needs).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Dividend Policy Forms</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3Rd-cFER0jI" title="Dividend Policy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Policy</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Stable Rupee Dividend</td><td>Fixed amount per share regardless of earnings</td></tr>
+<tr><td>Incremental Dividend</td><td>Gradually increasing dividends</td></tr>
+<tr><td>Stable Payout Ratio</td><td>Fixed percentage of earnings as dividends</td></tr>
+<tr><td>Residual Dividend</td><td>Pay dividends from leftover after investment needs</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Factors Affecting Dividend Decision</div><p><strong>External:</strong> State of economy, Capital market conditions, Tax policy, Inflation rate, Institutional requirements. <strong>Internal:</strong> Nature of business, Shareholder expectations, Alternative investment opportunities, Control considerations, Liquidity position, Legal restrictions.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Reliance Industries</strong> issued 1:1 bonus shares in 2024. <strong>TCS</strong> does regular buybacks. <strong>Infosys</strong> maintains stable rupee dividend per share.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>C-B-S-B</strong> = Cash, Bonus, Split, Buyback &#x2014; forms of dividend.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Four dividend policies: Stable Rupee, Incremental, Stable Payout, Residual</li>
+<li>Factors: economy, capital markets, tax policy, business nature, liquidity</li>
+<li>Bonus issues from retained earnings; stock splits increase liquidity</li>
+<li>Buybacks: max 25% of paid-up capital, debt-equity ratio must be &#x2264; 2:1</li>
+<li>Buyback methods: Tender Offer, Open Market, Book Building</li>
+</ul></div>
+</div>
+
+<!-- ==================== BLOCK 05 ==================== -->
+<h2 id="block5">Block-05: Advanced Topics</h2>
+
+<!-- UNIT 14 -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Behavioural Finance</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Behavioural Finance</div><p>Traditional finance assumes rational investors and efficient markets. Behavioural finance recognizes cognitive biases and irrational behavior. <strong>Prospect Theory (Kahneman &amp; Tversky):</strong> People evaluate gains and losses relative to a reference point. Loss aversion: Losses hurt ~2x more than equivalent gains feel good.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Behavioural Finance Biases</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/y7LvJ0TuXJA" title="Behavioural Finance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Bias</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Overconfidence</td><td>Overestimate own abilities</td><td>Trading too frequently</td></tr>
+<tr><td>Anchoring</td><td>Rely on first piece of info</td><td>Sticking to IPO price</td></tr>
+<tr><td>Herding</td><td>Follow the crowd</td><td>Bubble formation</td></tr>
+<tr><td>Loss Aversion</td><td>Feel losses 2x more than gains</td><td>Holding losers too long</td></tr>
+<tr><td>Mental Accounting</td><td>Treat money differently by source</td><td>Spending bonus frivolously</td></tr>
+<tr><td>Representativeness</td><td>Judge by stereotypes</td><td>"Past performance = future results"</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Market Anomalies</div><p><strong>January Effect:</strong> Stocks tend to rise in January. <strong>Momentum Effect:</strong> Past winners continue winning short-term. <strong>Value Effect:</strong> Value stocks outperform growth stocks long-term.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>2008 financial crisis = herding + overconfidence. Indian retail investors holding loss-making stocks hoping to "recover" = loss aversion. IPO frenzy = anchoring to listing gains.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>O-A-H-L-M-R</strong> = Overconfidence, Anchoring, Herding, Loss aversion, Mental accounting, Representativeness.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Prospect Theory: losses hurt 2x more than equivalent gains</li>
+<li>Market anomalies: January Effect, Momentum Effect, Value Effect</li>
+<li>Heuristics = mental shortcuts that can lead to systematic errors</li>
+<li>Behavioural finance challenges the Efficient Market Hypothesis (EMH)</li>
+<li>6 key biases: Overconfidence, Anchoring, Herding, Loss Aversion, Mental Accounting, Representativeness</li>
+</ul></div>
+</div>
+
+<!-- UNIT 15 -->
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Financial Restructuring</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Financial Restructuring</div><p>Corporate Restructuring = Redefining business for value maximization or survival. Methods: Buyback, Debt-to-Equity Conversion, CDR, LBO, Divestiture, M&amp;A.</p><p><strong>Buyback Methods:</strong> 1. Tender Offer (fixed price, fixed period) 2. Open Market Purchase 3. Book Building.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Mergers and Acquisitions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/mTkNCRwVztE" title="M&amp;A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<div class="db"><table>
+<thead><tr><th>Method</th><th>Description</th><th>Key Rules</th></tr></thead>
+<tbody>
+<tr><td>Buyback</td><td>Company repurchases own shares</td><td>Max 25% paid-up capital; D/E &#x2264; 2:1</td></tr>
+<tr><td>Debt-to-Equity Conversion</td><td>Convert loans to equity</td><td>Reduces debt burden</td></tr>
+<tr><td>CDR</td><td>Restructure stressed loans</td><td>Avoids NPA classification</td></tr>
+<tr><td>LBO</td><td>Acquire using borrowed funds</td><td>Target's assets as collateral</td></tr>
+<tr><td>Divestiture</td><td>Selling off business units</td><td>Government disinvestment</td></tr>
+<tr><td>M&amp;A</td><td>Combining businesses</td><td>Synergy creation</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Regulatory Framework</div><p><strong>Companies Act 2013</strong> &#x2014; Sections 68-70 govern buybacks. <strong>SEBI Regulations</strong> &#x2014; SEBI (Buyback of Securities) Regulations. <strong>RBI Guidelines</strong> &#x2014; For banking companies.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Tata Steel</strong> acquired Bhushan Steel via NCLT (CDR). <strong>Reliance Jio's</strong> parent did massive buybacks. Government disinvestment in <strong>Air India</strong>, <strong>LIC IPO</strong>, <strong>BPCL</strong>.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>B-D-C-L-D-M</strong> = Buyback, Debt conversion, CDR, LBO, Divestiture, Merger &#x2014; restructuring methods.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Buyback methods: Tender Offer, Open Market, Book Building</li>
+<li>Companies Act 2013 Sections 68-70 govern buybacks</li>
+<li>LBO: acquire using borrowed funds with target's assets as collateral</li>
+<li>CDR: mechanism to restructure stressed loans of viable entities</li>
+<li>Regulatory: Companies Act, SEBI Regulations, RBI Guidelines</li>
+</ul></div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>I-F-D</strong></td><td>Investment, Financing, Dividend</td><td>Three key financial decisions</td></tr>
+<tr><td>2</td><td><strong>P-W</strong></td><td>Profit Maximization, Wealth Maximization</td><td>Firm objectives (W is superior)</td></tr>
+<tr><td>3</td><td><strong>S-U</strong></td><td>Systematic, Unsystematic risk</td><td>Risk classification</td></tr>
+<tr><td>4</td><td><strong>N-I-P</strong></td><td>NPV, IRR, PI</td><td>DCF methods for capital budgeting</td></tr>
+<tr><td>5</td><td><strong>O-F-C</strong></td><td>Operating, Financial, Combined leverage</td><td>Leverage types</td></tr>
+<tr><td>6</td><td><strong>W-G-M</strong></td><td>Walter, Gordon, MM</td><td>Dividend theories</td></tr>
+<tr><td>7</td><td><strong>C-B-S-B</strong></td><td>Cash, Bonus, Split, Buyback</td><td>Dividend forms</td></tr>
+<tr><td>8</td><td><strong>K = r&#x2080;+b+f</strong></td><td>Risk-free + Business + Financial risk</td><td>Cost of capital components</td></tr>
+<tr><td>9</td><td><strong>72/r</strong></td><td>Rule of 72</td><td>Quick doubling time</td></tr>
+<tr><td>10</td><td><strong>T-C-C-C</strong></td><td>T-Bills, CP, CD, Call money</td><td>Money market instruments</td></tr>
+<tr><td>11</td><td><strong>I-M-A</strong></td><td>Income, Market, Asset</td><td>Valuation approaches</td></tr>
+<tr><td>12</td><td><strong>P-S-C-F</strong></td><td>Profitability, Solvency, Control, Flexibility</td><td>Capital structure determinants</td></tr>
+<tr><td>13</td><td><strong>C-R-I-M</strong></td><td>Cash, Receivables, Inventory, Marketable securities</td><td>WC components</td></tr>
+<tr><td>14</td><td><strong>O-A-H-L-M-R</strong></td><td>Overconfidence, Anchoring, Herding, Loss aversion, Mental accounting, Representativeness</td><td>Behavioural biases</td></tr>
+<tr><td>15</td><td><strong>B-D-C-L-D-M</strong></td><td>Buyback, Debt conversion, CDR, LBO, Divestiture, Merger</td><td>Restructuring methods</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- KEY FORMULAS -->
+<div class="unit" id="formulas">
+<h3>Key Formulas &amp; Frameworks</h3>
+<h4>Time Value of Money</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; TVM Formulas</div>
+<p><strong>FV</strong> = PV &#xD7; (1+r)^n</p>
+<p><strong>PV</strong> = FV / (1+r)^n</p>
+<p><strong>FV of Annuity</strong> = A &#xD7; [(1+r)^n - 1] / r</p>
+<p><strong>PV of Annuity</strong> = A &#xD7; [1 - (1+r)^-n] / r</p>
+<p><strong>Rule of 72:</strong> Doubling Period = 72 / Rate</p>
+<p><strong>EAR</strong> = (1 + r/m)^m - 1</p>
+</div>
+<h4>Cost of Capital</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cost of Capital Formulas</div>
+<p><strong>K</strong> = r&#x2080; + b + f</p>
+<p><strong>Kd</strong> = Interest(1-Tax) / Net Proceeds</p>
+<p><strong>Kp</strong> = Dividend / Market Price</p>
+<p><strong>Ke (CAPM)</strong> = Rf + &#x3B2;(Rm - Rf)</p>
+<p><strong>Ke (DDM)</strong> = D&#x2081;/P&#x2080; + g</p>
+<p><strong>WACC</strong> = &#x2211;(w&#x1D62; &#xD7; k&#x1D62;)</p>
+</div>
+<h4>Capital Budgeting</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Capital Budgeting Formulas</div>
+<p><strong>NPV</strong> = &#x2211; [CFt / (1+r)^t] - Initial Investment</p>
+<p><strong>IRR:</strong> Rate where NPV = 0</p>
+<p><strong>PI</strong> = PV of Inflows / PV of Outflows</p>
+<p><strong>Payback</strong> = E + B/C</p>
+<p><strong>ARR</strong> = Average Profit / Average Investment</p>
+</div>
+<h4>Leverage</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Leverage Formulas</div>
+<p><strong>DOL</strong> = Contribution / EBIT</p>
+<p><strong>DFL</strong> = EBIT / (EBIT - Interest)</p>
+<p><strong>DCL</strong> = DOL &#xD7; DFL</p>
+<p><strong>Indifference Point:</strong> (EBIT-I&#x2081;)(1-T)/N&#x2081; = (EBIT-I&#x2082;)(1-T)/N&#x2082;</p>
+</div>
+<h4>Valuation</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Valuation Formulas</div>
+<p><strong>Bond Value</strong> = &#x2211; [Interest/(1+r)^t] + [Redemption/(1+r)^n]</p>
+<p><strong>Gordon Growth Model:</strong> P = D&#x2081; / (Ke - g)</p>
+<p><strong>Zero Growth:</strong> P = D / Ke</p>
+<p><strong>Preference Share:</strong> P = D / Kp</p>
+</div>
+<h4>Working Capital</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; WC Formulas</div>
+<p><strong>Net WC</strong> = Current Assets - Current Liabilities</p>
+<p><strong>Operating Cycle</strong> = Inventory Period + Receivables Period - Payables Period</p>
+<p><strong>EOQ</strong> = &#x221A;(2DS / H)</p>
+</div>
+</div>
+
+<!-- QUICK REVISION SHEET -->
+<div class="unit" id="revision">
+<h3>Quick Revision Sheet</h3>
+<h4>One-Liner Concepts</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
+<p>&#x2022; Finance = Lifeblood of business</p>
+<p>&#x2022; V = f[I,F,D] &#x2014; Value depends on Investment, Financing, Dividend decisions</p>
+<p>&#x2022; Wealth maximization &gt; Profit maximization (considers TVM and risk)</p>
+<p>&#x2022; Risk-free rate = Government securities yield</p>
+<p>&#x2022; WACC = Weighted average of all source costs (market value weights)</p>
+<p>&#x2022; NPV &gt; 0 &#x2192; Accept project; NPV &lt; 0 &#x2192; Reject</p>
+<p>&#x2022; IRR &gt; WACC &#x2192; Accept; IRR &lt; WACC &#x2192; Reject</p>
+<p>&#x2022; Payback Period ignores time value of money</p>
+<p>&#x2022; Operating Leverage = Fixed costs in operations</p>
+<p>&#x2022; Financial Leverage = Debt in capital structure</p>
+<p>&#x2022; Gordon's Model: P = E(1-b)/(k-br) &#x2014; Bird in hand theory</p>
+<p>&#x2022; MM Hypothesis: Dividend irrelevant in perfect markets</p>
+<p>&#x2022; Behavioural Finance: Investors are NOT always rational</p>
+<p>&#x2022; Prospect Theory: Losses hurt 2x more than gains feel good</p>
+<p>&#x2022; Buyback limit: Max 25% of paid-up capital</p>
+</div>
+<h4>NPV vs IRR</h4>
+<div class="db"><table>
+<thead><tr><th>Criterion</th><th>NPV</th><th>IRR</th></tr></thead>
+<tbody>
+<tr><td>Decision rule</td><td>Accept if &gt; 0</td><td>Accept if &gt; WACC</td></tr>
+<tr><td>Reinvestment</td><td>At WACC (realistic)</td><td>At IRR (unrealistic)</td></tr>
+<tr><td>Mutually exclusive</td><td>Always gives correct ranking</td><td>May give wrong ranking</td></tr>
+<tr><td>Scale</td><td>Considers project size</td><td>Ignores project size</td></tr>
+<tr><td><strong>Verdict</strong></td><td><strong>PREFERRED</strong></td><td>Secondary</td></tr>
+</tbody></table></div>
+<h4>Equity vs Debt</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Equity</th><th>Debt</th></tr></thead>
+<tbody>
+<tr><td>Obligation</td><td>No fixed obligation</td><td>Fixed interest obligation</td></tr>
+<tr><td>Tax benefit</td><td>No</td><td>Yes (interest deductible)</td></tr>
+<tr><td>Risk</td><td>Lower financial risk</td><td>Higher financial risk</td></tr>
+<tr><td>Control</td><td>Diluted</td><td>No dilution</td></tr>
+<tr><td>Cost</td><td>Higher</td><td>Lower (after tax)</td></tr>
+</tbody></table></div>
+<h4>Money Market vs Capital Market</h4>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Money Market</th><th>Capital Market</th></tr></thead>
+<tbody>
+<tr><td>Duration</td><td>&#x2264; 1 year</td><td>&gt; 1 year</td></tr>
+<tr><td>Instruments</td><td>T-Bills, CP, CD</td><td>Shares, Debentures</td></tr>
+<tr><td>Risk</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Liquidity</td><td>Higher</td><td>Lower</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>Exam Focus</h3>
+<h4>Most Frequently Asked Topics (10+ marks)</h4>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Top 7 Exam Topics</div>
+<p>1. <strong>Time Value of Money</strong> &#x2014; PV, FV, Annuity numericals</p>
+<p>2. <strong>WACC Calculation</strong> &#x2014; Compute each component cost and combine</p>
+<p>3. <strong>NPV vs IRR</strong> &#x2014; Compare with numerical example</p>
+<p>4. <strong>Capital Structure Theories</strong> &#x2014; NOI, Traditional, MM approach</p>
+<p>5. <strong>Leverage Analysis</strong> &#x2014; Calculate DOL, DFL, DCL</p>
+<p>6. <strong>Dividend Theories</strong> &#x2014; Walter vs Gordon vs MM</p>
+<p>7. <strong>Risk and Return</strong> &#x2014; CAPM, Beta, Portfolio risk</p>
+</div>
+<h4>Expected Question Patterns</h4>
+<div class="db"><table>
+<thead><tr><th>Marks</th><th>Type</th><th>Focus</th></tr></thead>
+<tbody>
+<tr><td>2-3</td><td>MCQ/Short</td><td>Rule of 72, Beta interpretation, forms of dividend</td></tr>
+<tr><td>5</td><td>Brief</td><td>Compare traditional vs modern approach, types of risk</td></tr>
+<tr><td>8-10</td><td>Detailed</td><td>WACC numerical, NPV/IRR comparison, dividend theories</td></tr>
+<tr><td>15</td><td>Case Study</td><td>Complete capital budgeting analysis with risk assessment</td></tr>
+</tbody></table></div>
+<h4>Must-Know Numerical Problems</h4>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Practice These</div>
+<p>&#x2022; PV/FV calculations with different compounding</p>
+<p>&#x2022; WACC with multiple sources</p>
+<p>&#x2022; NPV and IRR for project evaluation</p>
+<p>&#x2022; Payback period calculation</p>
+<p>&#x2022; EBIT-EPS indifference point</p>
+<p>&#x2022; Leverage calculations (DOL, DFL, DCL)</p>
+<p>&#x2022; Gordon Growth Model valuation</p>
+</div>
+<h4>Model Answer Structure (for 10-mark questions)</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l"><strong>Define</strong><br><small>the concept (2 marks)</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l"><strong>Explain</strong><br><small>the theory/framework (3 marks)</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l"><strong>Formula</strong><br><small>with notation explanation (2 marks)</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l"><strong>Numerical Example</strong><br><small>with step-by-step solution (2 marks)</small></div></div>
+<div class="fc-a">&#x2193;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l"><strong>Conclusion</strong><br><small>with limitation (1 mark)</small></div></div>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Last Tip</div><p>Financial Management is formula-heavy. Write all formulas on a separate sheet and revise daily. Practice at least 2 numerical problems per unit before the exam.</p></div>
+</div>
+
+</main>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Reading progress bar
+  var progressBar = document.querySelector('.reading-progress');
+  if (progressBar) {
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+      progressBar.style.width = p + '%';
+    });
+  }
+
+  // Sidebar active link tracking
+  window.addEventListener('scroll', function() {
+    var units = document.querySelectorAll('.unit');
+    var links = document.querySelectorAll('.sidebar-nav a[href^="#u"]');
+    var current = '';
+    units.forEach(function(u) {
+      if (u.getBoundingClientRect().top < 200) current = u.id;
+    });
+    links.forEach(function(l) {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  });
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

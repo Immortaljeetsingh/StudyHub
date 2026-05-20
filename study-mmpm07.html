@@ -8,17 +8,53 @@
 <link rel="stylesheet" href="study-hub-enhanced.css">
 <link rel="manifest" href="manifest.json">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,206,201,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#00cec9;padding-left:1rem}.sidebar a.active{color:#00cec9;background:rgba(0,206,201,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#00cec9;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#00cec9,#00cec9cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc,#00d4ff,#00cec9);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#00cec9;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(0,206,201,.08);border-color:#00cec9}.callout-example{background:rgba(255,215,0,.06);border-color:#ffd700}.callout-mnemonic{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(0,206,201,.15);color:#00cec9cc;border:1px solid rgba(0,206,201,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#00cec9}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#00cec9;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,206,201,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar-nav a{display:block;min-height:44px;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar-nav a:hover{background:rgba(255,255,255,.05);color:#00cec9;padding-left:1rem}.sidebar-nav a.active{color:#00cec9;background:rgba(0,206,201,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#00cec9;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#00cec9,#00cec9cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"],h3[id="mnemonics"],h3[id="frameworks"],h3[id="revision"],h3[id="exam"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after,h3[id="mnemonics"]::after,h3[id="frameworks"]::after,h3[id="revision"]::after,h3[id="exam"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc,#00d4ff,#00cec9);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(0,206,201,.08);border-color:#00cec9}.callout-example{background:rgba(255,215,0,.06);border-color:#ffd700}.callout-mnemonic{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}button,.btn{min-height:44px;min-width:44px}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul,.summary-box ol{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(0,206,201,.15);color:#00cec9cc;border:1px solid rgba(0,206,201,.3)}.db{overflow-x:auto;margin:1rem 0}.db table{width:100%;border-collapse:collapse;font-size:.88rem;color:rgba(255,255,255,.8)}.db th{padding:.6rem .8rem;text-align:left;font-weight:700;color:#00cec9;border-bottom:2px solid rgba(0,206,201,.3);background:rgba(0,206,201,.05)}.db td{padding:.5rem .8rem;border-bottom:1px solid rgba(255,255,255,.06)}.db tr:hover td{background:rgba(255,255,255,.02)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#00cec9}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;min-height:44px;min-width:44px;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#00cec9;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00cec9,#00cec9cc);z-index:9999;transition:width .1s;width:0%}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00cec9;font-size:1rem;margin-bottom:.75rem}.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(0,206,201,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#00cec9;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.video-section-content{display:none}.video-section-content.active{display:block}.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1rem 0}
+.cc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.2rem;transition:transform .3s,box-shadow .3s}
+.cc:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,206,201,.15)}
+.cc h5{color:#00cec9;font-size:.95rem;margin-bottom:.5rem}
+.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
+.s-b{background:rgba(0,206,201,.15);color:#00cec9;border:1px solid rgba(0,206,201,.3)}
+.s-p{background:rgba(108,92,231,.15);color:#6c5ce7;border:1px solid rgba(108,92,231,.3)}
+.s-g{background:rgba(255,215,0,.12);color:#ffd700;border:1px solid rgba(255,215,0,.25)}
+.fc{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:1rem 0;justify-content:center}
+.fc-s{background:rgba(0,206,201,.1);border:1px solid rgba(0,206,201,.25);border-radius:10px;padding:.6rem 1rem;text-align:center;min-width:100px}
+.fc-n{font-size:1.1rem;font-weight:800;color:#00cec9}
+.fc-l{font-size:.8rem;color:rgba(255,255,255,.75)}
+.fc-a{font-size:1.2rem;color:rgba(0,206,201,.5)}
+.kt{background:rgba(0,206,201,.06);border-left:4px solid #00cec9;padding:1rem 1.25rem;border-radius:0 12px 12px 0;margin:1rem 0}
+.kt p{margin:0;color:rgba(255,255,255,.85);font-size:.9rem}
+.case-study{background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.2);border-radius:12px;padding:1.2rem;margin:1rem 0}
+.case-study h5{color:#ffd700;font-size:.95rem;margin-bottom:.5rem}
+.timeline{position:relative;padding-left:2rem;margin:1rem 0}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:rgba(0,206,201,.3)}
+.timeline-item{position:relative;margin-bottom:1rem;padding-left:1rem}
+.timeline-item::before{content:'';position:absolute;left:-1.75rem;top:.4rem;width:10px;height:10px;border-radius:50%;background:#00cec9;border:2px solid rgba(0,206,201,.3)}
+.timeline-item strong{color:#00cec9}
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:.3rem;margin:1rem 0}
+.pyramid-level{padding:.5rem 1rem;border-radius:8px;text-align:center;font-size:.85rem;font-weight:600;transition:transform .3s}
+.pyramid-level:hover{transform:scale(1.05)}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}
+.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpm07">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-07'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPM-07</h3></div>
+<aside class="study-sidebar">
+  <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">MMPM-07</span></div>
+  <nav class="sidebar-nav">
   <a href="#u1">Unit 1: Introduction to IMC</a>
   <a href="#u2">Unit 2: Digital Era Integration</a>
   <a href="#u3">Unit 3: Campaign Planning - Strategic</a>
@@ -31,23 +67,45 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
   <a href="#u10">Unit 10: Digital Marketing Budget</a>
   <a href="#u11">Unit 11: Media Buying Paradigms</a>
   <a href="#u12">Unit 12: Legal &amp; Ethical Issues</a>
-  <a href="#u13">Unit 13: Consumer Movement in India</a>
-  <a href="#u14">Unit 14: Strategies for Integrating IMC</a>
-</nav>
-<main class="study-content" id="main-content">
+  <a href="#u13">Unit 13: Consumer Movement</a>
+  <a href="#u14">Unit 14: Integrating IMC Elements</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#frameworks">Key Frameworks</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#exam">Exam Focus</a>
+<a href="quiz-mmpm07.html" class="back-link">&#x1F4DD; Take Quiz</a>
 <a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+</nav>
+</aside>
+<main class="study-content" id="main-content">
 <div class="study-header"><span class="subject-tag">MMPM-07</span><h1>Integrated Marketing Communication</h1>
-<p>Comprehensive Study Notes &#x2014; 14 Units, 4 Blocks &#x2022; IGNOU MBA</p></div>
+<p>4 Blocks, 14 Units &#x2022; Advertising, PR, Sales Promotion, Digital Marketing, Consumer Rights &#x2022; IGNOU MBA</p></div>
 
-<!-- Unit 1 -->
+<!-- UNIT 1 -->
 <div class="unit" id="u1">
 <h3>Unit 1: Introduction to IMC</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>IMC Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="IMC Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>TAPIC Framework</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="TAPIC Framework" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
 <p><strong>IMC (Kotler &amp; Armstrong):</strong> A company carefully integrates and coordinates its many communication channels to deliver a clear, consistent, and compelling message.</p>
+<p><strong>IMC (AAAA):</strong> A comprehensive plan evaluating strategic roles of communication disciplines &#x2014; advertising, PR, personal selling, sales promotion, direct marketing &#x2014; for maximum impact.</p>
 <p><strong>Promotions Mix:</strong> The specific blend of advertising, PR, personal selling, sales promotion, and direct marketing tools the company uses to pursue its marketing objectives.</p>
 </div>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Tool</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Advertising</strong></td><td>Paid, non-personal communication by identified sponsor</td></tr>
+<tr><td>2</td><td><strong>Public Relations</strong></td><td>Building favorable image through earned media</td></tr>
+<tr><td>3</td><td><strong>Personal Selling</strong></td><td>Face-to-face interaction with buyers</td></tr>
+<tr><td>4</td><td><strong>Sales Promotion</strong></td><td>Short-term incentives to boost sales</td></tr>
+<tr><td>5</td><td><strong>Direct Marketing</strong></td><td>Direct communication with targeted individuals</td></tr>
+<tr><td>6</td><td><strong>Digital Marketing</strong></td><td>Online channels (websites, social media, SEO)</td></tr>
+<tr><td>7</td><td><strong>Guerrilla Marketing</strong></td><td>Unconventional tactics for maximum exposure at low cost</td></tr>
+</tbody></table></div>
 <div class="visual-diagram"><h5>&#x1F4CA; IMC Process &#x2014; TAPIC</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>T</strong>arget Market Segments</div>
@@ -58,362 +116,890 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>I</strong>mplement Promotional Strategy</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>ollect Feedback</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>ollect Feedback</div>
 </div></div>
-<div class="br"><span class="sb s-b">Advertising</span><span class="sb s-b">PR</span><span class="sb s-b">Personal Selling</span><span class="sb s-b">Sales Promotion</span><span class="sb s-b">Direct Marketing</span><span class="sb s-b">Digital Marketing</span><span class="sb s-b">Guerrilla Marketing</span></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amul's cookie launch used social media contests, comparative content (25% vs 2% butter), and hashtag campaigns &#x2014; achieving massive awareness with zero advertising spend.</p></div>
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Informative</strong></td><td>Create awareness, educate</td><td>New product launch ads</td></tr>
+<tr><td><strong>Persuasive</strong></td><td>Convince to switch brands</td><td>"Taste the Thunder" vs competitors</td></tr>
+<tr><td><strong>Reminder</strong></td><td>Maintain top-of-mind</td><td>Coca-Cola holiday ads</td></tr>
+<tr><td><strong>Institutional</strong></td><td>Promote organization/cause</td><td>PSAs, CSR ads</td></tr>
+</tbody></table></div>
+
+<div class="cg">
+<div class="cc"><h5>&#x1F4E2; Advertising</h5><p>Paid, non-personal communication through mass media. Builds brand awareness at scale. TV, print, digital, outdoor.</p></div>
+<div class="cc"><h5>&#x1F91D; Public Relations</h5><p>Earned media through press releases, events, and CSR. Higher credibility than advertising. Long-term trust building.</p></div>
+<div class="cc"><h5>&#x1F465; Personal Selling</h5><p>Face-to-face interaction for high-value products. B2B essential. Builds relationships and handles objections.</p></div>
+<div class="cc"><h5>&#x1F381; Sales Promotion</h5><p>Short-term incentives: coupons, samples, contests. Drives immediate action. Both consumer and trade promotions.</p></div>
+<div class="cc"><h5>&#x1F4E9; Direct Marketing</h5><p>Targeted communication for measurable response. Database-driven. Email, telemarketing, direct mail.</p></div>
+<div class="cc"><h5>&#x1F4F1; Digital Marketing</h5><p>Online channels: SEO, social media, content marketing. Data-driven targeting. Real-time engagement.</p></div>
+<div class="cc"><h5>&#x1F3ED; Guerrilla Marketing</h5><p>Unconventional, low-cost tactics for maximum exposure. Creative surprise elements. Viral potential.</p></div>
+</div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">T</div><div class="fc-l">Target<br><small>Segments</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">A</div><div class="fc-l">Ascertain<br><small>Objectives</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">P</div><div class="fc-l">Plan<br><small>Messages</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">I</div><div class="fc-l">Implement<br><small>Strategy</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Collect<br><small>Feedback</small></div></div>
+</div>
+<div class="br"><span class="sb s-b">Integrated</span><span class="sb s-b">Consistent</span><span class="sb s-b">Coordinated</span><span class="sb s-p">Multi-channel</span><span class="sb s-p">Customer-centric</span><span class="sb s-g">Measurable</span></div>
+<h4>Why IMC Matters</h4>
+<p>In today's fragmented media landscape, consumers encounter brand messages across dozens of channels &#x2014; TV, social media, email, billboards, in-store displays, and more. Without Integration, these messages can conflict or confuse. IMC ensures every touchpoint reinforces the same brand story, building stronger recognition and trust.</p>
+
+<div class="summary-box"><h4>&#x1F4CB; Rationale for IMC</h4><ul>
+<li><strong>Consolidates brand image</strong> &#x2014; consistent messaging across all channels builds unified perception</li>
+<li><strong>Reduces consumer confusion</strong> &#x2014; conflicting messages from different channels create distrust</li>
+<li><strong>Increases profitability</strong> &#x2014; coordinated campaigns are more cost-effective than siloed efforts</li>
+<li><strong>Extends message reach</strong> &#x2014; multiple channels amplify the same core message to wider audiences</li>
+<li><strong>Saves money</strong> &#x2014; shared creative assets and production across channels reduce duplication</li>
+<li><strong>Improves reliability</strong> &#x2014; consumers trust brands that deliver consistent experiences</li>
+</ul></div>
+
+<p>The shift from traditional to digital marketing has made IMC even more critical. A consumer might see a TV ad, search for the product online, read reviews on social media, receive an email offer, and finally buy in-store. Each interaction must feel cohesive. Brands like Amul, Zomato, and Fevicol excel at IMC &#x2014; their messaging is instantly recognizable across all platforms.</p>
+
+<h4>Evolution of IMC</h4>
+<p>IMC emerged in the 1990s as marketers recognized that fragmented communication across agencies and departments was wasting budgets and confusing consumers. The American Association of Advertising Agencies (AAAA) formally defined IMC in the early 1990s, and scholars like Don Schultz and Philip Kotler popularized the concept. Today, IMC is not optional &#x2014; it is the foundation of all effective marketing communication.</p>
+<p>Key milestones in IMC evolution:</p>
+<ul>
+<li><strong>1990s:</strong> Recognition that separate agencies for advertising, PR, and promotions create inconsistent messaging</li>
+<li><strong>2000s:</strong> Digital channels (email, websites) demand integration with traditional media</li>
+<li><strong>2010s:</strong> Social media and mobile marketing make two-way communication central to IMC</li>
+<li><strong>2020s:</strong> AI, programmatic advertising, and data analytics enable hyper-personalized IMC at scale</li>
+</ul>
+<div class="timeline">
+<div class="timeline-item"><strong>1990s:</strong> AAAA formally defines IMC. Don Schultz and Kotler popularize the concept. Recognition that fragmented agencies waste budgets.</div>
+<div class="timeline-item"><strong>2000s:</strong> Digital channels (email, websites) demand integration with traditional media. Early social media emerges.</div>
+<div class="timeline-item"><strong>2010s:</strong> Social media and mobile marketing make two-way communication central. Data analytics enable targeting.</div>
+<div class="timeline-item"><strong>2020s:</strong> AI, programmatic advertising, and big data enable hyper-personalized IMC at scale. Privacy regulations reshape targeting.</div>
+</div>
+
+
+<h4>Choosing the Right Promotional Mix</h4>
+<p>The optimal mix depends on several factors:</p>
+<ul>
+<li><strong>Product type:</strong> Consumer goods rely more on advertising; industrial products on personal selling</li>
+<li><strong>Market stage:</strong> New products need awareness-building (advertising); mature products need reminder strategies</li>
+<li><strong>Budget:</strong> Small budgets may favor digital marketing and guerrilla tactics; large budgets enable TV/print campaigns</li>
+<li><strong>Target audience:</strong> B2B markets emphasize personal selling; B2C markets emphasize advertising and sales promotion</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amul's cookie launch used social media contests, comparative content (25% vs 2% butter), and hashtag campaigns &#x2014; achieving massive awareness with zero advertising spend. Zomato's witty Twitter presence and Fevicol's creative print ads demonstrate how consistent brand voice across channels builds lasting recognition.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>TAPIC framework is a guaranteed 5-mark question. For 10-mark questions, explain each step with examples. Compare traditional vs digital marketing tools. Always cite Indian examples (Amul, Zomato, Surf Excel) for higher marks.</p></div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>TAPIC</strong> = Target, Ascertain, Plan, Implement, Collect</p>
-<p><strong>APPS-DDG</strong> = Advertising, PR, Personal Selling, Sales Promotion, Direct, Digital, Guerrilla</p>
+<p><strong>TAPIC</strong> = Target, Ascertain, Plan, Implement, Collect<br>
+<strong>APPS-DDG</strong> = Advertising, PR, Personal Selling, Sales Promotion, Direct, Digital, Guerrilla<br>
+<strong>IPRI</strong> = Informative, Persuasive, Reminder, Institutional</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>IMC = Coordination of all communication tools for clear, consistent message</li>
+<li>TAPIC framework: Target, Ascertain, Plan, Implement, Collect</li>
+<li>7 Promotions Mix tools: APPS-DDG (Advertising, PR, Personal Selling, Sales Promotion, Direct, Digital, Guerrilla)</li>
+<li>4 Advertising types: IPRI (Informative, Persuasive, Reminder, Institutional)</li>
+<li>Product type, market stage, budget, and audience determine optimal mix</li>
 <li>7 Promotions Mix tools: APPS-DDG</li>
 <li>IMC Process: TAPIC (5 steps)</li>
 <li>Types of Advertising: IPRI (Informative, Persuasive, Reminder, Institutional)</li>
 </ul></div>
+<div class="kt"><p><strong>Key Insight:</strong> IMC is not just about using multiple channels &#x2014; it is about ensuring every channel tells the SAME story. Brands like Amul and Zomato succeed because their messaging is instantly recognizable whether you see a billboard, tweet, or TV ad.</p></div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Amul's IMC Mastery</h5>
+<p><strong>Challenge:</strong> Launch Amul Butter Cookies against established brands with zero advertising budget.<br>
+<strong>Strategy:</strong> Used social media contests comparing 25% vs 2% butter content, hashtag campaigns, and user-generated content.<br>
+<strong>Execution:</strong> Integrated Twitter engagement, Instagram visuals, in-store sampling, and PR coverage of the campaign itself.<br>
+<strong>Result:</strong> Massive organic awareness, trending on social media, and strong initial sales &#x2014; proving IMC works even without traditional advertising spend.</p>
+</div>
 </div>
 
-<!-- Unit 2 -->
+<!-- UNIT 2 -->
 <div class="unit" id="u2">
 <h3>Unit 2: Digital Era &#x2014; Integration of Communication</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Marketing Tools</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Digital Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SEO and Social Media</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="SEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Digital marketing has transformed how brands communicate. Integration of online and offline channels is essential for consistent brand experience. Data-driven decision making enables precise targeting and personalization.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Digital Marketing Tools</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Websites &amp; SEO/SEM</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Social Media &amp; Content Marketing</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Email, Mobile, Video &amp; Influencer</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Zomato's witty social media presence integrates Twitter humor, Instagram food content, email notifications, and in-app messaging &#x2014; all with consistent brand voice.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>WSSCEMVI</strong> = Websites, Search, Social, Content, Email, Mobile, Video, Influencer</p>
+<div class="db"><table>
+<thead><tr><th>Tool</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>W</strong>ebsites</td><td>Digital storefront, brand hub</td></tr>
+<tr><td><strong>S</strong>earch Engine Marketing</td><td>SEO/SEM for visibility</td></tr>
+<tr><td><strong>S</strong>ocial Media Marketing</td><td>Facebook, Instagram, LinkedIn</td></tr>
+<tr><td><strong>C</strong>ontent Marketing</td><td>Blogs, videos, infographics</td></tr>
+<tr><td><strong>E</strong>mail Marketing</td><td>Direct subscriber communication</td></tr>
+<tr><td><strong>M</strong>obile Marketing</td><td>SMS, apps, location-based</td></tr>
+<tr><td><strong>V</strong>ideo Marketing</td><td>YouTube, TikTok, Reels</td></tr>
+<tr><td><strong>I</strong>nfluencer Marketing</td><td>Leveraging social media influencers</td></tr>
+</tbody></table></div>
+
+<div class="cg">
+<div class="cc"><h5>&#x1F310; Websites</h5><p>Digital storefront and brand hub. SEO-optimized content drives organic traffic. Mobile-first design essential.</p></div>
+<div class="cc"><h5>&#x1F50D; Search Marketing</h5><p>SEO for organic visibility, SEM for paid placement. Intent-based targeting with highest conversion rates.</p></div>
+<div class="cc"><h5>&#x1F4F1; Social Media</h5><p>Facebook, Instagram, LinkedIn, Twitter. Community building, engagement, and social commerce. Platform-specific content.</p></div>
+<div class="cc"><h5>&#x1F4DD; Content Marketing</h5><p>Blogs, videos, infographics, podcasts. Thought leadership and SEO. Builds trust through value delivery.</p></div>
+<div class="cc"><h5>&#x2709; Email Marketing</h5><p>Direct subscriber communication. Highest ROI among digital channels. Personalization and automation.</p></div>
+<div class="cc"><h5>&#x1F4F2; Mobile Marketing</h5><p>SMS, push notifications, in-app advertising. Location-based targeting. India: 500M+ smartphone users.</p></div>
 </div>
+<div class="br"><span class="sb s-b">Two-way</span><span class="sb s-b">Data-driven</span><span class="sb s-b">Measurable</span><span class="sb s-p">Personalized</span><span class="sb s-p">Real-time</span><span class="sb s-g">Cost-effective</span></div>
+<h4>Digital Marketing Integration</h4>
+<p>Digital marketing has fundamentally changed how brands communicate with consumers. Unlike traditional media (TV, print, radio) which are one-way broadcasts, digital channels enable two-way conversations. Consumers can respond, share, and even create content about brands. This shift requires marketers to think differently about message control.</p>
+
+<h5>Channel-by-Channel Deep Dive</h5>
+<div class="db"><table>
+<thead><tr><th>Channel</th><th>Best For</th><th>Key Metrics</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Search (SEO/SEM)</strong></td><td>Intent-based targeting, high conversion</td><td>CTR, CPC, Quality Score</td><td>Flipkart bidding on "buy smartphone" keywords</td></tr>
+<tr><td><strong>Social Media (Organic)</strong></td><td>Brand building, community engagement</td><td>Engagement rate, reach, shares</td><td>Zomato's viral Twitter posts</td></tr>
+<tr><td><strong>Social Media (Paid)</strong></td><td>Precise targeting, retargeting</td><td>CPM, CPC, ROAS</td><td>Meesho's Facebook ads targeting tier-2/3 cities</td></tr>
+<tr><td><strong>Email Marketing</strong></td><td>Nurturing leads, retention</td><td>Open rate, click rate, conversions</td><td>Amazon India's personalized recommendations</td></tr>
+<tr><td><strong>Content Marketing</strong></td><td>Thought leadership, SEO, trust</td><td>Time on page, shares, backlinks</td><td>CRED's financial literacy blog</td></tr>
+<tr><td><strong>Video Marketing</strong></td><td>Storytelling, demonstrations, education</td><td>Views, watch time, subscribers</td><td>Tanishq's wedding campaign on YouTube</td></tr>
+<tr><td><strong>Mobile Marketing</strong></td><td>Location-based, time-sensitive offers</td><td>App installs, push open rate</td><td>Swiggy's location-based push notifications</td></tr>
+<tr><td><strong>Influencer Marketing</strong></td><td>Authenticity, niche audiences</td><td>Engagement, conversions, EMV</td><td>Mamaearth's micro-influencer strategy</td></tr>
+</tbody></table></div>
+
+<p>The key to successful digital integration is maintaining consistent brand voice across all platforms while adapting content format to each channel's strengths. Instagram favors visual storytelling, Twitter rewards witty engagement, LinkedIn suits professional content, and YouTube enables long-form education. Zomato excels at this: their humor translates across platforms while each channel has distinct content strategy.</p>
+
+<h5>SEO vs SEM: Understanding the Difference</h5>
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>SEO (Organic)</th><th>SEM (Paid)</th></tr></thead>
+<tbody>
+<tr><td>Cost</td><td>Free (time investment)</td><td>Pay per click</td></tr>
+<tr><td>Speed</td><td>Slow (3-6 months)</td><td>Immediate results</td></tr>
+<tr><td>Sustainability</td><td>Long-term asset</td><td>Stops when budget stops</td></tr>
+<tr><td>Trust</td><td>Higher perceived credibility</td><td>Marked as "Ad"</td></tr>
+<tr><td>Best For</td><td>Long-term brand building</td><td>Quick launches, seasonal campaigns</td></tr>
+</tbody></table></div>
+
+<h5>Social Media Platform Strategy</h5>
+<ul>
+<li><strong>Instagram:</strong> Visual-first platform ideal for lifestyle, fashion, food brands. Reels drive highest organic reach. Shopping features enable direct commerce.</li>
+<li><strong>Facebook:</strong> Broadest demographic reach in India. Groups build communities. Marketplace enables C2C commerce. Best for targeting 30+ age group.</li>
+<li><strong>LinkedIn:</strong> B2B marketing, thought leadership, employer branding. Indian IT companies and startups heavily leverage LinkedIn for recruitment marketing.</li>
+<li><strong>Twitter (X):</strong> Real-time engagement, customer service, trending conversations. Indian brands like Zomato, Amul, and Dunzo excel at witty Twitter marketing.</li>
+<li><strong>YouTube:</strong> Second-largest search engine. Long-form content, tutorials, brand storytelling. Indian creators like Bhuvan Bam and brands like T-Series demonstrate platform power.</li>
+<li><strong>WhatsApp Business:</strong> Direct customer communication, catalogs, order updates. Over 500 million Indian users make it critical for D2C brands.</li>
+</ul>
+
+<h4>Data-Driven Personalization</h4>
+<p>Digital marketing enables unprecedented targeting precision. Unlike traditional media's broad reach, digital allows:</p>
+<ul>
+<li><strong>Demographic targeting:</strong> Age, gender, location, income</li>
+<li><strong>Behavioral targeting:</strong> Past purchases, browsing history, app usage</li>
+<li><strong>Contextual targeting:</strong> Content relevance, time of day, device type</li>
+<li><strong>Retargeting:</strong> Re-engaging users who showed interest but didn't convert</li>
+</ul>
+<p>However, privacy concerns are rising. GDPR, India's Digital Personal Data Protection Act, and cookie deprecation are forcing marketers to find new ways to personalize without invasive tracking.</p>
+
+<h5>Privacy Regulations Impacting Digital Marketing</h5>
+<div class="db"><table>
+<thead><tr><th>Regulation</th><th>Region</th><th>Key Impact on IMC</th></tr></thead>
+<tbody>
+<tr><td><strong>GDPR</strong></td><td>European Union</td><td>Explicit consent required for data collection; right to be forgotten; heavy fines for violations</td></tr>
+<tr><td><strong>DPDP Act 2023</strong></td><td>India</td><td>Consent-based data processing; data localization; penalties up to &#x20B9;250 crore</td></tr>
+<tr><td><strong>CCPA</strong></td><td>California, USA</td><td>Right to know, delete, and opt-out of data sale</td></tr>
+<tr><td><strong>Cookie Deprecation</strong></td><td>Global</td><td>Third-party cookies being phased out; shift to first-party data strategies</td></tr>
+</tbody></table></div>
+<p>Marketers must now build trust through transparent data practices. First-party data (collected directly from customers with consent) is becoming the gold standard. Brands like Flipkart and Amazon India are investing heavily in loyalty programs and login-based ecosystems to gather first-party data ethically.</p>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Zomato's</strong> witty social media presence integrates Twitter humor, Instagram food content, email notifications, and in-app messaging &#x2014; all with consistent brand voice. <strong>Advantages:</strong> Measurable results, targeted audience, cost-effective, real-time engagement. <strong>Challenges:</strong> Information overload, privacy concerns, ad blocking (30%+ users).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div>
+<p>Digital marketing advantages vs challenges is a common 5-mark question. For 10-mark questions, explain how a specific brand (Zomato, Amul, Nike) integrates digital channels. Always mention privacy concerns and data protection as emerging challenges.</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>8 Digital Marketing Tools: WSSCEMVI</li>
-<li>Advantages: Measurable, targeted, cost-effective, real-time, global reach</li>
-<li>Challenges: Ad fatigue, privacy concerns, ad blocking, rapid tech changes</li>
+<li>8 Digital marketing tools: WSSCEMVI (Web, Search, Social, Content, Email, Mobile, Video, Influencer)</li>
+<li>Integration of online + offline channels is essential for consistent brand experience</li>
+<li>Data-driven targeting enables personalization: demographic, behavioral, contextual, retargeting</li>
+<li>Privacy concerns rising: GDPR, India's DPDP Act, cookie deprecation</li>
+<li>Each platform has distinct strengths: Instagram (visual), Twitter (engagement), LinkedIn (professional), YouTube (education)</li>
 </ul></div>
+<div class="kt"><p><strong>Key Insight:</strong> Digital marketing enables two-way conversations unlike traditional one-way broadcasts. The challenge is maintaining consistent brand voice while adapting content format to each platform&#x2019;s strengths.</p></div>
 </div>
 
-<!-- Unit 3 -->
+<!-- UNIT 3 -->
 <div class="unit" id="u3">
 <h3>Unit 3: Campaign Planning &#x2014; Strategic Considerations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p>A campaign is a planned series of communication steps built around a single theme. Campaigns can be local, regional, national, or international and must align with overall marketing strategy.</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Campaign Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Campaign Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Campaign Components</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Components" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>A campaign is a planned series of communication steps built around a single theme. Campaigns can be local, regional, national, or international. Must align with overall marketing strategy. <strong>Components:</strong> Advertising, Direct marketing, Personal selling, Sales promotion, Digital marketing, Public relations.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Campaign Planning Steps</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">1. Define Objectives &amp; Target Audience</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">2. Determine Budget</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">3. Develop Creative Strategy</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">4. Select Media &amp; Execute</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">5. Evaluate &amp; Optimize</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Fevicol's "Stuck by Fevicol" contest asked consumers to create video ads conveying brand message &#x2014; generating creative content and organic reach at minimal cost.</p></div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Objectives<br><small>&amp; Audience</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Budget<br><small>Allocation</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Creative<br><small>Strategy</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Media<br><small>Selection</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Execute<br><small>&amp; Monitor</small></div></div>
+</div>
+<div class="br"><span class="sb s-b">Strategic</span><span class="sb s-b">Objective-driven</span><span class="sb s-p">Multi-channel</span><span class="sb s-p">Budget-conscious</span><span class="sb s-g">Measurable</span></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Campaign Planning Steps</div>
+<p>1. Define objectives and target audience. 2. Determine budget. 3. Develop creative strategy. 4. Select media channels. 5. Set timeline and milestones. 6. Execute and monitor. 7. Evaluate and optimize.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Fevicol's</strong> "Stuck by Fevicol" contest asked consumers to create video ads conveying brand message &#x2014; generating creative content and organic reach at minimal cost.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>6 Campaign Components: Advertising, DM, Personal selling, Sales promo, Digital, PR</li>
-<li>7 Planning Steps from objectives to evaluation</li>
-<li>Campaign types: Consumer-focused, trade-focused, product-specific</li>
+<li>Campaign = planned series around single theme</li>
+<li>7-step planning: Objectives &#x2192; Budget &#x2192; Creative &#x2192; Media &#x2192; Timeline &#x2192; Execute &#x2192; Evaluate</li>
+<li>Types: Consumer-focused, trade-focused, product-specific</li>
 </ul></div>
 </div>
 
-<!-- Unit 4 -->
+<!-- UNIT 4 -->
 <div class="unit" id="u4">
 <h3>Unit 4: Campaign Planning &#x2014; Creative Considerations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p>Product positioning defines how the product should be perceived. Creative brief is the foundational document guiding all creative development. Ad appeals trigger emotional or rational responses.</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Advertising Appeals</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Appeals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Creative Execution</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Execution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>Product positioning defines how the product should be perceived. Creative brief is the foundational document. Ad appeals trigger emotional or rational responses. <strong>Appeals (REM):</strong> Rational (facts), Emotional (feelings), Moral (ethics).</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Advertising Appeals &#x2014; REM</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Rational</strong> &#x2014; Facts, features, benefits</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Emotional</strong> &#x2014; Feelings, desires, aspirations</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Moral</strong> &#x2014; Ethical, social responsibility</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Surf Excel's "Daag Acche Hain" uses emotional appeal with slice-of-life execution &#x2014; children getting dirty to help others.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>REM</strong> = Rational, Emotional, Moral (advertising appeals)</p>
-<p><strong>SLFMMPETS</strong> = Slice of Life, Lifestyle, Fantasy, Mood, Musical, Personality, Technical, Scientific, Testimonial (execution styles)</p>
+<div class="br"><span class="sb s-b">Rational</span><span class="sb s-b">Emotional</span><span class="sb s-b">Moral</span><span class="sb s-p">Slice of Life</span><span class="sb s-p">Fantasy</span><span class="sb s-p">Musical</span><span class="sb s-g">Testimonial</span><span class="sb s-g">Technical</span></div>
+<div class="db"><table>
+<thead><tr><th>Style</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>S</strong>lice of Life</td><td>Real-life scenarios showing product use</td></tr>
+<tr><td><strong>L</strong>ifestyle</td><td>Aspirational lifestyle association</td></tr>
+<tr><td><strong>F</strong>antasy</td><td>Imaginative, dream-like scenarios</td></tr>
+<tr><td><strong>M</strong>ood/Image</td><td>Creating specific emotions/atmosphere</td></tr>
+<tr><td><strong>M</strong>usical</td><td>Jingles, songs, background music</td></tr>
+<tr><td><strong>P</strong>ersonality/Symbol</td><td>Brand mascots, celebrity endorsers</td></tr>
+<tr><td><strong>T</strong>echnical Expertise</td><td>Demonstrating company know-how</td></tr>
+<tr><td><strong>S</strong>cientific Evidence</td><td>Research data, test results</td></tr>
+<tr><td><strong>T</strong>estimonial</td><td>User experiences, endorsements</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Surf Excel's</strong> "Daag Acche Hain" uses emotional appeal with slice-of-life execution &#x2014; children getting dirty to help others.</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>3 Advertising Appeals: REM</li>
-<li>9 Execution Styles: SLFMMPETS</li>
+<li>Appeals: REM (Rational, Emotional, Moral)</li>
+<li>Execution styles: SLFMMPETS (9 styles)</li>
 <li>Always pair the right appeal with the right execution style</li>
 </ul></div>
+<div class="kt"><p><strong>Key Insight:</strong> The right appeal (Rational/Emotional/Moral) must match the right execution style. Surf Excel&#x2019;s "Daag Acche Hain" succeeds because emotional appeal perfectly matches slice-of-life execution.</p></div>
 </div>
 
-<!-- Unit 5 -->
+<!-- UNIT 5 -->
 <div class="unit" id="u5">
 <h3>Unit 5: Campaign Planning &#x2014; Media Considerations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p><strong>Reach:</strong> Number of unique people exposed to the ad. <strong>Frequency:</strong> Average exposures per person. <strong>GRP:</strong> Reach &#xD7; Frequency. <strong>CPM:</strong> Cost to reach 1,000 people.</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Media Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Media Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Media Scheduling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Scheduling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="br"><span class="sb s-b">Continuous</span><span class="sb s-b">Pulsating</span><span class="sb s-p">Flighting</span><span class="sb s-p">Seasonal</span><span class="sb s-g">GRP</span><span class="sb s-g">CPM</span></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>Media planning involves selecting channels, timing, and budget allocation. <strong>Key Metrics:</strong> Reach (unique people exposed), Frequency (average exposures per person), GRP = Reach x Frequency, CPM = Cost Per Thousand.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Media Scheduling Patterns &#x2014; CPFS</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Continuous:</strong> Steady throughout the year</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Pulsating:</strong> Heavy periods alternate with light</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Flighting:</strong> Heavy then complete stops</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Seasonal:</strong> Concentrated during peak demand</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IPL advertisers use pulsating schedule &#x2014; heavy during tournament season, minimal off-season.</p></div>
+<div class="db"><table>
+<thead><tr><th>Media</th><th>Reach</th><th>Cost</th><th>Targeting</th><th>Interactivity</th><th>Measurability</th></tr></thead>
+<tbody>
+<tr><td>Television</td><td>Very High</td><td>Very High</td><td>Low</td><td>Low</td><td>Medium</td></tr>
+<tr><td>Radio</td><td>High</td><td>Low</td><td>Medium</td><td>Low</td><td>Low</td></tr>
+<tr><td>Print</td><td>Medium</td><td>Medium</td><td>High</td><td>Low</td><td>Medium</td></tr>
+<tr><td>Outdoor</td><td>High</td><td>Medium</td><td>Low</td><td>Low</td><td>Low</td></tr>
+<tr><td>Digital</td><td>Very High</td><td>Variable</td><td>Very High</td><td>Very High</td><td>Very High</td></tr>
+</tbody></table></div>
+
+<h5>Indian Media Landscape Specifics</h5>
+<div class="db"><table>
+<thead><tr><th>Media Type</th><th>Indian Context</th><th>Key Consideration</th></tr></thead>
+<tbody>
+<tr><td><strong>Television</strong></td><td>900+ million viewers; Doordarshan for rural, private channels for urban</td><td>IPL ad slots cost &#x20B9;15-20 lakh per 10 seconds</td></tr>
+<tr><td><strong>Print</strong></td><td>Dainik Jagran has 68+ million readers; Hindi dailies dominate</td><td>Vernacular newspapers reach deeper than English</td></tr>
+<tr><td><strong>Radio</strong></td><td>FM radio reaches 65% urban India; community radio growing</td><td>Low cost, high frequency; best for local businesses</td></tr>
+<tr><td><strong>Outdoor</strong></td><td>Billboards, transit ads, wall paintings in rural areas</td><td>OOH industry worth &#x20B9;3,500+ crore; digital OOH growing</td></tr>
+<tr><td><strong>Digital</strong></td><td>800+ million internet users; 500+ million smartphone users</td><td>Vernacular content growing fastest; video consumption highest globally</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Pattern</th><th>Description</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>C</strong>ontinuous</td><td>Steady advertising throughout</td><td>Established products, year-round demand</td></tr>
+<tr><td><strong>P</strong>ulsating</td><td>Heavy periods alternate with light</td><td>Seasonal products with some baseline</td></tr>
+<tr><td><strong>F</strong>lighting</td><td>Heavy followed by complete stops</td><td>Seasonal products, limited budgets</td></tr>
+<tr><td><strong>S</strong>easonal</td><td>Concentrated during peak demand</td><td>Holiday products, festivals</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>IPL advertisers</strong> use pulsating schedule &#x2014; heavy during tournament season, minimal off-season.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>CPFS</strong> = Continuous, Pulsating, Flighting, Seasonal</p>
+<p><strong>CPFS</strong> = Continuous, Pulsating, Flighting, Seasonal<br>
+<strong>RFG-CPM</strong> = Reach, Frequency, GRP, Cost Per Mille</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 Media types: TV, Radio, Print, Outdoor, Digital</li>
-<li>4 Scheduling patterns: CPFS</li>
-<li>Key metrics: Reach, Frequency, GRP, CPM</li>
+<li>Media scheduling: CPFS patterns</li>
+<li>GRP = Reach x Frequency; CPM = (Cost/Impressions) x 1000</li>
+<li>Digital media offers highest targeting and measurability</li>
 </ul></div>
 </div>
 
-<!-- Unit 6 -->
+<!-- UNIT 6 -->
 <div class="unit" id="u6">
 <h3>Unit 6: Measuring Advertising Effectiveness</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p>Effectiveness measurement happens at three stages: pre-testing (focus groups, concept testing), during campaign (reach, frequency, awareness), and post-testing (recall, recognition, sales).</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ad Effectiveness</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Effectiveness" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Recall vs Recognition</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Recall" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>Effectiveness measurement at three stages: pre-testing (focus groups, concept testing), during campaign (reach, frequency, GRP), post-testing (recall, recognition, attitude change, sales). <strong>Unaided recall</strong> is more valuable than aided recall.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Measurement Framework</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Pre-testing:</strong> Message clarity, appeal, comprehension</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>During:</strong> Reach, frequency, GRP, awareness</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Post-testing:</strong> Recall, recognition, attitude change, sales</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Nielsen ratings measure TV GRP; Google Analytics tracks digital reach and frequency.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>RFG-CPM</strong> = Reach, Frequency, GRP, Cost Per Mille, Recall, Recognition</p>
+<div class="db"><table>
+<thead><tr><th>Stage</th><th>What to Measure</th><th>Methods</th></tr></thead>
+<tbody>
+<tr><td>Pre-testing</td><td>Message clarity, appeal</td><td>Focus groups, concept testing</td></tr>
+<tr><td>During campaign</td><td>Reach, frequency, GRP</td><td>Media monitoring, surveys</td></tr>
+<tr><td>Post-testing</td><td>Recall, recognition, sales</td><td>Aided/unaided recall, tracking studies</td></tr>
+</tbody></table></div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">Pre</div><div class="fc-l">Focus Groups<br><small>Concept Testing</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">During</div><div class="fc-l">Reach &amp; GRP<br><small>Media Monitoring</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">Post</div><div class="fc-l">Recall &amp; Sales<br><small>Tracking Studies</small></div></div>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Nielsen ratings</strong> measure TV GRP; <strong>Google Analytics</strong> tracks digital reach and frequency.</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>3 Measurement stages: Pre, During, Post</li>
-<li>Unaided recall is more valuable than aided recall</li>
-<li>GRP = Reach &#xD7; Frequency</li>
+<li>3 measurement stages: Pre, During, Post</li>
+<li>Recall (memory-based) vs Recognition (recognition-based)</li>
+<li>Unaided recall > Aided recall in value</li>
 </ul></div>
 </div>
 
-<!-- Unit 7 -->
+<!-- UNIT 7 -->
 <div class="unit" id="u7">
 <h3>Unit 7: Managing Sales Promotion</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Promotion</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Sales Promotion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Coupons vs Rebates</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Coupons" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="br"><span class="sb s-b">Short-term</span><span class="sb s-b">Action-driven</span><span class="sb s-p">Consumer</span><span class="sb s-p">Trade</span><span class="sb s-g">Digital</span><span class="sb s-g">Measurable</span></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Sales promotion = short-term marketing strategies using unique tactics to entice customer action. Requires both a <strong>timing restriction</strong> and an <strong>activity requirement</strong>. Differs from advertising: advertising builds brand, promotions drive immediate action.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; 5 Purposes of Sales Promotion &#x2014; CISDB</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>reating Product Awareness</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>I</strong>nteresting the Customer</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>S</strong>timulating Demand</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>D</strong>elivering Information</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>B</strong>rand Reinforcement</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amul Butter Cookies launch &#x2014; social media contest comparing 25% vs 2% butter content created massive organic awareness with zero ad spend.</p></div>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Coupons</td><td>Price breaks at purchase</td><td>Newspaper FSIs, digital codes</td></tr>
+<tr><td>2</td><td>Rebates</td><td>Post-purchase price reduction</td><td>Mail-in rebates for electronics</td></tr>
+<tr><td>3</td><td>Promotional Pricing</td><td>Short-term price reduction</td><td>Flash sales, clearance</td></tr>
+<tr><td>4</td><td>Trade-In</td><td>Exchange old for discount</td><td>Car trade-in programs</td></tr>
+<tr><td>5</td><td>Loyalty Programs</td><td>Rewards for frequent purchase</td><td>Airline miles, store cards</td></tr>
+<tr><td>6</td><td>Sampling/Free Trials</td><td>Try before buying</td><td>Amul cookie samples</td></tr>
+<tr><td>7</td><td>Free Product</td><td>BOGO, value packs</td><td>Buy 1 Get 1 Free</td></tr>
+<tr><td>8</td><td>Premiums</td><td>Give-away items with purchase</td><td>Toys in cereal boxes</td></tr>
+<tr><td>9</td><td>Contests/Sweepstakes</td><td>Skill or luck-based prizes</td><td>Lay's "Do Us A Flavour"</td></tr>
+<tr><td>10</td><td>Demonstrations</td><td>Show product in action</td><td>In-store demos</td></tr>
+<tr><td>11</td><td>Personal Appearances</td><td>Celebrity events</td><td>Store openings</td></tr>
+</tbody></table></div>
+
+<div class="cg">
+<div class="cc"><h5>&#x1F3AB; Coupons</h5><p>Price breaks at purchase. Newspaper FSIs, digital codes. Low redemption (1-2%) but drives trial.</p></div>
+<div class="cc"><h5>&#x1F4B0; Rebates</h5><p>Post-purchase price reduction. Mail-in or digital. Higher-value products. Collects customer data.</p></div>
+<div class="cc"><h5>&#x1F381; Loyalty Programs</h5><p>Rewards for frequent purchase. Airline miles, store cards. Builds long-term customer relationships.</p></div>
+<div class="cc"><h5>&#x1F9E4; Sampling</h5><p>Try before buying. Amul cookie samples. Reduces purchase risk. Effective for new product launches.</p></div>
+<div class="cc"><h5>&#x1F3C6; Contests</h5><p>Skill or luck-based prizes. Lay&#x2019;s "Do Us A Flavour". Generates engagement and user content.</p></div>
+<div class="cc"><h5>&#x1F4E6; Bundle Deals</h5><p>BOGO, value packs, meal combos. Increases average transaction value. Drives volume sales.</p></div>
+</div>
+<h4>Trade Promotions &#x2014; Reaching the Channel</h4>
+<p>Trade promotions target intermediaries (wholesalers, retailers, distributors) rather than end consumers. They are essential for securing shelf space, gaining distribution, and encouraging channel partners to push products.</p>
+<div class="db"><table>
+<thead><tr><th>Trade Promotion Type</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Trade Allowances</strong></td><td>Discounts to retailers for stocking, displaying, or promoting products</td><td>Hindustan Unilever offering margins to kirana stores for premium shelf placement</td></tr>
+<tr><td><strong>Dealer Contests</strong></td><td>Incentive competitions for distributors and sales teams</td><td>Maruti Suzuki's dealer incentive trips for exceeding sales targets</td></tr>
+<tr><td><strong>Cooperative Advertising</strong></td><td>Shared advertising costs between manufacturer and retailer</td><td>Samsung and Croma sharing costs for newspaper ads featuring Samsung products</td></tr>
+<tr><td><strong>POP Displays</strong></td><td>Point-of-purchase materials, standees, and in-store signage</td><td>Lay's end-cap displays at Big Bazaar during festive season</td></tr>
+<tr><td><strong>Slotting Fees</strong></td><td>Payment to retailers for shelf space, especially for new products</td><td>New FMCG brands paying premium for eye-level placement at Reliance Fresh</td></tr>
+<tr><td><strong>Trade Shows</strong></td><td>Industry exhibitions for product showcasing and order booking</td><td>AAHAR food expo, India International Trade Fair</td></tr>
+</tbody></table></div>
+
+<h4>Coupons vs. Rebates &#x2014; Detailed Comparison</h4>
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>Coupons</th><th>Redbates</th></tr></thead>
+<tbody>
+<tr><td><strong>Timing of Savings</strong></td><td>Immediate savings at point of purchase</td><td>Post-purchase savings (mail-in or digital)</td></tr>
+<tr><td><strong>Personal Data</strong></td><td>No personal data required</td><td>Name, address, and purchase details required</td></tr>
+<tr><td><strong>Redemption Rate</strong></td><td>Low (typically 1-2% for print, higher for digital)</td><td>Very low (many customers forget to redeem)</td></tr>
+<tr><td><strong>Product Value</strong></td><td>Best for lower-value, frequently purchased items</td><td>Best for higher-value, durable goods</td></tr>
+<tr><td><strong>Customer Effort</strong></td><td>Minimal &#x2014; present at checkout</td><td>Higher &#x2014; must mail in receipt or fill form</td></tr>
+<tr><td><strong>Data Collection</strong></td><td>Limited customer data</td><td>Rich customer data for future targeting</td></tr>
+<tr><td><strong>Indian Example</strong></td><td>Digital coupon codes on Zomato, Swiggy</td><td>Mail-in rebates for electronics at Croma, Reliance Digital</td></tr>
+</tbody></table></div>
+
+<h4>Digital Sales Promotion Tools</h4>
+<p>In the digital era, traditional sales promotions have evolved:</p>
+<ul>
+<li><strong>Flash Sales:</strong> Limited-time online events (Flipkart Big Billion Days, Amazon Great Indian Festival)</li>
+<li><strong>Referral Programs:</strong> Reward existing customers for bringing new ones (Paytm, Google Pay referral cashback)</li>
+<li><strong>Gamification:</strong> Scratch cards, spin-the-wheel, and reward points (Google Pay rewards, PhonePe cashback)</li>
+<li><strong>Bundle Deals:</strong> Combining products at discounted prices (McDonald's meal combos, Amazon bundles)</li>
+<li><strong>Social Commerce:</strong> Instagram Shopping, WhatsApp catalog ordering, Meesho reseller model</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Amul Butter Cookies</strong> launch &#x2014; social media contest comparing 25% vs 2% butter content created massive organic awareness with zero ad spend. <strong>Flipkart's Big Billion Days</strong> combines flash sales, bank discounts, exchange offers, and gamification &#x2014; a masterclass in integrated sales promotion.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>CISDB</strong> = Create awareness, Interest, Stimulate demand, Deliver info, Brand reinforcement</p>
+<p><strong>CISDB</strong> = Creating awareness, Interest, Stimulate demand, Deliver info, Brand reinforcement (5 purposes)</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 Purposes: CISDB</li>
-<li>11 Consumer promotion types: Coupons, Rebates, Pricing, Trade-In, Loyalty, Sampling, Free Product, Premiums, Contests, Demos, Appearances</li>
-<li>Trade promotions: Allowances, contests, co-op ads, POP displays</li>
-<li>Coupons = immediate savings; Rebates = post-purchase</li>
+<li>11 Consumer promotion types</li>
+<li>6 Trade promotion types: allowances, contests, co-op ads, POP displays, slotting fees, trade shows</li>
+<li>Coupons = immediate savings; Rebates = post-purchase savings</li>
+<li>Digital promotions: flash sales, referral programs, gamification, bundles, social commerce</li>
+<li>Consumer promotions target end users; trade promotions target channel members</li>
 </ul></div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Flipkart Big Billion Days</h5>
+<p><strong>Challenge:</strong> Compete with Amazon Great Indian Festival during festive season.<br>
+<strong>Strategy:</strong> Integrated flash sales, bank discounts (HDFC 10% instant), exchange offers, gamification (spin-the-wheel), and social media buzz.<br>
+<strong>Execution:</strong> Pre-campaign email teasers, influencer unboxing videos, TV ads featuring Amitabh Bachchan, and in-app push notifications.<br>
+<strong>Result:</strong> Record-breaking GMV, highest app downloads in category, and strong customer acquisition &#x2014; a masterclass in integrated sales promotion.</p>
+</div>
 </div>
 
-<!-- Unit 8 -->
+<!-- UNIT 8 -->
 <div class="unit" id="u8">
 <h3>Unit 8: Direct Marketing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Direct Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="DM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Database Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Database" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Direct communication with targeted individuals to obtain immediate, measurable response. Personalization and targeting are key advantages. Database management is the foundation.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Direct Marketing Tools &#x2014; DCTDEM</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>D</strong>irect Mail &amp; <strong>C</strong>atalogs</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>T</strong>elemarketing &amp; <strong>D</strong>irect Response Ads</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>E</strong>mail Marketing &amp; <strong>M</strong>obile Marketing</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon's recommendation engine uses purchase history for personalized email and app notifications &#x2014; "Customers who bought X also bought Y."</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>DCTDEM</strong> = Direct Mail, Catalogs, Telemarketing, Direct Response, Email, Mobile</p>
+<div class="br"><span class="sb s-b">Direct Mail</span><span class="sb s-b">Catalogs</span><span class="sb s-p">Telemarketing</span><span class="sb s-p">Email</span><span class="sb s-g">Mobile</span><span class="sb s-g">Database</span></div>
+<h4>Direct Marketing Tools &#x2014; DCTDEM</h4>
+<div class="db"><table>
+<thead><tr><th>Tool</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>D</strong>irect Mail</td><td>Physical letters, postcards, catalogs sent to targeted addresses</td><td>Bank credit card offers, insurance policy brochures</td></tr>
+<tr><td><strong>C</strong>atalogs</td><td>Product listings with descriptions, prices, and ordering information</td><td>Amazon India catalog, Myntra style guides</td></tr>
+<tr><td><strong>T</strong>elemarketing</td><td>Phone-based selling (inbound customer service or outbound cold calls)</td><td>ICICI Bank loan offers, BSNL broadband promotions</td></tr>
+<tr><td><strong>D</strong>irect Response Ads</td><td>Ads that prompt immediate action &#x2014; call now, visit website, SMS code</td><td>TV ads with "Call 1800-XXX-XXXX" or "Visit store today"</td></tr>
+<tr><td><strong>E</strong>mail Marketing</td><td>Targeted email campaigns to subscriber lists</td><td>Flipkart order confirmations, Nykaa beauty tips newsletters</td></tr>
+<tr><td><strong>M</strong>obile Marketing</td><td>SMS, app notifications, WhatsApp business messages</td><td>Swiggy push notifications, Jio recharge reminders</td></tr>
+</tbody></table></div>
+
+<h4>Database Marketing &#x2014; The Foundation</h4>
+<p>Effective direct marketing depends on a well-maintained customer database. The database enables segmentation, personalization, and measurement. Key database elements include:</p>
+<ul>
+<li><strong>Demographic data:</strong> Name, age, gender, location, income</li>
+<li><strong>Transaction data:</strong> Purchase history, order value, frequency</li>
+<li><strong>Behavioral data:</strong> Website visits, email opens, app usage patterns</li>
+<li><strong>Psychographic data:</strong> Interests, preferences, lifestyle choices</li>
+</ul>
+<p>Indian brands like BigBasket and Flipkart use sophisticated database marketing to send personalized recommendations based on purchase history, browsing behavior, and seasonal patterns.</p>
+
+<div class="db"><table>
+<thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead>
+<tbody>
+<tr><td>Targeted audience selection</td><td>Clutter/junk mail perception</td></tr>
+<tr><td>Personalization</td><td>Database management costs</td></tr>
+<tr><td>Measurable response rates</td><td>Privacy concerns</td></tr>
+<tr><td>Testing capability (A/B testing)</td><td>Limited reach vs. mass media</td></tr>
+<tr><td>Privacy of strategy</td><td>Regulatory compliance (DND)</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Amazon's</strong> recommendation engine uses purchase history for personalized email and app notifications &#x2014; "Customers who bought X also bought Y."</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>6 DM Tools: DCTDEM</li>
-<li>Advantages: Targeted, personalized, measurable, testable, private</li>
-<li>Disadvantages: Clutter, database costs, privacy, limited reach, DND regulations</li>
+<li>Tools: Direct Mail, Catalogs, Telemarketing, Direct Response, Email, Mobile (DCTDEM)</li>
+<li>Success depends on database quality</li>
 </ul></div>
 </div>
 
-<!-- Unit 9 -->
+<!-- UNIT 9 -->
 <div class="unit" id="u9">
 <h3>Unit 9: Publicity and Public Relations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PR Tools</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="PR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PR vs Advertising</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="PR vs Ads" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>PR manages relationships with publics to build favorable image. Earned media has higher credibility than paid advertising. Crisis communication is a critical PR function.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; PR Tools &#x2014; PERC-CL</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>P</strong>ress Releases &amp; <strong>E</strong>vents</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>R</strong>elations (Community) &amp; <strong>C</strong>SR</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>risis Communication &amp; <strong>L</strong>obbying</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Group's CSR activities (Tata Trusts) build enormous brand goodwill without direct advertising.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>PERC-CL</strong> = Press Releases, Events, Relations, CSR, Crisis, Lobbying</p>
+<h4>PR Tools &#x2014; PERC-CL</h4>
+<div class="db"><table>
+<thead><tr><th>Tool</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>P</strong>ress Releases</td><td>Official company announcements distributed to media outlets</td><td>Reliance Jio's 4G launch press conferences</td></tr>
+<tr><td><strong>E</strong>vents &amp; Sponsorships</td><td>Brand associations with sports, cultural, and community events</td><td>Byju's sponsoring Indian cricket team jersey</td></tr>
+<tr><td><strong>R</strong>elations (Community)</td><td>Local community engagement and grassroots initiatives</td><td>Amul's cooperative model supporting 3.6 million farmers</td></tr>
+<tr><td><strong>C</strong>SR Activities</td><td>Corporate social responsibility initiatives building goodwill</td><td>Tata Trusts' healthcare and education programs</td></tr>
+<tr><td><strong>C</strong>risis Communication</td><td>Managing negative events, product recalls, and reputation threats</td><td>Maggi's "2-minute comeback" campaign after 2015 ban</td></tr>
+<tr><td><strong>L</strong>obbying</td><td>Influencing government policy and regulatory decisions</td><td>NASSCOM advocating for IT industry-friendly policies</td></tr>
+</tbody></table></div>
+
+
+<div class="cg">
+<div class="cc"><h5>&#x1F4F0; Press Releases</h5><p>Official company announcements. Reliance Jio 4G launch. Builds media coverage and public awareness.</p></div>
+<div class="cc"><h5>&#x1F3C6; Events &amp; Sponsorships</h5><p>Brand associations with sports and cultural events. Byju&#x2019;s cricket sponsorship. Reaches mass audiences.</p></div>
+<div class="cc"><h5>&#x1F91D; Community Relations</h5><p>Local engagement and grassroots initiatives. Amul&#x2019;s cooperative model supporting 3.6M farmers.</p></div>
+<div class="cc"><h5>&#x1F3E5; CSR Activities</h5><p>Corporate social responsibility. Tata Trusts healthcare programs. Builds goodwill without direct advertising.</p></div>
+<div class="cc"><h5>&#x1F6A8; Crisis Communication</h5><p>Managing negative events. Maggi&#x2019;s "2-minute comeback" after 2015 ban. Protects brand reputation.</p></div>
+<div class="cc"><h5>&#x1F3DB; Lobbying</h5><p>Influencing government policy. NASSCOM IT advocacy. Shapes regulatory environment favorably.</p></div>
 </div>
-<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>PR = Earned media, higher credibility, less control</li>
-<li>Advertising = Paid media, lower credibility, full control</li>
-<li>6 PR Tools: PERC-CL</li>
-</ul></div>
+<h4>Crisis Communication Framework</h4>
+<p>Effective crisis communication follows a structured approach:</p>
+<ul>
+<li><strong>Step 1: Acknowledge</strong> &#x2014; Respond quickly and acknowledge the issue publicly</li>
+<li><strong>Step 2: Investigate</strong> &#x2014; Gather facts before making detailed statements</li>
+<li><strong>Step 3: Communicate</strong> &#x2014; Be transparent about what happened and what is being done</li>
+<li><strong>Step 4: Act</strong> &#x2014; Take corrective action (product recall, policy change, compensation)</li>
+<li><strong>Step 5: Rebuild</strong> &#x2014; Launch campaigns to restore trust and reputation</li>
+</ul>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Indian Crisis Case Studies</div>
+<p><strong>Maggi (2015):</strong> Banned for excessive lead content. Nestl&#x00E9; recalled 300 million packets, fought legal battles, and relaunched with "Your Maggi is safe" campaign. Within 6 months, Maggi regained 60% market share &#x2014; demonstrating the power of strong brand equity and effective crisis PR.</p>
+<p><strong>Cadbury (2003):</strong> Worms found in chocolate bars. Cadbury invested &#x20B9;15 crore in new packaging, launched Amitabh Bachchan as brand ambassador, and conducted retailer education programs. Full recovery took 9 months but brand trust was restored.</p>
 </div>
 
-<!-- Unit 10 -->
+<div class="db"><table>
+<thead><tr><th>PR</th><th>Advertising</th></tr></thead>
+<tbody>
+<tr><td>Earned media (free)</td><td>Paid media</td></tr>
+<tr><td>Third-party endorsement</td><td>Self-promotion</td></tr>
+<tr><td>Higher credibility</td><td>Lower credibility</td></tr>
+<tr><td>Less message control</td><td>Full message control</td></tr>
+<tr><td>Harder to measure</td><td>Easier to measure</td></tr>
+<tr><td>Builds long-term trust</td><td>Drives immediate awareness</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Tata Group's</strong> CSR activities (Tata Trusts) build enormous brand goodwill without direct advertising.</p>
+</div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>PR Tools: PERC-CL (Press releases, Events, Relations, CSR, Crisis, Lobbying)</li>
+<li>PR = relationships, not transactions</li>
+</ul></div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Maggi Crisis &amp; Recovery (2015)</h5>
+<p><strong>Crisis:</strong> Banned for excessive lead content. Nestl&#x00E9; recalled 300 million packets.<br>
+<strong>Response:</strong> Acknowledged issue, fought legal battles, transparent communication about safety testing.<br>
+<strong>Recovery:</strong> "Your Maggi is safe" campaign, celebrity endorsements, retailer education programs.<br>
+<strong>Result:</strong> Within 6 months, regained 60% market share. Demonstrated power of strong brand equity and effective crisis PR.</p>
+</div>
+</div>
+
+<!-- UNIT 10 -->
 <div class="unit" id="u10">
 <h3>Unit 10: Digital Marketing IMC &#x2014; Budget Considerations</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p><strong>CPC:</strong> Cost Per Click. <strong>CPA:</strong> Cost Per Acquisition. <strong>ROAS:</strong> Return on Ad Spend = Revenue / Ad Spend. <strong>CLV:</strong> Total revenue expected from a customer over time.</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Budget Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Budget" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ROAS and CLV</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="ROAS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="br"><span class="sb s-b">% of Sales</span><span class="sb s-b">Competitive</span><span class="sb s-p">Objective</span><span class="sb s-p">Affordable</span><span class="sb s-g">Zero-based</span></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>Digital budget allocation requires understanding cost metrics and ROI. <strong>CLV</strong> (Customer Lifetime Value) should guide budget decisions.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; 5 Budget Methods &#x2014; PCOAZ</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>P</strong>ercentage of Sales</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>ompetitive Parity</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>O</strong>bjective &amp; Task</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>A</strong>ffordable</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>Z</strong>ero-based</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A D2C brand with &#x20B9;500 CPA and &#x20B9;5,000 CLV has 10:1 ROAS &#x2014; highly profitable acquisition.</p></div>
+<div class="db"><table>
+<thead><tr><th>Method</th><th>Description</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td><strong>P</strong>ercentage of Sales</td><td>Fixed % of revenue</td><td>Simple, safe</td><td>Ignores opportunities</td></tr>
+<tr><td><strong>C</strong>ompetitive Parity</td><td>Match competitor spending</td><td>Market-responsive</td><td>Ignores own objectives</td></tr>
+<tr><td><strong>O</strong>bjective &amp; Task</td><td>Define objectives, estimate costs</td><td>Goal-aligned</td><td>Complex</td></tr>
+<tr><td><strong>A</strong>ffordable</td><td>Spend what's left</td><td>Realistic</td><td>Under-invests</td></tr>
+<tr><td><strong>Z</strong>ero-based</td><td>Justify every expense</td><td>Efficient</td><td>Time-consuming</td></tr>
+</tbody></table></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Digital Cost Metrics</div>
+<p><strong>CPC</strong> = Cost Per Click. <strong>CPA</strong> = Cost Per Acquisition. <strong>ROAS</strong> = Revenue / Ad Spend. <strong>CLV</strong> = Avg Purchase x Frequency x Lifespan.</p>
+</div>
+<h4>Understanding CLV in Indian Context</h4>
+<div class="db"><table>
+<thead><tr><th>Brand Type</th><th>Avg Purchase</th><th>Frequency</th><th>Lifespan</th><th>CLV</th></tr></thead>
+<tbody>
+<tr><td>Zomato (food delivery)</td><td>&#x20B9;350</td><td>4 orders/month</td><td>5 years</td><td>&#x20B9;84,000</td></tr>
+<tr><td>Amazon Prime (e-commerce)</td><td>&#x20B9;1,500</td><td>2 orders/month</td><td>7 years</td><td>&#x20B9;2,52,000</td></tr>
+<tr><td>Netflix (streaming)</td><td>&#x20B9;649</td><td>12 months/year</td><td>4 years</td><td>&#x20B9;31,152</td></tr>
+<tr><td>Jio (telecom)</td><td>&#x20B9;599</td><td>12 months/year</td><td>10 years</td><td>&#x20B9;71,880</td></tr>
+</tbody></table></div>
+<p>CLV helps marketers decide how much to spend on customer acquisition. If CLV is &#x20B9;84,000 (Zomato), spending &#x20B9;500 to acquire a customer is highly profitable. The key is balancing acquisition cost (CPA) with long-term value (CLV).</p>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>A D2C brand with &#x20B9;500 CPA and &#x20B9;5,000 CLV has 10:1 ROAS &#x2014; highly profitable acquisition.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>PCOAZ</strong> = Percentage, Competitive, Objective, Affordable, Zero-based</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 Budget Methods: PCOAZ</li>
-<li>Digital metrics: CPC, CPA, ROAS, CLV</li>
+<li>5 Budget methods: PCOAZ</li>
 <li>Objective &amp; Task method is most logical for exams</li>
+<li>Always connect budget decisions to ROI</li>
 </ul></div>
 </div>
 
-<!-- Unit 11 -->
+<!-- UNIT 11 -->
 <div class="unit" id="u11">
 <h3>Unit 11: Media Buying &#x2014; Changing Paradigms</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Programmatic Advertising</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Programmatic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Influencer Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Influencer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Media buying has shifted from manual negotiation to automated/programmatic. Real-time bidding allows precise audience targeting. New formats (native, CTV, podcasts) are growing rapidly.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Emerging Media Trends</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Programmatic Advertising &amp; RTB</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Native Ads &amp; Influencer Partnerships</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Connected TV (CTV) &amp; Podcast Ads</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Spotify's programmatic audio ads target listeners by mood, activity, and location.</p></div>
+<div class="db"><table>
+<thead><tr><th>Trend</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Programmatic Advertising</td><td>Automated ad buying using algorithms</td></tr>
+<tr><td>Real-Time Bidding (RTB)</td><td>Auction-based ad placement in milliseconds</td></tr>
+<tr><td>Native Advertising</td><td>Ads matching platform content style</td></tr>
+<tr><td>Influencer Partnerships</td><td>Paid collaborations with content creators</td></tr>
+<tr><td>Connected TV (CTV)</td><td>Ads on streaming platforms</td></tr>
+<tr><td>Podcast Advertising</td><td>Audio ads in podcast content</td></tr>
+</tbody></table></div>
+
+<div class="cg">
+<div class="cc"><h5>&#x1F916; Programmatic</h5><p>Automated ad buying using algorithms and DSPs. Real-time bidding in milliseconds. Precise audience targeting.</p></div>
+<div class="cc"><h5>&#x1F4E2; Native Advertising</h5><p>Ads matching platform content style. Higher engagement than display ads. Less ad fatigue.</p></div>
+<div class="cc"><h5>&#x1F4FA; Connected TV</h5><p>Ads on streaming platforms (Hotstar, Netflix). Growing rapidly in India. Premium audience targeting.</p></div>
+<div class="cc"><h5>&#x1F3A7; Podcast Advertising</h5><p>Audio ads in podcast content. Highly engaged listeners. Growing medium in India.</p></div>
+<div class="cc"><h5>&#x1F4F1; Influencer Marketing</h5><p>Paid collaborations with content creators. &#x20B9;1,200+ crore market in India. Authentic product reviews.</p></div>
+<div class="cc"><h5>&#x1F4CA; RTB</h5><p>Real-Time Bidding. Auction-based ad placement. Millisecond decisions. Cost-efficient targeting.</p></div>
+</div>
+<h4>Media Buying Process</h4>
+<ol>
+<li><strong>Define target audience</strong> &#x2014; Demographics, interests, online behavior, purchase intent</li>
+<li><strong>Set media objectives</strong> &#x2014; Reach targets, frequency goals, budget constraints</li>
+<li><strong>Select media vehicles</strong> &#x2014; Choose specific platforms, channels, and placements</li>
+<li><strong>Negotiate rates and placements</strong> &#x2014; CPM deals, preferred positions, bulk discounts</li>
+<li><strong>Monitor and optimize in real-time</strong> &#x2014; A/B testing, bid adjustments, creative rotation</li>
+</ol>
+
+<h4>Programmatic vs. Traditional Media Buying</h4>
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>Traditional</th><th>Programmatic</th></tr></thead>
+<tbody>
+<tr><td><strong>Process</strong></td><td>Manual negotiation with media houses</td><td>Automated via demand-side platforms (DSPs)</td></tr>
+<tr><td><strong>Speed</strong></td><td>Days to weeks for booking</td><td>Milliseconds for ad placement</td></tr>
+<tr><td><strong>Targeting</strong></td><td>Broad demographic segments</td><td>Granular: behavior, context, intent, location</td></tr>
+<tr><td><strong>Optimization</strong></td><td>Post-campaign analysis</td><td>Real-time bid and creative optimization</td></tr>
+<tr><td><strong>Transparency</strong></td><td>Clear placement and pricing</td><td>Ad fraud and brand safety concerns</td></tr>
+<tr><td><strong>Best For</strong></td><td>Mass reach campaigns, TV, print</td><td>Performance marketing, retargeting, niche audiences</td></tr>
+</tbody></table></div>
+
+<h4>Influencer Marketing in India</h4>
+<p>Influencer marketing has become a mainstream IMC tool in India, with the market estimated at &#x20B9;1,200+ crore. Influencers are categorized by follower count:</p>
+<div class="db"><table>
+<thead><tr><th>Category</th><th>Followers</th><th>Characteristics</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Nano</strong></td><td>1K &#x2013; 10K</td><td>Highest engagement, niche audiences, affordable</td><td>Local food bloggers reviewing neighborhood restaurants</td></tr>
+<tr><td><strong>Micro</strong></td><td>10K &#x2013; 100K</td><td>Strong community trust, specific niches</td><td>Mamaearth's skincare influencer network</td></tr>
+<tr><td><strong>Macro</strong></td><td>100K &#x2013; 1M</td><td>Broader reach, professional content creation</td><td>Technical Guruji for tech product reviews</td></tr>
+<tr><td><strong>Mega/Celebrity</strong></td><td>1M+</td><td>Massive reach, lower engagement rate, expensive</td><td>Virat Kohli endorsing Puma, Ranveer Singh for Adidas</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Spotify's</strong> programmatic audio ads target listeners by mood, activity, and location. <strong>Mamaearth</strong> built a &#x20B9;1,000+ crore brand primarily through micro-influencer marketing on Instagram, partnering with thousands of nano and micro influencers for authentic product reviews.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Programmatic = automated ad buying using algorithms</li>
+<li>Programmatic = automated ad buying using algorithms and DSPs</li>
 <li>RTB = auction-based ad placement in milliseconds</li>
-<li>New formats: Native, Influencer, CTV, Podcast</li>
-<li>Media Buying Process: Define audience &#x2192; Set objectives &#x2192; Select vehicles &#x2192; Negotiate &#x2192; Monitor</li>
+<li>New formats: native, CTV, podcasts, influencer marketing</li>
+<li>5-step media buying process: Define audience, Set objectives, Select vehicles, Negotiate, Monitor</li>
+<li>Influencer tiers: Nano (1-10K), Micro (10-100K), Macro (100K-1M), Mega (1M+)</li>
 </ul></div>
 </div>
 
-<!-- Unit 12 -->
+<!-- UNIT 12 -->
 <div class="unit" id="u12">
 <h3>Unit 12: IMC &#x2014; Legal and Ethical Issues</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Advertising Ethics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ASCI and Regulation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="ASCI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Advertising must be truthful, non-deceptive, and substantiated. Self-regulation through ASCI supplements legal framework. Digital advertising raises new privacy and data concerns.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Legal Framework</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">ASCI &#x2014; Self-regulatory body for ad content</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Consumer Protection Act, 2019</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">IT Act &amp; IP Laws</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>ASCI flagged multiple ads during IPL for misleading claims &#x2014; showing self-regulation in action.</p></div>
+<div class="db"><table>
+<thead><tr><th>Law/Body</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>ASCI</td><td>Self-regulatory body for ad content</td></tr>
+<tr><td>Consumer Protection Act, 2019</td><td>Consumer rights, product liability</td></tr>
+<tr><td>Information Technology Act</td><td>Digital communications, data privacy</td></tr>
+<tr><td>Intellectual Property Laws</td><td>Trademarks, copyrights in ads</td></tr>
+</tbody></table></div>
+<h4>Ethical Issues in IMC</h4>
+<div class="db"><table>
+<thead><tr><th>Issue</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Deceptive Advertising</strong></td><td>False or misleading claims about product benefits, features, or pricing</td><td>Patanjali's misleading ads about curing diseases &#x2014; Supreme Court reprimanded Baba Ramdev</td></tr>
+<tr><td><strong>Puffery vs. Substantiation</strong></td><td>"Best in the world" (puffery, acceptable) vs. "Clinically proven" (needs evidence)</td><td>ASCI pulled ads claiming "100% cure" for health products</td></tr>
+<tr><td><strong>Privacy and Data Protection</strong></td><td>Targeting consumers based on personal data without informed consent</td><td>WhatsApp privacy policy controversy (2021) led to mass migration to Signal</td></tr>
+<tr><td><strong>Targeting Vulnerable Groups</strong></td><td>Marketing harmful products to children, elderly, or economically weak</td><td>Gutka ads targeting rural youth, online gaming apps targeting students</td></tr>
+<tr><td><strong>Subliminal Messages</strong></td><td>Hidden persuasive elements below conscious awareness</td><td>Prohibited under ASCI code; rare but controversial when detected</td></tr>
+<tr><td><strong>Surrogate Advertising</strong></td><td>Advertising banned products (alcohol, tobacco) through related brands</td><td>Kingfisher soda, Royal Challenge music CDs, Wills lifestyle</td></tr>
+<tr><td><strong>Influencer Transparency</strong></td><td>Failing to disclose paid partnerships and sponsored content</td><td>ASCI mandates #ad or #sponsored labels; penalties for non-compliance</td></tr>
+</tbody></table></div>
+
+<h4>ASCI's Role and Code</h4>
+<p>The Advertising Standards Council of India (ASCI) is a self-regulatory body established in 1985. Its code requires that ads be:</p>
+<ul>
+<li><strong>Truthful</strong> &#x2014; Claims must be factual and verifiable</li>
+<li><strong>Non-deceptive</strong> &#x2014; No misleading visuals, omissions, or implications</li>
+<li><strong>Legal</strong> &#x2014; Must comply with all applicable laws</li>
+<li><strong>Decent</strong> &#x2014; No offensive, vulgar, or discriminatory content</li>
+<li><strong>Fair</strong> &#x2014; No disparagement of competitors</li>
+<li><strong>Socially Responsible</strong> &#x2014; No promotion of harmful products to vulnerable groups</li>
+</ul>
+<p>ASCI processes complaints from consumers, competitors, and government bodies. Its Consumer Complaints Council (CCC) reviews ads and can order modifications or withdrawal.</p>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>ASCI</strong> flagged multiple ads during IPL for misleading claims &#x2014; showing self-regulation in action. In 2023-24, ASCI processed over 2,300 complaints and acted against 800+ ads across digital and traditional media. <strong>Puffery vs. substantiation:</strong> "Best in the world" (puffery) vs. "Clinically proven" (needs evidence). Patanjali was directed by the Supreme Court to stop misleading advertisements about curing diseases.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>ASCI = Advertising Standards Council of India (self-regulatory)</li>
-<li>Ethical issues: Deceptive ads, puffery, privacy, targeting vulnerable groups, subliminal messages</li>
-<li>Legal compliance vs ethical responsibility</li>
+<li>ASCI = self-regulatory body for ad content (established 1985)</li>
+<li>7 Ethical issues: deceptive ads, puffery, privacy, vulnerable groups, subliminal, surrogate advertising, influencer transparency</li>
+<li>ASCI code: truthful, non-deceptive, legal, decent, fair, socially responsible</li>
+<li>Legal framework: ASCI + CPA 2019 + IT Act + IP Laws</li>
 </ul></div>
 </div>
 
-<!-- Unit 13 -->
+<!-- UNIT 13 -->
 <div class="unit" id="u13">
 <h3>Unit 13: Consumer Movement in India</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p>Consumer protection is both a legal right and a marketing responsibility. IMC must respect consumer rights in all communications. Digital commerce has added new dimensions to consumer protection.</p>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Consumer Rights India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="Consumer Rights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CPA 2019</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="CPA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="br"><span class="sb s-b">Safety</span><span class="sb s-b">Information</span><span class="sb s-p">Choice</span><span class="sb s-p">Hearing</span><span class="sb s-g">Redressal</span><span class="sb s-g">Education</span></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
+<p>Consumer protection is both a legal right and a marketing responsibility. IMC must respect consumer rights. CPA 2019: Three-tier dispute resolution (District &#x2192; State &#x2192; National), e-commerce regulations, product liability.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; 6 Consumer Rights &#x2014; SICCHR</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>S</strong>afety &amp; <strong>I</strong>nformation</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>C</strong>hoice &amp; <strong>H</strong>earing</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>R</strong>edressal &amp; Consumer <strong>E</strong>ducation</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Maggi noodles ban (2015) demonstrated consequences of misleading labeling &#x2014; "No added MSG" when MSG was present.</p></div>
+<h4>Consumer Protection Act, 2019 &#x2014; Key Provisions</h4>
+<div class="db"><table>
+<thead><tr><th>Provision</th><th>Description</th><th>Impact on IMC</th></tr></thead>
+<tbody>
+<tr><td><strong>Three-Tier Resolution</strong></td><td>District, State, and National Consumer Commissions</td><td>Faster grievance redressal for misleading ad complaints</td></tr>
+<tr><td><strong>E-Commerce Rules</strong></td><td>Online marketplaces must display seller details, return policies, country of origin</td><td>Digital ads must be truthful; marketplace accountability increased</td></tr>
+<tr><td><strong>Product Liability</strong></td><td>Manufacturer, seller, and service provider all liable for defective products</td><td>Claims in ads must be substantiated; false promises have legal consequences</td></tr>
+<tr><td><strong>Mediation</strong></td><td>Alternative dispute resolution before formal litigation</td><td>Faster resolution of ad-related consumer complaints</td></tr>
+<tr><td><strong>Unfair Trade Practices</strong></td><td>Expanded definition includes misleading online reviews and fake testimonials</td><td>Influencer marketing and review manipulation are now regulated</td></tr>
+<tr><td><strong>Central Consumer Protection Authority</strong></td><td>New regulatory body with power to investigate and penalize</td><td>Can order recall of products and ban misleading advertisements</td></tr>
+</tbody></table></div>
+
+<h4>IMC Implications &#x2014; Connecting Rights to Practice</h4>
+<ul>
+<li><strong>Right to Safety:</strong> Product ads must not make unsubstantiated safety claims. Packaging must include warnings and usage instructions.</li>
+<li><strong>Right to Information:</strong> All ads must display MRP, ingredients, expiry dates, and manufacturer details. Digital ads must link to detailed product information.</li>
+<li><strong>Right to Choice:</strong> Comparative advertising must be factual. No disparagement of competitors without evidence.</li>
+<li><strong>Right to Hearing:</strong> Brands must provide accessible customer service channels. Social media enables real-time grievance redressal.</li>
+<li><strong>Right to Redressal:</strong> Clear return/refund policies must be communicated in all marketing materials.</li>
+<li><strong>Right to Consumer Education:</strong> Brands can build trust through educational content about product usage and consumer rights.</li>
+</ul>
+<div class="db"><table>
+<thead><tr><th>#</th><th>Right</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>S</strong>afety</td><td>Protection from hazardous products</td></tr>
+<tr><td>2</td><td><strong>I</strong>nformation</td><td>Access to product facts, ingredients, pricing</td></tr>
+<tr><td>3</td><td><strong>C</strong>hoice</td><td>Freedom to select from competitive options</td></tr>
+<tr><td>4</td><td><strong>H</strong>earing</td><td>Voice in policy decisions, grievance redressal</td></tr>
+<tr><td>5</td><td><strong>R</strong>edressal</td><td>Compensation for unfair practices</td></tr>
+<tr><td>6</td><td>Consumer <strong>E</strong>ducation</td><td>Knowledge about rights and responsibilities</td></tr>
+</tbody></table></div>
+<div class="pyramid">
+<div class="pyramid-level" style="width:40%;background:rgba(255,107,107,.2);border:1px solid rgba(255,107,107,.4)">&#x1F6E1; Right to Safety</div>
+<div class="pyramid-level" style="width:50%;background:rgba(0,206,201,.15);border:1px solid rgba(0,206,201,.3)">&#x1F4D6; Right to Information</div>
+<div class="pyramid-level" style="width:60%;background:rgba(108,92,231,.15);border:1px solid rgba(108,92,231,.3)">&#x1F4AD; Right to Choice</div>
+<div class="pyramid-level" style="width:70%;background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.25)">&#x1F442; Right to Hearing</div>
+<div class="pyramid-level" style="width:80%;background:rgba(0,184,148,.15);border:1px solid rgba(0,184,148,.3)">&#x2696; Right to Redressal</div>
+<div class="pyramid-level" style="width:90%;background:rgba(0,206,201,.1);border:1px solid rgba(0,206,201,.25)">&#x1F393; Right to Consumer Education</div>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Maggi noodles ban (2015)</strong> demonstrated consequences of misleading labeling &#x2014; "No added MSG" when MSG was present.</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
 <p><strong>SICCHR</strong> = Safety, Information, Choice, Hearing, Redressal, Consumer Education</p>
 </div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>6 Consumer Rights: SICCHR</li>
-<li>CPA 2019: Three-tier dispute resolution (District &#x2192; State &#x2192; National)</li>
-<li>E-commerce regulations and product liability provisions</li>
-<li>All IMC claims must be truthful and non-misleading</li>
+<li>CPA 2019: 3-tier resolution, e-commerce rules, product liability</li>
 </ul></div>
 </div>
 
-<!-- Unit 14 -->
+<!-- UNIT 14 -->
 <div class="unit" id="u14">
 <h3>Unit 14: Strategies for Integrating IMC Elements</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='&#x25B6; Watch Videos'?'&#x25BC; Hide Videos':'&#x25B6; Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>IMC Integration</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/b4QCKrKXcQA" title="IMC Integration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Nike Just Do It</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VvqO_mLDSoU" title="Nike" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concept</div>
 <p>Integration requires consistency across all touchpoints. Customer journey mapping guides channel selection. Internal alignment ensures every department delivers the same message.</p>
+</div>
+<h4>Customer Journey Mapping</h4>
+<p>The customer journey is the complete experience a customer has with a brand, from first awareness to post-purchase advocacy. IMC must deliver consistent messaging at every stage:</p>
+<div class="db"><table>
+<thead><tr><th>Journey Stage</th><th>Customer Need</th><th>IMC Tools to Use</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Awareness</strong></td><td>Discover the product/brand exists</td><td>TV ads, social media ads, PR, influencer marketing</td><td>Zomato's viral TV ads during IPL</td></tr>
+<tr><td><strong>Consideration</strong></td><td>Evaluate options, compare features</td><td>Website content, reviews, email nurturing, comparison ads</td><td>Amazon India's product pages with reviews and ratings</td></tr>
+<tr><td><strong>Purchase</strong></td><td>Make the buying decision</td><td>Sales promotions, retargeting ads, in-store displays</td><td>Flipkart's Big Billion Days flash sales and bank offers</td></tr>
+<tr><td><strong>Post-Purchase</strong></td><td>Confirm the decision was right</td><td>Thank you emails, onboarding content, customer support</td><td>CRED's rewards and gamification after payment</td></tr>
+<tr><td><strong>Advocacy</strong></td><td>Recommend to others</td><td>Referral programs, loyalty rewards, user-generated content</td><td>Meesho's reseller model turning customers into sellers</td></tr>
+</tbody></table></div>
+
+<h4>Cross-Channel Consistency Checklist</h4>
+<ul>
+<li><strong>Visual identity:</strong> Same logo, colors, fonts, and imagery across all channels</li>
+<li><strong>Brand voice:</strong> Consistent tone (formal, casual, witty) in all communications</li>
+<li><strong>Core message:</strong> Same value proposition adapted to each channel's format</li>
+<li><strong>Pricing:</strong> Uniform pricing across online and offline channels (avoid channel conflict)</li>
+<li><strong>Customer experience:</strong> Seamless transition between channels (online to in-store, app to website)</li>
+</ul>
+
+<h4>Internal Alignment for IMC</h4>
+<p>Integration is not just external &#x2014; internal departments must also be aligned:</p>
+<ul>
+<li><strong>Marketing + Sales:</strong> Shared lead scoring, consistent messaging in sales pitches and ads</li>
+<li><strong>Marketing + Customer Service:</strong> Service teams know current campaigns; marketing addresses common complaints</li>
+<li><strong>Marketing + Product:</strong> Product features communicated consistently in ads and packaging</li>
+<li><strong>Marketing + HR:</strong> Employer branding aligns with consumer brand (e.g., Google's "Don't Be Evil" extends internally)</li>
+</ul>
+<div class="br"><span class="sb s-b">Consistent Identity</span><span class="sb s-b">Cross-channel</span><span class="sb s-p">Customer-centric</span><span class="sb s-p">Data-driven</span><span class="sb s-g">Internal Alignment</span></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; 5 Integration Strategies</div>
+<p>1. <strong>Consistent Brand Identity</strong> &#x2014; Same look, feel, tone across all channels. 2. <strong>Cross-channel Coordination</strong> &#x2014; Align messaging. 3. <strong>Customer-centric Approach</strong> &#x2014; Focus on journey stages. 4. <strong>Data-driven Decision Making</strong> &#x2014; Use analytics. 5. <strong>Internal Alignment</strong> &#x2014; All departments same message.</p>
+</div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Situation<br><small>Analysis</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Target<br><small>Audience</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Objectives<br><small>&amp; Goals</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Budget<br><small>Allocation</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Strategy<br><small>&amp; Plan</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Implement<br><small>&amp; Execute</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Evaluate<br><small>&amp; Optimize</small></div></div>
 </div>
 <div class="visual-diagram"><h5>&#x1F4CA; 7-Step IMC Planning Framework</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
@@ -421,28 +1007,203 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
 <div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">2. Target Audience</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">3. Objectives &amp; 4. Budget</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">3. Objectives</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">5. Strategy &amp; 6. Implementation</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">4. Budget</div>
 <div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">7. Evaluation</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">5. Strategy</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">6. Implementation</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">7. Evaluation</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Nike's "Just Do It" integrates TV ads, social media, in-store experience, athlete endorsements, and community events &#x2014; all with one unified message.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Nike's "Just Do It"</strong> integrates TV ads, social media, in-store experience, athlete endorsements, and community events &#x2014; all with one unified message.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 Integration Strategies: Consistent identity, cross-channel, customer-centric, data-driven, internal alignment</li>
-<li>7-Step Framework: Situation &#x2192; Target &#x2192; Objectives &#x2192; Budget &#x2192; Strategy &#x2192; Implementation &#x2192; Evaluation</li>
-<li>Nike "Just Do It" = best example of integrated IMC</li>
+<li>5 Integration strategies: Consistent identity, Cross-channel, Customer-centric, Data-driven, Internal alignment</li>
+<li>7-step framework: Situation &#x2192; Target &#x2192; Objectives &#x2192; Budget &#x2192; Strategy &#x2192; Implementation &#x2192; Evaluation</li>
 </ul></div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Nike&#x2019;s "Just Do It" IMC Integration</h5>
+<p><strong>Challenge:</strong> Maintain unified brand message across dozens of global markets and channels.<br>
+<strong>Strategy:</strong> TV ads featuring athletes, Instagram storytelling, in-store experience design, community running events, and app-based personalization.<br>
+<strong>Execution:</strong> Every touchpoint reinforces the same empowerment message. Social media amplifies TV campaigns. App data personalizes email and push notifications.<br>
+<strong>Result:</strong> "Just Do It" is recognized by 97% of Americans. Brand value exceeds $30 billion. Demonstrates how consistent IMC integration builds lasting brand equity.</p>
+</div>
+</div>
+
+<!-- MASTER MNEMONICS -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>TAPIC</strong></td><td>Target, Ascertain, Plan, Implement, Collect</td><td>IMC Process (5 steps)</td></tr>
+<tr><td><strong>APPS-DDG</strong></td><td>Advertising, PR, Personal Selling, Sales Promotion, Direct, Digital, Guerrilla</td><td>Promotions Mix (7 tools)</td></tr>
+<tr><td><strong>IPRI</strong></td><td>Informative, Persuasive, Reminder, Institutional</td><td>Types of Advertising (4)</td></tr>
+<tr><td><strong>CPFS</strong></td><td>Continuous, Pulsating, Flighting, Seasonal</td><td>Media Scheduling Patterns</td></tr>
+<tr><td><strong>PCOAZ</strong></td><td>Percentage, Competitive, Objective, Affordable, Zero-based</td><td>Budget Methods (5)</td></tr>
+<tr><td><strong>SICCHR</strong></td><td>Safety, Information, Choice, Hearing, Redressal, Consumer Education</td><td>Consumer Rights (6)</td></tr>
+<tr><td><strong>RFG-CPM</strong></td><td>Reach, Frequency, GRP, Cost Per Mille</td><td>Media Metrics</td></tr>
+<tr><td><strong>REM</strong></td><td>Rational, Emotional, Moral</td><td>Advertising Appeals (3)</td></tr>
+<tr><td><strong>CISDB</strong></td><td>Create awareness, Interest, Stimulate demand, Deliver info, Brand reinforcement</td><td>Sales Promo Purposes (5)</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- KEY FRAMEWORKS -->
+<div class="unit" id="frameworks">
+<h3>&#x1F4CA; Key Frameworks &amp; Diagrams</h3>
+<div class="visual-diagram"><h5>IMC Process Flow (TAPIC)</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">TARGET &#x2192; ASCERTAIN &#x2192; PLAN &#x2192; IMPLEMENT &#x2192; COLLECT</div>
+</div></div>
+<div class="visual-diagram"><h5>Promotions Mix Relationship</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem"><strong>PROMOTIONS MIX</strong></div>
+<div style="font-size:0.85rem;color:rgba(255,255,255,.6)">| &#x2014;&#x2014;&#x2014;&#x2014; | &#x2014;&#x2014;&#x2014;&#x2014; | &#x2014;&#x2014;&#x2014;&#x2014; | &#x2014;&#x2014;&#x2014;&#x2014; |</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;font-size:0.8rem">
+<div style="background:rgba(0,184,148,0.15);padding:0.4rem 0.8rem;border-radius:8px;border:1px solid rgba(0,184,148,0.3)">Advertising<br><span style="font-size:0.7rem;color:rgba(255,255,255,.5)">(Paid)</span></div>
+<div style="background:rgba(108,92,231,0.15);padding:0.4rem 0.8rem;border-radius:8px;border:1px solid rgba(108,92,231,0.3)">PR<br><span style="font-size:0.7rem;color:rgba(255,255,255,.5)">(Earned)</span></div>
+<div style="background:rgba(255,215,0,0.15);padding:0.4rem 0.8rem;border-radius:8px;border:1px solid rgba(255,215,0,0.3)">Personal Selling<br><span style="font-size:0.7rem;color:rgba(255,255,255,.5)">(Face-to-face)</span></div>
+<div style="background:rgba(255,107,107,0.15);padding:0.4rem 0.8rem;border-radius:8px;border:1px solid rgba(255,107,107,0.3)">Sales Promotion<br><span style="font-size:0.7rem;color:rgba(255,255,255,.5)">(Short-term)</span></div>
+<div style="background:rgba(0,206,201,0.15);padding:0.4rem 0.8rem;border-radius:8px;border:1px solid rgba(0,206,201,0.3)">DM/Digital<br><span style="font-size:0.7rem;color:rgba(255,255,255,.5)">(Direct)</span></div>
+</div>
+</div></div>
+<div class="visual-diagram"><h5>Media Scheduling Patterns</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem;font-family:monospace;font-size:0.85rem;color:rgba(255,255,255,.8)">
+<div>Continuous: &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</div>
+<div>Pulsating: &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</div>
+<div>Flighting: &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;</div>
+<div>Seasonal: &#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</div>
+</div></div>
+<div class="visual-diagram"><h5>PR vs Advertising Spectrum</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="font-size:0.85rem;color:rgba(255,255,255,.7)">CREDIBILITY: LOW &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; HIGH</div>
+<div style="font-size:0.85rem;color:rgba(255,255,255,.7)">Advertising &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; PR</div>
+<div style="font-size:0.85rem;color:rgba(255,255,255,.7)">CONTROL: HIGH &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; LOW</div>
+<div style="font-size:0.85rem;color:rgba(255,255,255,.7)">COST: HIGH &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; FREE</div>
+</div></div>
+</div>
+
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; One-Liner Definitions</div>
+<p><strong>IMC:</strong> Coordination of all communication tools for clear, consistent message. <strong>Advertising:</strong> Paid, non-personal communication by identified sponsor. <strong>PR:</strong> Building favorable image through earned media. <strong>Sales Promotion:</strong> Short-term incentives to stimulate immediate purchase. <strong>Direct Marketing:</strong> Direct communication for immediate response. <strong>Guerrilla Marketing:</strong> Unconventional, low-cost tactics. <strong>GRP:</strong> Reach x Frequency. <strong>CPM:</strong> (Cost/Impressions) x 1000. <strong>ASCI:</strong> Self-regulatory body for ad content. <strong>ROAS:</strong> Revenue from Ads / Cost of Ads.</p>
+</div>
+<div class="db"><table>
+<thead><tr><th>Formula</th><th>Expression</th></tr></thead>
+<tbody>
+<tr><td>GRP</td><td>Reach (%) x Frequency</td></tr>
+<tr><td>CPM</td><td>(Total Cost / Impressions) x 1000</td></tr>
+<tr><td>ROAS</td><td>Revenue from Ads / Cost of Ads</td></tr>
+<tr><td>CLV</td><td>Avg Purchase Value x Purchase Frequency x Customer Lifespan</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>Traditional</th><th>Digital</th></tr></thead>
+<tbody>
+<tr><td>Reach</td><td>Mass, broad</td><td>Targeted, precise</td></tr>
+<tr><td>Cost</td><td>High</td><td>Variable, often lower</td></tr>
+<tr><td>Measurability</td><td>Difficult</td><td>Precise analytics</td></tr>
+<tr><td>Interaction</td><td>One-way</td><td>Two-way, real-time</td></tr>
+<tr><td>Speed</td><td>Slow production</td><td>Fast deployment</td></tr>
+<tr><td>Personalization</td><td>Limited</td><td>Highly personalized</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Consumer Promotions</th><th>Trade Promotions</th></tr></thead>
+<tbody>
+<tr><td>Target: End users</td><td>Target: Channel members (wholesalers, retailers)</td></tr>
+<tr><td>Goal: Drive purchase</td><td>Goal: Secure shelf space and distribution</td></tr>
+<tr><td>Methods: Coupons, samples, BOGO, contests, loyalty programs</td><td>Methods: Allowances, dealer contests, co-op ads, POP displays</td></tr>
+<tr><td>Measurement: Sales lift, redemption rate</td><td>Measurement: Distribution gains, shelf share</td></tr>
+<tr><td>Timing: Short-term, event-driven</td><td>Timing: Ongoing or seasonal push</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<p>1. <strong>IMC Process (TAPIC)</strong> &#x2014; Explain each step with examples<br>
+2. <strong>Promotions Mix</strong> &#x2014; Compare all 7 tools<br>
+3. <strong>Media Scheduling</strong> &#x2014; When to use CPFS patterns<br>
+4. <strong>Consumer Sales Promotion</strong> &#x2014; Recommend promotions for given products<br>
+5. <strong>PR vs. Advertising</strong> &#x2014; Compare and explain integration<br>
+6. <strong>Consumer Rights (SICCHR)</strong> &#x2014; Connect to IMC practices<br>
+7. <strong>Budget Methods</strong> &#x2014; Recommend method for scenario<br>
+8. <strong>Digital Marketing Integration</strong> &#x2014; How digital changes IMC</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Key Indian Examples to Use</div>
+<p><strong>Amul:</strong> Social media campaigns, butter cookies launch. <strong>Zomato:</strong> Consistent digital brand voice. <strong>Surf Excel:</strong> "Daag Acche Hain" emotional appeal. <strong>Fevicol:</strong> User-generated content contests. <strong>Maggi:</strong> Consumer rights lesson (2015 ban). <strong>Tata Group:</strong> CSR-driven PR strategy.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Model Answer Structure</div>
+<p>1. Define the concept. 2. Explain with framework (TAPIC, APPS-DDG, etc.). 3. Give examples (Indian brands preferred). 4. Compare with related concepts. 5. Conclude with implications for marketers.</p>
+</div>
+<h4>Expected Question Patterns with Marks Distribution</h4>
+<div class="db"><table>
+<thead><tr><th>Question Pattern</th><th>Marks</th><th>How to Answer</th></tr></thead>
+<tbody>
+<tr><td>"Explain the IMC process with examples"</td><td>10</td><td>Define IMC, explain each TAPIC step with Indian brand example, conclude with benefits</td></tr>
+<tr><td>"Compare and contrast advertising and PR"</td><td>8</td><td>Table format comparing 6 dimensions (cost, control, credibility, etc.), integration benefits</td></tr>
+<tr><td>"What are the various consumer sales promotion methods?"</td><td>10</td><td>List all 11 types with descriptions and examples, group by purpose (CISDB)</td></tr>
+<tr><td>"Discuss the legal and ethical issues in IMC"</td><td>8</td><td>Cover ASCI, CPA 2019, ethical issues table, Indian case studies (Maggi, Patanjali)</td></tr>
+<tr><td>"How has digital marketing transformed IMC?"</td><td>10</td><td>Before/after comparison, channel-by-channel analysis, Indian examples (Zomato, Flipkart)</td></tr>
+<tr><td>"Explain media scheduling patterns with examples"</td><td>5</td><td>Define CPFS, give Indian product example for each pattern, visual representation</td></tr>
+<tr><td>"What are the budget methods for promotional planning?"</td><td>8</td><td>PCOAZ with pros/cons table, recommend method for given scenario</td></tr>
+<tr><td>"Describe the consumer movement in India"</td><td>10</td><td>SICCHR rights, CPA 2019 provisions, Indian case studies, IMC implications</td></tr>
+</tbody></table></div>
+
+<h4>Time Management During Exam</h4>
+<ul>
+<li><strong>10-mark question:</strong> Spend 15-18 minutes. Include definition, framework explanation, 2-3 examples, comparison, and conclusion.</li>
+<li><strong>8-mark question:</strong> Spend 12-15 minutes. Include definition, detailed explanation with examples, and brief conclusion.</li>
+<li><strong>5-mark question:</strong> Spend 8-10 minutes. Include definition, key points with examples, and one-line conclusion.</li>
+<li><strong>Always:</strong> Use mnemonics, draw tables where possible, cite Indian examples, and write neatly.</li>
+</ul>
 </div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^="#u"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('h3[id^="u"], .visual-diagram, .case-study, .summary-box, .callout, .unit').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('readingProgress').style.width = p + '%';
+    var u = document.querySelectorAll('.unit');
+    var l = document.querySelectorAll('.sidebar-nav a[href^="#u"]');
+    var c = '';
+    u.forEach(function(e) { if (e.getBoundingClientRect().top < 200) c = e.id; });
+    l.forEach(function(e) { e.classList.toggle('active', e.getAttribute('href') === '#' + c); });
+  });
+})();
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

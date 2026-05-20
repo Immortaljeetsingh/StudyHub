@@ -6,63 +6,94 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="manifest" href="manifest.json">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#d63031cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc,#00d4ff,#d63031);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#d63031;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(214,48,49,.15);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#d63031}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#d63031cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
-.action-bar{display:flex;gap:.5rem;margin-bottom:1rem;flex-wrap:wrap}.btn{padding:.5rem 1rem;border-radius:8px;border:none;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s}.btn-primary{background:rgba(214,48,49,.2);color:#d63031cc;border:1px solid rgba(214,48,49,.3)}.btn-primary:hover{background:rgba(214,48,49,.3)}.btn-success{background:rgba(0,184,148,.2);color:#55efc4;border:1px solid rgba(0,184,148,.3)}.btn-success:hover{background:rgba(0,184,148,.3)}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.summary-box h4{color:#ffd700;font-size:.95rem;margin-bottom:.5rem}.db{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}.db th{background:rgba(214,48,49,.15);color:#d63031;padding:.6rem .8rem;text-align:left;border:1px solid rgba(255,255,255,.08)}.db td{padding:.5rem .8rem;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,184,148,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#00b894;padding-left:1rem}.sidebar a.active{color:#00b894;background:rgba(0,184,148,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(0,184,148,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#00b894;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#00b894,#00b894cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00b894,#00b894cc,#00d4ff,#00b894);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(0,184,148,.08);border-color:#00b894}.callout-example{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-mnemonic{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-tip{background:rgba(255,107,107,.08);border-color:#ff6b6b}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(0,210,255,.06);border-left:4px solid #00d4ff;border:1px solid rgba(0,210,255,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(0,184,148,.15);color:#00b894;border:1px solid rgba(0,184,148,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#00b894}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#00b894;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00b894,#00b894cc);z-index:9999;transition:width .1s;width:0%}.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(0,184,148,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#00b894;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.video-toggle{background:linear-gradient(135deg,#00b894,#00b894cc);color:white;border:none;padding:0.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:0.9rem;margin:1rem 0}.video-section-content{display:none}.video-section-content.active{display:block}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.vd-node{background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem;display:inline-block;margin:0.3rem}.case-study{background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(108,99,255,0.04));border:1px solid rgba(255,215,0,0.2);border-left:4px solid #FFD700;border-radius:8px;padding:1.2rem;margin:1rem 0}.case-study h5{color:#FFD700;margin-bottom:0.5rem;font-weight:600}.fc{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;margin:1rem 0}.fc-s{background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);border-radius:10px;padding:0.6rem 1rem;text-align:center;min-width:100px}.fc-n{font-size:1.2rem;font-weight:700;color:#00b894}.fc-l{font-size:0.8rem;color:rgba(255,255,255,.7)}.fc-a{color:#00b894;font-size:1.4rem}.db{margin:1rem 0;overflow-x:auto}.db table{width:100%;border-collapse:collapse;font-size:.85rem}.db th,.db td{padding:.5rem .75rem;border:1px solid rgba(255,255,255,.1);text-align:left}.db th{background:rgba(0,184,148,.15);color:#00b894;font-weight:600}.db td{color:rgba(255,255,255,.7)}.db tr:nth-child(even){background:rgba(255,255,255,.02)}.action-bar{display:flex;gap:0.5rem;margin:1rem 0}.btn{padding:0.4rem 1rem;border-radius:8px;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.3s;border:none}.btn-primary{background:rgba(0,184,148,0.2);color:#00b894;border:1px solid rgba(0,184,148,0.3)}.btn-primary:hover{background:rgba(0,184,148,0.3)}.btn-success{background:rgba(108,92,231,0.2);color:#6c5ce7;border:1px solid rgba(108,92,231,0.3)}.btn-success:hover{background:rgba(108,92,231,0.3)}.kt{background:rgba(0,184,148,.08);border:1px solid rgba(0,184,148,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}.kt-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#00b894}.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}.animate-on-scroll:nth-child(5){transition-delay:.4s}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc20">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-20'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPC-20</h3></div>
-  <a href="#u1">Unit 1: Business Ethics Overview</a>
-  <a href="#u2">Unit 2: Ethics Theories</a>
-  <a href="#u3">Unit 3: Ethical Dilemmas</a>
-  <a href="#u4">Unit 4: IBS Framework</a>
-  <a href="#u5">Unit 5: CSR Overview</a>
-  <a href="#u6">Unit 6: CSR Strategy</a>
-  <a href="#u7">Unit 7: CSR Global Context</a>
-  <a href="#u8">Unit 8: Ethics & CSR Linkages</a>
-  <a href="#u9">Unit 9: CSR in India</a>
-  <a href="#u10">Unit 10: CSR Legislation</a>
-  <a href="#u11">Unit 11: CSR in PSUs</a>
-  <a href="#u12">Unit 12: CSR Reporting</a>
-  <a href="#u13">Unit 13: CSR Department</a>
-  <a href="#u14">Unit 14: CSR & Sustainability</a>
-</nav>
-<main class="study-content" id="main-content">
-<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
-<div class="study-header"><span class="subject-tag">MMPC-20</span><h1>Business Ethics and CSR</h1>
-<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; 4 Blocks &#x2022; IGNOU MBA</p></div>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-20</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Ethics &amp; Business</a>
+<a href="#u1">Unit 1: Business Ethics Overview</a>
+<a href="#u2">Unit 2: Ethical Theories</a>
+<a href="#u3">Unit 3: Ethical Dilemmas</a>
+<a href="#u4">Unit 4: IBS Framework</a>
+<a href="#block2">Block-02 Evolution of CSR</a>
+<a href="#u5">Unit 5: CSR Overview</a>
+<a href="#u6">Unit 6: Business Strategy in CSR</a>
+<a href="#u7">Unit 7: CSR in Global Context</a>
+<a href="#u8">Unit 8: Ethics-CSR Linkages</a>
+<a href="#block3">Block-03 CSR in India</a>
+<a href="#u9">Unit 9: CSR in Indian Context</a>
+<a href="#u10">Unit 10: CSR Legislations</a>
+<a href="#u11">Unit 11: CSR in PSUs</a>
+<a href="#block4">Block-04 CSR Implementation</a>
+<a href="#u12">Unit 12: CSR Reporting &amp; Auditing</a>
+<a href="#u13">Unit 13: CSR Department Roles</a>
+<a href="#u14">Unit 14: CSR &amp; Sustainable Development</a>
+<a href="quiz-mmpc20.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-20</span><h1>Business Ethics and CSR</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<h2 id="block1">Block-01: Ethics &amp; Business</h2>
 
 <div class="unit" id="u1">
 <h3 id="u1">Unit 1: Business Ethics &#x2014; An Overview</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p><strong>Business Ethics</strong> = Study of business situations, activities, and decisions where issues of right and wrong are addressed (Crane &amp; Matten).</p>
-<p><strong>Law</strong> = Common minimum acceptable standard in any civilized society; codified and enforceable.</p>
-<p><strong>Ethics</strong> = Moral principles guiding behavior; not codified, contextual, and evolving.</p>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Ethics Fundamentals</div>
+<p><strong>Business Ethics:</strong> The prescribed code of conduct for businesses; a set of guidelines for dealing with various procedures ethically.</p>
+<p><strong>"Business ethics begins where the Law ends"</strong> &#x2014; Ethics goes beyond legal minimum requirements.</p>
+<p>Ethics is contextual &#x2014; conditioned by prevailing power structures in society. Globalization increases ethical complexity as corporates are sandwiched between state regulatory agencies and civil society vigilance.</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Ethics vs Law</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Law = Minimum Standard (Codified)</div>
-<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Ethics = Higher Standard (Contextual)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">&quot;Business ethics begins where the Law ends&quot;</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Volkswagen emission scandal (Dieselgate) &#x2014; EPA&#x27;s stringent emission norms led VW to resort to unethical practices, later recalling 11,000 cars. Shows how sustainability pressures can lead to ethical breaches.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;EEL&quot;</strong> = Ethics Evolves from Law (ethics goes beyond what law requires)</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PB0rkltJx0w" title="Business Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ethics vs Law</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/AzHaDKZ-iiI" title="Ethics vs Law" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<h4>Point 1: Ethics vs Law</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Law</th><th>Ethics</th></tr>
+<tr><td>Nature</td><td>Codified, enforceable</td><td>Not codified, contextual</td></tr>
+<tr><td>Standard</td><td>Common minimum acceptable</td><td>Goes beyond law</td></tr>
+<tr><td>Enforcement</td><td>Legal penalties</td><td>Social sanctions, reputation</td></tr>
+<tr><td>Scope</td><td>Specific rules</td><td>Broad principles</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Volkswagen's emission scandal (Dieselgate)</strong> &#x2014; the EPA's stringent emission norms led VW to resort to unethical practices, later recalling 11,000 cars. Shows how sustainability pressures can lead to ethical breaches.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"EEL"</strong> &#x2014; Ethics Evolves from Law (ethics goes beyond what law requires)</p>
+</div>
+<h4>Point 2: Why Business Ethics Matters</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Deeper Understanding</div>
+<p><strong>Crane &amp; Matten Definition:</strong> Business ethics is the study of business situations, activities, and decisions where issues of right and wrong are addressed.</p>
+<p>Ethics is contextual &#x2014; conditioned by prevailing power structures in society. What is considered ethical may vary across cultures and time periods.</p>
+<p><strong>Globalization Impact:</strong> Corporates are sandwiched between state regulatory agencies and civil society vigilance. Supply chain ethics across borders adds complexity.</p>
+<p><strong>Sustainability Link:</strong> Environmental concerns are driving new regulatory frameworks. Companies face pressure to balance profit with planet.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Ethics goes beyond law &#x2014; contextual and evolving</li>
-<li>Relevance in globalization: corporates between state and civil society</li>
-<li>Sustainability driving regulatory frameworks</li>
+<li>Business ethics begins where the Law ends</li>
+<li>Ethics is contextual, evolving, not codified</li>
+<li>Globalization increases ethical complexity</li>
+<li>Sustainability concerns are driving new ethical frameworks</li>
 </ul></div>
 </div>
 
@@ -70,28 +101,46 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u2">Unit 2: Concepts and Theories of Business Ethics</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Theories</div>
-<p><strong>Consequentialism (Teleology):</strong> Actions judged by outcomes/consequences.</p>
-<p><strong>Deontology (Kant):</strong> Actions judged by inherent rightness, regardless of outcomes. Categorical Imperative &#x2014; act only according to rules you could will to be universal laws.</p>
-<p><strong>Utilitarianism (Bentham/Mill):</strong> Greatest good for greatest number.</p>
-<p><strong>Virtue Ethics (Aristotle):</strong> Focus on character and moral virtues.</p>
-<p><strong>Social Contract Theory (Rawls):</strong> Justice as fairness behind &quot;veil of ignorance.&quot;</p>
-<p><strong>Stakeholder Theory (Freeman):</strong> Balance interests of all stakeholders.</p>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Ethical Theories Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4d5e6f7g8hI" title="Ethical Theories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<h4>Point 1: Two Schools of Ethical Theories</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ethical Theories (DUTCH)</div>
+<table>
+<tr><th>Theory</th><th>Principle</th><th>Application</th></tr>
+<tr><td><strong>Utilitarianism</strong> (Bentham/Mill)</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td></tr>
+<tr><td><strong>Deontology</strong> (Kant)</td><td>Duty-based; categorical imperative</td><td>Compliance, contracts</td></tr>
+<tr><td><strong>Virtue Ethics</strong> (Aristotle)</td><td>Character and moral virtues</td><td>Leadership by example</td></tr>
+<tr><td><strong>Social Contract</strong> (Rawls)</td><td>Justice as fairness</td><td>Behind "veil of ignorance"</td></tr>
+<tr><td><strong>Stakeholder Theory</strong> (Freeman)</td><td>Balance all stakeholder interests</td><td>Corporate governance</td></tr>
+</table>
+<p><strong>Consequentialism (Teleology):</strong> Actions judged by outcomes/consequences</p>
+<p><strong>Non-consequentialism (Deontology):</strong> Actions judged by inherent rightness, regardless of outcomes</p>
+<p><strong>Categorical Imperative:</strong> Act only according to rules you could will to be universal laws (Kant)</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Ethical Theories Spectrum</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Consequentialism (Outcomes matter)</div>
-<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Deontology (Duty matters)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Virtue Ethics (Character matters)</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Pharma company pricing AIDS drugs affordably in Africa (utilitarian approach) vs. maintaining high prices to fund R&amp;D (consequentialist approach to long-term innovation).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;DUTCH&quot;</strong> = Deontology, Utilitarianism, Teleology, Character (virtue), Hypothetical (social contract)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Compare and contrast teleological vs deontological approaches with examples. Examiners love this comparison. Always mention Kant's categorical imperative.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>A pharmaceutical company pricing AIDS drugs affordably in Africa (utilitarian approach) vs. maintaining high prices to fund R&amp;D (consequentialist approach to long-term innovation).</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"DUTCH"</strong> &#x2014; Deontology, Utilitarianism, Teleology, Character (virtue), Hypothetical (social contract)</p>
+</div>
+<h4>Point 2: Ethical Relativism</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ethical Relativism</div>
+<p><strong>Ethical Relativism:</strong> Ethics vary by culture and context. What is considered ethical in one culture may not be in another.</p>
+<p><strong>Stakeholder Theory (Freeman):</strong> Balance interests of all stakeholders &#x2014; employees, customers, suppliers, community, environment.</p>
+<p><strong>Freeman's Four Propositions:</strong> Separation Fallacy, Integration Thesis, Open Question Argument, Responsibility Principle.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Two schools: Consequentialism (outcomes) vs Non-consequentialism (duty)</li>
-<li>Compare teleological vs deontological with examples &#x2014; examiners love this</li>
-<li>Stakeholder Theory balances ALL interests</li>
+<li>Consequentialism (outcomes) vs Non-consequentialism (inherent rightness)</li>
+<li>5 major theories: Utilitarianism, Deontology, Virtue Ethics, Social Contract, Stakeholder</li>
+<li>Ethical relativism: ethics vary by culture and context</li>
+<li>Freeman's stakeholder theory balances all stakeholder interests</li>
 </ul></div>
 </div>
 
@@ -99,17 +148,40 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u3">Unit 3: Ethical Dilemmas</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p><strong>Ethical Dilemma</strong> = Situation where all available options are ethically problematic.</p>
-<p><strong>Ethical Navigation Wheel</strong> (Kvalnes &amp; Ovarenget): Framework for navigating dilemmas.</p>
-<p><strong>Moral Compass</strong> (Lynn Paine): Guide for ethical decision-making.</p>
-<p><strong>Social Accounting</strong> = Measuring and reporting social and environmental impact.</p>
+<h4>Point 1: Ethical Dilemma Frameworks</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Frameworks</div>
+<p><strong>Ethical Navigation Wheel</strong> (Kvalnes &amp; Ovarenget): Framework for navigating dilemmas systematically</p>
+<p><strong>Moral Compass</strong> (Lynn Paine): Guide for ethical decision-making based on moral principles</p>
+<p><strong>Ethical Check Points</strong> (Rushworth Kidder): Systematic approach to resolving dilemmas</p>
+<p><strong>Social Accounting:</strong> Measuring and reporting social and environmental impact</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Online gaming companies designing addictive games &#x2014; balancing profit maximization against potential harm to youth mental health. Is it ethical to create products designed to be addictive?</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;NICE&quot;</strong> = Navigation wheel, Identify stakeholders, Check points, Evaluate alternatives</p></div>
+<div class="br"><span class="sb s-b">Ethical Navigation Wheel</span><span class="sb s-b">Moral Compass</span><span class="sb s-b">Ethical Check Points</span><span class="sb s-b">Social Accounting</span></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Present ethical dilemmas using a structured framework: identify stakeholders, apply ethical theories, evaluate alternatives, recommend action.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>Online gaming companies designing addictive games &#x2014; balancing profit maximization against potential harm to youth mental health. Is it ethical to create products designed to be addictive?</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"NICE"</strong> &#x2014; Navigation wheel, Identify stakeholders, Check points, Evaluate alternatives</p>
+</div>
+<h4>Point 2: Types of Ethical Dilemmas</h4>
+<div class="db"><table>
+<tr><th>Type</th><th>Description</th><th>Example</th></tr>
+<tr><td><strong>Truth vs Loyalty</strong></td><td>Telling truth vs being loyal to organization</td><td>Whistleblowing on company fraud</td></tr>
+<tr><td><strong>Individual vs Community</strong></td><td>Personal gain vs community welfare</td><td>Factory pollution vs jobs</td></tr>
+<tr><td><strong>Short-term vs Long-term</strong></td><td>Immediate benefit vs future consequences</td><td>Cost-cutting vs quality</td></tr>
+<tr><td><strong>Justice vs Mercy</strong></td><td>Fair punishment vs compassion</td><td>Employee termination for misconduct</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Social Accounting</div>
+<p><strong>Social Accounting:</strong> The process of communicating the social and environmental effects of an organization's actions to particular interest groups and to society at large.</p>
+<p>It measures triple bottom line performance: economic, social, and environmental impact.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Use structured framework: identify stakeholders, apply theories, evaluate alternatives, recommend</li>
-<li>Link between ethical dilemmas, stakeholder management, and social audit</li>
+<li>Ethical dilemma = all options are ethically problematic</li>
+<li>Use structured frameworks: Navigation Wheel, Moral Compass, Check Points</li>
+<li>4 types: Truth vs Loyalty, Individual vs Community, Short-term vs Long-term, Justice vs Mercy</li>
+<li>Social Accounting measures triple bottom line performance</li>
 </ul></div>
 </div>
 
@@ -117,43 +189,93 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u4">Unit 4: Ethics in Business (IBS Framework)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; IBS Framework</div>
-<p><strong>Individual Level:</strong> Personal values, moral development, cognitive moral development.</p>
-<p><strong>Business Level:</strong> Organizational culture, ethical climate, codes of conduct.</p>
-<p><strong>Society Level:</strong> Social norms, cultural values, legal frameworks.</p>
-<p><strong>Corporate Governance</strong> = System of rules, practices, and processes by which a company is directed and controlled.</p>
-</div>
-<div class="visual-diagram"><h5>&#x1F4CA; Shareholder vs Stakeholder Debate</h5>
+<h4>Point 1: IBS Framework</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; IBS Framework (Individual-Business-Society)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Friedman: Maximize shareholder value</div>
-<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">VS</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Freeman: Balance ALL stakeholder interests</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>Individual Level</strong><br><small>Personal values, moral development, cognitive moral development</small></div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4)"><strong>Business Level</strong><br><small>Organizational culture, ethical climate, codes of conduct</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Society Level</strong><br><small>Social norms, cultural values, legal frameworks</small></div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The Enron scandal (2001) &#x2014; failure of corporate governance, auditor independence, and ethical leadership led to one of the largest corporate bankruptcies in history.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;IBS&quot;</strong> = Individual, Business, Society (three levels of ethical analysis)</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<p><strong>Corporate Governance:</strong> System of rules, practices, and processes by which a company is directed and controlled</p>
+<p><strong>Code of Ethics:</strong> Formal document outlining the principles and values that guide an organization's behavior</p>
+<p><strong>Stakeholder:</strong> Any individual or group that can affect or is affected by the achievement of the organization's objectives</p>
+</div>
+<h4>Point 2: Shareholder vs Stakeholder</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Friedman (Shareholder)</th><th>Freeman (Stakeholder)</th></tr>
+<tr><td>Goal</td><td>Maximize shareholder value</td><td>Balance ALL stakeholder interests</td></tr>
+<tr><td>Quote</td><td>"Business of business is to do business"</td><td>Purpose connected to all affected parties</td></tr>
+<tr><td>Focus</td><td>Profit only</td><td>Employees, customers, community, environment</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>The <strong>Enron scandal</strong> (2001) &#x2014; failure of corporate governance, auditor independence, and ethical leadership led to one of the largest corporate bankruptcies in history.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"IBS"</strong> &#x2014; Individual, Business, Society (three levels of ethical analysis)</p>
+</div>
+<h4>Point 3: Individual Level &#x2014; Moral Development</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cognitive Moral Development (Kohlberg)</div>
+<p><strong>Level 1 &#x2014; Pre-conventional:</strong> Self-interest, avoiding punishment</p>
+<p><strong>Level 2 &#x2014; Conventional:</strong> Conforming to social norms, law and order</p>
+<p><strong>Level 3 &#x2014; Post-conventional:</strong> Universal ethical principles, social contract</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>IBS = Individual, Business, Society levels</li>
-<li>Freeman&#x27;s 4 propositions: Separation Fallacy, Integration Thesis, Open Question, Responsibility</li>
-<li>Code of Ethics = formal document outlining ethical standards</li>
+<li>IBS Framework: Individual, Business, Society levels</li>
+<li>Friedman (shareholder) vs Freeman (stakeholder) debate</li>
+<li>Corporate governance bridges ethics and CSR</li>
+<li>Kohlberg's 3 levels of moral development</li>
 </ul></div>
 </div>
+
+<h2 id="block2">Block-02: Evolution of CSR</h2>
 
 <div class="unit" id="u5">
 <h3 id="u5">Unit 5: CSR &#x2014; An Overview</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
-<p><strong>CSR</strong> = Company&#x27;s commitment to managing social, environmental, and economic effects responsibly and in line with public expectations.</p>
-<p><strong>Corporate Citizenship</strong> = Relationship a company develops with its stakeholders.</p>
-<p><strong>Ethical Consumerism</strong> = Purchase decisions based on human rights, social justice, environment.</p>
-<p><strong>Socially Responsible Investment (SRI)</strong> = Investment considering financial returns AND social/environmental impact.</p>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is CSR?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5e6f7g8h9iJ" title="CSR Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<h4>Point 1: CSR Evolution</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1950s</div><div class="fc-l">Howard Bowen<br><small>Social obligations</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">1970s</div><div class="fc-l">Archie Carroll<br><small>CSR Pyramid</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">1984</div><div class="fc-l">Freeman<br><small>Stakeholder Theory</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2013</div><div class="fc-l">India<br><small>Mandatory CSR</small></div></div>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>BP Amoco shareholders supporting climate change resolutions; Greenpeace boycott of Shell; Coca-Cola pesticide controversy in India (CSE report 2003).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;SEE&quot;</strong> = Stakeholders, Ethics, Environment (three pillars of business ethics)</p></div>
+<h4>Point 2: Stakeholder Activism</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Types of Activism</div>
+<p><strong>Consumer Activism:</strong> Boycotts, ethical purchasing decisions</p>
+<p><strong>CSO Activism:</strong> NGO campaigns, regulatory pressure from civil society</p>
+<p><strong>Shareholder Activism:</strong> Proxy resolutions, dialogue with management</p>
+<p><strong>Employee Activism:</strong> Whistleblowing, internal advocacy for change</p>
+</div>
+<div class="br"><span class="sb s-b">Consumer Activism</span><span class="sb s-b">CSO Activism</span><span class="sb s-b">Shareholder Activism</span><span class="sb s-b">Employee Activism</span></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Compare shareholder vs stakeholder views using the debate table. Mention Milton Friedman vs Edward Freeman explicitly.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>BP Amoco</strong> shareholders supporting climate change resolutions; <strong>Greenpeace</strong> boycott of Shell over oil spills; <strong>Coca-Cola</strong> pesticide controversy in India (CSE report 2003).</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"SEE"</strong> &#x2014; Stakeholders, Ethics, Environment (three pillars of business ethics)</p>
+</div>
+<h4>Point 3: Key CSR Concepts</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Important Definitions</div>
+<p><strong>Corporate Citizenship:</strong> The extent to which businesses meet legal, ethical, and economic responsibilities as established by shareholders.</p>
+<p><strong>Ethical Consumerism:</strong> Consumers making purchasing decisions based on human rights, social justice, and environmental concerns.</p>
+<p><strong>Socially Responsible Investment (SRI):</strong> Investment considering financial returns AND social/environmental impact.</p>
+<p><strong>Howard Bowen (1953):</strong> "Social obligations of businessmen" &#x2014; first formal definition of CSR.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Evolution from Shareholder Primacy to Stakeholder Primacy</li>
-<li>4 types of activism: Consumer, CSO, Shareholder, Employee</li>
-<li>Compare Friedman vs Freeman explicitly in exam</li>
+<li>CSR evolved from voluntary (1950s) to mandatory (India, 2013)</li>
+<li>4 types of activism driving CSR: Consumer, CSO, Shareholder, Employee</li>
+<li>Corporate Citizenship = meeting legal, ethical, economic responsibilities</li>
+<li>Ethical Consumerism and SRI are growing trends</li>
 </ul></div>
 </div>
 
@@ -161,18 +283,32 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u6">Unit 6: Business Strategy in CSR</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
+<h4>Point 1: Peripheral vs Integrated CSR</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Peripheral Approach</th><th>Integrated Approach</th></tr>
+<tr><td>CSR Activities</td><td>Separated from core business</td><td>Embedded in organizational culture</td></tr>
+<tr><td>Examples</td><td>Charities, donations</td><td>Core competencies, strategic decisions</td></tr>
+<tr><td>Impact</td><td>Limited, short-term</td><td>Significant, sustainable</td></tr>
+</table></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p><strong>Peripheral Approach:</strong> CSR separated from core business (charities, donations).</p>
-<p><strong>Integrated Approach:</strong> CSR embedded in organizational culture and core competencies.</p>
-<p><strong>Cause-Related Marketing (CRM):</strong> Linking philanthropy with marketing for reputational gains.</p>
-<p><strong>Shared Value (Porter &amp; Kramer):</strong> Creating economic value while addressing societal needs.</p>
-<p><strong>License to Operate:</strong> Social license from communities, not just government permits.</p>
+<p><strong>Cause-Related Marketing (CRM):</strong> Linking corporate philanthropy with marketing to generate reputational gains</p>
+<p><strong>License to Operate:</strong> Social license from communities, not just government permits</p>
+<p><strong>Shared Value:</strong> Creating economic value while addressing societal needs (Porter &amp; Kramer)</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Cisco Networking Academy trained computer network administrators, minimizing growth constraints while providing job opportunities. Toyota Prius became Toyota&#x27;s third best-selling vehicle through ethical branding.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;CROSS&quot;</strong> = Cost reduction, Reputation, Opportunities, Synergistic value, Stakeholder value</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Distinguish between peripheral and integrated CSR approaches. Use Porter &amp; Kramer's shared value framework for strategic CSR questions.</p>
+</div>
+<h4>Point 2: 5 Approaches to CSR Strategy</h4>
+<div class="br"><span class="sb s-b">Cost &amp; Risk Reduction</span><span class="sb s-b">Competitive Advantage</span><span class="sb s-b">Reputation &amp; Legitimacy</span><span class="sb s-b">Synergistic Value</span><span class="sb s-b">Multi-Stakeholder Value</span></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Cisco Networking Academy</strong> &#x2014; trained computer network administrators, minimizing growth constraints while providing job opportunities. <strong>Toyota Prius</strong> became Toyota's third best-selling vehicle through ethical branding.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"CROSS"</strong> &#x2014; Cost reduction, Reputation, Opportunities, Synergistic value, Stakeholder value</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>5 CSR strategy approaches: Cost/risk reduction, Competitive advantage, Reputation, Synergistic value, Multi-stakeholder value</li>
-<li>Use Porter &amp; Kramer&#x27;s shared value framework for strategic CSR questions</li>
+<li>Peripheral (charities) vs Integrated (embedded in strategy) CSR</li>
+<li>Porter &amp; Kramer's shared value framework</li>
 </ul></div>
 </div>
 
@@ -180,27 +316,41 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u7">Unit 7: CSR in Global Context</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Frameworks</div>
-<p><strong>SDGs:</strong> 17 UN Sustainable Development Goals for 2030.</p>
-<p><strong>Triple Bottom Line (Elkington):</strong> People, Planet, Profit.</p>
-<p><strong>GRI:</strong> Global Reporting Initiative standards for sustainability reporting.</p>
-<p><strong>ISO 26000:</strong> International standard for social responsibility.</p>
+<h4>Point 1: SDGs and CSR</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Sustainable Development Goals</div>
+<p><strong>17 UN goals</strong> for sustainable development by 2030. CSR and SDGs are closely related &#x2014; SDGs provide framework for CSR activities internationally.</p>
+<p><strong>GRI (Global Reporting Initiative):</strong> International standards for sustainability reporting</p>
+<p><strong>ISO 26000:</strong> International standard for social responsibility</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; 4 Types of Social Activism</h5>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Link CSR initiatives to specific SDGs. For example, promoting education = SDG 4, gender equality = SDG 5, environmental sustainability = SDGs 13, 14, 15.</p>
+</div>
+<h4>Point 2: Triple Bottom Line</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; Triple Bottom Line (Elkington)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Consumer Activism (Boycotts, ethical purchasing)</div>
-<div style="font-size:1.2rem;color:rgba(214,48,49,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">CSO Activism (NGO campaigns)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Shareholder Activism (Proxy resolutions)</div>
-<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Employee Activism (Whistleblowing)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)">&#x1F465; <strong>People</strong> (Social Impact)</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">&#x1F30D; <strong>Planet</strong> (Environmental)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)">&#x1F4B0; <strong>Profit</strong> (Financial)</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Honey Care Africa &#x2014; unique business model partnering with rural farmers, microfinance institutions, and NGOs to create sustainable income for 7000+ workers while protecting biodiversity.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;SDG 17&quot;</strong> = 17 Sustainable Development Goals; <strong>&quot;4 Activisms&quot;</strong> = Consumer, CSO, Shareholder, Employee</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Honey Care Africa</strong> &#x2014; unique business model partnering with rural farmers, microfinance institutions, and NGOs to create sustainable income for 7000+ workers while protecting biodiversity.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"SDG 17"</strong> = 17 Sustainable Development Goals; <strong>"4 Activisms"</strong> = Consumer, CSO, Shareholder, Employee</p>
+</div>
+<h4>Point 3: CSR and Conflict Zones</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; CSR in Difficult Contexts</div>
+<p><strong>CSR helps reduce conflicts</strong> and promote harmony in affected zones by:</p>
+<p>&#x2022; Creating employment opportunities for local communities</p>
+<p>&#x2022; Supporting education and healthcare infrastructure</p>
+<p>&#x2022; Building trust between corporations and local stakeholders</p>
+<p>&#x2022; Promoting sustainable development in conflict-affected areas</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Link CSR initiatives to specific SDGs (education = SDG 4, gender = SDG 5, environment = SDGs 13-15)</li>
-<li>Triple Bottom Line = People, Planet, Profit</li>
+<li>17 SDGs provide framework for global CSR</li>
+<li>Triple Bottom Line: People + Planet + Profit</li>
+<li>GRI and ISO 26000 standards for CSR reporting</li>
+<li>CSR helps reduce conflicts in affected zones</li>
 </ul></div>
 </div>
 
@@ -208,43 +358,88 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u8">Unit 8: Business Ethics and CSR &#x2014; Linkages</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p>Ethics and CSR are intertwined &#x2014; ethics provides the moral foundation for CSR.</p>
-<p>Ethics = internal behavior; CSR = external impact on society.</p>
-<p><strong>ESG Framework:</strong> Environmental, Social, Governance criteria connecting ethics, CSR, and corporate governance.</p>
-<p><strong>Social Audit:</strong> Systematic evaluation of organization&#x27;s social impact and ethical performance.</p>
+<h4>Point 1: ESG Framework</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; ESG Framework</h5>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>Environmental</strong><br><small>Climate, waste, resources</small></div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4)"><strong>Social</strong><br><small>People, community, labor</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Governance</strong><br><small>Board, transparency, ethics</small></div>
+</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ESG Components</div>
+<p><strong>Environmental:</strong> Climate change, carbon emissions, waste management, resource depletion</p>
+<p><strong>Social:</strong> Human rights, labor standards, community engagement, diversity &amp; inclusion</p>
+<p><strong>Governance:</strong> Board composition, executive compensation, transparency, anti-corruption</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Abbott Laboratories &#x2014; strict code of conduct, anti-corruption stance, community health programs in Tanzania, environmental sustainability initiatives.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;ESG&quot;</strong> = Environmental, Social, Governance (the three pillars connecting ethics and CSR)</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>ESG framework connects ethics, CSR, and corporate governance. Use it to demonstrate understanding of modern CSR evaluation.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Abbott Laboratories</strong> &#x2014; strict code of conduct, anti-corruption stance, community health programs in Tanzania, environmental sustainability initiatives.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"ESG"</strong> &#x2014; Environmental, Social, Governance (the three pillars connecting ethics and CSR)</p>
+</div>
+<h4>Point 2: Ethical Leadership</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ethical Leadership</div>
+<p><strong>Ethical Leadership:</strong> Leaders setting the tone for ethical organizational culture through their actions and decisions.</p>
+<p><strong>Social Audit:</strong> A systematic evaluation of an organization's social impact and ethical performance.</p>
+<p><strong>Corporate Governance:</strong> The system of rules, practices, and processes by which a company is directed and controlled. It bridges ethics and CSR.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Corporate governance bridges ethics and CSR</li>
-<li>ESG as the bridge concept for modern evaluation</li>
+<li>Ethics = internal behavior; CSR = external impact</li>
+<li>ESG bridges ethics, CSR, and corporate governance</li>
+<li>Ethical leadership sets the tone for organizational culture</li>
+<li>Social Audit evaluates social impact of company's activities</li>
 </ul></div>
 </div>
+
+<h2 id="block3">Block-03: CSR in India</h2>
 
 <div class="unit" id="u9">
 <h3 id="u9">Unit 9: CSR in Indian Context</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Phases of CSR in India</div>
-<p><strong>Phase 1 (1850-1914):</strong> Charity &amp; Philanthropy driven by culture, religion (Tatas, Birlas, Godrej).</p>
-<p><strong>Phase 2 (1914-1960):</strong> Social Development driven by Gandhian Trusteeship theory.</p>
-<p><strong>Phase 3 (1960-1980):</strong> Mixed Economy, License Raj, public enterprises.</p>
-<p><strong>Phase 4 (1980-present):</strong> Interface between philanthropic and business approaches, liberalization.</p>
-<p>India = First country to mandate CSR by law (2013).</p>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CSR in India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6f7g8h9i0jK" title="CSR India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<h4>Point 1: 4 Phases of CSR in India</h4>
+<div class="db"><table>
+<tr><th>Phase</th><th>Period</th><th>Focus</th><th>Key Drivers</th></tr>
+<tr><td>Phase 1</td><td>1850-1914</td><td>Charity &amp; Philanthropy</td><td>Culture, religion, traditions (Tatas, Birlas)</td></tr>
+<tr><td>Phase 2</td><td>1914-1960</td><td>Social Development</td><td>Gandhian Trusteeship theory</td></tr>
+<tr><td>Phase 3</td><td>1960-1980</td><td>Mixed Economy</td><td>State-led development, License Raj</td></tr>
+<tr><td>Phase 4</td><td>1980-present</td><td>Interface</td><td>Liberalization, philanthropic + business</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key CSR Models (TERI)</div>
+<p><strong>Ethical Model:</strong> Gandhian Trusteeship &#x2014; wealth should be used for social good</p>
+<p><strong>Statist Model:</strong> Nehru's state ownership approach</p>
+<p><strong>Liberal Model:</strong> Friedman's approach &#x2014; maximize profits within law</p>
+<p><strong>Stakeholder Model:</strong> Freeman's approach &#x2014; welfare of all stakeholders</p>
 </div>
-<table class="db"><thead><tr><th>Model</th><th>Basis</th><th>Key Feature</th></tr></thead><tbody>
-<tr><td><strong>Ethical</strong></td><td>Gandhian Trusteeship</td><td>Surplus wealth for society</td></tr>
-<tr><td><strong>Statist</strong></td><td>Nehru&#x27;s Socialism</td><td>State ownership, legal requirements</td></tr>
-<tr><td><strong>Liberal</strong></td><td>Milton Friedman</td><td>Maximize profits within rules</td></tr>
-<tr><td><strong>Stakeholder</strong></td><td>Edward Freeman</td><td>Welfare of all stakeholders</td></tr>
-</tbody></table>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Chemicals Society for Rural Development (1980) &#x2014; 30% on wildlife conservation. Infosys Foundation (1996) &#x2014; social innovation awards. HUL&#x27;s Project Shakti &#x2014; empowering rural women as entrepreneurs.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;PENS&quot;</strong> = Phases (4), Ethical model, NVGs, Statist/Liberal/Stakeholder models</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>India is the FIRST country to mandate CSR by law (Companies Act 2013, Section 135). Always mention this fact in exam answers.</p>
+</div>
+<h4>Point 2: 4 Models of CSR in India (TERI)</h4>
+<div class="db"><table>
+<tr><th>Model</th><th>Principle</th><th>Proponent</th></tr>
+<tr><td>Ethical</td><td>Gandhian Trusteeship</td><td>Gandhi</td></tr>
+<tr><td>Statist</td><td>State ownership</td><td>Nehru</td></tr>
+<tr><td>Liberal</td><td>Maximize profits within law</td><td>Friedman</td></tr>
+<tr><td>Stakeholder</td><td>Welfare of all stakeholders</td><td>Freeman</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Tata Chemicals Society for Rural Development (TCSR, 1980)</strong> &#x2014; 30% of funds spent on wildlife conservation. <strong>Infosys Foundation (1996)</strong> &#x2014; social innovation awards, water body restoration. <strong>HUL's Project Shakti</strong> &#x2014; empowering rural women as entrepreneurs.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"PENS"</strong> &#x2014; Phases (4), Ethical model, National Voluntary Guidelines, Statist/Liberal/Stakeholder models</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>4 Phases: Charity &#x2192; Social Dev &#x2192; Mixed Economy &#x2192; Business Integration</li>
-<li>4 Models: Ethical (Gandhi), Statist (Nehru), Liberal (Friedman), Stakeholder (Freeman)</li>
-<li>NVGs = 9 principles for social, environmental, economic responsibilities</li>
+<li>4 phases: Charity &#x2192; Social Development &#x2192; Mixed Economy &#x2192; Interface</li>
+<li>4 models: Ethical, Statist, Liberal, Stakeholder</li>
+<li>India = first country to mandate CSR by law</li>
 </ul></div>
 </div>
 
@@ -252,19 +447,37 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u10">Unit 10: CSR Legislations and Policy Guidelines</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
+<h4>Point 1: Section 135 &#x2014; The 2-3-5 Rule</h4>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Companies Act 2013, Section 135</div>
-<p><strong>Threshold (any one):</strong> Net worth &#x2265; &#x20B9;500 Cr OR Turnover &#x2265; &#x20B9;1,000 Cr OR Net profit &#x2265; &#x20B9;5 Cr.</p>
-<p><strong>2% Rule:</strong> Must spend 2% of average net profits of last 3 years on CSR.</p>
-<p><strong>CSR Committee:</strong> Minimum 3 directors, at least 1 independent director.</p>
-<p><strong>Schedule VII:</strong> Education, healthcare, environment, gender equality, rural development, etc.</p>
-<p><strong>2021 Amendments:</strong> Admin overheads cap (5%), impact assessment, CSR-1 registration, excess spend carry-forward (3 years).</p>
+<p><strong>Threshold Criteria (any one triggers CSR obligation):</strong></p>
+<div class="br"><span class="sb s-b">Net worth &#x2265; &#x20B9;500 crore</span><span class="sb s-b">Turnover &#x2265; &#x20B9;1,000 crore</span><span class="sb s-b">Net profit &#x2265; &#x20B9;5 crore</span></div>
+<p><strong>2% Rule:</strong> Must spend 2% of average net profits of last 3 years on CSR</p>
+<p><strong>CSR Committee:</strong> Minimum 3 directors, at least 1 independent director</p>
 </div>
-<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Rule</div><p><strong>&quot;2-3-5 Rule&quot;</strong> = 2% of profits, 3-year average, &#x20B9;5 Cr net profit threshold. India = first country to give statutory recognition to CSR.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;2-3-5 Rule&quot;</strong> = 2% of profits, 3-year average, &#x20B9;5 Cr threshold; <strong>&quot;Section 135&quot;</strong> = CSR section</p></div>
+<h4>Point 2: Schedule VII Activities</h4>
+<div class="br"><span class="sb s-b">Education</span><span class="sb s-b">Healthcare</span><span class="sb s-b">Environment</span><span class="sb s-b">Gender Equality</span><span class="sb s-b">Rural Development</span><span class="sb s-b">Swachh Bharat</span></div>
+<h4>Point 3: 2021 Amendments</h4>
+<div class="br"><span class="sb s-b">Admin overheads cap (5%)</span><span class="sb s-b">Impact assessment</span><span class="sb s-b">CSR-1 registration</span><span class="sb s-b">Excess spend carry-forward (3 years)</span></div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: India's Unique CSR Law</h5>
+<p>India made history by becoming the first country to give statutory recognition to CSR in corporate legislation. The CSR provisions evolved from voluntary guidelines (2009) to mandatory provisions (2013) to strengthened rules (2021). India is one of ONLY 3 countries with mandatory CSR (along with Mauritius and one other).</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"2-3-5 Rule"</strong> &#x2014; 2% of profits, 3-year average, &#x20B9;5 Cr net profit threshold</p>
+</div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Section 135 of Companies Act 2013 is the most examable topic in CSR. Always mention the 2-3-5 Rule and Schedule VII. India is one of ONLY 3 countries with mandatory CSR.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 2021 Amendments</div>
+<p><strong>Admin overheads:</strong> Capped at 5% of total CSR expenditure</p>
+<p><strong>Impact assessment:</strong> Required for companies with CSR obligation &#x2265; &#x20B9;10 crore</p>
+<p><strong>CSR-1 registration:</strong> Required for implementing agencies</p>
+<p><strong>Excess spend:</strong> Can be set off against CSR obligations for next 3 years</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Memorize the 2-3-5 Rule and Section 135</li>
-<li>Schedule VII = list of approved CSR activities</li>
-<li>Unspent amount must be transferred to specified fund within 6 months</li>
+<li>Section 135: 2% of avg net profits for eligible companies</li>
+<li>Threshold: &#x20B9;500Cr net worth OR &#x20B9;1000Cr turnover OR &#x20B9;5Cr profit</li>
+<li>India = first country with mandatory CSR law</li>
 </ul></div>
 </div>
 
@@ -272,35 +485,70 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u11">Unit 11: CSR in Public Sector Units (PSUs)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p><strong>CPSEs</strong> = Central Public Sector Enterprises with specific CSR guidelines from DPE.</p>
-<p><strong>60% Rule:</strong> 60% of annual CSR expenditure required for thematic programs.</p>
-<p><strong>112 Aspirational Districts</strong> identified by NITI Aayog for priority CSR intervention.</p>
-<p>School education and healthcare identified as focus themes.</p>
+<h4>Point 1: CPSE-Specific Guidelines</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; CPSE CSR Rules</div>
+<p><strong>60%</strong> of annual CSR expenditure required for thematic programs</p>
+<p><strong>112 aspirational districts</strong> identified by NITI Aayog for priority</p>
+<p>School education and healthcare identified as focus themes</p>
+<p><strong>Separate guidelines</strong> from Department of Public Enterprises (DPE)</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Mission 2007 &#x2014; partnership of 180 partners (NASSCOM Foundation, Microsoft India, ICRISAT) to provide IT skills and services including micro-credit and disaster management.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;60-112&quot;</strong> = 60% of CSR for thematic programs, 112 aspirational districts</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Know the difference between private company CSR (Section 135) and CPSE CSR (DPE guidelines). Both have similar thresholds but different focus areas.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Mission 2007</strong> &#x2014; partnership of 180 partners (NASSCOM Foundation, Microsoft India, ICRISAT) to provide IT skills and services at individual and societal levels.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"60-112"</strong> &#x2014; 60% of CSR for thematic programs, 112 aspirational districts</p>
+</div>
+<h4>Point 2: CPSE vs Private Sector CSR</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>CPSE CSR</th><th>Private Sector CSR</th></tr>
+<tr><td><strong>Governing Law</strong></td><td>DPE Guidelines</td><td>Companies Act 2013, Section 135</td></tr>
+<tr><td><strong>Focus Areas</strong></td><td>Thematic programs (education, healthcare)</td><td>Schedule VII activities</td></tr>
+<tr><td><strong>Aspirational Districts</strong></td><td>112 districts prioritized</td><td>No specific mandate</td></tr>
+<tr><td><strong>Committee</strong></td><td>Board-level committee</td><td>Minimum 3 directors, 1 independent</td></tr>
+</table></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>CPSE-specific guidelines separate from private sector</li>
-<li>Thematic approach and aspirational districts focus</li>
+<li>CPSEs have separate CSR guidelines from DPE</li>
+<li>60% for thematic programs, 112 aspirational districts</li>
+<li>CPSE CSR differs from private sector CSR in focus and governance</li>
 </ul></div>
 </div>
+
+<h2 id="block4">Block-04: CSR Implementation</h2>
 
 <div class="unit" id="u12">
 <h3 id="u12">Unit 12: CSR Reporting Process &amp; Auditing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p><strong>CSR Reporting:</strong> Mandatory annual report on CSR activities as part of Board&#x27;s Report.</p>
-<p><strong>BRR:</strong> Business Responsibility Reporting &#x2014; 9 principles for listed companies.</p>
-<p><strong>CSR Audit:</strong> Verifies compliance with Companies Act provisions.</p>
-<p><strong>Impact Assessment:</strong> Required for companies with average CSR obligation &#x2265; &#x20B9;10 crore (2021 amendment).</p>
+<h4>Point 1: CSR Reporting Elements</h4>
+<div class="br"><span class="sb s-b">CSR Policy</span><span class="sb s-b">Committee Composition</span><span class="sb s-b">Expenditure Details</span><span class="sb s-b">Unspent Amount</span><span class="sb s-b">Impact Assessment</span></div>
+<h4>Point 2: BRR (Business Responsibility Reporting)</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; BRR Framework</div>
+<p><strong>9 principles</strong> for listed companies to report on social, environmental, and governance performance.</p>
+<p><strong>CSR Reporting Elements:</strong> CSR Policy, Committee Composition, Expenditure Details, Unspent Amount, Impact Assessment</p>
+<p><strong>Impact Assessment:</strong> Required for companies with CSR obligation &#x2265; &#x20B9;10 crore</p>
 </div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;BRR 9&quot;</strong> = 9 principles of Business Responsibility Reporting; <strong>&quot;RIPE&quot;</strong> = Reporting, Impact assessment, Policy disclosure, Expenditure tracking</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>CSR reporting = disclosure; CSR audit = verification. Know the difference between BRR (for listed companies) and CSR reporting (for all eligible companies).</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"BRR 9"</strong> = 9 principles of Business Responsibility Reporting; <strong>"RIPE"</strong> = Reporting, Impact assessment, Policy disclosure, Expenditure tracking</p>
+</div>
+<h4>Point 3: CSR Audit vs CSR Reporting</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>CSR Reporting</th><th>CSR Audit</th></tr>
+<tr><td><strong>Purpose</strong></td><td>Disclosure of CSR activities</td><td>Verification of compliance</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Annual (with Board's Report)</td><td>As required</td></tr>
+<tr><td><strong>Content</strong></td><td>Policy, expenditure, activities</td><td>Compliance with Companies Act</td></tr>
+<tr><td><strong>Requirement</strong></td><td>Mandatory for eligible companies</td><td>Recommended/best practice</td></tr>
+</table></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>CSR reporting = disclosure; CSR audit = verification</li>
-<li>Must disclose CSR policy on company website</li>
-<li>Surplus from CSR must be credited back to community/CSR corpus</li>
+<li>Impact assessment required for companies with CSR obligation &#x2265; &#x20B9;10 crore</li>
+<li>CSR-1 registration required for implementing agencies</li>
+<li>Surplus from CSR activities must be credited back to community</li>
 </ul></div>
 </div>
 
@@ -308,18 +556,35 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u13">Unit 13: Roles and Responsibilities of CSR Department</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p><strong>CSR Committee (Section 135):</strong> Minimum 3 directors, 1 independent.</p>
-<p><strong>Admin Overhead Cap:</strong> 5% of total CSR expenditure (2021 amendment).</p>
-<p><strong>Excess CSR Spend:</strong> Can be set off against obligations for next 3 years.</p>
-<p><strong>CSR Implementing Agency:</strong> Must have 3+ years track record, registered with MCA via CSR-1.</p>
-<p><strong>Tax Issues:</strong> CSR expenditure generally not deductible as business expense.</p>
+<h4>Point 1: CSR Committee Composition</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Rules</div>
+<p><strong>Minimum 3 directors, 1 independent</strong></p>
+<p><strong>Administrative overheads:</strong> Capped at 5% of total CSR expenditure (2021 amendment)</p>
+<p><strong>Excess CSR spend:</strong> Can be set off against CSR obligations for next 3 years</p>
+<p><strong>Make vs Buy Decision:</strong> In-house CSR implementation vs implementing agencies</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Mahindra &amp; Mahindra&#x27;s Nanhi Kali programme for girls&#x27; education; Lifeline Express (hospital on train); Mahindra Hariyali (0.95 million trees planted).</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;3-1-5&quot;</strong> = 3 directors minimum, 1 independent, 5% admin overhead cap</p></div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>CSR Committee composition is a common exam question: 3 directors minimum, 1 independent director mandatory.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Mahindra &amp; Mahindra's</strong> Nanhi Kali programme for girls' education; Lifeline Express (hospital on train); Mahindra Hariyali (0.95 million trees planted).</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"3-1-5"</strong> &#x2014; 3 directors minimum, 1 independent, 5% admin overhead cap</p>
+</div>
+<h4>Point 2: Make vs Buy Decision</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>In-House (Make)</th><th>Implementing Agency (Buy)</th></tr>
+<tr><td><strong>Control</strong></td><td>Direct control over activities</td><td>Delegated to agency</td></tr>
+<tr><td><strong>Expertise</strong></td><td>May lack specialized knowledge</td><td>Agency has established track record</td></tr>
+<tr><td><strong>Cost</strong></td><td>Higher overhead costs</td><td>More cost-effective</td></tr>
+<tr><td><strong>Registration</strong></td><td>Not required</td><td>Must file CSR-1 with MCA</td></tr>
+</table></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>CSR Committee: 3 directors, 1 independent</li>
 <li>Make vs Buy decision: in-house vs implementing agencies</li>
-<li>Know CSR Committee composition for public, private, foreign companies</li>
+<li>Implementing agencies must have 3+ years track record and CSR-1 registration</li>
+<li>Tax issues: CSR expenditure generally not deductible as business expense</li>
 </ul></div>
 </div>
 
@@ -327,37 +592,247 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <h3 id="u14">Unit 14: CSR and Sustainable Development</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
-<p><strong>Sustainable Development:</strong> Meeting present needs without compromising future generations (Brundtland Commission, 1987).</p>
-<p><strong>Circular Economy:</strong> Minimize waste, maximize resource utilization through recycling, reuse, regeneration.</p>
-<p><strong>Carbon Neutrality:</strong> Net-zero carbon emissions.</p>
-<p><strong>ESG Framework:</strong> Environmental, Social, Governance criteria for evaluating corporate responsibility.</p>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sustainable Development</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7g8h9i0j1kL" title="Sustainable Development" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<h4>Point 1: Sustainable Development</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Brundtland Commission (1987)</div>
+<p>"Meeting present needs without compromising future generations' ability to meet their own needs."</p>
+<p><strong>Circular Economy:</strong> Reduce, reuse, recycle approach to minimize waste</p>
+<p><strong>Carbon Neutrality:</strong> Balancing carbon emissions with carbon removal</p>
+<p><strong>Social Audit:</strong> Systematic evaluation of an organization's social impact</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Triple Bottom Line</h5>
+<h4>Point 2: Triple Bottom Line</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; Triple Bottom Line (Elkington)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">People (Social)</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Planet (Environmental)</div>
-<div style="font-size:1.2rem;color:rgba(0,210,255,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Profit (Financial)</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)">&#x1F465; <strong>People</strong> (Social Impact)</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">&#x1F30D; <strong>Planet</strong> (Environmental)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)">&#x1F4B0; <strong>Profit</strong> (Financial)</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Mark &amp; Spencer became UK&#x27;s greenest retailer, pledging carbon neutrality and zero waste to landfill. Toyota Prius pioneered hybrid electric vehicles for mainstream consumers.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>&quot;PPP&quot;</strong> = People, Planet, Profit (Triple Bottom Line); <strong>&quot;ESG&quot;</strong> = Environmental, Social, Governance</p></div>
+<h4>Point 3: ESG and Circular Economy</h4>
+<div class="br"><span class="sb s-b">ESG Framework</span><span class="sb s-b">Circular Economy</span><span class="sb s-b">Carbon Neutrality</span><span class="sb s-b">Social Audit</span></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Mark &amp; Spencer</strong> became UK's greenest retailer, pledging carbon neutrality and zero waste to landfill. <strong>Toyota Prius</strong> pioneered hybrid electric vehicles for mainstream consumers.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"PPP"</strong> &#x2014; People, Planet, Profit (Triple Bottom Line); <strong>"ESG"</strong> &#x2014; Environmental, Social, Governance</p>
+</div>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Link sustainable development to SDGs and Triple Bottom Line. Use ESG framework to demonstrate understanding of modern CSR evaluation.</p>
+</div>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Amul &#x2014; India's Greatest CSR Story</h5>
+<p>Amul (GCMMF) is arguably India's most impactful CSR success. <strong>Economic:</strong> 3.6 million dairy farmers earn livelihood. <strong>Legal:</strong> Follows FSSAI standards, cooperative laws. <strong>Ethical:</strong> Pays farmers 80% of consumer price (vs. 40-50% in private dairies). <strong>Philanthropic:</strong> Dr. Verghese Kurien's "White Revolution" made India the world's largest milk producer. Amul proves that a business can be supremely profitable AND deeply ethical &#x2014; the living embodiment of Carroll's CSR Pyramid.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Link sustainable development to SDGs and Triple Bottom Line</li>
-<li>ESG framework for modern CSR evaluation</li>
-<li>Circular economy = minimize waste, maximize resources</li>
+<li>Sustainable development = meet present needs without compromising future</li>
+<li>Triple Bottom Line: People + Planet + Profit</li>
+<li>ESG framework connects ethics, CSR, and governance</li>
 </ul></div>
+</div>
+
+<h2 id="mnemonics">&#x1F9E0; Master Mnemonics Table</h2>
+<div class="db"><table>
+<tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td><strong>EEL</strong></td><td>Ethics Evolves from Law</td><td>Ethics vs Law</td></tr>
+<tr><td><strong>DUTCH</strong></td><td>Deontology, Utilitarianism, Teleology, Character, Hypothetical</td><td>Ethical Theories</td></tr>
+<tr><td><strong>NICE</strong></td><td>Navigation wheel, Identify stakeholders, Check points, Evaluate</td><td>Ethical Dilemmas</td></tr>
+<tr><td><strong>IBS</strong></td><td>Individual, Business, Society</td><td>IBS Framework</td></tr>
+<tr><td><strong>SEE</strong></td><td>Stakeholders, Ethics, Environment</td><td>Business Ethics Pillars</td></tr>
+<tr><td><strong>CROSS</strong></td><td>Cost reduction, Reputation, Opportunities, Synergistic, Stakeholder</td><td>CSR Strategy</td></tr>
+<tr><td><strong>SDG 17</strong></td><td>17 Sustainable Development Goals</td><td>Global CSR Framework</td></tr>
+<tr><td><strong>ESG</strong></td><td>Environmental, Social, Governance</td><td>CSR Evaluation</td></tr>
+<tr><td><strong>PENS</strong></td><td>Phases, Ethical model, National guidelines, Statist/Liberal/Stakeholder</td><td>Indian CSR</td></tr>
+<tr><td><strong>2-3-5 Rule</strong></td><td>2% of profits, 3-year average, &#x20B9;5Cr threshold</td><td>Section 135</td></tr>
+<tr><td><strong>BRR 9</strong></td><td>9 principles of Business Responsibility Reporting</td><td>CSR Reporting</td></tr>
+<tr><td><strong>RIPE</strong></td><td>Reporting, Impact assessment, Policy disclosure, Expenditure tracking</td><td>CSR Audit</td></tr>
+<tr><td><strong>60-112</strong></td><td>60% thematic programs, 112 aspirational districts</td><td>CPSE CSR</td></tr>
+<tr><td><strong>3-1-5</strong></td><td>3 directors, 1 independent, 5% admin cap</td><td>CSR Committee</td></tr>
+<tr><td><strong>PPP</strong></td><td>People, Planet, Profit</td><td>Triple Bottom Line</td></tr>
+</table></div>
+
+<!-- KEY FRAMEWORKS -->
+<div class="unit" id="frameworks">
+<h3 id="frameworks">&#x1F4CA; Key Frameworks &amp; Diagrams</h3>
+
+<h4>Carroll's CSR Pyramid (1991)</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; Carroll's CSR Pyramid</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Philanthropic</strong><br><small>Be a good corporate citizen</small></div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>Ethical</strong><br><small>Do what is right, just, fair</small></div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4)"><strong>Legal</strong><br><small>Obey the law</small></div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4)"><strong>Economic</strong><br><small>Be profitable</small></div>
+</div></div>
+
+<h4>Stakeholder vs Shareholder Debate</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Shareholder (Friedman)</th><th>Stakeholder (Freeman)</th></tr>
+<tr><td>Goal</td><td>Maximize shareholder value</td><td>Create value for ALL stakeholders</td></tr>
+<tr><td>Responsibility</td><td>To shareholders only</td><td>To employees, customers, community, environment</td></tr>
+<tr><td>CSR View</td><td>Distraction from profit</td><td>Integral to business strategy</td></tr>
+<tr><td>Social Role</td><td>Government's job</td><td>Business has social obligations</td></tr>
+<tr><td>Time Horizon</td><td>Short-term profit focus</td><td>Long-term sustainability</td></tr>
+</table></div>
+
+<h4>4 Models of CSR in India (TERI)</h4>
+<div class="db"><table>
+<tr><th>Model</th><th>Basis</th><th>Key Feature</th></tr>
+<tr><td><strong>Ethical</strong></td><td>Gandhian Trusteeship</td><td>Surplus wealth for society's good</td></tr>
+<tr><td><strong>Statist</strong></td><td>Nehru's Socialism</td><td>State ownership, legal requirements</td></tr>
+<tr><td><strong>Liberal</strong></td><td>Milton Friedman</td><td>Maximize profits within rules</td></tr>
+<tr><td><strong>Stakeholder</strong></td><td>Edward Freeman</td><td>Welfare of all stakeholders</td></tr>
+</table></div>
+
+<h4>4 Phases of CSR in India</h4>
+<div class="db"><table>
+<tr><th>Phase</th><th>Period</th><th>Driver</th><th>Key Feature</th></tr>
+<tr><td><strong>Phase 1</strong></td><td>1850-1914</td><td>Charity &amp; Philanthropy</td><td>Religious obligations, merchant donations</td></tr>
+<tr><td><strong>Phase 2</strong></td><td>1914-1960</td><td>Social Development</td><td>Gandhian Trusteeship, independence movement</td></tr>
+<tr><td><strong>Phase 3</strong></td><td>1960-1980</td><td>Mixed Economy</td><td>License Raj, public enterprises</td></tr>
+<tr><td><strong>Phase 4</strong></td><td>1980-present</td><td>Business Integration</td><td>Liberalization, strategic CSR</td></tr>
+</table></div>
+
+<h4>Indian CSR Law &#x2014; Quick Reference</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Requirement</th></tr>
+<tr><td><strong>Threshold</strong></td><td>Net worth &#x2265; &#x20B9;500 Cr OR Turnover &#x2265; &#x20B9;1,000 Cr OR Net profit &#x2265; &#x20B9;5 Cr</td></tr>
+<tr><td><strong>CSR Spend</strong></td><td>2% of average net profits of last 3 financial years</td></tr>
+<tr><td><strong>Committee</strong></td><td>Minimum 3 directors, at least 1 independent director</td></tr>
+<tr><td><strong>Activities</strong></td><td>Schedule VII (education, healthcare, environment, etc.)</td></tr>
+<tr><td><strong>Reporting</strong></td><td>Annual Board's Report with CSR details</td></tr>
+<tr><td><strong>Unspent Amount</strong></td><td>Transfer to specified fund within 6 months</td></tr>
+<tr><td><strong>Admin Overhead</strong></td><td>Maximum 5% of total CSR expenditure</td></tr>
+<tr><td><strong>Impact Assessment</strong></td><td>Required for CSR obligation &#x2265; &#x20B9;10 crore</td></tr>
+<tr><td><strong>Excess Spend</strong></td><td>Carry forward credit for 3 years</td></tr>
+</table></div>
+</div>
+
+<!-- QUICK REVISION SHEET -->
+<div class="unit" id="revision">
+<h3 id="revision">&#x26A1; Quick Revision Sheet</h3>
+<h4>One-Liner Key Points</h4>
+<div class="summary-box"><ul>
+<li>Ethics = moral principles; Law = codified minimum standard</li>
+<li>"Business ethics begins where the Law ends"</li>
+<li>Consequentialism (outcomes) vs Deontology (duty-based)</li>
+<li>Utilitarianism = greatest good for greatest number</li>
+<li>IBS Framework = Individual, Business, Society</li>
+<li>Shareholder (Friedman) vs Stakeholder (Freeman) debate</li>
+<li>CSR = Company's responsibility beyond profit</li>
+<li>India = First country to mandate CSR by law (2013)</li>
+<li>Section 135 = CSR section in Companies Act</li>
+<li>2-3-5 Rule = 2% of profits, 3-year average, &#x20B9;5 Cr threshold</li>
+<li>Schedule VII = List of approved CSR activities</li>
+<li>CSR Committee = 3 directors, 1 independent</li>
+<li>Triple Bottom Line = People, Planet, Profit</li>
+<li>ESG = Environmental, Social, Governance</li>
+<li>SDGs = 17 UN Sustainable Development Goals</li>
+<li>4 Phases: Charity &#x2192; Social Dev &#x2192; Mixed Economy &#x2192; Business Integration</li>
+<li>4 Models: Ethical (Gandhi), Statist (Nehru), Liberal (Friedman), Stakeholder (Freeman)</li>
+<li>BRR = 9 principles for listed companies</li>
+<li>Cause-Related Marketing = linking philanthropy with marketing</li>
+<li>Social License to Operate = community acceptance beyond legal permits</li>
+<li>Shared Value (Porter &amp; Kramer) = economic value + societal benefit</li>
+<li>Impact Assessment required for CSR obligation &#x2265; &#x20B9;10 crore</li>
+</ul></div>
+
+<h4>Key Formulas &amp; Calculations</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Formulas</div>
+<p><strong>CSR Spending:</strong> 2% &#xD7; Average Net Profits (last 3 years)</p>
+<p><strong>Net Profit Threshold:</strong> &#x20B9;5 crore (triggers CSR obligation)</p>
+<p><strong>Admin Overhead Cap:</strong> 5% of total CSR expenditure</p>
+<p><strong>Excess Spend Credit:</strong> Carry forward for 3 years</p>
+</div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3 id="exam">&#x1F3AF; Exam Focus</h3>
+<h4>Most Frequently Asked Topics</h4>
+<div class="summary-box"><ul>
+<li><strong>Shareholder vs Stakeholder debate</strong> (Friedman vs Freeman) &#x2014; appears almost every exam</li>
+<li><strong>Section 135 of Companies Act 2013</strong> &#x2014; mandatory CSR provisions, thresholds, committee composition</li>
+<li><strong>Schedule VII activities</strong> &#x2014; list of eligible CSR activities</li>
+<li><strong>Carroll's CSR Pyramid</strong> &#x2014; economic, legal, ethical, philanthropic responsibilities</li>
+<li><strong>Triple Bottom Line</strong> &#x2014; People, Planet, Profit</li>
+<li><strong>4 Phases of CSR in India</strong> &#x2014; with dates and key characteristics</li>
+<li><strong>Ethical Theories</strong> &#x2014; Consequentialism vs Deontology comparison</li>
+<li><strong>CSR Reporting and Audit</strong> &#x2014; BRR, impact assessment, 2021 amendments</li>
+<li><strong>SDGs and CSR linkages</strong> &#x2014; how CSR initiatives align with UN goals</li>
+<li><strong>ESG Framework</strong> &#x2014; Environmental, Social, Governance criteria</li>
+</ul></div>
+
+<h4>Expected Question Patterns</h4>
+<div class="br">
+<span class="sb s-b">Compare &amp; Contrast</span>
+<span class="sb s-b">Legal Provisions</span>
+<span class="sb s-b">Case Study</span>
+<span class="sb s-b">Framework Application</span>
+<span class="sb s-b">Indian Context</span>
+<span class="sb s-b">Contemporary Issues</span>
+</div>
+
+<h4>Model Answer Structure</h4>
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; How to Write Exam Answers</div>
+<p><strong>1. Define</strong> the concept clearly</p>
+<p><strong>2. Explain</strong> with relevant theories/frameworks</p>
+<p><strong>3. Compare</strong> different perspectives (e.g., Friedman vs Freeman)</p>
+<p><strong>4. Give examples</strong> (Indian and international)</p>
+<p><strong>5. Conclude</strong> with contemporary relevance (SDGs, ESG, 2021 amendments)</p>
+</div>
 </div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^="#u"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+
+  // Reading progress bar
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('readingProgress').style.width = p + '%';
+    var units = document.querySelectorAll('.unit');
+    var links = document.querySelectorAll('.sidebar a[href^="#u"]');
+    var current = '';
+    units.forEach(function(u) { if (u.getBoundingClientRect().top < 200) current = u.id; });
+    links.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+  });
+})();
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

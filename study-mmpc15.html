@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-15: Research Methodology | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+/* ═══════════ MMPC-15 ENHANCED STYLES ═══════════ */
+
+/* --- Background Particles --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+/* --- Richer Background --- */
+
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Section Heading Gradient Underline --- */
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700, #c8c8c8);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0);
+  border-radius: 2px;
+}
+
+/* --- Card Hover Effects --- */
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #c8c8c8 !important;
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #b0b0b0 !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+.study-content p,
+.study-content li {
+  line-height: 1.75;
+}
+
+/* --- Study Header Enhancement --- */
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+/* --- Badge/Tag Styling --- */
+.subject-tag {
+  background: linear-gradient(135deg, #c8c8c8, #b0b0b0) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Visual Diagram Boxes --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.06));
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700);
+}
+.visual-diagram h5 {
+  color: #c8c8c8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.vd-arrow {
+  display: inline-block;
+  color: #c8c8c8;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(108,99,255,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Expand/Collapse Toggle --- */
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.expandable-content.expanded {
+  max-height: 5000px;
+}
+.expand-toggle {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 6px;
+  color: #c8c8c8;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-height: 44px;
+  min-width: 44px;
+}
+.expand-toggle:hover {
+  background: linear-gradient(135deg, rgba(108,99,255,0.25), rgba(0,210,255,0.15));
+  box-shadow: 0 2px 10px rgba(200,200,200,0.12);
+}
+
+/* --- Hierarchy Tree Visual --- */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.org-tree .level {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.org-tree .node {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease;
+}
+.org-tree .node:hover { transform: scale(1.05); }
+.org-tree .connector {
+  width: 2px; height: 20px;
+  background: linear-gradient(to bottom, #c8c8c8, #b0b0b0);
+  margin: 0 auto;
+}
+
+/* --- Flowchart Visual --- */
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.flow-visual .arrow {
+  color: #c8c8c8;
+  font-size: 1.4rem;
+}
+
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; min-height: 44px; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+/* --- Section badge --- */
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+  color: #fff;
+  font-size: 0.75em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+/* --- Table Styles --- */
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.5rem .75rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+th{color:#6c5ce7;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+td{color:rgba(255,255,255,.72)}
+tr:hover td{background:rgba(108,92,231,.05)}
+
+/* --- 44px Min Touch Targets --- */
+.btn, .back-link, .mobile-nav-toggle, .video-toggle, .expand-toggle, .sidebar-nav a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc15">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-15'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-15</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01: Research Fundamentals</a>
+<a href="#u1">Unit 1: Research Methodology &#x2014; An Overview</a>
+<a href="#u2">Unit 2: Steps for Research Process</a>
+<a href="#u3">Unit 3: Research Designs</a>
+<a href="#u4">Unit 4: Methods and Techniques of Data Collection</a>
+<a href="#block2">Block-02: Data Collection &amp; Measurement</a>
+<a href="#u5">Unit 5: Attitude Measurement and Scales</a>
+<a href="#u6">Unit 6: Questionnaire Designing</a>
+<a href="#u7">Unit 7: Sampling and Sampling Designs</a>
+<a href="#block3">Block-03: Data Analysis</a>
+<a href="#u8">Unit 8: Data Processing</a>
+<a href="#u9">Unit 9: Statistical Analysis &#x2014; Nonparametric Tests</a>
+<a href="#u10">Unit 10: Multivariate Analysis of Data</a>
+<a href="#block4">Block-04: Ethics &amp; Report Writing</a>
+<a href="#u11">Unit 11: Ethics in Research</a>
+<a href="#u12">Unit 12: Substance of Reports</a>
+<a href="#u13">Unit 13: Formats of Reports</a>
+<a href="#u14">Unit 14: Presentation of a Report</a>
+<a href="#mnemonics">Master Mnemonics</a>
+<a href="#revision">Quick Revision</a>
+<a href="#exam">Exam Focus</a>
+<a href="quiz-mmpc15.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPC-15</span><h1>Research Methodology for Management Decisions</h1>
+<p>4 Blocks, 14 Units &#x2022; Research Design, Data Collection, Analysis, Report Writing &#x2022; IGNOU MBA</p></div>
+
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Research Fundamentals</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Research Methodology &#x2014; An Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is Research Methodology?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeiKm4sgNOknGvNjby9efdf" title="Research Methodology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Research Methods vs Methodology</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeJnJDcZ4rS5oDBP5sDp5p5" title="Methods vs Methodology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li><strong>Research</strong> = Purposeful investigation using scientific methods to find answers to questions</li>
+<li><strong>Research Methodology</strong> = The systematic approach to conducting research (the "how")</li>
+<li><strong>Research Methods</strong> = Specific techniques/tools for data collection and analysis (the "tools")</li>
+<li>Research is NOT a "fishing expedition" &#x2014; it must be focused and purposeful</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; 5 Features of Good Research (S-O-R-C)</h5>
+<table class="db"><tr><th>#</th><th>Feature</th><th>Meaning</th></tr>
+<tr><td>1</td><td><strong>S</strong>ystematic</td><td>Follows a structured plan</td></tr>
+<tr><td>2</td><td><strong>O</strong>bjective</td><td>Unbiased, fact-based</td></tr>
+<tr><td>3</td><td><strong>R</strong>eproducible</td><td>Others can replicate and verify</td></tr>
+<tr><td>4</td><td><strong>C</strong>ontrolled</td><td>Variables are managed</td></tr>
+<tr><td>5</td><td>Relevant</td><td>Addresses a meaningful problem</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Research</div>
+<table class="db"><tr><th>Classification</th><th>Types</th><th>When to Use</th></tr>
+<tr><td>By Application</td><td>Pure (theoretical) vs Applied (practical)</td><td>Pure for knowledge, Applied for solving problems</td></tr>
+<tr><td>By Objective</td><td>Descriptive, Correlational, Explanatory</td><td>Describe, relate, or explain phenomena</td></tr>
+<tr><td>By Enquiry</td><td>Qualitative vs Quantitative</td><td>Words/meanings vs numbers/statistics</td></tr>
+<tr><td>By Data Source</td><td>Primary vs Secondary</td><td>New collection vs existing data</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<ul>
+<li><strong>Variable:</strong> Any characteristic that can take different values (age, income, satisfaction)</li>
+<li><strong>Dependent Variable (DV):</strong> The outcome being measured (effect)</li>
+<li><strong>Independent Variable (IV):</strong> The factor being manipulated (cause)</li>
+<li><strong>Hypothesis:</strong> A testable statement about the relationship between variables</li>
+<li><strong>Theory:</strong> A set of interrelated concepts that explains phenomena</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Business Research Benefits</div>
+<ul>
+<li>Reduces uncertainty in decision-making</li>
+<li>Identifies market threats and opportunities</li>
+<li>Forecasts revenue and demand</li>
+<li>Provides competitive advantage</li>
+<li>Supports evidence-based management</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A company launching a new product conducts market research to understand consumer preferences (qualitative), surveys 1000 customers (quantitative), and uses the data to set pricing strategy (applied research). The research team uses both primary data (surveys, focus groups) and secondary data (industry reports, competitor analysis) to build a comprehensive market understanding.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"SO-RC"</strong> &#x2014; Systematic, Objective, Reproducible, Controlled (features of good research)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Always distinguish between "Research Methods" (specific techniques) and "Research Methodology" (the overall approach/philosophy). This is a frequent exam question. Also know the difference between Pure (theoretical) and Applied (practical) research.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Research = Purposeful, systematic investigation using scientific methods</li>
+<li>5 features: Systematic, Objective, Reproducible, Controlled, Relevant</li>
+<li>Types: Pure vs Applied, Descriptive/Correlational/Explanatory, Qualitative vs Quantitative</li>
+<li>Key variables: IV (cause), DV (effect), hypothesis, theory</li>
+<li>Business research reduces uncertainty and supports evidence-based management</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Steps for Research Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>7 Steps of Research Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Research Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Hypothesis Testing Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Hypothesis Testing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 7 Steps of Research Process (D-L-H-R-D-A-R)</div></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Research Process Flow</h5>
+<pre>
+Step 1: Define Research Problem
+   &#x2193;
+Step 2: Literature Review
+   &#x2193;
+Step 3: Develop Working Hypothesis
+   &#x2193;
+Step 4: Prepare Research Design
+   &#x2193;
+Step 5: Collect Data
+   &#x2193;
+Step 6: Analyze Data
+   &#x2193;
+Step 7: Prepare Report/Thesis
+</pre></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Step Details</div>
+<table class="db"><tr><th>Step</th><th>What It Involves</th><th>Key Considerations</th></tr>
+<tr><td>1. Define Problem</td><td>Identify the question to answer</td><td>Must be clear, specific, researchable</td></tr>
+<tr><td>2. Literature Review</td><td>Survey existing knowledge</td><td>Find gaps, avoid duplication, build foundation</td></tr>
+<tr><td>3. Hypothesis</td><td>Formulate testable statement</td><td>Must be falsifiable, specific, testable</td></tr>
+<tr><td>4. Research Design</td><td>Blueprint for data collection</td><td>Match design to research question</td></tr>
+<tr><td>5. Data Collection</td><td>Gather primary/secondary data</td><td>Choose appropriate methods</td></tr>
+<tr><td>6. Data Analysis</td><td>Process and interpret data</td><td>Use suitable statistical tools</td></tr>
+<tr><td>7. Report</td><td>Document findings</td><td>Follow academic format</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<ul>
+<li><strong>Research Problem:</strong> A question, issue, or situation that needs investigation</li>
+<li><strong>Literature Review:</strong> Systematic survey of existing published work to identify gaps</li>
+<li><strong>Null Hypothesis (H&#x2080;):</strong> Statement of "no effect" or "no difference" (what we test)</li>
+<li><strong>Alternative Hypothesis (H&#x2081;):</strong> Statement of "effect exists" (what we want to prove)</li>
+<li><strong>Research Design:</strong> The master plan specifying methods and procedures for data collection and analysis</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Hypotheses</div>
+<ul>
+<li><strong>Descriptive:</strong> States existence of something ("60% of customers prefer online shopping")</li>
+<li><strong>Relational:</strong> States relationship between variables ("Price affects demand")</li>
+<li><strong>Causal:</strong> States cause-effect ("Training improves productivity")</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Type I and Type II Errors</div>
+<table class="db"><tr><th>Error</th><th>What Happens</th><th>Analogy</th></tr>
+<tr><td><strong>Type I (&#x3B1;)</strong></td><td>Reject H&#x2080; when H&#x2080; is true</td><td>False positive &#x2014; convicting an innocent person</td></tr>
+<tr><td><strong>Type II (&#x3B2;)</strong></td><td>Fail to reject H&#x2080; when H&#x2081; is true</td><td>False negative &#x2014; letting a guilty person go free</td></tr>
+</table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A manager notices declining sales (problem) &#x2192; reviews industry reports (literature) &#x2192; hypothesizes "Poor customer service is causing decline" &#x2192; designs a customer satisfaction survey &#x2192; collects data &#x2192; analyzes with statistical tests &#x2192; writes report recommending service improvements.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"D-L-H-R-D-A-R"</strong> &#x2014; Define, Literature, Hypothesis, Research Design, Data, Analysis, Report</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The hypothesis testing section is very important. Know the difference between H&#x2080; and H&#x2081;, and understand Type I and Type II errors. Also know the 3 types of hypotheses: Descriptive, Relational, Causal.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>7 steps: Define &#x2192; Literature &#x2192; Hypothesis &#x2192; Design &#x2192; Collect &#x2192; Analyze &#x2192; Report</li>
+<li>Null vs Alternative hypothesis &#x2014; know the difference</li>
+<li>Types of hypotheses: Descriptive, Relational, Causal</li>
+<li>Type I error = false positive; Type II error = false negative</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Research Designs</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Research Designs Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Research Designs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Experimental vs Non-Experimental</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Experimental Research" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Three Main Research Designs</div>
+<table class="db"><tr><th>Design</th><th>Purpose</th><th>Methods</th><th>When to Use</th></tr>
+<tr><td><strong>Exploratory</strong></td><td>Explore unclear problem</td><td>Literature search, expert surveys, focus groups</td><td>Problem is vague, need insights</td></tr>
+<tr><td><strong>Descriptive</strong></td><td>Describe population characteristics</td><td>Surveys, case studies, observation</td><td>Know what, need details</td></tr>
+<tr><td><strong>Experimental</strong></td><td>Establish cause-effect</td><td>Lab experiments, field experiments</td><td>Need to prove causation</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Lab vs Field Experiments</div>
+<table class="db"><tr><th>Feature</th><th>Lab Experiment</th><th>Field Experiment</th></tr>
+<tr><td>Environment</td><td>Artificial, controlled</td><td>Natural, real-world</td></tr>
+<tr><td>Internal Validity</td><td>HIGH (controls)</td><td>LOWER (less control)</td></tr>
+<tr><td>External Validity</td><td>LOWER (artificial)</td><td>HIGH (realistic)</td></tr>
+<tr><td>Cost</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Example</td><td>Testing ad recall in lab</td><td>Testing ad impact in real market</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<ul>
+<li><strong>Internal Validity:</strong> Degree of confidence that the IV caused the observed change in DV</li>
+<li><strong>External Validity:</strong> Degree to which results can be generalized to other settings and populations</li>
+<li><strong>Construct Validity:</strong> Are we measuring what we think we're measuring?</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Threats to Internal Validity</div>
+<ul>
+<li>History &#x2014; external events during the study</li>
+<li>Maturation &#x2014; natural changes in subjects</li>
+<li>Testing &#x2014; being tested affects performance</li>
+<li>Selection bias &#x2014; non-random group assignment</li>
+<li>Mortality &#x2014; subjects dropping out</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A company wants to test if a new training program improves sales. Exploratory: Interview top salespeople. Descriptive: Survey all salespeople. Experimental: Give training to one group (treatment), not another (control), compare results.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"E-D-E"</strong> &#x2014; Exploratory, Descriptive, Experimental (three research designs)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Internal vs External validity trade-off is a classic exam question. Lab = high internal, low external. Field = low internal, high external.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Three designs: Exploratory (explore), Descriptive (describe), Experimental (prove cause-effect)</li>
+<li>Lab = high control, high internal validity; Field = realistic, high external validity</li>
+<li>Threats to validity: History, Maturation, Testing, Selection, Mortality</li>
+</ul></div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Methods and Techniques of Data Collection</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Data Collection Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Data Collection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Primary vs Secondary Data</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Primary vs Secondary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Primary vs Secondary Data</div>
+<table class="db"><tr><th>Feature</th><th>Primary Data</th><th>Secondary Data</th></tr>
+<tr><td>Definition</td><td>Collected fresh for current study</td><td>Already collected by someone else</td></tr>
+<tr><td>Cost</td><td>Higher</td><td>Lower</td></tr>
+<tr><td>Time</td><td>More time-consuming</td><td>Quick to access</td></tr>
+<tr><td>Relevance</td><td>Perfectly suited</td><td>May not perfectly fit</td></tr>
+<tr><td>Examples</td><td>Surveys, interviews, experiments</td><td>Census, reports, published data</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Methods of Primary Data Collection</div>
+<table class="db"><tr><th>Method</th><th>Flexibility</th><th>Cost</th><th>Response Rate</th><th>Speed</th></tr>
+<tr><td>Personal Interview</td><td>HIGHEST</td><td>HIGHEST</td><td>HIGHEST</td><td>Slow</td></tr>
+<tr><td>Mailed Questionnaire</td><td>Low</td><td>LOW</td><td>LOWEST</td><td>Slowest</td></tr>
+<tr><td>Telephone Interview</td><td>Medium</td><td>Low</td><td>Medium</td><td>FAST</td></tr>
+<tr><td>Observation</td><td>Low</td><td>Medium</td><td>N/A</td><td>Medium</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<ul>
+<li><strong>Primary Data:</strong> Data collected fresh for the current study, tailored to specific research needs</li>
+<li><strong>Secondary Data:</strong> Data already collected by someone else for a different purpose</li>
+<li><strong>Observation Method:</strong> Systematic watching and recording of behavior without direct questioning</li>
+<li><strong>Focus Group:</strong> A moderated group discussion (6-10 participants) to explore attitudes</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A bank researching customer satisfaction uses: Secondary data (complaint records, transaction data) + Primary data (structured questionnaire for 1000 customers, focus groups of 8, branch observation).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"O-Q-M-T"</strong> &#x2014; Observation, Questionnaire/interview, Mailed questionnaire, Telephone interview</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the comparison table of data collection methods by heart &#x2014; it's a guaranteed exam question.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Primary = fresh collection (interviews, surveys, observation); Secondary = existing data</li>
+<li>4 methods: Personal Interview (highest flexibility/cost), Mailed (lowest response), Telephone (fast), Observation</li>
+<li>Data editing: Field (immediate) and Central (headquarters)</li>
+</ul></div>
+</div>
+
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Data Collection &amp; Measurement</h2>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Attitude Measurement and Scales</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Measurement Scales (NOIR)</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Measurement Scales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Likert Scale Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Likert Scale" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Levels of Measurement Scales (N-O-I-R)</div>
+<table class="db"><tr><th>Scale</th><th>Properties</th><th>Examples</th><th>Statistics</th></tr>
+<tr><td><strong>Nominal</strong></td><td>Categories only, no order</td><td>Gender, religion, color</td><td>Mode, frequency</td></tr>
+<tr><td><strong>Ordinal</strong></td><td>Rank order, unequal intervals</td><td>Rankings, satisfaction levels</td><td>Median, percentile</td></tr>
+<tr><td><strong>Interval</strong></td><td>Equal intervals, no true zero</td><td>Temperature, Likert scale</td><td>Mean, SD, correlation</td></tr>
+<tr><td><strong>Ratio</strong></td><td>True zero, equal intervals</td><td>Income, weight, age</td><td>All statistics</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Common Attitude Scales</div>
+<table class="db"><tr><th>Scale</th><th>How It Works</th><th>Pros</th><th>Cons</th></tr>
+<tr><td><strong>Likert</strong></td><td>Agree-Disagree statements (5/7 points)</td><td>Easy to use, versatile</td><td>Central tendency bias</td></tr>
+<tr><td><strong>Semantic Differential</strong></td><td>Bipolar adjectives (good___bad)</td><td>Quick, visual</td><td>May not capture nuance</td></tr>
+<tr><td><strong>Thurstone</strong></td><td>Equal-appearing intervals</td><td>Scientifically rigorous</td><td>Time-consuming</td></tr>
+<tr><td><strong>Guttman</strong></td><td>Cumulative (agree with 4 = agree with 1-3)</td><td>Reproducible</td><td>Hard to construct</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Reliability vs Validity</div>
+<ul>
+<li><strong>Reliability:</strong> Consistency &#x2014; does the scale give the same result repeatedly?</li>
+<li><strong>Validity:</strong> Accuracy &#x2014; does the scale measure what it claims to measure?</li>
+<li>A scale can be reliable but not valid (consistent but wrong), but not valid without reliable</li>
+</ul></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"N-O-I-R"</strong> &#x2014; Nominal, Ordinal, Interval, Ratio (measurement scales, from least to most information)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The N-O-I-R scale classification is extremely important. Know the examples and statistics for each level. Also, Reliability vs Validity is a classic comparison question.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Attitude = ABC Model: Affect, Behavior, Cognition</li>
+<li>4 scales: Nominal (categories) &#x2192; Ordinal (rank) &#x2192; Interval (equal intervals) &#x2192; Ratio (true zero)</li>
+<li>Reliability = consistency; Validity = accuracy</li>
+<li>Types: Test-retest, Split-half, Inter-rater, Cronbach's Alpha</li>
+</ul></div>
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Questionnaire Designing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Questionnaire Design</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Questionnaire Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Open vs Closed Questions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Open vs Closed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Three Aspects of Questionnaire Design</div>
+<ul>
+<li><strong>General Form</strong> &#x2014; layout, length, structure</li>
+<li><strong>Question Sequence</strong> &#x2014; order of questions</li>
+<li><strong>Question Wording</strong> &#x2014; how questions are phrased</li>
+</ul></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Question Sequence Rules</h5>
+<pre>
+Opening Questions (Easy, non-threatening)
+    &#x2193;
+Substantive Questions (Core research questions)
+    &#x2193;
+Sensitive Questions (Income, personal details)
+    &#x2193;
+Demographics (Age, gender, education)
+</pre></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Open vs Closed Questions</div>
+<table class="db"><tr><th>Feature</th><th>Open Questions</th><th>Closed Questions</th></tr>
+<tr><td>Response</td><td>Free text</td><td>Fixed options</td></tr>
+<tr><td>Analysis</td><td>Difficult (coding needed)</td><td>Easy (statistical)</td></tr>
+<tr><td>Depth</td><td>Rich, detailed</td><td>Limited to options</td></tr>
+<tr><td>Use When</td><td>Exploring new topics</td><td>Measuring known concepts</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Question Wording Rules</div>
+<ul>
+<li>Use simple, clear, concrete language</li>
+<li>Avoid leading questions ("Don't you think...")</li>
+<li>Avoid double-barreled questions (two questions in one)</li>
+<li>Avoid ambiguous terms ("regularly," "often")</li>
+<li>Make response options mutually exclusive and exhaustive</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A hospital designing a patient satisfaction questionnaire: Opens with easy questions (visit date, department) &#x2192; core questions (waiting time, staff behavior) &#x2192; sensitive questions (income, overall rating) &#x2192; includes Likert scales and open-ended comments.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-S-W-P"</strong> &#x2014; Sequence (logical flow), Simplicity (clear language), Wording (avoid bias), Pre-test (validate before use)</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Three aspects: General Form, Question Sequence, Question Wording</li>
+<li>Sequence: Easy &#x2192; Core &#x2192; Sensitive &#x2192; Demographics</li>
+<li>Pre-test on 10-20 people before full deployment</li>
+<li>Avoid leading, double-barreled, ambiguous questions</li>
+</ul></div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Sampling and Sampling Designs</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sampling Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Sampling Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Probability vs Non-Probability</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Sampling Types" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Probability Sampling (Random &#x2014; every unit has known chance)</div>
+<table class="db"><tr><th>Method</th><th>How It Works</th><th>When to Use</th><th>Pros</th><th>Cons</th></tr>
+<tr><td><strong>Simple Random</strong></td><td>Every unit equal chance (lottery)</td><td>Homogeneous population</td><td>Unbiased, simple</td><td>May miss subgroups</td></tr>
+<tr><td><strong>Stratified</strong></td><td>Divide into strata, random from each</td><td>Heterogeneous population</td><td>Ensures representation</td><td>Need to know strata</td></tr>
+<tr><td><strong>Cluster</strong></td><td>Randomly select groups, study all in group</td><td>Geographically spread</td><td>Cost-effective</td><td>Higher sampling error</td></tr>
+<tr><td><strong>Systematic</strong></td><td>Every nth unit from list</td><td>Large populations with list</td><td>Simple, even coverage</td><td>Periodicity risk</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Non-Probability Sampling (Non-random &#x2014; subjective selection)</div>
+<table class="db"><tr><th>Method</th><th>How It Works</th><th>When to Use</th><th>Pros</th><th>Cons</th></tr>
+<tr><td><strong>Convenience</strong></td><td>Whoever is available</td><td>Pilot studies, exploratory</td><td>Fast, cheap</td><td>High bias</td></tr>
+<tr><td><strong>Judgment</strong></td><td>Researcher's expert choice</td><td>Specific expertise needed</td><td>Targeted</td><td>Subjective</td></tr>
+<tr><td><strong>Quota</strong></td><td>Fixed number from each category</td><td>Market research</td><td>Ensures subgroups</td><td>Selection bias</td></tr>
+<tr><td><strong>Snowball</strong></td><td>Referrals from initial respondents</td><td>Rare/hidden populations</td><td>Reaches hidden groups</td><td>Network bias</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<ul>
+<li><strong>Sampling:</strong> Selecting a subset of the population to study</li>
+<li><strong>Census:</strong> Complete enumeration of every element in the population</li>
+<li><strong>Sampling Frame:</strong> The list from which sample is drawn</li>
+<li><strong>Sampling Error:</strong> Difference between sample statistic and population parameter</li>
+<li><strong>Central Limit Theorem:</strong> Sampling distribution of the mean approaches normal as n &#x2265; 30</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A company surveys employee satisfaction (5000 employees): Stratified sampling by department (HR, Sales, Tech) &#x2192; random from each &#x2192; 350 employees (7%) gives 95% confidence with &#xB1;5% margin.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"S-S-C-S"</strong> &#x2014; Simple random, Stratified, Cluster, Systematic (probability); <strong>"C-J-Q-S"</strong> &#x2014; Convenience, Judgment, Quota, Snowball (non-probability)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Probability vs Non-probability sampling comparison is a guaranteed exam question. Know at least 3 methods from each type with examples.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Probability: Simple Random, Stratified, Cluster, Systematic</li>
+<li>Non-Probability: Convenience, Judgment, Quota, Snowball</li>
+<li>Central Limit Theorem: n &#x2265; 30 &#x2192; sampling distribution approaches normal</li>
+<li>Sample size factors: variability, precision, confidence level, budget</li>
+</ul></div>
+</div>
+
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Data Analysis</h2>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Data Processing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Data Processing Steps</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Data Processing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Data Coding and Classification</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Data Coding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 5 Steps of Data Processing (E-C-C-T-P)</div>
+<pre>
+Editing &#x2192; Coding &#x2192; Classification &#x2192; Tabulation &#x2192; Presentation
+</pre></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Data Processing Steps</h5>
+<table class="db"><tr><th>Step</th><th>Purpose</th><th>What Happens</th></tr>
+<tr><td><strong>Editing</strong></td><td>Check for errors</td><td>Verify completeness, consistency, accuracy</td></tr>
+<tr><td><strong>Coding</strong></td><td>Assign symbols/numbers</td><td>Convert responses to analyzable codes</td></tr>
+<tr><td><strong>Classification</strong></td><td>Group similar data</td><td>Organize by attributes or numerical ranges</td></tr>
+<tr><td><strong>Tabulation</strong></td><td>Arrange in tables</td><td>One-way, two-way, three-way tables</td></tr>
+<tr><td><strong>Presentation</strong></td><td>Visual display</td><td>Charts, graphs, diagrams</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Graphical Presentation Types</div>
+<ul>
+<li><strong>Bar Chart:</strong> Comparing categories</li>
+<li><strong>Pie Chart:</strong> Showing proportions</li>
+<li><strong>Line Chart:</strong> Trends over time</li>
+<li><strong>Histogram:</strong> Frequency distribution</li>
+<li><strong>Ogive:</strong> Cumulative frequency curve</li>
+</ul></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"E-C-C-T-P"</strong> &#x2014; Editing, Coding, Classification, Tabulation, Presentation</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The 5-step data processing sequence (E-C-C-T-P) is a frequent short-answer question.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 steps: Editing &#x2192; Coding &#x2192; Classification &#x2192; Tabulation &#x2192; Presentation</li>
+<li>Editing types: Field (immediate) and Central (headquarters)</li>
+<li>Classification: By attributes (qualitative) or numerical characteristics (quantitative)</li>
+<li>Graphs: Bar, Pie, Line, Histogram, Ogive</li>
+</ul></div>
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Statistical Analysis &#x2014; Nonparametric Tests</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Nonparametric Tests</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Nonparametric Tests" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Chi-Square Test</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Chi-Square" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; When to Use Nonparametric vs Parametric</div>
+<table class="db"><tr><th>Feature</th><th>Parametric</th><th>Nonparametric</th></tr>
+<tr><td>Distribution</td><td>Assumes normal</td><td>No assumption</td></tr>
+<tr><td>Data type</td><td>Interval/Ratio</td><td>Nominal/Ordinal</td></tr>
+<tr><td>Sample size</td><td>Large (30+)</td><td>Any size</td></tr>
+<tr><td>Power</td><td>Higher</td><td>Lower</td></tr>
+<tr><td>Examples</td><td>t-test, ANOVA</td><td>Chi-square, Mann-Whitney</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Nonparametric Test Selection Guide</div>
+<table class="db"><tr><th>Situation</th><th>Test</th><th>Parametric Equivalent</th></tr>
+<tr><td>1 sample, categorical</td><td>Chi-square Goodness of Fit</td><td>&#x2014;</td></tr>
+<tr><td>2 independent samples</td><td>Mann-Whitney U</td><td>Independent t-test</td></tr>
+<tr><td>2 related samples</td><td>Wilcoxon Signed-Rank</td><td>Paired t-test</td></tr>
+<tr><td>3+ independent samples</td><td>Kruskal-Wallis</td><td>One-way ANOVA</td></tr>
+<tr><td>Association, categorical</td><td>Chi-square Test of Independence</td><td>&#x2014;</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Chi-Square Formula</div>
+<p><strong>&#x3C7;&#xB2; = &#x2211; [(O - E)&#xB2; / E]</strong></p>
+<ul>
+<li>O = Observed frequency</li>
+<li>E = Expected frequency</li>
+<li>Degrees of Freedom: df = (rows - 1) &#xD7; (columns - 1)</li>
+<li>Decision: If &#x3C7;&#xB2; calculated &gt; &#x3C7;&#xB2; critical, reject H&#x2080;</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A company compares customer satisfaction across 3 branches (ordinal data: 1-5 scale). Since data is ordinal and may not be normal, use Kruskal-Wallis instead of ANOVA.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-M-W-K-F"</strong> &#x2014; Chi-square, Mann-Whitney, Wilcoxon, Kruskal-Wallis, Friedman</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know WHEN to use each test, not just the formula. Examiners often give a scenario and ask which test is appropriate.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Nonparametric = distribution-free, use when data is ordinal/nominal or sample is small</li>
+<li>Key tests: Chi-square, Mann-Whitney U, Wilcoxon, Kruskal-Wallis, Friedman</li>
+<li>Chi-square formula: &#x3C7;&#xB2; = &#x2211; [(O - E)&#xB2; / E]</li>
+</ul></div>
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Multivariate Analysis of Data</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Multivariate Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Multivariate Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Factor Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Factor Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Multivariate Techniques</div>
+<table class="db"><tr><th>Technique</th><th>Purpose</th><th>When to Use</th></tr>
+<tr><td><strong>Multiple Regression</strong></td><td>Predict DV from multiple IVs</td><td>Forecasting, prediction</td></tr>
+<tr><td><strong>Discriminant Analysis</strong></td><td>Classify into groups</td><td>Group classification</td></tr>
+<tr><td><strong>Factor Analysis</strong></td><td>Reduce variables to factors</td><td>Data reduction, identify dimensions</td></tr>
+<tr><td><strong>Cluster Analysis</strong></td><td>Group similar objects</td><td>Market segmentation</td></tr>
+<tr><td><strong>MANOVA</strong></td><td>Compare groups on multiple DVs</td><td>Multi-outcome comparisons</td></tr>
+</table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Multiple Regression</div>
+<p><strong>Equation: Y = a + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; + ... + b&#x2099;X&#x2099;</strong></p>
+<ul>
+<li>Y = Dependent variable (predicted)</li>
+<li>a = Intercept (constant)</li>
+<li>b&#x2081;, b&#x2082; = Regression coefficients (slopes)</li>
+<li>R&#xB2; = Proportion of variance in Y explained by X variables (0 to 1)</li>
+<li>Multicollinearity: Problem when IVs are highly correlated (VIF &gt; 10)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Factor Analysis</div>
+<ul>
+<li>Purpose: Reduce many variables to fewer underlying "factors"</li>
+<li><strong>Eigenvalue:</strong> Amount of variance explained by a factor (&gt;1 is significant)</li>
+<li><strong>Factor Loading:</strong> Correlation between variable and factor (&gt;0.5 is strong)</li>
+<li>Example: 20 survey questions &#x2192; 4 underlying factors (quality, price, service, convenience)</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A retailer uses: Multiple Regression to predict sales from advertising, price, season, location. Factor Analysis to reduce 50 survey items to 5 key satisfaction dimensions. Cluster Analysis to segment customers into 4 groups.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"R-D-F-C-M"</strong> &#x2014; Regression, Discriminant, Factor, Cluster, MANOVA</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Multiple Regression is the most commonly tested multivariate technique. Know R&#xB2;, adjusted R&#xB2;, and how to interpret coefficients.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 techniques: Multiple Regression, Discriminant, Factor, Cluster, MANOVA</li>
+<li>Regression: Y = a + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; &#x2014; know R&#xB2; interpretation</li>
+<li>Factor Analysis: Eigenvalue &gt;1 is significant, Factor Loading &gt;0.5 is strong</li>
+<li>Cluster Analysis: Hierarchical (tree) or K-means (partition into K clusters)</li>
+</ul></div>
+</div>
+
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Ethics &amp; Report Writing</h2>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Ethics in Research</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Research Ethics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Research Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Informed Consent in Research</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Informed Consent" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Ethical Principles</div>
+<ul>
+<li><strong>Honesty</strong> &#x2014; Report data truthfully, no fabrication</li>
+<li><strong>Integrity</strong> &#x2014; Consistency between words and actions</li>
+<li><strong>Objectivity</strong> &#x2014; Avoid bias in design, analysis, interpretation</li>
+<li><strong>Informed Consent</strong> &#x2014; Participants must know what they're agreeing to</li>
+<li><strong>Beneficence</strong> &#x2014; Maximize benefits, minimize harm</li>
+<li><strong>Confidentiality</strong> &#x2014; Protect participant identity and data</li>
+</ul></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Research Misconduct Types (F-F-P)</div>
+<ul>
+<li><strong>Fabrication:</strong> Making up data that doesn't exist</li>
+<li><strong>Falsification:</strong> Manipulating research materials, equipment, or processes</li>
+<li><strong>Plagiarism:</strong> Using others' work without proper attribution</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Informed Consent Must Include</div>
+<ul>
+<li>Purpose of the research</li>
+<li>Procedures involved</li>
+<li>Risks and benefits</li>
+<li>Right to withdraw at any time</li>
+<li>Confidentiality assurances</li>
+<li>Contact information for questions</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A pharmaceutical company conducting drug trials must: Get IRB approval, obtain informed consent from all participants, report all results (including negative ones), ensure participant safety, never fabricate or falsify efficacy data.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"F-F-P"</strong> &#x2014; Fabrication, Falsification, Plagiarism (research misconduct)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Be able to name all three types of misconduct (F-F-P) and explain why informed consent is essential.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Core principles: Honesty, Integrity, Objectivity, Informed Consent, Beneficence, Confidentiality</li>
+<li>Misconduct: Fabrication, Falsification, Plagiarism (F-F-P)</li>
+<li>IRB reviews research proposals before data collection</li>
+</ul></div>
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Substance of Reports</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>How to Write a Research Report</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Research Report" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Report Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Report Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Reports</div>
+<table class="db"><tr><th>Type</th><th>Purpose</th><th>Structure</th><th>When to Use</th></tr>
+<tr><td><strong>Information Report</strong></td><td>Describe situation</td><td>6W + 1H framework</td><td>Status updates, fact-finding</td></tr>
+<tr><td><strong>Decision Report</strong></td><td>Solve a problem</td><td>Problem &#x2192; Criteria &#x2192; Options &#x2192; Decision</td><td>Business recommendations</td></tr>
+<tr><td><strong>Research Report</strong></td><td>Contribute to knowledge</td><td>Literature &#x2192; Methodology &#x2192; Findings &#x2192; Conclusions</td><td>Academic research</td></tr>
+</table></div>
+<div class="visual-diagram"><h5>&#x1F4CA; Research Report Structure</h5>
+<pre>
+1. Title Page
+2. Abstract/Executive Summary
+3. Introduction (problem, objectives, significance)
+4. Literature Review
+5. Research Methodology
+6. Data Analysis &amp; Findings
+7. Discussion
+8. Conclusions &amp; Recommendations
+9. References
+10. Appendices
+</pre></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 6W + 1H Framework (for Information Reports)</div>
+<ul>
+<li><strong>Who</strong> &#x2014; Subjects, participants, stakeholders</li>
+<li><strong>What</strong> &#x2014; Events, activities, findings</li>
+<li><strong>Whom</strong> &#x2014; Affected parties, target audience</li>
+<li><strong>When</strong> &#x2014; Timeline, duration, dates</li>
+<li><strong>Where</strong> &#x2014; Location, context, setting</li>
+<li><strong>Why</strong> &#x2014; Reasons, causes, motivations</li>
+<li><strong>How</strong> &#x2014; Methods, processes, procedures</li>
+</ul></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-D-R"</strong> &#x2014; Information, Decision, Research (three report types)</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>The 6W+1H framework is versatile &#x2014; use it for both information reports and as a checklist for research proposals.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Three report types: Information (6W+1H), Decision (Problem&#x2192;Criteria&#x2192;Options&#x2192;Decision), Research (academic format)</li>
+<li>Research report structure: Title &#x2192; Abstract &#x2192; Intro &#x2192; Literature &#x2192; Methodology &#x2192; Findings &#x2192; Discussion &#x2192; Conclusions &#x2192; References &#x2192; Appendices</li>
+</ul></div>
+</div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Formats of Reports</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Report Formatting</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Report Formatting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>APA Referencing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="APA Referencing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Three Parts of a Report</div>
+<ul>
+<li><strong>Front Matter:</strong> Title Page, Acknowledgements, Table of Contents, List of Tables/Figures, Abstract</li>
+<li><strong>Body:</strong> Introduction &#x2192; Literature Review &#x2192; Methodology &#x2192; Findings &#x2192; Discussion &#x2192; Conclusions</li>
+<li><strong>Back Matter:</strong> References/Bibliography, Appendices</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Typing Guidelines</div>
+<ul>
+<li>Margins: 1.5" left, 1" on other sides</li>
+<li>Spacing: Double-spaced (1.5 for some formats)</li>
+<li>Font: Times New Roman, 12pt</li>
+<li>Page numbers: Roman numerals for front matter, Arabic for body</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Reference Styles</div>
+<ul>
+<li><strong>APA:</strong> Author, A.A. (Year). Title. Publisher. (most common in social sciences)</li>
+<li><strong>MLA:</strong> Author. Title. Publisher, Year. (humanities)</li>
+<li><strong>Chicago:</strong> Footnotes/endnotes (history, some business)</li>
+</ul></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-A-L-M-D-C-R"</strong> &#x2014; Title, Abstract, Literature, Methodology, Data/Findings, Conclusions, References</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the standard report format by heart. Examiners may ask you to describe the format of a research report or thesis.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Three parts: Front Matter, Body, Back Matter</li>
+<li>Reference styles: APA (social sciences), MLA (humanities), Chicago (history)</li>
+<li>Typing: Double-spaced, Times New Roman 12pt, 1.5" left margin</li>
+</ul></div>
+</div>
+
+<!-- UNIT 14 -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Presentation of a Report</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14"></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Presentation Skills</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Presentation Skills" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>How to Present Research</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrAXtmErZgOeYvRnHSLbD5Dp5q5k5k5k5" title="Present Research" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Presentation Skills Components</div>
+<ul>
+<li><strong>Organization</strong> &#x2014; Logical flow, clear structure</li>
+<li><strong>Clarity</strong> &#x2014; Simple language, avoid jargon</li>
+<li><strong>Confidence</strong> &#x2014; Know your material, prepare thoroughly</li>
+<li><strong>Timing</strong> &#x2014; Respect time limits, pace yourself</li>
+<li><strong>Engagement</strong> &#x2014; Make it interesting, use examples</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Slide Design Rules</div>
+<ul>
+<li>Maximum 6-7 lines per slide</li>
+<li>Use bullet points, not paragraphs</li>
+<li>Consistent font and color scheme</li>
+<li>High contrast (dark text, light background)</li>
+<li>One idea per slide</li>
+<li>Avoid excessive animation</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Handling Questions</div>
+<ul>
+<li>Listen carefully to the full question</li>
+<li>Repeat the question for the audience</li>
+<li>Be honest if you don't know</li>
+<li>Bridge back to your key points</li>
+<li>Keep answers concise</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A 15-minute thesis defense: Slide 1: Title (30s) &#x2192; Slides 2-3: Problem &amp; objectives (2 min) &#x2192; Slides 4-5: Literature gap (2 min) &#x2192; Slides 6-7: Methodology (3 min) &#x2192; Slides 8-12: Key findings (5 min) &#x2192; Slides 13-14: Conclusions (2 min) &#x2192; Q&amp;A (5 min).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"O-C-C-T-E"</strong> &#x2014; Organization, Clarity, Confidence, Timing, Engagement</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Presentation skills questions often ask about "Do's and Don'ts" or "How to make an effective presentation." Have a ready checklist.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>5 components: Organization, Clarity, Confidence, Timing, Engagement</li>
+<li>Slide rules: 6-7 lines max, bullet points, one idea per slide</li>
+<li>Delivery: Eye contact, voice modulation, don't read from slides</li>
+</ul></div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<table class="db"><tr><th>#</th><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td>1</td><td><strong>SO-RC</strong></td><td>Systematic, Objective, Reproducible, Controlled</td><td>Features of good research</td></tr>
+<tr><td>2</td><td><strong>D-L-H-R-D-A-R</strong></td><td>Define, Literature, Hypothesis, Research Design, Data, Analysis, Report</td><td>7 Steps of research process</td></tr>
+<tr><td>3</td><td><strong>E-D-E</strong></td><td>Exploratory, Descriptive, Experimental</td><td>3 Research designs</td></tr>
+<tr><td>4</td><td><strong>O-Q-M-T</strong></td><td>Observation, Questionnaire, Mailed, Telephone</td><td>Data collection methods</td></tr>
+<tr><td>5</td><td><strong>N-O-I-R</strong></td><td>Nominal, Ordinal, Interval, Ratio</td><td>Measurement scales</td></tr>
+<tr><td>6</td><td><strong>L-S-T-G-Q</strong></td><td>Likert, Semantic, Thurstone, Guttman, Q-Sort</td><td>Attitude scales</td></tr>
+<tr><td>7</td><td><strong>S-S-C-S</strong></td><td>Simple random, Stratified, Cluster, Systematic</td><td>Probability sampling</td></tr>
+<tr><td>8</td><td><strong>C-J-Q-S</strong></td><td>Convenience, Judgment, Quota, Snowball</td><td>Non-probability sampling</td></tr>
+<tr><td>9</td><td><strong>E-C-C-T-P</strong></td><td>Editing, Coding, Classification, Tabulation, Presentation</td><td>Data processing steps</td></tr>
+<tr><td>10</td><td><strong>C-M-W-K-F</strong></td><td>Chi-square, Mann-Whitney, Wilcoxon, Kruskal-Wallis, Friedman</td><td>Nonparametric tests</td></tr>
+<tr><td>11</td><td><strong>R-D-F-C-M</strong></td><td>Regression, Discriminant, Factor, Cluster, MANOVA</td><td>Multivariate techniques</td></tr>
+<tr><td>12</td><td><strong>F-F-P</strong></td><td>Fabrication, Falsification, Plagiarism</td><td>Research misconduct</td></tr>
+<tr><td>13</td><td><strong>I-D-R</strong></td><td>Information, Decision, Research</td><td>Report types</td></tr>
+<tr><td>14</td><td><strong>6W+1H</strong></td><td>Who, What, Whom, When, Where, Why, How</td><td>Information report framework</td></tr>
+<tr><td>15</td><td><strong>T-A-L-M-D-C-R</strong></td><td>Title, Abstract, Literature, Method, Data, Conclusions, References</td><td>Report body sequence</td></tr>
+<tr><td>16</td><td><strong>O-C-C-T-E</strong></td><td>Organization, Clarity, Confidence, Timing, Engagement</td><td>Presentation skills</td></tr>
+</table></div>
+
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Formulas</div>
+<ul>
+<li><strong>Chi-Square:</strong> &#x3C7;&#xB2; = &#x2211; [(O - E)&#xB2; / E]</li>
+<li><strong>Regression:</strong> Y = a + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; + ... + b&#x2099;X&#x2099;</li>
+<li><strong>R&#xB2;:</strong> 1 - (SS_res / SS_tot)</li>
+<li><strong>Sampling Error:</strong> &#x3C3;_x&#x304; = &#x3C3; / &#x221A;n</li>
+<li><strong>Sample Size:</strong> n = (Z&#xB2; &#xD7; &#x3C3;&#xB2;) / E&#xB2;</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Statistical Tests Quick Reference</div>
+<table class="db"><tr><th>Test</th><th>Use When</th><th>Data Type</th><th>Parametric Equivalent</th></tr>
+<tr><td>Chi-Square</td><td>Independence/Goodness of fit</td><td>Categorical</td><td>&#x2014;</td></tr>
+<tr><td>t-test</td><td>Compare means (2 groups)</td><td>Interval/Ratio</td><td>&#x2014;</td></tr>
+<tr><td>ANOVA</td><td>Compare means (3+ groups)</td><td>Interval/Ratio</td><td>&#x2014;</td></tr>
+<tr><td>Mann-Whitney U</td><td>Compare 2 independent groups</td><td>Ordinal</td><td>t-test</td></tr>
+<tr><td>Kruskal-Wallis</td><td>Compare 3+ independent groups</td><td>Ordinal</td><td>ANOVA</td></tr>
+<tr><td>Regression</td><td>Predict DV from IVs</td><td>Interval/Ratio</td><td>&#x2014;</td></tr>
+<tr><td>Factor Analysis</td><td>Reduce variables to factors</td><td>Interval/Ratio</td><td>&#x2014;</td></tr>
+</table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Most Frequently Asked Topics</div>
+<ol>
+<li>Research Process Steps &#x2014; List and explain all 7 steps</li>
+<li>Types of Research &#x2014; By application, objective, enquiry</li>
+<li>Research Designs &#x2014; Exploratory vs Descriptive vs Experimental</li>
+<li>Data Collection Methods &#x2014; Compare all 4 methods with pros/cons</li>
+<li>Measurement Scales &#x2014; N-O-I-R with examples</li>
+<li>Sampling Methods &#x2014; Probability vs Non-probability with examples</li>
+<li>Hypothesis Testing &#x2014; H&#x2080; vs H&#x2081;, Type I/II errors</li>
+<li>Parametric vs Nonparametric &#x2014; When to use which</li>
+<li>Report Format &#x2014; Structure of research report</li>
+<li>Research Ethics &#x2014; Misconduct types, informed consent</li>
+</ol></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Model Answer Structure (for "Explain..." questions)</div>
+<ol>
+<li><strong>Definition</strong> &#x2014; 1-2 sentences</li>
+<li><strong>Types/Classification</strong> &#x2014; List with brief explanation</li>
+<li><strong>Examples</strong> &#x2014; Real-world application</li>
+<li><strong>Diagram/Framework</strong> &#x2014; If applicable</li>
+<li><strong>Advantages/Disadvantages</strong> &#x2014; Balanced view</li>
+<li><strong>Conclusion</strong> &#x2014; Summary of key takeaway</li>
+</ol></div>
+</div>
+</main>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+
+  window.addEventListener('scroll',function(){var bar=document.getElementById('readingProgress');if(bar){var h=document.documentElement;bar.style.width=Math.min((h.scrollTop/(h.scrollHeight-h.clientHeight))*100,100)+'%';}var links=document.querySelectorAll('.sidebar-nav a[href^="#u"]');var sections=[];links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)sections.push({el:t,link:a});});var pos=window.scrollY+120;var current=null;sections.forEach(function(s){if(s.el.offsetTop<=pos)current=s.link;});links.forEach(function(a){a.classList.remove('active');});if(current)current.classList.add('active');});
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

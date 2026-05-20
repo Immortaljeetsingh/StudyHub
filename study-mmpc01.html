@@ -248,8 +248,10 @@ h1, h2, h3, h4, h5 {
   max-height: 5000px;
 }
 .expand-toggle {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 0.4rem 1rem;
+  min-height: 44px;
   background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1));
   border: 1px solid rgba(108,99,255,0.3);
   border-radius: 6px;
@@ -390,6 +392,7 @@ h1, h2, h3, h4, h5 {
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc01">
 <a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
@@ -428,7 +431,7 @@ h1, h2, h3, h4, h5 {
 <h2 id="block1">Block-01: Management Fundamentals</h2>
 
 <!-- UNIT 1 -->
-<div class="unit" id="unit-1">
+<div class="unit" id="u1">
 <h3 id="u1">Unit 1: Management &#x2014; An Overview</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
@@ -559,7 +562,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 2 -->
 </div>
-<div class="unit" id="unit-2">
+<div class="unit" id="u2">
 <h3 id="u2">Unit 2: Management and its Evolution</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
@@ -708,7 +711,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 3 -->
 </div>
-<div class="unit" id="unit-3">
+<div class="unit" id="u3">
 <h3 id="u3">Unit 3: Roles of Managers</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
@@ -809,7 +812,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 4 -->
 </div>
-<div class="unit" id="unit-4">
+<div class="unit" id="u4">
 <h3 id="u4">Unit 4: Planning</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
@@ -901,7 +904,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 5 -->
 </div>
-<div class="unit" id="unit-5">
+<div class="unit" id="u5">
 <h3 id="u5">Unit 5: Organizing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
@@ -1007,7 +1010,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 6 -->
 </div>
-<div class="unit" id="unit-6">
+<div class="unit" id="u6">
 <h3 id="u6">Unit 6: Staffing and Directing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
@@ -1113,7 +1116,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 7 -->
 </div>
-<div class="unit" id="unit-7">
+<div class="unit" id="u7">
 <h3 id="u7">Unit 7: Controlling</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
@@ -1195,7 +1198,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 8 -->
 </div>
-<div class="unit" id="unit-8">
+<div class="unit" id="u8">
 <h3 id="u8">Unit 8: Leading and Motivating</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
@@ -1278,7 +1281,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 9 -->
 </div>
-<div class="unit" id="unit-9">
+<div class="unit" id="u9">
 <h3 id="u9">Unit 9: Decision Making</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
@@ -1361,7 +1364,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 10 -->
 </div>
-<div class="unit" id="unit-10">
+<div class="unit" id="u10">
 <h3 id="u10">Unit 10: Organization Structure &amp; Design</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
@@ -1445,7 +1448,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 11 -->
 </div>
-<div class="unit" id="unit-11">
+<div class="unit" id="u11">
 <h3 id="u11">Unit 11: Organizational Communication</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
@@ -1540,7 +1543,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 12 -->
 </div>
-<div class="unit" id="unit-12">
+<div class="unit" id="u12">
 <h3 id="u12">Unit 12: Organizational Culture</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
@@ -1602,7 +1605,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 13 -->
 </div>
-<div class="unit" id="unit-13">
+<div class="unit" id="u13">
 <h3 id="u13">Unit 13: Managing Change</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
@@ -1690,7 +1693,7 @@ h1, h2, h3, h4, h5 {
 
 <!-- UNIT 14 -->
 </div>
-<div class="unit" id="unit-14">
+<div class="unit" id="u14">
 <h3 id="u14">Unit 14: Ethics and Corporate Social Responsibility</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">

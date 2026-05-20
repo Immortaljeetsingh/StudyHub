@@ -1,0 +1,2788 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>MMPM-06: Marketing Research | StudyHub</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="styles-enhanced.css">
+
+<link rel="stylesheet" href="study-hub-enhanced.css">
+
+<style>
+
+/* ============ MMPM-06 ENHANCED STYLES ============ */
+
+/* --- Background Particles --- */
+
+body::after {
+
+  content: '';
+
+  position: fixed;
+
+  top: 0; left: 0; width: 100%; height: 100%;
+
+  background-image:
+
+    radial-gradient(2px 2px at 20% 30%, rgba(214,48,49,0.3), transparent),
+
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+
+    radial-gradient(2px 2px at 90% 40%, rgba(214,48,49,0.2), transparent),
+
+    radial-gradient(1px 1px at 50% 50%, rgba(214,48,49,0.15), transparent),
+
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+
+  background-size: 600px 600px;
+
+  animation: particleDrift 60s linear infinite;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+}
+
+@keyframes particleDrift {
+
+  0% { background-position: 0 0; }
+
+  100% { background-position: 600px 600px; }
+
+}
+
+/* --- Scroll Animations --- */
+
+.animate-on-scroll {
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+
+}
+
+.animate-on-scroll.visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+/* --- Section Heading Gradient Underline --- */
+
+h3[id^="u"] {
+
+  position: relative;
+
+  letter-spacing: -0.02em;
+
+  padding-bottom: 0.6rem;
+
+}
+
+h3[id^="u"]::after {
+
+  content: '';
+
+  position: absolute;
+
+  bottom: 0; left: 0;
+
+  width: 100%; height: 3px;
+
+  background: linear-gradient(90deg, #d63031, #d63031cc, #00d4ff, #d63031);
+
+  background-size: 300% 100%;
+
+  animation: gradientShift 4s ease-in-out infinite;
+
+  border-radius: 2px;
+
+}
+
+@keyframes gradientShift {
+
+  0% { background-position: 0% 50%; }
+
+  50% { background-position: 100% 50%; }
+
+  100% { background-position: 0% 50%; }
+
+}
+
+h2[id^="block"] {
+
+  letter-spacing: -0.02em;
+
+  position: relative;
+
+  padding-bottom: 0.5rem;
+
+}
+
+h2[id^="block"]::after {
+
+  content: '';
+
+  position: absolute;
+
+  bottom: 0; left: 0;
+
+  width: 120px; height: 3px;
+
+  background: linear-gradient(90deg, #d63031, #d63031cc);
+
+  border-radius: 2px;
+
+}
+
+/* --- Card Hover Effects --- */
+
+.cc {
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+
+}
+
+.cc:hover {
+
+  transform: translateY(-4px) !important;
+
+  box-shadow: 0 8px 30px rgba(214,48,49,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+
+  border-color: rgba(214,48,49,0.4) !important;
+
+}
+
+.callout {
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+
+}
+
+.callout:hover {
+
+  transform: translateY(-3px) !important;
+
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+
+}
+
+.callout-important {
+
+  border-left-color: #FFD700 !important;
+
+}
+
+.callout-important .callout-label {
+
+  color: #FFD700 !important;
+
+}
+
+.callout-mnemonic {
+
+  border-left-color: #d63031 !important;
+
+  background: linear-gradient(135deg, rgba(214,48,49,0.05), rgba(0,210,255,0.05)) !important;
+
+}
+
+.callout-example {
+
+  border-left-color: #d63031cc !important;
+
+}
+
+.callout-examtip {
+
+  border-left-color: #FFD700 !important;
+
+  background: rgba(255,215,0,0.06) !important;
+
+}
+
+.callout-examtip .callout-label {
+
+  color: #FFD700 !important;
+
+}
+
+/* --- Typography --- */
+
+h1, h2, h3, h4, h5 {
+
+  letter-spacing: -0.02em !important;
+
+}
+
+/* --- Study Header Enhancement --- */
+
+.study-header {
+
+  background: linear-gradient(135deg, rgba(214,48,49,0.15), rgba(0,210,255,0.1)) !important;
+
+  border: 1px solid rgba(200,200,200,0.12) !important;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.study-header::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: -50%; right: -20%;
+
+  width: 300px; height: 300px;
+
+  background: radial-gradient(circle, rgba(214,48,49,0.15), transparent 70%);
+
+  animation: headerGlow 8s ease-in-out infinite alternate;
+
+}
+
+@keyframes headerGlow {
+
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+
+}
+
+/* --- Summary Box Enhancement --- */
+
+.summary-box {
+
+  border: 1px solid rgba(214,48,49,0.3) !important;
+
+  background: linear-gradient(135deg, rgba(214,48,49,0.05), rgba(255,215,0,0.05)) !important;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+
+}
+
+.summary-box:hover {
+
+  transform: translateY(-3px) !important;
+
+  box-shadow: 0 6px 25px rgba(214,48,49,0.15) !important;
+
+}
+
+/* --- Badge/Tag Styling --- */
+
+.subject-tag {
+
+  background: linear-gradient(135deg, #d63031, #d63031cc) !important;
+
+  color: #fff !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.05em;
+
+}
+
+/* --- Visual Diagram Boxes --- */
+
+.visual-diagram {
+
+  background: linear-gradient(135deg, rgba(214,48,49,0.08), rgba(0,210,255,0.06));
+
+  border: 1px solid rgba(214,48,49,0.25);
+
+  border-radius: 12px;
+
+  padding: 1.5rem;
+
+  margin: 1.2rem 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.visual-diagram::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0; left: 0; right: 0;
+
+  height: 3px;
+
+  background: linear-gradient(90deg, #d63031, #d63031cc, #FFD700);
+
+}
+
+.visual-diagram h5 {
+
+  color: #d63031;
+
+  margin-bottom: 1rem;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+}
+
+.vd-node {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 8px;
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  margin: 0.3rem;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.vd-node:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 4px 15px rgba(214,48,49,0.3);
+
+}
+
+.vd-arrow {
+
+  display: inline-block;
+
+  color: #d63031;
+
+  font-size: 1.2rem;
+
+  margin: 0 0.3rem;
+
+  vertical-align: middle;
+
+}
+
+.vd-row {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.3rem;
+
+  margin-bottom: 0.5rem;
+
+}
+
+.vd-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+  gap: 0.75rem;
+
+}
+
+/* --- Case Study Box --- */
+
+.case-study {
+
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(214,48,49,0.04));
+
+  border: 1px solid rgba(255,215,0,0.2);
+
+  border-left: 4px solid #FFD700;
+
+  border-radius: 8px;
+
+  padding: 1.2rem;
+
+  margin: 1rem 0;
+
+}
+
+.case-study h5 {
+
+  color: #FFD700;
+
+  margin-bottom: 0.5rem;
+
+  font-weight: 600;
+
+}
+
+/* --- Video Section --- */
+
+.video-section { margin: 2rem 0; }
+
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(214,48,49,0.05); }
+
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.video-toggle { background: linear-gradient(135deg, #d63031, #d63031cc); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+
+.video-toggle:hover { opacity: 0.85; }
+
+.video-section-content { display: none; }
+
+.video-section-content.active { display: block; }
+
+/* --- Flowchart Visual --- */
+
+.flow-visual {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 1rem;
+
+}
+
+.flow-visual .step {
+
+  padding: 0.6rem 1rem;
+
+  border-radius: 10px;
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+
+  text-align: center;
+
+  min-width: 100px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.flow-visual .step:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 4px 15px rgba(214,48,49,0.3);
+
+}
+
+.flow-visual .arrow {
+
+  color: #d63031;
+
+  font-size: 1.4rem;
+
+}
+
+</style>
+
+    <link rel="stylesheet" href="enhancements.css">
+
+    <link rel="stylesheet" href="revision-mode.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="light-theme.css">
+
+    <link rel="stylesheet" href="components.css">
+
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+
+<body class="subject-mmpm06">
+
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+
+<script src="api-utils.js"></script>
+
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-06'));</script>
+
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
+
+<div class="study-layout">
+
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPM-06</span></div>
+
+<nav class="sidebar-nav">
+
+<a href="#u1">Unit 1: MR Concepts &amp; Process</a>
+
+<a href="#u2">Unit 2: Applications &amp; Ethics</a>
+
+<a href="#u3">Unit 3: Research Problem Definition</a>
+
+<a href="#u4">Unit 4: Research Design &amp; Hypotheses</a>
+
+<a href="#u5">Unit 5: Data Collection</a>
+
+<a href="#u6">Unit 6: Data Processing</a>
+
+<a href="#u7">Unit 7: Hypothesis Testing</a>
+
+<a href="#u8">Unit 8: Correlation &amp; Regression</a>
+
+<a href="#u9">Unit 9: Multiple Regression</a>
+
+<a href="#u10">Unit 10: Discriminant &amp; Logistic</a>
+
+<a href="#u11">Unit 11: Factor &amp; Cluster Analysis</a>
+
+<a href="#u12">Unit 12: Conjoint &amp; MDS</a>
+
+<a href="#u13">Unit 13: Big Data in MR</a>
+
+<a href="#u14">Unit 14: Internet-based Research</a>
+
+<a href="#u15">Unit 15: Social Media Research</a>
+
+<a href="#mnemonics">Master Mnemonics</a>
+
+<a href="#frameworks">Key Frameworks</a>
+
+<a href="#revision">Quick Revision</a>
+
+<a href="#exam">Exam Focus</a>
+
+<a href="quiz-mmpm06.html" class="back-link">&#x1F4DD; Take Quiz</a>
+
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+
+</nav></aside>
+
+<main id="main-content" class="study-content">
+
+<div class="study-header"><span class="subject-tag">MMPM-06</span><h1>Marketing Research</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== UNIT 1 ==================== -->
+
+<div class="unit" id="u1">
+
+<h3 id="u1-heading">Unit 1: Marketing Research &#x2014; Concepts &amp; Process</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU1">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: Marketing Research Fundamentals</div><p>Introduces the meaning, need, and importance of marketing research, the research process, scope of applications, limitations, and the user's perspective on research usefulness.</p></div>
+
+<div class="video-section">
+
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+
+<div class="video-section-content">
+
+<div class="video-grid">
+
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Marketing Research Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8PQb2mFTKBo" title="Marketing Research" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+
+</div></div></div>
+
+</div>
+
+<h4>Point 1: Need for Marketing Research</h4>
+
+<ul>
+
+<li>Marketing managers need information to plan and implement strategies. <strong>Pingali's 4Cs:</strong> Customer needs, Competition, Cost, Context.</li>
+
+<li><strong>MIS vs. Marketing Research:</strong> MIS uses existing data (continuous); Marketing Research generates new information (project-based).</li>
+
+<li>Marketing research is required when decision-makers face <strong>uncertainty and risk</strong>.</li>
+
+<li>Conditions for conducting research: (a) Research can fill the information gap, (b) Cost of research &lt; Cost of wrong decision, (c) Time for research is available.</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>FMCG Company:</strong> A branded cookie company notices declining market share in a region. Marketing research is commissioned to understand why customers are switching to competitors &#x2014; this is a classic trigger for research (uncertainty about cause).</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"MR is needed when RUC"</strong> &#x2014; Risk is high, Uncertainty exists, and Cost of wrong decision is significant.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>When asked "Why is marketing research needed?", always structure your answer around <strong>three conditions</strong>: (1) Decision-maker faces uncertainty, (2) Research can reduce the uncertainty, and (3) Cost of research is justified by the value of the decision. Add real-world examples for each condition.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example &#x2014; Why Research is Needed</div>
+
+<p><strong>Amul's Entry into Chocolate Market:</strong> Amul faced uncertainty about whether Indian consumers would accept an Indian chocolate brand over established players like Cadbury. Marketing research was needed to: (a) understand chocolate consumption patterns, (b) identify price points, (c) determine distribution strategy, and (d) evaluate brand positioning. The cost of research (Rs 50 lakh) was justified by the potential market (Rs 15,000 crore Indian chocolate market).</p></div>
+
+<h4>Point 2: Definition &amp; Meaning of Marketing Research</h4>
+
+<ul>
+
+<li><strong>Marketing Research</strong> is the objective and formal process of collecting information, analyzing results, and communicating findings for marketing decisions.</li>
+
+<li>It is <strong>systematic</strong> &#x2014; all stages follow a logical sequence.</li>
+
+<li>Includes both <strong>quantitative</strong> (surveys, experiments) and <strong>qualitative</strong> (focus groups, depth interviews) methods.</li>
+
+<li>Establishes an <strong>information channel between the consumer and the company</strong>.</li>
+
+</ul>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4D1; Definitions by Scholars</h5><ul>
+
+<li><strong>American Marketing Association:</strong> "Marketing research links the consumer, customer, and public to the marketer through information"</li>
+
+<li><strong>Green &amp; Tull:</strong> "Marketing research is the systematic and objective search for and analysis of data relevant to the identification and solution of any problem in the field of marketing"</li>
+
+<li><strong>Philip Kotler:</strong> "Marketing research is systematic problem analysis, model building, and fact-finding for the purpose of improved decision-making and control in the marketing of goods and services"</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x2699; Characteristics of Good MR</h5><ul>
+
+<li><strong>Systematic:</strong> Follows a logical, step-by-step process</li>
+
+<li><strong>Objective:</strong> Unbiased data collection and analysis</li>
+
+<li><strong>Scientific:</strong> Uses proven methods and tools</li>
+
+<li><strong>Comprehensive:</strong> Covers all relevant aspects</li>
+
+<li><strong>Timely:</strong> Information available when needed for decisions</li>
+
+<li><strong>Ethical:</strong> Respects respondent privacy and consent</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div>
+
+<p><strong>Nielsen India:</strong> Nielsen is one of the largest MR firms operating in India. They track FMCG sales across 6 million outlets using retail audits. Their data helps companies like HUL, P&G, and ITC understand market share, distribution gaps, and pricing effectiveness. Nielsen's "Total Consumer View" combines purchase data, media consumption, and consumer attitudes for a 360-degree market view.</p></div>
+
+<h4>Point 3: Marketing Research Process</h4>
+
+<div class="visual-diagram">
+
+<h5>&#x1F4CA; The Marketing Research Process (11 Steps)</h5>
+
+<div class="vd-row">
+
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)"><strong>1.</strong> Problem Definition</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>2.</strong> Research Objectives</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>3.</strong> Research Design</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>4.</strong> Sampling Plan</div>
+
+</div>
+
+<div class="vd-row">
+
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>5.</strong> Data Collection</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)"><strong>6.</strong> Data Preparation</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4)"><strong>7.</strong> Analysis</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(78,205,196,0.2);border:1px solid rgba(78,205,196,0.4)"><strong>8.</strong> Report &amp; Presentation</div>
+
+</div>
+
+<p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem">Each step builds on the previous one. Feedback loops exist at every stage.</p>
+
+</div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Step</th><th>Key Activities</th><th>Output</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>1. Problem Definition</strong></td><td>Exploratory research, management interviews, secondary data review</td><td>Clear problem statement</td></tr>
+
+<tr><td><strong>2. Research Objectives</strong></td><td>Specific, measurable goals; hypothesis formulation</td><td>List of research questions/hypotheses</td></tr>
+
+<tr><td><strong>3. Research Design</strong></td><td>Choose exploratory, descriptive, or causal design</td><td>Blueprint for data collection</td></tr>
+
+<tr><td><strong>4. Sampling Plan</strong></td><td>Define population, sample size, sampling method (probability/non-probability)</td><td>Sampling frame</td></tr>
+
+<tr><td><strong>5. Data Collection</strong></td><td>Fieldwork, interviews, surveys, observation</td><td>Raw data</td></tr>
+
+<tr><td><strong>6. Data Preparation</strong></td><td>Coding, editing, cleaning, validation</td><td>Clean, organized data</td></tr>
+
+<tr><td><strong>7. Analysis</strong></td><td>Univariate, bivariate, multivariate analysis</td><td>Statistical findings</td></tr>
+
+<tr><td><strong>8. Report &amp; Presentation</strong></td><td>Conclusions, recommendations, executive summary</td><td>Research report</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>The most critical step is <strong>Problem Definition</strong> ("a problem well defined is a problem half-solved"). Many research projects fail because the problem was poorly defined. Always emphasize this in exams.</p></div>
+
+<h4>Point 4: Scope of Marketing Research</h4>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Sales Analysis</h5><ul>
+
+<li>Market potential &amp; demand projection</li>
+
+<li>Market characteristics &amp; share estimation</li>
+
+<li>Business trends &amp; competitive analysis</li>
+
+<li>Consumer buying habits &amp; brand loyalty</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4BC; Sales Methods &amp; Policies</h5><ul>
+
+<li>Evaluating distribution effectiveness</li>
+
+<li>Sales territories &amp; quotas</li>
+
+<li>Compensation design</li>
+
+<li>Promotional activity assessment</li>
+
+</ul></div>
+
+</div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F3ED; Product Management</h5><ul>
+
+<li>Competitive product feedback</li>
+
+<li>Market segmentation</li>
+
+<li>New product potential assessment</li>
+
+<li>Brand positioning studies</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4E2; Advertising Research</h5><ul>
+
+<li>Media research (TV, digital audience)</li>
+
+<li>Copy testing (alternative designs)</li>
+
+<li>Ad effectiveness evaluation</li>
+
+<li>Corporate image studies</li>
+
+</ul></div>
+
+</div>
+
+<h4>Point 5: Limitations of Marketing Research</h4>
+
+<ul>
+
+<li><strong>Does not guarantee success</strong> &#x2014; it indicates current conditions, not the future</li>
+
+<li><strong>Surrogate Information Error:</strong> Researching the wrong variable (e.g., Nestle Maggi initially researched food substitution, not the convenience need)</li>
+
+<li><strong>Time &amp; Cost Trade-off:</strong> Research is expensive; sometimes a quick guesstimate is more practical</li>
+
+<li><strong>Confidentiality Risk:</strong> Competitors may observe field research and copy the idea faster</li>
+
+<li><strong>Not needed for small decisions:</strong> Many small companies operate successfully without formal research</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Maggi Noodles (1982):</strong> Nestle's initial research found Indians were not comfortable substituting traditional food. But they underestimated the convenience need of working women. The product succeeded despite the research finding &#x2014; a classic "surrogate information" error.</p></div>
+
+<h4>Point 6: User's Perspective on Research</h4>
+
+<ul>
+
+<li><strong>Estimate vs. Guesstimate:</strong> When time is limited, managers may need to choose between research-based estimates and quick guesstimates</li>
+
+<li><strong>Researcher should own the process:</strong> Decision-maker identifies the problem; researcher conducts the study</li>
+
+<li><strong>Be critical:</strong> Decision-makers should question the research process to ensure validity</li>
+
+</ul>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+
+<li>Marketing research is the systematic collection and analysis of information for marketing decisions</li>
+
+<li>Needed when decision-makers face uncertainty and risk; cost of research must be &lt; cost of wrong decision</li>
+
+<li>The 11-step research process starts with problem definition (most critical step)</li>
+
+<li>Scope includes: sales analysis, product management, advertising research, corporate research</li>
+
+<li>Limitations: no guarantee of success, surrogate information error, time/cost trade-offs</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 2 ==================== -->
+
+<div class="unit" id="u2">
+
+<h3 id="u2-heading">Unit 2: Applications of Marketing Research &amp; Ethical Issues</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU2">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 2: MR Industry in India</div><p>Covers the status of the marketing research industry in India, common applications, role of technology, ethical considerations, and challenges of conducting research in India.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Line Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Product Line Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Line Length</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hHWGBkNJKOs" title="Product Line Length" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<h4>Point 1: Marketing Research Industry in India</h4>
+
+<ul>
+
+<li>Global market research industry: ~US$74 billion; India's share: $2.1 billion (FY21), expected to reach <strong>$4.2 billion by FY26</strong> and <strong>$10 billion by 2030</strong>.</li>
+
+<li>India is <strong>4th largest</strong> globally by industry size (ESOMAR report).</li>
+
+<li>Revenue split: Marketing analytics (52%), Traditional MR (32%), Syndicated/Publishing (16%).</li>
+
+<li>Top client sectors: FMCG &amp; Retail (27%), ICT (16%), BFSI (15%).</li>
+
+<li><strong>75% of revenue</strong> comes from international outsourced accounts &#x2014; India is a major MR outsourcing hub.</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>IMRB International (now Kantar):</strong> One of India's oldest MR firms, established in 1970. Conducts retail audits, consumer panels, and brand tracking studies. IMRB's "People Meter" TV audience measurement system is used across Indian television.</p></div>
+
+<h4>Point 2: Types of Marketing Research in India</h4>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Rank</th><th>Type of MR</th><th>Usage (%)</th></tr></thead>
+
+<tbody>
+
+<tr><td>1</td><td>Customer Satisfaction &amp; Loyalty</td><td>62%</td></tr>
+
+<tr><td>2</td><td>Advertising Research</td><td>55%</td></tr>
+
+<tr><td>3</td><td>Segmentation Research</td><td>45%</td></tr>
+
+<tr><td>4</td><td>Usage and Attitude</td><td>44%</td></tr>
+
+<tr><td>5</td><td>Consumer Research</td><td>42%</td></tr>
+
+</tbody></table></div>
+
+<h4>Point 3: Data Collection Methods Used in India</h4>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Rank</th><th>Method</th><th>Usage (%)</th></tr></thead>
+
+<tbody>
+
+<tr><td>1</td><td>In-depth Interviews</td><td>71%</td></tr>
+
+<tr><td>2</td><td>Focus Groups</td><td>69%</td></tr>
+
+<tr><td>3</td><td>Online Surveys</td><td>67%</td></tr>
+
+<tr><td>4</td><td>CATI (Computer-Assisted Telephonic)</td><td>64%</td></tr>
+
+<tr><td>5</td><td>Desk Research</td><td>44%</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Top 5 Data Collection Methods:</strong> "I Focus On Computer Desks" &#x2014; In-depth interviews, Focus groups, Online surveys, CATI, Desk research.</p></div>
+
+<h4>Point 4: Role of New Technologies</h4>
+
+<ul>
+
+<li>Internet users in India grew from 0.62 million (2010) to <strong>843 million (2021)</strong> &#x2014; second-largest globally</li>
+
+<li>Smartphones present in <strong>84% of households</strong>; mobile usage far outpaces desktop</li>
+
+<li>Social media has significantly benefited MR expansion</li>
+
+<li>Face-to-face research dominated pre-pandemic; digital methods accelerated post-COVID</li>
+
+<li>Future techniques: AI-powered analytics, social media listening, mobile ethnography</li>
+
+</ul>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4F1; Digital MR Techniques</h5><ul>
+
+<li><strong>Online Surveys:</strong> Cost-effective, wide reach, quick turnaround</li>
+
+<li><strong>Social Media Listening:</strong> Real-time consumer sentiment analysis</li>
+
+<li><strong>Mobile Ethnography:</strong> Consumers capture behaviors via smartphone</li>
+
+<li><strong>AI Analytics:</strong> Pattern recognition in large datasets</li>
+
+<li><strong>Neuromarketing:</strong> Eye-tracking, EEG for subconscious responses</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Traditional MR Techniques</h5><ul>
+
+<li><strong>Face-to-Face Interviews:</strong> Deep insights, rapport building</li>
+
+<li><strong>Focus Groups:</strong> Group dynamics reveal hidden attitudes</li>
+
+<li><strong>Observation:</strong> Watching actual behavior vs. stated behavior</li>
+
+<li><strong>Mystery Shopping:</strong> Evaluating service quality firsthand</li>
+
+<li><strong>Retail Audits:</strong> Tracking product movement through outlets</li>
+
+</ul></div>
+
+</div>
+
+<h4>Point 5: Ethical Issues in Marketing Research</h4>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x2705; DOs</h5><ul>
+
+<li>Obtain <strong>informed consent</strong> from participants</li>
+
+<li>Maintain <strong>anonymity and confidentiality</strong></li>
+
+<li>Ensure <strong>transparency</strong> in research purpose and methodology</li>
+
+<li>Cite the research firm and funding source</li>
+
+<li>Use appropriate methods for the data type needed</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x274C; DON'Ts</h5><ul>
+
+<li>Don't ask for confidential respondent information</li>
+
+<li>Don't dictate methods to research professionals</li>
+
+<li>Don't ask for quantitative data from qualitative studies</li>
+
+<li>Don't conduct primary research when secondary data exists</li>
+
+<li>Don't use deceptive practices to influence responses</li>
+
+</ul></div>
+
+</div>
+
+<h4>Point 6: Problems in Conducting MR in India</h4>
+
+<ul>
+
+<li><strong>Linguistic Diversity:</strong> 22 official languages, 400+ dialects; questionnaires must be translated into 5-6 languages minimum</li>
+
+<li><strong>Rural Accessibility:</strong> 70% rural population; rural market growing 5x faster than urban</li>
+
+<li><strong>High Attrition:</strong> ~30% annual turnover in MR firms due to low salaries</li>
+
+<li><strong>Quality Concerns:</strong> 58% of businesses feel MR quality falls short of expectations</li>
+
+<li><strong>Time Delays:</strong> 42% of managers feel MR "takes too long to be of real use"</li>
+
+<li><strong>Fraud Risk:</strong> Interviewers may demonstrate "straightlining" or steer interviews for quick completion</li>
+
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid &#x2014; The 5 Rules for MR in India</div>
+
+<p><strong>Rule 1:</strong> Speak their language &#x2014; Translate into local languages, use simple vocabulary<br>
+
+<strong>Rule 2:</strong> Don't get lost in translation &#x2014; Back-translate to verify accuracy<br>
+
+<strong>Rule 3:</strong> Respect culture &#x2014; Adapt questions to local customs and sensitivities<br>
+
+<strong>Rule 4:</strong> Don't always rely on technology &#x2014; Rural India still needs face-to-face methods<br>
+
+<strong>Rule 5:</strong> Beware of fraud &#x2014> Implement quality checks, GPS tracking, call-back verification</p></div>
+
+<h4>Point 6b: Government of India &amp; Market Research</h4>
+
+<ul>
+
+<li>Government uses MR for <strong>census data</strong>, <strong>socio-economic surveys</strong>, and <strong>policy formulation</strong></li>
+
+<li><strong>NSSO (National Sample Survey Office):</strong> Conducts large-scale household surveys</li>
+
+<li><strong>CMIE (Centre for Monitoring Indian Economy):</strong> Provides economic and business data</li>
+
+<li><strong>RBI Surveys:</strong> Consumer confidence, inflation expectations, industrial outlook</li>
+
+<li>Government data is a valuable <strong>secondary source</strong> for marketing researchers</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div>
+
+<p><strong>PLFS (Periodic Labour Force Survey):</strong> Conducted by NSSO, provides data on employment, unemployment, and labour force participation. Marketing researchers use this data to understand consumer purchasing power, employment trends, and demographic shifts for market sizing and segmentation.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>India-specific MR challenges are a favorite exam topic. Always mention: linguistic diversity, rural accessibility, high attrition, quality concerns, and the "5 Rules" (speak their language, don't get lost in translation, respect culture, don't always rely on technology, beware of fraud).</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+
+<li>India's MR industry: $2.1B (FY21), expected to reach $4.2B by FY26, 4th largest globally</li>
+
+<li>Customer satisfaction surveys are the most used MR service (62%)</li>
+
+<li>Digital transformation: 843M internet users, mobile-first research expanding</li>
+
+<li>Ethical issues: informed consent, confidentiality, transparency, appropriate methods</li>
+
+<li>India challenges: linguistic diversity, rural access, attrition, quality, time delays</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 3 ==================== -->
+
+</div>
+<div class="unit" id="u3">
+
+<h3 id="u3-heading">Unit 3: Identifying &amp; Defining Research Problems</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU3">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 3: Research Problem Definition</div><p>Differentiates between decision problems and research problems, explains methods for converting decision areas into research objectives, and covers conceptualization approaches.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>NPD Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="NPD Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Idea Generation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PcSMqJMBXNg" title="Idea Generation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<h4>Point 1: Decision Area vs. Research Problem</h4>
+
+<ul>
+
+<li><strong>Decision Area:</strong> The marketing manager's problem &#x2014; what to do in a specific situation (e.g., declining market share).</li>
+
+<li><strong>Research Problem:</strong> Finding the underlying causes and information needed to make the best decision.</li>
+
+<li>A <strong>symptom</strong> (declining sales) is NOT the problem &#x2014; the true problem lies in pricing, promotion, availability, brand acceptance, etc.</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div>
+
+<p><strong>Organic Farm Retailer:</strong> A farmer selling organic vegetables faces low demand. The <strong>symptom</strong> is low sales. The <strong>decision area</strong> is whether to continue organic farming or switch back. The <strong>research problem</strong> is understanding: Who buys organic? Why? What price are they willing to pay? How can awareness be increased?</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"A problem well defined is a problem half-solved"</strong> &#x2014; The most important principle in marketing research. Problem definition is the foundation of the entire research process.</p></div>
+
+<h4>Point 2: Converting Decision Problems to Research Problems</h4>
+
+<div class="visual-diagram">
+
+<h5>&#x1F4CA; Three Methods of Conversion</h5>
+
+<div class="vd-grid">
+
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)"><strong>1. Interaction Method</strong><br><small>Q&A between researcher and decision-maker</small></div>
+
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>2. Decision Tree Approach</strong><br><small>Hierarchical breakdown of the problem</small></div>
+
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>3. Conceptualization</strong><br><small>Breaking concepts into measurable variables</small></div>
+
+</div>
+
+</div>
+
+<h4>Point 3: Interaction Method</h4>
+
+<ul>
+
+<li>Used when the decision-maker <strong>cannot clearly state the problem</strong>.</li>
+
+<li>Researcher asks general questions: "Why do you need research?" "What do you know about the situation?"</li>
+
+<li>Progressively deeper questions narrow down to specific research objectives.</li>
+
+<li>A <strong>"dummy test"</strong> helps prioritize research objectives and may reveal the decision-maker needs to rethink the decision area.</li>
+
+</ul>
+
+<h4>Point 4: Decision Tree Approach</h4>
+
+<ul>
+
+<li>A hierarchical model where information is sorted by connected nodes.</li>
+
+<li>Starts with basic questions and breaks them down into specifics.</li>
+
+<li>Particularly helpful for <strong>complex multistage decision problems</strong>.</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example &#x2014; Tata Steel GalvaRoS</div>
+
+<p><strong>Decision Area:</strong> Create a green ecosystem for MSME buyers of coated steel products.<br>
+
+<strong>Decision Tree:</strong> Segments (Ducting, HVAC, Cable Tray, Appliances) &#x2192; Sub-segments &#x2192; Influencers &#x2192; Strategy (awareness, interest, desire, action) &#x2192; Information needs (channel, communication, buying process).</p></div>
+
+<h4>Point 5: Conceptualization</h4>
+
+<ul>
+
+<li>Breaking down a concept into measurable variables and identifying relationships between them.</li>
+
+<li><strong>Two approaches:</strong> (a) Applying existing concepts, (b) Developing new concepts.</li>
+
+</ul>
+
+<div class="cg">
+
+<div class="cc"><h5>Applying Existing Concepts</h5><ul>
+
+<li><strong>AIDA Model</strong> applied to environmental consciousness study:</li>
+
+<li>Awareness: What is environment? What causes damage?</li>
+
+<li>Interest: Possible actions, why protect?</li>
+
+<li>Desire: Attitudes toward protection</li>
+
+<li>Action: What are you currently doing?</li>
+
+</ul></div>
+
+<div class="cc"><h5>Developing New Concepts</h5><ul>
+
+<li><strong>DLA Framework</strong> for online vs. offline MBA:</li>
+
+<li>Delivery, Learning, Acceptance</li>
+
+<li>Variables: Institute (facilities, resources), Faculty (comfort, preference), Students (connectivity, motivation), Recruiters (perceptions)</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>In exams, always clearly distinguish between <strong>decision area</strong> (what to do) and <strong>research problem</strong> (what information is needed). Use the Tata Steel or Garage Butler case to illustrate your answer for extra marks.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+
+<li>Decision area = manager's problem; Research problem = underlying causes and information needs</li>
+
+<li>Three conversion methods: Interaction, Decision Tree, Conceptualization</li>
+
+<li>Interaction method uses progressive questioning to narrow down research objectives</li>
+
+<li>Decision trees break complex problems into hierarchical nodes</li>
+
+<li>Conceptualization uses existing (AIDA) or new (DLA) frameworks to identify variables</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 4 ==================== -->
+
+</div>
+<div class="unit" id="u4">
+
+<h3 id="u4-heading">Unit 4: Research Design &amp; Hypothesis Testing</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU4">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 4: Research Design &amp; Hypotheses</div><p>Covers the concept and types of research designs, the role of hypotheses in marketing research, hypothesis formulation, testing, and types of errors.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Launch Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Product Launch Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Test Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="Test Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<h4>Point 1: Research Design</h4>
+
+<ul>
+
+<li>A <strong>research design</strong> is a framework or blueprint for conducting a marketing research project.</li>
+
+<li>It details the procedures for obtaining information needed to address the research problem.</li>
+
+<li>A good design ensures the project is conducted effectively and efficiently.</li>
+
+</ul>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Types of Research Design</h5><ul>
+
+<li><strong>Exploratory:</strong> Discover insights when problem is unclear (literature review, expert interviews)</li>
+
+<li><strong>Descriptive:</strong> Describe market characteristics (surveys, panels)</li>
+
+<li><strong>Causal:</strong> Establish cause-and-effect relationships (experiments)</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x2699; Classification by Causality</h5><ul>
+
+<li><strong>Exploratory:</strong> Low structure, flexible</li>
+
+<li><strong>Descriptive:</strong> Pre-planned structure, specific hypotheses</li>
+
+<li><strong>Causal:</strong> Highest structure, tests specific cause-effect relationships</li>
+
+</ul></div>
+
+</div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Design Type</th><th>Purpose</th><th>Methods</th><th>When to Use</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Exploratory</strong></td><td>Gain insights, clarify ambiguous problems</td><td>Literature review, expert interviews, focus groups, pilot studies</td><td>When the problem is not well understood</td></tr>
+
+<tr><td><strong>Descriptive</strong></td><td>Describe market characteristics or functions</td><td>Surveys, panels, observation, structured questionnaires</td><td>When specific questions need quantified answers</td></tr>
+
+<tr><td><strong>Causal</strong></td><td>Determine cause-and-effect relationships</td><td>Experiments (lab, field), A/B testing</td><td>When testing specific hypotheses about causation</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Research Design Types:</strong> "EDC" &#x2014; Exploratory (what's happening?), Descriptive (how much/many?), Causal (does X cause Y?).</p></div>
+
+<h4>Point 2: Concept and Meaning of Hypotheses</h4>
+
+<ul>
+
+<li>A <strong>hypothesis</strong> is a conjectural statement of the relationship between two or more variables (Kerlinger, 1986).</li>
+
+<li>It is written so it can be <strong>proven or disproven</strong> by valid and reliable data (Grinnell, 1993).</li>
+
+<li>Hypotheses are always in <strong>declarative statement form</strong> (not questions).</li>
+
+<li>They narrow the scope of data collection compared to broad research questions.</li>
+
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Example</div>
+
+<p><strong>Research Question:</strong> Identify the factors influencing salesperson performance.<br>
+
+<strong>Hypothesis:</strong> Marital status of salesperson has significant effect on sales performance.<br>The hypothesis focuses data collection on one specific variable relationship rather than many.</p></div>
+
+<h4>Point 3: Characteristics of a Good Hypothesis</h4>
+
+<ul>
+
+<li><strong>Simple &amp; Declarative:</strong> Clear, explicit statement testing one relationship at a time</li>
+
+<li><strong>Measurable &amp; Quantifiable:</strong> Must be expressible in terms that can be statistically tested</li>
+
+<li><strong>Grounded in Knowledge:</strong> Based on existing theory, not intuition or subjective judgment</li>
+
+<li><strong>Testable:</strong> If it cannot be measured, it cannot be tested, and no conclusions can be drawn</li>
+
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>A hypothesis must always be <strong>testable</strong> and <strong>falsifiable</strong>. If there's no method to verify it, it's useless for research. However, new methods may emerge during research to test it.</p></div>
+
+<h4>Point 4: Importance of Hypotheses in Marketing Research</h4>
+
+<ol>
+
+<li><strong>Provides Focus:</strong> Narrows the study to specific facets, preventing data overload</li>
+
+<li><strong>Prevents Delusion:</strong> Keeps researchers from finding "interesting" but irrelevant patterns</li>
+
+<li><strong>Framework for Questions:</strong> Helps design focused survey questions that test specific relationships</li>
+
+<li><strong>Decision Support:</strong> Translates research objectives into testable propositions for decision-making</li>
+
+</ol>
+
+<h4>Point 5: Types of Hypotheses</h4>
+
+<div class="cg">
+
+<div class="cc"><h5>Null Hypothesis (H&#x2080;)</h5><ul>
+
+<li>States there is <strong>no relationship</strong> between variables</li>
+
+<li>Always tested for possible rejection</li>
+
+<li>Example: "There is no significant difference in sales performance between trained and untrained salespeople"</li>
+
+</ul></div>
+
+<div class="cc"><h5>Alternative Hypothesis (H&#x2081;)</h5><ul>
+
+<li>States there <strong>is a relationship</strong> between variables</li>
+
+<li>Accepted when null hypothesis is rejected</li>
+
+<li>Example: "Trained salespeople perform significantly better than untrained ones"</li>
+
+</ul></div>
+
+</div>
+
+<h4>Point 6: Hypothesis Testing Process</h4>
+
+<div class="visual-diagram">
+
+<h5>&#x1F4CA; Hypothesis Testing Steps</h5>
+
+<div class="vd-row">
+
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)"><strong>1.</strong> State H&#x2080; and H&#x2081;</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>2.</strong> Choose significance level (&#x03B1;)</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>3.</strong> Select test statistic</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>4.</strong> Calculate &amp; compare</div>
+
+<div class="vd-arrow">&#x2192;</div>
+
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>5.</strong> Accept/Reject H&#x2080;</div>
+
+</div>
+
+</div>
+
+<h4>Point 7: Types of Errors in Hypothesis Testing</h4>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Error Type</th><th>Description</th><th>Also Called</th><th>Example</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Type I Error</strong></td><td>Rejecting a true null hypothesis (false positive)</td><td>Alpha (&#x03B1;) error</td><td>Concluding a new ad campaign works when it actually doesn't</td></tr>
+
+<tr><td><strong>Type II Error</strong></td><td>Accepting a false null hypothesis (false negative)</td><td>Beta (&#x03B2;) error</td><td>Concluding a new ad campaign doesn't work when it actually does</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Type I = "False Alarm"</strong> (rejected H&#x2080; when it was true). <strong>Type II = "Missed Detection"</strong> (accepted H&#x2080; when it was false). Think: "Type I is like convicting an innocent person; Type II is like letting a guilty person go free."</p></div>
+
+<div class="case-study">
+
+<h5>&#x1F4D0; Case Study: Hypothesis Testing in Indian Retail</h5>
+
+<p><strong>Decision Area:</strong> A leading Indian retail chain wants to know if extending store hours from 9 PM to 11 PM will increase revenue.<br>
+
+<strong>H&#x2080;:</strong> Extended store hours do not significantly increase revenue.<br>
+
+<strong>H&#x2081;:</strong> Extended store hours significantly increase revenue.<br>
+
+<strong>Method:</strong> Selected 20 stores in metros, extended hours for 3 months, compared revenue with control stores.<br>
+
+<strong>Result:</strong> H&#x2080; rejected at 95% confidence. Revenue increased by 18% in extended-hour stores. Decision: Roll out extended hours across all metro stores.</p>
+
+</div>
+
+<h4>Point 8: Data Analysis Techniques in Marketing Research</h4>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Univariate Analysis</h5><ul>
+
+<li>Analyzing a single variable at a time</li>
+
+<li>Techniques: Frequency distributions, mean, median, mode, standard deviation</li>
+
+<li><strong>Example:</strong> What percentage of customers prefer online shopping?</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Bivariate Analysis</h5><ul>
+
+<li>Analyzing relationship between two variables</li>
+
+<li>Techniques: Cross-tabulation, correlation, t-test, chi-square</li>
+
+<li><strong>Example:</strong> Is there a relationship between age and brand preference?</li>
+
+</ul></div>
+
+</div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Multivariate Analysis</h5><ul>
+
+<li>Analyzing relationships among three or more variables</li>
+
+<li>Techniques: Regression, factor analysis, cluster analysis, discriminant analysis</li>
+
+<li><strong>Example:</strong> What factors (price, quality, brand image) best predict customer satisfaction?</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Qualitative Analysis</h5><ul>
+
+<li>Analyzing non-numerical data (text, images, observations)</li>
+
+<li>Techniques: Content analysis, thematic analysis, coding</li>
+
+<li><strong>Example:</strong> What themes emerge from customer reviews about a new product?</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>In exams, always match the <strong>analysis technique to the research question type</strong>. Use univariate for descriptive questions, bivariate for relationship questions, and multivariate for predictive questions. Mention specific tests (t-test, chi-square, ANOVA) for bonus marks.</p></div>
+
+<h4>Point 9: Research Report Writing</h4>
+
+<ul>
+
+<li><strong>Executive Summary:</strong> Brief overview of key findings and recommendations (1-2 pages)</li>
+
+<li><strong>Introduction:</strong> Background, problem statement, research objectives</li>
+
+<li><strong>Methodology:</strong> Research design, sampling, data collection methods</li>
+
+<li><strong>Findings:</strong> Data presentation with tables, charts, and statistical analysis</li>
+
+<li><strong>Conclusions:</strong> Interpretation of findings in context of research objectives</li>
+
+<li><strong>Recommendations:</strong> Actionable suggestions for decision-makers</li>
+
+<li><strong>Appendices:</strong> Questionnaire, raw data, detailed statistical outputs</li>
+
+</ul>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Report Structure:</strong> "EIMFCRA" &#x2014; Executive summary, Introduction, Methodology, Findings, Conclusions, Recommendations, Appendices. Write the executive summary last, even though it appears first.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+
+<li>Research design is the blueprint: Exploratory, Descriptive, or Causal</li>
+
+<li>A hypothesis is a testable, declarative statement about variable relationships</li>
+
+<li>Good hypotheses are simple, measurable, grounded in knowledge, and testable</li>
+
+<li>Hypotheses provide focus, prevent delusion, and support decision-making</li>
+
+<li>Null (H&#x2080;) vs. Alternative (H&#x2081;) hypotheses; Type I (false alarm) and Type II (missed detection) errors</li>
+
+<li>The 5-step testing process: State hypotheses &#x2192; Choose &#x03B1; &#x2192; Select test &#x2192; Calculate &#x2192; Decide</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 5 ==================== -->
+
+</div>
+<div class="unit" id="u5">
+
+<h3 id="u5-heading">Unit 5: Data Collection &#x2014; Qualitative and Quantitative</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU5">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Two fundamental types: Primary (new) vs Secondary (existing). Collection methods: Communication (ask) vs Observation (watch).</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Product Life Cycle</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Product Life Cycle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>PLC Stages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hHWGBkNJKOs" title="PLC Stages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Type</th><th>Source</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Primary</strong></td><td>Collected firsthand</td><td>Specific to research need</td><td>Expensive, time-consuming</td></tr>
+
+<tr><td><strong>Secondary</strong></td><td>Already existing</td><td>Cheap, quick</td><td>May not fit exactly</td></tr>
+
+</tbody></table></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Method</th><th>Type</th><th>Description</th><th>When to Use</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Survey/Communication</strong></td><td>Quantitative</td><td>Questionnaires, interviews</td><td>Large samples, structured data</td></tr>
+
+<tr><td><strong>Observation</strong></td><td>Qual/Quant</td><td>Watching behavior</td><td>When self-report biased</td></tr>
+
+<tr><td><strong>Focus Groups</strong></td><td>Qualitative</td><td>6-10 people discussing</td><td>Exploratory, idea generation</td></tr>
+
+<tr><td><strong>Depth Interviews</strong></td><td>Qualitative</td><td>One-on-one in-depth</td><td>Sensitive topics, experts</td></tr>
+
+<tr><td><strong>Projective Techniques</strong></td><td>Qualitative</td><td>Word association, TAT</td><td>Uncover hidden motivations</td></tr>
+
+</tbody></table></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Interview Type</th><th>Medium</th><th>Response Rate</th><th>Cost</th></tr></thead>
+
+<tbody>
+
+<tr><td>Personal</td><td>Face-to-face</td><td>Highest</td><td>Highest</td></tr>
+
+<tr><td>Telephone</td><td>Phone</td><td>Moderate</td><td>Moderate</td></tr>
+
+<tr><td>Mail</td><td>Post</td><td>Lowest</td><td>Low</td></tr>
+
+<tr><td>Online</td><td>Internet</td><td>Variable</td><td>Lowest</td></tr>
+
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Sources of Error</h5>
+
+<div style="text-align:center;padding:0.5rem">
+
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)">Total Error</div>
+
+<div style="margin:0.3rem 0">&#x2193;</div>
+
+<div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
+
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Sampling Error</div>
+
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Non-Sampling Error</div>
+
+</div>
+
+<div style="margin:0.3rem 0">&#x2193;</div>
+
+<div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
+
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Non-Response</div>
+
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Response Bias</div>
+
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">Interviewer Bias</div>
+
+</div>
+
+</div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Before launching Maggi noodles in a new flavor, Nestle uses focus groups (qualitative) to explore reactions, then surveys (quantitative) to measure purchase intent.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare qualitative vs quantitative methods in a table. Examiners love structured comparisons.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+
+<li>Primary data = new, specific, expensive; Secondary = existing, cheap, may not fit</li>
+
+<li>Collection methods: Survey, Observation, Focus Groups, Depth Interviews, Projective Techniques</li>
+
+<li>Interview types: Personal (highest response), Telephone, Mail, Online (lowest cost)</li>
+
+<li>Total Error = Sampling Error + Non-Sampling Error (Non-Response + Response Bias + Interviewer Bias)</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 6 ==================== -->
+
+</div>
+<div class="unit" id="u6">
+
+<h3 id="u6-heading">Unit 6: Data Processing</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU6">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Raw data must be processed before analysis. Six steps in the data processing pipeline.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand vs Product</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/KsEAn8A-tBQ" title="Brand vs Product" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Branding Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MjSqQcNQqXE" title="Branding Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Data Processing Pipeline</h5>
+
+<div class="flow-visual">
+
+<div class="step" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)">1. Editing</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">2. Coding</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">3. Classification</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">4. Tabulation</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">5. Data Entry</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">6. Cleaning</div>
+
+</div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Step</th><th>Action</th><th>Purpose</th></tr></thead>
+
+<tbody>
+
+<tr><td>1</td><td><strong>Editing</strong></td><td>Check for completeness and consistency</td></tr>
+
+<tr><td>2</td><td><strong>Coding</strong></td><td>Assign numerical codes to responses</td></tr>
+
+<tr><td>3</td><td><strong>Classification</strong></td><td>Group data into categories</td></tr>
+
+<tr><td>4</td><td><strong>Tabulation</strong></td><td>Organize data into tables</td></tr>
+
+<tr><td>5</td><td><strong>Data Entry</strong></td><td>Input into computer</td></tr>
+
+<tr><td>6</td><td><strong>Data Cleaning</strong></td><td>Check for errors, outliers</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Mention the sequence &#x2014; editing comes before coding, cleaning comes last.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+
+<li>6-step pipeline: Editing &#x2192; Coding &#x2192; Classification &#x2192; Tabulation &#x2192; Data Entry &#x2192; Cleaning</li>
+
+<li>Editing checks completeness; Coding assigns numbers; Cleaning removes errors</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 7 ==================== -->
+
+</div>
+<div class="unit" id="u7">
+
+<h3 id="u7-heading">Unit 7: Hypothesis Testing</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU7">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Hypothesis = Testable statement about relationship between variables. Two types: Null (H&#x2080;) and Alternative (H&#x2081;). Two types of errors: Type I (&#x03B1;) and Type II (&#x03B2;).</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Equity - Aaker</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FsFNrbfSnM8" title="Brand Equity - Aaker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Keller CBBE</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Keller CBBE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Type</th><th>Symbol</th><th>Meaning</th><th>Action</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Null</strong></td><td>H&#x2080;</td><td>No difference/relationship</td><td>Status quo; test to reject</td></tr>
+
+<tr><td><strong>Alternative</strong></td><td>H&#x2081;</td><td>There IS a difference/relationship</td><td>What researcher believes</td></tr>
+
+</tbody></table></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Error</th><th>Symbol</th><th>Meaning</th><th>Remember</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Type I</strong></td><td>&#x03B1;</td><td>Reject H&#x2080; when it's TRUE</td><td>"False Positive" &#x2014; convicting innocent</td></tr>
+
+<tr><td><strong>Type II</strong></td><td>&#x03B2;</td><td>Accept H&#x2080; when it's FALSE</td><td>"False Negative" &#x2014; letting guilty go</td></tr>
+
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Hypothesis Testing Decision Matrix</h5>
+
+<div style="text-align:center;padding:0.5rem">
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th></th><th>H&#x2080; is TRUE</th><th>H&#x2080; is FALSE</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Reject H&#x2080;</strong></td><td style="color:#ff6b6b">Type I Error (&#x03B1;)</td><td style="color:#55efc4">Correct &#x2713;</td></tr>
+
+<tr><td><strong>Accept H&#x2080;</strong></td><td style="color:#55efc4">Correct &#x2713;</td><td style="color:#ff6b6b">Type II Error (&#x03B2;)</td></tr>
+
+</tbody></table></div>
+
+</div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Test</th><th>Use Case</th></tr></thead>
+
+<tbody>
+
+<tr><td>Z-test</td><td>Large sample, known population SD</td></tr>
+
+<tr><td>t-test</td><td>Small sample, unknown population SD</td></tr>
+
+<tr><td>Chi-square</td><td>Categorical data, independence</td></tr>
+
+<tr><td>F-test</td><td>Comparing variances, ANOVA</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Testing if a new ad campaign increased sales &#x2014; H&#x2080;: No difference in sales before/after. If p &lt; 0.05, reject H&#x2080; and conclude the campaign worked.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"&#x03B1; = Rejecting True, &#x03B2; = Accepting False"</strong></p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Always state both H&#x2080; and H&#x2081; clearly. Draw the error table. Explain the trade-off: reducing &#x03B1; increases &#x03B2; for a given sample size.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+
+<li>Null (H&#x2080;) = no relationship; Alternative (H&#x2081;) = there IS a relationship</li>
+
+<li>Type I (&#x03B1;) = false positive; Type II (&#x03B2;) = false negative</li>
+
+<li>Significance level usually 0.05; if p &lt; &#x03B1;, reject H&#x2080;</li>
+
+<li>Statistical tests: Z, t, Chi-square, F</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 8 ==================== -->
+
+</div>
+<div class="unit" id="u8">
+
+<h3 id="u8-heading">Unit 8: Correlation and Simple Linear Regression</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU8">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Correlation measures STRENGTH of relationship. Regression predicts DEPENDENT variable from INDEPENDENT variable.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Positioning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Brand Positioning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Positioning Maps</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="Positioning Maps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>r Value</th><th>Strength</th><th>Example</th></tr></thead>
+
+<tbody>
+
+<tr><td>0.00 &#x2013; 0.25</td><td>Weak</td><td>Advertising and weather</td></tr>
+
+<tr><td>0.25 &#x2013; 0.50</td><td>Moderate</td><td>Price and demand</td></tr>
+
+<tr><td>0.50 &#x2013; 0.75</td><td>Strong</td><td>Study hours and grades</td></tr>
+
+<tr><td>0.75 &#x2013; 1.00</td><td>Very Strong</td><td>Height and weight</td></tr>
+
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Correlation Strength Scale</h5>
+
+<div class="flow-visual">
+
+<div class="step" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">Weak<br><small>0.00&#x2013;0.25</small></div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Moderate<br><small>0.25&#x2013;0.50</small></div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Strong<br><small>0.50&#x2013;0.75</small></div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Very Strong<br><small>0.75&#x2013;1.00</small></div>
+
+</div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Method</th><th>Data Type</th><th>Assumption</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Pearson's r</strong></td><td>Interval/ratio</td><td>Linear relationship, normal distribution</td></tr>
+
+<tr><td><strong>Spearman's &#x03C1;</strong></td><td>Ranked data</td><td>No distribution assumption</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Simple Linear Regression</div><p><strong>Y = b&#x2080; + b&#x2081;X + u</strong><br>Y = Dependent variable (what we predict) | X = Independent variable (what we use to predict)<br>b&#x2080; = Intercept | b&#x2081; = Slope (change in Y for unit change in X) | u = Error term</p></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; R&#x00B2; (Coefficient of Determination)</div><p>Proportion of variance in Y explained by X. Range: 0 to 1 (or 0% to 100%). R&#x00B2; = 0.75 means X explains 75% of variation in Y.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Regression: Sales = 100 + 5 &#x00D7; Advertising Spend. For every Rs 1 lakh increase in advertising, sales increase by Rs 5 lakhs. R&#x00B2; = 0.80 means advertising explains 80% of sales variation.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Interpret the slope (b&#x2081;) in business terms, not just mathematically. Examiners want applied interpretation.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+
+<li>Correlation (r): -1 to +1, measures strength and direction</li>
+
+<li>Regression: Y = b&#x2080; + b&#x2081;X + u, predicts Y from X</li>
+
+<li>R&#x00B2; = proportion of variance explained (0 to 1)</li>
+
+<li>Pearson's r for interval/ratio; Spearman's for ranked data</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 9 ==================== -->
+
+</div>
+<div class="unit" id="u9">
+
+<h3 id="u9-heading">Unit 9: Multiple Regression Analysis</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU9">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Extension of simple regression with multiple predictors. Used when dependent variable is influenced by several factors.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Architecture</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NpyA3FBN-sI" title="Brand Architecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Extensions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="Brand Extensions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Multiple Regression Equation</div><p><strong>Y = b&#x2080; + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; + ... + b&#x2096;X&#x2096; + u</strong></p></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Metric</th><th>Meaning</th></tr></thead>
+
+<tbody>
+
+<tr><td>Multiple R</td><td>Correlation between Y and all X's combined</td></tr>
+
+<tr><td>R&#x00B2;</td><td>Variance explained by all predictors</td></tr>
+
+<tr><td>Adjusted R&#x00B2;</td><td>R&#x00B2; adjusted for number of predictors</td></tr>
+
+<tr><td>F-test</td><td>Overall model significance</td></tr>
+
+<tr><td>t-test</td><td>Individual coefficient significance</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Multicollinearity</div><p><strong>Problem:</strong> Independent variables are highly correlated with each other.<br><strong>Effect:</strong> Unstable coefficient estimates.<br><strong>Detection:</strong> Variance Inflation Factor (VIF) &gt; 10.<br><strong>Solution:</strong> Remove correlated variables, use PCA.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Predicting sales using advertising spend, price, distribution coverage, and competitor activity simultaneously.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain why Adjusted R&#x00B2; is preferred over R&#x00B2; in multiple regression.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+
+<li>Multiple regression: Y = b&#x2080; + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; + ... + u</li>
+
+<li>Key metrics: Multiple R, R&#x00B2;, Adjusted R&#x00B2;, F-test, t-test</li>
+
+<li>Multicollinearity: VIF &gt; 10 indicates problem; remove correlated variables or use PCA</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 10 ==================== -->
+
+</div>
+<div class="unit" id="u10">
+
+<h3 id="u10-heading">Unit 10: Discriminant Analysis and Logistic Regression</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU10">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Both predict CATEGORICAL dependent variables. Key difference: distribution assumptions.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Managing Brands</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kG9YwMG-GmQ" title="Managing Brands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Brand Revitalization</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Brand Revitalization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Condition</th><th>Method</th></tr></thead>
+
+<tbody>
+
+<tr><td>Normal distribution, continuous IVs</td><td><strong>Discriminant Analysis</strong></td></tr>
+
+<tr><td>Non-normal distribution, any IVs</td><td><strong>Logistic Regression</strong></td></tr>
+
+</tbody></table></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Discriminant Analysis</h5><ul>
+
+<li>Creates discriminant function to classify cases into groups</li>
+
+<li>Assumes multivariate normal distribution</li>
+
+<li>Example: Classifying customers as "loyal" vs "switcher"</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Logistic Regression</h5><ul>
+
+<li>Predicts probability of categorical outcome</li>
+
+<li>Uses logit transformation: ln(p/(1-p))</li>
+
+<li>No distribution assumptions</li>
+
+<li>Example: Probability of customer churning (yes/no)</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bank uses logistic regression to predict loan default probability based on income, credit score, employment history.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"Normal = Discriminant, Non-normal = Logistic"</strong></p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>State the key difference clearly: "Normal = Discriminant, Non-normal = Logistic."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+
+<li>Discriminant: assumes normal distribution, continuous IVs</li>
+
+<li>Logistic: no distribution assumptions, uses logit transformation</li>
+
+<li>Both predict categorical outcomes</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 11 ==================== -->
+
+</div>
+<div class="unit" id="u11">
+
+<h3 id="u11-heading">Unit 11: Factor Analysis and Cluster Analysis</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU11">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Factor Analysis: REDUCE many variables to fewer factors. Cluster Analysis: GROUP similar objects together.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Packaging Decisions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/KsEAn8A-tBQ" title="Packaging Decisions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Labeling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MjSqQcNQqXE" title="Labeling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Factor Analysis</h5><ul>
+
+<li>Purpose: Data reduction, identify underlying structure</li>
+
+<li>Input: Many observed variables</li>
+
+<li>Output: Fewer factors</li>
+
+<li>Key metric: Factor loading (correlation between variable and factor)</li>
+
+<li>Extraction: Eigenvalue &gt; 1 rule</li>
+
+<li>Rotation: Varimax (orthogonal), Promax (oblique)</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Cluster Analysis</h5><ul>
+
+<li>Purpose: Group similar cases together</li>
+
+<li>Input: Cases (customers, products)</li>
+
+<li>Output: Homogeneous clusters</li>
+
+<li>Methods: Hierarchical (dendrogram), K-means</li>
+
+<li>Distance: Euclidean, Manhattan</li>
+
+</ul></div>
+
+</div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Feature</th><th>Factor Analysis</th><th>Cluster Analysis</th></tr></thead>
+
+<tbody>
+
+<tr><td>Goal</td><td>Reduce variables</td><td>Group cases</td></tr>
+
+<tr><td>Input</td><td>Variables</td><td>Observations</td></tr>
+
+<tr><td>Output</td><td>Factors</td><td>Clusters</td></tr>
+
+<tr><td>Example</td><td>20 survey items &#x2192; 4 factors</td><td>1000 customers &#x2192; 5 segments</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Factor analysis reduces 30 brand perception questions to 4 factors (quality, price, image, service). Cluster analysis then groups customers into segments based on these factors.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"Factor = Reduce Variables, Cluster = Group Cases"</strong></p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain the difference clearly with examples. Use the comparison table.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+
+<li>Factor analysis: reduces many variables to fewer underlying factors</li>
+
+<li>Cluster analysis: groups similar cases into homogeneous clusters</li>
+
+<li>Factor = data reduction; Cluster = grouping</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 12 ==================== -->
+
+</div>
+<div class="unit" id="u12">
+
+<h3 id="u12-heading">Unit 12: Conjoint Analysis and Multidimensional Scaling</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU12">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Conjoint Analysis: Measures preferences for product ATTRIBUTES. MDS: Creates PERCEPTUAL MAPS showing brand positions.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Warranties & Guarantees</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FsFNrbfSnM8" title="Warranties & Guarantees" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Service Quality</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sX1YgJNJPZQ" title="Service Quality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Conjoint Analysis</h5><ul>
+
+<li>Decomposes overall preference into part-worths for each attribute</li>
+
+<li>Determines relative importance of each attribute</li>
+
+<li>Used for: Product design, pricing, market segmentation</li>
+
+<li>Types: Full profile, adaptive conjoint, choice-based conjoint</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x1F4CA; Multidimensional Scaling (MDS)</h5><ul>
+
+<li>Creates perceptual maps from similarity judgments</li>
+
+<li>Shows how brands/products are positioned relative to each other</li>
+
+<li>Based on consumer perceptions</li>
+
+<li>Output: 2D or 3D map with axes representing dimensions</li>
+
+</ul></div>
+
+</div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Feature</th><th>Conjoint</th><th>MDS</th></tr></thead>
+
+<tbody>
+
+<tr><td>Focus</td><td>Attribute importance</td><td>Brand positioning</td></tr>
+
+<tr><td>Input</td><td>Product profiles</td><td>Similarity judgments</td></tr>
+
+<tr><td>Output</td><td>Part-worths, importance scores</td><td>Perceptual map</td></tr>
+
+<tr><td>Use</td><td>Product design, pricing</td><td>Competitive positioning</td></tr>
+
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Smartphone company uses conjoint to find that battery life (40%) matters more than camera (25%) or design (20%) for target segment.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw a simple perceptual map for a familiar market (cars, phones). Label axes with dimensions.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+
+<li>Conjoint: measures attribute preferences, calculates part-worths and importance scores</li>
+
+<li>MDS: creates perceptual maps showing brand positions based on similarity judgments</li>
+
+<li>Conjoint = product design; MDS = competitive positioning</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 13 ==================== -->
+
+</div>
+<div class="unit" id="u13">
+
+<h3 id="u13-heading">Unit 13: Big Data and Marketing Research</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU13">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Big data = extremely large, complex datasets. Characterized by 6 Vs.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Marketing Mix - Product</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/PAvMdFauCoM" title="Marketing Mix - Product" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>4Ps of Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/IyG_oDFkJjk" title="4Ps of Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Structured</strong></td><td>Organized, database-ready</td><td>Sales transactions</td></tr>
+
+<tr><td><strong>Unstructured</strong></td><td>No predefined format</td><td>Text, images, videos</td></tr>
+
+<tr><td><strong>Semi-structured</strong></td><td>Partially organized</td><td>XML, JSON, emails</td></tr>
+
+<tr><td><strong>Quasi-structured</strong></td><td>Irregular but searchable</td><td>Clickstream data</td></tr>
+
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; The 6 Vs of Big Data</h5>
+
+<div class="vd-grid">
+
+<div class="vd-node" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)"><strong>Volume</strong><br><small>Amount of data</small></div>
+
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>Variety</strong><br><small>Different types</small></div>
+
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)"><strong>Velocity</strong><br><small>Speed of generation</small></div>
+
+<div class="vd-node" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)"><strong>Veracity</strong><br><small>Trustworthiness</small></div>
+
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Value</strong><br><small>Usefulness</small></div>
+
+<div class="vd-node" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)"><strong>Variability</strong><br><small>Inconsistency</small></div>
+
+</div></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x1F4CA; Big Data in Marketing</h5><ul>
+
+<li>Customer behavior prediction</li>
+
+<li>Real-time personalization</li>
+
+<li>Sentiment analysis</li>
+
+<li>Market basket analysis</li>
+
+<li>Churn prediction</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x26A0; Challenges</h5><ul>
+
+<li>Privacy concerns</li>
+
+<li>Data quality issues</li>
+
+<li>Skill gap (data scientists needed)</li>
+
+<li>Integration with traditional research</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon processes 1 million transactions per hour, uses big data for personalized recommendations that drive 35% of revenue.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"VVVVVV" or "6Vs"</strong> &#x2014; Volume, Variety, Velocity, Veracity, Value, Variability</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Always list all 6 Vs with examples. Examiners test recall of the complete list.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+
+<li>Big data = large, complex datasets; 4 types: structured, unstructured, semi-structured, quasi-structured</li>
+
+<li>6 Vs: Volume, Variety, Velocity, Veracity, Value, Variability</li>
+
+<li>Applications: behavior prediction, personalization, sentiment analysis, churn prediction</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 14 ==================== -->
+
+</div>
+<div class="unit" id="u14">
+
+<h3 id="u14-heading">Unit 14: Internet-based Marketing Research</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU14">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Internet enables faster, cheaper, global research. Multiple methods available.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Digital Product Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/NpyA3FBN-sI" title="Digital Product Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>SaaS Products</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vfMfFbAJBKE" title="SaaS Products" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Method</th><th>Description</th><th>Advantage</th></tr></thead>
+
+<tbody>
+
+<tr><td>Online surveys</td><td>Questionnaires via web/email</td><td>Fast, cheap, global</td></tr>
+
+<tr><td>Web-based experiments</td><td>A/B testing websites</td><td>Real behavior data</td></tr>
+
+<tr><td>Online focus groups</td><td>Video discussions</td><td>No geographic limits</td></tr>
+
+<tr><td>Social media listening</td><td>Monitor conversations</td><td>Natural, unsolicited data</td></tr>
+
+<tr><td>Netnography</td><td>Online ethnography</td><td>Deep cultural insights</td></tr>
+
+<tr><td>Web analytics</td><td>Track website behavior</td><td>Objective behavioral data</td></tr>
+
+</tbody></table></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x2705; Advantages</h5><ul>
+
+<li>Speed (instant data collection)</li>
+
+<li>Lower cost (no printing, travel)</li>
+
+<li>Global reach</li>
+
+<li>Easier data processing (auto-coding)</li>
+
+<li>Multimedia capability</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x274C; Disadvantages</h5><ul>
+
+<li>Sampling issues (not everyone online)</li>
+
+<li>Response quality (careless responses)</li>
+
+<li>Privacy concerns</li>
+
+<li>Digital divide</li>
+
+<li>Self-selection bias</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google Surveys allows researchers to collect responses from millions of users in hours at a fraction of traditional survey cost.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare online vs offline research methods in a table. Highlight advantages and disadvantages.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+
+<li>Internet research methods: online surveys, web experiments, online focus groups, social listening, netnography, web analytics</li>
+
+<li>Advantages: speed, cost, global reach, multimedia</li>
+
+<li>Disadvantages: sampling issues, response quality, privacy, digital divide</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== UNIT 15 ==================== -->
+
+</div>
+<div class="unit" id="u15">
+
+<h3 id="u15-heading">Unit 15: Marketing Research and Social Media</h3>
+
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+
+<div id="sU15">
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div><p>Social media = rich source of unsolicited consumer data. Multiple research techniques applicable.</p></div>
+
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Case Studies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kG9YwMG-GmQ" title="Case Studies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">▶</span><h5>Indian Brands</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/aJ-MYcKpfJU" title="Indian Brands" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Method</th><th>What It Does</th><th>Tool Example</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>Social listening</strong></td><td>Monitor brand mentions</td><td>Brandwatch, Hootsuite</td></tr>
+
+<tr><td><strong>Sentiment analysis</strong></td><td>Classify positive/negative/neutral</td><td>MonkeyLearn, Lexalytics</td></tr>
+
+<tr><td><strong>Netnography</strong></td><td>Online ethnography</td><td>Reddit, forum analysis</td></tr>
+
+<tr><td><strong>Crowdsourcing</strong></td><td>Gather ideas from community</td><td>IdeaScale, Starbucks Ideas</td></tr>
+
+<tr><td><strong>Social analytics</strong></td><td>Measure engagement, reach</td><td>Facebook Insights, Twitter Analytics</td></tr>
+
+</tbody></table></div>
+
+<div class="cg">
+
+<div class="cc"><h5>&#x2705; Benefits</h5><ul>
+
+<li>Real-time data</li>
+
+<li>Unsolicited opinions (more authentic)</li>
+
+<li>Large sample sizes</li>
+
+<li>Low cost</li>
+
+<li>Longitudinal data (trends over time)</li>
+
+</ul></div>
+
+<div class="cc"><h5>&#x274C; Limitations</h5><ul>
+
+<li>Not representative (demographic bias)</li>
+
+<li>Bot traffic and fake accounts</li>
+
+<li>Privacy and ethical concerns</li>
+
+<li>Context missing (sarcasm, irony)</li>
+
+</ul></div>
+
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Nike monitors Twitter sentiment during product launches to gauge real-time consumer reaction and adjust marketing messaging instantly.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss both the power and limitations of social media research. Balanced answers score higher.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
+
+<li>Social media research methods: social listening, sentiment analysis, netnography, crowdsourcing, social analytics</li>
+
+<li>Benefits: real-time, unsolicited, large samples, low cost, longitudinal</li>
+
+<li>Limitations: not representative, bots, privacy, missing context</li>
+
+</ul></div>
+
+</div>
+
+<!-- ==================== MASTER MNEMONICS TABLE ==================== -->
+
+</div>
+<div class="unit" id="mnemonics">
+
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+
+<tbody>
+
+<tr><td><strong>DSS-PDC-FP</strong></td><td>Define, State, Select, Plan, Data, Characterize, Formulate, Prepare</td><td>MR Process (8 steps)</td></tr>
+
+<tr><td><strong>EDC</strong></td><td>Exploratory, Descriptive, Causal</td><td>Research designs</td></tr>
+
+<tr><td><strong>&#x03B1; = Reject True, &#x03B2; = Accept False</strong></td><td>Type I and Type II errors</td><td>Hypothesis testing</td></tr>
+
+<tr><td><strong>VVVVVV / 6Vs</strong></td><td>Volume, Variety, Velocity, Veracity, Value, Variability</td><td>Big Data characteristics</td></tr>
+
+<tr><td><strong>Factor = Reduce, Cluster = Group</strong></td><td>Data reduction vs grouping</td><td>Multivariate techniques</td></tr>
+
+<tr><td><strong>Normal = Discriminant, Non-normal = Logistic</strong></td><td>Distribution-based method selection</td><td>Categorical prediction</td></tr>
+
+</tbody></table></div>
+
+</div>
+
+<!-- ==================== KEY FRAMEWORKS ==================== -->
+
+<div class="unit" id="frameworks">
+
+<h3>&#x1F4CA; Key Frameworks &amp; Diagrams</h3>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Marketing Research Process</h5>
+
+<div class="flow-visual">
+
+<div class="step" style="background:rgba(214,48,49,0.2);border:1px solid rgba(214,48,49,0.4)">Problem</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">Objectives</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4)">Design</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(253,203,110,0.2);border:1px solid rgba(253,203,110,0.4)">Sample</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)">Data</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(176,176,176,0.2);border:1px solid rgba(176,176,176,0.4)">Analysis</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(78,205,196,0.2);border:1px solid rgba(78,205,196,0.4)">Conclusion</div>
+
+<div class="arrow">&#x2192;</div>
+
+<div class="step" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4)">Report</div>
+
+</div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Research Design Hierarchy</h5>
+
+<div style="padding:0.5rem;font-size:0.9rem;line-height:1.8">
+
+<div><strong>Research Designs</strong></div>
+
+<div style="padding-left:1.5rem">&#x251C;&#x2500;&#x2500; <strong>Exploratory</strong> (ideas, insights) &#x2014; Literature review, Focus groups, Depth interviews</div>
+
+<div style="padding-left:1.5rem">&#x251C;&#x2500;&#x2500; <strong>Descriptive</strong> (describe, measure) &#x2014; Cross-sectional surveys, Longitudinal panels, Observation</div>
+
+<div style="padding-left:1.5rem">&#x2514;&#x2500;&#x2500; <strong>Causal</strong> (cause-effect) &#x2014; Lab experiments, Field experiments</div>
+
+</div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Multivariate Analysis Map</h5>
+
+<div style="padding:0.5rem;font-size:0.9rem;line-height:1.8">
+
+<div><strong>Dependent Variable Type</strong></div>
+
+<div style="padding-left:1.5rem">&#x251C;&#x2500;&#x2500; <strong>Metric (continuous)</strong></div>
+
+<div style="padding-left:3rem">&#x251C;&#x2500;&#x2500; 1 IV &#x2192; Simple Regression</div>
+
+<div style="padding-left:3rem">&#x251C;&#x2500;&#x2500; 2+ IVs &#x2192; Multiple Regression</div>
+
+<div style="padding-left:3rem">&#x2514;&#x2500;&#x2500; Interdependence &#x2192; Factor Analysis</div>
+
+<div style="padding-left:1.5rem">&#x2514;&#x2500;&#x2500; <strong>Non-metric (categorical)</strong></div>
+
+<div style="padding-left:3rem">&#x251C;&#x2500;&#x2500; 2 groups &#x2192; Discriminant / Logistic</div>
+
+<div style="padding-left:3rem">&#x2514;&#x2500;&#x2500; 3+ groups &#x2192; Multiple Discriminant</div>
+
+</div></div>
+
+</div>
+
+<!-- ==================== QUICK REVISION SHEET ==================== -->
+
+<div class="unit" id="revision">
+
+<h3>&#x26A1; Quick Revision Sheet</h3>
+
+<h4>One-Liner Definitions</h4>
+
+<ul>
+
+<li><strong>Marketing Research:</strong> Function linking consumer to marketer through information (AMA)</li>
+
+<li><strong>Research Design:</strong> Blueprint for data collection and analysis</li>
+
+<li><strong>Hypothesis:</strong> Testable statement about relationship between variables</li>
+
+<li><strong>Correlation:</strong> Strength of linear relationship between two variables</li>
+
+<li><strong>Regression:</strong> Predicting dependent variable from independent variable(s)</li>
+
+<li><strong>Factor Analysis:</strong> Data reduction technique identifying underlying factors</li>
+
+<li><strong>Cluster Analysis:</strong> Grouping similar objects into homogeneous clusters</li>
+
+<li><strong>Conjoint Analysis:</strong> Measuring preferences for product attributes</li>
+
+<li><strong>Big Data:</strong> Extremely large datasets characterized by 6Vs</li>
+
+<li><strong>MDS:</strong> Perceptual mapping technique showing brand positions</li>
+
+<li><strong>Significance Level (&#x03B1;):</strong> Probability of Type I error (usually 0.05)</li>
+
+</ul>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Formula</th><th>Equation</th><th>Use</th></tr></thead>
+
+<tbody>
+
+<tr><td>Simple Regression</td><td>Y = b&#x2080; + b&#x2081;X + u</td><td>Predict Y from X</td></tr>
+
+<tr><td>Multiple Regression</td><td>Y = b&#x2080; + b&#x2081;X&#x2081; + b&#x2082;X&#x2082; + ... + u</td><td>Predict Y from multiple Xs</td></tr>
+
+<tr><td>R&#x00B2;</td><td>0 to 1</td><td>Variance explained</td></tr>
+
+<tr><td>Correlation (r)</td><td>-1 to +1</td><td>Strength and direction</td></tr>
+
+<tr><td>Logit</td><td>ln(p/(1-p))</td><td>Logistic regression</td></tr>
+
+<tr><td>Significance</td><td>p &lt; &#x03B1; &#x2192; Reject H&#x2080;</td><td>Decision rule</td></tr>
+
+</tbody></table></div>
+
+<div class="db"><table class="comparison-table">
+
+<thead><tr><th>Concept A</th><th>Concept B</th><th>Key Difference</th></tr></thead>
+
+<tbody>
+
+<tr><td>Primary data</td><td>Secondary data</td><td>New vs existing</td></tr>
+
+<tr><td>Quantitative</td><td>Qualitative</td><td>Numbers vs words</td></tr>
+
+<tr><td>Exploratory</td><td>Conclusive</td><td>Ideas vs confirmation</td></tr>
+
+<tr><td>Correlation</td><td>Regression</td><td>Strength vs prediction</td></tr>
+
+<tr><td>Factor analysis</td><td>Cluster analysis</td><td>Reduce variables vs group cases</td></tr>
+
+<tr><td>Discriminant</td><td>Logistic</td><td>Normal vs non-normal distribution</td></tr>
+
+<tr><td>Type I error</td><td>Type II error</td><td>Reject true vs accept false</td></tr>
+
+</tbody></table></div>
+
+</div>
+
+<!-- ==================== EXAM FOCUS ==================== -->
+
+<div class="unit" id="exam">
+
+<h3>&#x1F3AF; Exam Focus</h3>
+
+<h4>Most Frequently Asked Topics</h4>
+
+<ol>
+
+<li><strong>Marketing Research Process</strong> &#x2014; all 8 steps with examples</li>
+
+<li><strong>Research Design types</strong> &#x2014; compare exploratory, descriptive, causal</li>
+
+<li><strong>Hypothesis testing</strong> &#x2014; H&#x2080;/H&#x2081;, Type I/II errors, significance level</li>
+
+<li><strong>Correlation vs Regression</strong> &#x2014; explain with interpretation</li>
+
+<li><strong>Factor vs Cluster Analysis</strong> &#x2014; compare with examples</li>
+
+<li><strong>Big Data 6Vs</strong> &#x2014; list all with marketing applications</li>
+
+<li><strong>Data collection methods</strong> &#x2014; primary vs secondary, qualitative vs quantitative</li>
+
+<li><strong>Sampling methods</strong> &#x2014; probability vs non-probability</li>
+
+<li><strong>Conjoint Analysis</strong> &#x2014; explain with product design example</li>
+
+<li><strong>Ethical issues</strong> &#x2014; in researcher-client-respondent relationships</li>
+
+</ol>
+
+<h4>Question Patterns</h4>
+
+<ul>
+
+<li>"Explain the marketing research process with examples"</li>
+
+<li>"Compare and contrast [two methods]"</li>
+
+<li>"What are the types of errors in hypothesis testing?"</li>
+
+<li>"How is big data changing marketing research?"</li>
+
+<li>"Explain factor analysis with a marketing example"</li>
+
+</ul>
+
+<h4>Model Answer Structure</h4>
+
+<ol>
+
+<li>Define the concept clearly</li>
+
+<li>Explain the framework/process</li>
+
+<li>Draw diagram or table if applicable</li>
+
+<li>Give 2-3 marketing-specific examples</li>
+
+<li>Discuss advantages and limitations</li>
+
+<li>Conclude with significance for marketing decisions</li>
+
+</ol>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+
+// Reading progress bar
+
+window.addEventListener('scroll', function() {
+
+  const scrolled = window.scrollY;
+
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+
+  const progress = (scrolled / total) * 100;
+
+  document.querySelector('.reading-progress').style.width = progress + '%';
+
+});
+
+// Scroll animations with IIFE
+
+(function() {
+
+  var selectors = [
+
+    'h3[id]', '.cg', '.callout', '.visual-diagram',
+
+    '.summary-box', '.cc', '.case-study', '.db'
+
+  ];
+
+  document.querySelectorAll(selectors.join(',')).forEach(function(el, i) {
+
+    el.classList.add('animate-on-scroll');
+
+    el.style.transitionDelay = (i % 6) * 0.05 + 's';
+
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+
+    entries.forEach(function(entry) {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('visible');
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+
+})();
+
+// Mobile sidebar toggle
+
+function toggleMobileSidebar() {
+
+  document.querySelector('.study-sidebar').classList.toggle('open');
+
+}
+
+</script>
+
+    <script src="pomodoro.js"></script>
+
+    <script src="bookmark-notes.js"></script>
+
+    <script src="flashcards.js"></script>
+
+    <script src="enhancements.js"></script>
+
+    <script src="revision-mode.js"></script>
+
+    <script src="pwa-register.js"></script>
+
+</body>
+
+</html>

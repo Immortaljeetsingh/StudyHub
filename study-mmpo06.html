@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPO-06: Materials Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+<style>
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,206,201,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,150,136,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(0,206,201,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent),radial-gradient(1px 1px at 10% 80%,rgba(0,206,201,.15),transparent),radial-gradient(2px 2px at 90% 40%,rgba(0,150,136,.2),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00cec9,#009688,#00bfa5,#00cec9);background-size:300% 100%;animation:gS 4s ease-in-out infinite;border-radius:2px}@keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#00cec9,#009688);border-radius:2px}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,206,201,.25),0 0 20px rgba(0,150,136,.1)!important;border-color:rgba(0,206,201,.4)!important}
+.callout{transition:transform .3s ease,box-shadow .3s ease!important}.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}.callout-important{border-left-color:#00cec9!important}.callout-important .callout-label{color:#00cec9!important}.callout-mnemonic{border-left-color:#009688!important;background:linear-gradient(135deg,rgba(0,206,201,.05),rgba(0,150,136,.05))!important}.callout-example{border-left-color:#00bfa5!important}
+h1,h2,h3,h4,h5{letter-spacing:-.02em!important}
+.study-header{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,150,136,.1))!important;border:1px solid rgba(200,200,200,.12)!important;position:relative;overflow:hidden}.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(0,206,201,.15),transparent 70%);animation:hG 8s ease-in-out infinite alternate}@keyframes hG{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
+.summary-box{border:1px solid rgba(0,206,201,.3)!important;background:linear-gradient(135deg,rgba(0,206,201,.05),rgba(0,150,136,.05))!important;transition:transform .3s ease,box-shadow .3s ease!important}.summary-box:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(0,206,201,.15)!important}
+.subject-tag{background:linear-gradient(135deg,#00cec9,#009688)!important;color:#fff!important;font-weight:600!important;letter-spacing:.05em}
+.visual-diagram{background:linear-gradient(135deg,rgba(0,206,201,.08),rgba(0,150,136,.06));border:1px solid rgba(0,206,201,.25);border-radius:16px;padding:24px;margin:20px 0;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}.visual-diagram:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,206,201,.2)}.visual-diagram::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#00cec9,#009688,#00bfa5)}.visual-diagram h5{color:#00cec9;margin-bottom:16px;font-size:1.1em}
+.vd-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}.vd-step{background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,150,136,.1));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 16px;text-align:center;min-width:110px;transition:all .3s ease}.vd-step:hover{background:linear-gradient(135deg,rgba(0,206,201,.25),rgba(0,150,136,.18))}
+.vd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem}.vd-node{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;margin:.3rem;transition:transform .2s ease,box-shadow .2s ease}.vd-node:hover{transform:scale(1.05);box-shadow:0 4px 15px rgba(0,206,201,.3)}
+.case-study{background:linear-gradient(135deg,rgba(0,206,201,.06),rgba(0,150,136,.04));border:1px solid rgba(0,206,201,.2);border-left:4px solid #00cec9;border-radius:8px;padding:1.2rem;margin:1rem 0}.case-study h5{color:#00cec9;margin-bottom:.5rem;font-weight:600}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(0,206,201,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#00cec9,#009688);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
+.section-badge{display:inline-block;background:linear-gradient(135deg,#00cec9,#009688);color:#fff;font-size:.75em;padding:3px 10px;border-radius:20px;margin-left:10px;vertical-align:middle;font-weight:600}
+.expandable-content{max-height:0;overflow:hidden;transition:max-height .5s ease}.expandable-content.expanded{max-height:8000px}.expand-toggle{display:inline-block;padding:.4rem 1rem;background:linear-gradient(135deg,rgba(0,206,201,.15),rgba(0,150,136,.1));border:1px solid rgba(0,206,201,.3);border-radius:6px;color:#c8c8c8;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .3s ease}.expand-toggle:hover{background:linear-gradient(135deg,rgba(0,206,201,.25),rgba(0,150,136,.15));box-shadow:0 2px 10px rgba(200,200,200,.12)}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+</style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpo06">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-06'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-06</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Fundamentals</a>
+<a href="#u1">Unit 1: Intro to Materials Mgmt</a>
+<a href="#u2">Unit 2: Strategic Role</a>
+<a href="#u3">Unit 3: Supplier Network</a>
+<a href="#u4">Unit 4: Buyer-Seller Relations</a>
+<a href="#block2">Block-02 Planning &amp; Systems</a>
+<a href="#u5">Unit 5: Materials Planning</a>
+<a href="#u6">Unit 6: Push &amp; Pull Systems</a>
+<a href="#u7">Unit 7: WIP Inventory</a>
+<a href="#u8">Unit 8: Spare Parts Mgmt</a>
+<a href="#block3">Block-03 Classification</a>
+<a href="#u9">Unit 9: Codification &amp; Standardization</a>
+<a href="#u10">Unit 10: Warehouse Location</a>
+<a href="#u11">Unit 11: Warehouse Risk</a>
+<a href="#block4">Block-04 Organization</a>
+<a href="#u12">Unit 12: MM Organization</a>
+<a href="#u13">Unit 13: Performance Evaluation</a>
+<a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
+<a href="#exam">&#x1F3AF; Exam Focus</a>
+<a href="quiz-mmpo06.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPO-06</span><h1>Materials Management</h1><p>Comprehensive Study Notes &#x2014; 13 Units &#x2022; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Fundamentals of Materials</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3>Unit 1: Introduction to Materials Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Materials Management</strong> = planning, organizing, and controlling material flow from source to user. Materials = one of the 5Ms: Men, Machine, Methods, Money, <strong>Materials</strong>. Average material cost = 50-70% of total manufacturing expenditure.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; The 6 Rs of Materials Management</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Right Material</strong></div>
+<div class="vd-node" style="background:rgba(0,150,136,.2);border:1px solid rgba(0,150,136,.4)"><strong>Right Quantity</strong></div>
+<div class="vd-node" style="background:rgba(0,191,165,.2);border:1px solid rgba(0,191,165,.4)"><strong>Right Time</strong></div>
+<div class="vd-node" style="background:rgba(0,128,128,.2);border:1px solid rgba(0,128,128,.4)"><strong>Right Place</strong></div>
+<div class="vd-node" style="background:rgba(32,178,170,.2);border:1px solid rgba(32,178,170,.4)"><strong>Right Price</strong></div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Right Quality</strong></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Materials Management Introduction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1e1n1n1b1b1Q" title="Materials Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>6 Rs of Materials Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/m2M1b1b1b1Y" title="6 Rs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Cost Type</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Material cost</strong></td><td>Basic cost paid to suppliers</td><td>Tata Steel buying iron ore from Odisha mines</td></tr>
+<tr><td><strong>Purchasing cost</strong></td><td>Staff, tendering, processing</td><td>Government e-procurement portal (GeM) fees</td></tr>
+<tr><td><strong>Inventory carrying</strong></td><td>Storage, interest, obsolescence</td><td>Godown rent at Bhiwandi warehouse hub</td></tr>
+<tr><td><strong>Packaging cost</strong></td><td>Paper, plastic, containers</td><td>Flipkart's multi-layer e-commerce packaging</td></tr>
+<tr><td><strong>Transportation</strong></td><td>Moving goods between locations</td><td>Container Corporation (CONCOR) rail freight</td></tr>
+<tr><td><strong>Material handling</strong></td><td>Cranes, conveyors, forklifts</td><td>JNPT port automated cranes</td></tr>
+<tr><td><strong>Wastage</strong></td><td>Scrap, rejects, disposal</td><td>Steel melting loss in induction furnaces</td></tr>
+</tbody></table></div>
+
+<h4>The 8 Functions of Materials Management</h4>
+<ol>
+<li><strong>Materials Planning &amp; Control</strong> &#x2014; forecasting demand, determining quantities, scheduling procurement</li>
+<li><strong>Purchasing</strong> &#x2014; vendor selection, price negotiation, order placement, follow-up</li>
+<li><strong>Inventory Control</strong> &#x2014; maintaining optimal stock levels, ABC/VED analysis, reorder points</li>
+<li><strong>Store Keeping</strong> &#x2014; receiving, inspecting, storing, issuing materials</li>
+<li><strong>Material Handling</strong> &#x2014; movement of materials within the plant using conveyors, forklifts</li>
+<li><strong>Warehousing</strong> &#x2014; storage location, layout design, space optimization</li>
+<li><strong>Standardization &amp; Simplification</strong> &#x2014; reducing variety, codification, quality standards</li>
+<li><strong>Organization &amp; Appraisal</strong> &#x2014; structuring the materials department, performance measurement</li>
+</ol>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Toyota's materials management system ensures parts arrive at the assembly line exactly when needed (JIT), reducing inventory carrying costs by 75%. Indian Railways saved Rs 500 crore by centralizing procurement through the Indian Railway Finance Corporation (IRFC).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>R-R-T-P-P-Q</strong> &#x2014; <strong>R</strong>ight Material, <strong>R</strong>ight Quantity, <strong>T</strong>ime, <strong>P</strong>lace, <strong>P</strong>rice, <strong>Q</strong>uality</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>6Rs: Right Material, Quantity, Time, Place, Price, Quality</li>
+<li>8 functions: Planning, Purchasing, Inventory, Stores, Handling, Warehousing, Standardization, Appraisal</li>
+<li>Materials = 50-70% of manufacturing cost</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3>Unit 2: Strategic Role of Materials Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Value Analysis</strong> = improving value by reducing cost or improving function. <strong>Make or Buy Decision</strong> = produce in-house vs outsource. Strategic importance: materials management directly impacts profitability.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Make or Buy Decision Factors</h5>
+<div class="vd-grid">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Cost</strong></div>
+<div class="vd-node" style="background:rgba(0,150,136,.2);border:1px solid rgba(0,150,136,.4)"><strong>Quality</strong></div>
+<div class="vd-node" style="background:rgba(0,191,165,.2);border:1px solid rgba(0,191,165,.4)"><strong>Capacity</strong></div>
+<div class="vd-node" style="background:rgba(0,128,128,.2);border:1px solid rgba(0,128,128,.4)"><strong>Technology</strong></div>
+<div class="vd-node" style="background:rgba(32,178,170,.2);border:1px solid rgba(32,178,170,.4)"><strong>Core Competency</strong></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Make vs Buy Decision</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fKo0H4LHo5I" title="Make or Buy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Value Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3hMNMJ2p48c" title="Value Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Strategic Importance of Materials Management</h4>
+<p>Materials management is not just a support function &#x2014; it's a strategic driver of profitability. In manufacturing, materials typically account for 50-70% of product cost. A 5% reduction in material costs can have the same impact on profit as a 30% increase in sales. This makes materials management one of the most impactful areas for cost optimization.</p>
+<p>The strategic role includes: ensuring uninterrupted supply, optimizing inventory levels, building supplier partnerships, driving continuous improvement through value analysis, and supporting new product development. Modern materials management integrates with supply chain management, using technology like ERP systems, RFID tracking, and data analytics for better decision-making.</p>
+
+<h4>Value Analysis Methodology</h4>
+<p>Value Analysis (also called Value Engineering) is a systematic approach to improving the "value" of a product or service by examining its functions. Value = Function / Cost. To increase value, you either improve function or reduce cost.</p>
+<p>The value analysis process follows the SAVE framework:</p>
+<ul>
+<li><strong>S</strong>tudy the function: What does the component do?</li>
+<li><strong>A</strong>nalyze alternatives: Can the function be achieved differently?</li>
+<li><strong>V</strong>aluate alternatives: Which alternative provides best value?</li>
+<li><strong>E</strong>xecute the change: Implement the improvement</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Boeing makes only ~10% of its aircraft components in-house, outsourcing 90% to focus on design, assembly, and integration (core competencies). Toyota's supplier partnerships reduced defects by 50% through collaborative quality improvement programs.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Value analysis is a guaranteed 5-mark question. Remember the formula: Value = Function / Cost. For 10-mark questions, explain the SAVE framework with examples. Make/buy decisions should include cost analysis and strategic considerations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>C-Q-C-T-C</strong> for make/buy factors: <strong>C</strong>ost, <strong>Q</strong>uality, <strong>C</strong>apacity, <strong>T</strong>echnology, <strong>C</strong>ore competency. Think: "Can Quality Cars Be Toyota's Core?"</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Materials = 50-70% of product cost &#x2192; huge savings potential</li>
+<li>Value Analysis = improve value by reducing cost or improving function (Value = F/C)</li>
+<li>SAVE framework: Study, Analyze, Valuate, Execute</li>
+<li>Make/Buy factors: C-Q-C-T-C (Cost, Quality, Capacity, Technology, Core competency)</li>
+<li>Strategic materials management drives profitability and competitive advantage</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3>Unit 3: Designing Supplier Network</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>SRM (Supplier Relationship Management)</strong> = strategic approach to managing relationships with suppliers for mutual benefit. Supplier selection criteria: Quality, Price, Delivery, Service, Financial stability.</p></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Factor</th><th>Single Sourcing</th><th>Multiple Sourcing</th></tr></thead>
+<tbody>
+<tr><td><strong>Cost</strong></td><td>Lower (volume discount)</td><td>Higher (competition)</td></tr>
+<tr><td><strong>Relationship</strong></td><td>Strong, partnership</td><td>Arm's length</td></tr>
+<tr><td><strong>Risk</strong></td><td>High (dependency)</td><td>Lower (alternatives)</td></tr>
+<tr><td><strong>Quality</strong></td><td>Consistent</td><td>Variable</td></tr>
+<tr><td><strong>Innovation</strong></td><td>Joint development</td><td>Limited</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Supplier Relationship Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4Y5P7sILZIw" title="SRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Building Strategic Supplier Partnerships</h4>
+<p>Modern materials management moves beyond transactional buyer-supplier relationships toward strategic partnerships. The Kraljic Matrix classifies purchases based on supply risk and profit impact, helping organizations determine the right approach for each category:</p>
+<ul>
+<li><strong>Strategic items</strong> (high risk, high impact): Build long-term partnerships</li>
+<li><strong>Leverage items</strong> (low risk, high impact): Use competitive bidding</li>
+<li><strong>Bottleneck items</strong> (high risk, low impact): Ensure supply security</li>
+<li><strong>Routine items</strong> (low risk, low impact): Simplify procurement process</li>
+</ul>
+<p>Supplier development programs include: technical assistance, training, quality certification support, joint R&D, and sharing of best practices. Toyota's supplier development program is legendary &#x2014; they send engineers to supplier factories to help improve quality and efficiency, resulting in defect rates below 1 PPM (parts per million).</p>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Honda works with single suppliers for critical components, investing in their development to ensure quality and reliability. Maruti Suzuki has a 95%+ localization rate, achieved through decades of supplier development partnerships with Indian component manufacturers.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Single vs Multiple sourcing comparison is a frequent 5-mark question. For 10-mark questions, explain the Kraljic Matrix with examples. Supplier development programs are a good addition to any materials management answer.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Q-P-D-S-F</strong> for supplier criteria: <strong>Q</strong>uality, <strong>P</strong>rice, <strong>D</strong>elivery, <strong>S</strong>ervice, <strong>F</strong>inancial stability. Think: "Quality Products Depend on Supplier Financials."</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Supplier criteria: Q-P-D-S-F (Quality, Price, Delivery, Service, Financial stability)</li>
+<li>Single sourcing = lower cost, higher risk; Multiple = competition, flexibility</li>
+<li>Kraljic Matrix: Strategic, Leverage, Bottleneck, Routine items</li>
+<li>Supplier development: training, technical assistance, quality certification</li>
+<li>Modern approach: strategic partnerships over transactional relationships</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3>Unit 4: Dynamics of Buyer-Seller Relationships</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Partnership Sourcing</strong> = long-term relationship between buyer and supplier based on trust, shared goals, and mutual benefit. Negotiation approaches: Distributive (win-lose) vs Integrative (win-win).</p></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Factor</th><th>Adversarial</th><th>Partnership</th></tr></thead>
+<tbody>
+<tr><td><strong>Duration</strong></td><td>Short-term</td><td>Long-term</td></tr>
+<tr><td><strong>Focus</strong></td><td>Price</td><td>Value</td></tr>
+<tr><td><strong>Communication</strong></td><td>Limited</td><td>Open, transparent</td></tr>
+<tr><td><strong>Risk</strong></td><td>Buyer bears</td><td>Shared</td></tr>
+<tr><td><strong>Innovation</strong></td><td>Minimal</td><td>Joint development</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Buyer-Seller Relationships</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eJr7Rn6gKHk" title="Buyer-Seller" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Negotiation Approaches</h4>
+<ul>
+<li><strong>Distributive Negotiation</strong> &#x2014; Win-lose, fixed pie. One party gains at the other's expense. Used for one-time purchases, commodity items.</li>
+<li><strong>Integrative Negotiation</strong> &#x2014; Win-win, expand the pie. Both parties find mutually beneficial solutions. Used for long-term partnerships, strategic items.</li>
+</ul>
+
+<h4>e-Procurement in India</h4>
+<ul>
+<li><strong>GeM (Government e-Marketplace)</strong> &#x2014; India's unified public procurement portal used by 70,000+ government buyers. Over Rs 4 lakh crore transacted annually.</li>
+<li><strong>Reduces paperwork</strong> by 80%, processing time from weeks to days</li>
+<li><strong>Improves transparency</strong> &#x2014; eliminates middlemen, enables price comparison</li>
+<li><strong>Wider supplier access</strong> &#x2014; MSMEs in tier-2/3 cities can compete for government contracts</li>
+<li><strong>Tata Steel, L&amp;T, Reliance</strong> use SAP Ariba for B2B e-procurement</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Walmart and P&amp;G have a partnership relationship &#x2014; sharing sales data, jointly planning promotions, and collaborating on supply chain efficiency. In India, Hindustan Unilever (HUL) built a similar partnership with ITC for distribution in rural areas, achieving 7.5 million retail outlets coverage.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>T-C-C</strong> &#x2014; <strong>T</strong>ransparency, <strong>C</strong>ommunication, <strong>C</strong>onsistency (trust building)</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Adversarial = short-term, price-focused; Partnership = long-term, value-focused</li>
+<li>Trust building: Transparency, Communication, Consistency</li>
+<li>Negotiation: Distributive (win-lose) vs Integrative (win-win)</li>
+<li>e-Procurement: GeM portal, SAP Ariba, reduced paperwork, wider access</li>
+<li>Contract management: formal terms, conditions, penalties, SLAs</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Planning &amp; Systems</h2>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3>Unit 5: Materials Planning and Budgeting</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>MRP</strong> = Material Requirements Planning &#x2014; determining what, when, and how much to order. <strong>BOM</strong> = Bill of Materials &#x2014; hierarchical list of components needed to make a product.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; MRP Logic Flow</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4);width:80%;text-align:center">Master Production Schedule (MPS)</div>
+<div style="font-size:1.2rem;color:rgba(0,206,201,.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,150,136,.2);border:1px solid rgba(0,150,136,.4);width:80%;text-align:center">MRP Engine: Gross &#x2013; Scheduled &#x2013; On-hand = Net</div>
+<div style="display:flex;gap:2rem;margin-top:0.5rem">
+<div class="vd-node" style="background:rgba(0,191,165,.2);border:1px solid rgba(0,191,165,.4)">Planned Orders</div>
+<div class="vd-node" style="background:rgba(0,128,128,.2);border:1px solid rgba(0,128,128,.4)">Planned Receipts</div>
+</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MRP Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6sMo0VJ7Dmo" title="MRP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Bill of Materials (BOM)</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2u9Fj1bYFO0" title="BOM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Economic Order Quantity (EOQ)</h4>
+<p>EOQ determines the optimal order quantity that minimizes total inventory costs (ordering + holding). It balances the trade-off between frequent small orders (high ordering cost) and infrequent large orders (high holding cost).</p>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; EOQ Formula</h5>
+<div class="vd-flow">
+<div class="vd-step">D = Annual Demand</div>
+<div class="vd-step">S = Ordering Cost</div>
+<div class="vd-step">H = Holding Cost/Unit/Year</div>
+</div>
+<p style="text-align:center;font-size:1.2em;margin-top:1rem;color:#00cec9"><strong>EOQ = &#x221A;(2 x D x S / H)</strong></p>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; EOQ Calculation Example &#x2014; Mumbai Textile Mill</h5>
+<p>A Mumbai textile mill uses 10,000 kg of cotton yarn per year. Ordering cost = Rs 2,000 per order. Holding cost = Rs 50 per kg per year.</p>
+<p><strong>EOQ = &#x221A;(2 x 10,000 x 2,000 / 50) = &#x221A;(8,00,000) = 894 kg</strong></p>
+<p>Number of orders per year = 10,000 / 894 = <strong>11.2 orders</strong></p>
+<p>Total cost = &#x221A;(2 x 10,000 x 2,000 x 50) = <strong>Rs 44,721</strong></p>
+</div>
+
+<h4>Reorder Point (ROP) and Safety Stock</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Concept</th><th>Formula</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>Reorder Point</strong></td><td>(Avg Daily Demand x Lead Time) + Safety Stock</td><td>When to place an order</td></tr>
+<tr><td><strong>Safety Stock</strong></td><td>Z x &#x3C3; x &#x221A;(Lead Time)</td><td>Buffer against demand variability</td></tr>
+<tr><td><strong>Z-factor</strong></td><td>Service level &#x2192; Z value</td><td>95% SL &#x2192; Z=1.65; 99% SL &#x2192; Z=2.33</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A car manufacturer uses MRP to calculate that to produce 1000 cars next month, they need 4000 wheels, 1000 engines, 2000 seats, etc., ordering each with proper lead time. Maruti Suzuki's Manesar plant uses MRP integrated with SAP to coordinate 2,000+ suppliers delivering 5,000+ parts daily.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>M-B-I</strong> &#x2014; <strong>M</strong>PS, <strong>B</strong>OM, <strong>I</strong>nventory records (MRP inputs). <strong>EOQ</strong> &#x2014; Think "Economical Order = &#x221A;(2DS/H)"</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>MRP inputs: MPS, BOM, Inventory Records</li>
+<li>Formula: Net Requirements = Gross &#x2013; Scheduled Receipts &#x2013; On-hand</li>
+<li>MRP process: Determine gross &#x2192; Check inventory &#x2192; Calculate net &#x2192; Plan orders &#x2192; Release</li>
+<li>EOQ = &#x221A;(2DS/H) &#x2014; minimizes ordering + holding costs</li>
+<li>ROP = (Daily Demand x Lead Time) + Safety Stock</li>
+<li>Safety Stock = Z x &#x3C3; x &#x221A;(LT) &#x2014; buffer for demand uncertainty</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3>Unit 6: Push and Pull Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Push System</strong> = production based on forecasts (MRP). <strong>Pull System</strong> = production based on actual demand (JIT/Kanban). <strong>Kanban</strong> = visual signal system for pull production. <strong>CONWIP</strong> = hybrid system with constant WIP.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Push-Pull Decoupling Point</h5>
+<div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)">Forecast-based (Push)</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Decoupling Point</strong></div>
+<div class="vd-node" style="background:rgba(0,150,136,.2);border:1px solid rgba(0,150,136,.4)">Demand-based (Pull)</div>
+</div>
+</div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Push (MRP)</th><th>Pull (JIT)</th></tr></thead>
+<tbody>
+<tr><td><strong>Trigger</strong></td><td>Forecast</td><td>Actual demand</td></tr>
+<tr><td><strong>Inventory</strong></td><td>High</td><td>Low (minimal)</td></tr>
+<tr><td><strong>Flexibility</strong></td><td>Low</td><td>High</td></tr>
+<tr><td><strong>Risk</strong></td><td>Overproduction</td><td>Stockouts</td></tr>
+<tr><td><strong>Suppliers</strong></td><td>Many</td><td>Few, reliable</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Push vs Pull Production</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6uXNfZ3GHrA" title="Push vs Pull" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Kanban System Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SC_iM1X1bVw" title="Kanban" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Kanban Types in Detail</h4>
+<ul>
+<li><strong>Production Kanban (P-Kanban)</strong> &#x2014; Authorizes a workstation to produce a specific quantity of a specific part. Signals upstream: "Make X units of part Y."</li>
+<li><strong>Withdrawal Kanban (W-Kanban)</strong> &#x2014; Authorizes movement of materials from one station to another. Signals: "Move X units from station A to station B."</li>
+<li><strong>Supplier Kanban</strong> &#x2014; Signals external suppliers to deliver. Used in JIT supply chains.</li>
+<li><strong>Emergency Kanban</strong> &#x2014; For urgent situations (quality issues, machine breakdown). Temporary, replaces damaged or defective parts.</li>
+</ul>
+
+<h4>CONWIP (Constant Work-In-Process)</h4>
+<p>CONWIP is a hybrid production control system. Like Kanban, it limits WIP, but instead of limiting WIP at each workstation (per-station cards), it limits the <strong>total number of cards in the entire system</strong>. When a finished product leaves the system, a card is released to authorize a new item entering the system.</p>
+<ul>
+<li><strong>Advantage over Kanban:</strong> Simpler to implement, works better with variable processing times</li>
+<li><strong>Advantage over Push:</strong> Prevents overproduction, reduces WIP buildup</li>
+<li><strong>Best for:</strong> Long production lines, high-variety environments</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Toyota's Kanban system uses physical cards attached to parts bins. When a bin is empty, the card signals upstream to produce more. In India, Tata Motors' Pune plant adopted Kanban in 2015 for its Nexon assembly line, reducing WIP by 40% and lead time by 25%. TVS Motors uses a hybrid Kanban-CONWIP system at its Hosur plant to manage 1,200+ parts across 3 assembly lines.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>F-D</strong> &#x2014; Push = <strong>F</strong>orecast, Pull = <strong>D</strong>emand. <strong>CONWIP</strong> = "CONstant Work In Process" &#x2014; system-wide card limit.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Push = forecast-based (MRP); Pull = demand-based (JIT/Kanban)</li>
+<li>Kanban types: Production, Withdrawal, Supplier, Emergency Kanban</li>
+<li>CONWIP = hybrid with system-wide WIP limit (not per-station like Kanban)</li>
+<li>Kanban is visual, simple; CONWIP is better for variable processing times</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3>Unit 7: Work-in-Process (WIP) Inventory</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>WIP</strong> = partially completed products in the production process. <strong>Little's Law</strong> = WIP = Throughput x Flow Time. WIP causes: batch processing, waiting times, quality issues.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Little's Law</h5>
+<div class="vd-flow">
+<div class="vd-step">WIP = Work in Process</div>
+<div class="vd-step">Throughput = Output Rate</div>
+<div class="vd-step">Flow Time = Start to Finish</div>
+</div>
+<p style="text-align:center;font-size:1.2em;margin-top:1rem;color:#00cec9"><strong>WIP = Throughput &#xD7; Flow Time</strong></p>
+</div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Calculation Example</h5>
+<p>If a factory has 100 units in WIP and produces 20 units/hour, Flow Time = 100/20 = <strong>5 hours</strong>.</p>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Little's Law Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/l5rV8V4b2mE" title="Little's Law" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>WIP Reduction Strategies in Detail</h4>
+<ol>
+<li><strong>Smaller Batch Sizes</strong> &#x2014; Reduce batch from 1000 to 100 units. Less WIP between stations, faster feedback on quality issues.</li>
+<li><strong>One-Piece Flow</strong> &#x2014; Move one unit at a time between stations. Eliminates batch waiting time. Toyota's ideal state.</li>
+<li><strong>Reduce Setup Times (SMED)</strong> &#x2014; Single-Minute Exchange of Die. Shigeo Shingo's method to change setups in under 10 minutes. Enables smaller batches economically.</li>
+<li><strong>Quality at Source (Jidoka)</strong> &#x2014; Stop the line when a defect is found. Prevents defective WIP from accumulating downstream.</li>
+<li><strong>Balanced Workstations</strong> &#x2014; Equal cycle times at each station prevent bottlenecks and WIP accumulation.</li>
+<li><strong>Drum-Buffer-Rope (DBR)</strong> &#x2014; Theory of Constraints approach. The bottleneck (drum) sets the pace, buffer protects it, rope synchronizes upstream.</li>
+</ol>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Semiconductor fabs track WIP obsessively &#x2014; each wafer takes 6-8 weeks through 500+ steps. Reducing WIP by 10% saves millions in working capital. In India, Tata Motors reduced WIP by 35% at its Pune plant by implementing one-piece flow for engine assembly. Bajaj Auto's Chakan plant achieves 4-hour WIP time for motorcycle assembly (vs industry average of 2-3 days).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>W-T-F</strong> &#x2014; <strong>W</strong>IP = <strong>T</strong>hroughput &#xD7; <strong>F</strong>low Time. <strong>SMED</strong> = <strong>S</strong>ingle <strong>M</strong>inute <strong>E</strong>xchange of <strong>D</strong>ie (setup reduction).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Little's Law: WIP = Throughput x Flow Time (L = &#x3BB; x W)</li>
+<li>Derived: Throughput = WIP/Flow Time; Flow Time = WIP/Throughput</li>
+<li>WIP reduction: smaller batches, one-piece flow, SMED, quality at source, balanced stations</li>
+<li>WIP causes: batch processing, waiting times, quality issues, unbalanced lines</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3>Unit 8: Spare Parts Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Insurance Spares</strong> = parts kept for emergencies. <strong>Consignment Stock</strong> = supplier owns stock at buyer's location. <strong>VMI</strong> = Vendor Managed Inventory for spares.</p></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Inventory Policy</th></tr></thead>
+<tbody>
+<tr><td><strong>Insurance</strong></td><td>Emergency, rarely used</td><td>Low quantity, high priority</td></tr>
+<tr><td><strong>Repairable</strong></td><td>Can be fixed and reused</td><td>Track repair cycles</td></tr>
+<tr><td><strong>Consumable</strong></td><td>Used up in operations</td><td>Regular replenishment</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Spare Parts Inventory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5J9d8h1GjLQ" title="Spare Parts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Vendor Managed Inventory (VMI) in Detail</h4>
+<p>In VMI, the supplier takes responsibility for managing the buyer's inventory. The supplier monitors stock levels (often through EDI or shared ERP data) and automatically replenishes when levels drop below a threshold.</p>
+<ul>
+<li><strong>Benefits for buyer:</strong> Reduced stockouts (up to 80% reduction), lower administrative costs, freed working capital</li>
+<li><strong>Benefits for supplier:</strong> Better demand visibility, production planning, stronger customer lock-in</li>
+<li><strong>Requirements:</strong> Trust, IT integration, data sharing, clear KPIs</li>
+</ul>
+
+<h4>Consignment Stock</h4>
+<p>In consignment, the supplier owns the inventory physically located at the buyer's premises. The buyer pays only when the stock is consumed. This reduces the buyer's working capital requirement while ensuring supply availability. Unsold stock is returned to the supplier.</p>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Airlines keep insurance spares (engines, landing gear) at strategic locations worldwide, even though they may rarely be needed. IndiGo Airlines maintains a consignment stock arrangement with Pratt &amp; Whitney for GTF engines at its Delhi and Mumbai hubs, paying only upon use. Tata Steel uses VMI for its Jamshedpur plant &#x2014; key suppliers like coal vendors monitor consumption via SAP integration and auto-replenish.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>I-R-C</strong> &#x2014; <strong>I</strong>nsurance, <strong>R</strong>epairable, <strong>C</strong>onsumable (spare types). <strong>VMI</strong> = "Vendor Manages Inventory" &#x2014; supplier does the work.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>Spare types: Insurance (emergency), Repairable (fixable), Consumable (used up)</li>
+<li>VMI = supplier monitors and replenishes automatically &#x2014; reduces stockouts by up to 80%</li>
+<li>Consignment stock = supplier owns stock at buyer's location, buyer pays on consumption</li>
+<li>Criticality analysis classifies spares by importance to operations</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Classification &amp; Warehousing</h2>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3>Unit 9: Codification and Standardization</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>ABC Analysis</strong> = classify by value (A=20% items/80% value). <strong>VED</strong> = Vital, Essential, Desirable (by criticality). <strong>FSN</strong> = Fast, Slow, Non-moving (by movement). <strong>XYZ</strong> = by regularity of demand.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; ABC Analysis</h5>
+<div style="display:flex;align-items:flex-end;justify-content:center;gap:0.5rem;height:180px;padding:1rem">
+<div style="background:linear-gradient(180deg,rgba(255,107,107,.3),rgba(255,107,107,.1));border:1px solid rgba(255,107,107,.4);width:60px;height:160px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;border-radius:4px 4px 0 0"><small style="color:#ff6b6b"><strong>A</strong></small></div>
+<div style="background:linear-gradient(180deg,rgba(255,215,0,.3),rgba(255,215,0,.1));border:1px solid rgba(255,215,0,.4);width:60px;height:100px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;border-radius:4px 4px 0 0"><small style="color:#ffd700"><strong>B</strong></small></div>
+<div style="background:linear-gradient(180deg,rgba(0,206,201,.3),rgba(0,206,201,.1));border:1px solid rgba(0,206,201,.4);width:60px;height:40px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:4px;border-radius:4px 4px 0 0"><small style="color:#00cec9"><strong>C</strong></small></div>
+</div>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Class</th><th>% Items</th><th>% Value</th><th>Control</th></tr></thead>
+<tbody>
+<tr><td><strong>A</strong></td><td>20%</td><td>80%</td><td>Tight, frequent review</td></tr>
+<tr><td><strong>B</strong></td><td>30%</td><td>15%</td><td>Moderate control</td></tr>
+<tr><td><strong>C</strong></td><td>50%</td><td>5%</td><td>Simple, infrequent</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ABC Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4Y5P7sILZIw" title="ABC Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>VED and FSN Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eJr7Rn6gKHk" title="VED FSN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>How to Perform ABC Analysis &#x2014; Step by Step</h4>
+<ol>
+<li><strong>List all inventory items</strong> with their annual consumption quantity and unit cost</li>
+<li><strong>Calculate Annual Usage Value</strong> = Quantity x Unit Cost for each item</li>
+<li><strong>Rank items</strong> from highest to lowest usage value</li>
+<li><strong>Calculate cumulative percentage</strong> of total value</li>
+<li><strong>Classify</strong>: Top 80% value = A items, next 15% = B items, bottom 5% = C items</li>
+</ol>
+
+<div class="case-study">
+<h5>&#x1F4D0; ABC Calculation Example &#x2014; Indian Auto Parts Manufacturer</h5>
+<p>A Pune-based auto parts supplier has the following inventory:</p>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Item</th><th>Annual Qty</th><th>Unit Cost (Rs)</th><th>Annual Value (Rs)</th><th>% of Total</th><th>Class</th></tr></thead>
+<tbody>
+<tr><td>Engine blocks</td><td>500</td><td>25,000</td><td>12,50,000</td><td>42%</td><td><strong>A</strong></td></tr>
+<tr><td>Transmission</td><td>800</td><td>12,000</td><td>9,60,000</td><td>32%</td><td><strong>A</strong></td></tr>
+<tr><td>Brake assemblies</td><td>2,000</td><td>1,500</td><td>3,00,000</td><td>10%</td><td><strong>B</strong></td></tr>
+<tr><td>Wiring harness</td><td>3,000</td><td>800</td><td>2,40,000</td><td>8%</td><td><strong>B</strong></td></tr>
+<tr><td>Rubber gaskets</td><td>10,000</td><td>50</td><td>50,000</td><td>2%</td><td><strong>C</strong></td></tr>
+<tr><td>Nuts &amp; bolts</td><td>50,000</td><td>5</td><td>2,50,000</td><td>8%</td><td><strong>C</strong></td></tr>
+</tbody></table></div>
+<p><strong>Result:</strong> Engine blocks + Transmission (33% items) = 74% value &#x2192; Class A. Tight control, weekly review, JIT delivery from suppliers.</p>
+</div>
+
+<h4>VED Analysis &#x2014; By Criticality</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Category</th><th>Meaning</th><th>Impact of Stockout</th><th>Inventory Policy</th></tr></thead>
+<tbody>
+<tr><td><strong>Vital</strong></td><td>Production stops without it</td><td>Line shutdown, massive losses</td><td>Never out of stock, safety stock maintained, multiple suppliers</td></tr>
+<tr><td><strong>Essential</strong></td><td>Significant impact if unavailable</td><td>Reduced output, partial disruption</td><td>Low stock acceptable briefly, close monitoring</td></tr>
+<tr><td><strong>Desirable</strong></td><td>Minor impact if unavailable</td><td>Inconvenience only</td><td>Can tolerate stockouts, order when convenient</td></tr>
+</tbody></table></div>
+
+<p><strong>ABC-VED Matrix:</strong> Combining ABC (value) with VED (criticality) gives a 9-cell matrix for precise control. For example, an item classified as A-V (high value, vital) gets maximum attention with daily monitoring, while C-D items (low value, desirable) get minimal control.</p>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; ABC-VED Combined Matrix</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th></th><th><strong>Vital (V)</strong></th><th><strong>Essential (E)</strong></th><th><strong>Desirable (D)</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>A (High Value)</strong></td><td style="background:rgba(255,107,107,.2)">Tightest control, daily review</td><td style="background:rgba(255,107,107,.15)">High control, weekly review</td><td style="background:rgba(255,215,0,.15)">Moderate-high control</td></tr>
+<tr><td><strong>B (Medium Value)</strong></td><td style="background:rgba(255,215,0,.2)">High control, weekly review</td><td style="background:rgba(255,215,0,.15)">Moderate control, bi-weekly</td><td style="background:rgba(0,206,201,.15)">Moderate-low control</td></tr>
+<tr><td><strong>C (Low Value)</strong></td><td style="background:rgba(0,206,201,.2)">Moderate control (critical!)</td><td style="background:rgba(0,206,201,.15)">Low-moderate control</td><td style="background:rgba(0,206,201,.1)">Lowest control, bulk order</td></tr>
+</tbody></table></div>
+</div>
+
+<h4>XYZ Analysis &#x2014; By Demand Variability</h4>
+<ul>
+<li><strong>X items</strong> &#x2014; Stable, predictable demand (e.g., standard bolts, raw materials). Easy to forecast, suitable for JIT.</li>
+<li><strong>Y items</strong> &#x2014; Variable but predictable demand with some fluctuation (e.g., seasonal spare parts). Requires safety stock.</li>
+<li><strong>Z items</strong> &#x2014; Erratic, unpredictable demand (e.g., emergency spares, custom parts). Hard to forecast, need buffer stock.</li>
+</ul>
+
+<h4>Codification Types</h4>
+<ul>
+<li><strong>Sequential</strong> &#x2014; Simple numbering: 001, 002, 003. Easy but no information content.</li>
+<li><strong>Alphanumeric</strong> &#x2014; Category prefix: RM-001 (Raw Material), FG-002 (Finished Goods). Most common in Indian industry.</li>
+<li><strong>Mnemonic</strong> &#x2014; Memory-based: AL for Aluminium, CU for Copper. Quick recognition.</li>
+<li><strong>Group Technology</strong> &#x2014; Code by features: shape, material, size. Used in manufacturing (e.g., Opitz coding system).</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A hospital uses VED analysis &#x2014; vital drugs (epinephrine) are always in stock, essential drugs (antibiotics) are closely monitored, desirable drugs (supplements) have lower priority. AIIMS New Delhi uses ABC-VED matrix to manage 5,000+ drug SKUs, saving Rs 2 crore annually through optimized procurement.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>A-B-C</strong> = <strong>A</strong>lways <strong>B</strong>etter <strong>C</strong>ontrol (pun on the analysis name). <strong>V-E-D</strong> = <strong>V</strong>ery <strong>E</strong>ssential to <strong>D</strong>o right. <strong>F-S-N</strong> = <strong>F</strong>ast <strong>S</strong>elling or <strong>N</strong>ot.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>ABC: A=20% items/80% value, B=30% items/15% value, C=50% items/5% value</li>
+<li>VED: Vital (never out), Essential (monitor closely), Desirable (tolerate stockout)</li>
+<li>ABC-VED Matrix: 9-cell combination for precise inventory control</li>
+<li>FSN: Fast, Slow, Non-moving (by movement rate) &#x2014; identifies dead stock</li>
+<li>XYZ: X=stable demand, Y=variable, Z=erratic (by demand predictability)</li>
+<li>Codification: Sequential, Alphanumeric, Mnemonic, Group Technology</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3>Unit 10: Location and Layout of Warehouse</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>WMS</strong> = Warehouse Management System software. Warehouse functions: Receiving, Storage, Picking, Shipping. Layout should minimize travel distance and maximize space utilization.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Warehouse Functions Flow</h5>
+<div class="vd-flow">
+<div class="vd-step">&#x1F4E5; Receiving</div>
+<div class="vd-step">&#x1F4E6; Storage</div>
+<div class="vd-step">&#x1F9D0; Picking</div>
+<div class="vd-step">&#x1F68A; Shipping</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Warehouse Layout Design</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Q4sH2i4j2jI" title="Warehouse Layout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Storage Systems</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>System</th><th>Description</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Pallet Racking</strong></td><td>Standard steel frames for palletized goods</td><td>High-volume, uniform products</td></tr>
+<tr><td><strong>Selective Racking</strong></td><td>Direct access to every pallet</td><td>Multi-SKU, moderate volume</td></tr>
+<tr><td><strong>Drive-in Racking</strong></td><td>Forklifts drive into rack lanes</td><td>High-density, low-SKU (LIFO)</td></tr>
+<tr><td><strong>Shelving</strong></td><td>Static shelves for manual picking</td><td>Small parts, slow-moving items</td></tr>
+<tr><td><strong>Bins &amp; Drawers</strong></td><td>Small containers for parts</td><td>Hardware, electronics, spares</td></tr>
+<tr><td><strong>AS/RS</strong></td><td>Automated cranes + computer control</td><td>High throughput, 24/7 operations</td></tr>
+</tbody></table></div>
+
+<h4>Warehouse Layout Principles</h4>
+<ol>
+<li><strong>Minimize travel distance</strong> &#x2014; place fast-moving items near dispatch area</li>
+<li><strong>Group similar items</strong> &#x2014; zone picking reduces search time</li>
+<li><strong>Use vertical space</strong> &#x2014; mezzanine floors, tall racking maximize cube utilization</li>
+<li><strong>Separate receiving &amp; shipping</strong> &#x2014; avoid cross-traffic congestion</li>
+<li><strong>Flow-through design</strong> &#x2014; goods move in one direction (U-flow or through-flow)</li>
+</ol>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon's warehouses use Kiva robots that bring shelves to pickers, reducing travel time by 75%. In India, Delhivery operates a 500,000 sq ft automated mega-hub in Gurugram with AS/RS, handling 2 million parcels daily. Flipkart's Binny Bansal introduced automated sortation at its Bengaluru warehouse, increasing throughput by 300%.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>R-S-P-S</strong> &#x2014; <strong>R</strong>eceiving, <strong>S</strong>torage, <strong>P</strong>icking, <strong>S</strong>hipping. Think: "Receive, Store, Pick, Ship &#x2014; the warehouse rhythm."</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Warehouse functions: R-S-P-S (Receiving, Storage, Picking, Shipping)</li>
+<li>Storage systems: Pallet racking, Selective, Drive-in, Shelving, Bins, AS/RS</li>
+<li>Layout principles: minimize travel, group similar, use vertical space, separate R&amp;S</li>
+<li>WMS software controls daily operations; AS/RS for automated high-throughput</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3>Unit 11: Warehouse Risk Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Cycle Counting</strong> = regular counting of a small portion of inventory on a rotating basis. <strong>FEFO</strong> = First Expiry First Out. Risks: fire, theft, damage, obsolescence.</p></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Method</th><th>Full Form</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>FIFO</strong></td><td>First In First Out</td><td>Perishable goods, general use</td></tr>
+<tr><td><strong>LIFO</strong></td><td>Last In First Out</td><td>Non-perishable, tax advantages</td></tr>
+<tr><td><strong>FEFO</strong></td><td>First Expiry First Out</td><td>Pharmaceuticals, food</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>FIFO vs LIFO vs FEFO</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/R5sQ8mYtQ8E" title="FIFO LIFO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Warehouse Risk Mitigation Strategies</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Risk</th><th>Mitigation</th><th>Indian Standard/Practice</th></tr></thead>
+<tbody>
+<tr><td><strong>Fire</strong></td><td>Sprinklers, extinguishers, fire drills</td><td>NBC 2016 fire safety norms, FSSAI compliance</td></tr>
+<tr><td><strong>Theft</strong></td><td>CCTV, access control, security guards</td><td>Warehouse license under Warehousing Act 2007</td></tr>
+<tr><td><strong>Damage</strong></td><td>Proper packaging, stacking limits, handling SOPs</td><td>ISPM-15 for export packaging</td></tr>
+<tr><td><strong>Obsolescence</strong></td><td>Regular review, FIFO/FEFO, markdown policies</td><td>e-NAM platform for liquidating old stock</td></tr>
+<tr><td><strong>Natural disasters</strong></td><td>Insurance, multiple locations, business continuity plan</td><td>NDMA guidelines, warehouse in flood-free zones</td></tr>
+</tbody></table></div>
+
+<h4>Cycle Counting Best Practices</h4>
+<ul>
+<li><strong>Frequency by class:</strong> A items counted monthly, B items quarterly, C items annually</li>
+<li><strong>ABC-based counting:</strong> Focus counting effort on high-value items (Pareto principle)</li>
+<li><strong>Tolerance levels:</strong> A items: 0 variance; B items: +/- 2%; C items: +/- 5%</li>
+<li><strong>Technology:</strong> Barcode/RFID scanners, WMS integration, real-time discrepancy alerts</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Pharmaceutical warehouses must use FEFO to ensure medications don't expire before distribution. Cipla's Baddi (HP) warehouse uses RFID-based FEFO tracking for 3,000+ SKUs. After the 2023 Bhiwandi warehouse fire (Rs 50 crore loss), Amazon India implemented AI-powered fire detection across all fulfillment centers. Adani Ports' Mundra warehouse uses automated cycle counting with 99.7% accuracy.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>F-L-F</strong> &#x2014; <strong>F</strong>IFO, <strong>L</strong>IFO, <strong>F</strong>EFO. <strong>Cycle Count</strong> = "Count a little, count often" &#x2014; no full shutdown needed.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>FIFO = perishables/general; LIFO = tax advantages/inflation; FEFO = expiry-sensitive (pharma, food)</li>
+<li>Risks: Fire, theft, damage, obsolescence, natural disasters</li>
+<li>Mitigation: Insurance, CCTV, fire protection, training, proper storage conditions</li>
+<li>Cycle counting: ABC-based frequency, tolerance levels, RFID/barcode technology</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Organization &amp; Performance</h2>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3>Unit 12: Materials Management Organization</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Centralized</strong> = all purchasing under one department. <strong>Decentralized</strong> = each unit manages its own materials. <strong>Hybrid</strong> = central policy with local execution.</p></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Factor</th><th>Centralized</th><th>Decentralized</th></tr></thead>
+<tbody>
+<tr><td><strong>Control</strong></td><td>Better</td><td>Limited</td></tr>
+<tr><td><strong>Economies of Scale</strong></td><td>Yes</td><td>No</td></tr>
+<tr><td><strong>Response Time</strong></td><td>Slower</td><td>Faster</td></tr>
+<tr><td><strong>Local Knowledge</strong></td><td>Limited</td><td>Strong</td></tr>
+<tr><td><strong>Standardization</strong></td><td>Easy</td><td>Difficult</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Centralized vs Decentralized</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1e1n1n1b1b1Q" title="Centralized" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Cross-Functional Teams in Materials Management</h4>
+<p>Materials management cannot work in isolation. Cross-functional collaboration ensures alignment:</p>
+<ul>
+<li><strong>With Production:</strong> MRP coordination, delivery schedules, quality specifications</li>
+<li><strong>With Finance:</strong> Budgeting, payment terms, cash flow management, cost analysis</li>
+<li><strong>With Quality:</strong> Incoming inspection, vendor quality audits, rejection handling</li>
+<li><strong>With Marketing:</strong> Demand forecasting, new product introduction, packaging requirements</li>
+<li><strong>With R&amp;D:</strong> New material development, supplier selection for prototypes</li>
+</ul>
+
+<h4>Department Functions Detail</h4>
+<ul>
+<li><strong>Purchasing</strong> &#x2014; Vendor selection, price negotiation, PO management, contract administration</li>
+<li><strong>Receiving</strong> &#x2014; Inbound inspection, GRN (Goods Receipt Note), quantity/quality verification</li>
+<li><strong>Stores</strong> &#x2014; Physical storage, preservation, issue to production, bin card maintenance</li>
+<li><strong>Inventory Control</strong> &#x2014; Stock level monitoring, reorder triggers, ABC/VED analysis, cycle counting</li>
+<li><strong>Traffic (Transportation)</strong> &#x2014; Mode selection, carrier management, freight negotiation, customs clearance</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Unilever uses a hybrid model &#x2014; global procurement for strategic raw materials (centralized) but local sourcing for regional items (decentralized). In India, Godrej &amp; Boyce uses a hybrid model: centralized procurement for steel and electronics at Mumbai HQ, decentralized sourcing for packaging materials at 15 regional plants. Infosys has a centralized procurement team of 200+ professionals managing Rs 8,000 crore annual spend.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>P-R-S-I-T</strong> &#x2014; <strong>P</strong>urchasing, <strong>R</strong>eceiving, <strong>S</strong>tores, <strong>I</strong>nventory control, <strong>T</strong>raffic. Think: "Please Receive Stores Inventory Timely."</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Centralized = control/standardization/volume discounts; Decentralized = speed/local knowledge</li>
+<li>Hybrid = best of both (central policy, local execution) &#x2014; recommended approach</li>
+<li>Department functions: P-R-S-I-T (Purchasing, Receiving, Stores, Inventory, Traffic)</li>
+<li>Cross-functional collaboration: Production, Finance, Quality, Marketing, R&amp;D</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3>Unit 13: Performance Evaluation and Appraisal</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Key metrics: Inventory Turnover, Days of Inventory, Fill Rate, Stockout Rate. <strong>Balanced Scorecard</strong>: Financial, Customer, Internal Process, Learning &amp; Growth. <strong>Kaizen</strong> = continuous improvement.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Key Performance Formulas</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Metric</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td><strong>Inventory Turnover</strong></td><td>COGS / Average Inventory</td></tr>
+<tr><td><strong>Days of Inventory</strong></td><td>365 / Inventory Turnover</td></tr>
+<tr><td><strong>Fill Rate</strong></td><td>Orders filled from stock / Total orders</td></tr>
+<tr><td><strong>Stockout Rate</strong></td><td>Stockouts / Total demand</td></tr>
+<tr><td><strong>Purchase Price Variance</strong></td><td>Actual Price &#x2013; Standard Price</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; PDCA Cycle</h5>
+<div class="vd-flow">
+<div class="vd-step">&#x1F4DD; Plan</div>
+<div class="vd-step">&#x1F680; Do</div>
+<div class="vd-step">&#x1F50D; Check</div>
+<div class="vd-step">&#x2699;&#xFE0F; Act</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>PDCA Cycle Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/m2M1b1b1b1Y" title="PDCA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Balanced Scorecard</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6cL3N3b0u0E" title="BSC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<h4>Balanced Scorecard for Materials Management</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Perspective</th><th>KPI</th><th>Target Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Financial</strong></td><td>Total material cost savings, procurement ROI</td><td>5% cost reduction YoY</td></tr>
+<tr><td><strong>Customer</strong></td><td>Fill rate, on-time delivery, quality rejection rate</td><td>98% fill rate, &lt;1% rejection</td></tr>
+<tr><td><strong>Internal Process</strong></td><td>Order cycle time, inventory accuracy, lead time</td><td>3-day order cycle, 99% accuracy</td></tr>
+<tr><td><strong>Learning &amp; Growth</strong></td><td>Training hours, supplier development, IT adoption</td><td>40 hrs training/year/employee</td></tr>
+</tbody></table></div>
+
+<h4>Kaizen in Materials Management</h4>
+<p>Kaizen (continuous incremental improvement) applied to materials management means small, daily improvements in every process:</p>
+<ul>
+<li><strong>5S for Stores:</strong> Sort, Set in order, Shine, Standardize, Sustain &#x2014; clean, organized warehouses</li>
+<li><strong>Visual Management:</strong> Kanban cards, floor markings, shadow boards for tools</li>
+<li><strong>Waste Elimination (Muda):</strong> Overproduction, waiting, transport, over-processing, inventory, motion, defects</li>
+<li><strong>Suggestion schemes:</strong> Employee-driven improvements, reward systems</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A materials department achieving 8x inventory turnover and 98% fill rate would be considered best-in-class in most industries. Maruti Suzuki's Manesar plant runs 500+ Kaizen projects annually in its materials department, saving Rs 50 crore per year. Reliance Industries' Jamnagar refinery uses balanced scorecard with 25+ materials KPIs reviewed monthly.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>P-D-C-A</strong> &#x2014; <strong>P</strong>lan, <strong>D</strong>o, <strong>C</strong>heck, <strong>A</strong>ct (continuous improvement). <strong>BSC</strong> &#x2014; <strong>F</strong>inancial, <strong>C</strong>ustomer, <strong>I</strong>nternal, <strong>L</strong>earning = "FCIL" (Fossil).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Key formulas: Inventory Turnover = COGS/Avg Inv; Days of Inventory = 365/IT; Fill Rate; Stockout Rate</li>
+<li>Balanced Scorecard: Financial (cost savings), Customer (fill rate), Internal (cycle time), Learning (training)</li>
+<li>PDCA cycle for continuous improvement; Kaizen = incremental daily improvements</li>
+<li>5S for stores: Sort, Set in order, Shine, Standardize, Sustain</li>
+<li>Benchmark: 8x inventory turnover + 98% fill rate = best-in-class</li>
+</ul></div>
+</div></div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>R-R-T-P-P-Q</strong></td><td>Right Material, Quantity, Time, Place, Price, Quality</td><td>6 Rs</td></tr>
+<tr><td><strong>C-Q-C-T-C</strong></td><td>Cost, Quality, Capacity, Technology, Core competency</td><td>Make/Buy Factors</td></tr>
+<tr><td><strong>Q-P-D-S-F</strong></td><td>Quality, Price, Delivery, Service, Financial stability</td><td>Supplier Selection</td></tr>
+<tr><td><strong>T-C-C</strong></td><td>Transparency, Communication, Consistency</td><td>Trust Building</td></tr>
+<tr><td><strong>M-B-I</strong></td><td>MPS, BOM, Inventory records</td><td>MRP Inputs</td></tr>
+<tr><td><strong>F-D</strong></td><td>Forecast, Demand</td><td>Push vs Pull</td></tr>
+<tr><td><strong>W-T-F</strong></td><td>WIP = Throughput x Flow Time</td><td>Little's Law</td></tr>
+<tr><td><strong>I-R-C</strong></td><td>Insurance, Repairable, Consumable</td><td>Spare Types</td></tr>
+<tr><td><strong>A-B-C</strong></td><td>Always Better Control</td><td>ABC Analysis</td></tr>
+<tr><td><strong>R-S-P-S</strong></td><td>Receiving, Storage, Picking, Shipping</td><td>Warehouse Functions</td></tr>
+<tr><td><strong>F-L-F</strong></td><td>FIFO, LIFO, FEFO</td><td>Inventory Methods</td></tr>
+<tr><td><strong>P-R-S-I-T</strong></td><td>Purchasing, Receiving, Stores, Inventory, Traffic</td><td>Dept Functions</td></tr>
+<tr><td><strong>P-D-C-A</strong></td><td>Plan, Do, Check, Act</td><td>Continuous Improvement</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<ul>
+<li><strong>6 Rs of Materials Management</strong> &#x2014; define and explain each (10 marks)</li>
+<li><strong>ABC Analysis</strong> &#x2014; classification, percentages, control methods (10 marks)</li>
+<li><strong>Little's Law</strong> &#x2014; calculations and applications (10 marks)</li>
+<li><strong>Push vs Pull Systems</strong> &#x2014; comparison with examples (10 marks)</li>
+<li><strong>MRP Logic</strong> &#x2014; inputs, process, calculations (10 marks)</li>
+<li><strong>Make or Buy Decision</strong> &#x2014; factors and analysis (10 marks)</li>
+<li><strong>Inventory Classification</strong> &#x2014; ABC, VED, FSN, XYZ (10 marks)</li>
+</ul></div>
+
+<h4>Model Answer Structure: 6 Rs of Materials Management (10 marks)</h4>
+<button class="expand-toggle" data-target="#ec1">Read More</button>
+<div class="expandable-content" id="ec1">
+<ol>
+<li><strong>Introduction (1 mark):</strong> Define materials management, importance (50-70% of manufacturing cost)</li>
+<li><strong>6 Rs with explanation (6 marks):</strong>
+<ul>
+<li>Right Material &#x2014; correct specification, quality standard</li>
+<li>Right Quantity &#x2014; economic order quantity, avoid over/under stocking</li>
+<li>Right Time &#x2014; just-in-time delivery, avoid production delays</li>
+<li>Right Place &#x2014; warehouse location, point of use delivery</li>
+<li>Right Price &#x2014; competitive bidding, negotiation, total cost of ownership</li>
+<li>Right Quality &#x2014; inspection, vendor quality management, incoming quality control</li>
+</ul></li>
+<li><strong>Real-world example (2 marks):</strong> Toyota's JIT system, Amazon's warehouse management</li>
+<li><strong>Conclusion (1 mark):</strong> Effective materials management reduces costs, improves efficiency</li>
+</ol></div>
+
+<h4>Model Answer Structure: ABC Analysis (10 marks)</h4>
+<button class="expand-toggle" data-target="#ec2">Read More</button>
+<div class="expandable-content" id="ec2">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define ABC analysis, Pareto principle (80/20 rule)</li>
+<li><strong>Classification (3 marks):</strong>
+<ul>
+<li>A items: 20% items, 80% value &#x2014; tight control, frequent review, JIT</li>
+<li>B items: 30% items, 15% value &#x2014; moderate control, periodic review</li>
+<li>C items: 50% items, 5% value &#x2014; simple controls, bulk ordering</li>
+</ul></li>
+<li><strong>Steps to implement (2 marks):</strong> Calculate annual usage value, rank items, classify</li>
+<li><strong>Benefits (2 marks):</strong> Focus resources on high-value items, reduce inventory costs</li>
+<li><strong>Conclusion (1 mark):</strong> ABC analysis is foundation of inventory management</li>
+</ol></div>
+
+<h4>Model Answer Structure: Little's Law (10 marks)</h4>
+<button class="expand-toggle" data-target="#ec3">Read More</button>
+<div class="expandable-content" id="ec3">
+<ol>
+<li><strong>Statement (2 marks):</strong> L = lambda x W (WIP = Throughput x Flow Time)</li>
+<li><strong>Variables explained (3 marks):</strong> L (avg items in system), lambda (throughput rate), W (avg time in system)</li>
+<li><strong>Derived formulas (2 marks):</strong> WIP = Throughput x Flow Time, Flow Time = WIP / Throughput, Throughput = WIP / Flow Time</li>
+<li><strong>Numerical example (2 marks):</strong> Factory has 100 units WIP, produces 20 units/hour, Flow Time = 100/20 = 5 hours</li>
+<li><strong>Applications (1 mark):</strong> Manufacturing, healthcare, software development</li>
+</ol></div>
+
+<h4>Model Answer Structure: Push vs Pull Systems (10 marks)</h4>
+<button class="expand-toggle" data-target="#ec4">Read More</button>
+<div class="expandable-content" id="ec4">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define push (forecast-based) and pull (demand-based) production</li>
+<li><strong>Comparison table (4 marks):</strong> MRP vs JIT/Kanban, forecast vs actual demand, inventory levels, flexibility</li>
+<li><strong>Examples (2 marks):</strong> Push: traditional manufacturing; Pull: Toyota Production System</li>
+<li><strong>Hybrid approach (1 mark):</strong> Push-pull decoupling point, lean manufacturing</li>
+<li><strong>Conclusion (1 mark):</strong> Modern systems combine both approaches</li>
+</ol></div>
+
+<h4>Model Answer Structure: MRP Logic (10 marks)</h4>
+<button class="expand-toggle" data-target="#ec5">Read More</button>
+<div class="expandable-content" id="ec5">
+<ol>
+<li><strong>Introduction (2 marks):</strong> Define MRP, purpose (what, when, how much to order)</li>
+<li><strong>Inputs (3 marks):</strong> MPS (Master Production Schedule), BOM (Bill of Materials), Inventory records</li>
+<li><strong>MRP calculations (3 marks):</strong> Gross requirements, scheduled receipts, on-hand inventory, net requirements, planned orders</li>
+<li><strong>Outputs (1 mark):</strong> Planned orders, planned receipts, exception reports</li>
+<li><strong>Benefits (1 mark):</strong> Reduced inventory, better scheduling, improved customer service</li>
+</ol></div>
+
+<h4>Key Formulas Quick Reference</h4>
+<button class="expand-toggle" data-target="#ec6">Read More</button>
+<div class="expandable-content" id="ec6">
+<div class="formula-block">INVENTORY:
+Net Requirements = Gross Requirements - Scheduled Receipts - On-hand Inventory
+Inventory Turnover = COGS / Average Inventory
+Days of Inventory = 365 / Inventory Turnover
+Fill Rate = Orders Filled from Stock / Total Orders
+Stockout Rate = Stockouts / Total Demand
+
+LITTLE'S LAW:
+WIP = Throughput x Flow Time
+Flow Time = WIP / Throughput
+Throughput = WIP / Flow Time
+
+ECONOMIC ORDER QUANTITY:
+EOQ = sqrt(2 x D x S / H)
+where D = annual demand, S = ordering cost, H = holding cost per unit per year
+
+REORDER POINT:
+ROP = (Average Daily Demand x Lead Time) + Safety Stock
+
+SAFETY STOCK:
+SS = Z x sigma x sqrt(LT)
+where Z = service level factor, sigma = std dev of demand, LT = lead time</div></div>
+
+<h4>Comparison Tables for Quick Revision</h4>
+
+<h5>Push vs Pull Systems</h5>
+<div class="db"><table class="comparison-table">
+<tr><th>Feature</th><th>Push System</th><th>Pull System</th></tr>
+<tr><td><strong>Basis</strong></td><td>Forecast-driven</td><td>Demand-driven</td></tr>
+<tr><td><strong>Production</strong></td><td>Make to stock</td><td>Make to order</td></tr>
+<tr><td><strong>Inventory</strong></td><td>High (safety stock)</td><td>Low (minimal)</td></tr>
+<tr><td><strong>Lead Time</strong></td><td>Longer</td><td>Shorter</td></tr>
+<tr><td><strong>Flexibility</strong></td><td>Low</td><td>High</td></tr>
+<tr><td><strong>Examples</strong></td><td>MRP, traditional manufacturing</td><td>JIT, Kanban, Toyota</td></tr>
+</table></div>
+
+<h5>Single vs Multiple Sourcing</h5>
+<div class="db"><table class="comparison-table">
+<tr><th>Factor</th><th>Single Sourcing</th><th>Multiple Sourcing</th></tr>
+<tr><td><strong>Cost</strong></td><td>Lower (volume discount)</td><td>Higher (competition)</td></tr>
+<tr><td><strong>Relationship</strong></td><td>Strong, partnership</td><td>Arm's length</td></tr>
+<tr><td><strong>Risk</strong></td><td>High (dependency)</td><td>Lower (alternatives)</td></tr>
+<tr><td><strong>Quality</strong></td><td>Consistent</td><td>Variable</td></tr>
+<tr><td><strong>Innovation</strong></td><td>Joint development</td><td>Limited</td></tr>
+</table></div>
+
+<h5>Inventory Classification Methods</h5>
+<div class="db"><table class="comparison-table">
+<tr><th>Method</th><th>Basis</th><th>Categories</th><th>Application</th></tr>
+<tr><td><strong>ABC</strong></td><td>Value (annual consumption)</td><td>A (80%), B (15%), C (5%)</td><td>All inventory</td></tr>
+<tr><td><strong>VED</strong></td><td>Criticality</td><td>Vital, Essential, Desirable</td><td>Spare parts</td></tr>
+<tr><td><strong>FSN</strong></td><td>Usage rate</td><td>Fast, Slow, Non-moving</td><td>Dead stock identification</td></tr>
+<tr><td><strong>XYZ</strong></td><td>Demand variability</td><td>X (stable), Y (variable), Z (erratic)</td><td>Forecasting accuracy</td></tr>
+</table></div>
+
+<h5>FIFO vs LIFO vs FEFO</h5>
+<div class="db"><table class="comparison-table">
+<tr><th>Method</th><th>Full Form</th><th>Best For</th><th>Example</th></tr>
+<tr><td><strong>FIFO</strong></td><td>First In, First Out</td><td>Perishable goods</td><td>Food, pharmaceuticals</td></tr>
+<tr><td><strong>LIFO</strong></td><td>Last In, First Out</td><td>Tax advantages (inflation)</td><td>Non-perishable bulk goods</td></tr>
+<tr><td><strong>FEFO</strong></td><td>First Expired, First Out</td><td>Expiry-dated items</td><td>Medicines, chemicals</td></tr>
+</table></div>
+
+<h5>Centralized vs Decentralized Procurement</h5>
+<div class="db"><table class="comparison-table">
+<tr><th>Feature</th><th>Centralized</th><th>Decentralized</th></tr>
+<tr><td><strong>Control</strong></td><td>Tight, uniform policies</td><td>Flexible, local decisions</td></tr>
+<tr><td><strong>Cost</strong></td><td>Volume discounts</td><td>Higher per-unit cost</td></tr>
+<tr><td><strong>Responsiveness</strong></td><td>Slower</td><td>Faster</td></tr>
+<tr><td><strong>Expertise</strong></td><td>Specialized team</td><td>Generalist staff</td></tr>
+<tr><td><strong>Best For</strong></td><td>Standard items, large orgs</td><td>Specialized items, multi-location</td></tr>
+</table></div>
+</div>
+
+</main></div>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})();
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.getElementById("readingProgress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body></html>

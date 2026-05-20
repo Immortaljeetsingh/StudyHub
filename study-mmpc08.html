@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPC-08: Information Systems for Managers | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+/* =========== MMPC-08 ENHANCED STYLES =========== */
+
+/* --- Background Particles --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Section Heading Gradient Underline --- */
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700, #c8c8c8);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0);
+  border-radius: 2px;
+}
+
+/* --- Card Hover Effects --- */
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #c8c8c8 !important;
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #b0b0b0 !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+
+/* --- Study Header Enhancement --- */
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+/* --- Badge/Tag Styling --- */
+.subject-tag {
+  background: linear-gradient(135deg, #c8c8c8, #b0b0b0) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Visual Diagram Boxes --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.06));
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700);
+}
+.visual-diagram h5 {
+  color: #c8c8c8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.vd-arrow {
+  display: inline-block;
+  color: #c8c8c8;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(108,99,255,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Expand/Collapse Toggle --- */
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.expandable-content.expanded {
+  max-height: 5000px;
+}
+.expand-toggle {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 6px;
+  color: #c8c8c8;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.expand-toggle:hover {
+  background: linear-gradient(135deg, rgba(108,99,255,0.25), rgba(0,210,255,0.15));
+  box-shadow: 0 2px 10px rgba(200,200,200,0.12);
+}
+
+/* --- Hierarchy Tree Visual --- */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.org-tree .level {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.org-tree .node {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease;
+}
+.org-tree .node:hover { transform: scale(1.05); }
+.org-tree .connector {
+  width: 2px; height: 20px;
+  background: linear-gradient(to bottom, #c8c8c8, #b0b0b0);
+  margin: 0 auto;
+}
+
+/* --- Flowchart Visual --- */
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.flow-visual .arrow {
+  color: #c8c8c8;
+  font-size: 1.4rem;
+}
+
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+/* Visual diagram box */
+.visual-diagram {
+    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
+    border: 1px solid rgba(78,205,196,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.visual-diagram:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
+}
+.visual-diagram h5 {
+    color: #4ECDC4;
+    margin-bottom: 16px;
+    font-size: 1.1em;
+}
+.vd-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.vd-step {
+    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(78,205,196,0.1));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    min-width: 110px;
+    transition: all 0.3s ease;
+}
+.vd-step:hover { background: linear-gradient(135deg, rgba(255,107,107,0.25), rgba(78,205,196,0.18)); }
+
+/* Section badge */
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    color: #fff;
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpc08">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-08'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-08</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01: IT Fundamentals</a>
+<a href="#u1">Unit 1: IT Overview</a>
+<a href="#u2">Unit 2: Computer Systems</a>
+<a href="#u3">Unit 3: Computer Software</a>
+<a href="#block2">Block-02: Networking & MIS</a>
+<a href="#u4">Unit 4: Networking</a>
+<a href="#u5">Unit 5: MIS &amp; Control</a>
+<a href="#block3">Block-03: Enterprise Systems</a>
+<a href="#u6">Unit 6: IS Economics</a>
+<a href="#u7">Unit 7: TPS, DSS, EIS</a>
+<a href="#u8">Unit 8: ERP &amp; Integration</a>
+<a href="#block4">Block-04: Systems Development</a>
+<a href="#u9">Unit 9: Building IS</a>
+<a href="#u10">Unit 10: System Analysis</a>
+<a href="#u11">Unit 11: Programming</a>
+<a href="#block5">Block-05: Data & Intelligence</a>
+<a href="#u12">Unit 12: Database</a>
+<a href="#u13">Unit 13: Data Warehousing</a>
+<a href="#u14">Unit 14: AI</a>
+<a href="#u15">Unit 15: Emerging Trends</a>
+<a href="quiz-mmpc08.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-08</span><h1>Information Systems for Managers</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+
+<h2 id="block1">Block-01: IT Fundamentals</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Information Technology &#x2014; An Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Information Technology:</strong> Collection, storage, processing, dissemination, and use of information. IT is not just hardware/software &#x2014; includes people, processes, and goals. Business paradigm shifted from seller's market to buyer's market. IT enables: high-speed computation, fast communication, data storage, process automation, big data analysis.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Introduction to IT</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/O5nskZQJfgI" title="Intro to IT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Information Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1qD5L6O-MTc" title="Types of IS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>System</th><th>Full Form</th><th>Primary Function</th><th>Users</th></tr></thead>
+<tbody>
+<tr><td>TPS</td><td>Transaction Processing System</td><td>Record keeping, routine reports</td><td>Clerical staff</td></tr>
+<tr><td>MIS</td><td>Management Information System</td><td>Routine summaries for management</td><td>Middle management</td></tr>
+<tr><td>DSS</td><td>Decision Support System</td><td>Complex problem solving</td><td>Managers</td></tr>
+<tr><td>EIS</td><td>Executive Information System</td><td>Trend analysis, drill-down</td><td>Senior executives</td></tr>
+<tr><td>ERP</td><td>Enterprise Resource Planning</td><td>Integrated business processes</td><td>Entire organization</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Model</th><th>Example</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>B2C</td><td>Amazon, Flipkart</td><td>Business sells directly to consumers</td></tr>
+<tr><td>B2B</td><td>IndiaMART, TradeIndia</td><td>Business-to-business transactions</td></tr>
+<tr><td>C2C</td><td>OLX, Quikr</td><td>Consumer-to-consumer marketplace</td></tr>
+<tr><td>G2C</td><td>IRCTC, UMANG</td><td>Government services to citizens</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Railway reservation system uses networks to check seat availability across stations &#x2014; impossible without IT. TCS manages 600K+ employees across 50+ countries using integrated IT systems. SBI CBS processes 80M+ transactions per day. Infosys Finacle powers 1B+ accounts across 100+ countries.</p></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Information Systems Hierarchy</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:50%;text-align:center;padding:0.6rem;border-radius:8px"><strong>EIS</strong> &#x2014; Senior Executives (Strategic)</div>
+<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:65%;text-align:center;padding:0.6rem;border-radius:8px"><strong>DSS</strong> &#x2014; Managers (Analytical)</div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px"><strong>MIS</strong> &#x2014; Middle Management (Tactical)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:95%;text-align:center;padding:0.6rem;border-radius:8px"><strong>TPS</strong> &#x2014; Clerical Staff (Operational)</div>
+</div></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the difference between TPS (operational), MIS (tactical), DSS (strategic), and EIS (executive). Examiners love comparison questions. Business applications of IT across finance, marketing, manufacturing, HR are frequently asked.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TMD-WE</strong> &#x2014; TPS, MIS, DSS, Workflow, ERP (types of IS). Remember: <strong>T</strong>ransaction, <strong>M</strong>anagement, <strong>D</strong>ecision, <strong>W</strong>orkflow, <strong>E</strong>nterprise. Each serves a different organizational level from clerical to executive.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>IT = Hardware + Software + Networks + Data + People</li>
+<li>Five uses: Compute, Communicate, Store, Automate, Analyze</li>
+<li>IS types: TPS (operational), MIS (tactical), DSS (strategic), EIS (executive), ERP (enterprise)</li>
+<li>E-commerce models: B2C, B2B, C2C, G2C</li>
+</ul></div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Computer Systems and Smart Devices</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Von Neumann Architecture:</strong> Stored program concept where both data and instructions are stored in the same memory. Computer generations evolved from Vacuum Tubes to Transistors to ICs to VLSI. The CPU is the brain of the computer, consisting of the Control Unit, ALU, and Registers.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Computer Architecture</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/FZGugFMSro8" title="Computer Architecture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Memory Hierarchy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/c_WqTFKcJm0" title="Memory Hierarchy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Component</th><th>Function</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>CPU</td><td>Reads &amp; executes instructions</td><td>Intel i7, AMD Ryzen</td></tr>
+<tr><td>ALU</td><td>Math calculations &amp; logical comparisons</td><td>+, -, &#xD7;, &#xF7;, &gt;, &lt;, =</td></tr>
+<tr><td>Control Unit</td><td>Sequentially accesses &amp; decodes instructions</td><td>Directs other components</td></tr>
+<tr><td>Registers</td><td>Small, high-speed memory for temporary results</td><td>Accumulator, PC, MAR</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Type</th><th>Volatile?</th><th>Speed</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Primary (RAM)</td><td>Yes</td><td>Fast</td><td>DRAM, SDRAM, DDR1-5</td></tr>
+<tr><td>Primary (ROM)</td><td>No</td><td>Fast</td><td>PROM, EPROM</td></tr>
+<tr><td>Cache</td><td>Yes</td><td>Fastest</td><td>L1 (in CPU), L2/L3 (near CPU)</td></tr>
+<tr><td>Secondary</td><td>No</td><td>Slower</td><td>HDD, SSD, Optical, Magnetic Tape</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Computer Architecture</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px">Input (Keyboard, Mouse)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px">CPU (ALU + CU + Registers)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px">Memory (RAM + Cache)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px">Storage (HDD, SSD)</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px">Output (Monitor, Printer)</div>
+</div></div>
+
+<div class="db"><table>
+<thead><tr><th>Generation</th><th>Technology</th><th>Period</th><th>Speed</th></tr></thead>
+<tbody>
+<tr><td>1st</td><td>Vacuum Tubes</td><td>1940-56</td><td>Milliseconds</td></tr>
+<tr><td>2nd</td><td>Transistors</td><td>1956-63</td><td>Microseconds</td></tr>
+<tr><td>3rd</td><td>Integrated Circuits</td><td>1964-71</td><td>Nanoseconds</td></tr>
+<tr><td>4th</td><td>VLSI / Microprocessors</td><td>1971-present</td><td>Picoseconds</td></tr>
+<tr><td>5th</td><td>AI / Parallel Processing</td><td>Present+</td><td>Ultra-fast</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A 64-bit processor handles 64 bits per cycle, making it faster than 32-bit. Modern Intel i7/i9 reach 5.1 GHz. PARAM Siddhi-AI is India's supercomputer in the world top 100. Smart devices connected via Bluetooth/Wi-Fi operate autonomously through IoT. Cray XC40 (Pune) achieves 1+ petaflop speed for weather forecasting.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Unit</th><th>Value</th><th>Binary Power</th></tr></thead>
+<tbody>
+<tr><td>1 Byte</td><td>8 bits</td><td>&#x2014;</td></tr>
+<tr><td>1 KB</td><td>1,024 bytes</td><td>2&#x2071;&#x00B0;</td></tr>
+<tr><td>1 MB</td><td>~1 million bytes</td><td>2&#x2072;&#x2070;</td></tr>
+<tr><td>1 GB</td><td>~1 billion bytes</td><td>2&#x2073;&#x2070;</td></tr>
+<tr><td>1 TB</td><td>~1 trillion bytes</td><td>2&#x2074;&#x2070;</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Memory Hierarchy</h4>
+<p>The memory hierarchy is designed to balance speed and cost. Registers are the fastest but smallest (nanoseconds, few KB). Cache memory (L1, L2, L3) sits between CPU and RAM, storing frequently accessed data. RAM (main memory) holds currently running programs. Secondary storage (HDD/SSD) provides permanent storage. The hierarchy ensures the CPU always has data available at the speed it needs.</p>
+<p>Virtual memory extends RAM by using disk space as an overflow. When RAM is full, less-used data is "swapped" to disk. This allows running programs larger than physical RAM, but with a performance penalty since disk access is 1000x slower than RAM.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Difference between Hub (broadcast) vs Switch (multicast) vs Router (inter-network) is a frequent question. Memory capacity conversions: 1 KB = 1,024 bytes, 1 MB &#x2248; 1 million, 1 GB &#x2248; 1 billion.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CASH</strong> &#x2014; CPU, ALU, Storage, Hardware (computer components). Think: "You need CASH to buy computer components." The CPU contains the ALU, which processes data from Storage, all connected via Hardware buses.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Von Neumann: stored program concept, data + instructions in same memory</li>
+<li>CPU = Control Unit + ALU + Registers</li>
+<li>Memory hierarchy: Registers &#x2192; Cache &#x2192; RAM &#x2192; Secondary Storage</li>
+<li>Network components: NIC, Hub, Switch, Router, Firewall</li>
+</ul></div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Computer Software</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Software:</strong> Programs that enable hardware to process data. Two types: System Software (OS, drivers) vs Application Software (Word, Excel). Firmware = Software permanently stored in ROM. The OS is the intermediary between user/applications and hardware.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Operating Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/26QPDBe-NB8" title="OS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Compiler vs Interpreter</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/OoJg9G2l2f8" title="Compiler vs Interpreter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Aspect</th><th>Compiler</th><th>Interpreter</th></tr></thead>
+<tbody>
+<tr><td>Translation</td><td>Entire program at once</td><td>Line by line</td></tr>
+<tr><td>Speed</td><td>Faster execution</td><td>Slower execution</td></tr>
+<tr><td>Memory</td><td>Creates object file</td><td>No object file</td></tr>
+<tr><td>Error Detection</td><td>After compilation</td><td>At each line</td></tr>
+<tr><td>Examples</td><td>C, C++, Java</td><td>Python, JavaScript, BASIC</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Category</th><th>Examples</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>System Software</td><td>Windows, Linux, macOS</td><td>Controls hardware</td></tr>
+<tr><td>Application Software</td><td>MS Office, Photoshop</td><td>Solves user problems</td></tr>
+<tr><td>Firmware</td><td>BIOS, embedded systems</td><td>Permanent in ROM</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>GUI pioneers were Xerox PARC (Alan Kay). Windows uses overlapping windows and icons concept. Zoho (Chennai): 75M+ users, bootstrapped, competes with Google/Microsoft. Open source: Linux runs 96% of the world&#x2019;s top 1 million web servers. Tally (Bangalore): 2M+ Indian businesses use it for accounting.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>OS</th><th>Type</th><th>Best For</th><th>Indian Usage</th></tr></thead>
+<tbody>
+<tr><td>Windows</td><td>Proprietary</td><td>Desktop, enterprise</td><td>90%+ Indian offices</td></tr>
+<tr><td>Linux</td><td>Open source</td><td>Servers, embedded</td><td>Govt servers, Aadhaar</td></tr>
+<tr><td>macOS</td><td>Proprietary</td><td>Creative professionals</td><td>Design studios</td></tr>
+<tr><td>Android</td><td>Open source</td><td>Mobile devices</td><td>95% Indian smartphones</td></tr>
+<tr><td>iOS</td><td>Proprietary</td><td>Apple devices</td><td>Premium segment</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Compiler vs Interpreter</h4>
+<p>A compiler reads the entire source code and translates it into machine code in one pass, creating an executable file. This makes compiled programs run faster, but compilation takes time. If there's an error, the compiler reports all errors at the end.</p>
+<p>An interpreter reads and executes source code line by line. It doesn't create an executable &#x2014; the source code itself is the program. This makes debugging easier (errors reported immediately) but execution is slower because each line must be translated every time it runs.</p>
+<p>Java uses a hybrid approach: the compiler creates bytecode (.class files), then the JVM interprets or JIT-compiles the bytecode. This gives "write once, run anywhere" portability.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compiler vs Interpreter differences (speed, memory, error detection) are exam favorites. Know the 8 OS functions: Memory, User interface, Hardware independence, Networking, File management, Access control, Task management, Common hardware functions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MUHN-FA</strong> &#x2014; Memory, User interface, Hardware independence, Networking, File management, Access control (OS functions). Think: "MUHN-FA &#x2014; My Uncle Has Nice Fresh Apples" to remember all 6 key OS functions.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Software = System (OS, drivers) + Application (Word, Excel) + Firmware (BIOS)</li>
+<li>OS functions: Memory mgmt, User interface, Hardware independence, Networking, File mgmt, Access control</li>
+<li>Compiler: entire program at once. Interpreter: line by line</li>
+<li>Open source: Linux, Apache, MySQL, Python</li>
+</ul></div>
+</div>
+
+
+<h2 id="block2">Block-02: Networking & MIS</h2>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Networking Technology</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Network:</strong> Data communication pathway between computers. Types by geography: LAN &#x2192; MAN &#x2192; WAN &#x2192; Internet. The OSI Model provides a 7-layer architecture for network communication. TCP/IP is the de facto protocol for Internet communication.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>OSI Model Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vv4y_uOneC0" title="OSI Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>TCP/IP Protocol</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2788883988" title="TCP/IP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Layer</th><th>OSI Name</th><th>Function</th><th>Protocol</th></tr></thead>
+<tbody>
+<tr><td>7</td><td>Application</td><td>User interface</td><td>HTTP, FTP, SMTP</td></tr>
+<tr><td>6</td><td>Presentation</td><td>Data formatting, encryption</td><td>SSL, JPEG</td></tr>
+<tr><td>5</td><td>Session</td><td>Session management</td><td>NetBIOS</td></tr>
+<tr><td>4</td><td>Transport</td><td>End-to-end delivery</td><td>TCP, UDP</td></tr>
+<tr><td>3</td><td>Network</td><td>Routing, addressing</td><td>IP</td></tr>
+<tr><td>2</td><td>Data Link</td><td>Frames, MAC addresses</td><td>Ethernet</td></tr>
+<tr><td>1</td><td>Physical</td><td>Physical transmission</td><td>Cables, radio</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Ethernet uses bus topology &#x2014; all messages broadcast on central cable. 70% of LANs worldwide use Ethernet. Jio 4G/5G covers 99% India with 400M+ subscribers. Cloud computing: AWS, Azure, GCP host millions of servers globally. National Knowledge Network connects 1,700+ Indian institutions via 10Gbps backbone.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Network Type</th><th>Range</th><th>Speed</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>LAN</td><td>Building (100m-1km)</td><td>10 Mbps - 10 Gbps</td><td>Office network, college Wi-Fi</td></tr>
+<tr><td>MAN</td><td>City (5-50 km)</td><td>100 Mbps - 1 Gbps</td><td>Cable TV network, city Wi-Fi</td></tr>
+<tr><td>WAN</td><td>Country/Global</td><td>Varies widely</td><td>Internet, bank network</td></tr>
+<tr><td>PAN</td><td>Personal (10m)</td><td>1-3 Mbps</td><td>Bluetooth headset, smartwatch</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Protocol</th><th>Full Form</th><th>Function</th></tr></thead>
+<tbody>
+<tr><td>HTTP/HTTPS</td><td>HyperText Transfer Protocol (Secure)</td><td>Web browsing</td></tr>
+<tr><td>FTP</td><td>File Transfer Protocol</td><td>File upload/download</td></tr>
+<tr><td>SMTP</td><td>Simple Mail Transfer Protocol</td><td>Sending email</td></tr>
+<tr><td>DNS</td><td>Domain Name System</td><td>URL to IP address mapping</td></tr>
+<tr><td>DHCP</td><td>Dynamic Host Configuration Protocol</td><td>Automatic IP assignment</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: OSI vs TCP/IP</h4>
+<p>The OSI model has 7 layers and is a theoretical framework for understanding network communication. TCP/IP has 4 layers and is the practical implementation used on the Internet. The mapping is: OSI Application/Presentation/Session = TCP/IP Application; OSI Transport = TCP/IP Transport; OSI Network = TCP/IP Internet; OSI Data Link/Physical = TCP/IP Network Access.</p>
+<p>TCP (Transmission Control Protocol) provides reliable, ordered delivery with error checking. UDP (User Datagram Protocol) is faster but unreliable &#x2014; used for streaming, gaming. IP (Internet Protocol) handles addressing and routing. Every device has a unique IP address (IPv4: 32-bit, IPv6: 128-bit).</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>OSI layers and their functions are a guaranteed exam question. Remember "All People Seem To Need Data Processing" for layer order. Compare TCP vs UDP in a table.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>APST NDP</strong> &#x2014; Application, Presentation, Session, Transport, Network, Data Link, Physical (OSI layers top to bottom). Alternative: "All People Seem To Need Data Processing."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Network types: LAN (building), MAN (city), WAN (country), Internet (global)</li>
+<li>OSI: 7 layers. TCP/IP: 4 layers (practical implementation)</li>
+<li>TCP = reliable, ordered. UDP = fast, unreliable</li>
+<li>Components: NIC, Hub, Switch, Router, Firewall</li>
+</ul></div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: MIS &amp; Control Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>MIS:</strong> Integrated system of man and machine for providing information to support operations, management, and decision-making functions. A system is an entity with interdependent parts, feedback mechanisms, and control processes. Management control involves planning, operations, control, and corrective actions.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MIS Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/J0k2lOj0k2l" title="MIS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Level</th><th>Management</th><th>Information</th><th>Decision Type</th></tr></thead>
+<tbody>
+<tr><td>Strategic</td><td>Top management</td><td>External, long-term</td><td>Unstructured</td></tr>
+<tr><td>Tactical</td><td>Middle management</td><td>Internal + External</td><td>Semi-structured</td></tr>
+<tr><td>Operational</td><td>Lower management</td><td>Internal, detailed</td><td>Structured</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A factory has sub-systems (production, shipping, finance, marketing, personnel). HUL MIS tracks 8M+ outlets. SBI CBS processes 80M+ transactions per day. Production has sub-sub-systems (production control, materials control, quality control). Reliance Industries uses integrated MIS across 5,000+ locations for real-time decision-making.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>MIS Feature</th><th>Description</th><th>Benefit</th></tr></thead>
+<tbody>
+<tr><td>Data Validation</td><td>Checks input accuracy automatically</td><td>Reduces errors (GIGO prevention)</td></tr>
+<tr><td>Multi-dimensional Analysis</td><td>Analyze by product, region, time</td><td>Comprehensive insights</td></tr>
+<tr><td>Quick Search</td><td>Fast retrieval from mass storage</td><td>Instant decision support</td></tr>
+<tr><td>Timely Reporting</td><td>Real-time or scheduled reports</td><td>Proactive management</td></tr>
+<tr><td>Internet Connectivity</td><td>Access external data sources</td><td>Market intelligence</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Decision Type</th><th>Level</th><th>Characteristics</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Programmed</td><td>Operational</td><td>Routine, rule-based, repetitive</td><td>Reorder inventory at threshold</td></tr>
+<tr><td>Non-programmed</td><td>Strategic</td><td>Complex, unique, judgment-based</td><td>Enter new market segment</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Anthony's Framework</h4>
+<p>Robert Anthony identified three levels of management planning and control: Strategic Planning (top management, long-term, 3-5 years), Management Control (middle management, medium-term, 1 year), and Operational Control (lower management, day-to-day). Each level requires different types of information &#x2014; strategic needs external, summarized data; operational needs internal, detailed data.</p>
+<p>A well-designed MIS provides the right information to the right person at the right time. It should be flexible, accurate, timely, and cost-effective. The system must support both routine reporting and exception-based alerting. Indian companies like Infosys and TCS use MIS dashboards that integrate data from 50+ countries for real-time management visibility.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the difference between MIS (routine), DSS (complex), and EIS (strategic). Explain Anthony's framework with examples for each level. Compare programmed vs non-programmed decisions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SOT-C</strong> &#x2014; Strategic, Operational, Tactical levels with Control. Think: "SOT &#x2014; soaking up information at all levels." Strategic = long-term planning. Operational = day-to-day. Tactical = medium-term coordination.</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>MIS = Man + Machine for decision support</li>
+<li>Anthony's framework: Strategic, Tactical, Operational levels</li>
+<li>System = interdependent parts + feedback + control</li>
+<li>Good MIS: accurate, timely, flexible, cost-effective</li>
+</ul></div>
+</div>
+
+
+<h2 id="block3">Block-03: Enterprise Systems</h2>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Information Systems Economics and Security</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>DIKW Hierarchy:</strong> Data &#x2192; Information &#x2192; Knowledge &#x2192; Wisdom. Information characteristics: Accurate, Complete, Economical, Flexible, Reliable, Relevant, Simple, Timely, Accessible, Secure. GIGO: Garbage In, Garbage Out.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>DIKW Hierarchy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2788883988" title="DIKW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Level</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Data</td><td>Raw facts</td><td>24500</td></tr>
+<tr><td>Information</td><td>Processed data</td><td>Total withdrawals today: Rs 24,500</td></tr>
+<tr><td>Knowledge</td><td>Understanding patterns</td><td>Withdrawals spike on weekends</td></tr>
+<tr><td>Wisdom</td><td>Decision-making</td><td>Stock more cash on Fridays</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bank manager uses daily withdrawal data (Rs. 24,500 total) to decide cash requirements &#x2014; data becomes information through processing. Tata: Rs 15,000 crore digital transformation investment. Infosys spends $2B+ annually on R&amp;D for IS innovation. SBI YONO processes 10M+ logins daily using data-driven decisions.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Success Factor</th><th>Description</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Clear Objectives</td><td>Well-defined requirements and goals</td><td>IRCTC clear booking system goals</td></tr>
+<tr><td>User Involvement</td><td>Stakeholder feedback at every stage</td><td>SBI YONO user testing panels</td></tr>
+<tr><td>Top Management</td><td>Leadership commitment and funding</td><td>Tata Group digital-first mandate</td></tr>
+<tr><td>Proper Training</td><td>User education and support</td><td>Aadhaar operator certification</td></tr>
+<tr><td>Right Technology</td><td>Scalable, secure platform choice</td><td>Jio cloud-native architecture</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Failure Factor</th><th>Description</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td>Inadequate Requirements</td><td>Unclear or changing specifications</td><td>Rework, delays, cost overrun</td></tr>
+<tr><td>Poor User Involvement</td><td>Users not consulted</td><td>System doesn&#x2019;t meet needs</td></tr>
+<tr><td>Insufficient Training</td><td>Users can&#x2019;t use the system</td><td>Low adoption, workarounds</td></tr>
+<tr><td>Lack of Management Support</td><td>No executive champion</td><td>Budget cuts, project cancellation</td></tr>
+<tr><td>Scope Creep</td><td>Uncontrolled feature additions</td><td>Never-ending project</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Information Security</h4>
+<p>Information security protects data from unauthorized access, viruses, cybercrime, and natural disasters. The CIA Triad (Confidentiality, Integrity, Availability) is the foundation of information security. India&#x2019;s CERT-In handles 1.5M+ cyber incidents annually. IT Act 2000 and DPDP Act 2023 govern data protection in India.</p>
+<p>Disaster recovery planning ensures business continuity. Organizations must have backup strategies, recovery time objectives, and business continuity plans to minimize downtime during emergencies. RBI mandates banks to have DR sites within 200km of primary data centers.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>DIKW hierarchy and 9 characteristics of information are frequent exam questions. Always include a comparison table. Mention Indian regulations (IT Act, DPDP Act) for higher marks.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ACER-FRT-SA</strong> &#x2014; Accurate, Complete, Economical, Reliable, Flexible, Relevant, Timely, Simple, Accessible (info characteristics). Think: "ACER laptops are FRT (fast) and SA (secure)."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>DIKW: Data &#x2192; Information &#x2192; Knowledge &#x2192; Wisdom</li>
+<li>9 info characteristics: ACER-FRT-SA</li>
+<li>GIGO: Garbage In, Garbage Out</li>
+<li>Security: backup, disaster recovery, business continuity</li>
+</ul></div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: TPS, DSS, and EIS</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Decision Making Process:</strong> Intelligence &#x2192; Design &#x2192; Choice &#x2192; Implementation. DSS Components: Model, Database, User Interface. EIS Features: Easy to use, trend analysis, drill-down, graphical presentation.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Decision Support Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2788883988" title="DSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>MIS</th><th>DSS</th><th>EIS</th></tr></thead>
+<tbody>
+<tr><td>Users</td><td>Middle management</td><td>Managers/analysts</td><td>Senior executives</td></tr>
+<tr><td>Purpose</td><td>Routine reports</td><td>Complex decisions</td><td>Strategic planning</td></tr>
+<tr><td>Data</td><td>Internal, historical</td><td>Internal + external</td><td>Broad range</td></tr>
+<tr><td>Output</td><td>Scheduled reports</td><td>Interactive analysis</td><td>Graphical dashboards</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Marketing IS tracks sales, customer preferences, competitor actions. Finance IS handles budgets, cash flow, investments. SBI: 80M+ txns/day through CBS. Flipkart&#x2019;s TPS handles 10M+ orders during Big Billion Day. Amazon uses DSS for dynamic pricing adjusting prices every 10 minutes.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Functional IS</th><th>Subsystem</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Marketing IS</td><td>Sales, advertising, pricing, product</td><td>HUL tracks 8M+ retail outlets</td></tr>
+<tr><td>Finance IS</td><td>Budgeting, cash flow, investment</td><td>SBI CBS: 80M+ txns/day</td></tr>
+<tr><td>HR IS</td><td>Recruitment, payroll, training</td><td>TCS manages 600K+ employees</td></tr>
+<tr><td>Manufacturing IS</td><td>Production, quality, inventory</td><td>Maruti SAP: 2,000+ dealers</td></tr>
+<tr><td>Accounting IS</td><td>General ledger, AR/AP, audit</td><td>Tally: 2M+ Indian businesses</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>TPS Characteristic</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>High Volume</td><td>Millions of transactions per day</td></tr>
+<tr><td>Speed</td><td>Real-time or near-real-time processing</td></tr>
+<tr><td>Accuracy</td><td>Zero tolerance for errors</td></tr>
+<tr><td>Reliability</td><td>24/7 availability, no downtime</td></tr>
+<tr><td>Atomicity</td><td>Transaction either fully completes or fully rolls back</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: IS Types Comparison</h4>
+<p>Transaction Processing Systems (TPS) handle routine day-to-day operations like payroll, order processing, and inventory management. They process high volumes of transactions with speed and accuracy. Management Information Systems (MIS) use TPS data to generate periodic reports for middle management.</p>
+<p>Decision Support Systems (DSS) help managers make complex, semi-structured decisions by providing analytical tools, models, and databases. Executive Information Systems (EIS) provide senior executives with easy-to-use interfaces for strategic planning, trend analysis, and drill-down capabilities. Indian companies like Reliance, Tata, and Infosys use integrated DSS+EIS platforms for real-time strategic decision-making across global operations.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Compare MIS, DSS, and EIS in a table format. Know the 4 stages of decision making: Intelligence, Design, Choice, Implementation. Include functional IS examples for 10-mark questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>IDC-I</strong> &#x2014; Intelligence, Design, Choice, Implementation (decision process). Think: "ID Card &#x2014; I need my ID Card to make decisions."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Decision process: Intelligence &#x2192; Design &#x2192; Choice &#x2192; Implementation</li>
+<li>TPS: routine operations. MIS: periodic reports. DSS: complex decisions. EIS: strategic planning</li>
+<li>DSS = Model + Database + User Interface</li>
+<li>Functional IS: Marketing, Finance, HR</li>
+</ul></div>
+</div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Integrated Applications</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>ERP:</strong> Business process management system integrating planning, manufacturing, sales, marketing, HR, finance. <strong>CRM:</strong> All aspects of company-customer interaction. <strong>SCM:</strong> Control of supply chain from supplier to consumer. <strong>BPR:</strong> Radical redesign of business processes.</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ERP Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2788883988" title="ERP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>System</th><th>Focus</th><th>Benefits</th></tr></thead>
+<tbody>
+<tr><td>ERP</td><td>All business functions</td><td>Integration, efficiency, data consistency</td></tr>
+<tr><td>CRM</td><td>Customer relationships</td><td>Customer retention, sales growth</td></tr>
+<tr><td>SCM</td><td>Supply chain</td><td>Cost reduction, faster delivery</td></tr>
+<tr><td>BPR</td><td>Process redesign</td><td>Radical improvement, efficiency</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Online order placement &#x2192; Manufacturing allocation &#x2192; Raw material ordering &#x2192; Financial updates &#x2014; all automated through integrated ERP. Maruti SAP: 2,000+ dealers, 500+ suppliers, 15% cost reduction. Reliance Jio uses SAP S/4HANA for 400M+ subscribers. Godrej uses Oracle Cloud for 1.1B+ consumers across 80+ countries.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Generation</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Gen 1</td><td>Website on Internet (static presence)</td><td>Company info page</td></tr>
+<tr><td>Gen 2</td><td>Online e-commerce shop</td><td>Amazon, Flipkart storefront</td></tr>
+<tr><td>Gen 3</td><td>Using CRM &amp; SCM to connect suppliers/customers</td><td>Supply chain portals</td></tr>
+<tr><td>Gen 4</td><td>Web-based ERP, BPR, PMS (full integration)</td><td>Complete digital enterprise</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Top ERP Systems</th><th>Best For</th><th>Indian Users</th></tr></thead>
+<tbody>
+<tr><td>SAP S/4HANA</td><td>Large enterprises</td><td>Reliance, Tata, Maruti</td></tr>
+<tr><td>Oracle Cloud ERP</td><td>Finance, supply chain</td><td>Godrej, Aditya Birla</td></tr>
+<tr><td>Microsoft Dynamics 365</td><td>Mid-size businesses</td><td>HCL, Wipro</td></tr>
+<tr><td>Tally ERP</td><td>SMEs, accounting</td><td>2M+ Indian businesses</td></tr>
+<tr><td>ERPNext (Open Source)</td><td>Startups, cost-sensitive</td><td>Indian startups</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: ERP vs CRM vs SCM</h4>
+<p>ERP integrates all business functions (finance, HR, manufacturing, sales) into a single system with shared database. CRM focuses on managing customer interactions across sales, marketing, and service. SCM manages the flow of goods from raw materials to final delivery.</p>
+<p>BPR is not about incremental improvement &#x2014; it's about radical, fundamental redesign of business processes to achieve dramatic improvements in cost, quality, speed, and service. It often involves questioning why a process exists and completely rethinking it.</p>
+
+<h4>ERP Implementation Issues</h4>
+<div class="db"><table>
+<thead><tr><th>Phase</th><th>Activity</th><th>Key Risk</th></tr></thead>
+<tbody>
+<tr><td>Planning</td><td>As-Is and To-Be process mapping</td><td>Unclear requirements</td></tr>
+<tr><td>Selection</td><td>RFQ/RFP evaluation</td><td>Wrong vendor choice</td></tr>
+<tr><td>Customization</td><td>Modifying to fit processes</td><td>Over-customization</td></tr>
+<tr><td>Testing</td><td>UAT, integration testing</td><td>Inadequate testing</td></tr>
+<tr><td>Go-Live</td><td>Data migration, training</td><td>User resistance</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; ERP Integration Flow</h5>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Manufacturing</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Sales &amp; Marketing</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Finance &amp; Accounting</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Human Resources</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Supply Chain</div>
+<div class="vd-node" style="background:rgba(162,155,254,0.2);border:1px solid rgba(162,155,254,0.4);width:30%;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.85rem">Customer Relations</div>
+</div>
+<div style="text-align:center;margin-top:0.5rem;font-size:0.85rem;color:rgba(255,255,255,0.5)">&#x2191; All modules share a single integrated database &#x2191;</div>
+</div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know ERP, CRM, SCM, BPR definitions and differences. E-business generations are a popular question. Always mention implementation challenges in case studies.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ECS-B</strong> &#x2014; ERP, CRM, SCM, BPR (integrated applications). Think: "ECS-B &#x2014; Every Company Should use BPR."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>ERP: integrates all business functions</li>
+<li>CRM: manages customer relationships</li>
+<li>SCM: manages supply chain flow</li>
+<li>BPR: radical process redesign</li>
+</ul></div>
+</div>
+
+
+<h2 id="block4">Block-04: Systems Development</h2>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Building Information Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>IS = People + Procedures + Hardware + Software + Data.</strong> Four organizational changes: Automation, Rationalization, Re-engineering, Paradigm Shift. Outsourcing: Using external organizations for IS services.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Change Type</th><th>Description</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>Automation</td><td>Computerize existing processes</td><td>Low</td></tr>
+<tr><td>Rationalization</td><td>Streamline processes</td><td>Low-Medium</td></tr>
+<tr><td>Re-engineering</td><td>Redesign processes</td><td>Medium-High</td></tr>
+<tr><td>Paradigm Shift</td><td>Completely new model</td><td>High</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Companies outsource payroll processing to specialized firms while keeping strategic decision-making in-house. Flipkart logistics IS: 100M+ products, 500K+ deliveries/day. Wipro outsources IT for 1,000+ global clients. India&#x2019;s IT-BPM sector exports $194B+ annually, leading global outsourcing.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>CBIS Type</th><th>Function</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Office Automation</td><td>Document management, email, scheduling</td><td>Microsoft 365, Google Workspace</td></tr>
+<tr><td>Communication Systems</td><td>Data, voice, video transfer</td><td>Zoom, Teams, Slack</td></tr>
+<tr><td>Transaction Processing</td><td>Routine record keeping</td><td>SBI CBS, IRCTC booking</td></tr>
+<tr><td>Management Information</td><td>Periodic reports for managers</td><td>HUL sales dashboards</td></tr>
+<tr><td>Decision Support</td><td>Interactive analysis tools</td><td>Amazon pricing engine</td></tr>
+<tr><td>Executive Information</td><td>Strategic dashboards</td><td>Reliance Board dashboards</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Outsourcing Aspect</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+<tbody>
+<tr><td>Cost</td><td>30-50% savings on operations</td><td>Hidden costs, vendor lock-in</td></tr>
+<tr><td>Expertise</td><td>Access to specialized skills</td><td>Knowledge drain from company</td></tr>
+<tr><td>Focus</td><td>Concentrate on core business</td><td>Loss of control over quality</td></tr>
+<tr><td>Scalability</td><td>Quick scaling up/down</td><td>Dependency on vendor</td></tr>
+<tr><td>Security</td><td>Vendor compliance standards</td><td>Data breach risk at vendor</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Organizational Change Types</h4>
+<p>Automation is the simplest change &#x2014; computerizing existing manual processes without changing them. Rationalization streamlines automated processes to make them more efficient. Re-engineering fundamentally redesigns processes to achieve dramatic improvements. Paradigm shift involves completely new business models enabled by technology.</p>
+<p>Outsourcing is using external organizations for IS development and operations. India dominates global IT outsourcing with companies like TCS, Infosys, Wipro, and HCL serving 1,000+ global clients. The Indian IT industry employs 5M+ professionals and contributes 7.5% to GDP. Key outsourcing destinations include Bangalore, Hyderabad, Pune, and Chennai.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the 4 types of organizational change and when to use outsourcing. Compare advantages and disadvantages. Mention India&#x2019;s IT outsourcing leadership for higher marks.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>AR-P</strong> &#x2014; Automation, Rationalization, Paradigm shift (organizational changes). Think: "AR-P &#x2014; A Really Positive change."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>IS = People + Procedures + Hardware + Software + Data</li>
+<li>4 changes: Automation, Rationalization, Re-engineering, Paradigm Shift</li>
+<li>Outsourcing: cost reduction vs loss of control</li>
+<li>CBIS: Office, Communication, TPS, EIS, DSS, Execution</li>
+</ul></div>
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: System Analysis and Design</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>SDLC:</strong> Systems Development Life Cycle with 7 phases. Waterfall model: Sequential phases with deliverables. Repository: Shared data store for all SDLC artifacts. Customization: Modifying existing software to fit requirements.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Phase</th><th>Key Activities</th><th>Deliverables</th></tr></thead>
+<tbody>
+<tr><td>1. Project Identification</td><td>Problem recognition, feasibility</td><td>Project charter</td></tr>
+<tr><td>2. Project Initiation</td><td>Planning, scheduling, budget</td><td>Project plan</td></tr>
+<tr><td>3. Analysis</td><td>Requirements gathering</td><td>Requirements document</td></tr>
+<tr><td>4. Logical Design</td><td>System models, data flow</td><td>Logical design specs</td></tr>
+<tr><td>5. Physical Design</td><td>Technical specifications</td><td>Physical design specs</td></tr>
+<tr><td>6. Implementation</td><td>Coding, testing, training</td><td>Working system</td></tr>
+<tr><td>7. Operation &amp; Maintenance</td><td>Support, enhancements</td><td>Updated system</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Building software is like constructing a building &#x2014; requirements &#x2192; design &#x2192; construction &#x2192; testing &#x2192; maintenance. Each phase has specific deliverables that feed into the next. Infosys used SDLC for IRCTC ticketing system handling 1M+ bookings daily. TCS follows Agile SDLC for SBI&#x2019;s YONO app serving 50M+ users.</p></div>
+
+<h4>Detailed Explanation: SDLC Deep Dive</h4>
+<p>The Waterfall model is sequential &#x2014; each phase must complete before the next starts. This provides control and documentation but is lengthy and inflexible. The Fast SDLC (repository-based) allows phases to run in parallel with a shared data store, enabling backtracking and reusable knowledge.</p>
+<p>Key success factors include proper requirements gathering, user involvement at all stages, realistic scheduling, and thorough testing. The biggest failure causes are inadequate requirements, poor communication, and scope creep.</p>
+
+<div class="db"><table>
+<thead><tr><th>SDLC Model</th><th>Approach</th><th>Best For</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td>Waterfall</td><td>Sequential phases</td><td>Well-defined projects</td><td>Control, documentation</td><td>Inflexible, slow</td></tr>
+<tr><td>Agile</td><td>Iterative sprints (2-4 weeks)</td><td>Evolving requirements</td><td>Flexible, fast delivery</td><td>Less documentation</td></tr>
+<tr><td>Spiral</td><td>Risk-driven, iterative</td><td>Large, risky projects</td><td>Risk management</td><td>Expensive, complex</td></tr>
+<tr><td>V-Model</td><td>Testing paired with each phase</td><td>Safety-critical systems</td><td>Early testing</td><td>Rigid like waterfall</td></tr>
+<tr><td>Prototyping</td><td>Build prototype first</td><td>Unclear requirements</td><td>User feedback early</td><td>Scope creep risk</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Waterfall vs Agile SDLC</h5>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;padding:0.5rem">
+<div style="flex:1;min-width:200px">
+<p style="color:#6c5ce7;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem">Waterfall (Sequential)</p>
+<div style="display:flex;flex-direction:column;gap:0.3rem">
+<div class="vd-node" style="background:rgba(108,92,231,0.15);border:1px solid rgba(108,92,231,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem">Requirements &#x2192; Design &#x2192; Build &#x2192; Test &#x2192; Deploy</div>
+</div>
+</div>
+<div style="flex:1;min-width:200px">
+<p style="color:#00b894;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem">Agile (Iterative)</p>
+<div style="display:flex;flex-direction:column;gap:0.3rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem">Sprint 1: Design &#x2192; Build &#x2192; Test</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem">Sprint 2: Enhance &#x2192; Build &#x2192; Test</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.15);border:1px solid rgba(0,184,148,0.3);padding:0.4rem;border-radius:6px;font-size:0.8rem">Sprint 3: Add features &#x2192; Test &#x2192; Ship</div>
+</div>
+</div>
+</div></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know all 7 SDLC phases and their deliverables. Waterfall vs Fast SDLC comparison is a guaranteed question. Also know Agile, Spiral, and V-Model differences for 10-mark questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PIA-LP-IM</strong> &#x2014; Planning, Initiation, Analysis, Logical Design, Physical Design, Implementation, Maintenance. Think: "PIA &#x2014; PIA is a LP (long process) but IM (I'm) committed."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>SDLC: 7 phases from identification to maintenance</li>
+<li>Waterfall: sequential, controlled. Fast SDLC: parallel, flexible</li>
+<li>Repository: shared data store for all artifacts</li>
+<li>Success: requirements, user involvement, testing</li>
+</ul></div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Programming and Languages</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Programming Languages:</strong> Low-level (machine) &#x2192; Assembly &#x2192; High-level (C, Java, Python). Keywords/Reserved words have special meaning. Variables change during execution; Constants don't. Control structures: Sequence, Selection, Iteration.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Level</th><th>Example</th><th>Characteristics</th></tr></thead>
+<tbody>
+<tr><td>Machine</td><td>Binary (0s, 1s)</td><td>Hardware-specific, fastest</td></tr>
+<tr><td>Assembly</td><td>Mnemonic codes</td><td>Hardware-specific, symbolic</td></tr>
+<tr><td>High-Level</td><td>C, Java, Python</td><td>Human-readable, portable</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Factorial program uses loop (repeat) and condition (if-else) &#x2014; fundamental control structures. Python is interpreted, easy syntax, versatile for web, data science, AI. Infosys uses Java for banking systems. Flipkart&#x2019;s backend uses Python and Java. WhatsApp uses Erlang for 2B+ users.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Language</th><th>Type</th><th>Primary Use</th><th>Indian Context</th></tr></thead>
+<tbody>
+<tr><td>Python</td><td>Interpreted, OOP</td><td>AI, data science, web</td><td>Most popular in Indian colleges</td></tr>
+<tr><td>Java</td><td>Compiled to bytecode</td><td>Enterprise, Android</td><td>Banking systems, TCS/Infosys</td></tr>
+<tr><td>C/C++</td><td>Compiled</td><td>Systems, embedded</td><td>ISRO, DRDO projects</td></tr>
+<tr><td>JavaScript</td><td>Interpreted</td><td>Web frontend/backend</td><td>Startups, Zoho, Freshworks</td></tr>
+<tr><td>SQL</td><td>Declarative</td><td>Database queries</td><td>All enterprise applications</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: OOP Pillars</h4>
+<p>Object-Oriented Programming (OOP) has four pillars: Encapsulation (bundling data and methods), Polymorphism (same interface, different implementations), Inheritance (child class inherits parent properties), and Abstraction (hiding complexity, showing only essentials).</p>
+<p>Java is platform-independent through bytecode compilation. The JVM interprets or JIT-compiles bytecode, enabling "write once, run anywhere." Python is interpreted line by line, making it easier to debug but slower in execution.</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know difference between compiler (entire program) and interpreter (line by line). OOP pillars are frequently asked.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MAH</strong> &#x2014; Machine, Assembly, High-level (language levels). Think: "MAH &#x2014; My Assembly is High-level."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>Language levels: Machine &#x2192; Assembly &#x2192; High-Level</li>
+<li>OOP: Encapsulation, Polymorphism, Inheritance, Abstraction</li>
+<li>Java: platform-independent via bytecode. Python: interpreted</li>
+<li>Control structures: Sequence, Selection, Iteration</li>
+</ul></div>
+</div>
+
+
+<h2 id="block5">Block-05: Data & Intelligence</h2>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Database Resource Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Database:</strong> Organized collection of data for easy access, management, and updating. <strong>DBMS:</strong> Software for creating, storing, modifying, and manipulating databases. Data hierarchy: Bit &#x2192; Byte &#x2192; Field &#x2192; Record &#x2192; File &#x2192; Database.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Component</th><th>Function</th></tr></thead>
+<tbody>
+<tr><td>DML Pre-compiler</td><td>Converts DML statements to procedure calls</td></tr>
+<tr><td>DDL Compiler</td><td>Converts data definitions to tables</td></tr>
+<tr><td>File Manager</td><td>Manages file structure and disk space</td></tr>
+<tr><td>Disk Manager</td><td>Physical I/O operations</td></tr>
+<tr><td>Data Manager</td><td>Interface between database and queries</td></tr>
+<tr><td>Query Processor</td><td>Converts user queries for execution</td></tr>
+<tr><td>Data Dictionary</td><td>Metadata about the database</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Restaurant menu analogy &#x2014; customer orders from menu (DBMS interface), doesn't need to know kitchen arrangement (physical storage). The DBA is like the restaurant manager. SBI uses Oracle DB for 80M+ daily transactions. IRCTC uses MongoDB for 1M+ bookings daily.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>File Organization</th><th>Method</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Sequential</td><td>One record after another</td><td>Batch processing (payroll)</td></tr>
+<tr><td>Indexed Sequential</td><td>In sequence with direct access via index</td><td>Banking transactions</td></tr>
+<tr><td>Direct/Random</td><td>Records located using key field formula</td><td>Real-time lookups</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Data Model</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Hierarchical</td><td>Tree structure, parent-child</td><td>IBM IMS, file systems</td></tr>
+<tr><td>Network</td><td>Graph structure, many-to-many</td><td>Telecom billing</td></tr>
+<tr><td>Relational</td><td>Tables with rows and columns</td><td>MySQL, Oracle, SQL Server</td></tr>
+<tr><td>Object-Oriented</td><td>Objects with attributes and methods</td><td>CAD/CAM systems</td></tr>
+<tr><td>NoSQL</td><td>Document, key-value, graph</td><td>MongoDB, Cassandra</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Normalization</h4>
+<p>Normalization organizes data to reduce redundancy and improve integrity. 1NF eliminates repeating groups. 2NF removes partial dependencies. 3NF removes transitive dependencies. Each normal form builds on the previous one, progressively reducing data duplication and update anomalies.</p>
+<p>Primary keys uniquely identify records. Foreign keys create relationships between tables. Candidate keys are potential primary keys. The DBA manages database design, implementation, and maintenance.</p>
+
+<div class="db"><table>
+<thead><tr><th>Normal Form</th><th>Rule</th><th>Example Fix</th></tr></thead>
+<tbody>
+<tr><td>1NF</td><td>No repeating groups, atomic values</td><td>Split &#x201C;Phone1, Phone2&#x201D; into separate rows</td></tr>
+<tr><td>2NF</td><td>1NF + no partial dependency</td><td>Remove columns depending on part of composite key</td></tr>
+<tr><td>3NF</td><td>2NF + no transitive dependency</td><td>Move &#x201C;Dept Name&#x201D; (depends on Dept ID) to separate table</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Database Key Relationships</h5>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;padding:0.5rem">
+<div style="flex:1;min-width:200px;text-align:center">
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);padding:0.6rem;border-radius:8px"><strong>Students Table</strong><br>PK: StudentID<br>Name, DOB, Address</div>
+</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,0.3);display:flex;align-items:center">&#x2194;</div>
+<div style="flex:1;min-width:200px;text-align:center">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px"><strong>Enrollment Table</strong><br>FK: StudentID, CourseID<br>Grade, Semester</div>
+</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,0.3);display:flex;align-items:center">&#x2194;</div>
+<div style="flex:1;min-width:200px;text-align:center">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.6rem;border-radius:8px"><strong>Courses Table</strong><br>PK: CourseID<br>Title, Credits, DeptID</div>
+</div>
+</div></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know DBMS components and their functions. Data hierarchy is a common question. Normalization forms (1NF, 2NF, 3NF) are frequently asked. Always use examples to explain each normal form.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PFK</strong> &#x2014; Primary + Foreign + Candidate keys (database keys). Think: "PFK &#x2014; Primary keys Foreign keys Candidate keys."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Data hierarchy: Bit &#x2192; Byte &#x2192; Field &#x2192; Record &#x2192; File &#x2192; Database</li>
+<li>DBMS: DML, DDL, File Manager, Disk Manager, Data Manager, Query Processor, Data Dictionary</li>
+<li>Normalization: 1NF, 2NF, 3NF reduce redundancy</li>
+<li>Keys: Primary (unique), Foreign (relationship), Candidate (potential)</li>
+</ul></div>
+</div>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Data Warehousing and Data Mining</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Data Warehouse:</strong> Subject-oriented, integrated, time-variant, non-volatile collection of data for decision support. <strong>OLAP:</strong> Enables analysts to view data from multiple dimensions. <strong>Data Mining:</strong> Process of discovering patterns in large datasets.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>Operational DB</th><th>Data Warehouse</th></tr></thead>
+<tbody>
+<tr><td>Orientation</td><td>Application</td><td>Subject</td></tr>
+<tr><td>Data</td><td>Detailed</td><td>Summarized</td></tr>
+<tr><td>Updates</td><td>Yes</td><td>No</td></tr>
+<tr><td>Users</td><td>Clerical</td><td>Managerial</td></tr>
+<tr><td>Processing</td><td>Repetitive</td><td>Heuristic</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Retail warehouse stores years of sales data. OLAP analyzes by product, region, time. Data mining finds "customers who buy X also buy Y" patterns. BigBasket uses data mining for personalized recommendations. Flipkart&#x2019;s warehouse processes 10M+ orders using OLAP analytics. Indian banks use data mining for fraud detection on 80M+ daily transactions.</p></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Star vs Snowflake Schema</h5>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;padding:0.5rem">
+<div style="flex:1;min-width:200px;text-align:center">
+<p style="color:#6c5ce7;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem">Star Schema</p>
+<div style="display:flex;flex-direction:column;gap:0.3rem">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.4rem;border-radius:6px;font-size:0.8rem">Time | Product | Store | Customer</div>
+<div style="font-size:1rem;color:rgba(255,215,0,0.6)">&#x2191; &#x2191; &#x2191; &#x2191;</div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);padding:0.4rem;border-radius:6px;font-size:0.8rem"><strong>Sales Fact Table</strong></div>
+</div>
+<p style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem">Denormalized, faster queries</p>
+</div>
+<div style="flex:1;min-width:200px;text-align:center">
+<p style="color:#00b894;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem">Snowflake Schema</p>
+<div style="display:flex;flex-direction:column;gap:0.3rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.3rem;border-radius:6px;font-size:0.75rem">Month &#x2192; Quarter &#x2192; Year</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.3rem;border-radius:6px;font-size:0.75rem">Category &#x2192; Department</div>
+<div style="font-size:1rem;color:rgba(0,184,148,0.6)">&#x2191; &#x2191;</div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);padding:0.4rem;border-radius:6px;font-size:0.8rem"><strong>Sales Fact Table</strong></div>
+</div>
+<p style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.3rem">Normalized, less storage</p>
+</div>
+</div></div>
+
+<h4>Detailed Explanation: Star vs Snowflake Schema</h4>
+<p>Star Schema has a central fact table connected to dimension tables in a denormalized structure. It's simpler and faster for queries but uses more storage. Snowflake Schema normalizes dimension tables into sub-dimensions, reducing redundancy but requiring more joins for queries.</p>
+<p>OLAP operations include Slice (select single dimension), Dice (select sub-cube), Drill-down (more detail), Roll-up (less detail/aggregation), and Pivot (rotate dimensions). These enable multidimensional analysis of business data.</p>
+
+<div class="db"><table>
+<thead><tr><th>OLAP Operation</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Slice</td><td>Select single dimension from cube</td><td>Sales for Q1 only</td></tr>
+<tr><td>Dice</td><td>Select sub-cube by filtering multiple dimensions</td><td>Q1 + Electronics + Mumbai</td></tr>
+<tr><td>Drill-down</td><td>Move from summary to detail</td><td>Year &#x2192; Quarter &#x2192; Month</td></tr>
+<tr><td>Roll-up</td><td>Move from detail to summary</td><td>City &#x2192; State &#x2192; Country</td></tr>
+<tr><td>Pivot</td><td>Rotate dimensions (change perspective)</td><td>Rows: Products, Columns: Regions</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Data Mining Technique</th><th>Goal</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Classification</td><td>Predict category</td><td>Loan default: Yes/No</td></tr>
+<tr><td>Clustering</td><td>Group similar items</td><td>Customer segments</td></tr>
+<tr><td>Association</td><td>Find co-occurrence rules</td><td>Bread + Butter (market basket)</td></tr>
+<tr><td>Regression</td><td>Predict numerical value</td><td>House price prediction</td></tr>
+<tr><td>Anomaly Detection</td><td>Find outliers</td><td>Fraud detection</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Star vs Snowflake schema comparison. OLAP operations (Slice, Dice, Drill-down, Roll-up, Pivot) are frequently asked. Data mining techniques with examples score extra marks.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SITS</strong> &#x2014; Subject-oriented, Integrated, Time-variant, Stable (data warehouse characteristics). Think: "SITS &#x2014; The data warehouse SITS and stores historical data."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Data Warehouse: Subject-oriented, Integrated, Time-variant, Non-volatile</li>
+<li>Star Schema: denormalized, fast queries. Snowflake: normalized, less storage</li>
+<li>OLAP: Slice, Dice, Drill-down, Roll-up, Pivot</li>
+<li>Data Mining: Classification, Clustering, Association, Regression</li>
+</ul></div>
+</div>
+
+<!-- UNIT 14 -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: AI in Decision Making</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>AI:</strong> Building techniques enabling computers to perform above human intelligence. Expert Systems emulate human expert decision-making. Neural Networks mimic brain's interconnected neurons. Genetic Algorithms use evolution-inspired optimization. Fuzzy Logic handles imprecise/incomplete information.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Technique</th><th>Basis</th><th>Application</th></tr></thead>
+<tbody>
+<tr><td>Expert Systems</td><td>Knowledge base + Inference engine</td><td>Medical diagnosis, financial planning</td></tr>
+<tr><td>Neural Networks</td><td>Interconnected neurons</td><td>Pattern recognition, image processing</td></tr>
+<tr><td>Genetic Algorithms</td><td>Natural selection</td><td>Optimization problems</td></tr>
+<tr><td>Fuzzy Logic</td><td>Approximate reasoning</td><td>Control systems, decision making</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Fraud detection in banking &#x2014; AI identifies suspicious transactions by learning patterns from historical data. Netflix uses ML for recommendations saving $1B/year. Google uses AI for search ranking. Wipro Holmes automates 300+ business processes. Infosys Nia processes 10,000+ customer queries daily. Aadhaar uses AI for 1.3B+ biometric deduplication.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Year</th><th>Milestone</th><th>Significance</th></tr></thead>
+<tbody>
+<tr><td>1950</td><td>Turing Test proposed</td><td>Can machines think?</td></tr>
+<tr><td>1956</td><td>Dartmouth Conference</td><td>AI as a field founded</td></tr>
+<tr><td>1965</td><td>DENDRAL expert system</td><td>First expert system (chemistry)</td></tr>
+<tr><td>1974</td><td>MYCIN medical diagnosis</td><td>Expert system for infections</td></tr>
+<tr><td>1997</td><td>IBM Deep Blue beats Kasparov</td><td>Chess world champion defeated</td></tr>
+<tr><td>2011</td><td>Watson wins Jeopardy</td><td>Natural language understanding</td></tr>
+<tr><td>2016</td><td>AlphaGo beats Lee Sedol</td><td>Deep learning breakthrough</td></tr>
+<tr><td>2022</td><td>ChatGPT launched</td><td>Generative AI mainstream</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Expert System Architecture</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:40%;text-align:center;padding:0.5rem;border-radius:8px">User Interface</div>
+<div style="font-size:1.2rem;color:rgba(108,92,231,0.6)">&#x2193;</div>
+<div style="display:flex;gap:1rem;justify-content:center;width:100%">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:35%;text-align:center;padding:0.5rem;border-radius:8px"><strong>Inference Engine</strong><br>Forward/Backward Chaining</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:35%;text-align:center;padding:0.5rem;border-radius:8px"><strong>Knowledge Base</strong><br>Facts + Rules (IF-THEN)</div>
+</div>
+<div style="font-size:1.2rem;color:rgba(108,92,231,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:40%;text-align:center;padding:0.5rem;border-radius:8px">Explanation Facility</div>
+</div></div>
+
+<div class="db"><table>
+<thead><tr><th>AI Technique</th><th>How It Works</th><th>Indian Application</th></tr></thead>
+<tbody>
+<tr><td>Expert Systems</td><td>IF-THEN rules in knowledge base</td><td>Wipro Holmes, TCS Ignio</td></tr>
+<tr><td>Neural Networks</td><td>Layers of interconnected neurons</td><td>Aadhaar deduplication</td></tr>
+<tr><td>Genetic Algorithms</td><td>Evolution: selection, crossover, mutation</td><td>Flipkart delivery optimization</td></tr>
+<tr><td>Fuzzy Logic</td><td>Handles partial truth (0 to 1)</td><td>Automatic washing machines</td></tr>
+<tr><td>NLP</td><td>Understanding human language</td><td>Google Bhashini (Indian languages)</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: AI Techniques</h4>
+<p>Expert Systems have three components: Knowledge Base (domain facts and rules), Inference Engine (reasoning mechanism), and User Interface. They emulate human expert decision-making in specific domains like medical diagnosis or financial planning.</p>
+<p>Neural Networks have three layers: Input, Hidden, and Output. They learn from training data through pattern recognition. Deep Learning uses multiple hidden layers for complex tasks like image and speech recognition. Machine Learning has three types: Supervised (labeled data), Unsupervised (unlabeled data), and Reinforcement (reward-based learning).</p>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know expert system components and differences between AI techniques. Neural network layers are frequently asked. Always include Indian examples for higher marks.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>KNIFE</strong> &#x2014; Knowledge + Neural + Inference + Facts + Explanation (AI components). Think: "KNIFE &#x2014; AI cuts through problems like a KNIFE."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>AI: Expert Systems, Neural Networks, Genetic Algorithms, Fuzzy Logic</li>
+<li>Expert System = Knowledge Base + Inference Engine + User Interface</li>
+<li>Neural Networks: Input &#x2192; Hidden &#x2192; Output layers</li>
+<li>Applications: Fraud detection, recommendations, image recognition</li>
+</ul></div>
+</div>
+
+<!-- UNIT 15 -->
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Emerging Trends in IT</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>ICT Convergence:</strong> Data, voice, video merging onto single networks. Moore's Law: Transistors per chip doubles yearly. Blockchain: Distributed ledger technology. Big Data: Datasets too large for traditional processing. Machine Learning: AI subset where systems learn from data.</p></div>
+</div>
+
+<div class="db"><table>
+<thead><tr><th>Technology</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>5G</td><td>High-speed wireless, low latency</td><td>IoT, autonomous vehicles</td></tr>
+<tr><td>IoT</td><td>Connected devices</td><td>Smart home, wearables</td></tr>
+<tr><td>Blockchain</td><td>Secure, decentralized transactions</td><td>Cryptocurrency, supply chain</td></tr>
+<tr><td>Big Data</td><td>6Vs: Volume, Velocity, Variety, Veracity, Value, Variability</td><td>Analytics, ML training</td></tr>
+<tr><td>Machine Learning</td><td>Systems learn from data</td><td>Recommendations, predictions</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Smart home devices (IoT) controlled via smartphone, connected through Wi-Fi, processing data in cloud &#x2014; all converging technologies. UPI processes 10B+ transactions/month in India. Aadhaar uses blockchain for 1.3B+ identity verifications. Jio 5G covers 99% India with 400M+ subscribers. Digital India processes 40B+ transactions annually via UPI.</p></div>
+
+<div class="db"><table>
+<thead><tr><th>Cloud Model</th><th>What You Get</th><th>Example</th><th>Analogy</th></tr></thead>
+<tbody>
+<tr><td>IaaS</td><td>Virtual machines, storage, networks</td><td>AWS EC2, Azure VMs</td><td>Renting a house (build your own furniture)</td></tr>
+<tr><td>PaaS</td><td>Platform for developing apps</td><td>Google App Engine, Heroku</td><td>Renting a furnished apartment</td></tr>
+<tr><td>SaaS</td><td>Ready-to-use software</td><td>Gmail, Salesforce, Zoho</td><td>Hotel room (everything provided)</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>Technology</th><th>Timeline</th><th>Key Milestone</th></tr></thead>
+<tbody>
+<tr><td>Telephone</td><td>1870s</td><td>Bell&#x2019;s first call</td></tr>
+<tr><td>Radio</td><td>1890s</td><td>Marconi wireless</td></tr>
+<tr><td>Television</td><td>1930s</td><td>Broadcast begins</td></tr>
+<tr><td>PC</td><td>1980s</td><td>IBM PC, Apple Macintosh</td></tr>
+<tr><td>Internet</td><td>1990s</td><td>WWW, email, browsers</td></tr>
+<tr><td>Smartphone</td><td>2007+</td><td>iPhone, Android</td></tr>
+<tr><td>5G + IoT</td><td>2020+</td><td>Connected everything</td></tr>
+</tbody></table></div>
+
+<div class="db"><table>
+<thead><tr><th>ML Type</th><th>How It Learns</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Supervised</td><td>Labeled data (input-output pairs)</td><td>Email spam detection, image classification</td></tr>
+<tr><td>Unsupervised</td><td>Unlabeled data, finds patterns</td><td>Customer segmentation, anomaly detection</td></tr>
+<tr><td>Reinforcement</td><td>Rewards and penalties</td><td>Game AI, robotics, self-driving cars</td></tr>
+</tbody></table></div>
+
+<h4>Detailed Explanation: Big Data 6Vs</h4>
+<p>Volume refers to the massive scale of data generated. Velocity is the speed at which data is created and processed. Variety includes structured, semi-structured, and unstructured data. Veracity refers to data quality and trustworthiness. Value is the business benefit extracted from data. Variability refers to inconsistency in data flow.</p>
+<p>Machine Learning has three types: Supervised (labeled data, classification/regression), Unsupervised (unlabeled data, clustering), and Reinforcement (learning from rewards/penalties). Cloud computing provides IaaS, PaaS, and SaaS models for on-demand resources. India&#x2019;s Digital Stack (Aadhaar + UPI + DigiLocker + CoWIN) demonstrates how emerging technologies transform governance at scale.</p>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Technology Convergence</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:25%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Voice</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:25%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Data</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:25%;text-align:center;padding:0.4rem;border-radius:8px;font-size:0.85rem">Video</div>
+</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,0.4)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:70%;text-align:center;padding:0.5rem;border-radius:8px"><strong>Single IP Network (5G)</strong></div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,0.4)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);width:70%;text-align:center;padding:0.5rem;border-radius:8px">Smart Devices, Cloud, AI Applications</div>
+</div></div>
+
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know Moore's Law, Big Data 6Vs, and types of Machine Learning. Cloud models (IaaS, PaaS, SaaS) comparison. Include Indian digital initiatives (UPI, Aadhaar, Digital India) for higher marks.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>BID-5</strong> &#x2014; Big Data, IoT, Digital convergence, 5G (emerging trends). Think: "BID-5 &#x2014; BID farewell to old technology with 5G."</p></div>
+
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
+<li>ICT convergence: voice + data + video on single network</li>
+<li>Moore's Law: transistors double yearly</li>
+<li>Big Data 6Vs: Volume, Velocity, Variety, Veracity, Value, Variability</li>
+<li>ML: Supervised, Unsupervised, Reinforcement</li>
+</ul></div>
+</div>
+
+<!-- ==================== MASTER MNEMONICS ==================== -->
+<div class="unit" id="mnemonics">
+<h3>Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>TMD-WE</strong></td><td>TPS, MIS, DSS, Workflow, ERP</td><td>Types of IS (Unit 1)</td></tr>
+<tr><td><strong>CASH</strong></td><td>CPU, ALU, Storage, Hardware</td><td>Computer components (Unit 2)</td></tr>
+<tr><td><strong>MUHN-FA</strong></td><td>Memory, UI, Hardware ind., Networking, File mgmt, Access</td><td>OS functions (Unit 3)</td></tr>
+<tr><td><strong>APST NDP</strong></td><td>Application, Presentation, Session, Transport, Network, Data Link, Physical</td><td>OSI layers (Unit 4)</td></tr>
+<tr><td><strong>SOT-C</strong></td><td>Strategic, Operational, Tactical with Control</td><td>Management levels (Unit 5)</td></tr>
+<tr><td><strong>ACER-FRT-SA</strong></td><td>Accurate, Complete, Economical, Reliable, Flexible, Relevant, Timely, Simple, Accessible</td><td>Info characteristics (Unit 6)</td></tr>
+<tr><td><strong>IDC-I</strong></td><td>Intelligence, Design, Choice, Implementation</td><td>Decision process (Unit 7)</td></tr>
+<tr><td><strong>ECS-B</strong></td><td>ERP, CRM, SCM, BPR</td><td>Integrated apps (Unit 8)</td></tr>
+<tr><td><strong>AR-P</strong></td><td>Automation, Rationalization, Paradigm shift</td><td>Org changes (Unit 9)</td></tr>
+<tr><td><strong>PIA-LP-IM</strong></td><td>Planning, Initiation, Analysis, Logical Design, Physical Design, Implementation, Maintenance</td><td>SDLC phases (Unit 10)</td></tr>
+<tr><td><strong>EPIC</strong></td><td>Encapsulation, Polymorphism, Inheritance, Abstraction</td><td>OOP pillars (Unit 11)</td></tr>
+<tr><td><strong>PFK</strong></td><td>Primary, Foreign, Candidate keys</td><td>Database keys (Unit 12)</td></tr>
+<tr><td><strong>SITS</strong></td><td>Subject-oriented, Integrated, Time-variant, Stable</td><td>Data warehouse (Unit 13)</td></tr>
+<tr><td><strong>KNIFE</strong></td><td>Knowledge, Neural, Inference, Facts, Explanation</td><td>AI components (Unit 14)</td></tr>
+<tr><td><strong>VVVVVV</strong></td><td>Volume, Velocity, Variety, Veracity, Value, Variability</td><td>Big Data 6Vs (Unit 15)</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- ==================== EXAM FOCUS ==================== -->
+<div class="unit" id="exam">
+<h3>Exam Focus</h3>
+<div class="db"><table>
+<thead><tr><th>Topic</th><th>Marks</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td>OSI Model layers and functions</td><td>5-10</td><td>Very High</td></tr>
+<tr><td>TPS vs MIS vs DSS vs EIS comparison</td><td>5-10</td><td>Very High</td></tr>
+<tr><td>Compiler vs Interpreter</td><td>5</td><td>High</td></tr>
+<tr><td>ERP, CRM, SCM definitions</td><td>5-10</td><td>High</td></tr>
+<tr><td>SDLC phases</td><td>10</td><td>High</td></tr>
+<tr><td>Data warehouse characteristics</td><td>5</td><td>Medium</td></tr>
+<tr><td>AI techniques comparison</td><td>5-10</td><td>Medium</td></tr>
+</tbody></table></div>
+</div>
+
+</main>
+</div>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

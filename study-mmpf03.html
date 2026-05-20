@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPF-03: Management Control Systems | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(0,184,148,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar-nav a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar-nav a:hover{background:rgba(255,255,255,.05);color:#00b894;padding-left:1rem}.sidebar-nav a.active{color:#00b894;background:rgba(0,184,148,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(0,184,148,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#00b894;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#00b894,#00b894cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}.unit.fade-in{opacity:1;transform:translateY(0)}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#00b894,#00b894cc,#00d4ff,#00b894);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(0,184,148,.08);border-color:#00b894}.callout-example{background:rgba(0,184,148,.05);border-color:#00b894}.callout-examtip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-mnemonic{background:rgba(0,210,255,.06);border-color:#00d4ff}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(0,184,148,.15);color:#00b894cc;border:1px solid rgba(0,184,148,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#00b894}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;min-width:44px;min-height:44px;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#00b894;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#00b894,#00b894cc);z-index:9999;transition:width .1s;width:0%}.db{overflow-x:auto;margin:1rem 0}table{width:100%;border-collapse:collapse;font-size:.88rem}th,td{padding:.6rem .8rem;border:1px solid rgba(255,255,255,.1);text-align:left}th{background:rgba(0,184,148,.12);color:#00b894;font-weight:600}td{color:rgba(255,255,255,.72)}@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0);
+  border-radius: 2px;
+}
+
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; min-height: 44px; min-width: 44px; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(108,99,255,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Flow Visual --- */
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+
+/* --- Visual Diagram --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
+  border: 1px solid rgba(78,205,196,0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.visual-diagram:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
+}
+.visual-diagram h5 {
+  color: #4ECDC4;
+  margin-bottom: 16px;
+  font-size: 1.1em;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* --- Inline Grid --- */
+.igl { margin: 1rem 0; }
+.cg { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.cc { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1rem; }
+.cc h5 { color: #00cec9; margin-bottom: 0.5rem; }
+.db { margin: 1rem 0; overflow-x: auto; }
+
+/* --- Badge Row --- */
+.br { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.sb { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+.s-b { background: rgba(0,206,201,0.15); color: #00cec9; border: 1px solid rgba(0,206,201,0.3); }
+.s-p { background: rgba(108,99,255,0.15); color: #b0b0ff; border: 1px solid rgba(108,99,255,0.3); }
+.s-y { background: rgba(255,215,0,0.15); color: #ffd700; border: 1px solid rgba(255,215,0,0.3); }
+.s-g { background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+
+/* --- Flow Chart --- */
+.fc { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem; margin: 1rem 0; }
+.fc-s { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.6rem 1rem; text-align: center; min-width: 80px; }
+.fc-n { font-size: 1.4rem; font-weight: 700; color: #00cec9; }
+.fc-l { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+.fc-a { color: #00cec9; font-size: 1.2rem; }
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpf03">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpf-03'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><nav class="sidebar-nav">
+  <div class="sidebar-header"><span class="subject-badge">MMPF-03</span><h3>MMPF-03</h3></div>
+  <a href="study-hub.html">&#x1F3E0; Back</a>
+  <a href="#u1">Unit 1: MCS — An Introduction</a>
+  <a href="#u2">Unit 2: Strategies and MCS</a>
+  <a href="#u3">Unit 3: Designing MCS</a>
+  <a href="#u4">Unit 4: Responsibility Centres</a>
+  <a href="#u5">Unit 5: Cost Centres</a>
+  <a href="#u6">Unit 6: Profit Centres</a>
+  <a href="#u7">Unit 7: Investment Centres</a>
+  <a href="#u8">Unit 8: Transfer Pricing</a>
+  <a href="#u9">Unit 9: Budgeting and Reporting</a>
+  <a href="#u10">Unit 10: Performance Measurement</a>
+  <a href="#u11">Unit 11: Reward and Compensation</a>
+  <a href="#u12">Unit 12: Techniques of MCS</a>
+  <a href="#u13">Unit 13: Service Organizations</a>
+  <a href="#u14">Unit 14: Multinational Organizations</a>
+  <a href="#u15">Unit 15: Project Control</a>
+  <a href="#u16">Unit 16: Other Organizations</a>
+  <a href="#mnemonics">Master Mnemonics</a>
+  <a href="#formulas">Key Formulas</a>
+  <a href="#exam">Exam Focus</a>
+  <a href="quiz-mmpf03.html" class="back-link">&#x1F4DD; Take Quiz</a>
+</nav></aside>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPF-03</span><h1>Management Control Systems</h1>
+<p>4 Blocks, 16 Units | Control Structures, Processes & Special Organizations | IGNOU MBA</p></div>
+
+<!-- BLOCK 1: Management Control — Concepts and Contexts -->
+
+<div class="unit" id="u1">
+<h3>Unit 1: Management Control Systems — An Introduction</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Management Control Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Management Control Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>MCS:</strong> The process by which managers influence other members to implement the organization's strategies (Anthony & Govindarajan, 1994)</li>
+<li><strong>POSDCORB:</strong> Planning, Organizing, Staffing, Directing, Controlling, Reporting, Budgeting — the 7 management functions</li>
+<li><strong>Hierarchy of Control:</strong> Strategic Planning → Management Control → Operational Control</li>
+<li><strong>Open vs Closed Loop:</strong> Open-loop has no feedback; closed-loop uses feedback to self-correct</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Type (Merchant)</th><th>Mechanism</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Action Controls</td><td>Rules, procedures, surveillance</td><td>SOPs in manufacturing</td></tr>
+<tr><td>Results Controls</td><td>KPIs, bonuses, penalties</td><td>Sales targets with commission</td></tr>
+<tr><td>Personnel/Cultural</td><td>Values, trust, ethics</td><td>Code of conduct, training</td></tr>
+</tbody></table></div>
+<div class="db"><table>
+<thead><tr><th>Metaphor</th><th>Model</th><th>Insight</th></tr></thead>
+<tbody>
+<tr><td>Thermostat</td><td>Engineering</td><td>Set standard, auto-correct deviations</td></tr>
+<tr><td>Body Temperature</td><td>Homeostatic</td><td>Self-regulation; intervene only when severe</td></tr>
+<tr><td>Traffic Lights</td><td>Go/No-Go</td><td>Red (stop), Yellow (caution), Green (go)</td></tr>
+<tr><td>Driving System (ABC)</td><td>Man-Machine</td><td>Accelerator (push), Brake (stop), Clutch (coordinate)</td></tr>
+<tr><td>Black Box</td><td>Input-Output</td><td>Internal workings not visible from outside</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Goal Congruence</div>
+<p><strong>Goal Congruence</strong> is when individual goals align with organizational goals — the fundamental purpose of MCS. A well-designed control system ensures that managers acting in their own self-interest also serve the organization's interests. For example, if a sales manager's bonus depends on revenue (not profit), they may offer excessive discounts — breaking goal congruence.</p></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Ethics in MCS</div>
+<p>Control systems must prevent ethical failures. Unethical behavior can be checked through codes of conduct, whistleblower policies, and cultural norms. Indian companies like Infosys and TCS have robust ethics frameworks integrated into their MCS — Infosys' Code of Conduct covers conflicts of interest, insider trading, and anti-corruption policies.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A manufacturing company uses action controls (SOPs), results controls (production targets with bonuses), and personnel controls (training, corporate culture) simultaneously to manage shop floor workers.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Define MCS using both Anthony & Dearden (1981) and Anthony & Govindarajan (1994) — examiners often ask for the evolution of the concept.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ARP</strong> = Action, Results, Personnel (3 control types)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>MCS = process of influencing members to implement strategies</li>
+<li>Three levels: Strategic Planning, Management Control, Operational Control</li>
+<li>Merchant's 3 controls: Action, Results, Personnel/Cultural</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u2">
+<h3>Unit 2: Strategies and Management Control</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Organizational Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Organizational Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Corporate-Level Strategy:</strong> What businesses to be in — diversification, vertical integration, mergers</li>
+<li><strong>Business-Level Strategy:</strong> How to compete — cost leadership, differentiation, focus</li>
+<li><strong>Core Competence:</strong> A unique capability providing competitive advantage (Prahalad & Hamel)</li>
+<li><strong>Strategy-Control Interface:</strong> Control systems must align with strategy; strategy change requires MCS redesign</li>
+<li><strong>Radical Performance Improvement:</strong> Achieved when strategy and control systems work in harmony</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Strategy Type</th><th>MCS Focus</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Cost Leadership</td><td>Standard costing, variance analysis, tight budgets</td><td>Maruti Suzuki — lowest cost car manufacturer in India</td></tr>
+<tr><td>Differentiation</td><td>Innovation metrics, R&D spend, brand value</td><td>Amul — cooperative model with unique supply chain</td></tr>
+<tr><td>Focus/Niche</td><td>Customer retention, market share in niche</td><td>Himalaya Wellness — focused on herbal/personal care</td></tr>
+<tr><td>Conglomerate Diversification</td><td>ROI, EVA per division, transfer pricing</td><td>Tata Group — 100+ companies across sectors</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>When Apple shifted from computers to consumer electronics (strategy change), its MCS shifted from cost-focused to innovation-focused controls. Similarly, Reliance Industries shifted from textiles to petrochemicals to telecom — each shift required complete MCS redesign.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the difference between corporate and business strategy and how each affects MCS design differently.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CRAFT</strong> = Core competence, Radical improvement, Alignment, Focus, Transformation</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Strategy determines MCS design — corporate vs business level</li>
+<li>Core competence is the foundation of competitive advantage</li>
+<li>Strategy change must trigger MCS redesign</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u3">
+<h3>Unit 3: Designing Management Control Systems</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Responsibility Centers</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Responsibility Centers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Cybernetic Paradigm:</strong> Set standard → Measure actual → Compare → Take corrective action</li>
+<li><strong>MIS:</strong> Integrates explicit and tacit knowledge for Total Knowledge Management</li>
+<li><strong>Critical Success Factors (CSFs):</strong> Limited areas where results, if satisfactory, ensure success</li>
+<li><strong>Behavioral Aspects:</strong> MCS must consider resistance to control, gaming, budget slack</li>
+<li><strong>Action Plans:</strong> Derived from CSFs for performance improvement</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Cybernetic Control Loop — Detailed</div>
+<p>The cybernetic paradigm is the foundation of all control systems. The four-step process works as follows:</p>
+<ol>
+<li><strong>Set Standard:</strong> Define what "good" looks like (e.g., production target of 1000 units/day)</li>
+<li><strong>Measure Actual:</strong> Collect real performance data (e.g., actual output = 950 units)</li>
+<li><strong>Compare:</strong> Find deviations (e.g., 50 units short = 5% unfavorable variance)</li>
+<li><strong>Corrective Action:</strong> Investigate and fix (e.g., machine maintenance, overtime, training)</li>
+</ol>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Behavioral Aspects — Gaming and Budget Slack</div>
+<p><strong>Budget Slack:</strong> Managers deliberately understate revenues or overstate costs in budgets to make targets easier to achieve. For example, a sales manager budgeting ₹8 crore when they expect ₹10 crore — creating a ₹2 crore cushion.</p>
+<p><strong>Gaming:</strong> Managers manipulate metrics to appear better. Example: shipping products on December 31 to meet annual sales targets, even though the customer didn't need them until February.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A retail chain identifies CSFs as inventory turnover, customer satisfaction, and store productivity — all MCS metrics are derived from these. Reliance Retail tracks 5 CSFs: same-store sales growth, inventory days, customer NPS, employee productivity, and shrinkage rate.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Explain the cybernetic paradigm with a diagram — set standard, measure, compare, corrective action.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SMAC</strong> = Standard, Measure, Analyze, Correct (cybernetic loop)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Cybernetic paradigm: the foundation of MCS design</li>
+<li>CSFs drive what gets measured and controlled</li>
+<li>Behavioral aspects (gaming, slack) must be anticipated</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 2: Management Control Structure -->
+
+<div class="unit" id="u4">
+<h3>Unit 4: Responsibility Centres</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transfer Pricing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Transfer Pricing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Responsibility Accounting:</strong> Trace costs and revenues to the managers responsible for them</li>
+<li><strong>Delegation:</strong> Assigning authority downward creates responsibility centres</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Centre Type</th><th>Controls</th><th>Evaluation Metric</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Cost Centre</td><td>Costs only</td><td>Budget vs Actual cost</td><td>Production dept</td></tr>
+<tr><td>Revenue Centre</td><td>Revenue only</td><td>Sales targets</td><td>Regional sales office</td></tr>
+<tr><td>Profit Centre</td><td>Costs + Revenue</td><td>Profit</td><td>Product division</td></tr>
+<tr><td>Investment Centre</td><td>Costs + Revenue + Assets</td><td>ROI, RI, EVA</td><td>Subsidiary company</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Group: Tata Sons evaluates subsidiaries on ROCE. Plants are cost centres, sales offices are revenue centres, divisions are profit centres.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CRPI</strong> = Cost → Revenue → Profit → Investment (increasing scope)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Four responsibility centres with increasing scope: CRPI</li>
+<li>Controllability principle ensures fair evaluation</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u5">
+<h3>Unit 5: Cost Centres</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Budgetary Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Budgetary Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Engineered Costs:</strong> Directly related to output — raw materials, direct labor (precisely measurable)</li>
+<li><strong>Discretionary Costs:</strong> Not directly related — R&D, advertising, training (management judgment)</li>
+<li><strong>Zero Base Budgeting (ZBB):</strong> Every budget justified from zero each period</li>
+<li><strong>Activity Based Costing (ABC):</strong> Allocate overheads based on cost-driving activities</li>
+<li><strong>Standard Costing:</strong> Set predetermined costs, compare with actual, analyze variances</li>
+<li><strong>Target Costing:</strong> Target cost = Market price - Desired profit (used by Japanese manufacturers)</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Standard Costing Variance Breakdown</div>
+<p>Standard costing sets predetermined cost standards. When actual costs differ, variances are analyzed:</p>
+<ul>
+<li><strong>Material Variance:</strong> Price variance (actual vs standard price) + Usage variance (actual vs standard quantity)</li>
+<li><strong>Labor Variance:</strong> Rate variance (actual vs standard wage) + Efficiency variance (actual vs standard hours)</li>
+<li><strong>Overhead Variance:</strong> Spending variance + Efficiency variance + Volume variance</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A hospital uses engineered costs for medical supplies (per patient) and discretionary costs for community health programs.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>ZBB vs traditional budgeting is a common comparison question — know pros and cons of each.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>EDZ</strong> = Engineered, Discretionary, ZBB</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Engineered costs are measurable; discretionary costs rely on judgment</li>
+<li>ZBB forces justification from zero; ABC links costs to activities</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u6">
+<h3>Unit 6: Profit Centres</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Performance Measurement</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Performance Measurement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Profit = Revenue - Costs</strong> — measures manager's overall effectiveness</li>
+<li><strong>Advantages:</strong> Measures overall performance, encourages autonomy, develops general management skills</li>
+<li><strong>Challenges:</strong> Transfer pricing between divisions, allocation of common costs, short-term focus</li>
+<li><strong>Common Cost Allocation:</strong> Allocate corporate HQ costs to divisions using revenue %, headcount, or floor area</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Profit Centre — Controllability Principle</div>
+<p>A profit centre should only be evaluated on items the manager can control. If a division manager cannot control corporate overhead, those costs should either be excluded from their P&L or clearly separated. This ensures fair evaluation and prevents dysfunctional behavior.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Godrej Consumer Products operates as a profit centre — each product division (home care, personal care) manages its own P&L.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Profit centres work best when managers have authority over both inputs and outputs — explain when NOT to use them.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CRAFT-P</strong> = Cost + Revenue = Autonomy, Fairness, Transfer pricing, Performance</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Profit centres measure overall managerial effectiveness</li>
+<li>Transfer pricing and common cost allocation are key challenges</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u7">
+<h3>Unit 7: Investment Centres</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Balanced Scorecard</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Balanced Scorecard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>ROI</strong> = Profit / Investment × 100 — most common but may reject good projects</li>
+<li><strong>RI</strong> = Profit - (Investment × Required Rate) — considers cost of capital</li>
+<li><strong>EVA</strong> = NOPAT - (WACC × Capital) — true economic profit, most comprehensive</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ROI Limitation — Dysfunctional Behavior Example</div>
+<p>Division A has ROI = 20%, company required rate = 12%. A new project offers 15% return.</p>
+<ul>
+<li><strong>Using ROI:</strong> Division rejects it (15% < 20%) — dysfunctional! The project earns above cost of capital.</li>
+<li><strong>Using RI:</strong> Division accepts it (15% > 12%) — adds value to the company.</li>
+</ul>
+<p>This is why RI and EVA are superior to ROI for goal congruence.</p>
+</div>
+<div class="db"><table>
+<thead><tr><th>Metric</th><th>Formula</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+<tbody>
+<tr><td>ROI</td><td>Profit / Investment × 100</td><td>Simple, widely used</td><td>May reject good projects</td></tr>
+<tr><td>RI</td><td>Profit - (Investment × Required Rate)</td><td>Considers cost of capital</td><td>Depends on rate chosen</td></tr>
+<tr><td>EVA</td><td>NOPAT - (WACC × Capital)</td><td>Comprehensive, economic reality</td><td>Complex to calculate</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A division has ₹50L profit on ₹200L investment. Required rate = 12%, WACC = 10%. ROI = 25%, RI = ₹26L, EVA = ₹25L.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>ROI, RI, and EVA calculations are guaranteed in exams. Always solve step by step with formulas written clearly.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>RRE</strong> = ROI, RI, EVA (simple to comprehensive)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>ROI is simple but can cause dysfunctional behavior</li>
+<li>RI and EVA overcome ROI limitations by considering cost of capital</li>
+<li>EVA = true economic profit (NOPAT - WACC × Capital)</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u8">
+<h3>Unit 8: Transfer Pricing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Strategic Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Strategic Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Transfer Price:</strong> Price charged for goods/services transferred between divisions</li>
+<li><strong>Goal Congruence:</strong> Transfer price should motivate divisions to act in organization's best interest</li>
+<li><strong>Tax Implications:</strong> MNCs use transfer pricing to shift profits across countries — must comply with regulations</li>
+<li><strong>Cost-Based Variants:</strong> Full cost, variable cost, cost-plus — each has different behavioral effects</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Method</th><th>When to Use</th><th>Advantage</th><th>Disadvantage</th></tr></thead>
+<tbody>
+<tr><td>Market Price</td><td>Competitive market exists</td><td>Fair, objective, arm's length</td><td>May not exist for unique products</td></tr>
+<tr><td>Cost-Based (Full Cost)</td><td>No market price available</td><td>Simple, verifiable</td><td>May not reflect true value; includes fixed costs</td></tr>
+<tr><td>Cost-Based (Variable Cost)</td><td>Excess capacity exists</td><td>Encourages internal transfers</td><td>Selling division makes no profit</td></tr>
+<tr><td>Cost-Plus</td><td>Ensures selling division earns margin</td><td>Fair to both divisions</td><td>Plus % is arbitrary</td></tr>
+<tr><td>Negotiated</td><td>Both divisions autonomous</td><td>Flexible, preserves autonomy</td><td>Time-consuming, may create conflict</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Transfer Pricing in India — IT Act Section 92</div>
+<p>India's Income Tax Act Section 92-92F requires MNCs to follow the <strong>arm's length principle</strong> for international transactions between associated enterprises. The CBDT (Central Board of Direct Taxes) specifies 5 methods:</p>
+<ol>
+<li><strong>Comparable Uncontrolled Price (CUP)</strong> — market price for similar transactions</li>
+<li><strong>Resale Price Method (RPM)</strong> — resale price minus margin</li>
+<li><strong>Cost Plus Method (CPM)</strong> — cost plus appropriate markup</li>
+<li><strong>Transactional Net Margin Method (TNMM)</strong> — net profit margin comparison</li>
+<li><strong>Profit Split Method (PSM)</strong> — split combined profits based on contribution</li>
+</ol>
+<p>Penalty for non-compliance: 100-300% of tax underreported. Indian companies must maintain transfer pricing documentation.</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Single vs Dual Pricing</div>
+<p><strong>Single Pricing:</strong> One price used for both divisions — simpler but may not serve both equally. Example: Market price of ₹500/unit is used for both buying and selling division.</p>
+<p><strong>Dual Pricing:</strong> Different prices for buying and selling divisions — more complex but fairer. Example: Selling division records ₹500 (market price), buying division pays ₹450 (cost-plus). Difference absorbed by corporate.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Motors uses cost-plus 12% for Tata AutoComp components and market-based pricing for engines between plants. Reliance Industries uses negotiated transfer pricing between its refining and petrochemical divisions — Jio sources network equipment from Reliance Retail's procurement arm at negotiated rates.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss dual vs single pricing debate. Mention IT Act Section 92 for MNC transfer pricing regulations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>MNC</strong> = Market, Negotiated, Cost-based (3 methods)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Three methods: Market, Cost-based, Negotiated</li>
+<li>Goal congruence is the key criterion for choosing a method</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 3: Management Control Process -->
+
+<div class="unit" id="u9">
+<h3>Unit 9: Budgeting and Reporting</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Cost Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Budget:</strong> Financial plan for a specific period — the foundation of control</li>
+<li><strong>Types:</strong> Fixed, Flexible, ZBB, Rolling, Incremental</li>
+<li><strong>Budget Process:</strong> Top-down (targets set by senior mgmt) + Bottom-up (participative proposals)</li>
+<li><strong>Variance Analysis:</strong> Actual vs Budget — favorable if positive, unfavorable if negative</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Budget Type</th><th>Description</th><th>When to Use</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Fixed Budget</td><td>Based on one level of activity; does not change</td><td>Stable, predictable environment</td><td>Government of India annual Union Budget</td></tr>
+<tr><td>Flexible Budget</td><td>Adjusts with actual activity level</td><td>Variable production/sales volumes</td><td>Maruti Suzuki adjusts budget based on actual car production</td></tr>
+<tr><td>Zero-Based Budget (ZBB)</td><td>Every expense justified from zero each period</td><td>Cost reduction, eliminating waste</td><td>Used by Hindustan Unilever for marketing budgets</td></tr>
+<tr><td>Rolling Budget</td><td>Continuously updated — add new period, drop expired</td><td>Dynamic, uncertain environment</td><td>Infosys uses quarterly rolling forecasts</td></tr>
+<tr><td>Incremental Budget</td><td>Previous year budget + incremental changes</td><td>Stable operations, government bodies</td><td>Most Indian PSU budgets (ONGC, NTPC)</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Variance Analysis — Detailed</div>
+<p>Variance = Actual - Budget. A <strong>favorable variance</strong> means actual is better than budget (higher revenue or lower cost). An <strong>unfavorable variance</strong> means actual is worse. Key variances include:</p>
+<ul>
+<li><strong>Sales Variance:</strong> (Actual Sales - Budgeted Sales) — due to volume or price</li>
+<li><strong>Material Variance:</strong> Price variance + Usage variance</li>
+<li><strong>Labor Variance:</strong> Rate variance + Efficiency variance</li>
+<li><strong>Overhead Variance:</strong> Spending variance + Volume variance</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>SBI prepares annual budgets for credit growth, deposits, NPA provisioning. FY2024 budgeted 12% growth, achieved 15.2%. TCS uses rolling quarterly budgets — forecasts updated every quarter with actual performance data.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Flexible vs Fixed budget is a classic exam question — know when each is appropriate.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>FZ-R</strong> = Fixed, ZBB, Rolling + Flexible (budget types)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Budget types: Fixed, Flexible, ZBB, Rolling</li>
+<li>Variance analysis identifies deviations for corrective action</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u10">
+<h3>Unit 10: Performance Measurement</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Profit Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Profit Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Balanced Scorecard (Kaplan & Norton):</strong> 4 perspectives — Financial, Customer, Internal Process, Learning & Growth</li>
+<li><strong>KPIs:</strong> Quantifiable measures of performance</li>
+<li><strong>Benchmarking:</strong> Comparing with best practices (internal, competitive, functional, generic)</li>
+<li><strong>Performance Measurement:</strong> Both quantitative (financial ratios) and qualitative (360° feedback, customer surveys)</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>BSC Perspective</th><th>Question</th><th>Metrics</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Financial</td><td>How do shareholders see us?</td><td>ROI, revenue growth, EVA</td><td>Infosys tracks EPS growth, ROE, dividend payout</td></tr>
+<tr><td>Customer</td><td>How do customers see us?</td><td>Satisfaction, retention, market share</td><td>HDFC Bank tracks NPS, customer acquisition cost, wallet share</td></tr>
+<tr><td>Internal Process</td><td>What must we excel at?</td><td>Quality, cycle time, efficiency</td><td>Tata Steel tracks yield, energy consumption per ton, safety incidents</td></tr>
+<tr><td>Learning & Growth</td><td>Can we continue to improve?</td><td>Innovation, training, IT</td><td>Wipro tracks training hours/employee, patents filed, R&D spend %</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; BSC Cause-Effect Chain</div>
+<p>The BSC is not just 4 separate perspectives — they are linked in a cause-effect chain:</p>
+<p><strong>Learning & Growth</strong> (train employees, upgrade IT) → improves <strong>Internal Processes</strong> (faster, better quality) → leads to better <strong>Customer</strong> outcomes (satisfaction, retention) → drives <strong>Financial</strong> results (revenue, profit, ROI).</p>
+<p>Example: Infosys invested in digital skills training (Learning) → improved project delivery time (Process) → higher client satisfaction (Customer) → increased revenue per employee (Financial).</p>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Benchmarking Types</div>
+<ul>
+<li><strong>Internal Benchmarking:</strong> Compare departments within the same company (e.g., comparing productivity of Maruti's Gurgaon vs Manesar plant)</li>
+<li><strong>Competitive Benchmarking:</strong> Compare with direct competitors (e.g., SBI vs HDFC Bank on NPA ratios)</li>
+<li><strong>Functional Benchmarking:</strong> Compare similar functions across industries (e.g., logistics of Amazon vs DHL)</li>
+<li><strong>Generic Benchmarking:</strong> Compare broad processes (e.g., customer service of Taj Hotels vs Singapore Airlines)</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Wipro's BSC improved client retention from 85% to 92% over three years by tracking all four perspectives. Bajaj Auto uses BSC to balance financial targets with dealer satisfaction, production efficiency, and workforce capability metrics.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Draw the BSC diagram with arrows showing cause-effect relationships. This is a guaranteed exam question.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>FCIL</strong> = Financial, Customer, Internal Process, Learning & Growth</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>BSC translates strategy into measurable objectives across 4 perspectives</li>
+<li>Learning & Growth drives Internal Process, which drives Customer, which drives Financial results</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u11">
+<h3>Unit 11: Reward and Compensation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Inventory Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Inventory Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Incentives:</strong> Monetary (bonuses, stock options) and Non-monetary (recognition, promotions, autonomy)</li>
+<li><strong>Design Principles:</strong> Clear, Timely, Fair, Linked to performance, Aligned with goals</li>
+<li><strong>Behavioral Impact:</strong> Incentives shape behavior — be careful what you measure and reward</li>
+<li><strong>Goal Congruence:</strong> Rewards should align individual and organizational objectives</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Dysfunctional Behavior from Poor Incentives</div>
+<p>Poorly designed incentives lead to unintended consequences:</p>
+<ul>
+<li><strong>Sales:</strong> Salespeople offer excessive discounts to hit revenue targets — eroding margins</li>
+<li><strong>Production:</strong> Overproducing to meet volume targets — creating excess inventory</li>
+<li><strong>Budgeting:</strong> Spending remaining budget at year-end to avoid cuts next year — waste</li>
+<li><strong>Quality:</strong> Skipping quality checks to meet speed targets — defects increase</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Infosys redesigned incentives in 2020 to include ESG metrics alongside financial KPIs — improved employee engagement by 12%.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss how poorly designed incentives lead to dysfunctional behavior (e.g., salespeople discounting to hit targets).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CTF-L</strong> = Clear, Timely, Fair, Linked (incentive design principles)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Incentives must align individual and organizational objectives</li>
+<li>Poorly designed incentives cause dysfunctional behavior</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u12">
+<h3>Unit 12: Techniques of Management Control</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality Control</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Quality Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>TQM:</strong> Continuous improvement — customer-focused, employee involvement</li>
+<li><strong>JIT:</strong> Inventory arrives just when needed — reduces carrying costs</li>
+<li><strong>ABC:</strong> Allocate costs based on cost-driving activities</li>
+<li><strong>Benchmarking:</strong> Learning from best practices</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; TQM Principles (Deming's 14 Points)</div>
+<p>Total Quality Management is built on the philosophy of W. Edwards Deming. Key principles include:</p>
+<ul>
+<li><strong>Customer Focus:</strong> Quality is defined by the customer, not the producer</li>
+<li><strong>Continuous Improvement (Kaizen):</strong> Small, incremental improvements every day</li>
+<li><strong>Employee Empowerment:</strong> Quality is everyone's responsibility, not just QC department</li>
+<li><strong>Process-Centered:</strong> Fix the process, not blame the person</li>
+<li><strong>Data-Driven Decisions:</strong> Use statistical tools (Pareto charts, control charts, fishbone diagrams)</li>
+</ul>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ABC — Activity Based Costing</div>
+<p>Traditional costing allocates overheads based on volume (machine hours, labor hours). ABC allocates based on <strong>activities that drive costs</strong>:</p>
+<ol>
+<li>Identify activities (e.g., machine setup, quality inspection, material handling)</li>
+<li>Assign costs to each activity</li>
+<li>Identify cost drivers for each activity</li>
+<li>Allocate costs to products based on activity usage</li>
+</ol>
+<p>Example: A product requiring 50 setups but low volume would be undercosted by traditional methods but correctly costed by ABC.</p>
+</div>
+<div class="db"><table>
+<thead><tr><th>Technique</th><th>Focus</th><th>Benefit</th><th>Challenge</th></tr></thead>
+<tbody>
+<tr><td>TQM</td><td>Quality improvement</td><td>Customer satisfaction</td><td>Cultural change required</td></tr>
+<tr><td>JIT</td><td>Inventory reduction</td><td>Lower costs</td><td>Supply chain risk</td></tr>
+<tr><td>ABC</td><td>Cost accuracy</td><td>Better pricing decisions</td><td>Complex implementation</td></tr>
+<tr><td>Benchmarking</td><td>Best practice adoption</td><td>Performance improvement</td><td>Finding comparable orgs</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Maruti Suzuki implemented JIT with 200+ suppliers within 50km of its Gurugram plant — reduced inventory costs by 30%.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TJAB</strong> = TQM, JIT, ABC, Benchmarking (4 techniques)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Four key techniques: TQM, JIT, ABC, Benchmarking</li>
+<li>Each supports the control process differently</li>
+</ul></div>
+</div>
+
+<!-- BLOCK 4: Special Organizations -->
+
+<div class="unit" id="u13">
+<h3>Unit 13: Service Organizations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Internal Audit</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Internal Audit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Service Characteristics:</strong> No inventory buffer, quality hard to measure, labor-intensive, intangibility</li>
+<li><strong>Banks:</strong> Interest rate risk, credit risk, NPA management, capital adequacy</li>
+<li><strong>Insurance:</strong> Actuarial controls, claim ratios, underwriting standards</li>
+<li><strong>Non-Profits:</strong> Social impact objectives, donor accountability, harder performance measurement</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Service Type</th><th>Key Control Metrics</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>Banking</td><td>NPA ratio, CASA ratio, Capital Adequacy (CAR), Net Interest Margin</td><td>HDFC Bank maintains NPA &lt; 1.5%, CAR &gt; 18%</td></tr>
+<tr><td>Insurance</td><td>Claim settlement ratio, Combined ratio, Solvency margin</td><td>LIC: 98% claim settlement ratio</td></tr>
+<tr><td>IT Services</td><td>Utilization rate, Revenue/employee, Client retention, Bench strength</td><td>TCS: 85%+ utilization, $25B revenue</td></tr>
+<tr><td>Healthcare</td><td>Patient satisfaction, Bed occupancy, Average length of stay, Infection rate</td><td>Apollo Hospitals: 75% bed occupancy target</td></tr>
+<tr><td>Non-Profit</td><td>Cost per beneficiary, Fund utilization ratio, Impact score</td><td>Akshaya Patra: Rs 11.44 per meal cost efficiency</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>HDFC Bank tracks NPA ratios, capital adequacy (Basel III), and digital transaction share as key control metrics — very different from manufacturing KPIs.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Service organizations need different control metrics than manufacturing — explain why with examples.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>BIN-NP</strong> = Banks, Insurance, Non-profit, Mutual funds (service types)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>Service orgs have no inventory buffer — quality is hard to measure</li>
+<li>Financial services require specialized metrics (NPA, capital adequacy)</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u14">
+<h3>Unit 14: Multinational Organizations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MCS in Practice</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="MCS in Practice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Additional Challenges:</strong> Currency risk, cultural differences, varying regulations, political risk</li>
+<li><strong>Transfer Pricing in MNCs:</strong> Used for tax optimization — must comply with arm's length principle</li>
+<li><strong>Performance Measurement:</strong> Must consider exchange rate fluctuations — constant vs current rate methods</li>
+<li><strong>Centralization vs Localization:</strong> Balance between global consistency and local adaptation</li>
+</ul></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Currency Risk Management</div>
+<p>MNCs face three types of currency risk:</p>
+<ul>
+<li><strong>Transaction Risk:</strong> Loss when converting payments (e.g., Indian company paying in USD when rupee depreciates)</li>
+<li><strong>Translation Risk:</strong> Loss when consolidating foreign subsidiary accounts</li>
+<li><strong>Economic Risk:</strong> Long-term impact on competitiveness due to exchange rate changes</li>
+</ul>
+<p><strong>Hedging Tools:</strong> Forward contracts, currency futures, options, and natural hedging (matching revenues and costs in same currency).</p>
+</div>
+<div class="db"><table>
+<thead><tr><th>Indian MNC</th><th>Countries</th><th>MCS Challenge</th></tr></thead>
+<tbody>
+<tr><td>Tata Group</td><td>100+ countries</td><td>Managing Jaguar Land Rover (UK) with Indian cost standards</td></tr>
+<tr><td>Infosys</td><td>46 countries</td><td>Transfer pricing for IT services across 200+ subsidiaries</td></tr>
+<tr><td>Dr. Reddy's</td><td>25+ countries</td><td>Pharma pricing regulations vary by country</td></tr>
+<tr><td>Mahindra Group</td><td>100+ countries</td><td>Managing automotive + farm equipment across different markets</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Steel operates in 26 countries — uses standardized MCS with local adaptations for currency, regulations, and cultural norms.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Discuss the four challenges of designing MCS for MNCs: currency, culture, regulations, distance.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CCRE</strong> = Currency, Culture, Regulations, Exchange rate (MNC challenges)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>MNCs face currency, cultural, regulatory, and political challenges</li>
+<li>Transfer pricing must comply with arm's length principle</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u15">
+<h3>Unit 15: Project Control</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Case Studies in Control Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Case Studies in Control Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>Projects vs Operations:</strong> Temporary (projects) vs Ongoing (operations)</li>
+<li><strong>Project Life Cycle:</strong> Planning → Execution → Monitoring → Completion</li>
+<li><strong>PERT:</strong> Event-oriented, uses probability for time estimates</li>
+<li><strong>CPM:</strong> Activity-oriented, deterministic time estimates</li>
+<li><strong>Project Triangle:</strong> Time, Cost, Scope, Quality</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Feature</th><th>PERT</th><th>CPM</th></tr></thead>
+<tbody>
+<tr><td>Time Estimates</td><td>3 estimates: Optimistic (O), Most Likely (M), Pessimistic (P)</td><td>Single deterministic estimate</td></tr>
+<tr><td>Expected Time</td><td>TE = (O + 4M + P) / 6</td><td>Given directly</td></tr>
+<tr><td>Focus</td><td>Event-oriented (milestones)</td><td>Activity-oriented (tasks)</td></tr>
+<tr><td>Best For</td><td>Uncertain, R&D, new projects</td><td>Known, repetitive projects</td></tr>
+<tr><td>Crashing</td><td>Not applicable</td><td>Can crash (reduce time at extra cost)</td></tr>
+<tr><td>Indian Example</td><td>ISRO Mars Orbiter Mission — uncertain timelines</td><td>Delhi Metro construction — known activity durations</td></tr>
+</tbody></table></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Delhi Metro used PERT for uncertain tunnel boring schedules and CPM for predictable station construction — each suited to different risk profiles.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Know the difference between PERT and CPM — this is a common short-answer question.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>TCSQ</strong> = Time, Cost, Scope, Quality (project control dimensions)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>PERT for uncertain times, CPM for known times</li>
+<li>Project triangle: Time, Cost, Scope — changing one affects others</li>
+</ul></div>
+</div>
+
+<div class="unit" id="u16">
+<h3>Unit 16: Other Organizations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU16">&#x1F4AC; Ask AI</button></div>
+<div id="sU16" class="ai-response-box" style="display:none;"></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Modern MCS Trends</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLrC8GDJLJZ9e6jK8t5W5V5W5V5W5V5W5V" title="Modern MCS Trends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<ul>
+<li><strong>SMEs:</strong> Limited resources, informal controls, owner-driven, less formalized MCS</li>
+<li><strong>Knowledge Organizations:</strong> Intellectual capital management, knowledge workers, innovation focus</li>
+<li><strong>Development Organizations:</strong> Social objectives, donor requirements, impact measurement</li>
+</ul></div>
+<div class="db"><table>
+<thead><tr><th>Organization Type</th><th>MCS Characteristics</th><th>Control Mechanisms</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td>SME</td><td>Informal, owner-driven, flexible</td><td>Personal supervision, family oversight, cash flow monitoring</td><td>Haldiram's (before corporatization) — family-run controls</td></tr>
+<tr><td>Knowledge Org</td><td>Innovation-focused, flat structure</td><td>Patent tracking, R&D ROI, knowledge sharing metrics</td><td>IIT research labs, DRDO projects</td></tr>
+<tr><td>Development Org</td><td>Social impact, donor accountability</td><td>Cost per beneficiary, outcome measurement, fund utilization</td><td>CRY (Child Rights and You), Akshaya Patra</td></tr>
+<tr><td>Startup</td><td>Lean, agile, pivot-capable</td><td>Burn rate, runway, customer acquisition cost, GMV</td><td>Zerodha — bootstrapped, informal controls until scale</td></tr>
+</tbody></table></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Intellectual Capital Components</div>
+<ul>
+<li><strong>Human Capital:</strong> Skills, knowledge, experience of employees (e.g., Infosys' 300,000+ workforce)</li>
+<li><strong>Structural Capital:</strong> Processes, databases, patents, IT systems (e.g., TCS's Ignio AI platform)</li>
+<li><strong>Relational Capital:</strong> Customer relationships, brand value, partnerships (e.g., HDFC Bank's 68M+ customer base)</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>A Mumbai startup (50 employees) uses informal weekly reviews and WhatsApp groups for MCS — formal ERP would be overkill at this stage. Zoho Corporation (Chennai) uses a unique "shadow CEO" model where senior engineers rotate through leadership roles — a knowledge organization's approach to MCS.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>SMEs use more informal controls — explain why formal MCS may not always be appropriate.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SKD</strong> = SMEs, Knowledge orgs, Development orgs (special types)</p></div>
+<div class="summary-box"><div class="summary-label">&#x2B50; Summary</div><ul>
+<li>SMEs thrive with informal controls; formal MCS can be overkill</li>
+<li>Knowledge orgs manage intellectual capital; development orgs measure social impact</li>
+</ul></div>
+</div>
+
+<!-- MCS FRAMEWORK OVERVIEW -->
+<div class="unit" id="framework-overview">
+<h3>MCS Framework Overview — The Big Picture</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; MCS Framework Components</div>
+<p>A complete Management Control System has these interconnected components:</p>
+<ol>
+<li><strong>Strategic Planning:</strong> Setting long-term direction (3-5 year plans, vision, mission)</li>
+<li><strong>Responsibility Structure:</strong> Defining who controls what (cost, revenue, profit, investment centres)</li>
+<li><strong>Budgeting:</strong> Translating strategy into financial plans (fixed, flexible, ZBB, rolling)</li>
+<li><strong>Transfer Pricing:</strong> Setting prices for internal transactions (market, cost, negotiated)</li>
+<li><strong>Performance Measurement:</strong> Tracking results (ROI, RI, EVA, BSC, KPIs)</li>
+<li><strong>Reward Systems:</strong> Motivating desired behavior (bonuses, stock options, recognition)</li>
+<li><strong>Control Techniques:</strong> Supporting tools (TQM, JIT, ABC, benchmarking)</li>
+</ol>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Master Framework Mnemonic</div>
+<p><strong>S-R-B-T-P-R-C</strong> = Strategic planning, Responsibility structure, Budgeting, Transfer pricing, Performance measurement, Rewards, Control techniques</p>
+</div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>Master Mnemonics Table</h3>
+<div class="db"><table>
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td>ARP</td><td>Action, Results, Personnel</td><td>3 types of controls (Merchant)</td></tr>
+<tr><td>POSDCORB</td><td>Planning, Organizing, Staffing, Directing, Controlling, Reporting, Budgeting</td><td>7 management functions</td></tr>
+<tr><td>CRPI</td><td>Cost, Revenue, Profit, Investment</td><td>4 responsibility centre types</td></tr>
+<tr><td>RRE</td><td>ROI, RI, EVA</td><td>Investment centre metrics</td></tr>
+<tr><td>MNC</td><td>Market, Negotiated, Cost-based</td><td>Transfer pricing methods</td></tr>
+<tr><td>SMAC</td><td>Standard, Measure, Analyze, Correct</td><td>Cybernetic control loop</td></tr>
+<tr><td>FCIL</td><td>Financial, Customer, Internal, Learning</td><td>Balanced Scorecard perspectives</td></tr>
+<tr><td>TJAB</td><td>TQM, JIT, ABC, Benchmarking</td><td>Management control techniques</td></tr>
+<tr><td>TCSQ</td><td>Time, Cost, Scope, Quality</td><td>Project control dimensions</td></tr>
+<tr><td>FZ-R</td><td>Fixed, ZBB, Rolling + Flexible</td><td>Budget types</td></tr>
+<tr><td>CTF-L</td><td>Clear, Timely, Fair, Linked</td><td>Incentive design principles</td></tr>
+</tbody></table></div>
+
+<!-- KEY FRAMEWORKS -->
+<div class="visual-diagram"><h5>&#x1F4CA; Anthony's Framework</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Strategic Planning (What to do) &#x2014; Long-term direction</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Management Control (How to do it) &#x2014; Resource allocation &amp; utilization</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Operational Control (Doing it) &#x2014; Day-to-day execution</div>
+</div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Responsibility Centre Hierarchy</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Investment Centre (Costs + Revenue + Assets) &#x2014; ROI, RI, EVA</div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Profit Centre (Costs + Revenue) &#x2014; Profit</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem">Cost Centre (Costs only)</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem">Revenue Centre (Revenue only)</div>
+</div>
+</div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Balanced Scorecard Cause-Effect</h5>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">Learning &amp; Growth<br><small>(Drivers)</small></div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">Internal Process<br><small>(Execution)</small></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,0.6)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">Customer<br><small>(Market)</small></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(52,211,153,0.2);border:1px solid rgba(52,211,153,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">Financial<br><small>(Results)</small></div>
+</div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; ROI vs RI vs EVA (Simple to Comprehensive)</h5>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">ROI<br><small>Profit / Investment x 100</small></div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,0.2);border:1px solid rgba(108,99,255,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">RI<br><small>Profit - (Investment x Required%)</small></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,0.6)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);padding:0.6rem;border-radius:8px;font-size:0.85rem;text-align:center">EVA<br><small>NOPAT - (WACC x Capital)</small></div>
+</div></div>
+</div>
+
+<!-- KEY COMPARISONS -->
+<div class="unit" id="comparisons">
+<h3>Key Comparisons</h3>
+<div class="db"><table>
+<thead><tr><th>Concept</th><th>Option A</th><th>Option B</th><th>When to Use</th></tr></thead>
+<tbody>
+<tr><td>Control Types</td><td>Action (rules, procedures)</td><td>Results (outcomes, KPIs)</td><td>Action: when process matters; Results: when outcome matters</td></tr>
+<tr><td>Budget: Fixed vs Flexible</td><td>One activity level</td><td>Multiple activity levels</td><td>Fixed: stable environment; Flexible: variable activity</td></tr>
+<tr><td>Transfer: Market vs Cost</td><td>External market price</td><td>Cost-based pricing</td><td>Market: competitive market exists; Cost: no market</td></tr>
+<tr><td>ROI vs RI</td><td>May reject good projects</td><td>Accepts all above cost of capital</td><td>RI is superior for goal congruence</td></tr>
+<tr><td>PERT vs CPM</td><td>Probabilistic (3 estimates)</td><td>Deterministic (1 estimate)</td><td>PERT: uncertain times; CPM: known times</td></tr>
+<tr><td>Centralization vs Decentralization</td><td>Tight control, consistency</td><td>Autonomy, faster decisions</td><td>Centralize: small org, critical decisions; Decentralize: large MNCs</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- INDIAN MCS LANDSCAPE -->
+<div class="unit" id="indian-mcs">
+<h3>Indian MCS Landscape — How Top Companies Control</h3>
+<div class="db"><table>
+<thead><tr><th>Company</th><th>Industry</th><th>MCS Focus</th><th>Key Control Mechanism</th></tr></thead>
+<tbody>
+<tr><td>Tata Group</td><td>Conglomerate</td><td>ROI, EVA per subsidiary</td><td>Tata Sons evaluates each company on ROCE; ethical code (Tata Code of Conduct)</td></tr>
+<tr><td>Infosys</td><td>IT Services</td><td>Revenue/employee, utilization</td><td>Balanced Scorecard across 4 perspectives; ESG-linked incentives since 2020</td></tr>
+<tr><td>Reliance Industries</td><td>Conglomerate</td><td>Divisional P&L, transfer pricing</td><td>Each business (Jio, Retail, O2C) as separate profit centre; centralized treasury</td></tr>
+<tr><td>HDFC Bank</td><td>Banking</td><td>NPA ratio, CASA, CAR</td><td>Basel III compliance; branch-level profit centres; digital banking KPIs</td></tr>
+<tr><td>Maruti Suzuki</td><td>Automotive</td><td>Cost per car, inventory days</td><td>JIT with 200+ suppliers in 50km radius; standard costing; variance analysis</td></tr>
+<tr><td>SBI</td><td>Banking</td><td>Credit growth, NPA, deposits</td><td>Annual budgeting; branch-level responsibility centres; rolling forecasts</td></tr>
+<tr><td>TCS</td><td>IT Services</td><td>Utilization, revenue growth</td><td>Quarterly rolling budgets; project-level P&L; client satisfaction scores</td></tr>
+<tr><td>Wipro</td><td>IT Services</td><td>BSC implementation</td><td>Pioneered BSC in India; tracks all 4 perspectives; improved retention 85% to 92%</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- KEY FORMULAS -->
+<div class="unit" id="formulas">
+<h3>Key Formulas</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Formula Sheet</div>
+<ul>
+<li><strong>ROI</strong> = Profit / Investment × 100</li>
+<li><strong>RI</strong> = Profit - (Investment × Required Rate of Return)</li>
+<li><strong>EVA</strong> = NOPAT - (WACC × Capital)</li>
+<li><strong>Variance</strong> = Actual - Budget (Favorable if positive, Unfavorable if negative)</li>
+<li><strong>Profit</strong> = Revenue - Costs</li>
+</ul></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Quick Numerical Example</div>
+<p>Division with ₹50L profit on ₹200L investment. Required rate = 12%, WACC = 10%. ROI = 50/200 × 100 = 25%. RI = 50 - (200 × 12%) = ₹26L. If NOPAT = ₹45L, EVA = 45 - (200 × 10%) = ₹25L.</p></div>
+</div>
+
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3>Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; One-Liners</div>
+<ul>
+<li>MCS = Process of influencing members to implement strategies (Anthony & Govindarajan)</li>
+<li>POSDCORB = Planning, Organizing, Staffing, Directing, Controlling, Reporting, Budgeting</li>
+<li>ARP = Action, Results, Personnel — Merchant's 3 control types</li>
+<li>CRPI = Cost → Revenue → Profit → Investment centres (increasing scope)</li>
+<li>ROI = Profit/Investment; RI considers cost of capital; EVA = NOPAT - (WACC × Capital)</li>
+<li>Transfer pricing = Market, Cost-based, Negotiated — must achieve goal congruence</li>
+<li>BSC = Financial + Customer + Internal Process + Learning & Growth (Kaplan & Norton)</li>
+<li>TQM = continuous quality; JIT = zero inventory; ABC = activity-based costs</li>
+<li>Service orgs have no inventory buffer — quality hard to measure; need different metrics</li>
+<li>MNCs face currency risk + cultural differences + regulations + political risk</li>
+<li>Projects: PERT (probabilistic, 3 estimates) vs CPM (deterministic, 1 estimate)</li>
+<li>SMEs use informal controls; Knowledge orgs manage intellectual capital</li>
+<li>Cybernetic loop = Standard → Measure → Compare → Correct (SMAC mnemonic)</li>
+<li>ZBB forces justification from zero; Rolling budgets continuously update</li>
+</ul></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>Exam Focus</h3>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<ol>
+<li><strong>ROI, RI, EVA</strong> — Formula + Numerical problems + Comparison (10-15 marks)</li>
+<li><strong>Balanced Scorecard</strong> — Draw diagram, explain 4 perspectives with examples (8-10 marks)</li>
+<li><strong>Transfer Pricing</strong> — 3 methods, when to use each, goal congruence (8-10 marks)</li>
+<li><strong>Responsibility Centres</strong> — Compare 4 types with examples (5-8 marks)</li>
+<li><strong>Budgeting</strong> — ZBB vs Traditional, Flexible vs Fixed (5-8 marks)</li>
+<li><strong>Merchant's 3 Controls</strong> — Action, Results, Personnel with examples (5 marks)</li>
+</ol></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Expected Question Patterns</div>
+<ul>
+<li><strong>Define and Differentiate:</strong> "Compare ROI, RI, and EVA with examples" — use the formula sheet + numerical</li>
+<li><strong>Numerical Problems:</strong> "Calculate ROI, RI, and EVA for the given data" — show all steps, write formulas first</li>
+<li><strong>Framework Application:</strong> "Apply Balanced Scorecard to a manufacturing company" — use all 4 perspectives</li>
+<li><strong>Case Study:</strong> "Design MCS for a service organization" — discuss control types, metrics, challenges</li>
+<li><strong>Short Notes:</strong> "Zero Base Budgeting", "Transfer Pricing methods", "TQM and MCS"</li>
+</ul>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Model Answer Structure</div>
+<ol>
+<li>Definition (1-2 sentences)</li>
+<li>Framework/Formula (with diagram)</li>
+<li>Explanation (2-3 points)</li>
+<li>Example (real-world application)</li>
+<li>Advantages/Disadvantages (balanced view)</li>
+<li>Conclusion (linking back to MCS)</li>
+</ol></div>
+</div>
+
+</main>
+</div>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function() {
+    // Unit fade-in observer
+    var unitObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                unitObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.unit').forEach(function(el) {
+        el.classList.add('fade-in');
+        unitObserver.observe(el);
+    });
+
+    // Scroll-triggered animations with IntersectionObserver
+    var selectors = ['h3[id]', '.callout', '.visual-diagram', '.summary-box', '.br', '.db'];
+    document.querySelectorAll(selectors.join(',')).forEach(function(el, i) {
+        el.classList.add('animate-on-scroll');
+        el.style.transitionDelay = (i % 6) * 0.05 + 's';
+    });
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+
+    // Scroll handler for reading progress bar and sidebar active state
+    window.addEventListener('scroll', function() {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+        document.getElementById('readingProgress').style.width = p + '%';
+        var u = document.querySelectorAll('.unit');
+        var l = document.querySelectorAll('.sidebar-nav a[href^="#u"]');
+        var c = '';
+        u.forEach(function(e) { if (e.getBoundingClientRect().top < 200) c = e.id; });
+        l.forEach(function(e) { e.classList.toggle('active', e.getAttribute('href') === '#' + c); });
+    });
+})();
+</script>
+    <script src="enhancements.js"></script>
+    <script src="revision-mode.js"></script>
+    <script src="pwa-register.js"></script>
+<!-- MMPF-03: Management Control Systems - Content enriched with MCS framework, transfer pricing methods, budget types, BSC details, PERT/CPM, Indian examples from Tata, Infosys, Reliance, HDFC, Maruti, SBI, TCS, Wipro -->
+<!-- Last updated: 2026-05-19 | Enhanced with full content transfer from enhanced markdown source -->
+</body>
+</html>

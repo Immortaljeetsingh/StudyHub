@@ -1,0 +1,123 @@
+/* ===== STUDY HUB GLOBAL FIXES ===== */
+
+/* 1. Sizing and Alignment */
+.study-layout {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.study-content {
+    padding: 2.5rem 4rem !important;
+}
+@media (max-width: 900px) {
+    .study-content {
+        padding: 1.5rem !important;
+    }
+}
+
+/* 2. Buttons and Interactions */
+.action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin: 2rem 0 !important;
+}
+
+.btn {
+    padding: 0.8rem 1.75rem !important;
+    border-radius: 12px !important; /* Modern rounded aesthetic */
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease !important;
+}
+.btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+    border: 1px solid rgba(108,99,255,0.4) !important;
+    color: #e0e0ff !important;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, rgba(108,99,255,0.25), rgba(0,210,255,0.2)) !important;
+    border-color: rgba(108,99,255,0.6) !important;
+    color: #fff !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(16,185,129,0.1)) !important;
+    border: 1px solid rgba(52,211,153,0.4) !important;
+    color: #a7f3d0 !important;
+}
+.btn-success:hover {
+    background: linear-gradient(135deg, rgba(52,211,153,0.25), rgba(16,185,129,0.2)) !important;
+    border-color: rgba(52,211,153,0.6) !important;
+    color: #fff !important;
+}
+
+/* 3. Structural & Graphics Issues */
+/* Dim background particles to reduce visual clutter/graphics issues */
+body::after {
+    opacity: 0.4 !important;
+}
+
+/* Fix Card Grids layout so it doesn't break on narrow screens */
+.cg {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+}
+.cc {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem !important;
+    border-radius: 16px !important;
+}
+
+/* Fix Callouts alignment and padding */
+.callout {
+    padding: 1.5rem !important;
+    border-radius: 14px !important;
+    margin: 2rem 0 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+.callout-label {
+    margin-bottom: 1rem !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Fix Visual Diagram graphics */
+.visual-diagram {
+    padding: 2.5rem 2rem !important;
+    border-radius: 20px !important;
+    background: rgba(255,255,255,0.02) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: inset 0 0 30px rgba(255,255,255,0.01) !important;
+}
+.vd-step {
+    border-radius: 10px !important;
+    padding: 14px 20px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Typographic Alignment / Sizing */
+h1, h2, h3 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.25rem !important;
+    line-height: 1.3 !important;
+}
+p {
+    margin-bottom: 1.25rem !important;
+    line-height: 1.8 !important;
+    font-size: 1.05rem !important;
+}

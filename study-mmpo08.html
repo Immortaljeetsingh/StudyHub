@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPO-08: Management of R&D and Innovation | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(108,99,255,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#6c63ff,#6c5ce7,#a29bfe,#6c63ff);background-size:300% 100%;animation:gS 4s ease-in-out infinite;border-radius:2px}@keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#6c63ff,#6c5ce7);border-radius:2px}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(108,99,255,.25),0 0 20px rgba(108,99,255,.1)!important;border-color:rgba(108,99,255,.4)!important}
+.callout{transition:transform .3s ease,box-shadow .3s ease!important}.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
+.study-sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sidebar-nav a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar-nav a:hover{background:rgba(255,255,255,.05);color:#6c63ff;padding-left:1rem}
+.sidebar-nav a.active{color:#6c63ff;background:rgba(108,99,255,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(108,99,255,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(108,99,255,.15),transparent 70%);animation:hG 8s ease-in-out infinite alternate}
+@keyframes hG{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
+.study-header h1{font-size:2rem;font-weight:800;color:#6c63ff;letter-spacing:-.03em;position:relative}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
+.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#6c63ff,#6c5ce7);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}
+.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
+.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}
+.callout-definition{background:rgba(108,99,255,.08);border-color:#6c63ff}
+.callout-example{background:rgba(0,210,255,.08);border-color:#00d2ff}
+.callout-examtip{background:rgba(255,107,107,.08);border-color:#ff6b6b}
+.callout-mnemonic{background:rgba(108,99,255,.08);border-color:#6c63ff}
+.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.callout-definition .callout-label{color:#6c63ff}
+.callout-example .callout-label{color:#00d2ff}
+.callout-examtip .callout-label{color:#ff6b6b}
+.callout-mnemonic .callout-label{color:#6c63ff}
+.summary-box{border:1px solid rgba(0,210,255,.3);background:linear-gradient(135deg,rgba(0,210,255,.05),rgba(108,99,255,.05));padding:1rem;border-radius:12px;margin:1rem 0;transition:transform .3s ease,box-shadow .3s ease}
+.summary-box:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(0,210,255,.15)}
+.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#00d4ff}
+.summary-box ul{padding-left:1.5rem;margin:0}
+.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}
+.visual-diagram{background:linear-gradient(135deg,rgba(108,99,255,.08),rgba(0,210,255,.06));border:1px solid rgba(108,99,255,.25);border-radius:16px;padding:24px;margin:20px 0;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.visual-diagram:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(108,99,255,.2)}
+.visual-diagram::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#6c63ff,#6c5ce7,#a29bfe)}
+.visual-diagram h5{color:#6c63ff;margin-bottom:16px;font-size:1.1em}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th{background:rgba(108,99,255,.15);color:#a29bfe;padding:.6rem .8rem;text-align:left;font-weight:600;border:1px solid rgba(255,255,255,.08)}
+td{padding:.5rem .8rem;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(108,99,255,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#6c63ff,#6c5ce7);color:white;border:none;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
+.section-badge{display:inline-block;background:linear-gradient(135deg,#6c63ff,#6c5ce7);color:#fff;font-size:.75em;padding:3px 10px;border-radius:20px;margin-left:10px;vertical-align:middle;font-weight:600}
+.expandable-content{max-height:0;overflow:hidden;transition:max-height .5s ease}.expandable-content.expanded{max-height:5000px}.expand-toggle{display:inline-block;padding:.4rem 1rem;background:linear-gradient(135deg,rgba(108,99,255,.15),rgba(108,99,255,.1));border:1px solid rgba(108,99,255,.3);border-radius:6px;color:#c8c8c8;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .3s ease}.expand-toggle:hover{background:linear-gradient(135deg,rgba(108,99,255,.25),rgba(108,99,255,.15));box-shadow:0 2px 10px rgba(200,200,200,.12)}
+.vd-flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}.vd-step{background:linear-gradient(135deg,rgba(108,99,255,.15),rgba(108,99,255,.1));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 16px;text-align:center;min-width:110px;transition:all .3s ease}.vd-step:hover{background:linear-gradient(135deg,rgba(108,99,255,.25),rgba(108,99,255,.18))}
+.vd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem}.vd-node{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;font-weight:500;margin:.3rem;transition:transform .2s ease,box-shadow .2s ease}.vd-node:hover{transform:scale(1.05);box-shadow:0 4px 15px rgba(108,99,255,.3)}
+.case-study{background:linear-gradient(135deg,rgba(108,99,255,.06),rgba(108,99,255,.04));border:1px solid rgba(108,99,255,.2);border-left:4px solid #6c63ff;border-radius:8px;padding:1.2rem;margin:1rem 0}.case-study h5{color:#6c63ff;margin-bottom:.5rem;font-weight:600}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}
+.back-link:hover{color:#6c63ff}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}
+.skip-link{position:absolute;top:-40px;left:0;background:#6c63ff;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#6c63ff,#a29bfe);z-index:9999;transition:width .1s;width:0%}
+.formula-block{background:rgba(108,99,255,.06);border:1px solid rgba(108,99,255,.2);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0;font-family:'Courier New',monospace;font-size:.9rem;color:rgba(255,255,255,.85);white-space:pre-wrap}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.study-sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.study-sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+</style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpo08">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-08'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar">
+<nav class="sidebar-nav">
+<div class="sidebar-header"><h3>Navigation</h3></div>
+<a href="#block1">Block-01 Fundamentals</a>
+<a href="#u1">Unit 1: R&amp;D Management</a>
+<a href="#u2">Unit 2: Innovation Concepts</a>
+<a href="#u3">Unit 3: Technology Lifecycle</a>
+<a href="#u4">Unit 4: National Innovation</a>
+<a href="#block2">Block-02 Strategy</a>
+<a href="#u5">Unit 5: R&amp;D Strategy</a>
+<a href="#u6">Unit 6: R&amp;D Planning</a>
+<a href="#u7">Unit 7: R&amp;D Organization</a>
+<a href="#u8">Unit 8: Project Selection</a>
+<a href="#block3">Block-03 Innovation</a>
+<a href="#u9">Unit 9: Innovation Management</a>
+<a href="#u10">Unit 10: NPD</a>
+<a href="#u11">Unit 11: Technology Transfer</a>
+<a href="#u12">Unit 12: Tech Absorption</a>
+<a href="#block4">Block-04 IP</a>
+<a href="#u13">Unit 13: IPR Overview</a>
+<a href="#u14">Unit 14: Patent Law</a>
+<a href="#u15">Unit 15: Copyright &amp; Trademark</a>
+<a href="#u16">Unit 16: Tech Valuation</a>
+<a href="#block5">Block-05 Advanced</a>
+<a href="#u17">Unit 17: R&amp;D Funding</a>
+<a href="#u18">Unit 18: Global R&amp;D</a>
+<a href="#u19">Unit 19: Emerging Trends</a>
+<a href="#u20">Unit 20: Case Studies</a>
+<a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
+<a href="#exam">&#x1F3AF; Exam Focus</a>
+<a href="quiz-mmpo08.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main class="study-content" id="main-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPO-08</span><h1>Management of R&amp;D and Innovation</h1>
+<p>Comprehensive Study Notes &#x2014; 20 Units &#x2022; 5 Blocks &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- BLOCK 1 -->
+<h2 id="block1">Block-01: R&amp;D Fundamentals</h2>
+
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: R&amp;D Management &#x2014; An Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>R&amp;D</strong> = Systematic investigation to discover new knowledge and applications.</p>
+<ul>
+<li><strong>Types:</strong> Basic Research, Applied Research, Experimental Development</li>
+<li><strong>R&amp;D as investment</strong> (long-term) vs cost (short-term accounting view)</li>
+<li><strong>R&amp;D intensity</strong> = R&amp;D expenditure / Sales revenue</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Basic Research:</strong> Original investigation to gain new knowledge without specific application</li>
+<li><strong>Applied Research:</strong> Directed toward a specific practical aim or objective</li>
+<li><strong>Experimental Development:</strong> Systematic work using existing knowledge to produce new materials, products, or processes</li>
+<li><strong>R&amp;D Intensity:</strong> Ratio of R&amp;D spending to sales revenue; indicator of innovation commitment</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; R&amp;D Lifecycle</h5>
+<div class="vd-flow">
+<div class="vd-step">Basic Research<br><small>(High uncertainty)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Applied Research</div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Development<br><small>(Moderate risk)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Commercialization<br><small>(Market risk)</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; R&amp;D Types Comparison</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Basic Research</th><th>Applied Research</th><th>Development</th></tr></thead>
+<tbody>
+<tr><td><strong>Goal</strong></td><td>New knowledge</td><td>Practical solution</td><td>Commercial product</td></tr>
+<tr><td><strong>Risk</strong></td><td>Highest</td><td>Medium</td><td>Lower</td></tr>
+<tr><td><strong>Timeline</strong></td><td>Longest</td><td>Medium</td><td>Shortest</td></tr>
+<tr><td><strong>Output</strong></td><td>Publications</td><td>Patents, prototypes</td><td>Products, processes</td></tr>
+<tr><td><strong>Funding</strong></td><td>Government</td><td>Mixed</td><td>Corporate</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>R&amp;D Management Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3xq4gjkpLLM" title="R&D Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Research</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7WBXRHMfbQY" title="Research Types" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Pharma companies spend 15-20% of revenue on R&amp;D (high intensity). Basic research discovers molecule, applied research develops drug formulation, development conducts clinical trials.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Understand the distinction between the three types of R&amp;D. Questions often ask about R&amp;D strategy alignment with business strategy.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"BAD-C"</strong> &#x2014; Basic research, Applied research, Development, Commercialization</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>R&amp;D = Basic Research + Applied Research + Experimental Development</li>
+<li>R&amp;D intensity = R&amp;D spend / Sales revenue</li>
+<li>Basic research has highest risk and longest timeline</li>
+<li>Pharma: 15-20% R&amp;D intensity (high commitment)</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Innovation Concepts &amp; Types</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>Innovation</strong> = converting ideas into commercially viable products/processes/services.</p>
+<ul>
+<li><strong>Types:</strong> Product, Process, Service, Business Model, Organizational</li>
+<li><strong>Incremental</strong> vs <strong>Radical</strong> vs <strong>Disruptive</strong> innovation</li>
+<li><strong>Innovation funnel:</strong> many ideas &gt; few successful innovations</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Innovation:</strong> Implementation of a new or significantly improved product, process, or method</li>
+<li><strong>Incremental Innovation:</strong> Small improvements to existing products/processes</li>
+<li><strong>Radical Innovation:</strong> Breakthrough changes creating new markets or disrupting existing ones</li>
+<li><strong>Disruptive Innovation:</strong> Innovation that creates new market by displacing established competitors (Christensen)</li>
+<li><strong>Open Innovation:</strong> Using external ideas and paths to market alongside internal R&amp;D (Chesbrough)</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Innovation Matrix</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th></th><th>Existing Market</th><th>New Market</th></tr></thead>
+<tbody>
+<tr><td><strong>Existing Tech</strong></td><td>Incremental</td><td>Market Development</td></tr>
+<tr><td><strong>New Tech</strong></td><td>Radical</td><td>Disruptive</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; S-Curve of Technology</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;padding:1rem">
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4);width:90%;text-align:center">Introduction &#x2192; Growth &#x2192; Maturity &#x2192; Decline</div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4);width:70%;text-align:center">Slow &#x2192; Rapid &#x2192; Plateau &#x2192; Decline</div>
+</div>
+</div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Closed Innovation</th><th>Open Innovation</th></tr></thead>
+<tbody>
+<tr><td><strong>Ideas source</strong></td><td>Internal only</td><td>Internal + External</td></tr>
+<tr><td><strong>R&amp;D boundary</strong></td><td>Firm</td><td>Ecosystem</td></tr>
+<tr><td><strong>IP strategy</strong></td><td>Protect all</td><td>Selective sharing</td></tr>
+<tr><td><strong>Example</strong></td><td>Bell Labs</td><td>Procter &amp; Gamble</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Disruptive Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fKo0H4LHo5I" title="Disruptive Innovation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Open Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3hMNMJ2p48c" title="Open Innovation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>iPhone was disruptive innovation &#x2014; created new smartphone market that displaced Nokia/BlackBerry. Subsequent iPhone models are incremental innovations.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know Christensen's disruptive innovation theory and Chesbrough's open innovation model. Compare and contrast types of innovation.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PRIS-ORID"</strong> &#x2014; Product, Process, Incremental, Service, Open, Radical, Incremental, Disruptive</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Innovation types: incremental, radical, disruptive, open</li>
+<li>Innovation funnel: many ideas &gt; few successful innovations</li>
+<li>iPhone = disruptive; subsequent models = incremental</li>
+<li>Closed vs Open innovation: Bell Labs vs P&amp;G</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Technology Lifecycle &amp; Diffusion</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p>Technology evolves through <strong>S-curve</strong>: introduction, growth, maturity, decline. Diffusion follows bell curve: innovators (2.5%) &gt; early adopters (13.5%) &gt; early majority (34%) &gt; late majority (34%) &gt; laggards (16%).</p>
+<ul>
+<li><strong>Technology Push:</strong> Innovation driven by R&amp;D capabilities (supply-side)</li>
+<li><strong>Market Pull:</strong> Innovation driven by customer needs (demand-side)</li>
+<li><strong>Crossing the Chasm:</strong> Gap between early adopters and early majority (Moore)</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Technology Lifecycle:</strong> Stages a technology goes through from emergence to obsolescence</li>
+<li><strong>Technology Diffusion:</strong> Process by which innovation spreads through market/social system</li>
+<li><strong>Crossing the Chasm:</strong> Gap between early adopters and early majority (Moore)</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Rogers' Adoption Categories</h5>
+<div class="vd-flow">
+<div class="vd-step">Innovators<br><small>2.5%</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Early Adopters<br><small>13.5%</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Early Majority<br><small>34%</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Late Majority<br><small>34%</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Laggards<br><small>16%</small></div>
+</div>
+</div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Technology Push</th><th>Market Pull</th></tr></thead>
+<tbody>
+<tr><td><strong>Driver</strong></td><td>R&amp;D discovery</td><td>Customer need</td></tr>
+<tr><td><strong>Risk</strong></td><td>High (market unknown)</td><td>Lower (need exists)</td></tr>
+<tr><td><strong>Example</strong></td><td>Post-it Notes</td><td>Fuel-efficient cars</td></tr>
+</tbody></table></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Technology S-Curve</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/u1w0ZMjz5gE" title="S-Curve" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Diffusion of Innovation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6uXNfZ3GHrA" title="Diffusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Electric vehicles followed the technology S-curve &#x2014; slow initial adoption (2010-2018), rapid growth phase (2019-2025), with Tesla crossing the chasm from early adopters to early majority. Smartphones similarly followed Rogers' diffusion curve from innovators (2007) to laggards adopting by 2015.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Draw and explain the S-curve. Know Rogers' diffusion categories with percentages.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"SIGMA-TECH"</strong> &#x2014; S-curve, Innovators, Growth, Maturity, Adoption, Technology push, Early adopters, Crossing chasm, Market pull, Hype cycle</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>S-curve: intro &gt; growth &gt; maturity &gt; decline</li>
+<li>Rogers' adoption: innovators (2.5%) to laggards (16%)</li>
+<li>Technology push vs market pull risk profiles</li>
+<li>Crossing the chasm: early adopters to early majority</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: National Systems of Innovation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>Innovation system</strong> = network of institutions affecting how technology is developed and diffused.</p>
+<ul>
+<li><strong>Triple Helix Model:</strong> University-Industry-Government interaction</li>
+<li><strong>National Innovation System (NIS):</strong> policies, institutions, and practices supporting innovation</li>
+<li><strong>India's NIS:</strong> DST, DSIR, CSIR (37 national labs), IITs, NITs, startup ecosystem</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>National Innovation System (NIS):</strong> Set of institutions whose interactions determine innovative performance of national firms</li>
+<li><strong>Triple Helix Model:</strong> Interaction between university, industry, and government for innovation</li>
+<li><strong>Science &amp; Technology Policy:</strong> Government framework for directing R&amp;D investments</li>
+</ul>
+
+<h4>India's Innovation Ecosystem</h4>
+<ul>
+<li><strong>DST</strong> (Department of Science &amp; Technology) &#x2014; policy and funding</li>
+<li><strong>CSIR</strong> (Council of Scientific &amp; Industrial Research) &#x2014; 37 national labs</li>
+<li><strong>DSIR</strong> (Department of Scientific &amp; Industrial Research) &#x2014; industrial R&amp;D recognition</li>
+<li><strong>Atal Innovation Mission, Startup India, Make in India</strong></li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Triple Helix Model</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>University</strong><br><small>Research &amp; Education</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Industry</strong><br><small>Commercialization</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Government</strong><br><small>Policy &amp; Funding</small></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>National Innovation Systems</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SC_iM1X1bVw" title="NIS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>India's NIS produced ISRO's Mars Orbiter Mission (Mangalyaan) at $74M &#x2014; cheaper than a Hollywood film. Triple Helix: IITs (University) + ISRO/DRDO (Government) + L&amp;T/Tata (Industry) collaborated on Chandrayaan-3.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know the Triple Helix model and India's key innovation institutions. India's R&amp;D spending as % of GDP is ~0.7%.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"NIS-TUG"</strong> &#x2014; National Innovation System, Triple Helix: University, Industry, Government</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Triple Helix: University-Industry-Government</li>
+<li>India: DST, CSIR, DSIR, Atal Innovation Mission</li>
+<li>Mangalyaan: $74M &#x2014; frugal innovation at scale</li>
+<li>India's R&amp;D spending: ~0.7% of GDP</li>
+</ul></div>
+</div></div>
+
+<!-- BLOCK 2 -->
+<h2 id="block2">Block-02: R&amp;D Strategy &amp; Planning</h2>
+
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: R&amp;D Strategy Formulation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p>R&amp;D strategy must align with corporate and business strategy.</p>
+<ul>
+<li><strong>Three R&amp;D strategies:</strong> Leader, Fast Follower, Niche</li>
+<li><strong>Technology portfolio management</strong> (balance risk/reward)</li>
+<li><strong>R&amp;D budget allocation:</strong> offensive vs defensive R&amp;D</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>R&amp;D Strategy:</strong> Plan for managing research and development to achieve competitive advantage</li>
+<li><strong>Technology Portfolio:</strong> Collection of R&amp;D projects balanced across risk, time horizon, and strategic importance</li>
+<li><strong>Offensive R&amp;D:</strong> Creating new products/processes to be first mover</li>
+<li><strong>Defensive R&amp;D:</strong> Improving existing products/processes to protect market position</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Strategy</th><th>Description</th><th>Risk</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Leader</strong></td><td>First to market with new technology</td><td>High</td><td>Apple (iPhone)</td></tr>
+<tr><td><strong>Fast Follower</strong></td><td>Quick imitation of leader</td><td>Medium</td><td>Samsung</td></tr>
+<tr><td><strong>Niche</strong></td><td>Focus on specific technology area</td><td>Medium</td><td>Qualcomm (chips)</td></tr>
+<tr><td><strong>Imitator</strong></td><td>Copy mature technology</td><td>Low</td><td>Generic pharma</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Apple invests heavily in offensive R&amp;D (new categories). Samsung is a fast follower (improves on Apple's innovations quickly).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Link R&amp;D strategy to Porter's generic strategies. Know when each strategy is appropriate.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"LFNI-OD"</strong> &#x2014; Leader, Fast follower, Niche, Imitator, Offensive vs Defensive</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>R&amp;D strategies: Leader, Fast Follower, Niche, Imitator</li>
+<li>Offensive R&amp;D = new products; Defensive R&amp;D = improve existing</li>
+<li>Align R&amp;D strategy with corporate and business strategy</li>
+<li>Technology portfolio: balance risk/reward across projects</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: R&amp;D Planning &amp; Budgeting</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>Stage-Gate Process:</strong> Project management dividing innovation into stages separated by decision gates.</p>
+<ul>
+<li><strong>R&amp;D planning:</strong> short-term (1-2 years) vs long-term (5-10 years)</li>
+<li><strong>Budget methods:</strong> percentage of sales, competitive parity, task-based, zero-based</li>
+<li><strong>R&amp;D project prioritization:</strong> scoring models, portfolio matrices</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>R&amp;D Budget:</strong> Allocated financial resources for research and development activities</li>
+<li><strong>Stage-Gate Process:</strong> Project management approach dividing innovation into stages separated by decision gates</li>
+<li><strong>Portfolio Matrix:</strong> Tool for categorizing R&amp;D projects by risk and potential return</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Method</th><th>Description</th><th>Pros</th><th>Cons</th></tr></thead>
+<tbody>
+<tr><td><strong>% of Sales</strong></td><td>Fixed % of revenue</td><td>Simple, stable</td><td>Ignores opportunities</td></tr>
+<tr><td><strong>Competitive Parity</strong></td><td>Match competitors</td><td>Market-responsive</td><td>Blind following</td></tr>
+<tr><td><strong>Task-Based</strong></td><td>Budget per project needs</td><td>Precise</td><td>Time-consuming</td></tr>
+<tr><td><strong>Zero-Based</strong></td><td>Justify from scratch</td><td>Efficient</td><td>Unstable</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Stage-Gate Process</h5>
+<div class="vd-flow">
+<div class="vd-step">Discovery<br><small>Gate 1</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Scoping<br><small>Gate 2</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Business Case<br><small>Gate 3</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Development<br><small>Gate 4</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Testing<br><small>Gate 5</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Launch</div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Amazon uses zero-based budgeting for AWS R&amp;D &#x2014; each project must justify funding from scratch annually. Pfizer used task-based budgeting for COVID vaccine, allocating $2B for BNT162b2 with stage-gate milestones.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know at least 3 budget methods with pros/cons. Explain stage-gate with a diagram.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"BUDGET-SG"</strong> &#x2014; Budget methods: Task-based, Zero-based, Competitive parity, % of Sales; Stage-Gate process</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Stage-Gate: Discovery &gt; Scoping &gt; Business Case &gt; Development &gt; Testing &gt; Launch</li>
+<li>4 budget methods with pros/cons</li>
+<li>Zero-based = justify from scratch each year</li>
+<li>Task-based = budget per project needs (precise but time-consuming)</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: R&amp;D Organization Structure</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Centralized R&amp;D:</strong> All R&amp;D activities under one organizational unit</li>
+<li><strong>Decentralized R&amp;D:</strong> R&amp;D distributed across business units/divisions</li>
+<li><strong>Matrix Structure:</strong> Dual reporting (functional + project) for R&amp;D personnel</li>
+<li><strong>Cross-functional teams</strong> for innovation</li>
+<li><strong>R&amp;D labs:</strong> corporate, divisional, university-affiliated</li>
+</ul></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Structure</th><th>Advantages</th><th>Disadvantages</th></tr></thead>
+<tbody>
+<tr><td><strong>Centralized</strong></td><td>Economies of scale, focused expertise</td><td>Slower response, disconnected from markets</td></tr>
+<tr><td><strong>Decentralized</strong></td><td>Market-responsive, faster decisions</td><td>Duplication, fragmented knowledge</td></tr>
+<tr><td><strong>Matrix</strong></td><td>Best of both</td><td>Complexity, conflict potential</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Google uses hybrid structure &#x2014; centralized Google Research (AI/ML) plus decentralized product teams (Search, Cloud, Android). 3M uses matrix structure where researchers report to both lab directors and product divisions, enabling cross-pollination of ideas.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know when each structure is appropriate. Large diversified firms often use hybrid structures.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CDM-CT"</strong> &#x2014; Centralized, Decentralized, Matrix, Cross-functional Teams</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Centralized: scale but slow. Decentralized: fast but fragmented. Matrix: best of both but complex</li>
+<li>Large diversified firms often use hybrid structures</li>
+<li>Google: centralized research + decentralized product teams</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: R&amp;D Project Selection &amp; Evaluation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Project selection criteria:</strong> strategic fit, technical feasibility, market potential, financial return</li>
+<li><strong>Methods:</strong> scoring models, benefit-cost analysis, real options analysis</li>
+<li><strong>Portfolio approach:</strong> balance exploratory, platform, and incremental projects</li>
+<li><strong>TRL (Technology Readiness Level):</strong> Scale from 1 (basic principles) to 9 (proven technology)</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Project Scoring Model:</strong> Weighted criteria approach for evaluating and ranking R&amp;D projects</li>
+<li><strong>Real Options Analysis:</strong> Treats R&amp;D investment as options that can be exercised based on future information</li>
+<li><strong>Technology Readiness Level (TRL):</strong> Scale from 1 (basic principles) to 9 (proven technology)</li>
+</ul>
+
+<h4>TRL Scale</h4>
+<ul>
+<li><strong>TRL 1-3:</strong> Concept/Feasibility (basic research)</li>
+<li><strong>TRL 4-6:</strong> Development (applied research)</li>
+<li><strong>TRL 7-9:</strong> Deployment (demonstration to proven)</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>NASA uses TRL scale &#x2014; James Webb Space Telescope progressed from TRL 1 (1996) to TRL 9 (2021 launch). ISRO's Chandrayaan-3 used scoring models to prioritize landing technology over orbiter improvements.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know TRL scale and project selection methods. Real options analysis is a sophisticated approach worth explaining.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"SST-FTRL"</strong> &#x2014; Strategic fit, Scoring model, Technical feasibility, Financial return, TRL levels</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>TRL: 9-level scale from basic research to proven technology</li>
+<li>Selection criteria: strategic fit, feasibility, market potential, financial return</li>
+<li>Portfolio approach: balance exploratory, platform, and incremental projects</li>
+</ul></div>
+</div></div>
+
+<!-- BLOCK 3 -->
+<h2 id="block3">Block-03: Innovation &amp; NPD</h2>
+
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Innovation Management Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Innovation management</strong> = systematic process of nurturing ideas to market</li>
+<li><strong>Innovation funnel:</strong> wide input, narrow output (many ideas, few successes)</li>
+<li><strong>Stage-gate model</strong> for NPD (New Product Development)</li>
+<li><strong>Culture of innovation:</strong> tolerance for failure, experimentation</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Innovation Management:</strong> Process of managing innovation from idea generation to commercialization</li>
+<li><strong>Idea Funnel:</strong> Conceptual model showing filtering of ideas through evaluation stages</li>
+<li><strong>NPD (New Product Development):</strong> Complete process from concept to market launch</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Innovation Funnel</h5>
+<div class="vd-flow">
+<div class="vd-step">Ideas<br><small>(1000)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Concepts<br><small>(100)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Development<br><small>(10)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Launch<br><small>(1)</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>3M's "15% time" policy (employees spend 15% time on personal projects) led to Post-it Notes. Google's "20% time" led to Gmail. Both companies encourage experimentation and tolerate failure.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know the innovation funnel concept and how it relates to stage-gate process.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"IDCL"</strong> &#x2014; Idea generation, Development, Commercialization, Launch</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Innovation funnel: many ideas filtered to few successes</li>
+<li>Stage-gate model for NPD</li>
+<li>Culture: tolerance for failure + experimentation time</li>
+<li>3M 15% time, Google 20% time = innovation culture</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: New Product Development (NPD)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>NPD process:</strong> Idea Generation &gt; Screening &gt; Concept Development &gt; Business Analysis &gt; Product Development &gt; Test Marketing &gt; Commercialization</li>
+<li><strong>Concurrent engineering:</strong> parallel rather than sequential development</li>
+<li><strong>Lead users</strong> as source of innovation (von Hippel)</li>
+<li><strong>Design thinking:</strong> empathize, define, ideate, prototype, test</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Concurrent Engineering:</strong> Simultaneous design of product and manufacturing process</li>
+<li><strong>Lead Users:</strong> Users whose present needs will become general market demand in the future</li>
+<li><strong>Design Thinking:</strong> Human-centered approach to innovation integrating desirability, viability, feasibility</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Design Thinking Process</h5>
+<div class="vd-flow">
+<div class="vd-step">&#x1F60A; Empathize<br><small>(Understand)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">&#x1F4CC; Define<br><small>(Frame)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">&#x1F4A1; Ideate<br><small>(Generate)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">&#x1F3A8; Prototype<br><small>(Build)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">&#x1F9EA; Test<br><small>(Validate)</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>IDEO used design thinking to redesign shopping cart &#x2014; observed shoppers, identified pain points, prototyped solutions. Lead users (von Hippel) are key innovation source.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Compare traditional NPD stages with design thinking approach. Know concurrent vs sequential engineering.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"ESCBDC"</strong> &#x2014; Empathize, Screen, Concept, Business analysis, Development, Commercialization</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Design Thinking: Empathize &gt; Define &gt; Ideate &gt; Prototype &gt; Test</li>
+<li>Concurrent engineering: parallel not sequential</li>
+<li>Lead users: their needs become future market demand</li>
+<li>NPD: 7 stages from idea to commercialization</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Technology Transfer</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>Technology Transfer</strong> = movement of technology from source to recipient.</p>
+<ul>
+<li><strong>Modes:</strong> licensing, joint ventures, FDI, turnkey projects, technical agreements</li>
+<li><strong>Absorptive capacity:</strong> ability to recognize, assimilate, and apply new knowledge</li>
+<li><strong>Barriers:</strong> tacit knowledge, cultural differences, IP concerns</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Technology Transfer:</strong> Process of transferring technology, knowledge, and skills from one organization to another</li>
+<li><strong>Absorptive Capacity:</strong> Ability of a firm to recognize the value of new external information, assimilate it, and apply it</li>
+<li><strong>Tacit Knowledge:</strong> Knowledge that is difficult to transfer through writing or verbalization</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mode</th><th>Control</th><th>Cost</th><th>Risk</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Licensing</strong></td><td>Low</td><td>Low</td><td>Low</td><td>Franchise agreements</td></tr>
+<tr><td><strong>Joint Venture</strong></td><td>Medium</td><td>Medium</td><td>Medium</td><td>Maruti-Suzuki</td></tr>
+<tr><td><strong>FDI</strong></td><td>High</td><td>High</td><td>High</td><td>Samsung India</td></tr>
+<tr><td><strong>Turnkey</strong></td><td>Low</td><td>High</td><td>Medium</td><td>Power plant projects</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Maruti-Suzuki JV transferred Japanese auto manufacturing technology to India. India gained manufacturing capability; Suzuki gained market access.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Compare technology transfer modes with examples. Know Cohen &amp; Levinthal's absorptive capacity concept.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"LJFT-TA"</strong> &#x2014; Licensing, Joint venture, FDI, Turnkey, Technical agreements, Absorptive capacity</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Transfer modes: Licensing, JV, FDI, Turnkey</li>
+<li>Absorptive capacity = recognize + assimilate + apply</li>
+<li>Maruti-Suzuki = landmark technology transfer JV</li>
+<li>Tacit knowledge = hardest to transfer</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Technology Absorption &amp; Adaptation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Absorption</strong> = fully understanding and internalizing imported technology</li>
+<li><strong>Adaptation</strong> = modifying technology to suit local conditions</li>
+<li><strong>Indigenous technology development</strong> vs import</li>
+<li><strong>Technology gap analysis</strong></li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Technology Absorption:</strong> Process of fully understanding, mastering, and integrating imported technology</li>
+<li><strong>Technology Adaptation:</strong> Modifying imported technology to suit local conditions and requirements</li>
+<li><strong>Indigenous Technology:</strong> Technology developed within the country using local resources and capabilities</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Absorption Stages</h5>
+<div class="vd-flow">
+<div class="vd-step">Acquisition<br><small>(Import)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Assimilation<br><small>(Learn)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Adaptation<br><small>(Modify)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Improvement<br><small>(Enhance)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Innovation<br><small>(Create new)</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Tata Motors absorbed Jaguar Land Rover technology after 2008 acquisition &#x2014; adapted British luxury engineering for Indian manufacturing conditions. Maruti-Suzuki adapted Japanese kei car designs into India's Alto and WagonR through local component sourcing.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Distinguish between absorption and adaptation. Explain why developing countries need both.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"AAAII"</strong> &#x2014; Acquisition, Assimilation, Adaptation, Improvement, Innovation</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Absorption = internalize; Adaptation = modify for local conditions</li>
+<li>5 stages: AAAII</li>
+<li>Tata-JLR = absorption; Maruti = adaptation</li>
+<li>Indigenous tech = developed within country</li>
+</ul></div>
+</div></div>
+
+<!-- BLOCK 4 -->
+<h2 id="block4">Block-04: Intellectual Property</h2>
+
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Intellectual Property Rights (IPR) &#x2014; Overview</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<p><strong>IPR</strong> = legal rights protecting creations of the mind.</p>
+<ul>
+<li><strong>Types:</strong> Patents, Copyrights, Trademarks, Trade Secrets, Industrial Designs, Geographical Indications</li>
+<li><strong>TRIPS Agreement</strong> (WTO) sets minimum IP standards</li>
+<li><strong>IP strategy</strong> must align with business strategy</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Intellectual Property:</strong> Creations of the mind &#x2014; inventions, literary works, designs, symbols, names, images</li>
+<li><strong>TRIPS Agreement:</strong> WTO agreement on Trade-Related Aspects of Intellectual Property Rights</li>
+<li><strong>Fair Use:</strong> Limited use of copyrighted material without permission for education, criticism, etc.</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Protects</th><th>Duration</th><th>Registration</th></tr></thead>
+<tbody>
+<tr><td><strong>Patent</strong></td><td>Inventions</td><td>20 years</td><td>Required</td></tr>
+<tr><td><strong>Copyright</strong></td><td>Literary/artistic works</td><td>Life + 60 years</td><td>Automatic</td></tr>
+<tr><td><strong>Trademark</strong></td><td>Brand identity</td><td>10 years (renewable)</td><td>Required</td></tr>
+<tr><td><strong>Trade Secret</strong></td><td>Confidential info</td><td>Indefinite (if kept secret)</td><td>Not required</td></tr>
+<tr><td><strong>Industrial Design</strong></td><td>Product appearance</td><td>15 years</td><td>Required</td></tr>
+<tr><td><strong>GI</strong></td><td>Regional products</td><td>10 years (renewable)</td><td>Required</td></tr>
+</tbody></table></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; IP Types Hierarchy</h5>
+<div style="display:flex;flex-direction:column;gap:0.5rem;padding:1rem">
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4);width:100%;text-align:center"><strong>Intellectual Property</strong></div>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Industrial Property</strong><br><small>Patents (20y), Designs (15y), Trademarks (10y), GI (10y)</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Copyright</strong><br><small>Literary/Artistic Works (Life + 60y)</small></div>
+</div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Apple's IP portfolio includes 75,000+ patents (design + utility), trademarks for "iPhone," "App Store," and trade secrets for chip designs. India's Basmati rice GI battle with the US shows geographical indication importance &#x2014; India won GI protection in 2018.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know all IP types with duration and registration requirements. TRIPS Agreement is frequently asked.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PCTT-IG"</strong> &#x2014; Patent, Copyright, Trademark, Trade secret, Industrial design, GI</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>6 IP types with different durations and registration requirements</li>
+<li>TRIPS Agreement = WTO minimum standards</li>
+<li>Copyright is automatic; Patents require registration</li>
+<li>Trade secrets: indefinite if kept secret, no registration needed</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Patent Law &amp; Practice</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Patent</strong> = exclusive right to make, use, sell an invention for limited period</li>
+<li><strong>Patentability:</strong> Novelty, Non-obviousness, Utility, Sufficient disclosure</li>
+<li><strong>Indian Patents Act 1970</strong> (amended 2005 for TRIPS compliance)</li>
+<li><strong>Patent Cooperation Treaty (PCT)</strong> for international filing</li>
+<li><strong>Section 3d</strong> = anti-evergreening provision</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Patent:</strong> Exclusive right granted for an invention, providing the patent holder with the right to decide how the invention can be used by others</li>
+<li><strong>Prior Art:</strong> All publicly available information before filing date that relates to invention's novelty</li>
+<li><strong>Patent Infringement:</strong> Unauthorized use, manufacture, or sale of a patented invention</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Patent Filing Process (India)</h5>
+<div class="vd-flow">
+<div class="vd-step">Application<br><small>(Provisional/Complete)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Examination<br><small>(within 48 months)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Publication<br><small>(after 18 months)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Opposition<br><small>(if any)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Grant &amp; Renewal</div>
+</div>
+</div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Aspect</th><th>Patent</th><th>Trade Secret</th></tr></thead>
+<tbody>
+<tr><td><strong>Protection</strong></td><td>20 years</td><td>Indefinite</td></tr>
+<tr><td><strong>Registration</strong></td><td>Required</td><td>Not required</td></tr>
+<tr><td><strong>Disclosure</strong></td><td>Full disclosure</td><td>No disclosure</td></tr>
+<tr><td><strong>Enforcement</strong></td><td>Courts</td><td>Self-protection</td></tr>
+<tr><td><strong>Risk</strong></td><td>Expiration</td><td>Reverse engineering</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Indian pharma companies (Cipla, Dr. Reddy's) challenged Novartis's Glivec patent in India &#x2014; Supreme Court denied patent in 2013 (Section 3d anti-evergreening provision). This landmark case showed India's strict patentability standards prioritizing public health.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know patentability criteria. Compare patent vs trade secret. Indian Patents Act amendments are important.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"NNU-SD"</strong> &#x2014; Novelty, Non-obviousness, Utility, Sufficient disclosure</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Patentability: Novelty + Non-obviousness + Utility + Disclosure</li>
+<li>Section 3d = anti-evergreening (India-specific)</li>
+<li>Patent vs Trade Secret: disclosure vs secrecy trade-off</li>
+<li>Novartis case: India prioritized public health over patent</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Copyright, Trademark &amp; Other IP</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Copyright:</strong> protects expression, not ideas; automatic upon creation</li>
+<li><strong>Trademark:</strong> distinctive signs identifying goods/services; registration under Trademarks Act 1999</li>
+<li><strong>Trade secrets:</strong> confidential business information; protected by contract (NDA)</li>
+<li><strong>Industrial designs:</strong> aesthetic aspects of products</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Copyright:</strong> Exclusive right to reproduce, distribute, and display an original work of authorship</li>
+<li><strong>Trademark:</strong> Sign capable of distinguishing goods/services of one enterprise from another</li>
+<li><strong>Non-Disclosure Agreement (NDA):</strong> Legal contract establishing confidential relationship</li>
+</ul>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Indian Trademark Registration Process</h5>
+<div class="vd-flow">
+<div class="vd-step">Application</div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Examination</div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Publication<br><small>in Journal</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Opposition<br><small>(4 months)</small></div>
+<div class="vd-step">&#x2192;</div>
+<div class="vd-step">Registration<br><small>(Renew every 10y)</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Starbucks protects its siren logo trademark globally &#x2014; even small Indian cafes using similar circular green logos received cease-and-desist letters. J.K. Rowling's Harry Potter copyright generates $1B+ annually through licensing, showing the commercial value of IP protection.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know the difference between copyright (automatic) and trademark (registration required). Trademarks Act 1999 is important for Indian context.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-T-N-I"</strong> &#x2014; Copyright (automatic), Trademark (registered), NDA (trade secret), Industrial design (registered)</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Copyright = automatic; Trademark = registration required</li>
+<li>Trademarks Act 1999 (Indian context)</li>
+<li>Trade secrets protected by contract (NDA)</li>
+<li>Copyright: Life + 60 years in India</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u16">
+<h3 id="u16">Unit 16: Technology Valuation &amp; Licensing</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU16">&#x1F4AC; Ask AI</button></div>
+<div id="sU16">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Technology valuation:</strong> determining economic worth of technology/IP</li>
+<li><strong>Methods:</strong> cost approach, market approach, income approach (DCF)</li>
+<li><strong>Licensing:</strong> granting permission to use IP in exchange for royalties</li>
+<li><strong>Royalty structures:</strong> lump sum, running royalty, milestone payments</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Technology Valuation:</strong> Process of determining the monetary value of technology or intellectual property</li>
+<li><strong>Licensing Agreement:</strong> Contract granting permission to use IP under specified terms and conditions</li>
+<li><strong>Royalty:</strong> Payment made to IP holder for the right to use their technology</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Method</th><th>Basis</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Cost Approach</strong></td><td>Replacement cost of developing similar tech</td><td>R&amp;D investments</td></tr>
+<tr><td><strong>Market Approach</strong></td><td>Comparable transactions in market</td><td>Common technologies</td></tr>
+<tr><td><strong>Income Approach (DCF)</strong></td><td>Present value of future income stream</td><td>Revenue-generating IP</td></tr>
+</tbody></table></div>
+
+<h4>Licensing Structures</h4>
+<ul>
+<li><strong>Lump Sum:</strong> One-time payment</li>
+<li><strong>Running Royalty:</strong> % of sales revenue</li>
+<li><strong>Milestone Payments:</strong> Payments at achievement of specific targets</li>
+<li><strong>Hybrid:</strong> Combination of above</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Qualcomm earns $6B+ annually from patent licensing royalties on 3G/4G/5G technology &#x2014; running royalty model at ~3.25% of device sale price. India's CSIR licensed its anti-malarial drug to Cipla using milestone payments: upfront fee + payments at clinical trial stages.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know all three valuation methods. Income approach (DCF) is most commonly asked.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"CMI-LRM"</strong> &#x2014; Cost, Market, Income approaches; Lump sum, Running royalty, Milestone payments</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>3 valuation methods: Cost, Market, Income (DCF)</li>
+<li>Licensing: Lump sum, Running royalty, Milestone</li>
+<li>Income approach (DCF) most commonly asked</li>
+<li>Qualcomm: $6B+ from patent royalties</li>
+</ul></div>
+</div></div>
+
+<!-- BLOCK 5 -->
+<h2 id="block5">Block-05: Advanced Topics</h2>
+
+<div class="unit" id="u17">
+<h3 id="u17">Unit 17: R&amp;D Funding &amp; Finance</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU17">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU17">&#x1F4AC; Ask AI</button></div>
+<div id="sU17">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Sources:</strong> internal (retained earnings), external (grants, VC, equity, debt)</li>
+<li><strong>Government funding:</strong> DST, DBT, DSIR, SERB, Atal Innovation Mission</li>
+<li><strong>Venture capital</strong> and angel investors for startups</li>
+<li><strong>R&amp;D tax incentives:</strong> Section 80-IB, weighted deduction</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Venture Capital (VC):</strong> Private equity funding for early-stage, high-potential startups</li>
+<li><strong>Angel Investor:</strong> High-net-worth individual providing capital for startups</li>
+<li><strong>R&amp;D Tax Incentive:</strong> Government tax benefits for companies investing in R&amp;D</li>
+</ul>
+
+<h4>India's R&amp;D Funding Sources</h4>
+<ul>
+<li><strong>Government:</strong> DST, DBT, CSIR, DRDO, ISRO, SERB</li>
+<li><strong>Private:</strong> Corporate R&amp;D, VC/PE funding</li>
+<li><strong>International:</strong> World Bank, bilateral S&amp;T agreements</li>
+<li><strong>VC Stages:</strong> Seed, Series A, B, C</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Ola Electric raised $200M+ through Series A-D rounds from SoftBank, Tiger Global, and Matrix Partners. India's DST provided &#x20B9;10,000 Cr under the National Mission on Electric Mobility. Flipkart's $16B Walmart acquisition shows VC exit potential.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know India's key funding agencies and their roles. VC funding stages (seed, Series A, B, C) are important.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"GVE-80IB"</strong> &#x2014; Government grants, VC/PE, Equity/Debt, 80-IB tax incentive</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Funding: Government + Private + International</li>
+<li>VC stages: Seed &gt; Series A &gt; B &gt; C</li>
+<li>Section 80-IB tax incentive for R&amp;D</li>
+<li>Flipkart $16B Walmart exit = VC potential</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u18">
+<h3 id="u18">Unit 18: Global R&amp;D Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU18">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU18">&#x1F4AC; Ask AI</button></div>
+<div id="sU18">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Global R&amp;D:</strong> locating R&amp;D centers in multiple countries</li>
+<li><strong>Drivers:</strong> access to talent, proximity to markets, cost advantages</li>
+<li><strong>Challenges:</strong> coordination, knowledge transfer, cultural differences</li>
+<li><strong>India</strong> as global R&amp;D hub (GE, Microsoft, Google R&amp;D centers)</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Global R&amp;D Network:</strong> Distributed R&amp;D operations across multiple countries for strategic advantage</li>
+<li><strong>Center of Excellence (CoE):</strong> Specialized unit within global R&amp;D network with deep expertise</li>
+</ul>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Factor</th><th>Description</th><th>India's Strength</th></tr></thead>
+<tbody>
+<tr><td><strong>Talent pool</strong></td><td>Skilled researchers/engineers</td><td>Large STEM workforce</td></tr>
+<tr><td><strong>Cost</strong></td><td>R&amp;D operating costs</td><td>40-60% lower than US/EU</td></tr>
+<tr><td><strong>Market proximity</strong></td><td>Near target customers</td><td>Large domestic market</td></tr>
+<tr><td><strong>Infrastructure</strong></td><td>Labs, equipment, connectivity</td><td>Improving (SEZs, tech parks)</td></tr>
+<tr><td><strong>IP protection</strong></td><td>Legal framework</td><td>Improving (TRIPS compliance)</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Microsoft's Hyderabad R&amp;D center (2,000+ engineers) develops Azure and AI products. GE's Bengaluru John F. Welch Technology Centre is GE's largest R&amp;D hub outside the US. Challenge example: IBM struggled with time-zone coordination between US and India teams until implementing "follow-the-sun" development model.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Explain why MNCs set up R&amp;D in India. Know challenges of managing distributed R&amp;D.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"TCMIC"</strong> &#x2014; Talent, Cost, Market, Infrastructure, Culture</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Global R&amp;D drivers: talent, cost, market, infrastructure, IP</li>
+<li>India: 40-60% cost advantage, large STEM workforce</li>
+<li>"Follow-the-sun" model for distributed teams</li>
+<li>GE Bengaluru = largest R&amp;D hub outside US</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u19">
+<h3 id="u19">Unit 19: Emerging Trends in R&amp;D &amp; Innovation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU19">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU19">&#x1F4AC; Ask AI</button></div>
+<div id="sU19">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li><strong>Digital transformation of R&amp;D</strong> (AI, ML, Big Data)</li>
+<li><strong>Frugal innovation (jugaad)</strong> &#x2014; doing more with less</li>
+<li><strong>Sustainability-driven innovation</strong> (green technology)</li>
+<li><strong>Collaborative innovation</strong> (industry-academia partnerships)</li>
+<li><strong>Innovation in emerging markets</strong> (reverse innovation)</li>
+</ul></div>
+
+<h4>Key Definitions</h4>
+<ul>
+<li><strong>Frugal Innovation:</strong> Developing products/services with minimal resources while maintaining quality</li>
+<li><strong>Reverse Innovation:</strong> Innovation developed in emerging markets and then adapted for developed markets</li>
+<li><strong>Green Innovation:</strong> Innovation that reduces environmental impact</li>
+</ul>
+
+<h4>Emerging R&amp;D Trends</h4>
+<ul>
+<li><strong>AI-driven R&amp;D:</strong> Machine learning for drug discovery, materials science</li>
+<li><strong>Open Source Innovation:</strong> Collaborative development (Linux, Android)</li>
+<li><strong>Frugal/Jugaad Innovation:</strong> Tata Nano, Jaipur Foot, Mitticool</li>
+<li><strong>Circular Economy:</strong> Design for reuse, recycling, remanufacturing</li>
+<li><strong>Living Labs:</strong> Real-world testing environments for innovation</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>GE's MAC 400 ECG machine was designed in India at 1/5th the US cost &#x2014; then sold globally as a premium product (reverse innovation). Tata's Mitticool clay fridge runs without electricity, serving rural India. Jaipur Foot prosthetic costs $45 vs $12,000 in the US.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know examples of frugal innovation from India. Reverse innovation concept is frequently asked.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"AFG-OC"</strong> &#x2014; AI-driven, Frugal, Green, Open source, Circular economy</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Frugal innovation = jugaad = doing more with less</li>
+<li>Reverse innovation: emerging market &gt; developed market</li>
+<li>GE MAC 400, Jaipur Foot, Mitticool = Indian frugal examples</li>
+<li>AI-driven R&amp;D: ML for drug discovery, materials science</li>
+</ul></div>
+</div></div>
+
+<div class="unit" id="u20">
+<h3 id="u20">Unit 20: Case Studies in R&amp;D &amp; Innovation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU20">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU20">&#x1F4AC; Ask AI</button></div>
+<div id="sU20">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div>
+<ul>
+<li>Analyzing real-world R&amp;D success and failure cases</li>
+<li><strong>Lessons learned:</strong> culture, strategy, execution, market fit</li>
+<li><strong>Indian innovation stories:</strong> ISRO, Indian pharma, IT services</li>
+<li><strong>Global innovation leaders:</strong> Apple, Tesla, Google, Samsung</li>
+</ul></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Organization</th><th>Innovation</th><th>Key Lesson</th></tr></thead>
+<tbody>
+<tr><td><strong>ISRO</strong></td><td>Low-cost Mars mission (Mangalyaan)</td><td>Frugal innovation at scale</td></tr>
+<tr><td><strong>Indian Pharma</strong></td><td>Generic drug development</td><td>Reverse engineering + process innovation</td></tr>
+<tr><td><strong>Apple</strong></td><td>iPhone ecosystem</td><td>Design thinking + vertical integration</td></tr>
+<tr><td><strong>Tesla</strong></td><td>Electric vehicles</td><td>Technology push + vision-driven R&amp;D</td></tr>
+<tr><td><strong>Infosys</strong></td><td>IT services model</td><td>Process innovation + talent development</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>ISRO's Mangalyaan (2013) cost $74M vs NASA's Maven at $671M &#x2014; achieved on first attempt using frugal engineering and incremental technology development. Indian pharma (Sun Pharma, Cipla) reverse-engineered expensive drugs, making India the "pharmacy of the world" with 20% of global generic exports.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Prepare 3-4 Indian and 3-4 global case studies. Focus on R&amp;D strategy, innovation type, and lessons learned.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"ISRO-ATI"</strong> &#x2014; ISRO, Apple, Tesla, Infosys &#x2014; prepare detailed case analysis</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Prepare 3-4 Indian and 3-4 global case studies</li>
+<li>Focus on R&amp;D strategy, innovation type, and lessons</li>
+<li>ISRO = frugal; Indian Pharma = reverse engineering; Apple = design thinking</li>
+<li>India = "pharmacy of the world" with 20% global generic exports</li>
+</ul></div>
+</div></div>
+
+<!-- COMPARISON TABLES -->
+<div class="unit" id="comparisons">
+<h3>&#x1F4CA; Key Comparison Tables</h3>
+
+<h4>Basic vs Applied Research vs Development</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Basic Research</th><th>Applied Research</th><th>Development</th></tr></thead>
+<tbody>
+<tr><td><strong>Goal</strong></td><td>New knowledge</td><td>Practical solution</td><td>Commercial product</td></tr>
+<tr><td><strong>Risk</strong></td><td>Highest</td><td>Medium</td><td>Lower</td></tr>
+<tr><td><strong>Timeline</strong></td><td>Longest</td><td>Medium</td><td>Shortest</td></tr>
+<tr><td><strong>Output</strong></td><td>Publications</td><td>Patents, prototypes</td><td>Products, processes</td></tr>
+<tr><td><strong>Funding</strong></td><td>Government</td><td>Mixed</td><td>Corporate</td></tr>
+</tbody></table></div>
+
+<h4>Closed vs Open Innovation</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Closed Innovation</th><th>Open Innovation</th></tr></thead>
+<tbody>
+<tr><td><strong>Ideas source</strong></td><td>Internal only</td><td>Internal + External</td></tr>
+<tr><td><strong>R&amp;D boundary</strong></td><td>Firm</td><td>Ecosystem</td></tr>
+<tr><td><strong>IP strategy</strong></td><td>Protect all</td><td>Selective sharing</td></tr>
+<tr><td><strong>Example</strong></td><td>Bell Labs</td><td>Procter &amp; Gamble</td></tr>
+</tbody></table></div>
+
+<h4>Patent vs Copyright vs Trademark</h4>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Patent</th><th>Copyright</th><th>Trademark</th></tr></thead>
+<tbody>
+<tr><td><strong>Protects</strong></td><td>Inventions</td><td>Expression</td><td>Brand identity</td></tr>
+<tr><td><strong>Duration</strong></td><td>20 years</td><td>Life + 60 years</td><td>10 years (renewable)</td></tr>
+<tr><td><strong>Registration</strong></td><td>Required</td><td>Automatic</td><td>Required</td></tr>
+<tr><td><strong>Requirement</strong></td><td>Novelty, utility</td><td>Originality</td><td>Distinctiveness</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>BAD-C</strong></td><td>Basic, Applied, Development, Commercialization</td><td>R&amp;D Types</td></tr>
+<tr><td><strong>PRIS-ORID</strong></td><td>Product, Process, Incremental, Service, Open, Radical, Incremental, Disruptive</td><td>Innovation Types</td></tr>
+<tr><td><strong>SIGMA-TECH</strong></td><td>S-curve, Innovators, Growth, Maturity, Adoption, Technology push, Early adopters, Crossing chasm, Market pull, Hype cycle</td><td>Technology Lifecycle</td></tr>
+<tr><td><strong>NIS-TUG</strong></td><td>National Innovation System, Triple Helix: University, Industry, Government</td><td>Innovation Systems</td></tr>
+<tr><td><strong>LFNI-OD</strong></td><td>Leader, Fast follower, Niche, Imitator, Offensive vs Defensive</td><td>R&amp;D Strategy</td></tr>
+<tr><td><strong>BUDGET-SG</strong></td><td>Task-based, Zero-based, Competitive parity, % of Sales; Stage-Gate</td><td>R&amp;D Budgeting</td></tr>
+<tr><td><strong>CDM-CT</strong></td><td>Centralized, Decentralized, Matrix, Cross-functional Teams</td><td>R&amp;D Organization</td></tr>
+<tr><td><strong>SST-FTRL</strong></td><td>Strategic fit, Scoring model, Technical feasibility, Financial return, TRL levels</td><td>Project Selection</td></tr>
+<tr><td><strong>IDCL</strong></td><td>Idea generation, Development, Commercialization, Launch</td><td>Innovation Process</td></tr>
+<tr><td><strong>ESCBDC</strong></td><td>Empathize, Screen, Concept, Business analysis, Development, Commercialization</td><td>NPD Process</td></tr>
+<tr><td><strong>LJFT-TA</strong></td><td>Licensing, Joint venture, FDI, Turnkey, Technical agreements, Absorptive capacity</td><td>Technology Transfer</td></tr>
+<tr><td><strong>AAAII</strong></td><td>Acquisition, Assimilation, Adaptation, Improvement, Innovation</td><td>Tech Absorption</td></tr>
+<tr><td><strong>PCTT-IG</strong></td><td>Patent, Copyright, Trademark, Trade secret, Industrial design, GI</td><td>IP Types</td></tr>
+<tr><td><strong>NNU-SD</strong></td><td>Novelty, Non-obviousness, Utility, Sufficient disclosure</td><td>Patentability</td></tr>
+<tr><td><strong>CMI-LRM</strong></td><td>Cost, Market, Income; Lump sum, Running royalty, Milestone</td><td>Valuation &amp; Licensing</td></tr>
+<tr><td><strong>GVE-80IB</strong></td><td>Government grants, VC/PE, Equity/Debt, 80-IB tax incentive</td><td>R&amp;D Funding</td></tr>
+<tr><td><strong>TCMIC</strong></td><td>Talent, Cost, Market, Infrastructure, Culture</td><td>Global R&amp;D</td></tr>
+<tr><td><strong>AFG-OC</strong></td><td>AI-driven, Frugal, Green, Open source, Circular economy</td><td>Emerging Trends</td></tr>
+<tr><td><strong>ISRO-ATI</strong></td><td>ISRO, Apple, Tesla, Infosys</td><td>Case Studies</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- QUICK REVISION SHEET -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; One-Liner Concepts</div>
+<ul>
+<li>R&amp;D types: basic research, applied research, experimental development</li>
+<li>Innovation types: incremental, radical, disruptive, open</li>
+<li>Technology follows S-curve: introduction, growth, maturity, decline</li>
+<li>Rogers' adoption: innovators &gt; early adopters &gt; early majority &gt; late majority &gt; laggards</li>
+<li>Triple Helix: university-industry-government interaction</li>
+<li>R&amp;D strategies: leader, fast follower, niche, imitator</li>
+<li>Stage-gate process separates innovation into stages with decision gates</li>
+<li>IP types: patent (20y), copyright (life+60y), trademark (10y renewable), trade secret (indefinite)</li>
+<li>Patentability: novelty, non-obviousness, utility, sufficient disclosure</li>
+<li>Valuation: cost approach, market approach, income approach (DCF)</li>
+<li>India's R&amp;D: DST, CSIR, DSIR, Atal Innovation Mission</li>
+<li>Frugal innovation = jugaad = doing more with less</li>
+<li>Reverse innovation: developed in emerging markets, adapted for developed markets</li>
+<li>Absorptive capacity = recognize + assimilate + apply new knowledge</li>
+<li>Absorption stages: Acquisition &gt; Assimilation &gt; Adaptation &gt; Improvement &gt; Innovation</li>
+</ul></div>
+
+<div class="summary-box"><h4>&#x1F4CB; Key Formulas &amp; Ratios</h4><ul>
+<li><strong>R&amp;D Intensity = R&amp;D Expenditure / Sales Revenue</strong></li>
+<li><strong>India's R&amp;D spending: ~0.7% of GDP</strong></li>
+<li><strong>Patent duration: 20 years from filing date</strong></li>
+<li><strong>Copyright: Life + 60 years (India)</strong></li>
+<li><strong>Trademark: 10 years, renewable</strong></li>
+<li><strong>Industrial Design: 15 years</strong></li>
+<li><strong>GI: 10 years, renewable</strong></li>
+</ul></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Top 10 Most Asked Topics</div>
+<ul>
+<li><strong>Types of R&amp;D</strong> and their characteristics (10 marks)</li>
+<li><strong>Innovation types</strong> with examples &#x2014; disruptive innovation theory (10 marks)</li>
+<li><strong>Technology lifecycle</strong> and S-curve (10 marks)</li>
+<li><strong>R&amp;D strategy formulation</strong> and alignment (10 marks)</li>
+<li><strong>Stage-gate process</strong> for NPD with diagram (10 marks)</li>
+<li><strong>IP types comparison</strong> &#x2014; patent vs copyright vs trademark (10 marks)</li>
+<li><strong>Patentability criteria</strong> and Indian Patents Act (5 marks)</li>
+<li><strong>Technology transfer modes</strong> with examples (10 marks)</li>
+<li><strong>Indian innovation ecosystem</strong> &#x2014; institutions, policies (5 marks)</li>
+<li><strong>Frugal innovation and reverse innovation</strong> concepts (10 marks)</li>
+</ul></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x1F4DD; Expected Question Patterns</div>
+<ul>
+<li>Compare and contrast innovation types (10 marks)</li>
+<li>Explain S-curve and its strategic implications (10 marks)</li>
+<li>Describe stage-gate process with diagram (10 marks)</li>
+<li>Discuss India's IPR regime (15 marks)</li>
+<li>Case study analysis on R&amp;D strategy (15 marks)</li>
+<li>Explain technology transfer modes with Indian examples (10 marks)</li>
+<li>Distinguish between absorption and adaptation (5 marks)</li>
+<li>Explain Triple Helix model with Indian context (5 marks)</li>
+</ul></div>
+
+<div class="summary-box"><h4>&#x1F4CB; Model Answer Structure</h4><ul>
+<li><strong>Definition</strong> (2 marks) &#x2014; Start with a clear definition</li>
+<li><strong>Diagram/Table</strong> (3 marks) &#x2014; Include visual representation</li>
+<li><strong>Explanation</strong> (3 marks) &#x2014; Detailed explanation with examples</li>
+<li><strong>Indian Example</strong> (2 marks) &#x2014; Always include an Indian context</li>
+<li><strong>Conclusion</strong> (1 mark) &#x2014; Summarize key takeaway</li>
+</ul></div>
+</div>
+
+</main></div>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})();
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.getElementById("readingProgress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar-nav a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body></html>

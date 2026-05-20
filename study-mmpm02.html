@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPM-02: Sales Management | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+/* MMPM-02 ENHANCED STYLES */
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe, #FFD700, #6c5ce7);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-definition {
+  border-left-color: #6c5ce7 !important;
+  background: rgba(108,99,255,0.08) !important;
+}
+.callout-example {
+  border-left-color: #00cec9 !important;
+  background: rgba(0,206,201,0.06) !important;
+}
+.callout-examtip {
+  border-left-color: #FFD700 !important;
+  background: rgba(255,215,0,0.06) !important;
+}
+.callout-examtip .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #fd79a8 !important;
+  background: linear-gradient(135deg, rgba(253,121,168,0.06), rgba(108,99,255,0.04)) !important;
+}
+.callout-mnemonic .callout-label {
+  color: #fd79a8 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+.subject-tag {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(253,203,110,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#fdcb6e;font-size:1.1rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-section-content{display:none}.video-section-content.active{display:block}
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpm02">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-02'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPM-02</span></div>
+<nav class="sidebar-nav">
+<a href="#u1">Unit 1: Sales Force Management</a>
+<a href="#u2">Unit 2: Recruitment and Selection</a>
+<a href="#u3">Unit 3: Training Sales Force</a>
+<a href="#u4">Unit 4: Compensation Plans</a>
+<a href="#u5">Unit 5: Territory Management</a>
+<a href="#u6">Unit 6: Sales Forecasting</a>
+<a href="#u7">Unit 7: Salesforce Automation</a>
+<a href="#u8">Unit 8: Personal Selling</a>
+<a href="#u9">Unit 9: Sales Promotion</a>
+<a href="#u10">Unit 10: Retail Selling</a>
+<a href="#u11">Unit 11: Sales Ethics</a>
+<a href="#u12">Unit 12: Digital Sales</a>
+<a href="#u13">Unit 13: Negotiation Skills</a>
+<a href="#u14">Unit 14: Sales Control &amp; Audit</a>
+<a href="quiz-mmpm02.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPM-02</span><h1>Sales Management</h1><p>Comprehensive Study Notes with Indian Examples, Mnemonics and Exam Tips</p></div>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Sales Force Management -- Role and Scope</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales management is the planning, direction, and control of the personal selling activities of a business unit, including recruiting, selecting, training, equipping, assigning, routing, supervising, paying, and motivating the sales force. It is the revenue-generating arm of the organization and a critical link between the company and its customers.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Force Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CYWkWqHLWKk" title="Sales Force Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales vs Marketing</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kVpOJwVdYmk" title="Sales vs Marketing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Hindustan Unilever (HUL):</strong> HUL has one of the largest direct sales forces in India with over 80,000 sales personnel covering 8 million retail outlets across 600,000 villages. Their sales force is organized hierarchically: National Sales Manager, Regional Managers, Area Managers, Territory Sales Officers, and Beat Salesmen. This massive reach is how Surf Excel, Lifebuoy, and Wheel reach every corner of India.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define sales management per AMA and list its 3 levels (top, middle, operational). For 10 marks: Explain the evolution of sales management from pre-industrial era to modern consultative selling. Always contrast selling vs marketing.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Sales Management = "REMPACT"</strong> -- <strong>R</strong>ecruiting, <strong>E</strong>quipping, <strong>M</strong>otivating, <strong>P</strong>aying, <strong>A</strong>ssigning, <strong>C</strong>ontrolling, <strong>T</strong>raining. Think: "REMPACT manages the sales force."</p></div>
+
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>AMA Definition:</strong> "The planning, direction, and control of the personal selling activities of a business unit."</li>
+<li><strong>Three Levels:</strong> Top-level (strategic planning), Middle-level (tactical coordination), First-level (operational supervision).</li>
+<li><strong>Sales vs Marketing:</strong> Selling is product-focused and short-term; marketing is customer-focused and long-term. Sales is a subset of marketing promotion.</li>
+<li><strong>Evolution:</strong> Pre-industrial (single person doing everything) to industrial era (separate sales departments) to modern era (integrated, consultative, tech-enabled).</li>
+<li><strong>Modern Role:</strong> Sales managers now participate in strategic planning, forecasting, budgeting, territory design, CRM management, and cross-functional coordination.</li>
+<li><strong>Scope:</strong> Includes sales force organization, recruitment, training, compensation, territory design, forecasting, evaluation, and channel coordination.</li>
+</ul>
+
+<h4>Types of Selling Situations</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Type</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Description</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Skills Required</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Retail Selling</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">B2C, face-to-face in store</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Product knowledge, customer service</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Tanishq, Reliance Digital showrooms</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Industrial/B2B</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Business to business, technical products</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Technical expertise, relationship building</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">L&T selling equipment to builders</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Wholesale</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Bulk quantities to resellers</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Logistics, pricing negotiation</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Metro Cash &amp; Carry serving kiranas</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Direct Selling</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Door-to-door, home parties</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Persuasion, persistence</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Eureka Forbes, Amway, Tupperware</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Telemarketing</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Phone-based selling</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Voice clarity, script adherence</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">HDFC/ICICI credit card sales calls</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>E-Commerce</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Online digital selling</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Digital marketing, UX design</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Flipkart, Amazon, Nykaa</td></tr>
+</table>
+
+<h4>Selling Approaches Compared</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Approach</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Focus</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Relationship</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Interaction</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Transactional</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Price, one-time</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Short-term</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Minimal</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Retail purchase at DMart</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Consultative</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Needs, solutions</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Medium-term</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Deep discovery</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">IBM selling IT solutions to Infosys</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Strategic Alliance</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Partnership</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Long-term</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Co-creation</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">TCS managing Wipro's IT infrastructure</td></tr>
+</table>
+
+<h4>PRE-ASSEMP: Key Functions of Sales Manager</h4>
+<ul>
+<li><strong>P</strong>lanning -- Setting sales objectives, strategies, and budgets</li>
+<li><strong>R</strong>ecruiting -- Attracting qualified candidates for sales positions</li>
+<li><strong>E</strong>quipping -- Providing tools, technology, and product knowledge</li>
+<li><strong>A</strong>ssigning -- Allocating territories, accounts, and targets</li>
+<li><strong>S</strong>upervising -- Monitoring day-to-day field activities</li>
+<li><strong>S</strong>electing -- Choosing the best candidates from the applicant pool</li>
+<li><strong>E</strong>valuating -- Measuring performance against quotas and KPIs</li>
+<li><strong>M</strong>otivating -- Inspiring through incentives, recognition, and coaching</li>
+<li><strong>P</strong>aying -- Designing fair compensation plans (salary, commission, bonus)</li>
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Focus</div><p><strong>Evolution of Sales Management:</strong> Pre-industrial era (single person doing everything) to Industrial era (separate sales departments with order-takers) to Modern era (consultative, tech-enabled, customer-centric value creators). The shift is from "pushing products" to "solving problems." Modern sales managers participate in strategic planning, CRM management, data analytics, and cross-functional coordination with marketing, finance, and supply chain.</p></div>
+
+<div class="summary-box"><h4>Unit 1 Summary</h4><ul>
+<li>Sales management = planning, directing, controlling personal selling activities</li>
+<li>Three management levels: strategic (top), tactical (middle), operational (first-line)</li>
+<li>Six selling types: retail, B2B, wholesale, direct, telemarketing, e-commerce</li>
+<li>Three approaches: transactional (price), consultative (needs), strategic (partnership)</li>
+<li>PRE-ASSEMP covers all key functions of a sales manager</li>
+<li>Sales is the revenue-generating arm; evolved from order-taking to consultative selling</li>
+<li>Modern scope includes CRM, forecasting, territory design, and digital sales tools</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Recruitment and Selection of Sales Force</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Recruitment is the process of attracting a pool of qualified applicants for sales positions. Selection is the process of choosing the most suitable candidates from that pool. Effective recruitment and selection reduce turnover costs (which can be 1.5-2x annual salary) and ensure the sales force has the right skills, motivation, and cultural fit.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Recruitment and Selection</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vNrGEuZjOQg" title="Recruitment and Selection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Interview Techniques</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/LRSiCBBGSoE" title="Interview Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>ICICI Bank:</strong> ICICI Bank recruits thousands of sales officers annually for its retail banking products (credit cards, loans, insurance). They use a multi-stage process: aptitude tests, group discussions, role-play selling scenarios, and panel interviews. ICICI specifically targets MBA freshers from Tier 2 cities who understand local customer behaviour. Their retention rate improved by 25% after introducing realistic job previews during recruitment.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: List the 5 steps in the recruitment-selection process. For 10 marks: Explain each step with Indian examples and discuss internal vs external recruitment sources. Philip Kotler's qualities of a good salesperson are a frequent sub-question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Recruitment = "SJRTF"</strong> -- <strong>S</strong>ource candidates, <strong>J</strong>ob analysis, <strong>R</strong>eview applications, <strong>T</strong>est and interview, <strong>F</strong>inal selection. Think: "So Jolly Recruiters Test Fast."</p></div>
+
+<h4>Recruitment Sources</h4>
+<ul>
+<li><strong>Internal Sources:</strong> Promotions, transfers, employee referrals. Infosys fills 30% of sales roles internally. Advantages: lower cost, faster onboarding, morale boost.</li>
+<li><strong>External Sources:</strong> Job portals (Naukri, LinkedIn), campus recruitment, placement agencies, newspaper ads. HUL recruits from top B-schools (IIMs, XLRI) for management trainees.</li>
+<li><strong>Online Recruitment:</strong> LinkedIn has become the primary channel for sales hiring in India. Naukri.com processes over 50,000 sales job postings monthly.</li>
+</ul>
+
+<h4>Selection Process</h4>
+<ol>
+<li><strong>Application Screening:</strong> Filter resumes based on qualifications, experience, and skills. Use ATS (Applicant Tracking Systems) for large volumes.</li>
+<li><strong>Preliminary Interview:</strong> Phone or video screening to assess communication skills, motivation, and basic fit.</li>
+<li><strong>Formal Interview:</strong> Structured or unstructured interviews. Use behavioural questions ("Tell me about a time you closed a difficult sale").</li>
+<li><strong>Testing:</strong> Aptitude tests, personality assessments (Big Five), sales simulation exercises. Godrej uses psychometric testing for all sales hires.</li>
+<li><strong>Reference Check and Offer:</strong> Verify background, contact references, and extend the offer letter.</li>
+</ol>
+
+<h4>Job Analysis Chain</h4>
+<p>Effective recruitment starts with a clear understanding of the job. The chain flows as follows:</p>
+<ul>
+<li><strong>Job Analysis:</strong> Systematic study of what the sales job involves -- duties, responsibilities, working conditions, reporting relationships.</li>
+<li><strong>Job Description:</strong> Written statement derived from job analysis. Lists duties, responsibilities, territory size, travel requirements, and reporting structure.</li>
+<li><strong>Job Specification:</strong> Qualifications, skills, traits, and experience needed. Example: "MBA preferred, 2+ years FMCG sales experience, fluent in regional language, willing to travel 80%."</li>
+<li><strong>Recruitment:</strong> Using the job specification to attract matching candidates from appropriate sources.</li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Godrej Consumer Products:</strong> Godrej's sales job analysis revealed that the top 3 success traits for rural sales officers were: (1) ability to build relationships with kirana owners, (2) physical fitness for extensive travel, and (3) comfort with ambiguity in unstructured markets. They redesigned their job specification and interview process to test these traits. Result: 40% improvement in new hire retention within the first year.</p></div>
+
+<h4>Key Recruitment Formulas</h4>
+<ul>
+<li><strong>Attrition Rate = (People Leaving / Total Employees) x 100</strong></li>
+<li><strong>Recruitment Pool Size = Hires Needed / (Selection Rate x Offer Acceptance Rate)</strong></li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Numerical Example</div><p><strong>Problem:</strong> A company needs to hire 50 salespeople. Their selection rate is 20% (1 in 5 applicants is selected) and offer acceptance rate is 80% (80% of offers are accepted). How many applicants do they need?</p>
+<p><strong>Solution:</strong> Recruitment Pool = 50 / (0.20 x 0.80) = 50 / 0.16 = <strong>312 applicants needed</strong></p></div>
+
+<h4>Qualities of a Good Salesperson (Kotler)</h4>
+<ul>
+<li><strong>Empathy:</strong> Ability to understand the customer's perspective and feelings</li>
+<li><strong>Self-drive:</strong> Internal motivation and ambition to achieve targets</li>
+<li><strong>Resilience:</strong> Ability to handle rejection without losing enthusiasm</li>
+<li><strong>Communication:</strong> Clear, persuasive verbal and non-verbal skills</li>
+<li><strong>Product Knowledge:</strong> Deep understanding of features, advantages, and competitive positioning</li>
+<li><strong>Problem-Solving:</strong> Creative ability to match customer needs with product solutions</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 2 Summary</h4><ul>
+<li>Recruitment: attracting qualified candidates; Selection: choosing the best fit</li>
+<li>Job Analysis chain: Analysis, Description, Specification, Recruitment</li>
+<li>Internal sources (promotions, referrals) vs external (portals, campus, agencies)</li>
+<li>5-step selection: screen, preliminary interview, formal interview, test, reference check</li>
+<li>Key formulas: Attrition Rate, Recruitment Pool Size</li>
+<li>Sales turnover costs 1.5-2x annual salary; better recruitment reduces attrition</li>
+<li>Kotler's qualities: empathy, self-drive, resilience, communication, product knowledge, problem-solving</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Training the Sales Force</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales training is the process of developing selling skills, product knowledge, and customer relationship abilities in sales personnel. It covers orientation training for new hires, ongoing skill development for experienced reps, and management training for those moving into supervisory roles. Well-trained sales forces outperform untrained ones by 20-30% in revenue generation.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Training Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/kGEv7nOoRbE" title="Sales Training Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ADDIE Training Model</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VmbqJKqIUXI" title="ADDIE Training Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Maruti Suzuki:</strong> Maruti runs a comprehensive training program at its Manesar and Gurgaon facilities. New sales executives undergo a 45-day induction covering product specifications, customer handling, objection resolution, and CRM software usage. They practice role-play with trained actors simulating different customer types. Maruti also uses VR (virtual reality) for training salespeople on the Nexa premium experience. This investment has helped Maruti maintain 40%+ market share in India.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define sales training and list 4 training methods. For 10 marks: Explain the ADDIE training model (Analysis, Design, Development, Implementation, Evaluation) with Indian examples. Kirkpatrick's 4-level evaluation is a frequent sub-question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Training = "ADDIE"</strong> -- <strong>A</strong>nalysis, <strong>D</strong>esign, <strong>D</strong>evelopment, <strong>I</strong>mplementation, <strong>E</strong>valuation. Think: "ADDIE always trains well."</p></div>
+
+<h4>Training Methods</h4>
+<ul>
+<li><strong>On-the-Job Training:</strong> Shadowing experienced reps, field training, mentorship. Eureka Forbes uses "buddy system" where new reps accompany senior salespeople for 2 weeks.</li>
+<li><strong>Classroom Training:</strong> Lectures, case studies, group discussions. TCS and Infosys use classroom sessions for product knowledge training.</li>
+<li><strong>Role Playing:</strong> Simulating selling situations. Salespeople practice handling objections, closing techniques, and negotiation. Bajaj Auto uses this extensively.</li>
+<li><strong>Online/E-Learning:</strong> Webinars, video courses, mobile learning apps. Byju's trains its sales force using digital modules accessible on smartphones.</li>
+<li><strong>Simulation:</strong> VR-based training for complex products. Maruti's Nexa showrooms use VR for premium customer experience training.</li>
+</ul>
+
+<h4>Kirkpatrick's 4 Levels of Evaluation</h4>
+<ol>
+<li><strong>Reaction:</strong> Did participants find the training useful? (Feedback forms, satisfaction surveys)</li>
+<li><strong>Learning:</strong> Did they acquire the knowledge/skills? (Pre/post tests, quizzes)</li>
+<li><strong>Behaviour:</strong> Are they applying it on the job? (Field observation, manager assessments)</li>
+<li><strong>Results:</strong> Did it improve business outcomes? (Sales volume, conversion rates, customer satisfaction)</li>
+</ol>
+
+<h4>Sales Training Content Areas</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Training Area</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Content</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Best Method</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Product Knowledge</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Features, specifications, competitive comparison</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Classroom + e-learning modules</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Selling Techniques</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Prospecting, presentations, closing, objection handling</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Role-playing + case studies</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Company Policies</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Pricing, discounts, returns, credit terms</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Classroom + manuals</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Territory Management</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Route planning, coverage, time management</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">On-the-job with senior rep</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>CRM and Technology</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Software usage, data entry, reporting</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Hands-on workshops</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Customer Relationship</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Rapport building, service recovery, loyalty</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Role-playing + field observation</td></tr>
+</table>
+
+<h4>Training Process Cycle</h4>
+<p>The systematic training process follows four stages:</p>
+<ol>
+<li><strong>Needs Analysis:</strong> Identify the gap between current and desired performance. Use sales data, field observations, and manager feedback. Example: If closing rates are 15% vs target of 30%, the training need is closing skills.</li>
+<li><strong>Design:</strong> Define learning objectives, content structure, methods, and timeline. Select trainers (internal experts vs external consultants).</li>
+<li><strong>Delivery:</strong> Conduct training using selected methods. Mix classroom with field training for best results. Include practice and feedback loops.</li>
+<li><strong>Evaluation:</strong> Measure effectiveness using Kirkpatrick's 4 levels. Compare pre and post-training performance data.</li>
+</ol>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 10 marks: Explain the complete training process with Indian examples. Compare on-the-job vs classroom methods. The training process cycle (Needs Analysis to Evaluation) is different from the ADDIE model -- ADDIE is a design framework, while the training process is an operational cycle. Know both.</p></div>
+
+<div class="summary-box"><h4>Unit 3 Summary</h4><ul>
+<li>Sales training develops product knowledge, selling skills, and customer relationship abilities</li>
+<li>Training content areas: product knowledge, selling techniques, policies, territory, CRM, relationships</li>
+<li>Methods: on-the-job, classroom, role-play, e-learning, simulation (VR)</li>
+<li>Training process: Needs Analysis, Design, Delivery, Evaluation</li>
+<li>ADDIE model provides systematic training design framework</li>
+<li>Kirkpatrick's 4 levels: Reaction, Learning, Behaviour, Results</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Compensation Plans for Sales Force</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales compensation is the total package of monetary and non-monetary rewards provided to sales personnel in exchange for their contributions. The compensation plan must balance three objectives: attracting talent (competitiveness), motivating performance (incentive), and controlling costs (affordability). Common structures include straight salary, straight commission, and combination plans.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Compensation Plans</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/LpO2HhSgQnQ" title="Sales Compensation Plans" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Commission Structure</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/G1e5F4ZYOXk" title="Commission Structure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>LIC of India:</strong> LIC agents earn primarily through commissions (no fixed salary). New agents get 25% first-year commission on regular premium policies, reducing to 5% renewal commission in subsequent years. This structure motivates agents to constantly acquire new customers while maintaining existing ones. Top LIC agents earn Rs 50-100 lakhs annually. The commission-only model attracted over 13 lakh agents across India, making LIC the largest sales force in the country.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: List 3 types of compensation plans (straight salary, straight commission, combination) and one advantage of each. For 10 marks: Compare all three plans with Indian examples and discuss when each is appropriate. Designing a compensation plan for a given scenario is a common case study question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Compensation = "SCB"</strong> -- <strong>S</strong>traight salary, <strong>C</strong>ommission only, <strong>B</strong>oth (combination). Think: "SCB pays the bills."</p></div>
+
+<h4>Compensation Plan Types</h4>
+<ul>
+<li><strong>Straight Salary:</strong> Fixed monthly pay regardless of sales. Used when: long sales cycles, team selling, new markets. Example: IT sales reps at TCS and Infosys get fixed salary plus annual bonus.</li>
+<li><strong>Straight Commission:</strong> Pay based entirely on sales results (percentage of revenue). Used when: clear sales attribution, independent selling, real estate. Example: LIC agents, real estate brokers, insurance advisors.</li>
+<li><strong>Combination (Salary + Commission):</strong> Base salary plus performance incentive. Most common in India. Used when: balance of control and motivation needed. Example: HUL sales officers get Rs 25,000-40,000 base + 10-15% incentive on targets.</li>
+<li><strong>Bonus:</strong> Lump-sum payment for achieving specific targets. Diwali bonus is common in Indian sales organizations.</li>
+<li><strong>Non-Monetary Incentives:</strong> Recognition awards, foreign trips, club memberships. Maruti Suzuki offers top dealers Thailand trips; Samsung offers Europe trips to top performers.</li>
+</ul>
+
+<h4>Designing Compensation Plans</h4>
+<ul>
+<li><strong>Step 1:</strong> Define sales objectives (volume, market share, new accounts, profitability).</li>
+<li><strong>Step 2:</strong> Determine the role of non-selling activities (service calls, collections, reports).</li>
+<li><strong>Step 3:</strong> Choose the mix (60:40 salary-commission is most common in India).</li>
+<li><strong>Step 4:</strong> Set quotas based on territory potential, not equal targets for all.</li>
+<li><strong>Step 5:</strong> Review and adjust annually based on market conditions.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 4 Summary</h4><ul>
+<li>Three plans: straight salary (stability), straight commission (motivation), combination (balance)</li>
+<li>Combination (salary + commission) is the most widely used plan in Indian sales organizations</li>
+<li>Non-monetary incentives (recognition, travel, awards) are powerful motivators in Indian culture</li>
+<li>Compensation must align with sales objectives, territory potential, and competitive market rates</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Territory Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>A sales territory is a group of customers or a geographical area assigned to a single salesperson. Territory management involves designing, assigning, and optimizing these territories to maximize coverage, minimize travel costs, and ensure fair workload distribution. Effective territory design improves both customer satisfaction and salesperson morale.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Territory Management</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Kf3O5P8d3GA" title="Territory Management" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Route Planning</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Sales Route Planning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Coca-Cola India:</strong> Coca-Cola divides India into 5 major regions, then sub-divides into states, districts, and beats. Each beat is assigned to a delivery salesperson who visits a fixed set of retailers on a predetermined route. The territory design considers population density, outlet count, sales potential, and travel distance. In Mumbai alone, Coca-Cola has over 500 beats covering 200,000+ outlets. This beat system ensures "no retailer left behind."</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define territory management and list 3 bases for territory design (geographical, sales potential, workload). For 10 marks: Explain the workload method for territory design with a numerical example. Mention the benefits of territory management for both the company and the salesperson.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Territory Design = "GSW"</strong> -- <strong>G</strong>eographical, <strong>S</strong>ales potential, <strong>W</strong>orkload basis. Think: "Good Sales Work."</p></div>
+
+<h4>Bases for Territory Design</h4>
+<ul>
+<li><strong>Geographical:</strong> Assign territories based on physical boundaries (state, district, pin code). Simple to manage. Used by FMCG companies like HUL and ITC.</li>
+<li><strong>Sales Potential:</strong> Divide customer base by revenue potential. High-potential territories get top performers. Used by B2B companies like IBM and Siemens.</li>
+<li><strong>Workload Method:</strong> Calculate total workload (calls needed) and divide by individual capacity. Most scientific approach.</li>
+<li><strong>Servicing Requirement:</strong> Accounts requiring more attention get dedicated territories. Used for key account management at TCS and Wipro.</li>
+</ul>
+
+<h4>Workload Method (Numerical Example)</h4>
+<ul>
+<li><strong>Step 1:</strong> Total customers = 10,000 retailers in a district.</li>
+<li><strong>Step 2:</strong> Average calls per customer per month = 4 visits.</li>
+<li><strong>Step 3:</strong> Total calls per month = 10,000 x 4 = 40,000.</li>
+<li><strong>Step 4:</strong> One salesperson can make 20 calls per day x 25 working days = 500 calls/month.</li>
+<li><strong>Step 5:</strong> Sales force needed = 40,000 / 500 = 80 salespersons.</li>
+</ul>
+
+<h4>Benefits of Territory Management</h4>
+<ul>
+<li><strong>For Company:</strong> Better market coverage, reduced overlap, improved sales forecasting, lower travel costs.</li>
+<li><strong>For Salesperson:</strong> Clear accountability, fair workload, performance evaluation, career growth path.</li>
+<li><strong>For Customer:</strong> Consistent contact person, faster service, stronger relationship.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 5 Summary</h4><ul>
+<li>Sales territory = geographical area or customer group assigned to one salesperson</li>
+<li>Three bases: geographical, sales potential, workload method</li>
+<li>Workload method is most scientific; calculates calls needed divided by individual capacity</li>
+<li>Benefits: better coverage, fair evaluation, lower costs, stronger customer relationships</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Sales Forecasting</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales forecasting is the process of estimating future sales revenue over a specific time period (monthly, quarterly, annually). It is the foundation for all business planning -- production, inventory, staffing, budgeting, and strategic decisions. Accurate forecasting helps companies avoid stockouts, reduce overproduction, and optimize resource allocation.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Forecasting Methods</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/sKqMwP3MfhQ" title="Sales Forecasting Methods" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Demand Forecasting</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4CWSCCBLFOI" title="Demand Forecasting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Amul:</strong> Amul forecasts demand for 50+ lakh litres of milk daily across 18,000+ villages. They use a combination of historical sales data, seasonal patterns (higher demand during festivals like Diwali and Holi), weather forecasts, and real-time data from village-level dairy cooperatives. During summer, demand for ice cream and buttermilk increases by 30-40%. Amul's forecasting accuracy enables them to collect, process, and distribute fresh milk within 24 hours -- a logistical marvel.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define sales forecasting and list 3 qualitative methods (jury, Delphi, sales force composite). For 10 marks: Compare qualitative vs quantitative methods with Indian examples. Time series analysis and regression analysis are common numerical questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Forecasting = "QQT"</strong> -- <strong>Q</strong>ualitative (expert opinion), <strong>Q</strong>uantitative (data analysis), <strong>T</strong>ime series (pattern-based). Think: "Quality Quantitative Trends."</p></div>
+
+<h4>Qualitative Methods (Judgment-Based)</h4>
+<ul>
+<li><strong>Jury of Executive Opinion:</strong> Senior executives pool their estimates. Used for new product launches where no historical data exists. Tata Motors uses this for new car model forecasts.</li>
+<li><strong>Delphi Method:</strong> Iterative surveys of experts until consensus is reached. Used for long-range strategic forecasting.</li>
+<li><strong>Sales Force Composite:</strong> Individual salespersons estimate demand in their territories; these are aggregated upward. Relies on frontline market knowledge. Used by HUL, ITC, and Maruti.</li>
+<li><strong>Customer Survey:</strong> Directly asking customers about future purchase intentions. Used in B2B selling by companies like L&T and BHEL.</li>
+</ul>
+
+<h4>Quantitative Methods (Data-Based)</h4>
+<ul>
+<li><strong>Time Series Analysis:</strong> Uses historical data to identify patterns (trend, seasonality, cyclical, random). Maruti uses 10-year sales data to predict monthly car demand.</li>
+<li><strong>Moving Average:</strong> Smooths out short-term fluctuations. 3-month moving average is used by FMCG companies for weekly forecasting.</li>
+<li><strong>Exponential Smoothing:</strong> Gives more weight to recent data. Used by e-commerce companies like Flipkart for demand prediction.</li>
+<li><strong>Regression Analysis:</strong> Identifies relationship between sales and other variables (GDP, population, advertising spend). Used by real estate companies to forecast housing demand.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 6 Summary</h4><ul>
+<li>Sales forecasting estimates future revenue; foundation for all business planning</li>
+<li>Qualitative: jury opinion, Delphi, sales force composite, customer surveys</li>
+<li>Quantitative: time series, moving average, exponential smoothing, regression</li>
+<li>Best practice: combine both qualitative and quantitative methods for accuracy</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Salesforce Automation (SFA)</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Salesforce Automation (SFA) refers to the use of software and digital tools to automate and streamline sales activities such as contact management, lead tracking, order processing, reporting, and performance analysis. SFA enables salespeople to spend more time selling and less time on administrative tasks. Modern SFA integrates with CRM (Customer Relationship Management) systems for a complete customer view.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>CRM and Sales Automation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/xS9HdQ1HhGQ" title="CRM and Sales Automation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Salesforce CRM Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/VXDFPKLJqEY" title="Salesforce CRM Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Asian Paints:</strong> Asian Paints equipped its 12,000+ sales force with tablet-based SFA tools. Salespeople can check real-time inventory, place orders, track deliveries, and access customer history on their devices. The system auto-generates route plans for dealer visits. This reduced order processing time from 3 days to 4 hours and improved dealer satisfaction scores by 35%. Asian Paints is considered a pioneer in Indian sales force automation.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define SFA and list 4 components (contact management, lead tracking, order management, reporting). For 10 marks: Explain the benefits and challenges of SFA implementation in Indian companies with examples. CRM vs SFA distinction is a common sub-question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SFA = "CLOR"</strong> -- <strong>C</strong>ontact management, <strong>L</strong>ead tracking, <strong>O</strong>rder processing, <strong>R</strong>eporting. Think: "SFA is the CLOR to clean up sales."</p></div>
+
+<h4>SFA Components</h4>
+<ul>
+<li><strong>Contact Management:</strong> Centralized database of all customer interactions. Salesforce, Zoho CRM, and HubSpot are popular in India.</li>
+<li><strong>Lead Management:</strong> Track leads from generation to conversion. Score leads based on engagement level. Helps prioritize high-value prospects.</li>
+<li><strong>Order Management:</strong> Automate order entry, pricing, discount approval, and delivery tracking. Asian Paints and HUL use this extensively.</li>
+<li><strong>Reporting and Analytics:</strong> Real-time dashboards showing sales performance, pipeline, conversion rates, and territory-wise results.</li>
+<li><strong>Mobile SFA:</strong> Smartphone-based tools for field sales. GPS tracking, photo capture of displays, and digital signatures for orders.</li>
+</ul>
+
+<h4>Benefits and Challenges</h4>
+<ul>
+<li><strong>Benefits:</strong> Increased selling time (from 30% to 50% of workday), better data quality, faster decision-making, improved customer service, reduced paperwork.</li>
+<li><strong>Challenges in India:</strong> Resistance from salespeople ("too much monitoring"), poor internet connectivity in rural areas, high initial cost, training requirements, data privacy concerns.</li>
+<li><strong>Popular SFA Tools in India:</strong> Salesforce (enterprise), Zoho CRM (SMB), Freshsales (startups), LeadSquared (insurance/NBFC), Kylas (Indian alternative).</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 7 Summary</h4><ul>
+<li>SFA automates contact management, lead tracking, order processing, and reporting</li>
+<li>Asian Paints is India's pioneer in sales force automation with tablet-based tools</li>
+<li>Benefits: more selling time, better data, faster decisions; Challenges: resistance, connectivity, cost</li>
+<li>Popular tools: Salesforce, Zoho CRM, Freshsales, LeadSquared</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Personal Selling Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Personal selling is direct, face-to-face communication between a salesperson and a prospect for the purpose of making a sale. It is the most flexible and effective form of promotion because it allows two-way communication, immediate feedback, and relationship building. The personal selling process follows a systematic approach from prospecting to follow-up.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Personal Selling Process</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7Ee6V8xTtFk" title="Personal Selling Process" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Consultative Selling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Cw_EpmOzffk" title="Consultative Selling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Eureka Forbes:</strong> Eureka Forbes pioneered direct selling in India with its Aquaguard water purifiers. Their salespeople follow a rigorous 7-step process: (1) Prospecting through referrals, (2) Pre-approach via phone call, (3) Approach with a free water testing kit, (4) Presentation showing water impurities, (5) Handling objections about price ("Is it worth Rs 15,000?"), (6) Closing with EMI options, (7) Follow-up for installation and service. Their 15,000+ direct sales force sells Rs 3,000 crore worth of products annually.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>The 7-step selling process is a guaranteed question. For 10 marks: Explain each step with an Indian example. For 5 marks: List the 7 steps and explain the most important one (objection handling is most commonly asked). AIDA model (Attention, Interest, Desire, Action) is a common companion question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Personal Selling = "PPAPHC-F"</strong> -- <strong>P</strong>rospecting, <strong>P</strong>re-approach, <strong>A</strong>pproach, <strong>P</strong>resentation, <strong>H</strong>andling objections, <strong>C</strong>losing, <strong>F</strong>ollow-up. Think: "Please Please Always Present, Handle, Close, Follow."</p></div>
+
+<h4>The 7-Step Personal Selling Process</h4>
+<ol>
+<li><strong>Prospecting:</strong> Identifying potential customers (leads). Sources: referrals, cold calling, trade shows, social media, website inquiries. Byju's generates leads through free scholarship tests.</li>
+<li><strong>Pre-Approach:</strong> Gathering information about the prospect before meeting. Research company, needs, decision-makers, budget. B2B salespeople at IBM spend 30% of time in pre-approach research.</li>
+<li><strong>Approach:</strong> First contact with the prospect. Make a good impression. Eureka Forbes uses "free water testing" as an approach strategy -- it's a service, not a sales pitch.</li>
+<li><strong>Presentation:</strong> Demonstrating the product's features, advantages, and benefits (FAB). Use visual aids, demonstrations, and customer testimonials. Tata Motors uses test drives for car presentations.</li>
+<li><strong>Handling Objections:</strong> Addressing prospect's concerns (price, quality, timing, competition). Techniques: feel-felt-found method, direct denial, compensation. This is the most critical skill for Indian salespeople.</li>
+<li><strong>Closing:</strong> Asking for the order. Techniques: assumptive close, alternative close, urgency close ("This Diwali offer ends tomorrow"). HDFC Bank salespeople use the assumptive close: "Shall I start the documentation?"</li>
+<li><strong>Follow-Up:</strong> Post-sale activities to ensure satisfaction and build relationships. Includes delivery confirmation, installation, training, and periodic check-ins.</li>
+</ol>
+
+<h4>AIDAS Theory of Selling</h4>
+<p>The AIDAS model explains the psychological stages a buyer goes through during a sales interaction. It is one of the oldest and most widely tested selling theories in marketing.</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Stage</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Salesperson's Goal</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Attention</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Grab the prospect's attention through an opening remark, question, or demonstration</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Eureka Forbes shows dirty water from the customer's own tap</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Interest</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Build interest by connecting product features to the customer's needs</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Maruti test drive highlighting fuel efficiency for daily commuters</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Desire</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Create a strong desire to own the product through benefits and social proof</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">"3 lakh families in your city already use Aquaguard"</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Action</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Ask for the sale; remove barriers to purchase</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">"Shall I start the EMI documentation today?"</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Satisfaction</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Ensure post-purchase satisfaction to generate referrals and repeat business</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Follow-up call after 7 days, free first service visit</td></tr>
+</table>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>AIDAS = "AIDA + S"</strong> -- <strong>A</strong>ttention (grab), <strong>I</strong>nterest (build), <strong>D</strong>esire (create), <strong>A</strong>ction (close), <strong>S</strong>atisfaction (retain). Think: "AIDA gets the sale, S keeps the customer."</p></div>
+
+<h4>Behavioral Equation Model</h4>
+<p>This mathematical model by Howard explains purchase behaviour as a function of four variables:</p>
+<ul>
+<li><strong>B = P x D x K x V</strong></li>
+<li><strong>B (Behaviour):</strong> The actual purchase decision</li>
+<li><strong>P (Predisposition):</strong> The buyer's attitude toward the product (influenced by brand image, past experience)</li>
+<li><strong>D (Drive):</strong> Internal motivation level (urgency of need, financial capacity)</li>
+<li><strong>K (Incentive):</strong> The perceived value of the reward (discount, bonus, freebie)</li>
+<li><strong>V (Habit):</strong> Past buying behaviour and brand loyalty</li>
+</ul>
+<p><strong>Indian Application:</strong> A loyal Amul customer (high V) who needs milk daily (high D) with a positive brand perception (high P) and a festival cashback offer (high K) will almost certainly make the purchase (high B).</p>
+
+<h4>FAB Presentation Method</h4>
+<p>The FAB method structures the sales presentation to move from product attributes to customer value:</p>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Component</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Meaning</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Example (Smartphone)</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Features</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">What the product has (attributes)</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">5000 mAh battery, 108MP camera</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Advantages</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">What the feature does (performance)</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Lasts 2 full days, captures ultra-clear photos</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Benefits</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">What it means for the customer (value)</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">No battery anxiety during travel, Instagram-ready photos every time</td></tr>
+</table>
+
+<h4>AIDA Model for Sales Communication</h4>
+<p>AIDA is used for structuring sales letters, advertisements, and persuasive communications. Unlike AIDAS (which is for face-to-face selling), AIDA applies to written and mass communication:</p>
+<ul>
+<li><strong>A -- Attention:</strong> Grab the reader's attention with a powerful headline. Example: "Your electricity bill can be ZERO -- here's how." (Tata Power Solar ad)</li>
+<li><strong>I -- Interest:</strong> Build interest with relevant facts and benefits. Example: "Solar panels pay for themselves in 3 years and last 25 years."</li>
+<li><strong>D -- Desire:</strong> Create desire through testimonials, limited offers, and emotional appeal. Example: "Join 50,000 Mumbai homes already saving Rs 3,000/month."</li>
+<li><strong>A -- Action:</strong> Clear call to action. Example: "Call 1800-XXX-XXXX for a FREE home survey. Offer valid till Diwali."</li>
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p><strong>AIDA vs AIDAS:</strong> AIDA is for sales letters and advertisements (one-way communication). AIDAS is for face-to-face selling (two-way communication). The extra S (Satisfaction) in AIDAS represents post-purchase follow-up, which is only possible in personal selling. This distinction is frequently asked.</p></div>
+
+<div class="summary-box"><h4>Unit 8 Summary</h4><ul>
+<li>7 steps: Prospect, Pre-approach, Approach, Present, Handle objections, Close, Follow-up</li>
+<li>AIDAS theory: Attention, Interest, Desire, Action, Satisfaction -- psychological stages of selling</li>
+<li>Behavioral Equation: B = P x D x K x V (Behaviour = Predisposition x Drive x Incentive x Habit)</li>
+<li>FAB method: Features, Advantages, Benefits -- structures presentations from attributes to customer value</li>
+<li>AIDA model for sales letters: Attention, Interest, Desire, Action (one-way communication)</li>
+<li>Eureka Forbes exemplifies the complete personal selling process in India</li>
+<li>Handling objections is the most critical skill; use feel-felt-found and compensation techniques</li>
+<li>Closing techniques: assumptive, alternative, urgency; follow-up builds long-term relationships</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Sales Promotion</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales promotion consists of short-term incentives designed to stimulate the purchase or sale of a product or service. Unlike advertising (long-term brand building) and personal selling (relationship building), sales promotion creates immediate urgency and action. It targets consumers (pull strategy), trade/channel partners (push strategy), or the sales force itself.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Promotion Strategies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/GzzRpJFHEK0" title="Sales Promotion Strategies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Consumer Promotions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/WR9GCPDF8P0" title="Consumer Promotions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Parle-G:</strong> Parle-G maintains its position as India's best-selling biscuit (Rs 8,000 crore brand) through strategic sales promotions. Their Rs 5 price point is itself a promotional strategy. During festivals, they offer "buy 3 get 1 free" schemes to retailers. For consumers, they run scratch-card promotions with prizes like gold coins and motorcycles. For trade partners, they offer volume-based incentives and display allowances. This three-pronged approach keeps Parle-G dominant in every kirana store.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define sales promotion and list 4 consumer promotion tools and 4 trade promotion tools. For 10 marks: Explain the sales promotion planning process with Indian examples. Distinguish between consumer promotions, trade promotions, and sales force promotions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Sales Promotion = "CTS"</strong> -- <strong>C</strong>onsumer promotions, <strong>T</strong>rade promotions, <strong>S</strong>ales force promotions. Think: "CTS promotes sales across all levels."</p></div>
+
+<h4>Consumer Promotion Tools</h4>
+<ul>
+<li><strong>Coupons and Discounts:</strong> Domino's "Buy 1 Get 1" on Tuesdays; Swiggy "50% off up to Rs 100."</li>
+<li><strong>Free Samples:</strong> Himalaya distributes free face wash sachets in colleges; Hindustan Unilever pioneered Rs 1 sachets for rural India.</li>
+<li><strong>Contests and Sweepstakes:</strong> Lay's "Do Us a Flavor" contest invited consumers to create new chip flavours; Coca-Cola's "Share a Coke" personalized bottles.</li>
+<li><strong>Loyalty Programs:</strong> Paytm cashback, Amazon Prime rewards, Shoppers Stop First Citizen club.</li>
+<li><strong>Bundling:</strong> "Buy TV + set-top box and save Rs 2,000" at Reliance Digital; McDonald's value meals.</li>
+</ul>
+
+<h4>Trade Promotion Tools</h4>
+<ul>
+<li><strong>Trade Discounts/Allowances:</strong> Volume-based discounts to retailers for stocking larger quantities.</li>
+<li><strong>Display Allowances:</strong> Payment for shelf space and point-of-purchase displays. Rs 500-2,000 per month for prime shelf position.</li>
+<li><strong>Cooperative Advertising:</strong> Manufacturer shares advertising costs with retailers. Maruti shares costs with dealer advertising.</li>
+<li><strong>Dealer Contests:</strong> Samsung offers foreign trips to top-performing dealers; LG offers gold coins.</li>
+</ul>
+
+<h4>Sales Leadership and Motivation</h4>
+<p>Sales leaders must inspire, empower, and develop their teams. Motivation, coaching, and counseling are three key leadership functions that drive sustained sales performance.</p>
+
+<h4>Motivation Theories Applied to Sales</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Theory</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Key Idea</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Sales Application</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Maslow's Hierarchy</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">5-level need hierarchy</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Meet basic salary needs first (physiological), then job security, belonging, recognition, self-actualization</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Herzberg's Two-Factor</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Hygiene vs Motivators</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Salary, working conditions = hygiene (prevent dissatisfaction); recognition, growth = motivators (drive performance)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Expectancy (Vroom)</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Effort leads to Performance leads to Reward</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Salespeople work hard when they believe effort leads to targets, targets lead to meaningful rewards</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Goal Setting (SMART)</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Specific, Measurable goals drive performance</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">"Increase territory sales by 15% in Q3 by adding 50 new outlets" vs vague "do better"</td></tr>
+</table>
+
+<h4>Coaching vs Counseling</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Aspect</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Coaching</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Counseling</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Purpose</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Improve skills and performance</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Address personal/professional problems</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Focus</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Selling techniques, product knowledge</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Burnout, stress, motivation, personal issues</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Activities</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Joint field visits, feedback, role-playing</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">One-on-one discussions, empathy, referrals</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Example</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Maruti manager accompanies rep on dealer visits</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">HR helping a rep deal with customer harassment</td></tr>
+</table>
+
+<h4>Leadership Styles for Sales Teams</h4>
+<ul>
+<li><strong>Autocratic:</strong> Top-down decisions. Use in crisis situations or with new, untrained teams.</li>
+<li><strong>Democratic:</strong> Team input in decisions. Use with experienced, self-motivated teams.</li>
+<li><strong>Laissez-faire:</strong> Hands-off approach. Use with highly experienced, self-driven senior reps.</li>
+<li><strong>Transformational:</strong> Inspire and motivate through vision. Use during change, growth, or turnaround situations. Example: A new regional manager rallying demoralized teams after a market downturn.</li>
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Expectancy theory (Vroom) applied to sales is a favourite question: "If I work hard (effort), will I hit my target (performance)? If I hit my target, will I get a meaningful reward (promotion, bonus)?" All three links must be strong for motivation to work. SMART goal setting in sales context is also frequently tested.</p></div>
+
+<div class="summary-box"><h4>Unit 9 Summary</h4><ul>
+<li>Sales promotion = short-term incentives to stimulate immediate purchase or sale</li>
+<li>Consumer tools: coupons, samples, contests, loyalty programs, bundling</li>
+<li>Trade tools: discounts, display allowances, co-op advertising, dealer contests</li>
+<li>Parle-G exemplifies three-pronged promotion: consumer, trade, and sales force incentives</li>
+<li>Motivation theories: Maslow (needs), Herzberg (hygiene vs motivators), Vroom (expectancy), SMART goals</li>
+<li>Coaching improves skills; counseling addresses personal/professional problems</li>
+<li>Four leadership styles: autocratic, democratic, laissez-faire, transformational</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Retail Selling</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Retail selling involves all activities related to selling goods and services directly to end consumers for personal use. It is the final link in the distribution chain. Retail selling includes store layout, visual merchandising, customer service, and point-of-purchase promotions. India's retail market is valued at USD 900 billion, with over 12 million kirana stores and a rapidly growing organized retail sector.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Retail Selling Techniques</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/tZ_OGCBuBJ4" title="Retail Selling Techniques" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Visual Merchandising</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3RkhVJRqGRQ" title="Visual Merchandising" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Reliance Retail:</strong> Reliance Retail operates 18,000+ stores across formats: Reliance Fresh (grocery), Reliance Digital (electronics), Trends (fashion), Jio Mart (online-offline integration). Their sales associates are trained in consultative selling -- understanding customer needs before recommending products. In Reliance Digital, salespeople demonstrate TV picture quality, explain smartphone features, and compare brands objectively. Reliance Retail generates Rs 2.6 lakh crore revenue, making it India's largest retailer.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define retail selling and list 4 types of retail formats in India. For 10 marks: Explain the retail selling process and compare organized vs unorganized retail in India. Visual merchandising and store layout are common sub-questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Retail Formats = "DSSH"</strong> -- <strong>D</strong>epartment stores, <strong>S</strong>upermarkets, <strong>S</strong>pecialty stores, <strong>H</strong>ypermarts. Think: "DSSH sells everything."</p></div>
+
+<h4>Indian Retail Formats</h4>
+<ul>
+<li><strong>Kirana Stores:</strong> 12 million+ small family-owned shops. Account for 80% of India's retail. Personal relationships, credit facility, home delivery are key strengths.</li>
+<li><strong>Supermarkets:</strong> Self-service format. Big Bazaar (now closed), DMart, Spencer's. DMart is India's most profitable retailer with 300+ stores.</li>
+<li><strong>Hypermarkets:</strong> Large format (50,000+ sq ft). Reliance Smart, Star Bazaar, Walmart (B2B). Offer one-stop shopping.</li>
+<li><strong>Department Stores:</strong> Multi-category organized retail. Shoppers Stop, Lifestyle, Westside. Focus on premium customer experience.</li>
+<li><strong>Specialty Stores:</strong> Single-category focus. Tanishq (jewellery), Croma (electronics), Decathlon (sports). Deep expertise in specific categories.</li>
+<li><strong>E-Commerce:</strong> Flipkart, Amazon, Myntra, Nykaa. Growing at 25% annually. Click-and-collect models bridging online-offline.</li>
+</ul>
+
+<h4>Retail Selling Process</h4>
+<ol>
+<li><strong>Greeting:</strong> Welcome customers warmly. DMart's no-frills approach vs Tanishq's personal greeting with tea/coffee.</li>
+<li><strong>Needs Assessment:</strong> Ask questions to understand requirements. "What occasion is this jewellery for?"</li>
+<li><strong>Product Presentation:</strong> Demonstrate features, allow trial. Croma lets customers test electronics extensively.</li>
+<li><strong>Upselling and Cross-selling:</strong> Suggest complementary products. "Would you like a screen guard with that phone?"</li>
+<li><strong>Closing and Payment:</strong> Process payment efficiently. UPI, EMI options, loyalty points redemption.</li>
+<li><strong>After-Sales Service:</strong> Exchange policy, warranty registration, follow-up calls.</li>
+</ol>
+
+<h4>Visual Merchandising Principles</h4>
+<p>Visual merchandising creates displays that attract, engage, and persuade customers at the point of sale. Effective visual merchandising can increase sales by 20-30%.</p>
+<ul>
+<li><strong>Eye-Level Placement:</strong> Products placed at eye level (4-5 feet) sell the most. Premium brands pay extra for eye-level shelf space. Example: Maggi and Lay's always occupy eye-level shelves in Big Bazaar.</li>
+<li><strong>Colour Coordination:</strong> Creates visual harmony and mood. Warm colours (red, orange) create urgency; cool colours (blue, green) create calm. Tanishq uses warm gold lighting to enhance jewellery appeal.</li>
+<li><strong>Proper Lighting:</strong> Highlights key products and creates ambiance. Spotlight on featured products, ambient lighting for overall store. Apple Stores use focused lighting on every product.</li>
+<li><strong>Simplicity and Focus:</strong> Do not overcrowd displays. Highlight 1-2 key items per display area. DMart uses minimal displays -- price tag is the hero, not visual clutter.</li>
+<li><strong>Regular Changes:</strong> Fresh displays maintain customer interest. Change window displays every 2-3 weeks. Reliance Trends refreshes mannequins weekly.</li>
+</ul>
+
+<h4>Types of Sales Displays</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Display Type</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Purpose</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Location</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Window Display</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Attract customers into the store</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Storefront</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Zara's minimalistic window at DLF Mall</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Interior Display</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Promote specific products</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Inside store</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Samsung Experience Store product demos</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Floor/End-Cap</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">High-traffic visibility, impulse buys</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Aisle ends</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">DMart end-cap with festival offers</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Counter Display</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Impulse purchases near checkout</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Billing area</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Chocolates and gum at Reliance Fresh checkout</td></tr>
+</table>
+
+<h4>Shelf Space Management</h4>
+<ul>
+<li><strong>Principle:</strong> More shelf space = more sales. Brands pay for premium shelf placement.</li>
+<li><strong>Planogram:</strong> Diagram showing optimal product placement on shelves. Manufacturers provide planograms to retailers.</li>
+<li><strong>Shelf Rent:</strong> Rs 500-5,000 per month for prime shelf space in organized retail. FMCG companies like HUL, P&G, and ITC negotiate annual shelf agreements.</li>
+<li><strong>Point of Purchase (POP):</strong> Displays, standees, and signage near the product. Effective POP can increase sales by 20%.</li>
+</ul>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Visual merchandising and display types are practical concepts frequently tested. For 5 marks: List 4 display principles. For 10 marks: Explain how visual merchandising increases sales with Indian retail examples. Shelf space management and planograms are emerging topics.</p></div>
+
+<div class="summary-box"><h4>Unit 10 Summary</h4><ul>
+<li>India's retail market: USD 900 billion; 12M+ kirana stores + rapidly growing organized retail</li>
+<li>Formats: kirana, supermarket, hypermarket, department store, specialty, e-commerce</li>
+<li>DMart is India's most profitable organized retailer; Reliance Retail is the largest</li>
+<li>Retail selling process: greet, assess needs, present, upsell, close, after-sales service</li>
+<li>Visual merchandising: eye-level placement, colour, lighting, simplicity, regular changes</li>
+<li>Display types: window, interior, floor/end-cap, counter -- each serves a specific purpose</li>
+<li>Shelf space management and planograms are critical for FMCG brand success</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Ethics in Sales Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales ethics refers to the moral principles and standards that guide the behaviour of salespeople and sales managers. Ethical selling builds long-term trust, customer loyalty, and brand reputation. Unethical practices (misleading claims, hidden charges, bribery) may produce short-term results but destroy relationships and can lead to legal consequences under India's Consumer Protection Act 2019.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Ethics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/nUKFbISqSKk" title="Sales Ethics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Business Ethics Overview</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/hFuskGIYdZI" title="Business Ethics Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Tata Group:</strong> Tata's sales force operates under a strict code of ethics established by JRD Tata's famous quote: "I don't want India to be an economic superpower. I want India to be a happy country." Tata's salespeople are prohibited from offering bribes, making false claims, or using pressure tactics. Tata Steel's sales team famously lost a large contract by refusing to pay a kickback, but the integrity built over decades has made Tata one of India's most trusted brands. Their ethical approach has created long-term value worth billions.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define sales ethics and list 4 common unethical practices. For 10 marks: Discuss the ethical work climate model (policies, trust, peer behaviour, sales emphasis) with Indian examples. Consumer Protection Act 2019 provisions are an emerging exam topic.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Ethical Climate = "PTPS"</strong> -- <strong>P</strong>olicies and rules, <strong>T</strong>rust and responsibility, <strong>P</strong>eer behaviour, <strong>S</strong>ales emphasis. Think: "PTPS builds ethical sales teams."</p></div>
+
+<h4>Common Unethical Sales Practices</h4>
+<ul>
+<li><strong>Misleading Claims:</strong> Overstating product benefits. Some real estate developers in India promise amenities that are never delivered.</li>
+<li><strong>Hidden Charges:</strong> Insurance policies with hidden clauses; car dealers adding unnecessary accessories at inflated prices.</li>
+<li><strong>Bribery and Kickbacks:</strong> Offering gifts or payments to procurement officers in B2B sales. Common in government tenders.</li>
+<li><strong>Pressure Tactics:</strong> "This offer expires today!" -- artificial urgency. Common in timeshare and insurance sales.</li>
+<li><strong>Falsifying Reports:</strong> Inflating sales figures, padding expense accounts, fake customer visits.</li>
+<li><strong>Poaching Competitor Information:</strong> Using customer relationships to gather competitive intelligence unethically.</li>
+</ul>
+
+<h4>Building an Ethical Sales Culture</h4>
+<ul>
+<li><strong>Written Code of Ethics:</strong> Clear guidelines on acceptable behaviour. Tata, Infosys, and Godrej have comprehensive codes.</li>
+<li><strong>Leadership Example:</strong> Sales managers must model ethical behaviour. "What you tolerate, you encourage."</li>
+<li><strong>Training:</strong> Ethics training using real case studies and role-playing ethical dilemmas.</li>
+<li><strong>Reporting Mechanisms:</strong> Whistleblower policies, anonymous complaint systems, ethics hotlines.</li>
+<li><strong>Reward Ethical Behaviour:</strong> Recognize salespeople who lose deals but maintain integrity.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 11 Summary</h4><ul>
+<li>Sales ethics = moral principles guiding salesperson and manager behaviour</li>
+<li>Common violations: misleading claims, hidden charges, bribery, pressure tactics, falsifying reports</li>
+<li>Tata Group exemplifies ethical selling -- trusted brand worth billions</li>
+<li>Build ethical culture through codes, leadership example, training, reporting mechanisms</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Digital Sales and Emerging Trends</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Digital sales refers to the use of digital channels, tools, and technologies to sell products and services. It encompasses social selling (LinkedIn, Instagram), video selling (Zoom demos), AI-powered chatbots, e-commerce platforms, and data-driven selling. The COVID-19 pandemic accelerated India's digital sales transformation by 5-10 years, making digital literacy a critical skill for every salesperson.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">&#x25B6; Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Sales Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/JmEBOCnUeW4" title="Digital Sales Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Social Selling</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/CYWkWqHLWKk" title="Social Selling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Nykaa:</strong> Nykaa built a Rs 50,000 crore beauty empire through digital-first selling. Their sales strategy combines content marketing (beauty tutorials, product reviews), social selling (Instagram influencers demonstrating products), personalized recommendations (AI algorithms), and live commerce (real-time video selling events). Nykaa's 2,000+ beauty advisors provide virtual consultations via video calls, replicating the in-store experience digitally. Their IPO in 2021 was India's first profitable e-commerce listing.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Digital sales is an emerging topic with increasing exam weightage. For 5 marks: Define social selling and list 3 digital tools for salespeople. For 10 marks: Compare traditional vs digital selling processes and explain how Indian companies are adapting. AI in sales, video selling, and omnichannel strategies are trending questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Digital Sales = "SVAOC"</strong> -- <strong>S</strong>ocial selling, <strong>V</strong>ideo selling, <strong>A</strong>I chatbots, <strong>O</strong>mnichannel, <strong>C</strong>ontent marketing. Think: "SVAOC sells digitally."</p></div>
+
+<h4>Key Digital Sales Trends</h4>
+<ul>
+<li><strong>Social Selling:</strong> Using LinkedIn, Instagram, and WhatsApp to build relationships and generate leads. Indian real estate agents generate 40% of leads through WhatsApp groups and Instagram posts.</li>
+<li><strong>Video Selling:</strong> Product demos, virtual consultations, and live commerce via Zoom, Google Meet, or Instagram Live. Nykaa and Myntra host weekly live selling events.</li>
+<li><strong>AI and Chatbots:</strong> Automated lead qualification, 24/7 customer support, personalized product recommendations. HDFC Bank's Eva chatbot handles 5 million+ customer queries monthly.</li>
+<li><strong>Omnichannel Selling:</strong> Seamless experience across online and offline. Customers research online (webrooming) and buy in-store, or vice versa (showrooming). Tata CLiQ bridges online and offline with "phygital" experiences.</li>
+<li><strong>Data-Driven Selling:</strong> Using CRM analytics, predictive scoring, and customer behaviour data to prioritize leads and personalize pitches. Flipkart's recommendation engine drives 35% of sales.</li>
+<li><strong>WhatsApp Business:</strong> Over 5 million Indian businesses use WhatsApp for sales. JioMart allows ordering through WhatsApp. Small businesses use WhatsApp catalogs and payment features.</li>
+</ul>
+
+<h4>Impact of COVID-19 on Sales</h4>
+<ul>
+<li><strong>Remote Selling:</strong> Field sales shifted to video calls. Even B2B companies like L&T and Tata Steel moved to virtual selling during lockdowns.</li>
+<li><strong>Digital Adoption:</strong> Tier 2-3 cities embraced online shopping. Meesho and Flipkart saw 200% growth in new user registrations from smaller cities.</li>
+<li><strong>Hybrid Model:</strong> Post-COVID, most companies adopted a hybrid approach: digital for prospecting and initial contact, in-person for closing and relationship building.</li>
+<li><strong>Contactless Delivery:</strong> Safety protocols became permanent features. Amazon and Flipkart introduced contactless delivery and digital payment options.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 12 Summary</h4><ul>
+<li>Digital sales: social selling, video selling, AI chatbots, omnichannel, data-driven approaches</li>
+<li>Nykaa built a Rs 50,000 crore empire through digital-first selling strategy</li>
+<li>WhatsApp Business is India's most widely used digital sales tool (5M+ businesses)</li>
+<li>COVID-19 accelerated digital adoption; hybrid selling (digital + in-person) is the new normal</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 13: Negotiation Skills -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Negotiation Skills in Sales</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Negotiation is a discussion between two or more parties to reach a mutually acceptable agreement. In sales, negotiation occurs when the buyer and seller need to agree on price, delivery, terms, or service levels. Effective negotiators create win-win outcomes rather than zero-sum games. Strong negotiation skills can mean the difference between a profitable deal and a loss-making one.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Negotiation Skills for Sales</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3JZUUnN8GLQ" title="Negotiation Skills for Sales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>BATNA and Win-Win Negotiation</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/s4Oe6C6NHxM" title="BATNA and Win-Win Negotiation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Infosys Contract Negotiations:</strong> When Infosys negotiates large IT outsourcing contracts (worth Rs 100-500 crore), the negotiation process can take 3-6 months. The sales team prepares by understanding the client's pain points, benchmarking competitor pricing, and identifying non-price variables (SLA terms, transition support, innovation credits). Infosys uses a collaborative negotiation style -- they focus on long-term partnership value rather than just winning on price. Their BATNA is strong because they have a pipeline of other large deals, which gives them confidence to walk away from unfavourable terms.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define BATNA and explain why it is important in negotiation. For 10 marks: Explain the 5 negotiation styles (Thomas-Kilmann model) with Indian business examples. Win-win negotiation principles are a favourite essay question.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Negotiation Stages = "POB-CI"</strong> -- <strong>P</strong>reparation, <strong>O</strong>pening, <strong>B</strong>argaining, <strong>C</strong>losing, <strong>I</strong>mplementation. Think: "POB-CI negotiates well."</p></div>
+
+<h4>BATNA -- Best Alternative To a Negotiated Agreement</h4>
+<ul>
+<li><strong>Definition:</strong> Your best fallback option if the current negotiation fails. It is your "walk-away" position.</li>
+<li><strong>Why it matters:</strong> A strong BATNA gives you confidence and leverage. If you have no alternative, you are desperate and will accept bad terms.</li>
+<li><strong>Example:</strong> A Maruti dealer negotiating with a fleet company has BATNA = selling those cars to individual customers at higher margins. If the fleet deal does not meet minimum margin, the dealer walks away.</li>
+<li><strong>Improving BATNA:</strong> Generate multiple alternatives before negotiating. Never negotiate from a position of weakness.</li>
+</ul>
+
+<h4>Negotiation Process (5 Stages)</h4>
+<ol>
+<li><strong>Preparation:</strong> Research the counterpart, set goals, know your BATNA, understand their needs. Infosys spends weeks preparing for large deals.</li>
+<li><strong>Opening:</strong> Set the tone, establish rapport, state positions. Indian business culture values relationship-building before getting into numbers.</li>
+<li><strong>Bargaining:</strong> Exchange offers and counter-offers. Make concessions strategically -- never give something without getting something back.</li>
+<li><strong>Closing:</strong> Summarize agreed terms, confirm commitment, document the deal. Use the assumptive close: "Shall we have the contract drafted?"</li>
+<li><strong>Implementation:</strong> Fulfill obligations, maintain the relationship. Post-negotiation follow-up builds trust for future deals.</li>
+</ol>
+
+<h4>Negotiation Styles (Thomas-Kilmann Model)</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Style</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Description</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">When to Use</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Competing</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Win-lose, assertive, power-based</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Quick decisions needed, one-time deals</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Government tender negotiations (L1 bidder)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Collaborating</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Win-win, creative problem-solving</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Long-term partnerships, complex deals</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">TCS-client outsourcing contracts</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Compromising</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Middle ground, split the difference</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Time pressure, equal power, moderate stakes</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Distributor margin negotiations at HUL</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Avoiding</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Withdraw, postpone, sidestep</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Trivial issues, emotional situations</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Postponing price discussion until after demo</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Accommodating</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Yield to the other party</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Relationship matters more than the issue</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Extending payment terms for a key account</td></tr>
+</table>
+
+<h4>Win-Win Negotiation Principles</h4>
+<ul>
+<li><strong>Focus on interests, not positions:</strong> Understand WHY they want something, not just WHAT they want.</li>
+<li><strong>Separate people from problems:</strong> Attack the issue, not the person. Maintain respect.</li>
+<li><strong>Generate options for mutual gain:</strong> Brainstorm creative solutions. "What if we reduce price but extend the contract to 3 years?"</li>
+<li><strong>Use objective criteria:</strong> Market data, industry standards, and benchmarks reduce conflict.</li>
+<li><strong>Know your walk-away point:</strong> Never negotiate below your minimum acceptable terms.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 13 Summary</h4><ul>
+<li>BATNA = Best Alternative To a Negotiated Agreement -- your fallback if the deal fails</li>
+<li>5 stages: Preparation, Opening, Bargaining, Closing, Implementation</li>
+<li>5 styles: Competing, Collaborating, Compromising, Avoiding, Accommodating</li>
+<li>Win-win negotiation: focus on interests, separate people from problems, use objective criteria</li>
+<li>Indian business culture values relationship-building before price negotiation</li>
+</ul></div>
+</div>
+</div>
+
+<!-- UNIT 14: Sales Control, Analysis and Audit -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Sales Control, Analysis and Audit</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Sales control is the process of monitoring sales activities and correcting deviations from planned performance. It involves analysing sales data, identifying problems, and taking corrective action. The sales audit is a comprehensive, systematic, and periodic review of the entire sales function -- its environment, objectives, strategies, organisation, procedures, and people.</p></div>
+<div class="video-section"><button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='▶ Watch Videos'?'▼ Hide Videos':'▶ Watch Videos'">▶ Watch Videos</button><div class="video-section-content"><div class="video-grid"><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sales Control and Audit</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8Gg8MuGkTNI" title="Sales Control and Audit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div><div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Break-Even Analysis Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/vsGjOkSNZMo" title="Break-Even Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div></div></div></div>
+
+
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>ITC Limited:</strong> ITC conducts quarterly sales reviews across its FMCG, agri, and cigarettes divisions. Their sales control system tracks 15+ KPIs per territory: volume growth, market share, outlet coverage, collection efficiency, display compliance, and new product launches. ITC uses a centralized dashboard (built on SAP) that gives real-time visibility to regional managers. When Varanasi territory showed 12% volume decline, the audit revealed that 30% of outlets were not being covered due to a route change. Corrective action restored performance within one quarter.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Break-even analysis is a guaranteed numerical question. Know the formula and be able to apply it to a given scenario. Variance analysis (budget vs actual) is also frequently tested. For 10 marks: Explain the sales audit process and its components.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Sales Control = "SCVP"</strong> -- <strong>S</strong>ales volume analysis, <strong>C</strong>ost analysis, <strong>V</strong>ariance analysis, <strong>P</strong>rofitability analysis. Think: "SCVP controls sales."</p></div>
+
+<h4>Types of Sales Analysis</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Analysis Type</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">What It Measures</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Sales Volume</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Units/revenue by product, territory, customer</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Maruti analysing Swift vs Baleno sales by region</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Cost Analysis</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Selling expenses as % of sales</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">HUL tracking cost per call across territories</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Profitability</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Contribution margin by product line, segment</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Tata Steel analysing margins by product grade</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Variance</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Budget vs actual comparison</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Godrej comparing quarterly targets vs achievement</td></tr>
+</table>
+
+<h4>Break-Even Analysis (Numerical)</h4>
+<p>Break-even point is the sales volume at which total revenue equals total costs (no profit, no loss).</p>
+<ul>
+<li><strong>Break-Even Point (units) = Fixed Costs / (Selling Price per unit - Variable Cost per unit)</strong></li>
+<li><strong>Break-Even Point (Rs) = Fixed Costs / Contribution Margin Ratio</strong></li>
+<li><strong>Contribution Margin = Selling Price - Variable Cost per unit</strong></li>
+<li><strong>Contribution Margin Ratio = Contribution Margin / Selling Price</strong></li>
+</ul>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Numerical Example</div><p><strong>Problem:</strong> A sales territory has fixed costs of Rs 5,00,000. Product selling price is Rs 500/unit. Variable cost is Rs 300/unit. Calculate break-even point.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Contribution Margin = Rs 500 - Rs 300 = Rs 200/unit</li>
+<li>Break-Even = Rs 5,00,000 / Rs 200 = <strong>2,500 units</strong></li>
+<li>At 2,500 units, revenue = 2,500 x Rs 500 = Rs 12,50,000 = Total Cost</li>
+<li>Sales beyond 2,500 units = pure profit of Rs 200/unit</li>
+</ul></div>
+
+<h4>All Key Sales Formulas</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Formula</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Equation</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Break-Even Point</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Fixed Costs / (Selling Price - Variable Cost)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Market Share</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">(Company Sales / Total Market Sales) x 100</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Sales Growth</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">(Current Sales - Previous Sales) / Previous Sales x 100</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Call Frequency</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Total Calls Made / Number of Customers</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Cost per Call</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Total Selling Expenses / Total Calls Made</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Sales per Salesperson</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Total Sales / Number of Salespeople</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Attrition Rate</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">(People Leaving / Total Employees) x 100</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Recruitment Pool</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Hires Needed / (Selection Rate x Offer Acceptance Rate)</td></tr>
+</table>
+
+<h4>Sales Audit Components</h4>
+<ul>
+<li><strong>Sales Environment:</strong> Market trends, competitor actions, regulatory changes, economic conditions</li>
+<li><strong>Sales Objectives:</strong> Are targets realistic? Aligned with corporate strategy?</li>
+<li><strong>Sales Strategies:</strong> Are the right channels, segments, and approaches being used?</li>
+<li><strong>Sales Organisation:</strong> Is the structure optimal? Right span of control?</li>
+<li><strong>Sales Procedures:</strong> Are processes efficient? CRM being used effectively?</li>
+<li><strong>Sales People:</strong> Are they trained, motivated, and evaluated fairly?</li>
+</ul>
+
+<h4>Sales Organization Structures</h4>
+<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<tr style="background:rgba(108,99,255,0.1);"><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Structure</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Description</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Pros</th><th style="border:1px solid rgba(200,200,200,0.2);padding:8px;text-align:left;">Indian Example</th></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>By Geography</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Regional managers oversee territories</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Simple, low cost, local knowledge</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">HUL (North, South, East, West zones)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>By Product</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Product specialists handle specific lines</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Deep product knowledge</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Godrej (separate teams for appliances, furniture, chemicals)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>By Customer</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Industry or segment-specific teams</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Customer-focused, relationship depth</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">TCS (banking, retail, healthcare verticals)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>By Function</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Separate selling, service, and admin teams</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Specialization, efficiency</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">IBM (sales, pre-sales, post-sales separate)</td></tr>
+<tr><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;"><strong>Matrix</strong></td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Combination of two or more bases</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Flexible, leverages multiple dimensions</td><td style="border:1px solid rgba(200,200,200,0.2);padding:8px;">Wipro (product x geography matrix)</td></tr>
+</table>
+
+<h4>Sales Quota Types</h4>
+<ul>
+<li><strong>Volume Quota:</strong> Units or rupees to sell. Most common type. Example: "Sell 500 units this quarter."</li>
+<li><strong>Revenue Quota:</strong> Revenue target in rupees. Example: "Achieve Rs 2 crore revenue this quarter."</li>
+<li><strong>Activity Quota:</strong> Number of calls, presentations, or demos. Example: "Make 20 calls per day, 5 presentations per week."</li>
+<li><strong>Profit Quota:</strong> Profit margin target. Example: "Maintain 15% gross margin on all deals."</li>
+</ul>
+
+<h4>MOST Framework for Sales Planning</h4>
+<ul>
+<li><strong>M -- Mission:</strong> Why does the sales organisation exist? (e.g., "Be India's most trusted FMCG distributor")</li>
+<li><strong>O -- Objective:</strong> What specific targets to achieve? (e.g., "Achieve 20% market share in South India by 2027")</li>
+<li><strong>S -- Strategy:</strong> How to achieve the objectives? (e.g., "Expand direct distribution to 50,000 new outlets")</li>
+<li><strong>T -- Tactics:</strong> Day-to-day actions and activities (e.g., "Beat salesmen visit 20 outlets/day, offer volume discounts")</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 14 Summary</h4><ul>
+<li>Sales control = monitoring and correcting activities to meet objectives</li>
+<li>Four types of analysis: sales volume, cost, profitability, variance</li>
+<li>Break-Even = Fixed Costs / (Selling Price - Variable Cost) -- guaranteed numerical question</li>
+<li>Sales audit covers: environment, objectives, strategies, organisation, procedures, people</li>
+<li>Five organization structures: geography, product, customer, function, matrix</li>
+<li>Four quota types: volume, revenue, activity, profit</li>
+<li>MOST framework: Mission, Objective, Strategy, Tactics for sales planning</li>
+</ul></div>
+</div>
+</div>
+
+</main>
+</div>
+
+
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+// Scroll-triggered animations + mobile sidebar toggle
+(function() {
+  window.addEventListener('scroll', function() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    var bar = document.querySelector('.reading-progress');
+    if (bar) bar.style.width = scrolled + '%';
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.unit, .summary-box, .callout, .callout-example, .callout-examtip, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  window.toggleMobileSidebar = function() {
+    document.querySelector('.study-sidebar').classList.toggle('open');
+  };
+})();
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body>
+</html>

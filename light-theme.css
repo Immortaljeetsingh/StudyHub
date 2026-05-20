@@ -84,10 +84,18 @@ body.light-theme .study-sidebar {
 }
 body.light-theme .sidebar-header h3 { color: #1c1c1e !important; }
 body.light-theme .sidebar-nav a { color: #636366 !important; }
-body.light-theme .sidebar-nav a:hover { background: rgba(0,0,0,0.04) !important; color: #1c1c1e !important; }
-body.light-theme .sidebar-nav a.active { background: rgba(200,200,200,0.15) !important; color: #1c1c1e !important; }
+body.light-theme .sidebar-nav a:hover { background: rgba(0,0,0,0.02) !important; color: #1c1c1e !important; }
+body.light-theme .sidebar-nav a.active { background: linear-gradient(90deg, rgba(0,0,0,0.04) 0%, transparent 100%) !important; color: #1c1c1e !important; }
 
 /* Study Content */
+body.light-theme .study-header h1 {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  background-clip: initial !important;
+  color: var(--text-primary) !important;
+  filter: none !important;
+}
 body.light-theme .study-content h2, body.light-theme .study-content h3,
 body.light-theme .study-content h4, body.light-theme .study-content h5 { color: #1c1c1e !important; }
 body.light-theme .study-content p, body.light-theme .study-content li { color: #3a3a3c !important; }
@@ -225,9 +233,12 @@ body.light-theme [style*="box-shadow: 0 0 0 1px rgba(255,255,255"] {
 }
 
 /* Specific elements that commonly have white text */
+
+/* Commented out to preserve custom colored elements (timelines, tag borders, flowcharts) in light mode
 body.light-theme .study-content [style*="color"] {
   color: #3a3a3c !important;
 }
+*/
 
 /* Quick access cards text */
 body.light-theme a[style*="border-radius:16px"] span[style*="color:rgba(255,255,255"] {
@@ -328,3 +339,44 @@ body.light-theme .hero a[style*="rgba(255,255,255"] {
   color: #1c1c1e !important;
   border-color: rgba(0,0,0,0.1) !important;
 }
+
+/* Summary box light theme */
+body.light-theme .summary-box { background: rgba(255,255,255,0.85) !important; border-color: rgba(0,0,0,0.08) !important; box-shadow: 0 2px 16px rgba(0,0,0,0.06) !important; }
+body.light-theme .summary-box h4 { color: #1c1c1e !important; }
+body.light-theme .summary-box li { color: #3a3a3c !important; }
+
+/* Subject badge light theme */
+body.light-theme .subject-badge { color: #1c1c1e !important; border: 1px solid rgba(0,0,0,0.1); }
+
+/* Subject tag light theme */
+body.light-theme .subject-tag { color: #1c1c1e !important; }
+
+/* Visual diagram light theme */
+body.light-theme .visual-diagram { background: rgba(255,255,255,0.85) !important; border-color: rgba(0,0,0,0.08) !important; box-shadow: 0 2px 16px rgba(0,0,0,0.06) !important; }
+body.light-theme .visual-diagram h5 { color: #1c1c1e !important; }
+
+/* Visual diagram nodes light theme */
+body.light-theme .vd-node { background: rgba(0,0,0,0.04) !important; border-color: rgba(0,0,0,0.1) !important; color: #1c1c1e !important; }
+
+/* Summarize/Ask AI buttons light theme */
+body.light-theme .summarize-btn { color: #4c1d95 !important; background: rgba(167,139,250,0.12) !important; }
+body.light-theme .ask-ai-btn { color: #065f46 !important; background: rgba(52,211,153,0.1) !important; }
+
+/* Badge light theme fixes */
+body.light-theme .s-b { color: #1c1c1e !important; border-color: rgba(0,0,0,0.1) !important; }
+body.light-theme .s-p { color: #5b21b6 !important; }
+body.light-theme .s-pk { color: #1c1c1e !important; }
+
+/* Sidebar active state light theme */
+body.light-theme .sidebar-nav a.active { background: rgba(0,0,0,0.06) !important; border-left-color: #007aff !important; }
+
+/* Formula light theme */
+body.light-theme .formula { color: #5b21b6 !important; background: rgba(167,139,250,0.12) !important; }
+
+/* Component label light theme */
+body.light-theme .mnemonic-title { color: #b8860b !important; }
+body.light-theme .exam-tip .tip-label { color: #d32f2f !important; }
+body.light-theme .case-study h5 { color: #1565c0 !important; }
+
+/* Fix global transition override - include transform and opacity */
+body.light-theme * { transition-property: background-color, color, border-color, box-shadow, transform, opacity !important; }

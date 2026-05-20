@@ -124,6 +124,54 @@ function showToast(msg, type) {
     t.textContent = msg; document.body.appendChild(t);
     setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity 0.3s'; setTimeout(() => t.remove(), 300); }, 3500);
 }
+function initScrollSpy() {
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    const sections = document.querySelectorAll('h2[id^="block"], .unit[id^="u"]');
+    if (navLinks.length === 0 || sections.length === 0) return;
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const scrollPosition = window.scrollY + 140;
+        sections.forEach(section => {
+            if (scrollPosition >= section.offsetTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        if (current) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === '#' + current || (href.startsWith('#') && href.slice(1) === current)) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    });
+}
+function initMobileSidebarAutoClose() {
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 900) {
+                const sb = document.querySelector('.study-sidebar');
+                if (sb) sb.classList.remove('mobile-open');
+            }
+        });
+    });
+}
+function initSidebarCloseButton() {
+    const header = document.querySelector('.sidebar-header');
+    if (header && !header.querySelector('.sidebar-close-btn')) {
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'sidebar-close-btn';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.setAttribute('aria-label', 'Close sidebar');
+        closeBtn.addEventListener('click', () => {
+            const sb = document.querySelector('.study-sidebar');
+            if (sb) sb.classList.remove('mobile-open');
+        });
+        header.appendChild(closeBtn);
+    }
+}
 
 // ==================== COMPONENTS ====================
 function renderApiSettingsModal() {
@@ -141,6 +189,7 @@ function renderToolbar(subjectCode) {
 document.addEventListener('DOMContentLoaded', () => {
     if (!document.getElementById('apiSettingsModal')) { const c = document.createElement('div'); c.innerHTML = renderApiSettingsModal(); document.body.appendChild(c.firstElementChild); }
     loadTheme(); initSummarizeButtons(); initAskButtons(); initReadingProgress();
+    initScrollSpy(); initMobileSidebarAutoClose(); initSidebarCloseButton();
 
     // Mobile: wrap tables in scrollable containers
     document.querySelectorAll('.comparison-table, table').forEach(t => {

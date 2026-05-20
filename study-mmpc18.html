@@ -6,41 +6,55 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="manifest" href="manifest.json">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#e17055;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-tip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
-.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}.callout table{width:100%;border-collapse:collapse;margin:.5rem 0;font-size:.85rem}.callout table th,.callout table td{padding:.4rem .6rem;border:1px solid rgba(255,255,255,.1);text-align:left}.callout table th{background:rgba(225,112,85,.15);color:#e17055;font-weight:600}.callout table td{color:rgba(255,255,255,.7)}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.vd-node{background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem}.kt{background:rgba(108,92,231,.08);border:1px solid rgba(108,92,231,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}.kt-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#a29bfe}
+/* MMPC-18 ENHANCED STYLES */
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(225,112,85,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#e17055;padding-left:1rem}.sidebar a.active{color:#e17055;background:rgba(225,112,85,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(225,112,85,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#e17055;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#e17055,#e17055cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-.02em}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc,#00d4ff,#e17055);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);border-radius:2px}.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}.animate-on-scroll:nth-child(5){transition-delay:.4s}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#e17055;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(225,112,85,.08);border-color:#e17055}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.callout-mnemonic{background:rgba(108,92,231,.08);border-color:#6c5ce7}.callout-tip{background:rgba(255,215,0,.08);border-color:#ffd700}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(225,112,85,.15);color:#e17055cc;border:1px solid rgba(225,112,85,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#e17055}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#e17055;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#e17055,#e17055cc);z-index:9999;transition:width .1s;width:0%}.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,0.05);border:1px solid rgba(200,200,200,0.12);border-radius:12px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,0.12)}.video-header{padding:0.8rem 1rem;display:flex;align-items:center;gap:0.5rem;background:rgba(225,112,85,0.05)}.video-header h5{margin:0;font-size:0.9rem;color:#e0e0ff}.video-icon{color:#e17055;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.video-toggle{background:linear-gradient(135deg,#e17055,#e17055cc);color:white;border:none;padding:0.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:0.9rem;margin:1rem 0;transition:opacity 0.3s}.video-toggle:hover{opacity:0.85}.video-section-content{display:none}.video-section-content.active{display:block}.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}.visual-diagram h5{color:#00b894;font-size:1rem;margin-bottom:.75rem}.vd-node{background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);padding:0.6rem;border-radius:8px;font-size:0.9rem;display:inline-block;margin:0.3rem}.case-study{background:linear-gradient(135deg,rgba(255,215,0,0.06),rgba(108,99,255,0.04));border:1px solid rgba(255,215,0,0.2);border-left:4px solid #FFD700;border-radius:8px;padding:1.2rem;margin:1rem 0}.case-study h5{color:#FFD700;margin-bottom:0.5rem;font-weight:600}.fc{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem;margin:1rem 0}.fc-s{background:rgba(225,112,85,0.15);border:1px solid rgba(225,112,85,0.3);border-radius:10px;padding:0.6rem 1rem;text-align:center;min-width:100px}.fc-n{font-size:1.2rem;font-weight:700;color:#e17055}.fc-l{font-size:0.8rem;color:rgba(255,255,255,.7)}.fc-a{color:#e17055;font-size:1.4rem}.db{margin:1rem 0;overflow-x:auto}.db table{width:100%;border-collapse:collapse;font-size:.85rem}.db th,.db td{padding:.5rem .75rem;border:1px solid rgba(255,255,255,.1);text-align:left}.db th{background:rgba(225,112,85,.15);color:#e17055;font-weight:600}.db td{color:rgba(255,255,255,.7)}.db tr:nth-child(even){background:rgba(255,255,255,.02)}.action-bar{display:flex;gap:0.5rem;margin:1rem 0}.btn{padding:0.4rem 1rem;border-radius:8px;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.3s;border:none}.btn-primary{background:rgba(225,112,85,0.2);color:#e17055;border:1px solid rgba(225,112,85,0.3)}.btn-primary:hover{background:rgba(225,112,85,0.3)}.btn-success{background:rgba(0,184,148,0.2);color:#00b894;border:1px solid rgba(0,184,148,0.3)}.btn-success:hover{background:rgba(0,184,148,0.3)}.kt{background:rgba(108,92,231,.08);border:1px solid rgba(108,92,231,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}.kt-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#a29bfe}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
 </style>
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc18">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-18'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPC-18</h3></div>
-  <a href="#u1">Unit 1: Introduction to Entrepreneurship</a>
-  <a href="#u2">Unit 2: Entrepreneurial Competencies</a>
-  <a href="#u3">Unit 3: Dimensions of Entrepreneurship</a>
-  <a href="#u4">Unit 4: Government Policies</a>
-  <a href="#u5">Unit 5: Economic Development</a>
-  <a href="#u6">Unit 6: Business Idea Identification</a>
-  <a href="#u7">Unit 7: Financing an Enterprise</a>
-  <a href="#u8">Unit 8: Business Plan Preparation</a>
-  <a href="#u9">Unit 9: Implementing Business Plan</a>
-  <a href="#u10">Unit 10: Managing the Enterprise</a>
-  <a href="#u11">Unit 11: Social Entrepreneurship</a>
-  <a href="#u12">Unit 12: Rural Entrepreneurship</a>
-  <a href="#u13">Unit 13: Ethical Entrepreneurship</a>
-  <a href="#u14">Unit 14: Family Business &amp; Governance</a>
-</nav>
-<main class="study-content" id="main-content">
-<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
-<div class="study-header"><span class="subject-tag">MMPC-18</span><h1>Entrepreneurship</h1>
-<p>Comprehensive Study Notes &#x2014; 4 Blocks, 14 Units &#x2022; IGNOU MBA</p></div>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-18</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Entrepreneurship Overview</a>
+<a href="#u1">Unit 1: Introduction to Entrepreneurship</a>
+<a href="#u2">Unit 2: Entrepreneurial Competencies</a>
+<a href="#u3">Unit 3: Dimensions of Entrepreneurship</a>
+<a href="#block2">Block-02 Entrepreneurship in India</a>
+<a href="#u4">Unit 4: Government Policies</a>
+<a href="#u5">Unit 5: Economic Development</a>
+<a href="#block3">Block-03 Establishing a New Enterprise</a>
+<a href="#u6">Unit 6: Business Idea Identification</a>
+<a href="#u7">Unit 7: Financing an Enterprise</a>
+<a href="#u8">Unit 8: Business Plan Preparation</a>
+<a href="#u9">Unit 9: Implementing Business Plan</a>
+<a href="#u10">Unit 10: Managing the Enterprise</a>
+<a href="#block4">Block-04 Special Issues</a>
+<a href="#u11">Unit 11: Social Entrepreneurship</a>
+<a href="#u12">Unit 12: Rural Entrepreneurship</a>
+<a href="#u13">Unit 13: Ethical Entrepreneurship</a>
+<a href="#u14">Unit 14: Family Business &amp; Governance</a>
+<a href="quiz-mmpc18.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-18</span><h1>Entrepreneurship</h1><p>4 Blocks, 14 Units &#x2022; Risk-Taking, Opportunity Recognition &amp; Enterprise Building &#x2022; IGNOU MBA</p></div>
 
-<!-- Unit 1 -->
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Entrepreneurship &#x2014; An Overview</h2>
+
+<!-- UNIT 1 -->
 <div class="unit" id="u1">
 <h3 id="u1">Unit 1: Introduction to Entrepreneurship</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
@@ -48,53 +62,64 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <ul>
-<li>Entrepreneurship = capacity to assume risk, accountability &amp; challenges to explore opportunities, disrupt market norms &amp; create values</li>
-<li>Evolution: Rational Agent (Economics) → Personality Traits (Psychology) → Opportunity Recognition (Late 1990s)</li>
+<li><strong>Entrepreneurship</strong> = capacity to assume risk, accountability &amp; challenges to explore opportunities, disrupt market norms &amp; create values</li>
+<li><strong>Evolution:</strong> Rational Agent (Economics) &#x2192; Personality Traits (Psychology) &#x2192; Opportunity Recognition (Late 1990s)</li>
 <li>Three eras of entrepreneurship thinking: risk-bearing, trait-based, opportunity-based</li>
-</ul>
-</div>
+</ul></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Thinkers</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is Entrepreneurship?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/ZX7QMjS3G0c" title="What is Entrepreneurship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Schumpeter and Creative Destruction</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Fz6K5x3vLzE" title="Schumpeter Creative Destruction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Entrepreneur vs Manager</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1kK2oM3Fb2Y" title="Entrepreneur vs Manager" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Thinkers Table</div>
 <table>
 <tr><th>Scholar</th><th>Contribution</th><th>Memory Hook</th></tr>
-<tr><td>Cantillon</td><td>Risk-bearing theory</td><td>"Cantillon = Chance"</td></tr>
-<tr><td>Adam Smith</td><td>Profit-seeking enterpriser</td><td>"Smith = Seeker"</td></tr>
-<tr><td>Jean-Baptiste Say</td><td>Coordination of production factors</td><td>"Say = Systematize"</td></tr>
-<tr><td>Schumpeter</td><td>Innovation &amp; creative destruction</td><td>"Schumpeter = Shatter"</td></tr>
-<tr><td>McClelland</td><td>Need for achievement</td><td>"McClelland = Must achieve"</td></tr>
-<tr><td>Kirzner</td><td>Opportunity discovery</td><td>"Kirzner = Knows"</td></tr>
-<tr><td>Shane &amp; Venkataraman</td><td>Opportunity-based entrepreneurship</td><td>"S&amp;V = Search, Value"</td></tr>
-</table>
-</div>
+<tr><td>Cantillon (1680-1744)</td><td>Risk-bearing theory</td><td>"Cantillon = Chance" (uncertain price)</td></tr>
+<tr><td>Adam Smith (1776)</td><td>Profit-seeking enterpriser</td><td>"Smith = Seeker" (profit)</td></tr>
+<tr><td>Jean-Baptiste Say (1807)</td><td>Coordination of production factors</td><td>"Say = Systematize" (factors)</td></tr>
+<tr><td>Schumpeter (1934)</td><td>Innovation &amp; creative destruction</td><td>"Schumpeter = Shatter" (equilibrium)</td></tr>
+<tr><td>McClelland (1961)</td><td>Need for achievement</td><td>"McClelland = Must achieve"</td></tr>
+<tr><td>Kirzner (1973)</td><td>Opportunity discovery</td><td>"Kirzner = Knows" (opportunities)</td></tr>
+<tr><td>Shane &amp; Venkataraman (2000)</td><td>Opportunity-based entrepreneurship</td><td>"S&amp;V = Search, Value"</td></tr>
+</table></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Entrepreneur vs Manager</div>
-<table>
-<tr><th>Aspect</th><th>Entrepreneur</th><th>Manager</th></tr>
-<tr><td>Risk</td><td>Bearer</td><td>Avoider</td></tr>
-<tr><td>Orientation</td><td>Opportunity</td><td>Resource</td></tr>
-<tr><td>Motivation</td><td>Achievement</td><td>Power</td></tr>
-<tr><td>Innovation</td><td>Core function</td><td>Routine</td></tr>
-<tr><td>Ownership</td><td>Yes</td><td>No</td></tr>
-</table>
-</div>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Entrepreneur</th><th>Manager</th><th>Mnemonic</th></tr>
+<tr><td>Risk</td><td>Bearer</td><td>Avoider</td><td>E=Bearer, M=Avoider</td></tr>
+<tr><td>Orientation</td><td>Opportunity</td><td>Resource</td><td>E=Opp, M=Res</td></tr>
+<tr><td>Motivation</td><td>Achievement</td><td>Power</td><td>E=Ach, M=Pow</td></tr>
+<tr><td>Innovation</td><td>Core function</td><td>Routine</td><td>E=Innovate, M=Routine</td></tr>
+<tr><td>Ownership</td><td>Yes</td><td>No</td><td>E=Own, M=Hire</td></tr>
+</table></div></div>
 
-<div class="visual-diagram"><h5>&#x1F4CA; Entrepreneur vs Intrapreneur</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node">Entrepreneur: Own new venture, Personal financial risk, Full control</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2195;</div>
-<div class="vd-node">Intrapreneur: Existing company, Company bears risk, Limited autonomy</div>
-</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Entrepreneur vs Intrapreneur</div>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Entrepreneur</th><th>Intrapreneur</th></tr>
+<tr><td>Organization</td><td>Own new venture</td><td>Existing company</td></tr>
+<tr><td>Risk</td><td>Personal financial risk</td><td>Company bears risk</td></tr>
+<tr><td>Resources</td><td>Self-mobilized</td><td>Company provides</td></tr>
+<tr><td>Reward</td><td>Profit ownership</td><td>Salary + Bonus</td></tr>
+<tr><td>Autonomy</td><td>Full control</td><td>Limited by corporate structure</td></tr>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Elon Musk = Entrepreneur (SpaceX, Tesla — own ventures, personal risk). Sundar Pichai = Intrapreneur (innovated within Google — Gmail, Chrome — company resources).</p>
-</div>
+<p><strong>Elon Musk</strong> = Entrepreneur (SpaceX, Tesla &#x2014; own ventures, personal risk). <strong>Sundar Pichai</strong> = Intrapreneur (innovated within Google &#x2014; Gmail, Chrome &#x2014; company resources).</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"C-S-S-G-K-S"</strong> — Cantillon (Risk), Say (Coordination), Schumpeter (Innovation), Gartner (Organizations), Kirzner (Discovery), Shane (Opportunity)</p>
-</div>
+<p><strong>"C-S-S-G-K-S"</strong> &#x2014; Cantillon (Risk), Say (Coordination), Schumpeter (Innovation), Gartner (Organizations), Kirzner (Discovery), Shane (Opportunity)</p></div>
 
 <div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
-<p>Schumpeter's "creative destruction" is the most frequently tested concept. Always cite him first in any entrepreneurship definition question.</p>
+<p>Schumpeter's "creative destruction" is the most frequently tested concept. Always cite him first in any entrepreneurship definition question.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Dhirubhai Ambani &#x2014; India's Greatest Entrepreneur</h5>
+<p>Dhirubhai Ambani started Reliance Industries with &#x20B9;15,000 in 1966. He demonstrated every entrepreneurial trait: risk-bearing (entered petrochemicals when India was socialist), opportunity recognition (saw India's polyester demand), innovation (backward integration strategy), and creative destruction (disrupted the textile industry). From a small textile mill to a &#x20B9;15 lakh crore empire &#x2014; the ultimate entrepreneurship story.</p>
 </div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
@@ -105,7 +130,7 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </ul></div>
 </div>
 
-<!-- Unit 2 -->
+<!-- UNIT 2 -->
 <div class="unit" id="u2">
 <h3 id="u2">Unit 2: Entrepreneurial Competencies</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
@@ -115,34 +140,39 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <ul>
 <li>Competencies = learnable skills that differentiate successful entrepreneurs</li>
 <li>Developed through education, mentorship, practical experience, case studies, simulations</li>
-</ul>
-</div>
+<li><strong>Competency:</strong> An underlying characteristic of a person that leads to effective or superior performance in a job</li>
+</ul></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 12 Key Competencies</div>
-<table>
-<tr><th>#</th><th>Competency</th><th>Real-World Example</th></tr>
-<tr><td>1</td><td>Initiative — proactive action</td><td>Starting a business before being laid off</td></tr>
-<tr><td>2</td><td>Seeing &amp; Acting on Opportunities</td><td>Identifying demand for food delivery → Zomato</td></tr>
-<tr><td>3</td><td>Persistence — never-give-up attitude</td><td>Jack Ma rejected by Harvard 10 times, founded Alibaba</td></tr>
-<tr><td>4</td><td>Information Seeking — research-driven</td><td>Market surveys before product launch</td></tr>
-<tr><td>5</td><td>Concern for Quality</td><td>Apple's obsession with product design</td></tr>
-<tr><td>6</td><td>Commitment to Work Contract</td><td>Delivering projects on time builds reputation</td></tr>
-<tr><td>7</td><td>Efficiency Orientation</td><td>Lean manufacturing, zero waste</td></tr>
-<tr><td>8</td><td>Systematic Planning</td><td>Business plan with milestones</td></tr>
-<tr><td>9</td><td>Problem Solving</td><td>Finding root cause, not symptoms</td></tr>
-<tr><td>10</td><td>Self-confidence</td><td>Pitching to investors with conviction</td></tr>
-<tr><td>11</td><td>Persuasion</td><td>Convincing customers, partners, investors</td></tr>
-<tr><td>12</td><td>Use of Influence Strategies</td><td>Building industry relationships</td></tr>
-</table>
-</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Entrepreneurial Skills</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3F_7jYJ5R5Y" title="Entrepreneurial Skills" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>12 Key Competencies</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8j2Pj1vNj0k" title="Entrepreneurial Competencies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 12 Key Competencies (I-S-P-I-C-C-E-S-P-P-I-U)</div>
+<div class="db"><table>
+<tr><th>#</th><th>Competency</th><th>Meaning</th><th>Real-World Example</th></tr>
+<tr><td>1</td><td>Initiative</td><td>Proactive action without being told</td><td>Starting a business before being laid off</td></tr>
+<tr><td>2</td><td>Seeing &amp; Acting on Opportunities</td><td>Market awareness &amp; quick response</td><td>Identifying demand for food delivery &#x2192; Zomato</td></tr>
+<tr><td>3</td><td>Persistence</td><td>Never-give-up attitude</td><td>Jack Ma rejected by Harvard 10 times, founded Alibaba</td></tr>
+<tr><td>4</td><td>Information Seeking</td><td>Research-driven decision making</td><td>Market surveys before product launch</td></tr>
+<tr><td>5</td><td>Concern for Quality</td><td>Excellence orientation</td><td>Apple's obsession with product design</td></tr>
+<tr><td>6</td><td>Commitment to Work Contract</td><td>Deadline adherence</td><td>Delivering projects on time builds reputation</td></tr>
+<tr><td>7</td><td>Efficiency Orientation</td><td>Cost-effective thinking</td><td>Lean manufacturing, zero waste</td></tr>
+<tr><td>8</td><td>Systematic Planning</td><td>Organized approach</td><td>Business plan with milestones</td></tr>
+<tr><td>9</td><td>Problem Solving</td><td>Analytical thinking</td><td>Finding root cause, not symptoms</td></tr>
+<tr><td>10</td><td>Self-confidence</td><td>Belief in abilities</td><td>Pitching to investors with conviction</td></tr>
+<tr><td>11</td><td>Persuasion</td><td>Influencing others</td><td>Convincing customers, partners, investors</td></tr>
+<tr><td>12</td><td>Use of Influence Strategies</td><td>Networking &amp; alliances</td><td>Building industry relationships</td></tr>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Ritesh Agarwal (OYO Rooms) demonstrated all 12 competencies — initiative (started at 17), persistence (rejected by many investors), information seeking (studied hotel industry gaps), and persuasion (secured SoftBank funding).</p>
-</div>
+<p><strong>Ritesh Agarwal (OYO Rooms)</strong> demonstrated all 12 competencies &#x2014; initiative (started at 17), persistence (rejected by many investors), information seeking (studied hotel industry gaps), and persuasion (secured SoftBank funding).</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"I-S-P-I-C-C-E-S-P-P-I-U"</strong> — Initiative, Seeing opportunities, Persistence, Information seeking, Commitment, Concern for quality, Efficiency, Systematic planning, Problem solving, Persuasion, Influence strategies, Use of networks</p>
-</div>
+<p><strong>"I-S-P-I-C-C-E-S-P-P-I-U"</strong> &#x2014; Initiative, Seeing opportunities, Persistence, Information seeking, Commitment, Concern for quality, Efficiency, Systematic planning, Problem solving, Persuasion, Influence strategies, Use of networks</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>12 entrepreneurial competencies are learnable skills</li>
@@ -151,32 +181,56 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </ul></div>
 </div>
 
-<!-- Unit 3 -->
+<!-- UNIT 3 -->
 <div class="unit" id="u3">
 <h3 id="u3">Unit 3: Dimensions of Entrepreneurship</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 7 Types of Entrepreneurship</div>
-<table>
-<tr><th>Type</th><th>Definition</th><th>Example</th></tr>
-<tr><td>Social</td><td>Solving social problems through business</td><td>Grameen Bank (Muhammad Yunus)</td></tr>
-<tr><td>Rural</td><td>Enterprise in rural areas</td><td>Village handicraft cooperatives</td></tr>
-<tr><td>Women</td><td>Women-led businesses (51%+ ownership)</td><td>Kiran Mazumdar-Shaw (Biocon)</td></tr>
-<tr><td>Group</td><td>Collective ventures, pooled resources</td><td>Amul cooperative model</td></tr>
-<tr><td>Strategic</td><td>Integrating strategy with entrepreneurship</td><td>Corporate venture capital arms</td></tr>
-<tr><td>Techno</td><td>Technology-based ventures</td><td>Infosys, Flipkart</td></tr>
-<tr><td>Education</td><td>Knowledge-based businesses</td><td>Coaching platforms, EdTech</td></tr>
-</table>
-</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Entrepreneurship is not one-size-fits-all; it manifests in multiple forms</li>
+<li>Each dimension addresses different societal needs</li>
+<li><strong>Social Entrepreneurship:</strong> Using business principles to solve social problems while maintaining financial sustainability</li>
+<li><strong>Rural Entrepreneurship:</strong> Establishing and running enterprises in rural areas to promote local economic development</li>
+<li><strong>Women Entrepreneurship:</strong> Businesses owned, controlled, and managed by women with at least 51% ownership</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Social Entrepreneurship</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4x0CJjO9p2k" title="Social Entrepreneurship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Types of Entrepreneurship</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7k2Pj0Yj9pQ" title="Types of Entrepreneurship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 7 Types of Entrepreneurship (S-R-W-G-S-T-E)</div>
+<div class="db"><table>
+<tr><th>Type</th><th>Definition</th><th>Example</th><th>Memory Hook</th></tr>
+<tr><td>Social</td><td>Solving social problems through business</td><td>Grameen Bank (Muhammad Yunus)</td><td>"Social = Society first"</td></tr>
+<tr><td>Rural</td><td>Enterprise in rural areas</td><td>Village handicraft cooperatives</td><td>"Rural = Roots"</td></tr>
+<tr><td>Women</td><td>Women-led businesses (51%+ ownership)</td><td>Kiran Mazumdar-Shaw (Biocon)</td><td>"Women = Willpower"</td></tr>
+<tr><td>Group</td><td>Collective ventures, pooled resources</td><td>Amul cooperative model</td><td>"Group = Together"</td></tr>
+<tr><td>Strategic</td><td>Integrating strategy with entrepreneurship</td><td>Corporate venture capital arms</td><td>"Strategic = Strategy"</td></tr>
+<tr><td>Techno</td><td>Technology-based ventures</td><td>Infosys, Flipkart</td><td>"Techno = Tech"</td></tr>
+<tr><td>Education</td><td>Knowledge-based businesses</td><td>Coaching platforms, EdTech</td><td>"Education = Enlighten"</td></tr>
+</table></div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Triple Bottom Line</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)">&#x1F465; <strong>People</strong> (Social Impact)</div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)">&#x1F30D; <strong>Planet</strong> (Environmental)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)">&#x1F4B0; <strong>Profit</strong> (Financial)</div>
+</div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Aravind Eye Care (Dr. Govindappa Venkataswamy) = Social entrepreneurship — provides free eye care to poor patients, cross-subsidizes with paid patients. Treats millions annually.</p>
-</div>
+<p><strong>Aravind Eye Care</strong> (Dr. Govindappa Venkataswamy) = Social entrepreneurship &#x2014; provides free eye care to poor patients, cross-subsidizes with paid patients. Treats millions annually. Demonstrates how social mission + business model can scale.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"S-R-W-G-S-T-E"</strong> — Social, Rural, Women, Group, Strategic, Techno, Education (7 types)</p>
-</div>
+<p><strong>"S-R-W-G-S-T-E"</strong> &#x2014; Social, Rural, Women, Group, Strategic, Techno, Education (7 types)</p></div>
+
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>Social entrepreneurship is the most frequently asked type. Remember: double bottom line (social + financial) and triple bottom line (people + planet + profit).</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>7 dimensions: Social, Rural, Women, Group, Strategic, Techno, Education</li>
@@ -185,234 +239,260 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 </ul></div>
 </div>
 
-<!-- Unit 4 -->
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Entrepreneurship in India</h2>
+
+<!-- UNIT 4 -->
 <div class="unit" id="u4">
 <h3 id="u4">Unit 4: Entrepreneurship and Government Policies</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4" class="ai-response-box" style="display:none;"></div>
 
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>MSME = backbone of Indian economy</li>
+<li>Government creates institutional support ecosystem</li>
+<li>Industrial policy evolution: 1948 &#x2192; 1956 &#x2192; 1991 (LPG) &#x2192; 2020 (Atmanirbhar Bharat)</li>
+<li><strong>MSME:</strong> Micro, Small and Medium Enterprises &#x2014; classified by investment in plant/machinery and annual turnover</li>
+<li><strong>MUDRA Yojana:</strong> Micro Units Development and Refinance Agency &#x2014; provides loans up to &#x20B9;10 lakh</li>
+<li><strong>SIDBI:</strong> Small Industries Development Bank of India &#x2014; principal financial institution for MSME</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MSME in India</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9h2j3k4l5mN" title="MSME India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Startup India Scheme</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b3c4d5e6fG" title="Startup India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; MSME Classification (M-S-M = 1-10-50)</div>
-<table>
+<div class="db"><table>
 <tr><th>Category</th><th>Investment Limit</th><th>Turnover Limit</th></tr>
-<tr><td>Micro</td><td>≤ ₹1 crore</td><td>≤ ₹5 crore</td></tr>
-<tr><td>Small</td><td>≤ ₹10 crore</td><td>≤ ₹50 crore</td></tr>
-<tr><td>Medium</td><td>≤ ₹50 crore</td><td>≤ ₹250 crore</td></tr>
-</table>
-</div>
+<tr><td>Micro</td><td>&#x2264; &#x20B9;1 crore</td><td>&#x2264; &#x20B9;5 crore</td></tr>
+<tr><td>Small</td><td>&#x2264; &#x20B9;10 crore</td><td>&#x2264; &#x20B9;50 crore</td></tr>
+<tr><td>Medium</td><td>&#x2264; &#x20B9;50 crore</td><td>&#x2264; &#x20B9;250 crore</td></tr>
+</table></div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Government Schemes</div>
-<table>
+<div class="db"><table>
 <tr><th>Scheme</th><th>Purpose</th><th>Memory Hook</th></tr>
 <tr><td>MSME Development Act, 2006</td><td>Legal framework for MSMEs</td><td>"Foundation"</td></tr>
 <tr><td>Make in India</td><td>Manufacturing push</td><td>"Manufacture"</td></tr>
 <tr><td>Startup India</td><td>Incentives for startups</td><td>"Support"</td></tr>
 <tr><td>Stand-Up India</td><td>SC/ST/Women entrepreneurship</td><td>"Marginalized"</td></tr>
-<tr><td>MUDRA Yojana</td><td>Micro-finance (loans up to ₹10L)</td><td>"Money for small"</td></tr>
+<tr><td>MUDRA Yojana</td><td>Micro-finance (loans up to &#x20B9;10L)</td><td>"Money for small"</td></tr>
 <tr><td>PMEGP</td><td>Employment generation</td><td>"Jobs"</td></tr>
-</table>
-</div>
+</table></div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Institutional Support</div>
-<table>
+<div class="db"><table>
 <tr><th>Institution</th><th>Role</th></tr>
 <tr><td>NITI Aayog</td><td>Policy think tank</td></tr>
 <tr><td>SIDBI</td><td>Small Industries Development Bank</td></tr>
 <tr><td>NSIC</td><td>National Small Industries Corporation</td></tr>
 <tr><td>KVIC</td><td>Khadi &amp; Village Industries Commission</td></tr>
 <tr><td>EDII</td><td>Entrepreneurship Development Institute</td></tr>
-</table>
+</table></div></div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1948</div><div class="fc-l">First IP<br><small>Mixed economy</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">1956</div><div class="fc-l">IPR<br><small>Public sector</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">1991</div><div class="fc-l">LPG<br><small>Game changer</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2020</div><div class="fc-l">Atmanirbhar<br><small>Self-reliant</small></div></div>
 </div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>The MUDRA Yojana has sanctioned over ₹5.5 lakh crore since 2015, benefiting millions of small entrepreneurs. Many street vendors accessed formal credit for the first time through this scheme.</p>
-</div>
+<p>The MUDRA Yojana has sanctioned over &#x20B9;5.5 lakh crore since 2015, benefiting millions of small entrepreneurs. Many street vendors and micro-businesses accessed formal credit for the first time through this scheme.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"M-S-M = 1-10-50"</strong> — Micro (1Cr), Small (10Cr), Medium (50Cr) investment limits</p>
-</div>
+<p><strong>"M-S-M = 1-10-50"</strong> &#x2014; Micro (1Cr), Small (10Cr), Medium (50Cr) investment limits</p></div>
+
+<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
+<p>MSME definitions and government schemes are very high-frequency questions. Memorize the investment/turnover limits precisely.</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>MSME = backbone of Indian economy</li>
-<li>Classification: Micro (≤1Cr), Small (≤10Cr), Medium (≤50Cr)</li>
+<li>Classification: Micro (&#x2264;1Cr), Small (&#x2264;10Cr), Medium (&#x2264;50Cr)</li>
 <li>Key schemes: MUDRA, PMEGP, Startup India, Stand-Up India</li>
-<li>Industrial policy evolution: 1948 → 1956 → 1991 (LPG) → 2020 (Atmanirbhar Bharat)</li>
+<li>Industrial policy evolution: 1948 &#x2192; 1956 &#x2192; 1991 (LPG) &#x2192; 2020 (Atmanirbhar Bharat)</li>
 </ul></div>
 </div>
 
-<!-- Unit 5 -->
+<!-- UNIT 5 -->
 <div class="unit" id="u5">
 <h3 id="u5">Unit 5: Entrepreneurship and Economic Development</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; MSME Contribution (30-45-40 Formula)</div>
-<table>
-<tr><th>Metric</th><th>Contribution</th></tr>
-<tr><td>GDP</td><td>30%</td></tr>
-<tr><td>Manufacturing Output</td><td>45%</td></tr>
-<tr><td>Exports</td><td>40%</td></tr>
-<tr><td>Employment</td><td>11 crore+</td></tr>
-</table>
-</div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>MSME Contribution to GDP</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3c4d5e6f7gH" title="MSME GDP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Role in Economic Development</div>
-<ul>
-<li>Employment generation (largest employer after agriculture)</li>
-<li>Innovation &amp; technology adoption</li>
-<li>Regional development (decentralized growth)</li>
-<li>Inclusive growth (SC/ST/OBC/Women participation)</li>
-<li>Export promotion (foreign exchange earnings)</li>
-</ul>
-</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; MSME Contribution (30-45-40 Formula)</div>
+<div class="db"><table>
+<tr><th>Metric</th><th>Contribution</th><th>Memory</th></tr>
+<tr><td>GDP</td><td>30%</td><td>"30 = Three-tieth"</td></tr>
+<tr><td>Manufacturing Output</td><td>45%</td><td>"45 = Almost half"</td></tr>
+<tr><td>Exports</td><td>40%</td><td>"40 = Four-tieth"</td></tr>
+<tr><td>Employment</td><td>11 crore+</td><td>"11 = Eleven crore jobs"</td></tr>
+</table></div></div>
+
+<div class="br"><span class="sb s-b">Employment Generation</span><span class="sb s-b">Innovation</span><span class="sb s-b">Regional Development</span><span class="sb s-b">Inclusive Growth</span><span class="sb s-b">Export Promotion</span></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Tirupur (Tamil Nadu) — a small town became India's knitwear export capital, generating ₹25,000+ crore in annual exports. Over 800 MSMEs operate here, employing 5+ lakh workers.</p>
-</div>
+<p><strong>Tirupur (Tamil Nadu)</strong> &#x2014; a small town became India's knitwear export capital, generating &#x20B9;25,000+ crore in annual exports. Over 800 MSMEs operate here, employing 5+ lakh workers. Demonstrates how MSME clusters drive regional development and exports.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"30-45-40"</strong> — 30% GDP, 45% Manufacturing, 40% Exports</p>
-</div>
+<p><strong>"30-45-40"</strong> &#x2014; 30% GDP, 45% Manufacturing, 40% Exports</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>MSMEs contribute 30% GDP, 45% manufacturing, 40% exports</li>
-<li>11 crore+ employment — largest employer after agriculture</li>
+<li>11 crore+ employment &#x2014; largest employer after agriculture</li>
 <li>Drive inclusive growth across regions and communities</li>
 </ul></div>
 </div>
 
-<!-- Unit 6 -->
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Establishing a New Enterprise</h2>
+
+<!-- UNIT 6 -->
 <div class="unit" id="u6">
 <h3 id="u6">Unit 6: Identification of Business Idea/Opportunity</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; SCAMPER Method</div>
-<table>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Business idea generation = systematic process of identifying opportunities</li>
+<li>Sources: personal experience, industry trends, customer complaints, technological changes, government policies</li>
+<li><strong>MVP (Minimum Viable Product):</strong> Minimum features, maximum learning</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SCAMPER Method</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4d5e6f7g8hI" title="SCAMPER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SWOT Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5e6f7g8h9iJ" title="SWOT Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Break-Even Analysis</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6f7g8h9i0jK" title="BEP Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; SCAMPER Method (7-Step Idea Generation)</div>
+<div class="db"><table>
 <tr><th>Letter</th><th>Action</th><th>Example</th></tr>
-<tr><td><strong>S</strong></td><td>Substitute</td><td>Plastic → bamboo</td></tr>
+<tr><td><strong>S</strong></td><td>Substitute</td><td>Plastic &#x2192; bamboo</td></tr>
 <tr><td><strong>C</strong></td><td>Combine</td><td>Phone + camera = smartphone</td></tr>
 <tr><td><strong>A</strong></td><td>Adapt</td><td>Airbnb adapted Uber's sharing model to housing</td></tr>
-<tr><td><strong>M</strong></td><td>Modify</td><td>Mini Cooper — small car in big-car market</td></tr>
+<tr><td><strong>M</strong></td><td>Modify</td><td>Mini Cooper &#x2014; small car in big-car market</td></tr>
 <tr><td><strong>P</strong></td><td>Put to another use</td><td>Baking soda as cleaning agent</td></tr>
 <tr><td><strong>E</strong></td><td>Eliminate</td><td>Google eliminated clutter from search page</td></tr>
-<tr><td><strong>R</strong></td><td>Rearrange</td><td>Netflix — watch anytime vs TV schedule</td></tr>
-</table>
-</div>
+<tr><td><strong>R</strong></td><td>Rearrange</td><td>Netflix &#x2014; watch anytime vs TV schedule</td></tr>
+</table></div></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Break-Even Point (BEP) Formula</div>
-<p style="font-size:1.1rem;font-weight:700;color:#e17055;text-align:center;padding:1rem">BEP = Fixed Cost / (Market Price per unit - Variable Cost per unit)</p>
-<p style="text-align:center">BEP = FC / (MP - VC)</p>
-<p><strong>Worked Example:</strong> FC = ₹36,20,000; MP = ₹440/unit; VC = ₹40/unit<br>
-BEP = 36,20,000 / (440 - 40) = 36,20,000 / 400 = <strong>9,050 units</strong><br>
-Annual demand = 10,000 > BEP → Sustainable proposal ✓</p>
-</div>
-
-<div class="visual-diagram"><h5>&#x1F4CA; BEP Analysis</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node">Revenue (MP × Q) — Profit Zone</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2191; Break-Even Point</div>
-<div class="vd-node">Total Cost (FC + VC × Q) — Loss Zone</div>
+<div class="visual-diagram"><h5>&#x1F4CA; SWOT Matrix</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>STRENGTHS</strong><br><small>Skills, Experience, Resources</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>WEAKNESSES</strong><br><small>Lack of funds, Poor location</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>OPPORTUNITIES</strong><br><small>Growing market, Govt support</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>THREATS</strong><br><small>Competition, Regulation</small></div>
 </div></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; SWOT Analysis</div>
-<table>
-<tr><th>Factor</th><th>Internal/External</th><th>Focus</th></tr>
-<tr><td>Strengths</td><td>Internal</td><td>What you do well</td></tr>
-<tr><td>Weaknesses</td><td>Internal</td><td>Where you lack</td></tr>
-<tr><td>Opportunities</td><td>External</td><td>Market openings</td></tr>
-<tr><td>Threats</td><td>External</td><td>Competitive/environmental risks</td></tr>
-</table>
-</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; BEP Formula</div>
+<p><strong>BEP = Fixed Cost / (Market Price per unit - Variable Cost per unit)</strong></p>
+<p><strong>Worked Example:</strong> FC = &#x20B9;36,20,000; MP = &#x20B9;440/unit; VC = &#x20B9;40/unit<br>BEP = 36,20,000 / (440 - 40) = 36,20,000 / 400 = <strong>9,050 units</strong><br>Annual demand = 10,000 &gt; BEP &#x2192; Sustainable proposal &#x2713;</p></div>
 
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Zomato applied SCAMPER — Combined food ordering + technology + delivery. Uber Eats Adapted the ride-sharing model to food delivery. Swiggy Modified the approach by focusing on logistics-first.</p>
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Zomato &#x2014; SCAMPER in Action</h5>
+<p>Zomato applied SCAMPER &#x2014; <strong>Combined</strong> food ordering + technology + delivery. Uber Eats <strong>Adapted</strong> the ride-sharing model to food delivery. Swiggy <strong>Modified</strong> the approach by focusing on logistics-first. Each startup used different SCAMPER elements to innovate in the same space.</p>
 </div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"SCAMPER = S-C-A-M-P-E-R"</strong> — Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Rearrange</p>
-</div>
-
-<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
-<p>BEP formula is the #1 formula to memorize. Practice 2-3 numerical problems. SCAMPER and SWOT are also very frequently asked frameworks.</p>
-</div>
+<p><strong>"SCAMPER = S-C-A-M-P-E-R"</strong> &#x2014; Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Rearrange</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>SCAMPER = 7-step idea generation framework</li>
-<li>BEP = FC / (MP - VC) — where revenue = cost</li>
-<li>SWOT for scanning and screening business ideas</li>
+<li>SWOT = Strengths, Weaknesses, Opportunities, Threats</li>
+<li>BEP = FC / (MP - VC) &#x2014; #1 formula to memorize</li>
 <li>MVP = minimum features, maximum learning</li>
 </ul></div>
 </div>
 
-<!-- Unit 7 -->
+<!-- UNIT 7 -->
 <div class="unit" id="u7">
 <h3 id="u7">Unit 7: Financing an Enterprise</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Financing Stages (S-S-G-E)</div>
-<table>
-<tr><th>Stage</th><th>Typical Sources</th><th>Amount Range</th></tr>
-<tr><td>Seed</td><td>Personal savings, family, friends</td><td>₹1-10 lakh</td></tr>
-<tr><td>Startup</td><td>Angel investors, government grants</td><td>₹10 lakh - 5 crore</td></tr>
-<tr><td>Growth</td><td>Venture capital, bank loans</td><td>₹5-50 crore</td></tr>
-<tr><td>Expansion</td><td>IPO, corporate investors</td><td>₹50 crore+</td></tr>
-</table>
-</div>
-
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; External Sources</div>
-<table>
-<tr><th>Type</th><th>Examples</th><th>When to Use</th></tr>
-<tr><td>Debt Financing</td><td>Bank loans, debentures, bonds</td><td>Retain ownership</td></tr>
-<tr><td>Equity Financing</td><td>Angel investors, VC, IPO</td><td>Large capital + mentorship</td></tr>
-<tr><td>Government Schemes</td><td>MUDRA, PMEGP, Credit Guarantee</td><td>Subsidized funding</td></tr>
-</table>
-</div>
-
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <ul>
-<li><strong>Angel Investor:</strong> High-net-worth individual investing personal funds in early-stage startups (₹25 lakh - 5 crore)</li>
-<li><strong>Venture Capital:</strong> Professionally managed fund investing in high-growth startups (₹5 crore+)</li>
-<li><strong>Bootstrapping:</strong> Building business using personal savings without external funding</li>
-<li><strong>Debenture:</strong> Long-term debt instrument without collateral</li>
-</ul>
+<li>Financing stages: Seed &#x2192; Startup &#x2192; Growth &#x2192; Expansion</li>
+<li>Internal sources: personal savings, retained earnings, family/friends</li>
+<li>External sources: bank loans, angel investors, venture capital, government schemes</li>
+<li><strong>Bootstrapping:</strong> Self-funding, minimizing outside capital</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Startup Funding Stages</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7g8h9i0j1kL" title="Funding Stages" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Angel Investors vs VC</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8h9i0j1k2lM" title="Angel vs VC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">SEED</div><div class="fc-l">&#x20B9;1-10L<br><small>Savings, Family</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">STARTUP</div><div class="fc-l">&#x20B9;10L-5Cr<br><small>Angel, Grants</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">GROWTH</div><div class="fc-l">&#x20B9;5-50Cr<br><small>VC, Bank</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">EXPANSION</div><div class="fc-l">&#x20B9;50Cr+<br><small>IPO, Corporate</small></div></div>
 </div>
 
-<div class="visual-diagram"><h5>&#x1F4CA; Financing Stages Flow</h5>
-<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;flex-wrap:wrap;justify-content:center">
-<div class="vd-node" style="width:auto;padding:0.5rem 1rem">SEED<br><small>₹1-10L</small></div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">→</div>
-<div class="vd-node" style="width:auto;padding:0.5rem 1rem">STARTUP<br><small>₹10L-5Cr</small></div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">→</div>
-<div class="vd-node" style="width:auto;padding:0.5rem 1rem">GROWTH<br><small>₹5-50Cr</small></div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">→</div>
-<div class="vd-node" style="width:auto;padding:0.5rem 1rem">EXPANSION<br><small>₹50Cr+</small></div>
-</div></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Internal vs External Sources</div>
+<div class="db"><table>
+<tr><th>Type</th><th>Examples</th><th>When to Use</th></tr>
+<tr><td>Debt Financing</td><td>Bank loans, debentures, bonds</td><td>When you want to retain ownership</td></tr>
+<tr><td>Equity Financing</td><td>Angel investors, venture capital, IPO</td><td>When you need large capital + mentorship</td></tr>
+<tr><td>Government Schemes</td><td>MUDRA, PMEGP, Credit Guarantee</td><td>When you qualify for subsidized funding</td></tr>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Flipkart started with ₹4 lakh personal savings (bootstrapping seed stage). Raised angel funding from Accel Partners ($1M). Then Sequoia Capital provided VC funding. Finally, Walmart acquired 77% stake for $16 billion.</p>
-</div>
+<p><strong>Flipkart</strong> started with &#x20B9;4 lakh personal savings (bootstrapping seed stage). Raised angel funding from Accel Partners ($1M). Then Sequoia Capital provided VC funding. Finally, Walmart acquired 77% stake for $16 billion &#x2014; demonstrating the complete Seed &#x2192; Startup &#x2192; Growth &#x2192; Expansion journey.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"S-S-G-E"</strong> — Seed, Startup, Growth, Expansion</p>
-</div>
+<p><strong>"S-S-G-E"</strong> &#x2014; Seed, Startup, Growth, Expansion</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Internal: Personal savings, retained earnings, asset sale</li>
-<li>External: Debt (bank loans), Equity (angel/VC), Government (MUDRA)</li>
+<li>4 financing stages: Seed &#x2192; Startup &#x2192; Growth &#x2192; Expansion</li>
+<li>Debt vs Equity: ownership retention vs capital access</li>
 <li>Bootstrapping = self-funding, minimizing outside capital</li>
-<li>Financing stages: Seed → Startup → Growth → Expansion</li>
 </ul></div>
 </div>
 
-<!-- Unit 8 -->
+<!-- UNIT 8 -->
 <div class="unit" id="u8">
 <h3 id="u8">Unit 8: Evaluating and Preparing Business Plan</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Business Plan Components (E-C-M-O-M-F-F-F)</div>
-<table>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Business Plan = roadmap for the venture</li>
+<li>DPR (Detailed Project Report) = technical document for investors/banks</li>
+<li>Analysis types: Technical feasibility, Financial viability, Market potential, Risk assessment</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>How to Write a Business Plan</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9i0j1k2l3mN" title="Business Plan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 8 Components (E-C-M-O-M-F-F-F)</div>
+<div class="db"><table>
 <tr><th>#</th><th>Component</th><th>What It Contains</th></tr>
 <tr><td>1</td><td>Executive Summary</td><td>One-page overview of entire plan</td></tr>
 <tr><td>2</td><td>Company Description</td><td>Mission, vision, legal structure</td></tr>
@@ -422,337 +502,372 @@ Annual demand = 10,000 > BEP → Sustainable proposal ✓</p>
 <tr><td>6</td><td>Marketing &amp; Sales</td><td>Strategy, pricing, distribution</td></tr>
 <tr><td>7</td><td>Financial Projections</td><td>Revenue, expenses, profit forecasts</td></tr>
 <tr><td>8</td><td>Funding Request</td><td>How much needed, how it will be used</td></tr>
-</table>
-</div>
+</table></div></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; DPR (Detailed Project Report) Contents</div>
-<ul>
-<li>Project concept &amp; description</li>
-<li>Market potential &amp; demand analysis</li>
-<li>Technical feasibility &amp; process design</li>
-<li>Financial viability &amp; projections</li>
-<li>Risk assessment &amp; mitigation</li>
-</ul>
-</div>
+<div class="br"><span class="sb s-b">Project Concept</span><span class="sb s-b">Market Potential</span><span class="sb s-b">Technical Feasibility</span><span class="sb s-b">Financial Viability</span><span class="sb s-b">Risk Assessment</span></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Airbnb's original business plan was a simple 3-page document focusing on the market gap (expensive hotels), their solution (home-sharing platform), and revenue model (commission per booking). The clarity helped them secure initial funding from Y Combinator.</p>
-</div>
+<p><strong>Airbnb's</strong> original business plan was a simple 3-page document focusing on the market gap (expensive hotels), their solution (home-sharing platform), and revenue model (commission per booking). The clarity and simplicity helped them secure initial funding from Y Combinator.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"E-C-M-O-M-F-F-F"</strong> — Executive, Company, Market, Organization, Product, Marketing, Financial, Funding</p>
-</div>
+<p><strong>"E-C-M-O-M-F-F-F"</strong> &#x2014; Executive, Company, Market, Organization, Product, Marketing, Financial, Funding</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>Business plan = roadmap for the venture</li>
-<li>8 components: Executive → Company → Market → Organization → Product → Marketing → Financial → Funding</li>
+<li>8 components in order: E-C-M-O-M-F-F-F</li>
 <li>DPR = technical document for investors/banks</li>
 </ul></div>
 </div>
 
-<!-- Unit 9 -->
+<!-- UNIT 9 -->
 <div class="unit" id="u9">
 <h3 id="u9">Unit 9: Implementing Business Plan</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Implementation Steps (L-L-O-F-I)</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <ul>
-<li><strong>Location Selection</strong> — proximity to raw materials, market, labor, transportation</li>
-<li><strong>Layout Planning</strong> — efficient workflow design (process, product, cellular, fixed-position)</li>
-<li><strong>Operations Planning</strong> — production scheduling, quality control, inventory management</li>
-<li><strong>Financer Selection</strong> — choose between debt/equity based on cost of capital</li>
-<li><strong>Implementation Schedule</strong> — Gantt chart, milestones, deadlines</li>
-</ul>
+<li>Implementation = turning plan into action</li>
+<li>Key steps: Location selection, Layout design, Operations setup, Financer selection, Implementation schedule</li>
+<li>Common errors: overoptimistic projections, ignoring competition, underestimating costs, poor market research, no contingency plan</li>
+</ul></div>
+
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Location<br><small>Raw materials, market</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Layout<br><small>Workflow design</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Operations<br><small>Production, QC</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Financer<br><small>Debt vs Equity</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Implementation<br><small>Gantt chart</small></div></div>
 </div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Common Errors in Business Plan</div>
-<ul>
-<li>Overoptimistic revenue projections</li>
-<li>Ignoring competition analysis</li>
-<li>Underestimating costs (hidden costs)</li>
-<li>Poor market research methodology</li>
-<li>Lack of contingency planning (no Plan B)</li>
-</ul>
-</div>
+<div class="br"><span class="sb s-b">Overoptimistic Projections</span><span class="sb s-b">Ignoring Competition</span><span class="sb s-b">Underestimating Costs</span><span class="sb s-b">Poor Market Research</span><span class="sb s-b">No Contingency Plan</span></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Cafe Coffee Day (CCD) expanded aggressively without adequate contingency planning — took on ₹7,000 crore debt for rapid expansion. When coffee prices fell and competition increased, the company couldn't service debt.</p>
-</div>
+<p><strong>Cafe Coffee Day (CCD)</strong> expanded aggressively without adequate contingency planning &#x2014; took on &#x20B9;7,000 crore debt for rapid expansion. When coffee prices fell and competition increased, the company couldn't service debt. Highlights the importance of financial contingency planning.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"L-L-O-F-I"</strong> — Location, Layout, Operations, Financer, Implementation schedule</p>
-</div>
+<p><strong>"L-L-O-F-I"</strong> &#x2014; Location, Layout, Operations, Financer, Implementation schedule</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Implementation = turning plan into reality</li>
-<li>5 steps: Location → Layout → Operations → Financer → Schedule</li>
-<li>Common error: Lack of contingency planning</li>
+<li>5 implementation steps: Location &#x2192; Layout &#x2192; Operations &#x2192; Financer &#x2192; Implementation</li>
+<li>Common errors: overoptimistic projections, no contingency plan</li>
+<li>Always have a Plan B</li>
 </ul></div>
 </div>
 
-<!-- Unit 10 -->
+<!-- UNIT 10 -->
 <div class="unit" id="u10">
 <h3 id="u10">Unit 10: Managing the Enterprise</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Functional Areas (F-M-O-H)</div>
-<table>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Four Functional Areas (F-M-O-H)</div>
+<div class="db"><table>
 <tr><th>Function</th><th>Key Activities</th><th>Priority in Early Stage</th></tr>
-<tr><td>Finance</td><td>Cash flow management, budgeting</td><td>Highest (cash is king)</td></tr>
+<tr><td>Finance</td><td>Cash flow management, budgeting, accounting</td><td>Highest (cash is king)</td></tr>
 <tr><td>Marketing</td><td>Product, price, place, promotion (4Ps)</td><td>High (revenue generation)</td></tr>
 <tr><td>Operations</td><td>Production, quality, supply chain</td><td>High (delivering product)</td></tr>
 <tr><td>Human Resources</td><td>Recruitment, training, retention</td><td>Medium (scaling team)</td></tr>
-</table>
-</div>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Zoho Corporation (Sridhar Vembu) manages all four functions exceptionally — bootstrapped without external funding (Finance), built products for global market (Marketing), maintained lean operations in rural Tamil Nadu (Operations), and attracted talent with stock options (HR).</p>
-</div>
+<p><strong>Zoho Corporation</strong> (Sridhar Vembu) manages all four functions exceptionally &#x2014; bootstrapped without external funding (Finance), built products for global market (Marketing), maintained lean operations in rural Tamil Nadu (Operations), and attracted talent by offering stock options and rural work culture (HR).</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"F-M-O-H"</strong> — Finance, Marketing, Operations, Human Resources (4 functional areas)</p>
-</div>
+<p><strong>"F-M-O-H"</strong> &#x2014; Finance, Marketing, Operations, Human Resources (4 functional areas)</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>4 functional areas: Finance, Marketing, Operations, HR</li>
 <li>Finance dominates early stages; HR becomes critical during growth</li>
-<li>Cash flow management is survival priority</li>
-<li>4Ps marketing mix: Product, Price, Place, Promotion</li>
+<li>Cash flow management = #1 priority for startups</li>
 </ul></div>
 </div>
 
-<!-- Unit 11 -->
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Special Issues</h2>
+
+<!-- UNIT 11 -->
 <div class="unit" id="u11">
 <h3 id="u11">Unit 11: Social Entrepreneurship</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <ul>
-<li><strong>Double Bottom Line:</strong> Social impact + Financial sustainability</li>
-<li><strong>Triple Bottom Line:</strong> People + Planet + Profit</li>
-<li>Social entrepreneurship = using business principles to solve social problems</li>
-</ul>
-</div>
+<li>Social Entrepreneurship = using business to solve social problems</li>
+<li>Double bottom line: Social Impact + Financial Sustainability</li>
+<li>Triple bottom line: People + Planet + Profit</li>
+<li><strong>Corporate Entrepreneurship:</strong> Innovation within existing corporations for profit maximization</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Social Entrepreneurship Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0j1k2l3m4nO" title="Social Entrepreneurship" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram"><h5>&#x1F4CA; Bottom Line Comparison</h5>
+<div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>Double Bottom Line</strong> = Social Impact + Financial Sustainability</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Triple Bottom Line</strong> = People + Planet + Profit</div>
+</div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Social vs Corporate Entrepreneurship</div>
-<table>
-<tr><th>Aspect</th><th>Social</th><th>Corporate</th></tr>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Social Entrepreneurship</th><th>Corporate Entrepreneurship</th></tr>
 <tr><td>Primary Goal</td><td>Social impact</td><td>Profit maximization</td></tr>
 <tr><td>Revenue Model</td><td>Grants, donations, earned income</td><td>Sales, profit</td></tr>
 <tr><td>Stakeholders</td><td>Community, beneficiaries</td><td>Shareholders, investors</td></tr>
 <tr><td>Measurement</td><td>Social impact metrics</td><td>Financial returns (ROI)</td></tr>
 <tr><td>Example</td><td>Grameen Bank, Teach for India</td><td>Google X, Amazon Prime</td></tr>
-</table>
-</div>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Muhammad Yunus (Grameen Bank) — provided micro-loans to poor women in Bangladesh. Nobel Peace Prize 2006. Proved that social mission + business model can coexist.</p>
+<p><strong>Muhammad Yunus (Grameen Bank)</strong> &#x2014; provided micro-loans to poor women in Bangladesh. Nobel Peace Prize 2006. Proved that social mission + business model can coexist.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Amul &#x2014; India's Greatest Social Enterprise</h5>
+<p>Amul (GCMMF) started as a cooperative in 1946. Now India's largest food brand. 3.6 million dairy farmers earn livelihood through the cooperative model. Dr. Verghese Kurien's "White Revolution" made India the world's largest milk producer, lifting millions out of poverty. Amul proves that a business can be supremely profitable AND deeply social.</p>
 </div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"D-T = S-F + P-P-P"</strong> — Double Bottom = Social + Financial; Triple Bottom = People + Planet + Profit</p>
-</div>
+<p><strong>"D-T = S-F + P-P-P"</strong> &#x2014; Double Bottom = Social + Financial; Triple Bottom = People + Planet + Profit</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Social entrepreneurship = business principles + social mission</li>
-<li>Double bottom line: social impact + financial sustainability</li>
+<li>Social entrepreneurship = using business to solve social problems</li>
+<li>Double bottom line: Social + Financial</li>
 <li>Triple bottom line: People + Planet + Profit</li>
 </ul></div>
 </div>
 
-<!-- Unit 12 -->
+<!-- UNIT 12 -->
 <div class="unit" id="u12">
 <h3 id="u12">Unit 12: Rural Entrepreneurship</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12" class="ai-response-box" style="display:none;"></div>
 
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Rural entrepreneurship = enterprises in rural areas promoting local economic development</li>
+<li>Government support: PMEGP, KVIC schemes, NABARD</li>
+<li>Challenges: poor infrastructure, limited market access, low skill levels, financial constraints</li>
+</ul></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 4 Types (I-G-C-C)</div>
-<table>
+<div class="db"><table>
 <tr><th>Type</th><th>Structure</th><th>Example</th></tr>
 <tr><td>Individual</td><td>Single entrepreneur in rural area</td><td>Village shop owner</td></tr>
 <tr><td>Group</td><td>Multiple entrepreneurs collaborating</td><td>Self-Help Groups (SHGs)</td></tr>
-<tr><td>Cluster</td><td>Geographical concentration</td><td>Tirupur knitwear cluster</td></tr>
+<tr><td>Cluster</td><td>Geographical concentration of similar enterprises</td><td>Tirupur knitwear cluster</td></tr>
 <tr><td>Cooperatives</td><td>Member-owned democratic organization</td><td>Amul, Lijjat Papad</td></tr>
-</table>
-</div>
+</table></div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Advantages vs Challenges</div>
-<table>
+<div class="db"><table>
 <tr><th>Advantages</th><th>Challenges</th></tr>
 <tr><td>Low cost of operations</td><td>Poor infrastructure</td></tr>
 <tr><td>Local resources available</td><td>Limited market access</td></tr>
 <tr><td>Government incentives</td><td>Low skill levels</td></tr>
 <tr><td>Less competition</td><td>Financial constraints</td></tr>
-</table>
-</div>
+</table></div></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Amul (Anand, Gujarat) — started as a cooperative in 1946. Now India's largest food brand. Demonstrates how rural cooperative model can scale nationally.</p>
-</div>
+<p><strong>Amul (Anand, Gujarat)</strong> &#x2014; started as a cooperative in 1946. Now India's largest food brand. Demonstrates how rural cooperative model can scale nationally.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"I-G-C-C"</strong> — Individual, Group, Cluster, Cooperatives (4 types)</p>
-</div>
+<p><strong>"I-G-C-C"</strong> &#x2014; Individual, Group, Cluster, Cooperatives (4 types)</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
 <li>4 types: Individual, Group, Cluster, Cooperatives</li>
 <li>Government support: PMEGP, KVIC schemes</li>
-<li>Amul = gold standard rural cooperative success story</li>
+<li>Amul = greatest rural entrepreneurship success story</li>
 </ul></div>
 </div>
 
-<!-- Unit 13 -->
+<!-- UNIT 13 -->
 <div class="unit" id="u13">
 <h3 id="u13">Unit 13: Ethical Entrepreneurship</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13" class="ai-response-box" style="display:none;"></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 3 Ethical Theories (U-D-V)</div>
-<table>
-<tr><th>Theory</th><th>Principle</th><th>Application</th></tr>
-<tr><td>Utilitarianism</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td></tr>
-<tr><td>Deontological</td><td>Duty-based, follow rules regardless</td><td>Compliance, contracts</td></tr>
-<tr><td>Virtue Ethics</td><td>Character-based, what a good person would do</td><td>Leadership by example</td></tr>
-</table>
-</div>
-
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Why Ethics Matters</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
 <ul>
-<li>Builds trust &amp; reputation (customer loyalty)</li>
-<li>Long-term sustainability (avoid legal troubles)</li>
-<li>Legal compliance (regulatory requirements)</li>
-<li>Social responsibility (community support)</li>
-<li>Employee morale (ethical workplace attracts talent)</li>
-</ul>
-</div>
+<li>Ethics = moral principles governing behavior</li>
+<li>Three ethical theories: Utilitarianism, Deontological, Virtue Ethics</li>
+<li>Importance: Trust &amp; Reputation, Long-term Sustainability, Legal Compliance, Social Responsibility, Employee Morale</li>
+</ul></div>
+
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Three Ethical Theories</div>
+<div class="db"><table>
+<tr><th>Theory</th><th>Principle</th><th>Application</th><th>Memory</th></tr>
+<tr><td>Utilitarianism</td><td>Greatest good for greatest number</td><td>Cost-benefit analysis</td><td>"Utility = Max benefit"</td></tr>
+<tr><td>Deontological</td><td>Duty-based, follow rules</td><td>Compliance, contracts</td><td>"Duty = Do right"</td></tr>
+<tr><td>Virtue Ethics</td><td>Character-based</td><td>Leadership by example</td><td>"Virtue = Values"</td></tr>
+</table></div></div>
+
+<div class="br"><span class="sb s-b">Trust &amp; Reputation</span><span class="sb s-b">Long-term Sustainability</span><span class="sb s-b">Legal Compliance</span><span class="sb s-b">Social Responsibility</span><span class="sb s-b">Employee Morale</span></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Tata Group consistently demonstrates ethical leadership — Ratan Tata refused to pay bribes even when it meant losing business. Tata's ethical stance built trust worth billions in brand value.</p>
-</div>
+<p><strong>Tata Group</strong> consistently demonstrates ethical leadership &#x2014; Ratan Tata refused to pay bribes even when it meant losing business. Tata's ethical stance built trust worth billions in brand value. In contrast, <strong>Patanjali</strong> faced ethical questions about misleading advertising claims.</p></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"U-D-V = M-R-C"</strong> — Utilitarianism (Maximize), Deontological (Rules), Virtue (Character)</p>
-</div>
+<p><strong>"U-D-V = M-R-C"</strong> &#x2014; Utilitarianism (Maximize), Deontological (Rules), Virtue (Character)</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>3 ethical foundations: Utilitarianism, Deontological, Virtue Ethics</li>
-<li>Ethics builds trust, ensures long-term sustainability</li>
-<li>Link ethics to business success, not just compliance</li>
+<li>3 ethical theories: Utilitarianism, Deontological, Virtue Ethics</li>
+<li>Ethics builds trust, reputation, and long-term sustainability</li>
+<li>Compare Tata (ethical) vs Patanjali (controversial) as examples</li>
 </ul></div>
 </div>
 
-<!-- Unit 14 -->
+<!-- UNIT 14 -->
 <div class="unit" id="u14">
 <h3 id="u14">Unit 14: Family Business and Governance</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14" class="ai-response-box" style="display:none;"></div>
 
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Concepts</div>
+<ul>
+<li>Family businesses = organizations where ownership and management are concentrated in a family</li>
+<li>Key challenges: Succession planning, Family vs Business conflict, Professionalization, Governance issues</li>
+<li>Coping strategies: Clear governance structure, Professional management, Family constitution, Conflict resolution, Merit-based promotions</li>
+</ul></div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Family Business Governance</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1k2l3m4n5oP" title="Family Business" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Challenges in Family Business</div>
-<table>
+<div class="db"><table>
 <tr><th>Challenge</th><th>Description</th><th>Impact</th></tr>
 <tr><td>Succession Planning</td><td>Who takes over next?</td><td>Leadership vacuum</td></tr>
 <tr><td>Family vs Business Conflict</td><td>Personal vs professional decisions</td><td>Poor decision-making</td></tr>
 <tr><td>Professionalization</td><td>Hiring non-family managers</td><td>Resistance from family</td></tr>
 <tr><td>Governance Issues</td><td>Lack of formal structures</td><td>Accountability gaps</td></tr>
-</table>
-</div>
+</table></div></div>
 
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Coping Strategies</div>
-<ul>
-<li><strong>Clear Governance Structure:</strong> Board of directors, advisory board</li>
-<li><strong>Professional Management:</strong> Hire qualified non-family executives</li>
-<li><strong>Family Constitution:</strong> Written rules for family-business interaction</li>
-<li><strong>Conflict Resolution:</strong> Mediation, regular family meetings</li>
-<li><strong>Merit-based Promotions:</strong> Performance evaluation, not just family ties</li>
-</ul>
-</div>
+<div class="br"><span class="sb s-b">Clear Governance Structure</span><span class="sb s-b">Professional Management</span><span class="sb s-b">Family Constitution</span><span class="sb s-b">Conflict Resolution</span><span class="sb s-b">Merit-based Promotions</span></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
-<p>Reliance Industries — Dhirubhai Ambani founded, Mukesh &amp; Anil took over. The split demonstrated both succession challenges and governance issues. Tata Group = better governance model with professional management + family oversight.</p>
+<p><strong>Reliance Industries</strong> &#x2014; Dhirubhai Ambani founded, Mukesh &amp; Anil took over. The split demonstrated both succession challenges and governance issues. <strong>Tata Group</strong> = better governance model with professional management + family oversight.</p></div>
+
+<div class="case-study">
+<h5>&#x1F4D0; Case Study: Tata vs Reliance &#x2014; Governance Contrast</h5>
+<p><strong>Tata Group:</strong> Professional management through Tata Sons, family oversight through charitable trusts, smooth succession (Ratan Tata &#x2192; N. Chandrasekaran). Result: &#x20B9;15+ lakh crore empire with stability.</p>
+<p><strong>Reliance:</strong> Dhirubhai's succession led to bitter split between Mukesh and Anil Ambani. No formal family constitution. Result: Reliance Industries thrived (Mukesh), but Anil's ventures struggled. Demonstrates why governance structures matter.</p>
 </div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>"S-F-P-G-C"</strong> — Succession, Family conflict, Professionalization, Governance, Constitution</p>
-</div>
+<p><strong>"S-F-P-G-C"</strong> &#x2014; Succession, Family conflict, Professionalization, Governance, Constitution</p></div>
 
 <div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Exam Tip</div>
-<p>Succession planning is the #1 topic in family business questions. Compare Reliance (conflict) vs Tata (smooth governance) as contrasting examples.</p>
-</div>
+<p>Succession planning is the #1 topic in family business questions. Compare Reliance (conflict) vs Tata (smooth governance) as contrasting examples.</p></div>
 
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Family businesses = majority of Indian enterprises</li>
-<li>Key challenges: Succession, Family-Business conflict, Professionalization</li>
-<li>Solution: Family Constitution + Professional Management + Governance Board</li>
+<li>4 challenges: Succession, Family-Business conflict, Professionalization, Governance</li>
+<li>5 strategies: Governance structure, Professional management, Family constitution, Conflict resolution, Merit-based promotions</li>
+<li>Compare Reliance (conflict) vs Tata (smooth governance)</li>
 </ul></div>
 </div>
 
-<!-- Master Mnemonics Table -->
+<!-- MASTER MNEMONICS TABLE -->
 <div class="unit" id="mnemonics">
-<h3 id="mnemonics">&#x1F9E0; Master Mnemonics Table</h3>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; All Mnemonics at a Glance</div>
-<table>
-<tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
-<tr><td>R-O-M-I-O</td><td>Risk bearer, Opportunity oriented, Motivated by achievement, Innovative, Owner</td><td>Entrepreneur vs Manager</td></tr>
-<tr><td>S-C-A-M-P-E-R</td><td>Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Rearrange</td><td>Idea generation</td></tr>
-<tr><td>S-W-O-T</td><td>Strengths, Weaknesses, Opportunities, Threats</td><td>Business idea scanning</td></tr>
-<tr><td>S-S-G-E</td><td>Seed, Startup, Growth, Expansion</td><td>Financing stages</td></tr>
-<tr><td>M-S-M</td><td>Micro (1Cr), Small (10Cr), Medium (50Cr)</td><td>MSME investment limits</td></tr>
-<tr><td>30-45-40</td><td>GDP, Manufacturing, Exports</td><td>MSME contribution</td></tr>
-<tr><td>E-C-M-O-M-F-F-F</td><td>Executive, Company, Market, Organization, Product, Marketing, Financial, Funding</td><td>Business plan components</td></tr>
-<tr><td>P-P-P</td><td>People, Planet, Profit</td><td>Triple bottom line</td></tr>
-<tr><td>P-E-S-T-E-L</td><td>Political, Economic, Social, Technological, Environmental, Legal</td><td>Environment analysis</td></tr>
-</table>
-</div>
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table>
+<tr><th>#</th><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td>1</td><td><strong>C-S-S-G-K-S</strong></td><td>Cantillon, Say, Schumpeter, Gartner, Kirzner, Shane</td><td>Key thinkers</td></tr>
+<tr><td>2</td><td><strong>I-S-P-I-C-C-E-S-P-P-I-U</strong></td><td>Initiative through Use of influence</td><td>12 Competencies</td></tr>
+<tr><td>3</td><td><strong>S-R-W-G-S-T-E</strong></td><td>Social through Education</td><td>7 Types</td></tr>
+<tr><td>4</td><td><strong>M-S-M = 1-10-50</strong></td><td>Micro/Small/Medium limits</td><td>MSME classification</td></tr>
+<tr><td>5</td><td><strong>30-45-40</strong></td><td>GDP-Manufacturing-Exports</td><td>MSME contribution</td></tr>
+<tr><td>6</td><td><strong>SCAMPER</strong></td><td>Substitute through Rearrange</td><td>Idea generation</td></tr>
+<tr><td>7</td><td><strong>S-S-G-E</strong></td><td>Seed, Startup, Growth, Expansion</td><td>Financing stages</td></tr>
+<tr><td>8</td><td><strong>E-C-M-O-M-F-F-F</strong></td><td>Executive through Funding</td><td>Business plan components</td></tr>
+<tr><td>9</td><td><strong>L-L-O-F-I</strong></td><td>Location through Implementation</td><td>Implementation steps</td></tr>
+<tr><td>10</td><td><strong>F-M-O-H</strong></td><td>Finance, Marketing, Operations, HR</td><td>Functional areas</td></tr>
+<tr><td>11</td><td><strong>D-T = S-F + P-P-P</strong></td><td>Double/Triple bottom line</td><td>Social entrepreneurship</td></tr>
+<tr><td>12</td><td><strong>I-G-C-C</strong></td><td>Individual, Group, Cluster, Cooperatives</td><td>Rural entrepreneurship</td></tr>
+<tr><td>13</td><td><strong>U-D-V = M-R-C</strong></td><td>Utilitarianism, Deontological, Virtue</td><td>Ethical theories</td></tr>
+<tr><td>14</td><td><strong>S-F-P-G-C</strong></td><td>Succession through Constitution</td><td>Family business challenges</td></tr>
+</table></div>
 </div>
 
-<!-- Exam Focus -->
+<!-- QUICK REVISION -->
+<div class="unit" id="revision">
+<h3>&#x26A1; Quick Revision Sheet</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Formulas</div>
+<ul>
+<li><strong>BEP:</strong> Fixed Cost / (Market Price - Variable Cost)</li>
+<li><strong>MSME Limits:</strong> Micro &#x2264;1Cr, Small &#x2264;10Cr, Medium &#x2264;50Cr</li>
+<li><strong>MSME Contribution:</strong> 30% GDP, 45% Manufacturing, 40% Exports</li>
+</ul></div>
+</div>
+
+<!-- EXAM FOCUS -->
 <div class="unit" id="exam">
-<h3 id="exam">&#x1F3AF; Exam Focus</h3>
-<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Most Frequently Asked Topics</div>
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-tip"><div class="callout-label">&#x1F4CB; Most Frequently Asked Topics</div>
 <ol>
-<li><strong>Entrepreneur vs Manager</strong> — 10 marks, always asked</li>
-<li><strong>BEP Calculation</strong> — numerical problem, 5-8 marks</li>
-<li><strong>MSME Definitions &amp; Schemes</strong> — 8-10 marks</li>
-<li><strong>SCAMPER Method</strong> — 5-8 marks with examples</li>
-<li><strong>SWOT Analysis</strong> — 5 marks, apply to a case</li>
-<li><strong>Social Entrepreneurship</strong> — 8-10 marks</li>
-<li><strong>Financing Stages</strong> — 5-8 marks</li>
-<li><strong>Business Plan Components</strong> — 8-10 marks</li>
-<li><strong>Government Support for MSMEs</strong> — 8-10 marks</li>
-<li><strong>Family Business Challenges</strong> — 5-8 marks</li>
-</ol>
-</div>
-
-<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Key Formulas</div>
-<table>
-<tr><th>Formula</th><th>Equation</th><th>Example</th></tr>
-<tr><td>BEP</td><td>FC / (MP - VC)</td><td>36,20,000 / 400 = 9,050 units</td></tr>
-<tr><td>ROI</td><td>(Net Profit / Investment) × 100</td><td>(5L / 50L) × 100 = 10%</td></tr>
-<tr><td>NPV</td><td>Σ(CF / (1+r)^t) - Initial Investment</td><td>Discounted cash flows</td></tr>
-</table>
-</div>
-
-<div class="callout callout-tip"><div class="callout-label">&#x1F3AF; Model Answer Structure (10-mark questions)</div>
-<ol>
-<li>Definition (2 lines)</li>
-<li>Explanation with 4-5 points</li>
-<li>Diagram/table if applicable</li>
-<li>Real-world example (2-3 lines)</li>
-<li>Conclusion/implication (2 lines)</li>
-</ol>
-</div>
+<li>Schumpeter's creative destruction &#x2014; definition and examples</li>
+<li>Entrepreneur vs Manager vs Intrapreneur &#x2014; comparison table</li>
+<li>12 Entrepreneurial Competencies &#x2014; list with examples</li>
+<li>MSME classification and government schemes</li>
+<li>SCAMPER method with examples</li>
+<li>BEP calculation with numerical</li>
+<li>Business plan components (E-C-M-O-M-F-F-F)</li>
+<li>Social vs Corporate entrepreneurship</li>
+<li>Family business challenges and governance</li>
+<li>Triple bottom line concept</li>
+</ol></div>
 </div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('readingProgress').style.width = p + '%';
+    var units = document.querySelectorAll('.unit');
+    var links = document.querySelectorAll('.sidebar a[href^="#u"]');
+    var current = '';
+    units.forEach(function(u) { if (u.getBoundingClientRect().top < 200) current = u.id; });
+    links.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+  });
+})();
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>

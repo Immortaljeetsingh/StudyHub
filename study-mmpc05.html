@@ -160,26 +160,6 @@ body.subject-mmpc05 .subject-tag {
 .video-section-content { display: none; }
 .video-section-content.active { display: block; }
 
-/* Visual diagram box */
-.visual-diagram {
-    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
-    border: 1px solid rgba(78,205,196,0.2);
-    border-radius: 16px;
-    padding: 24px;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.visual-diagram:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
-}
-.visual-diagram h5 {
-    color: #4ECDC4;
-    margin-bottom: 16px;
-    font-size: 1.1em;
-}
 .vd-flow {
     display: flex;
     flex-wrap: wrap;
@@ -225,6 +205,7 @@ body.subject-mmpc05 .subject-tag {
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc05">
 <a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress"></div>
@@ -236,25 +217,25 @@ body.subject-mmpc05 .subject-tag {
 <aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4CA; MMPC-05</span></div>
 <nav class="sidebar-nav">
 <a href="#block1">Block-01 Descriptive Statistics</a>
-<a href="#unit1">&nbsp;&nbsp;Unit 1: Collection of Data</a>
-<a href="#unit2">&nbsp;&nbsp;Unit 2: Presentation of Data</a>
-<a href="#unit3">&nbsp;&nbsp;Unit 3: Central Tendency</a>
-<a href="#unit4">&nbsp;&nbsp;Unit 4: Variation &amp; Skewness</a>
+<a href="#u1">Unit 1: Collection of Data</a>
+<a href="#u2">Unit 2: Presentation of Data</a>
+<a href="#u3">Unit 3: Central Tendency</a>
+<a href="#u4">Unit 4: Variation &amp; Skewness</a>
 <a href="#block2">Block-02 Probability</a>
-<a href="#unit5">&nbsp;&nbsp;Unit 5: Probability Concepts</a>
-<a href="#unit6">&nbsp;&nbsp;Unit 6: Discrete Distributions</a>
-<a href="#unit7">&nbsp;&nbsp;Unit 7: Continuous Distributions</a>
-<a href="#unit8">&nbsp;&nbsp;Unit 8: Decision Theory</a>
+<a href="#u5">Unit 5: Probability Concepts</a>
+<a href="#u6">Unit 6: Discrete Distributions</a>
+<a href="#u7">Unit 7: Continuous Distributions</a>
+<a href="#u8">Unit 8: Decision Theory</a>
 <a href="#block3">Block-03 Inference</a>
-<a href="#unit9">&nbsp;&nbsp;Unit 9: Sampling Methods</a>
-<a href="#unit10">&nbsp;&nbsp;Unit 10: Sampling Distributions</a>
-<a href="#unit11">&nbsp;&nbsp;Unit 11: Hypothesis Testing</a>
-<a href="#unit12">&nbsp;&nbsp;Unit 12: Chi-Square Tests</a>
+<a href="#u9">Unit 9: Sampling Methods</a>
+<a href="#u10">Unit 10: Sampling Distributions</a>
+<a href="#u11">Unit 11: Hypothesis Testing</a>
+<a href="#u12">Unit 12: Chi-Square Tests</a>
 <a href="#block4">Block-04 Forecasting</a>
-<a href="#unit13">&nbsp;&nbsp;Unit 13: Business Forecasting</a>
-<a href="#unit14">&nbsp;&nbsp;Unit 14: Correlation</a>
-<a href="#unit15">&nbsp;&nbsp;Unit 15: Regression</a>
-<a href="#unit16">&nbsp;&nbsp;Unit 16: Time Series</a>
+<a href="#u13">Unit 13: Business Forecasting</a>
+<a href="#u14">Unit 14: Correlation</a>
+<a href="#u15">Unit 15: Regression</a>
+<a href="#u16">Unit 16: Time Series</a>
 <a href="quiz-mmpc05.html" class="back-link">&#x1F4DD; Take Quiz</a>
 <a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
 </nav></aside>
@@ -267,8 +248,8 @@ body.subject-mmpc05 .subject-tag {
 <h2 id="block1">Block-01 Descriptive Statistics</h2>
 
 <!-- UNIT 1 -->
-<div class="unit" id="unit-1">
-<h3 id="unit1">Unit 1: Collection of Data</h3>
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Collection of Data</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Statistics</strong> is the science of collecting, organizing, presenting, analyzing, and interpreting numerical data to aid decision-making. Data collection is the foundational first step &#x2014; without reliable data, all subsequent analysis is meaningless.</p></div>
@@ -306,14 +287,14 @@ body.subject-mmpc05 .subject-tag {
 
 <h4>4. Questionnaire Design Principles</h4>
 <div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Exam Favourite</div><p>A well-designed questionnaire is the backbone of data collection. Follow these rules:</p></div>
-<table class="comparison-table"><thead><tr><th>Principle</th><th>Explanation</th><th>Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Principle</th><th>Explanation</th><th>Example</th></tr></thead><tbody>
 <tr><td><strong>Covering Letter</strong></td><td>State purpose, assure confidentiality, motivate respondent</td><td>"Your responses will be used only for academic research at IGNOU"</td></tr>
 <tr><td><strong>Question Count</strong></td><td>15&#x2013;40 questions optimal; split if &gt;25</td><td>NSSO surveys typically have 30&#x2013;35 questions in 3 blocks</td></tr>
 <tr><td><strong>Simplicity</strong></td><td>Short, clear, unambiguous language</td><td>Ask "How many hours do you work per week?" not "Describe your work pattern"</td></tr>
 <tr><td><strong>Logical Order</strong></td><td>Easy questions first, sensitive ones in middle, demographics last</td><td>Start with "Which products do you buy?" before "What is your monthly income?"</td></tr>
 <tr><td><strong>Cross-checking</strong></td><td>Include verifying questions to test consistency</td><td>Ask total expenditure and then sum of category-wise expenditures</td></tr>
 <tr><td><strong>Open vs Closed</strong></td><td>Closed-ended for quantitative analysis; open-ended for exploratory research</td><td>"Rate satisfaction 1&#x2013;5" vs "What improvements would you suggest?"</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>5. Sources of Secondary Data</h4>
 <div class="br"><span class="sb s-b">Government</span><span class="sb s-g">Census</span><span class="sb s-y">RBI</span><span class="sb s-pc">CMIE</span><span class="sb s-r">WHO</span><span class="sb s-pk">Annual Reports</span></div>
@@ -324,12 +305,19 @@ body.subject-mmpc05 .subject-tag {
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"PQRST"</strong> for data collection steps: <strong>P</strong>roblem definition &#x2192; <strong>Q</strong>uestionnaire design &#x2192; <strong>R</strong>espondent selection &#x2192; <strong>S</strong>urvey execution &#x2192; <strong>T</strong>abulation of results.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Primary data is original but costly; secondary data is cheap but may not fit perfectly. Questionnaire design is a skill &#x2014; keep it short, simple, and logical. Always pre-test before final deployment. In India, MOSPI and CMIE are gold-standard secondary data sources.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
+<li>Statistics is the science of collecting, organizing, presenting, analyzing, and interpreting numerical data</li>
+<li>Primary data is original but costly; secondary data is cheaper and faster (MOSPI, CMIE, RBI Bulletin)</li>
+<li>Questionnaire design follows PQRST: Problem, Questionnaire, Respondent, Survey, Tabulation</li>
+<li>Observation method used when respondents cannot articulate behaviour (traffic, retail browsing)</li>
+<li>Always pre-test questionnaires before final deployment</li>
+</ul></div>
 </div>
 
 <!-- UNIT 2 -->
 </div>
-<div class="unit" id="unit-2">
-<h3 id="unit2">Unit 2: Presentation of Data</h3>
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Presentation of Data</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
 <div id="sU2">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Data presentation</strong> is the systematic arrangement of collected data into tables, diagrams, and charts to reveal patterns, trends, and relationships that are not obvious from raw data.</p></div>
@@ -366,14 +354,14 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <h4>3. Diagrammatic Presentation</h4>
-<table class="comparison-table"><thead><tr><th>Diagram Type</th><th>Best For</th><th>Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Diagram Type</th><th>Best For</th><th>Example</th></tr></thead><tbody>
 <tr><td><strong>Bar Chart</strong></td><td>Comparing categories</td><td>Revenue of Indian IT companies: TCS, Infosys, Wipro, HCL</td></tr>
 <tr><td><strong>Pie Chart</strong></td><td>Part-to-whole relationship</td><td>Budget allocation: Defence 15%, Education 10%, Health 5%</td></tr>
 <tr><td><strong>Histogram</strong></td><td>Continuous frequency distribution</td><td>Distribution of household incomes in India (NSSO data)</td></tr>
 <tr><td><strong>Frequency Polygon</strong></td><td>Comparing two distributions</td><td>Marks distribution of Section A vs Section B</td></tr>
 <tr><td><strong>Ogive (Less Than)</strong></td><td>Finding median, percentiles</td><td>Cumulative income distribution to find median income</td></tr>
 <tr><td><strong>Pictogram</strong></td><td>Public communication</td><td>Infographic showing India's population growth with human figures</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>4. Ogives and Their Uses</h4>
 <p><strong>Less-than Ogive</strong>: Plot upper class boundaries vs cumulative frequencies (rising curve). <strong>Greater-than Ogive</strong>: Plot lower class boundaries vs cumulative frequencies (falling curve). The <strong>point of intersection</strong> of the two ogives gives the <strong>median</strong> value.</p>
@@ -388,12 +376,19 @@ body.subject-mmpc05 .subject-tag {
 <p>Frequencies: 40-49 &#x2192; 3, 50-59 &#x2192; 5, 60-69 &#x2192; 5, 70-79 &#x2192; 9, 80-89 &#x2192; 6, 90-99 &#x2192; 2. Total = 30. &#x2713;</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Proper classification (geographical, chronological, qualitative, quantitative) is the foundation. Histograms show frequency shape; ogives help find medians and percentiles. Always include title, axis labels, source, and footnotes in tables.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
+<li>Classification: Geographical, Chronological, Qualitative, Quantitative</li>
+<li>Frequency distribution: Range, Classes, Class Width, Tally, Cumulative Frequency</li>
+<li>Histograms for continuous data; Bar charts for discrete categories</li>
+<li>Ogives (less-than and greater-than) help find median and percentiles</li>
+<li>Always include title, axis labels, source, and footnotes in tables</li>
+</ul></div>
 </div>
 
 <!-- UNIT 3 -->
 </div>
-<div class="unit" id="unit-3">
-<h3 id="unit3">Unit 3: Measures of Central Tendency</h3>
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Measures of Central Tendency</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
 <div id="sU3">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>A <strong>measure of central tendency</strong> is a single value that represents the entire dataset &#x2014; the "centre" or "typical" value. It condenses thousands of data points into one summary number for quick comparison.</p></div>
@@ -433,13 +428,13 @@ body.subject-mmpc05 .subject-tag {
 <p><strong>HM</strong> = n / &#x03A3;(1/x&#x1D62;) &#x2014; Used for <strong>average rates</strong> (speed, price-earnings ratios)</p>
 <p><strong>Relationship</strong>: AM &#x2265; GM &#x2265; HM (equality only when all values are identical)</p>
 
-<table class="comparison-table"><thead><tr><th>Measure</th><th>Formula Focus</th><th>Best Used For</th><th>Affected by Outliers?</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Measure</th><th>Formula Focus</th><th>Best Used For</th><th>Affected by Outliers?</th></tr></thead><tbody>
 <tr><td>Arithmetic Mean</td><td>Sum of values</td><td>Symmetric data, further calculations</td><td>Yes, highly</td></tr>
 <tr><td>Median</td><td>Middle position</td><td>Skewed data, income/price data</td><td>No</td></tr>
 <tr><td>Mode</td><td>Most frequent</td><td>Identifying popular items</td><td>No</td></tr>
 <tr><td>Geometric Mean</td><td>Product of values</td><td>Growth rates, ratios</td><td>Moderately</td></tr>
 <tr><td>Harmonic Mean</td><td>Reciprocal of values</td><td>Rates, speeds</td><td>Moderately</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"AM &#x2265; GM &#x2265; HM"</strong> &#x2014; Think: "<strong>A</strong>lways <strong>G</strong>reater, <strong>H</strong>umble." The arithmetic mean is always the largest, harmonic the smallest. For mean = median = mode, the distribution is perfectly symmetrical (normal).</p></div>
 
@@ -475,12 +470,19 @@ body.subject-mmpc05 .subject-tag {
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Infosys Revenue Growth</strong>: If Infosys revenue grew 12% in Year 1, 8% in Year 2, and 15% in Year 3, the arithmetic average growth is (12+8+15)/3 = 11.67%. But the <strong>geometric mean</strong> = &#x221B;(1.12&#x00D7;1.08&#x00D7;1.15) &#x2212; 1 = 11.63% &#x2014; more accurate for compounding growth rates.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Mean is the most popular but sensitive to outliers. Median is best for skewed data. Mode is best for categorical data. GM is the correct average for growth rates. The choice depends on data type and analysis purpose.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 3 Summary</h4><ul>
+<li>Arithmetic Mean (AM): most widely used, affected by outliers</li>
+<li>Median: positional average, robust against outliers, best for skewed data</li>
+<li>Mode: most frequent value, best for categorical data</li>
+<li>Geometric Mean (GM): correct average for growth rates (CAGR)</li>
+<li>Relationship: AM >= GM >= HM (equality when all values identical)</li>
+</ul></div>
 </div>
 
 <!-- UNIT 4 -->
 </div>
-<div class="unit" id="unit-4">
-<h3 id="unit4">Unit 4: Measures of Variation and Skewness</h3>
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Measures of Variation and Skewness</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
 <div id="sU4">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Dispersion</strong> measures how spread out data is from the central value. Two datasets can have the same mean but vastly different variability &#x2014; dispersion captures this difference. <strong>Skewness</strong> measures the asymmetry of the distribution.</p></div>
@@ -500,13 +502,13 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <h4>1. Measures of Dispersion</h4>
-<table class="comparison-table"><thead><tr><th>Measure</th><th>Formula</th><th>Merits</th><th>Limitations</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Measure</th><th>Formula</th><th>Merits</th><th>Limitations</th></tr></thead><tbody>
 <tr><td><strong>Range</strong></td><td>Max &#x2212; Min</td><td>Simplest, quick calculation</td><td>Based on only 2 values, affected by outliers</td></tr>
 <tr><td><strong>Quartile Deviation</strong></td><td>(Q&#x2083; &#x2212; Q&#x2081;) / 2</td><td>Not affected by extreme values</td><td>Ignores 50% of data</td></tr>
 <tr><td><strong>Mean Deviation</strong></td><td>&#x03A3;|X&#x1D62; &#x2212; X&#x0304;| / n</td><td>Based on all observations</td><td>Not suitable for further algebraic treatment</td></tr>
 <tr><td><strong>Standard Deviation</strong></td><td>&#x221A;[&#x03A3;(X&#x1D62; &#x2212; X&#x0304;)Â²/n]</td><td>Most important, algebraically tractable</td><td>Affected by outliers</td></tr>
 <tr><td><strong>CV (Coefficient of Variation)</strong></td><td>(&#x03C3;/X&#x0304;) &#x00D7; 100</td><td>Compares variability across different units/means</td><td>Meaningless if X&#x0304; &#x2248; 0</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Exam Favourite</div><p><strong>Standard Deviation</strong> is the most frequently tested topic. Key formula: &#x03C3; = &#x221A;[&#x03A3;fXÂ²/n &#x2212; (&#x03A3;fX/n)Â²]. Variance = &#x03C3;Â². Remember: SD is in the <strong>same units</strong> as the original data; variance is in <strong>squared units</strong>.</p></div>
 
@@ -531,6 +533,13 @@ body.subject-mmpc05 .subject-tag {
 <p>Variance = 138/5 = 27.6. SD = &#x221A;27.6 = <strong>5.25</strong>. CV = (5.25/12)Ã—100 = <strong>43.75%</strong>.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Standard deviation is the gold standard for dispersion. CV allows comparison across different scales. Skewness tells you if the distribution is symmetric &#x2014; critical for choosing the right statistical test. Positive skew is more common in economic data (income, prices).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 4 Summary</h4><ul>
+<li>Range, Quartile Deviation, Mean Deviation, Standard Deviation, CV</li>
+<li>Standard Deviation is the gold standard for measuring dispersion</li>
+<li>CV = (SD/Mean) x 100 allows comparison across different scales</li>
+<li>Skewness: Positive (Mean > Median > Mode), Negative (Mean < Median < Mode)</li>
+<li>Karl Pearson SK = 3(Mean - Median)/SD</li>
+</ul></div>
 </div>
 
 <!-- ============================================================ -->
@@ -540,8 +549,8 @@ body.subject-mmpc05 .subject-tag {
 
 <!-- UNIT 5 -->
 </div>
-<div class="unit" id="unit-5">
-<h3 id="unit5">Unit 5: Basic Concepts of Probability</h3>
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Basic Concepts of Probability</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
 <div id="sU5">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Probability</strong> is a numerical measure of the likelihood of an event occurring, ranging from 0 (impossible) to 1 (certain). It forms the mathematical foundation for decision-making under uncertainty.</p></div>
@@ -568,14 +577,14 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <h4>2. Fundamental Rules</h4>
-<table class="comparison-table"><thead><tr><th>Rule</th><th>Formula</th><th>When to Use</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Rule</th><th>Formula</th><th>When to Use</th></tr></thead><tbody>
 <tr><td><strong>Addition (General)</strong></td><td>P(A&#x222A;B) = P(A) + P(B) &#x2212; P(A&#x2229;B)</td><td>Probability of A or B (or both)</td></tr>
 <tr><td><strong>Addition (Mutually Exclusive)</strong></td><td>P(A&#x222A;B) = P(A) + P(B)</td><td>A and B cannot occur together</td></tr>
 <tr><td><strong>Multiplication (General)</strong></td><td>P(A&#x2229;B) = P(A) &#x00D7; P(B|A)</td><td>Probability of A and B</td></tr>
 <tr><td><strong>Multiplication (Independent)</strong></td><td>P(A&#x2229;B) = P(A) &#x00D7; P(B)</td><td>A and B don't affect each other</td></tr>
 <tr><td><strong>Complement</strong></td><td>P(A') = 1 &#x2212; P(A)</td><td>Probability of "not A"</td></tr>
 <tr><td><strong>Conditional</strong></td><td>P(A|B) = P(A&#x2229;B) / P(B)</td><td>Probability of A given B occurred</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Bayes' Theorem</h4>
 <div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Exam Favourite</div><p><strong>P(A&#x1D62;|B) = [P(B|A&#x1D62;) &#x00D7; P(A&#x1D62;)] / &#x03A3;P(B|A&#x2C7C;) &#x00D7; P(A&#x2C7C;)</strong> &#x2014; Bayes' theorem revises prior probabilities using new evidence (posterior probability). It is the foundation of Bayesian statistics and machine learning.</p></div>
@@ -637,12 +646,19 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Classical probability assumes equally likely outcomes. Conditional probability captures dependency between events. Bayes' theorem is the most powerful tool &#x2014; it updates beliefs with new evidence. Independence means P(A&#x2229;B) = P(A) &#x00D7; P(B).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
+<li>Three approaches: Classical (equally likely), Relative Frequency (past data), Subjective (judgment)</li>
+<li>Addition rule: P(AUB) = P(A) + P(B) - P(A and B)</li>
+<li>Conditional probability: P(A|B) = P(A and B) / P(B)</li>
+<li>Bayes' theorem revises prior probabilities using new evidence (posterior probability)</li>
+<li>Independence: P(A and B) = P(A) x P(B)</li>
+</ul></div>
 </div>
 
 <!-- UNIT 6 -->
 </div>
-<div class="unit" id="unit-6">
-<h3 id="unit6">Unit 6: Discrete Probability Distributions</h3>
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Discrete Probability Distributions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
 <div id="sU6">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>A <strong>discrete probability distribution</strong> assigns probabilities to each possible value of a discrete random variable. The two most important are the <strong>Binomial</strong> and <strong>Poisson</strong> distributions.</p></div>
@@ -665,20 +681,20 @@ body.subject-mmpc05 .subject-tag {
 <p><strong>Random Variable</strong>: A function that assigns numerical values to outcomes of a random experiment. <strong>Expected Value</strong>: E(X) = &#x03A3;x &#x00D7; p(x) &#x2014; the long-run average. <strong>Variance</strong>: Var(X) = E(XÂ²) &#x2212; [E(X)]Â² &#x2014; measures spread.</p>
 
 <h4>2. Binomial Distribution</h4>
-<table class="comparison-table"><thead><tr><th>Property</th><th>Detail</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Property</th><th>Detail</th></tr></thead><tbody>
 <tr><td><strong>Conditions</strong></td><td>n independent trials, two outcomes (success/failure), constant p</td></tr>
 <tr><td><strong>PMF</strong></td><td>P(X=x) = C(n,x) &#x00D7; pË£ &#x00D7; (1&#x2212;p)^(n&#x2212;x)</td></tr>
 <tr><td><strong>Mean</strong></td><td>&#x03BC; = np</td></tr>
 <tr><td><strong>Variance</strong></td><td>&#x03C3;Â² = np(1&#x2212;p)</td></tr>
 <tr><td><strong>Skewness</strong></td><td>(1&#x2212;2p) / &#x221A;[np(1&#x2212;p)]</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Poisson Distribution</h4>
-<table class="comparison-table"><thead><tr><th>Property</th><th>Detail</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Property</th><th>Detail</th></tr></thead><tbody>
 <tr><td><strong>Conditions</strong></td><td>Rare events, fixed interval, independent occurrences, constant rate &#x03BB;</td></tr>
 <tr><td><strong>PMF</strong></td><td>P(X=x) = (e^(&#x2212;&#x03BB;) &#x00D7; &#x03BB;Ë£) / x!</td></tr>
 <tr><td><strong>Mean = Variance</strong></td><td>&#x03BC; = &#x03C3;Â² = &#x03BB;</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <div class="cg">
 <div class="cc"><h5 style="color:#c8c8c8">Binomial Applications</h5><ul><li>Number of defective items in a batch of 50 from Tata Steel</li><li>Number of customers buying insurance out of 200 contacted by LIC agents</li><li>Number of heads in 100 coin tosses</li></ul></div>
@@ -694,12 +710,19 @@ body.subject-mmpc05 .subject-tag {
 <p>Mean = np = 10Ã—0.05 = 0.5. Variance = np(1&#x2212;p) = 0.475.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Binomial: fixed n trials, two outcomes, constant p. Poisson: rare events, mean = variance. Both are discrete. When n&#x2192;&#x221E; and p&#x2192;0, Binomial converges to Poisson. Expected value is the weighted average of all possible outcomes.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 6 Summary</h4><ul>
+<li>Binomial: n independent trials, two outcomes, constant p; Mean = np, Var = np(1-p)</li>
+<li>Poisson: rare events, fixed interval; Mean = Variance = lambda</li>
+<li>When n is large and p is small, Binomial approximates Poisson (lambda = np)</li>
+<li>Expected Value E(X) = Sum of x * p(x) -- the long-run average</li>
+<li>Binomial for batches, Poisson for points in time/space</li>
+</ul></div>
 </div>
 
 <!-- UNIT 7 -->
 </div>
-<div class="unit" id="unit-7">
-<h3 id="unit7">Unit 7: Continuous Probability Distributions</h3>
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Continuous Probability Distributions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
 <div id="sU7">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>For <strong>continuous random variables</strong>, probability is defined over intervals (not specific points). The total area under the probability density function (PDF) curve equals 1. The three key distributions are <strong>Uniform</strong>, <strong>Normal</strong>, and <strong>Exponential</strong>.</p></div>
@@ -729,11 +752,11 @@ body.subject-mmpc05 .subject-tag {
 <h4>3. Exponential Distribution</h4>
 <p>Models <strong>time between events</strong> in a Poisson process. f(x) = &#x03BB;e^(&#x2212;&#x03BB;x). Mean = 1/&#x03BB;. Memoryless property: P(X &gt; s+t | X &gt; s) = P(X &gt; t).</p>
 
-<table class="comparison-table"><thead><tr><th>Distribution</th><th>Shape</th><th>Parameters</th><th>Key Use</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Distribution</th><th>Shape</th><th>Parameters</th><th>Key Use</th></tr></thead><tbody>
 <tr><td>Uniform</td><td>Rectangle</td><td>a, b</td><td>Random number generation, equal probability scenarios</td></tr>
 <tr><td>Normal</td><td>Bell curve</td><td>&#x03BC;, &#x03C3;</td><td>Heights, test scores, measurement errors, stock returns</td></tr>
 <tr><td>Exponential</td><td>Decaying curve</td><td>&#x03BB;</td><td>Waiting times, equipment lifespan, inter-arrival times</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Z-Score in Practice</strong>: If the average package at IIM Ahmedabad is &#x20B9;30 lakh with SD &#x20B9;8 lakh, and a student gets &#x20B9;46 lakh, the Z-score = (46&#x2212;30)/8 = 2.0. This student is in the top 2.5% of the batch (since P(Z&gt;2) = 0.0228).</p></div>
 
@@ -779,12 +802,19 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Normal distribution is the king of statistics &#x2014; most tests assume normality. Z = (X&#x2212;Î¼)/Ïƒ standardizes any normal variable. Exponential is for time-between-events. Uniform is for equal-likelihood scenarios.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 7 Summary</h4><ul>
+<li>Uniform: all values equally likely between a and b</li>
+<li>Normal distribution: bell-shaped, Mean = Median = Mode, defined by mu and sigma</li>
+<li>68-95-99.7 Rule: 68% within 1 SD, 95% within 2 SD, 99.7% within 3 SD</li>
+<li>Z = (X - mu) / sigma standardizes any normal variable</li>
+<li>Exponential: models time between events; memoryless property</li>
+</ul></div>
 </div>
 
 <!-- UNIT 8 -->
 </div>
-<div class="unit" id="unit-8">
-<h3 id="unit8">Unit 8: Decision Theory</h3>
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Decision Theory</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
 <div id="sU8">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Decision theory</strong> provides a rational framework for choosing among alternatives when outcomes are uncertain. It combines probability with payoff analysis to identify the optimal course of action.</p></div>
@@ -811,12 +841,12 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <h4>2. Criteria Under Uncertainty (No Probabilities)</h4>
-<table class="comparison-table"><thead><tr><th>Criterion</th><th>Logic</th><th>Manager Type</th><th>Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Criterion</th><th>Logic</th><th>Manager Type</th><th>Example</th></tr></thead><tbody>
 <tr><td><strong>Maximax</strong></td><td>Choose max of maximum payoffs</td><td>Optimist</td><td>Entrepreneur betting on best-case startup outcome</td></tr>
 <tr><td><strong>Maximin</strong></td><td>Choose max of minimum payoffs</td><td>Pessimist</td><td>Conservative investor choosing FD over stocks</td></tr>
 <tr><td><strong>Minimax Regret</strong></td><td>Minimize maximum regret</td><td>Risk-averse</td><td>Manufacturer choosing capacity to minimize opportunity loss</td></tr>
 <tr><td><strong>Hurwicz</strong></td><td>Weighted average (Î± = optimism)</td><td>Balanced</td><td>&#x03B1; &#x00D7; max + (1&#x2212;&#x03B1;) &#x00D7; min</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Expected Monetary Value (EMV)</h4>
 <p><strong>EMV = &#x03A3;(Probability &#x00D7; Payoff)</strong> &#x2014; Choose the alternative with the highest EMV when probabilities are known.</p>
@@ -876,6 +906,13 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Under uncertainty without probabilities: Maximax (optimist), Maximin (pessimist), Minimax Regret (cautious). With probabilities: Use EMV. Decision trees visualize sequential decisions. EVPI = Expected value with perfect info &#x2212; Best EMV (maximum worth of perfect information).</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
+<li>Three environments: Certainty, Risk (known probabilities), Uncertainty (unknown)</li>
+<li>Maximax (optimist), Maximin (pessimist), Minimax Regret (risk-averse), Hurwicz (balanced)</li>
+<li>EMV = Sum(Probability x Payoff) -- choose highest EMV when probabilities known</li>
+<li>Decision trees: Square = decision, Circle = chance, Triangle = terminal payoff</li>
+<li>EVPI = Value with perfect info - Best EMV</li>
+</ul></div>
 </div>
 
 <!-- ============================================================ -->
@@ -885,8 +922,8 @@ body.subject-mmpc05 .subject-tag {
 
 <!-- UNIT 9 -->
 </div>
-<div class="unit" id="unit-9">
-<h3 id="unit9">Unit 9: Sampling Methods</h3>
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Sampling Methods</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
 <div id="sU9">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Sampling</strong> is the process of selecting a subset (sample) from a larger group (population) to make inferences about the population. A well-designed sample can represent millions of people with manageable cost and time.</p></div>
@@ -914,13 +951,13 @@ body.subject-mmpc05 .subject-tag {
 <h4>2. Sampling Methods</h4>
 <div class="callout callout-important"><div class="callout-label">&#x26A0;&#xFE0F; Exam Favourite</div><p>Distinguish between <strong>probability sampling</strong> (every unit has a known, non-zero chance) and <strong>non-probability sampling</strong> (selection is subjective or convenient). Probability sampling is always preferred for statistical inference.</p></div>
 
-<table class="comparison-table"><thead><tr><th>Method</th><th>How It Works</th><th>Best For</th><th>Indian Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Method</th><th>How It Works</th><th>Best For</th><th>Indian Example</th></tr></thead><tbody>
 <tr><td><strong>Simple Random (SRS)</strong></td><td>Every unit has equal chance; lottery or random numbers</td><td>Homogeneous populations</td><td>Selecting 50 employees randomly from TCS's 600,000 using employee ID numbers</td></tr>
 <tr><td><strong>Systematic</strong></td><td>Select every kth unit after random start (k = N/n)</td><td>Ordered lists</td><td>Every 10th customer exiting a Big Bazaar store for feedback</td></tr>
 <tr><td><strong>Stratified</strong></td><td>Divide into strata, sample from each proportionally</td><td>Heterogeneous population with clear groups</td><td>NSSO dividing India into states, then sampling proportionally from urban/rural</td></tr>
 <tr><td><strong>Cluster</strong></td><td>Randomly select clusters, study all units within</td><td>Geographically dispersed populations</td><td>Randomly selecting 50 villages in Maharashtra, surveying every household in those villages</td></tr>
 <tr><td><strong>Multi-stage</strong></td><td>Successive random selections at each stage</td><td>Large national surveys</td><td>Census: Select states &#x2192; districts &#x2192; blocks &#x2192; villages &#x2192; households</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Sample Size Determination</h4>
 <p><strong>n = (ZÂ²&#x03C3;Â²) / eÂ²</strong> where Z = confidence level (1.96 for 95%), &#x03C3; = population SD, e = margin of error. Larger samples give more precision but cost more. The trade-off between accuracy and cost is a key managerial decision.</p>
@@ -988,12 +1025,19 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Probability sampling is essential for valid inference. Stratified sampling reduces error when population has distinct subgroups. Cluster sampling is cost-effective for scattered populations. Sample size formula: n = ZÂ²ÏƒÂ²/eÂ².</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 9 Summary</h4><ul>
+<li>Probability sampling: every unit has known, non-zero chance of selection</li>
+<li>Methods: Simple Random, Systematic, Stratified, Cluster, Multi-stage</li>
+<li>Stratified reduces error when population has distinct subgroups</li>
+<li>Cluster sampling is cost-effective for geographically dispersed populations</li>
+<li>Sample size: n = Z-squared x sigma-squared / e-squared</li>
+</ul></div>
 </div>
 
 <!-- UNIT 10 -->
 </div>
-<div class="unit" id="unit-10">
-<h3 id="unit10">Unit 10: Sampling Distributions</h3>
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Sampling Distributions</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
 <div id="sU10">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>A <strong>sampling distribution</strong> is the probability distribution of a statistic (like the sample mean X&#x0304;) computed from all possible samples of size n from a population. It is the bridge between descriptive and inferential statistics.</p></div>
@@ -1039,12 +1083,19 @@ body.subject-mmpc05 .subject-tag {
 <p><strong>95% CI = (&#x20B9;11.412 lakh, &#x20B9;12.588 lakh)</strong>. We are 95% confident the true mean lies in this range.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>CLT is the foundation of inferential statistics &#x2014; it justifies using normal-based tests. Standard error decreases with &#x221A;n (diminishing returns to larger samples). Confidence intervals quantify uncertainty in estimates. Use t-distribution when Ïƒ is unknown and n is small.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 10 Summary</h4><ul>
+<li>Standard Error = SD of the sampling distribution = sigma / sqrt(n)</li>
+<li>Central Limit Theorem: sample means approach normal distribution for n >= 30</li>
+<li>CLT enables hypothesis testing and confidence intervals regardless of population shape</li>
+<li>Confidence Interval: X-bar +/- Z x (sigma / sqrt(n))</li>
+<li>Use t-distribution when sigma is unknown and n < 30</li>
+</ul></div>
 </div>
 
 <!-- UNIT 11 -->
 </div>
-<div class="unit" id="unit-11">
-<h3 id="unit11">Unit 11: Testing of Hypotheses</h3>
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Testing of Hypotheses</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
 <div id="sU11">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Hypothesis testing</strong> is a formal procedure for deciding whether sample data supports or contradicts a claim about the population. It uses sample evidence to either reject or fail to reject a null hypothesis.</p></div>
@@ -1072,11 +1123,11 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <h4>2. Errors in Hypothesis Testing</h4>
-<table class="comparison-table"><thead><tr><th>Error Type</th><th>What Happens</th><th>Probability</th><th>Analogy</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Error Type</th><th>What Happens</th><th>Probability</th><th>Analogy</th></tr></thead><tbody>
 <tr><td><strong>Type I (&#x03B1;)</strong></td><td>Reject true H&#x2080; (false positive)</td><td>&#x03B1; (significance level)</td><td>Convicting an innocent person</td></tr>
 <tr><td><strong>Type II (&#x03B2;)</strong></td><td>Accept false H&#x2080; (false negative)</td><td>&#x03B2;</td><td>Letting a guilty person go free</td></tr>
 <tr><td><strong>Power</strong></td><td>Correctly reject false H&#x2080;</td><td>1 &#x2212; &#x03B2;</td><td>Correctly convicting a guilty person</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Z-Test vs T-Test</h4>
 <div class="cg">
@@ -1131,12 +1182,19 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Always start with H&#x2080; (null). Type I error (Î±) is set by the researcher (typically 0.05). Z-test for known Ïƒ or large n; t-test for unknown Ïƒ and small n. Two-tailed tests check for difference; one-tailed tests check for direction.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
+<li>Framework: State H0/H1, Choose alpha, Select test statistic, Calculate and decide</li>
+<li>Type I (alpha): Reject true H0 (false positive). Type II (beta): Accept false H0</li>
+<li>Z-test for known sigma or large n; T-test for unknown sigma and small n</li>
+<li>Two-tailed tests check for difference; one-tailed tests check for direction</li>
+<li>If p-value < alpha, reject H0</li>
+</ul></div>
 </div>
 
 <!-- UNIT 12 -->
 </div>
-<div class="unit" id="unit-12">
-<h3 id="unit12">Unit 12: Chi-Square Tests</h3>
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Chi-Square Tests</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
 <div id="sU12">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>The <strong>Chi-Square (&#x03C7;Â²) test</strong> is a non-parametric test used for categorical data. It compares <strong>observed frequencies</strong> with <strong>expected frequencies</strong> to determine if there are significant differences or associations.</p></div>
@@ -1160,11 +1218,11 @@ body.subject-mmpc05 .subject-tag {
 <p>Properties: Always positive, right-skewed, approaches normal as df increases. Mean = df, Variance = 2&#x00D7;df.</p>
 
 <h4>2. Three Types of Chi-Square Tests</h4>
-<table class="comparison-table"><thead><tr><th>Test</th><th>Purpose</th><th>df Formula</th><th>Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Test</th><th>Purpose</th><th>df Formula</th><th>Example</th></tr></thead><tbody>
 <tr><td><strong>Goodness of Fit</strong></td><td>Does observed data match a theoretical distribution?</td><td>k &#x2212; 1</td><td>Are dice fair? (6 categories)</td></tr>
 <tr><td><strong>Test of Independence</strong></td><td>Are two categorical variables related?</td><td>(r&#x2212;1)(c&#x2212;1)</td><td>Is brand preference independent of gender?</td></tr>
 <tr><td><strong>Test of Homogeneity</strong></td><td>Do different populations have same proportions?</td><td>(r&#x2212;1)(c&#x2212;1)</td><td>Do different states have same preference pattern?</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Conditions for Valid Chi-Square Test</h4>
 <ul><li>All expected frequencies must be &#x2265; <strong>5</strong> (some texts say &#x2265; 1 with adjusted df)</li><li>Observations must be <strong>independent</strong></li><li>Total observed = Total expected</li><li>Data must be in <strong>frequencies</strong>, not percentages</li></ul>
@@ -1202,6 +1260,13 @@ body.subject-mmpc05 .subject-tag {
 <p>Since 2.90 < 11.07, <strong>fail to reject H&#x2080;</strong> &#x2014; the die appears fair.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Chi-square works with frequencies (not means). Goodness of fit tests distribution shape. Independence tests relationship between two categorical variables. Always check that expected frequencies &#x2265; 5.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 12 Summary</h4><ul>
+<li>Chi-square = Sum[(O - E)^2 / E] -- works with frequencies, not means</li>
+<li>Goodness of Fit: does data match a theoretical distribution? (df = k-1)</li>
+<li>Test of Independence: are two categorical variables related? (df = (r-1)(c-1))</li>
+<li>Conditions: all expected frequencies >= 5, observations independent</li>
+<li>Chi-square is always positive and right-skewed</li>
+</ul></div>
 </div>
 
 <!-- ============================================================ -->
@@ -1211,8 +1276,8 @@ body.subject-mmpc05 .subject-tag {
 
 <!-- UNIT 13 -->
 </div>
-<div class="unit" id="unit-13">
-<h3 id="unit13">Unit 13: Business Forecasting</h3>
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Business Forecasting</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
 <div id="sU13">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Business forecasting</strong> is the process of estimating future values of business variables (sales, demand, costs) using historical data and analytical methods. Accurate forecasting is essential for planning, budgeting, inventory management, and strategic decision-making.</p></div>
@@ -1288,21 +1353,28 @@ body.subject-mmpc05 .subject-tag {
 <div class="br"><span class="sb s-g">Short-term (up to 1 year): Inventory, scheduling</span><span class="sb s-y">Medium-term (1&#x2013;3 years): Budgeting, staffing</span><span class="sb s-r">Long-term (3+ years): Strategic planning, capacity</span></div>
 
 <h4>4. Accuracy Measures</h4>
-<table class="comparison-table"><thead><tr><th>Measure</th><th>Formula</th><th>Interpretation</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Measure</th><th>Formula</th><th>Interpretation</th></tr></thead><tbody>
 <tr><td><strong>MAD</strong></td><td>&#x03A3;|Actual &#x2212; Forecast| / n</td><td>Average absolute error in original units</td></tr>
 <tr><td><strong>MSE</strong></td><td>&#x03A3;(Actual &#x2212; Forecast)Â² / n</td><td>Penalises large errors more heavily</td></tr>
 <tr><td><strong>MAPE</strong></td><td>&#x03A3;(|Error|/Actual) &#x00D7; 100 / n</td><td>Percentage error &#x2014; easy to communicate</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Flipkart Demand Forecasting</strong>: Before Big Billion Days, Flipkart uses a combination of historical sales data (3 years of time series), economic indicators (GDP growth, consumer confidence), and social media sentiment analysis. They use exponential smoothing for daily demand and regression models incorporating festival calendars, marketing spend, and competitor pricing.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Qualitative methods for new products/no data; quantitative for established products with history. Short-term uses time series; long-term uses causal models. MAPE is the most interpretable accuracy measure. Good forecasting combines multiple methods.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 13 Summary</h4><ul>
+<li>Qualitative methods (Delphi, surveys) for new products; Quantitative for established</li>
+<li>Short-term: time series (moving averages, exponential smoothing)</li>
+<li>Long-term: causal methods (regression, econometric models)</li>
+<li>Accuracy measures: MAD, MSE, MAPE -- pick lowest error model</li>
+<li>Good forecasting combines multiple methods</li>
+</ul></div>
 </div>
 
 <!-- UNIT 14 -->
 </div>
-<div class="unit" id="unit-14">
-<h3 id="unit14">Unit 14: Correlation</h3>
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Correlation</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
 <div id="sU14">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Correlation</strong> measures the <strong>strength and direction</strong> of the linear relationship between two variables. It ranges from &#x2212;1 (perfect negative) through 0 (no correlation) to +1 (perfect positive).</p></div>
@@ -1330,11 +1402,11 @@ body.subject-mmpc05 .subject-tag {
 
 <h4>2. Karl Pearson's Correlation Coefficient (r)</h4>
 <p><strong>r = &#x03A3;[(x&#x1D62; &#x2212; x&#x0304;)(y&#x1D62; &#x2212; y&#x0304;)] / &#x221A;[&#x03A3;(x&#x1D62; &#x2212; x&#x0304;)Â² &#x00D7; &#x03A3;(y&#x1D62; &#x2212; y&#x0304;)Â²]</strong></p>
-<table class="comparison-table"><thead><tr><th>|r| Range</th><th>Strength</th><th>Example</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>|r| Range</th><th>Strength</th><th>Example</th></tr></thead><tbody>
 <tr><td>0.00 &#x2013; 0.30</td><td>Weak</td><td>Shoe size and IQ</td></tr>
 <tr><td>0.30 &#x2013; 0.70</td><td>Moderate</td><td>Years of education and income</td></tr>
 <tr><td>0.70 &#x2013; 1.00</td><td>Strong</td><td>Temperature and AC sales</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Spearman's Rank Correlation (r&#x209B;)</h4>
 <p><strong>r&#x209B; = 1 &#x2212; [6&#x03A3;dÂ²] / [n(nÂ² &#x2212; 1)]</strong> &#x2014; Used for <strong>qualitative data</strong> (rankings, ratings) or when data doesn't meet Pearson's assumptions.</p>
@@ -1353,12 +1425,19 @@ body.subject-mmpc05 .subject-tag {
 <p>r = 6 / &#x221A;(10Ã—6) = 6/&#x221A;60 = 6/7.746 = <strong>0.7746</strong> &#x2014; strong positive correlation.</p></div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Pearson's r for quantitative data, Spearman's r&#x209B; for ranked data. r measures linear association only. |r| &gt; 0.7 is strong. Correlation does not equal causation. r is unaffected by change of origin or scale.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 14 Summary</h4><ul>
+<li>Pearson's r for quantitative data; Spearman's rank for ranked/qualitative data</li>
+<li>r ranges from -1 (perfect negative) to +1 (perfect positive); unitless</li>
+<li>|r| > 0.7 is strong; 0.3-0.7 is moderate; < 0.3 is weak</li>
+<li>Correlation does NOT imply causation</li>
+<li>r is unaffected by change of origin or scale</li>
+</ul></div>
 </div>
 
 <!-- UNIT 15 -->
 </div>
-<div class="unit" id="unit-15">
-<h3 id="unit15">Unit 15: Regression</h3>
+<div class="unit" id="u15">
+<h3 id="u15">Unit 15: Regression</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
 <div id="sU15">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Regression analysis</strong> establishes a mathematical relationship between a dependent variable (Y) and one or more independent variables (X) to predict Y from X. While correlation tells you IF variables are related, regression tells you HOW they are related.</p></div>
@@ -1447,12 +1526,19 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Regression quantifies the relationship; correlation only measures its strength. RÂ² tells you how well the model fits (0 to 1). The regression line always passes through the means. b&#x2081; Ã— b&#x2082; = rÂ² is a key identity for exams.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 15 Summary</h4><ul>
+<li>Simple linear regression: Y = a + bX (a = intercept, b = slope)</li>
+<li>b1 x b2 = r-squared (product of regression coefficients equals r-squared)</li>
+<li>Both regression lines intersect at (X-bar, Y-bar) -- the point of means</li>
+<li>R-squared = Explained variation / Total variation</li>
+<li>OLS minimizes sum of squared errors -- best linear predictor</li>
+</ul></div>
 </div>
 
 <!-- UNIT 16 -->
 </div>
-<div class="unit" id="unit-16">
-<h3 id="unit16">Unit 16: Time Series Analysis</h3>
+<div class="unit" id="u16">
+<h3 id="u16">Unit 16: Time Series Analysis</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU16">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU16">&#x1F4AC; Ask AI</button></div>
 <div id="sU16">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>A <strong>time series</strong> is a sequence of data points collected at regular time intervals (daily, monthly, quarterly, yearly). Time series analysis decomposes the data into components to understand patterns and forecast future values.</p></div>
@@ -1481,12 +1567,12 @@ body.subject-mmpc05 .subject-tag {
 <p><strong>Multiplicative Model</strong>: Y = T &#x00D7; S &#x00D7; C &#x00D7; I &nbsp;|&nbsp; <strong>Additive Model</strong>: Y = T + S + C + I</p>
 
 <h4>2. Methods of Measuring Trend</h4>
-<table class="comparison-table"><thead><tr><th>Method</th><th>How It Works</th><th>Best For</th></tr></thead><tbody>
+<div class="db"><table class="comparison-table"><thead><tr><th>Method</th><th>How It Works</th><th>Best For</th></tr></thead><tbody>
 <tr><td><strong>Graphical</strong></td><td>Plot data, draw freehand trend line</td><td>Quick visual inspection</td></tr>
 <tr><td><strong>Moving Averages</strong></td><td>Average of n successive values (eliminates seasonality)</td><td>Seasonal data with no clear trend equation</td></tr>
 <tr><td><strong>Least Squares</strong></td><td>Fit Y = a + bt by minimizing &#x03A3;(Y &#x2212; Å¶)Â²</td><td>Data with clear linear/exponential trend</td></tr>
 <tr><td><strong>Exponential Smoothing</strong></td><td>S<sub>t</sub> = &#x03B1;Y<sub>t</sub> + (1&#x2212;&#x03B1;)S<sub>t&#x2212;1</sub></td><td>Short-term forecasting, recent data weighted more</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h4>3. Exponential Smoothing</h4>
 <p><strong>S<sub>t</sub> = &#x03B1;Y<sub>t</sub> + (1&#x2212;&#x03B1;)S<sub>t&#x2212;1</sub></strong> where &#x03B1; (smoothing constant) ranges 0 to 1. Higher &#x03B1; = more weight on recent data (responsive). Lower &#x03B1; = smoother curve (stable). Typically &#x03B1; = 0.1 to 0.3.</p>
@@ -1537,32 +1623,48 @@ body.subject-mmpc05 .subject-tag {
 </div>
 
 <div class="kt"><h4>Key Takeaways</h4><p>Time series = Trend + Seasonal + Cyclical + Irregular. Moving averages eliminate seasonality. Exponential smoothing is best for short-term forecasts. Seasonal indices show how each period compares to the average. MAPE is the most interpretable accuracy measure for business communication.</p></div>
+<div class="summary-box"><h4>&#x2705; Unit 16 Summary</h4><ul>
+<li>Time series components: Trend (T), Seasonal (S), Cyclical (C), Irregular (I)</li>
+<li>Moving averages eliminate seasonality; exponential smoothing for short-term</li>
+<li>Multiplicative model: Y = T x S x C x I</li>
+<li>Seasonal indices show how each period compares to the average</li>
+<li>MAPE is the most interpretable accuracy measure for business communication</li>
+</ul></div>
 </div>
 
 </div>
 </main>
 </div>
-</script>
+<!-- /study-content -->
 <script src="pomodoro.js"></script>
 <script src="bookmark-notes.js"></script>
 <script src="flashcards.js"></script>
 <script>
-(function(){
-  // Add animate-on-scroll class to content sections
-  var targets = document.querySelectorAll('.cc, .callout, .visual-diagram, .comparison-table, .fc, .kt, h4');
-  targets.forEach(function(el){ el.classList.add('animate-on-scroll'); });
-
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
+// Scroll-triggered animations
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  document.querySelectorAll('.animate-on-scroll').forEach(function(el){
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
     observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
   });
 })();
 </script>

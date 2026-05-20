@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPM-01: Consumer Behaviour | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<style>
+
+/* MMPM-01 ENHANCED STYLES */
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe, #FFD700, #6c5ce7);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-definition {
+  border-left-color: #6c5ce7 !important;
+  background: rgba(108,99,255,0.08) !important;
+}
+.callout-example {
+  border-left-color: #00cec9 !important;
+  background: rgba(0,206,201,0.06) !important;
+}
+.callout-examtip {
+  border-left-color: #FFD700 !important;
+  background: rgba(255,215,0,0.06) !important;
+}
+.callout-examtip .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #fd79a8 !important;
+  background: linear-gradient(135deg, rgba(253,121,168,0.06), rgba(108,99,255,0.04)) !important;
+}
+.callout-mnemonic .callout-label {
+  color: #fd79a8 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+.subject-tag {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+</style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpm01">
+<a href="#main-content" class="skip-link">Skip to main content</a><div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-01'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPM-01</span></div>
+<nav class="sidebar-nav">
+<a href="#u1">Unit 1: Consumer Behaviour Concepts</a>
+<a href="#u2">Unit 2: Motivation Theories</a>
+<a href="#u3">Unit 3: Perception and Learning</a>
+<a href="#u4">Unit 4: Attitude Formation</a>
+<a href="#u5">Unit 5: Culture and Subculture</a>
+<a href="#u6">Unit 6: Reference Groups</a>
+<a href="#u7">Unit 7: Family Decision Making</a>
+<a href="#u8">Unit 8: Consumer Decision Process</a>
+<a href="#u9">Unit 9: Post-Purchase Behaviour</a>
+<a href="#u10">Unit 10: Digital Consumer Behaviour</a>
+<a href="#u11">Unit 11: Consumer Models</a>
+<a href="#u12">Unit 12: Applications of CB</a>
+<a href="quiz-mmpm01.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPM-01</span><h1>Consumer Behaviour</h1><p>Comprehensive Study Notes with Indian Examples, Mnemonics and Exam Tips</p></div>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Consumer Behaviour Concepts and Scope</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Consumer Behaviour (CB) studies the processes individuals and organizations use to select, purchase, use, and dispose of products, services, ideas, or experiences to satisfy needs and desires. It integrates psychology, sociology, anthropology, and economics to explain buyer behaviour. Understanding CB is essential for marketers to segment markets, position brands, and craft effective marketing strategies.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Flipkart Big Billion Days:</strong> Flipkart leverages deep understanding of Indian consumer behaviour during its annual sale. Consumers exhibit deal-seeking behaviour, stockpiling during discounts, and social influence through word-of-mouth. Flipkart studies browsing patterns, cart abandonment, and price sensitivity to design flash sales that trigger impulse purchases. Over 200 million visitors participate, showing how CB insights drive massive conversions.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5-mark questions: Define CB, list its 3 components (cognitive, affective, behavioural). For 10-mark questions: Explain the Loudon and Della Bitta framework with 3 concentric circles -- decision process (inner), individual determinants (middle), and external environment (outer). Always cite a real example.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CB = "CAB"</strong> -- <strong>C</strong>ognitive (knowing), <strong>A</strong>ffective (feeling), <strong>B</strong>ehavioural (doing). These three components cover every aspect of consumer behaviour from awareness to action.</p></div>
+
+<h4>Key Concepts</h4>
+<ul>
+<li><strong>Consumer vs Customer:</strong> A consumer uses the product; a customer purchases it. A father buying crayons is the customer; the child is the consumer.</li>
+<li><strong>Buyer Roles:</strong> Initiator, Influencer, Buyer, Decider, User -- these roles may be played by different people in a single purchase.</li>
+<li><strong>Decision Process:</strong> Problem recognition, Information search, Evaluation of alternatives, Purchase, Post-purchase evaluation.</li>
+<li><strong>Individual Determinants:</strong> Motivation, perception, learning, attitude, personality, and self-concept shape how each person behaves differently.</li>
+<li><strong>External Influences:</strong> Culture, subculture, social class, reference groups, family, and marketing stimuli all modify consumer decisions.</li>
+<li><strong>Scope of CB:</strong> Includes study of what consumers buy, why they buy, when they buy, where they buy, how they buy, and how often they buy.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 1 Summary</h4><ul>
+<li>CB = study of how individuals make decisions to spend resources on consumption-related items</li>
+<li>Three components: Cognitive (thoughts), Affective (feelings), Behavioural (actions)</li>
+<li>Five buyer roles: Initiator, Influencer, Decider, Buyer, User</li>
+<li>Loudon and Della Bitta framework: decision process + individual determinants + external environment</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Motivation -- Maslow, Herzberg and Freud</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Motivation is the inner drive that directs a person toward satisfying a need. It answers the question "Why do consumers buy?" Understanding motivation helps marketers design products, messages, and promotions that tap into both conscious and unconscious consumer needs.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Amul:</strong> Amul's butter and milk advertisements tap into safety needs (pure, fresh dairy) and social needs (family togetherness). The Amul Girl billboard campaign has run since 1966, linking the brand to belongingness and Indian identity. Amul prices its products at levels accessible across economic segments, satisfying physiological needs while building brand love at esteem levels.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Maslow's hierarchy is a guaranteed question -- either 5 marks (list and explain 5 levels) or 10 marks (explain with Indian examples for each level). Draw the pyramid diagram. Herzberg and Freud are common 5-mark questions. Always compare at least two theorists in 10-mark answers.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Maslow = "PSBEL"</strong> -- <strong>P</strong>hysiological, <strong>S</strong>afety, <strong>B</strong>elongingness, <strong>E</strong>steem, <strong>S</strong>elf-actualization. Think: "People Sometimes Buy Expensive Luxuries."</p></div>
+
+<h4>Maslow's Hierarchy of Needs (1943)</h4>
+<ol>
+<li><strong>Physiological Needs:</strong> Food, water, shelter, clothing. Amul milk, Tata Salt, Britannia bread satisfy these fundamental needs.</li>
+<li><strong>Safety Needs:</strong> Security, health, financial stability. LIC insurance, Godrej locks, Himalaya personal care products address safety motivations.</li>
+<li><strong>Belongingness/Love Needs:</strong> Social acceptance, friendship, family. Tanishq jewellery, Cadbury celebrations, WhatsApp groups fulfill social belonging.</li>
+<li><strong>Esteem Needs:</strong> Self-respect, status, recognition. Luxury brands like Louis Vuitton, Royal Enfield, Apple iPhone serve esteem motivations.</li>
+<li><strong>Self-Actualization:</strong> Reaching full potential. Patanjali's spiritual branding, Tata trusts' philanthropy, and organic food brands align with this level.</li>
+</ol>
+
+<h4>Herzberg's Two-Factor Theory (1959)</h4>
+<ul>
+<li><strong>Hygiene Factors:</strong> Salary, working conditions, company policy. Their absence causes dissatisfaction but their presence does not motivate.</li>
+<li><strong>Motivators:</strong> Achievement, recognition, responsibility. These actively drive satisfaction (e.g., premium features, brand prestige).</li>
+<li><strong>Marketing Implication:</strong> Ensure hygiene factors are met first (product quality, fair pricing), then add motivators (loyalty rewards, exclusive access).</li>
+</ul>
+
+<h4>Freud's Psychoanalytic Theory</h4>
+<ul>
+<li><strong>Id:</strong> Pleasure principle -- impulsive, want instant gratification. Drives impulse buying of chocolates, fashion items.</li>
+<li><strong>Ego:</strong> Reality principle -- rational decision-making. Drives comparison shopping for electronics, cars.</li>
+<li><strong>Superego:</strong> Moral principle -- societal norms. Drives purchases of eco-friendly products, organic food, charitable donations.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 2 Summary</h4><ul>
+<li>Maslow: 5-level hierarchy from physiological to self-actualization; lower needs must be met first</li>
+<li>Herzberg: Hygiene factors prevent dissatisfaction; motivators create satisfaction</li>
+<li>Freud: Id (pleasure), Ego (reality), Superego (morality) drive unconscious motivations</li>
+<li>Marketers must identify which need level their product targets and craft messages accordingly</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Perception and Learning</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Perception is the process by which an individual selects, organizes, and interprets stimuli into a meaningful picture of the world. Learning refers to changes in behaviour arising from experience. Together, they explain why two consumers can see the same ad but react completely differently, and how brand habits are formed.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Maggi Noodles:</strong> Nestle's Maggi was perceived as a "2-minute comfort food" for decades. When the lead controversy hit in 2015, consumer perception shifted to "unsafe product." Nestle re-launched with "Safe and Tasting Good" messaging. Through classical conditioning (linking Maggi to childhood memories and mother's love), Maggi regained 60% market share within months.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define perception and explain 3 processes (selective attention, selective distortion, selective retention). For 10 marks: Compare classical conditioning (Pavlov) with operant conditioning (Skinner) and give marketing applications for each.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Perception = "ADR"</strong> -- <strong>A</strong>ttention (select), <strong>D</strong>istortion (organize), <strong>R</strong>etention (interpret). Think: "An AD is Remembered."</p></div>
+
+<h4>The Perception Process</h4>
+<ol>
+<li><strong>Selective Attention:</strong> Consumers screen out most stimuli. Only 16% of ads are noticed. Bold colours, unexpected visuals, and celebrity endorsements help capture attention.</li>
+<li><strong>Selective Distortion:</strong> Consumers twist information to fit preconceptions. A Maruti loyalist may dismiss Tata Motors safety data because they believe "Maruti is best."</li>
+<li><strong>Selective Retention:</strong> Consumers remember good points about liked brands and forget good points about rivals. Amul's consistent "Utterly Butterly" tagline has been retained for 50+ years.</li>
+</ol>
+
+<h4>Learning Theories</h4>
+<ul>
+<li><strong>Classical Conditioning (Pavlov):</strong> Associating a stimulus with a response. Thums Up links its brand with adventure and action films (Salman Khan), conditioning consumers to feel excitement.</li>
+<li><strong>Operant Conditioning (Skinner):</strong> Learning through consequences. Positive reinforcement -- Paytm cashback rewards encourage repeat usage.</li>
+<li><strong>Cognitive Learning:</strong> Problem-solving and insight. Consumers learn by observing others -- YouTube unboxing videos teach viewers about products without direct experience.</li>
+<li><strong>Brand Loyalty:</strong> Habitual learning leads to repeat purchases. Tata Tea, Surf Excel, and Colgate have strong habitual loyalty in Indian households.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 3 Summary</h4><ul>
+<li>Perception involves selective attention, distortion, and retention -- marketers must cut through clutter</li>
+<li>Classical conditioning: associate brand with positive stimulus (Thums Up + adventure)</li>
+<li>Operant conditioning: reward desired behaviour (cashback, loyalty points)</li>
+<li>Cognitive learning: observation and insight drive informed purchase decisions</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Attitude -- ABC Model and Change Strategies</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>An attitude is a learned predisposition to respond consistently favourable or unfavourably toward an object, idea, or person. Attitudes have three components: Affective (feelings), Behavioural (action tendency), and Cognitive (beliefs) -- the ABC model. Understanding attitudes helps marketers change negative perceptions and reinforce positive ones.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Patanjali:</strong> Baba Ramdev built a powerful attitude shift among Indian consumers. The cognitive component: "Patanjali = natural, ayurvedic, pure." The affective component: pride in Indian/Swadeshi products. The behavioural component: consumers switched from Colgate to Dant Kanti, from Dove to Patanjali shampoo. This tri-component shift made Patanjali a Rs 30,000 crore brand within a decade.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>The ABC model is exam gold. For 5 marks: Define attitude and explain A-B-C with one example. For 10 marks: Explain attitude change strategies (Festinger's cognitive dissonance, Hovland's Yale model, or elaboration likelihood model). Always link to Indian marketing practice.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ABC = "Feel-Act-Think"</strong> -- <strong>A</strong>ffective (Feel), <strong>B</strong>ehavioural (Act), <strong>C</strong>ognitive (Think). Note: The order in the model is ABC, but actual formation often starts with C (Think) then A (Feel) then B (Act).</p></div>
+
+<h4>Attitude Components</h4>
+<ul>
+<li><strong>Affective (Feelings):</strong> Emotional response to an object. "I love Bournvita because my mother gave it to me as a child."</li>
+<li><strong>Behavioural (Action):</strong> Intention to act. "I will buy Bournvita this weekend." This is the component marketers ultimately want to influence.</li>
+<li><strong>Cognitive (Beliefs):</strong> Knowledge and thoughts. "Bournvita contains DHA which helps brain development."</li>
+</ul>
+
+<h4>Attitude Change Strategies</h4>
+<ul>
+<li><strong>Change Affective Component:</strong> Use emotional appeals. Surf Excel's "Daag Acche Hain" changed negative feelings about stains to positive feelings about learning.</li>
+<li><strong>Change Behavioural Component:</strong> Offer trials and incentives. Amazon India's easy return policy changes purchase behaviour, which in turn changes attitude.</li>
+<li><strong>Change Cognitive Component:</strong> Provide new information. Horlicks campaigns showing bone density tests changed beliefs about health drinks.</li>
+<li><strong>Cognitive Dissonance (Festinger):</strong> Post-purchase tension when a consumer doubts their choice. Marketers reduce this through warranty cards, follow-up emails, and satisfaction guarantees.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 4 Summary</h4><ul>
+<li>Attitude = Affective + Behavioural + Cognitive (ABC) learned predisposition</li>
+<li>Patanjali case shows how all three components can be shifted simultaneously</li>
+<li>Change strategies target one component at a time: emotion, action, or information</li>
+<li>Cognitive dissonance creates post-purchase doubt; marketers must reassure buyers</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Culture and Subculture</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Culture is the set of basic values, perceptions, wants, and behaviours learned by a member of society from family and other institutions. It is the broadest and most pervasive influence on consumer behaviour. Subcultures are groups within a culture that share distinct values and traditions based on common experiences.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>McDonald's India:</strong> McDonald's had to completely adapt its menu to Indian culture. No beef or pork -- replaced with McAloo Tikki, McVeggie, and Maharaja Mac (chicken). The company created separate vegetarian and non-vegetarian kitchen sections. During Navratri, outlets in North India offer special vrat (fasting) menus. This cultural sensitivity helped McDonald's build a Rs 4,000 crore business in India.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Culture vs subculture questions are very common. For 5 marks: Define culture and list its 4 characteristics (learned, shared, dynamic, adaptive). For 10 marks: Explain Hofstede's cultural dimensions with Indian examples, or discuss how subcultures affect buying behaviour in India.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Culture = "LSDA"</strong> -- <strong>L</strong>earned, <strong>S</strong>hared, <strong>D</strong>ynamic, <strong>A</strong>daptive. Think: "Culture is Like a Slowly Developing Adventure."</p></div>
+
+<h4>Characteristics of Culture</h4>
+<ul>
+<li><strong>Learned:</strong> Not innate; acquired through socialization. Indian children learn to eat with hands, respect elders, and celebrate Diwali.</li>
+<li><strong>Shared:</strong> Common to a group. The concept of "jugaad" (innovative problem-solving) is shared across Indian culture.</li>
+<li><strong>Dynamic:</strong> Changes over time. Indian attitudes toward women working and online dating have shifted dramatically.</li>
+<li><strong>Adaptive:</strong> Evolves with environment. Indian consumers adapted to UPI payments and digital shopping during COVID-19.</li>
+</ul>
+
+<h4>Indian Subcultures and Marketing</h4>
+<ul>
+<li><strong>Religious Subcultures:</strong> Halal certification for Muslims; vegetarian product lines for Jain/Hindu communities; Haldiram's separate veg kitchen sections.</li>
+<li><strong>Regional Subcultures:</strong> Different tastes across states -- Masala dosa in South, Chole bhature in North. ITC's Bingo chips offers region-specific flavours.</li>
+<li><strong>Age Subcultures:</strong> Gen Z drives digital shopping and fast fashion (Myntra, Ajio); Baby Boomers prefer traditional brands (Surf Excel, Colgate).</li>
+<li><strong>Social Class:</strong> Upper class buys premium (Fabindia, Forest Essentials); middle class values value-for-money (Big Bazaar, Jio).</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 5 Summary</h4><ul>
+<li>Culture is the broadest influence on consumer behaviour; it is learned, shared, dynamic, and adaptive</li>
+<li>McDonald's India exemplifies successful cultural adaptation (no beef, McAloo Tikki)</li>
+<li>Indian subcultures: religious (Hindu/Muslim/Jain), regional (North/South/East/West), age (Gen Z/Boomers)</li>
+<li>Marketers must localize products, messages, and distribution to match subcultural values</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: Reference Groups and Social Influence</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>A reference group is any person or group that serves as a point of comparison or reference for an individual in forming values, attitudes, or behaviour. Reference groups influence consumers through informational, utilitarian, and value-expressive processes.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Virat Kohli and Puma:</strong> Virat Kohli serves as an aspirational reference group for millions of young Indians. When he endorses Puma, consumers perceive the brand as fashionable, athletic, and aspirational. Puma India's revenue tripled after signing Kohli. His Instagram posts wearing Puma create informational influence and value-expressive influence.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>For 5 marks: Define reference groups and list 3 types. For 10 marks: Explain the 3 influence processes (informational, utilitarian, value-expressive) with Indian examples. Word-of-mouth and opinion leaders are common sub-questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Reference Groups = "IAM"</strong> -- <strong>I</strong>nformational (learn from), <strong>A</strong>ction (normative/utilitarian pressure), <strong>M</strong>otivation (value-expressive/aspirational). Think: "I AM influenced by my group."</p></div>
+
+<h4>Types of Reference Groups</h4>
+<ul>
+<li><strong>Membership Groups:</strong> Groups to which the person actually belongs -- family, friends, colleagues, neighbourhood.</li>
+<li><strong>Aspirational Groups:</strong> Groups a person wishes to join -- Bollywood celebrities, sports stars, Instagram influencers. Youth buy OnePlus to feel connected to tech-savvy communities.</li>
+<li><strong>Dissociative Groups:</strong> Groups whose values a person rejects -- "I would never buy that cheap brand." Some consumers avoid Patanjali due to political associations.</li>
+</ul>
+
+<h4>Opinion Leaders and Word-of-Mouth</h4>
+<ul>
+<li><strong>Opinion Leaders:</strong> Individuals who influence others' attitudes or behaviour due to expertise, credibility, or social status. Tech reviewers like Technical Guruji (23M+ subscribers) shape smartphone purchases.</li>
+<li><strong>Word-of-Mouth (WOM):</strong> The most trusted form of communication. 92% of Indian consumers trust recommendations from friends/family over advertising.</li>
+<li><strong>Electronic WOM:</strong> Social media amplifies WOM. One viral tweet about a bad Zomato delivery can influence thousands.</li>
+<li><strong>Two-Step Flow:</strong> Information flows from media to opinion leaders, then to the masses. This explains why influencer marketing is a Rs 2,000 crore industry in India.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 6 Summary</h4><ul>
+<li>Reference groups: membership (belong), aspirational (wish), dissociative (reject)</li>
+<li>Three influence processes: informational, utilitarian (normative), value-expressive</li>
+<li>Opinion leaders and WOM are the most powerful influence mechanisms</li>
+<li>Indian influencer marketing is growing rapidly; brands must leverage credible voices</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Family Decision Making and Roles</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Family is the most important consumer buying organization in society. Family decision making involves understanding how different family members play different roles (initiator, influencer, decider, buyer, user) in purchase decisions. The family life cycle (FLC) stage significantly affects what, how much, and why people buy.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Maruti Suzuki Swift:</strong> When an Indian family decides to buy a car like the Maruti Swift, multiple roles emerge. The teenager is the initiator ("Papa, we need a new car"). The wife influences colour and safety features. The husband is the decider and buyer. The whole family are users. Maruti's advertisements show entire families, targeting the collective decision-making process unique to Indian households.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Family decision making is a frequent 10-mark question. Structure: (1) Define FLC, (2) Explain 5 stages of FLC, (3) Describe family roles in purchase, (4) Discuss joint vs autonomous decisions, (5) Give Indian example. For 5 marks: List the 5 buying roles within a family.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Family Roles = "IIBUD"</strong> -- <strong>I</strong>nitiator, <strong>I</strong>nfluencer, <strong>B</strong>uyer, <strong>U</strong>ser, <strong>D</strong>ecider. Think: "I I Bought, Used, Decided."</p></div>
+
+<h4>Family Life Cycle (FLC)</h4>
+<ol>
+<li><strong>Bachelor Stage:</strong> Young singles, high discretionary spending. Buy gadgets, fashion, dining out -- Zomato, Myntra, Netflix.</li>
+<li><strong>Newly Married (No Children):</strong> Dual income, highest savings rate. Buy furniture, home appliances -- IKEA, Urban Ladder.</li>
+<li><strong>Full Nest I (Young Children):</strong> Budget-conscious, child-focused. Buy baby products, education -- Pampers, Byju's, Horlicks.</li>
+<li><strong>Full Nest II (Older Children):</strong> Peak earning, larger purchases. Buy cars, homes, insurance -- LIC, HDFC, Maruti.</li>
+<li><strong>Empty Nest / Solitary Survivor:</strong> Retired, health-focused. Buy healthcare, travel, spiritual products -- Apollo Hospitals, IRCTC, Patanjali.</li>
+</ol>
+
+<h4>Family Decision Types</h4>
+<ul>
+<li><strong>Autonomous (Husband-Dominant):</strong> Financial investments, insurance, automobiles traditionally husband-driven in India.</li>
+<li><strong>Autonomous (Wife-Dominant):</strong> Kitchen appliances, children's education, grocery brands are often wife-driven.</li>
+<li><strong>Joint Decisions:</strong> Major purchases like house, car, vacation. In Indian families, even extended family (parents, in-laws) may influence.</li>
+<li><strong>Syncratic:</strong> Husband and wife equally involved. Growing trend in urban India with dual-income households.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 7 Summary</h4><ul>
+<li>Family is the primary consumption unit; 5 buying roles (Initiator, Influencer, Decider, Buyer, User)</li>
+<li>Family Life Cycle: Bachelor, Newly Married, Full Nest I and II, Empty Nest</li>
+<li>Decision types: husband-dominant, wife-dominant, joint (syncratic), autonomous</li>
+<li>Indian families are increasingly joint-decision oriented; marketers must target multiple family members</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Consumer Decision Process</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>The consumer decision process (CDP) is a five-stage model that consumers go through before, during, and after a purchase: Problem Recognition, Information Search, Evaluation of Alternatives, Purchase Decision, and Post-Purchase Behaviour. Not all purchases go through all stages -- habitual buying skips most stages while complex decisions involve all five.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Buying an iPhone in India:</strong> (1) Problem Recognition: Old phone slows down. (2) Information Search: YouTube reviews by Geekyranjit, friends' recommendations, Apple Store visit. (3) Evaluation: Compare iPhone 15 vs Samsung S24 vs OnePlus 12 on camera, ecosystem, price. (4) Purchase: Buy from Flipkart during sale or Apple BKC store. (5) Post-Purchase: Share unboxing on Instagram, but feel dissonance about high price. Apple reduces this through ecosystem lock-in (AirPods, Apple Watch, iCloud).</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>The 5-stage CDP model is the most important model in the entire syllabus. For 10 marks: Explain each stage with Indian examples. For 5 marks: Draw and label the 5-stage flow diagram. Mention extended vs limited vs habitual problem solving.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CDP = "PIPE-P"</strong> -- <strong>P</strong>roblem Recognition, <strong>I</strong>nformation Search, <strong>P</strong>urchase Evaluation, <strong>E</strong>xecution (Purchase), <strong>P</strong>ost-Purchase. Think: "PIPE the product to the customer."</p></div>
+
+<h4>The 5 Stages</h4>
+<ol>
+<li><strong>Problem Recognition:</strong> The gap between actual state and desired state. Triggered by internal stimuli (hunger) or external stimuli (seeing an ad). Amul ads showing happy families trigger desire for dairy products.</li>
+<li><strong>Information Search:</strong> Internal search (memory, past experience) and external search (friends, internet, salespeople). Before buying a TV, Indian consumers check YouTube, ask relatives, and visit Croma/Reliance Digital.</li>
+<li><strong>Evaluation of Alternatives:</strong> Consumers use evaluative criteria (price, quality, brand, features). They form an "evoked set" of acceptable brands. A consumer buying a washing machine may consider IFB, LG, Samsung, and Bosch.</li>
+<li><strong>Purchase Decision:</strong> Choosing brand, store, timing, and payment method. Indian consumers increasingly use EMI options (Bajaj Finserv), cashback offers, and festival season sales.</li>
+<li><strong>Post-Purchase Behaviour:</strong> Satisfaction leads to loyalty and positive WOM. Dissatisfaction leads to complaints, returns, and negative reviews. Amazon's easy return policy is designed to reduce post-purchase risk.</li>
+</ol>
+
+<div class="summary-box"><h4>Unit 8 Summary</h4><ul>
+<li>5 stages: Problem Recognition, Information Search, Evaluation, Purchase, Post-Purchase</li>
+<li>Not all purchases involve all stages -- habitual buying skips evaluation; complex buying uses all</li>
+<li>Indian consumers are increasingly digital in their search and evaluation behaviour</li>
+<li>Post-purchase satisfaction is critical for retention; dissonance must be managed proactively</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Post-Purchase Behaviour and Satisfaction</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Post-purchase behaviour encompasses everything a consumer does after buying a product: using it, evaluating satisfaction, experiencing cognitive dissonance, and deciding whether to repurchase, complain, or switch brands. Managing post-purchase experience is as important as making the sale itself.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Tanishq (Tata):</strong> After a customer buys jewellery, Tanishq sends personalised thank-you messages, invites to exclusive events, and offers free cleaning services. This post-purchase engagement creates delight and drives repeat purchases. Tanishq's customer retention rate is over 70%, the highest in Indian jewellery retail. Their "exchange any gold" policy reduces post-purchase risk perception.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Cognitive dissonance (Festinger) is a must-know concept. For 5 marks: Define dissonance and list 4 ways to reduce it. For 10 marks: Explain the complete post-purchase process including satisfaction, dissonance, complaint behaviour, and brand loyalty with Indian examples.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Post-Purchase = "SCAL"</strong> -- <strong>S</strong>atisfaction evaluation, <strong>C</strong>ognitive dissonance, <strong>A</strong>ctions (complain/repurchase), <strong>L</strong>oyalty formation. Think: "SCALe your satisfaction."</p></div>
+
+<h4>Cognitive Dissonance (Festinger, 1957)</h4>
+<ul>
+<li><strong>Definition:</strong> Post-purchase psychological tension when a consumer doubts whether they made the right choice.</li>
+<li><strong>High Dissonance:</strong> Occurs when the purchase is expensive, infrequent, and involves choosing between close alternatives (iPhone vs Samsung).</li>
+<li><strong>Reduction Strategies:</strong> Seek positive information about chosen brand, avoid negative information, return the product, or rationalize the decision.</li>
+<li><strong>Marketer's Role:</strong> Provide reassurance through warranty cards, follow-up calls, satisfaction surveys, user manuals, and loyalty rewards.</li>
+</ul>
+
+<h4>Consumer Complaint Behaviour</h4>
+<ul>
+<li><strong>Passive:</strong> Simply stop buying (most common in India -- 96% of unhappy customers don't complain).</li>
+<li><strong>Private Action:</strong> Negative word-of-mouth to friends/family, bad online reviews.</li>
+<li><strong>Public Action:</strong> Complain to company, file consumer court case, post on social media.</li>
+<li><strong>Third-Party Action:</strong> Consumer forums, legal action under Consumer Protection Act 2019.</li>
+</ul>
+
+<h4>Brand Loyalty Pyramid</h4>
+<ol>
+<li><strong>Cognitive Loyalty:</strong> "This brand is best based on information" (comparison shopping).</li>
+<li><strong>Affective Loyalty:</strong> "I like this brand" (emotional attachment after positive experiences).</li>
+<li><strong>Conative Loyalty:</strong> "I intend to keep buying this brand" (behavioural intention).</li>
+<li><strong>Action Loyalty:</strong> "I will overcome obstacles to buy this brand" (habitual, resistant to switching).</li>
+</ol>
+
+<div class="summary-box"><h4>Unit 9 Summary</h4><ul>
+<li>Cognitive dissonance: post-purchase doubt; reduced by warranty, follow-up, positive information</li>
+<li>96% of unhappy Indian consumers don't complain -- they just switch brands silently</li>
+<li>Brand loyalty develops from cognitive to affective to conative to action loyalty</li>
+<li>Post-purchase engagement (Tanishq model) is key to long-term customer retention</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Digital Consumer Behaviour</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Digital consumer behaviour examines how consumers search for, evaluate, purchase, and share products and services online. With 800+ million internet users in India, digital behaviour has become central to marketing strategy. Key concepts include the online consumer journey, webrooming, showrooming, social commerce, and mobile-first behaviour.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Meesho:</strong> Meesho tapped into India's next billion internet users -- Tier 2-3 city consumers who are price-sensitive and socially influenced. Meesho's reseller model lets users share products on WhatsApp, leveraging social commerce. Over 70% of Meesho's users are first-time e-commerce buyers. Their zero-commission model for sellers and vernacular language support made online shopping accessible to non-English-speaking consumers.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Digital CB is a newer topic and increasingly asked. For 5 marks: Define online consumer journey and list 4 stages. For 10 marks: Compare traditional vs digital consumer behaviour with Indian e-commerce examples. Mention showrooming, webrooming, and social commerce.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Digital CB = "ZMOT"</strong> -- Google's Zero Moment of Truth: the online research moment before purchase. Think: <strong>Z</strong>ero <strong>M</strong>oment <strong>O</strong>f <strong>T</strong>ruth = consumers Google before buying.</p></div>
+
+<h4>Key Digital CB Concepts</h4>
+<ul>
+<li><strong>ZMOT (Zero Moment of Truth):</strong> Before visiting a store or website, consumers research online. 56% of Indian shoppers search Google before purchasing. Reviews, YouTube videos, and comparison sites form the ZMOT.</li>
+<li><strong>Showrooming:</strong> Visiting a physical store to examine products, then buying online at lower prices. Common in electronics -- customers visit Croma, then buy on Flipkart.</li>
+<li><strong>Webrooming:</strong> Researching online, then buying in-store. Common in fashion -- customers browse Myntra, then buy at the mall after trying on clothes.</li>
+<li><strong>Social Commerce:</strong> Buying directly through social media platforms. Instagram Shopping, WhatsApp Business, and Meesho's reseller model drive social commerce in India.</li>
+<li><strong>Mobile-First:</strong> 95% of Indian internet users access via mobile. Flipkart, Amazon, and Paytm have mobile-first designs. UPI has made mobile purchasing seamless.</li>
+<li><strong>Online Reviews:</strong> 88% of Indian consumers trust online reviews as much as personal recommendations. One negative review on Amazon can reduce sales by 30%.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 10 Summary</h4><ul>
+<li>800M+ Indian internet users; mobile-first, price-sensitive, socially influenced</li>
+<li>ZMOT: online research before purchase is the new normal; brands must be visible at this stage</li>
+<li>Showrooming vs webrooming: two opposite digital-physical shopping patterns</li>
+<li>Social commerce (Meesho, WhatsApp) is India's fastest-growing e-commerce model</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Consumer Behaviour Models</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Consumer behaviour models are frameworks that explain how and why consumers make purchasing decisions. They range from economic models (rational buyer) to psychological models (Howard-Sheth, Engel-Kollat-Blackwell) and sociological models. These models help marketers predict consumer behaviour and design effective strategies.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>BigBasket:</strong> BigBasket uses the Engel-Kollat-Blackwell (EKB) model in practice. Problem recognition: "No groceries at home." Information search: Browse app categories. Evaluation: Compare brands by price, organic/non-organic, delivery time. Purchase: Add to cart, apply coupon, pay via UPI. Post-purchase: Rate products, reorder from order history. BigBasket's recommendation engine mirrors the EKB model.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Howard-Sheth and EKB models are favourite 10-mark questions. For 5 marks: Draw the Howard-Sheth model diagram and label inputs, outputs, and constructs. For 10 marks: Compare EKB and Howard-Sheth models with examples. Economic and Pavlovian models are common 5-mark questions.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Howard-Sheth = "IPO"</strong> -- <strong>I</strong>nputs (stimuli), <strong>P</strong>rocessing (perceptual + learning constructs), <strong>O</strong>utputs (purchase behaviour). Think: "Consumer models are like IPO -- Input, Process, Output."</p></div>
+
+<h4>Major Consumer Behaviour Models</h4>
+<ul>
+<li><strong>Economic Model (Marshall):</strong> Assumes rational consumers who maximize utility. Limited by income and price. Fails to explain emotional or impulse purchases.</li>
+<li><strong>Pavlovian Model:</strong> Consumer as learner through stimulus-response. Marketing stimuli (ads, packaging) trigger responses (purchase). Useful for FMCG marketing.</li>
+<li><strong>Howard-Sheth Model (1969):</strong> Comprehensive model with 3 inputs (significative, symbolic, social), perceptual and learning constructs, and outputs (attention, brand comprehension, attitude, intention, purchase).</li>
+<li><strong>EKB Model (Engel-Kollat-Blackwell):</strong> 5-stage decision process model with information processing, decision process, and environmental influences. Most widely taught model.</li>
+<li><strong>Nicosia Model:</strong> Focuses on firm-consumer relationship. Four fields: firm's message, search/evaluation, purchase action, feedback.</li>
+<li><strong>Webster-Wind Model:</strong> Organizational buying model for B2B. Emphasizes environmental, organizational, buying centre, and individual factors.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 11 Summary</h4><ul>
+<li>Economic model: rational utility maximization; Pavlovian model: stimulus-response learning</li>
+<li>Howard-Sheth: most comprehensive model with inputs, processing constructs, and outputs</li>
+<li>EKB model: 5-stage decision process most widely used in marketing education</li>
+<li>No single model explains all consumer behaviour; marketers use multiple frameworks</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: Applications of Consumer Behaviour</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Topic Overview</div><p>Consumer behaviour knowledge is applied across marketing strategy: market segmentation, product positioning, new product development, pricing, distribution, and communication. Understanding CB helps marketers segment consumers by psychographics and behaviour, design products that meet real needs, and craft messages that resonate with specific consumer motivations.</p></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Business Example</div><p><strong>Hindustan Unilever (HUL):</strong> HUL applies CB insights across its portfolio. Surf Excel uses behavioural segmentation (targeting mothers who see value in stain removal). Glow and Lovely applied attitude research to position on self-confidence. HUL's Shakti Amma program reaches rural India by understanding that rural consumers trust personal selling over advertising. HUL uses family life cycle data to design product sizes -- Rs 1 shampoo sachets for price-sensitive segments.</p></div>
+
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Exam Tip</div><p>Application questions are often 10-mark case studies. For 5 marks: List 5 applications of CB in marketing. For 10 marks: Take one Indian company and explain how it applies CB insights in segmentation, positioning, and communication. HUL, Amul, or Patanjali are excellent choices.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>Applications = "SPDPC"</strong> -- <strong>S</strong>egmentation, <strong>P</strong>ositioning, <strong>D</strong>istribution, <strong>P</strong>ricing, <strong>C</strong>ommunication. Think: "Smart People Don't Prefer Chaos."</p></div>
+
+<h4>Key Applications</h4>
+<ul>
+<li><strong>Market Segmentation:</strong> CB enables psychographic and behavioural segmentation. Starbucks India segments by lifestyle (urban professionals seeking premium experience) vs price-sensitive chai drinkers.</li>
+<li><strong>Product Positioning:</strong> Position based on consumer perception, not product features. Tata Nano was positioned as "cheapest car" -- consumers perceived it as "cheap" (negative), leading to failure.</li>
+<li><strong>New Product Development:</strong> CB research identifies unmet needs. Himalaya identified demand for herbal/personal care products among health-conscious Indians, creating a Rs 3,000 crore brand.</li>
+<li><strong>Pricing Strategy:</strong> Reference price theory explains why Rs 999 feels cheaper than Rs 1,000. Indian consumers are highly price-sensitive; EMI options and "starting at Rs X/day" messaging work well.</li>
+<li><strong>Advertising and Communication:</strong> CB insights guide message framing, emotional vs rational appeals, and celebrity selection. Thums Up uses action-oriented ads targeting young males' self-concept.</li>
+<li><strong>Distribution:</strong> Understanding shopping behaviour guides channel decisions. Rural Indian consumers prefer local kiranas over supermarkets; HUL's Shakti Amma program addresses this.</li>
+</ul>
+
+<div class="summary-box"><h4>Unit 12 Summary</h4><ul>
+<li>CB insights applied to segmentation, positioning, product development, pricing, distribution, communication</li>
+<li>Tata Nano failure shows importance of understanding consumer perception in positioning</li>
+<li>HUL exemplifies comprehensive CB application across its entire product portfolio</li>
+<li>Indian market requires deep CB understanding due to extreme diversity in culture, income, and digital access</li>
+</ul></div>
+</div></div>
+
+</main>
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.querySelector('.reading-progress').style.width = scrolled + '%';
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.unit').forEach(el => {
+  el.classList.add('animate-on-scroll');
+  observer.observe(el);
+});
+function toggleMobileSidebar() {
+  document.querySelector('.study-sidebar').classList.toggle('open');
+}
+</script>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body>
+</html>

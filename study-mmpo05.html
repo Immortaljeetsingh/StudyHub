@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MMPO-05: Logistics and Supply Chain | StudyHub</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-enhanced.css">
+<link rel="stylesheet" href="study-hub-enhanced.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="revision-mode.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="light-theme.css">
+<link rel="stylesheet" href="components.css">
+<style>
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(214,48,49,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}
+@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}
+.animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity .7s ease-out,transform .7s ease-out}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}.animate-on-scroll:nth-child(2){transition-delay:.1s}.animate-on-scroll:nth-child(3){transition-delay:.2s}.animate-on-scroll:nth-child(4){transition-delay:.3s}
+h3[id^="u"]{position:relative;letter-spacing:-.02em;padding-bottom:.6rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#d63031,#ff6b6b,#e17055,#d63031);background-size:300% 100%;animation:gS 4s ease-in-out infinite;border-radius:2px}@keyframes gS{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+h2[id^="block"]{letter-spacing:-.02em;position:relative;padding-bottom:.5rem}h2[id^="block"]::after{content:'';position:absolute;bottom:0;left:0;width:120px;height:3px;background:linear-gradient(90deg,#d63031,#ff6b6b);border-radius:2px}
+.cc{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease!important}.cc:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(214,48,49,.25),0 0 20px rgba(255,107,107,.1)!important;border-color:rgba(214,48,49,.4)!important}
+.callout{transition:transform .3s ease,box-shadow .3s ease!important}.callout:hover{transform:translateY(-3px)!important;box-shadow:0 6px 25px rgba(200,200,200,.12)!important}
+.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}
+.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}
+.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.sidebar a{display:flex;align-items:center;min-height:44px;padding:.5rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.05);color:#d63031;padding-left:1rem}
+.sidebar a.active{color:#d63031;background:rgba(214,48,49,.1);font-weight:600}
+.study-header{background:linear-gradient(135deg,rgba(214,48,49,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.1);border-radius:16px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.study-header::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(214,48,49,.15),transparent 70%);animation:hG 8s ease-in-out infinite alternate}
+@keyframes hG{0%{transform:translate(0,0) scale(1);opacity:.5}100%{transform:translate(-30px,20px) scale(1.2);opacity:.8}}
+.study-header h1{font-size:2rem;font-weight:800;color:#d63031;letter-spacing:-.03em;position:relative}
+.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem;position:relative}
+.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#d63031,#ff6b6b);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}
+.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}
+.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}
+.callout-definition{background:rgba(214,48,49,.08);border-color:#d63031}
+.callout-example{background:rgba(0,210,255,.08);border-color:#00d2ff}
+.callout-examtip{background:rgba(255,107,107,.08);border-color:#ff6b6b}
+.callout-mnemonic{background:rgba(108,99,255,.08);border-color:#6c63ff}
+.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}
+.callout-definition .callout-label{color:#d63031}
+.callout-example .callout-label{color:#00d2ff}
+.callout-examtip .callout-label{color:#ff6b6b}
+.callout-mnemonic .callout-label{color:#6c63ff}
+.summary-box{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}
+.summary-box:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(255,215,0,.15)}
+.summary-box ul{padding-left:1.5rem;margin:0}
+.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}
+.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}
+.visual-diagram{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;margin:1rem 0;text-align:center}
+.visual-diagram h5{color:#d63031;font-size:1rem;margin-bottom:.75rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th{background:rgba(214,48,49,.15);color:#ff6b6b;padding:.6rem .8rem;text-align:left;font-weight:600;border:1px solid rgba(255,255,255,.08)}
+td{padding:.5rem .8rem;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.75)}
+tr:nth-child(even){background:rgba(255,255,255,.02)}
+.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s ease-out,transform .7s ease-out}
+.video-section{margin:2rem 0}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}.video-card{background:rgba(200,200,200,.05);border:1px solid rgba(200,200,200,.12);border-radius:12px;overflow:hidden;transition:transform .3s,box-shadow .3s}.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(200,200,200,.12)}.video-header{padding:.8rem 1rem;display:flex;align-items:center;gap:.5rem;background:rgba(214,48,49,.05)}.video-header h5{margin:0;font-size:.9rem;color:#e0e0ff}.video-icon{color:#FF0000;font-size:1.2rem}.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-toggle{background:linear-gradient(135deg,#d63031,#ff6b6b);color:white;border:none;padding:.6rem 1.2rem;min-height:44px;border-radius:8px;cursor:pointer;font-size:.9rem;margin:1rem 0;transition:opacity .3s}.video-toggle:hover{opacity:.85}.video-section-content{display:none}.video-section-content.active{display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.vd-node{background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4);padding:.6rem;border-radius:8px;font-size:.9rem;text-align:center}
+.db{overflow-x:auto;margin:1rem 0}
+.comparison-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+.subject-badge{display:inline-block;padding:.2rem .6rem;background:linear-gradient(135deg,#d63031,#ff6b6b);color:#fff;border-radius:12px;font-size:.72rem;font-weight:700;margin-top:.4rem}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}
+.back-link:hover{color:#d63031}
+.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}
+.skip-link{position:absolute;top:-40px;left:0;background:#d63031;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#d63031,#ff6b6b);z-index:9999;transition:width .1s;width:0%}
+@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
+</style>
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
+</head>
+<body class="subject-mmpo05">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="reading-progress" id="readingProgress"></div>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-05'));</script>
+<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#x2630;</button>
+<div class="study-layout">
+<aside class="sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPO-05</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 Fundamentals</a>
+<a href="#u1">Unit 1: SCM Introduction</a>
+<a href="#u2">Unit 2: Customer Focus</a>
+<a href="#u3">Unit 3: SCM Models</a>
+<a href="#u4">Unit 4: Strategic SCM</a>
+<a href="#block2">Block-02 Technology</a>
+<a href="#u5">Unit 5: IT in SCM</a>
+<a href="#u6">Unit 6: e-SCM</a>
+<a href="#u7">Unit 7: Cost Analysis</a>
+<a href="#u8">Unit 8: Benchmarking</a>
+<a href="#block3">Block-03 Operations</a>
+<a href="#u9">Unit 9: Performance</a>
+<a href="#u10">Unit 10: Transportation</a>
+<a href="#u11">Unit 11: Location Strategy</a>
+<a href="#u12">Unit 12: SCM in Services</a>
+<a href="#block4">Block-04 Sustainability</a>
+<a href="#u13">Unit 13: Sustainable SC</a>
+<a href="#u14">Unit 14: Future Trends</a>
+<a href="#mnemonics">&#x1F9E0; Master Mnemonics</a>
+<a href="#exam">&#x1F3AF; Exam Focus</a>
+<a href="quiz-mmpo05.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
+<div class="study-header"><span class="subject-tag">MMPO-05</span><h1>Logistics and Supply Chain Management</h1>
+<p>Comprehensive Study Notes &#x2014; 14 Units &#x2022; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: Fundamentals of Logistics &amp; SCM</h2>
+
+<!-- UNIT 1 -->
+<div class="unit" id="u1">
+<h3 id="u1">Unit 1: Logistics and Supply Chain Management &#x2014; An Introduction</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Logistics</strong> = management of flow of goods from origin to consumption. <strong>Supply Chain</strong> = network of organizations involved in producing and delivering products from raw material to end customer. <strong>SCM</strong> = coordination of supply chain activities to maximize customer value and achieve sustainable competitive advantage. <strong>PDM</strong> = managing movement of finished goods from manufacturer to customer. <strong>Integrated Logistics</strong> = two interrelated efforts &#x2014; logistics operations (physical distribution, materials management, inventory transfer) and logistics coordination (forecasting, order processing, MRP). Evolution: Physical Distribution &#x2192; Logistics Management &#x2192; Supply Chain Management.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; SCM Evolution Timeline</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>1960s: PDM</strong><br><small>Physical Distribution Management</small></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>1980s: Logistics</strong><br><small>Integrated Logistics Management</small></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>2000s: SCM</strong><br><small>Supply Chain Management</small></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>2020s: Digital SC</strong><br><small>AI, IoT, Blockchain-driven</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; SCM Flows</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Product Flow</strong><br><small>Supplier &#x2192; Customer</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Information Flow</strong><br><small>Bidirectional</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Financial Flow</strong><br><small>Customer &#x2192; Supplier</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; PDM Components</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>T</strong>ransportation</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>W</strong>arehousing</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>I</strong>nventory</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>O</strong>rder Processing</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>P</strong>ackaging</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Supply Chain Management Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/x1I1LpxQpZM" title="SCM Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Logistics vs Supply Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/MiIYM5LEbLQ" title="Logistics vs SCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon's supply chain:</strong> Products sourced from suppliers, stored in fulfillment centers, picked/packed on order, shipped via multiple carriers, with real-time tracking at every stage.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Understand the difference between logistics and SCM &#x2014; logistics is a subset of SCM. SCM includes strategic coordination across multiple organizations.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"T-W-I-O-P"</strong> for PDM components: <strong>T</strong>ransportation, <strong>W</strong>arehousing, <strong>I</strong>nventory, <strong>O</strong>rder processing, <strong>P</strong>ackaging</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Logistics = flow of goods; Supply chain = network from raw material to end customer</li>
+<li>SCM evolved from PDM &#x2192; Logistics &#x2192; SCM</li>
+<li>Three flows: Product, Information, Financial</li>
+<li>PDM Components: T-W-I-O-P</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 2 -->
+<div class="unit" id="u2">
+<h3 id="u2">Unit 2: Customer Focus in Supply Chain Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
+<div id="sU2">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Customer Value</strong> = Benefits received minus Costs incurred (including price, time, effort). <strong>Order Qualifiers</strong> = minimum requirements to even be considered by customers. <strong>Order Winners</strong> = features that actually win customer orders over competitors. <strong>Customer Retention</strong> = keeping existing customers &#x2014; 5x cheaper than acquisition. A 5% increase in retention can increase profits by 25-95%.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Customer Value Equation</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Benefits</strong><br><small>Product quality, service, speed, reliability</small></div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,.4)">-</div>
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Costs</strong><br><small>Price, time, effort, risk</small></div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,.4)">=</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Customer Value</strong><br><small>Perceived worth of the offering</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Customer Service Framework</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Pre-transaction</strong><br><small>Policies, Systems</small></div>
+<div style="font-size:1.5rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Transaction</strong><br><small>Availability, Delivery</small></div>
+<div style="font-size:1.5rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Post-transaction</strong><br><small>Warranty, Returns</small></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Customer Value in SCM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3WJ-qCTq7hI" title="Customer Value" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Order Winners vs Qualifiers</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/D6xZbMR_KJo" title="Order Winners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Zara</strong> wins on speed (order winner) while meeting basic quality standards (order qualifiers). Their supply chain delivers new designs to stores in 2-3 weeks vs industry average of 6 months.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Be able to distinguish order qualifiers from order winners with examples. Examiners love this comparison.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-T-P"</strong> for Customer Service: <strong>P</strong>re-transaction, <strong>T</strong>ransaction, <strong>P</strong>ost-transaction</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Customer Value = Benefits &#x2013; Costs</li>
+<li>Order Qualifiers vs Order Winners: minimum vs differentiating</li>
+<li>Three phases: Pre-transaction, Transaction, Post-transaction</li>
+<li>Zara = speed as order winner</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 3 -->
+<div class="unit" id="u3">
+<h3 id="u3">Unit 3: Models of SCM Integration</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
+<div id="sU3">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>SCOR Model</strong> (Supply Chain Operations Reference) = Plan, Source, Make, Deliver, Return. <strong>Push System</strong> = produce based on forecasts; <strong>Pull System</strong> = produce based on actual demand. <strong>Leagile</strong> = combination of lean (upstream) and agile (downstream).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; SCOR Model</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Plan</strong></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Source</strong></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Make</strong></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Deliver</strong></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Return</strong></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Push-Pull Strategy</h5>
+<div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)">Forecast-based (Push)</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Decoupling Point</strong></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)">Demand-based (Pull)</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>SCOR Model Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/u1w0ZMjz5gE" title="SCOR Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Push vs Pull Supply Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6uXNfZ3GHrA" title="Push vs Pull" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Push</th><th>Pull</th><th>Leagile</th></tr></thead>
+<tbody>
+<tr><td><strong>Trigger</strong></td><td>Forecast</td><td>Actual demand</td><td>Both</td></tr>
+<tr><td><strong>Inventory</strong></td><td>High</td><td>Low</td><td>Moderate</td></tr>
+<tr><td><strong>Flexibility</strong></td><td>Low</td><td>High</td><td>High</td></tr>
+<tr><td><strong>Risk</strong></td><td>Overproduction</td><td>Stockouts</td><td>Balanced</td></tr>
+<tr><td><strong>Example</strong></td><td>MRP</td><td>JIT/Kanban</td><td>Dell</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Dell</strong> uses a push-pull strategy &#x2014; components are pushed based on forecasts, but final assembly is pulled by customer orders (decoupling point at assembly).</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know SCOR model thoroughly and be able to compare push/pull/leagile with examples.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-S-M-D-R"</strong> for SCOR: <strong>P</strong>lan, <strong>S</strong>ource, <strong>M</strong>ake, <strong>D</strong>eliver, <strong>R</strong>eturn</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>SCOR = Plan, Source, Make, Deliver, Return</li>
+<li>Push = forecast-based; Pull = demand-based; Leagile = both combined</li>
+<li>Decoupling point separates push and pull zones</li>
+<li>Dell = classic push-pull example</li>
+</ul></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; SCOR Model &#x2014; Detailed Breakdown</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Process</th><th>Activities</th><th>Key Metrics</th></tr></thead>
+<tbody>
+<tr><td><strong>Plan</strong></td><td>Demand/supply planning, resource allocation, inventory strategy, capacity planning</td><td>Forecast accuracy, plan compliance</td></tr>
+<tr><td><strong>Source</strong></td><td>Supplier selection, procurement, receiving, supplier performance evaluation</td><td>Supplier lead time, purchase order cycle</td></tr>
+<tr><td><strong>Make</strong></td><td>Production scheduling, manufacturing, testing, packaging, quality control</td><td>Manufacturing cycle time, yield rate</td></tr>
+<tr><td><strong>Deliver</strong></td><td>Order management, warehousing, transportation, installation, invoicing</td><td>Order fill rate, on-time delivery</td></tr>
+<tr><td><strong>Return</strong></td><td>Returns processing, repairs, recycling, disposal, warranty claims</td><td>Return rate, return cycle time</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Lean SC vs Agile SC vs Leagile</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Lean SC</th><th>Agile SC</th><th>Leagile</th></tr></thead>
+<tbody>
+<tr><td><strong>Focus</strong></td><td>Eliminate waste</td><td>Respond fast</td><td>Both combined</td></tr>
+<tr><td><strong>Demand</strong></td><td>Stable, predictable</td><td>Volatile, unpredictable</td><td>Variable demand</td></tr>
+<tr><td><strong>Variety</strong></td><td>Low variety, high volume</td><td>High variety, low volume</td><td>Mixed</td></tr>
+<tr><td><strong>Strategy</strong></td><td>Efficiency focus</td><td>Flexibility focus</td><td>Balanced</td></tr>
+<tr><td><strong>Lead Time</strong></td><td>Long, stable</td><td>Short, responsive</td><td>Variable</td></tr>
+<tr><td><strong>Example</strong></td><td>Toyota Production System</td><td>Zara fast fashion</td><td>Dell configure-to-order</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Flipkart</strong> uses a hybrid push-pull model &#x2014; fast-moving items are pushed to regional warehouses based on forecasts, while slow-moving or high-value items are pulled from central fulfillment centers when orders arrive. During Big Billion Days, Flipkart pre-positions inventory at 1,400+ fulfillment hubs across India.</p></div>
+</div></div>
+
+<!-- UNIT 4 -->
+<div class="unit" id="u4">
+<h3 id="u4">Unit 4: Strategic Supply Chain Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
+<div id="sU4">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Outsourcing</strong> = buying from external suppliers to focus on core competencies. <strong>Offshoring</strong> = moving operations to another country for cost advantages. <strong>Nearshoring</strong> = moving operations closer to home. <strong>Bullwhip Effect</strong> = demand variability amplifies as it moves upstream.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Bullwhip Effect</h5>
+<div style="display:flex;flex-direction:column;gap:0.5rem;align-items:center;padding:1rem">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4);width:90%;text-align:center">&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2; Customer: Stable demand</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4);width:75%;text-align:center">&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2; Retailer: Slight variation</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4);width:60%;text-align:center">&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2; Distributor: More variation</div>
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4);width:45%;text-align:center">&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2;&#x25B2; Manufacturer: Massive variation</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Outsourcing Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/fKo0H4LHo5I" title="Outsourcing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Bullwhip Effect Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SC_iM1X1bVw" title="Bullwhip Effect" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Outsourcing vs Offshoring vs Nearshoring</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Outsourcing</th><th>Offshoring</th><th>Nearshoring</th></tr></thead>
+<tbody>
+<tr><td><strong>Definition</strong></td><td>Buy from external suppliers</td><td>Move ops to another country</td><td>Move ops closer to home</td></tr>
+<tr><td><strong>Primary Driver</strong></td><td>Core competency focus</td><td>Cost advantage</td><td>Speed and flexibility</td></tr>
+<tr><td><strong>Risk Level</strong></td><td>Moderate</td><td>High (distance, politics)</td><td>Lower than offshoring</td></tr>
+<tr><td><strong>Control</strong></td><td>Less over quality</td><td>Less over operations</td><td>Moderate control</td></tr>
+<tr><td><strong>Example</strong></td><td>Apple &#x2192; Foxconn</td><td>US firms &#x2192; India/China</td><td>US firms &#x2192; Mexico</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Supply Chain Risk Categories</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Supply Risks</strong><br><small>Supplier failure, quality issues</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Demand Risks</strong><br><small>Volatility, forecast errors</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Operational Risks</strong><br><small>Disruptions, breakdowns</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Environmental Risks</strong><br><small>Natural disasters, politics</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Apple</strong> outsources manufacturing to Foxconn (focuses on design/core competency) but faces supply chain risks from concentration in China.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Tata Motors</strong> outsources component manufacturing to over 1,200 suppliers across India while retaining design and assembly in-house. Their Nano project demonstrated supply chain risk when the Singur plant faced political opposition, forcing relocation to Gujarat &#x2014; a classic environmental/political risk case.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Compare outsourcing, offshoring, and nearshoring with advantages/disadvantages of each. Always give Indian examples alongside global ones.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-Q-C-T-R"</strong> for outsourcing factors: <strong>C</strong>ost, <strong>Q</strong>uality, <strong>C</strong>apacity, <strong>T</strong>echnology, <strong>R</strong>isk</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Outsourcing = focus on core competencies; Offshoring = cost advantages abroad</li>
+<li>Four risk categories: Supply, Demand, Operational, Environmental</li>
+<li>Bullwhip effect amplifies demand variability upstream</li>
+<li>Apple-Foxconn example shows benefits and concentration risks</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Technology &amp; Cost Analysis</h2>
+
+<!-- UNIT 5 -->
+<div class="unit" id="u5">
+<h3 id="u5">Unit 5: Information Technology in SCM</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
+<div id="sU5">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>ERP</strong> = integrated system connecting all business functions. <strong>EDI</strong> = Electronic Data Interchange for standardized document exchange. <strong>RFID</strong> = Radio Frequency Identification for automatic tracking. <strong>GPS</strong> = Global Positioning System for real-time tracking. <strong>Blockchain</strong> = distributed ledger for transparency and traceability.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; IT Enablers for SCM</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>ERP</strong><br><small>Integration</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>EDI</strong><br><small>Communication</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>RFID</strong><br><small>Tracking</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>GPS</strong><br><small>Location</small></div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Blockchain</strong><br><small>Trust</small></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ERP in Supply Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6sMo0VJ7Dmo" title="ERP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Blockchain in Supply Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2u9Fj1bYFO0" title="Blockchain SCM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; IT Enablers &#x2014; Detailed Functions</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Technology</th><th>Function</th><th>Benefit</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>ERP</strong></td><td>Integration of all business functions</td><td>Real-time data across departments</td><td>Reliance Industries uses SAP ERP</td></tr>
+<tr><td><strong>EDI</strong></td><td>Standardized document exchange</td><td>Faster, error-free communication</td><td>Flipkart supplier integration portal</td></tr>
+<tr><td><strong>RFID</strong></td><td>Automatic identification and tracking</td><td>No line-of-sight needed, bulk scanning</td><td>Indian Railways wagon tracking</td></tr>
+<tr><td><strong>GPS</strong></td><td>Real-time vehicle/shipment tracking</td><td>Route optimization, ETA accuracy</td><td>Delhivery fleet management</td></tr>
+<tr><td><strong>Blockchain</strong></td><td>Distributed ledger for transparency</td><td>Immutable records, traceability</td><td>NITI Aayog drug supply chain pilot</td></tr>
+<tr><td><strong>Big Data</strong></td><td>Analytics and pattern recognition</td><td>Demand forecasting, route optimization</td><td>Ola/Uber surge pricing algorithms</td></tr>
+<tr><td><strong>IoT</strong></td><td>Sensor-based monitoring</td><td>Temperature, humidity, location tracking</td><td>Cold chain monitoring for vaccines</td></tr>
+<tr><td><strong>WMS</strong></td><td>Warehouse Management System</td><td>Pick/pack optimization, inventory accuracy</td><td>Amazon India fulfillment centers</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Walmart</strong> uses RFID for inventory tracking, EDI for supplier communication, and advanced analytics for demand forecasting.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Amazon India</strong> uses a combination of AI-powered demand forecasting, RFID scanning at 60+ fulfillment centers, GPS-tracked delivery fleet, and machine learning for dynamic route optimization. Their &#x2018;I Have Space&#x2019; program uses local kirana stores as micro-fulfillment points, integrating them into the digital supply chain.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know how each technology enables specific SCM functions. Be ready to discuss blockchain's role in food/pharma supply chains. Indian examples earn bonus marks.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"E-E-R-G-B"</strong> for IT enablers: <strong>E</strong>RP, <strong>E</strong>DI, <strong>R</strong>FID, <strong>G</strong>PS, <strong>B</strong>lockchain</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>ERP, EDI, RFID, GPS, Blockchain are key IT enablers</li>
+<li>Each technology enables specific SCM functions</li>
+<li>Walmart uses RFID + EDI + analytics for supply chain efficiency</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 6 -->
+<div class="unit" id="u6">
+<h3 id="u6">Unit 6: e-Supply Chain Management</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
+<div id="sU6">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>e-SCM</strong> = using internet and digital platforms for supply chain activities. <strong>e-Procurement</strong> = online purchasing systems reducing paperwork and cycle time. <strong>e-Marketplaces</strong> = online platforms connecting multiple buyers and sellers. <strong>B2B</strong> = business-to-business transactions (IndiaMART, Alibaba). <strong>B2C</strong> = business-to-consumer transactions (Amazon, Flipkart).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; e-Procurement Types</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Reverse Auction</strong></td><td>Suppliers bid lowest price; buyer selects</td><td>Government tenders on GeM</td></tr>
+<tr><td><strong>Forward Auction</strong></td><td>Buyers bid highest price; seller selects</td><td>Surplus asset sale platforms</td></tr>
+<tr><td><strong>Catalog-based</strong></td><td>Pre-negotiated prices in digital catalogs</td><td>Amazon Business procurement</td></tr>
+<tr><td><strong>Exchange</strong></td><td>Multiple buyers and sellers trade on platform</td><td>IndiaMART, TradeIndia</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>e-Procurement Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5J9d8h1GjLQ" title="e-Procurement" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; e-SCM Benefits Breakdown</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Benefit</th><th>Traditional SCM</th><th>e-SCM</th><th>Improvement</th></tr></thead>
+<tbody>
+<tr><td><strong>Transaction Cost</strong></td><td>High (paper-based)</td><td>Low (electronic)</td><td>60-80% reduction</td></tr>
+<tr><td><strong>Order Processing</strong></td><td>3-5 days</td><td>Real-time</td><td>Near-instant</td></tr>
+<tr><td><strong>Supplier Reach</strong></td><td>Local/regional</td><td>Global</td><td>Unlimited geography</td></tr>
+<tr><td><strong>Price Transparency</strong></td><td>Low (negotiations)</td><td>High (comparison)</td><td>Better decisions</td></tr>
+<tr><td><strong>Tracking</strong></td><td>Manual updates</td><td>Real-time GPS/RFID</td><td>Full visibility</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon Business</strong> provides an e-marketplace for B2B procurement, offering bulk pricing, business analytics, and streamlined purchasing.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>IndiaMART</strong> is India's largest B2B e-marketplace connecting 150+ million buyers with 7+ million suppliers across 97,000+ product categories. <strong>Flipkart Wholesale</strong> digitizes kirana store procurement, offering credit facilities and next-day delivery. <strong>GeM (Government e-Marketplace)</strong> has processed over Rs 4 lakh crore in government procurement, eliminating middlemen and increasing transparency for MSMEs.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Compare traditional vs e-SCM procurement processes and their cost/time implications. Cite GeM as an Indian government e-marketplace success story.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-F-W-P-T"</strong> for e-SCM benefits: <strong>C</strong>ost reduction, <strong>F</strong>aster transactions, <strong>W</strong>ider reach, <strong>P</strong>rice transparency, <strong>T</strong>racking</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>e-SCM uses internet for supply chain activities</li>
+<li>e-Procurement and e-Marketplaces reduce costs and increase speed</li>
+<li>Amazon Business is a leading B2B e-marketplace</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 7 -->
+<div class="unit" id="u7">
+<h3 id="u7">Unit 7: Cost Analysis and Measurement</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
+<div id="sU7">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Total Cost of Ownership (TCO)</strong> = purchase price + all operating costs over lifecycle. <strong>Activity-Based Costing (ABC)</strong> = assigns costs to activities based on resource consumption. <strong>Cost Trade-offs</strong> = saving in one area may increase costs in another. <strong>Logistics Cost Components</strong> = transportation (35-50%), warehousing (20-25%), inventory carrying (15-25% of inventory value), administration (5-10%).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; ABC Costing Process</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Step 1</strong><br><small>Identify activities</small></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Step 2</strong><br><small>Assign costs to activities</small></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Step 3</strong><br><small>Identify cost drivers</small></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Step 4</strong><br><small>Calculate activity rate</small></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Step 5</strong><br><small>Assign to products</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; TCO Formula</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>P</strong>urchase</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,.4)">+</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>O</strong>perating</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,.4)">+</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>M</strong>aintenance</div>
+<div style="font-size:1.5rem;color:rgba(255,255,255,.4)">+</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>D</strong>isposal</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Total Cost of Ownership</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/l5rV8V4b2mE" title="TCO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Cost Trade-offs in Logistics</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Trade-off</th><th>Option A</th><th>Option B</th><th>Decision Factor</th></tr></thead>
+<tbody>
+<tr><td><strong>Transport vs Inventory</strong></td><td>Faster shipping (high transport, low inventory)</td><td>Slower shipping (low transport, high inventory)</td><td>Product value, demand variability</td></tr>
+<tr><td><strong>Warehouse vs Transport</strong></td><td>More warehouses (high storage, low transport)</td><td>Fewer warehouses (low storage, high transport)</td><td>Customer density, service level</td></tr>
+<tr><td><strong>Order Processing vs Inventory</strong></td><td>Better forecasting (high planning, low inventory)</td><td>Simple ordering (low planning, high inventory)</td><td>Demand predictability</td></tr>
+<tr><td><strong>Packaging vs Damage</strong></td><td>Premium packaging (high cost, low damage)</td><td>Basic packaging (low cost, high damage)</td><td>Product fragility, return cost</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Logistics Cost Components</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Transportation</strong><br><small>35-50% of logistics cost</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Warehousing</strong><br><small>20-25% of logistics cost</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Inventory Carrying</strong><br><small>15-25% of inventory value</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Administration</strong><br><small>5-10% of logistics cost</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Choosing between air freight (expensive, fast, low inventory) vs sea freight (cheap, slow, high inventory) &#x2014; TCO analysis determines the better option.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Flipkart</strong> optimizes logistics costs by operating 1,400+ fulfillment centers across India. They use a hub-and-spoke model: goods arrive at mega-warehouses (Bhiwandi, Bengaluru) and are distributed to 10,000+ delivery hubs. Their cost trade-off: more micro-warehouses increase storage costs but reduce last-mile delivery costs by 40% in Tier-2/3 cities.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Be able to calculate TCO and explain cost trade-offs with examples. Examiners frequently ask about trade-off decisions. Always cite Indian logistics cost as % of GDP (14% vs 8% in developed countries).</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-O-M-D"</strong> for TCO: <strong>P</strong>urchase, <strong>O</strong>perating, <strong>M</strong>aintenance, <strong>D</strong>isposal</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>TCO = Purchase + Operating + Maintenance + Disposal</li>
+<li>Cost trade-offs are central to logistics decisions</li>
+<li>ABC costing assigns costs based on activity consumption</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 8 -->
+<div class="unit" id="u8">
+<h3 id="u8">Unit 8: Best Practices and Benchmarking in SCM</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
+<div id="sU8">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Benchmarking</strong> = comparing performance against best-in-class organizations. Types: Internal, Competitive, Functional, Generic. <strong>VMI</strong> = Vendor Managed Inventory &#x2014; supplier takes responsibility for managing buyer's inventory levels. <strong>CPFR</strong> = Collaborative Planning, Forecasting, and Replenishment.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Benchmarking Process</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Plan</strong></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Analyze</strong></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Integrate</strong></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Act</strong></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Maturity</strong></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Benchmarking in Operations</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4Y5P7sILZIw" title="Benchmarking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Vendor Managed Inventory</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/eJr7Rn6gKHk" title="VMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Benchmarking Types</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Internal</strong></td><td>Compare between own departments/plants</td><td>Comparing warehouse performance in Mumbai vs Delhi</td></tr>
+<tr><td><strong>Competitive</strong></td><td>Compare with direct competitors</td><td>Flipkart vs Amazon delivery speed</td></tr>
+<tr><td><strong>Functional</strong></td><td>Compare same function across industries</td><td>Order processing in retail vs pharma</td></tr>
+<tr><td><strong>Generic</strong></td><td>Compare best practices across any industry</td><td>Toyota lean principles applied to healthcare</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Balanced Scorecard for SCM</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Financial</strong><br><small>Cost per unit, logistics cost %</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Customer</strong><br><small>Fill rate, on-time delivery</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Internal Process</strong><br><small>Cycle time, order accuracy</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Learning &amp; Growth</strong><br><small>Employee training, innovation</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Cross-Docking vs Traditional Warehousing</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Cross-Docking</th><th>Traditional Warehousing</th></tr></thead>
+<tbody>
+<tr><td><strong>Storage Time</strong></td><td>Minimal (under 24 hours)</td><td>Days to months</td></tr>
+<tr><td><strong>Handling</strong></td><td>Direct inbound &#x2192; outbound</td><td>Receive, store, pick, ship</td></tr>
+<tr><td><strong>Inventory Cost</strong></td><td>Very low</td><td>High</td></tr>
+<tr><td><strong>Speed</strong></td><td>Very fast</td><td>Slower</td></tr>
+<tr><td><strong>Best For</strong></td><td>Perishables, fast-moving goods</td><td>Seasonal, variable demand</td></tr>
+<tr><td><strong>Example</strong></td><td>Walmart distribution centers</td><td>Traditional retail warehouses</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Procter &amp; Gamble and Walmart</strong> pioneered VMI &#x2014; P&amp;G manages its products' inventory in Walmart stores, reducing stockouts by 30%.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Hindustan Unilever (HUL)</strong> implemented CPFR with major Indian retailers, reducing stockouts from 8% to 2%. Their distribution network covers 7.4 million retail outlets across India using 2,000+ distributors. <strong>Reliance Retail</strong> uses cross-docking at its 40+ distribution centers to supply 18,000+ stores with minimal inventory holding.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know the benchmarking process and explain cross-docking vs traditional warehousing. Compare all four benchmarking types with examples.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-A-I-A-M"</strong> for benchmarking: <strong>P</strong>lan, <strong>A</strong>nalyze, <strong>I</strong>ntegrate, <strong>A</strong>ct, <strong>M</strong>aturity</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Benchmarking compares against best-in-class organizations</li>
+<li>Cross-docking, VMI, CPFR are key best practices</li>
+<li>P&amp;G-Walmart VMI reduced stockouts by 30%</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Operations &amp; Distribution</h2>
+
+<!-- UNIT 9 -->
+<div class="unit" id="u9">
+<h3 id="u9">Unit 9: Performance Measurement and Evaluation</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
+<div id="sU9">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Bullwhip Effect</strong> = demand variability amplifies upstream in supply chain. Causes: demand forecasting errors (D), order batching (O), price fluctuations (P), rationing/gaming (R). Mitigation: information sharing (I), VMI (V), EDLP (E).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Key Supply Chain Metrics</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Metric</th><th>Formula</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>On-time Delivery</strong></td><td>On-time orders / Total orders</td><td>Delivery reliability</td></tr>
+<tr><td><strong>Fill Rate</strong></td><td>Orders filled from stock / Total orders</td><td>Availability</td></tr>
+<tr><td><strong>Inventory Turnover</strong></td><td>COGS / Average Inventory</td><td>Efficiency</td></tr>
+<tr><td><strong>Cycle Time</strong></td><td>Time from order to delivery</td><td>Speed</td></tr>
+<tr><td><strong>Cash-to-Cash Cycle</strong></td><td>Inv Days + Rec Days &#x2013; Pay Days</td><td>Cash efficiency</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Bullwhip Effect in Detail</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/SC_iM1X1bVw" title="Bullwhip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Supply Chain KPIs</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3hMNMJ2p48c" title="SC KPIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Bullwhip Effect &#x2014; Causes &amp; Fixes Detail</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Cause (D-O-P-R)</th><th>Description</th><th>Fix (I-V-E)</th></tr></thead>
+<tbody>
+<tr><td><strong>Demand Forecasting Errors</strong></td><td>Each level adds safety margin to forecasts</td><td><strong>Information Sharing</strong> &#x2014; POS data shared upstream</td></tr>
+<tr><td><strong>Order Batching</strong></td><td>Placing large orders infrequently</td><td><strong>Smaller Batch Sizes</strong> &#x2014; more frequent orders</td></tr>
+<tr><td><strong>Price Fluctuations</strong></td><td>Promotional pricing causes forward buying</td><td><strong>EDLP</strong> &#x2014; Every Day Low Pricing</td></tr>
+<tr><td><strong>Rationing &amp; Gaming</strong></td><td>Over-ordering during shortages</td><td><strong>VMI</strong> &#x2014; Vendor Managed Inventory</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Extended Supply Chain KPIs</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>KPI Category</th><th>Metric</th><th>Formula / Description</th><th>Target Benchmark</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><strong>Delivery</strong></td><td>On-time Delivery Rate</td><td>On-time orders / Total orders</td><td>>95%</td></tr>
+<tr><td>Perfect Order Rate</td><td>Orders with no errors / Total orders</td><td>>90%</td></tr>
+<tr><td rowspan="2"><strong>Inventory</strong></td><td>Inventory Turnover</td><td>COGS / Average Inventory</td><td>>8x per year</td></tr>
+<tr><td>Days of Supply</td><td>Average Inventory / Daily COGS</td><td>&lt;30 days</td></tr>
+<tr><td rowspan="2"><strong>Cost</strong></td><td>Logistics Cost as % of Revenue</td><td>Total logistics cost / Revenue</td><td>&lt;8%</td></tr>
+<tr><td>Cash-to-Cash Cycle</td><td>Inv Days + Rec Days &#x2013; Pay Days</td><td>&lt;30 days</td></tr>
+<tr><td rowspan="2"><strong>Responsiveness</strong></td><td>Order Cycle Time</td><td>Time from order to delivery</td><td>&lt;48 hours</td></tr>
+<tr><td>Fill Rate</td><td>Orders filled from stock / Total orders</td><td>>98%</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>During <strong>COVID-19</strong>, the bullwhip effect was extreme &#x2014; consumers hoarded toilet paper, retailers ordered 2-5x normal, distributors ordered even more, causing massive upstream demand spikes.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p><strong>Flipkart</strong> achieved 95% on-time delivery during non-sale periods, dropping to 85% during Big Billion Days due to order volume surge. <strong>Delhivery</strong> (India's largest logistics company) processes 2.5 million packages daily with a 99.5% tracking accuracy rate. <strong>Blue Dart</strong> maintains 98% fill rate across 35,000+ pin codes in India.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Bullwhip effect is a favorite exam question. Know causes, effects, and mitigation strategies with examples. Always add Indian KPI benchmarks in answers.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"D-O-P-R"</strong> for bullwhip causes; <strong>"I-V-E"</strong> for fixes</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Bullwhip effect amplifies demand variability upstream</li>
+<li>Causes: D-O-P-R; Fixes: I-V-E</li>
+<li>Key metrics: On-time delivery, Fill rate, Inventory turnover, Cycle time</li>
+<li>COVID-19 demonstrated extreme bullwhip effects</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 10 -->
+<div class="unit" id="u10">
+<h3 id="u10">Unit 10: Transportation Mix</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
+<div id="sU10">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Five transportation modes: Road, Rail, Air, Water, Pipeline. <strong>Intermodal</strong> = combining two or more transportation modes. Mode selection based on: cost, speed, reliability, flexibility, capability.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Transportation Mode Comparison</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mode</th><th>Speed</th><th>Cost</th><th>Capacity</th><th>Flexibility</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Road</strong></td><td>Medium</td><td>Medium</td><td>Low</td><td>High</td><td>Door-to-door</td></tr>
+<tr><td><strong>Rail</strong></td><td>Slow</td><td>Low</td><td>High</td><td>Low</td><td>Bulk, long distance</td></tr>
+<tr><td><strong>Air</strong></td><td>Fast</td><td>High</td><td>Low</td><td>Medium</td><td>High-value, time-sensitive</td></tr>
+<tr><td><strong>Water</strong></td><td>Slow</td><td>Lowest</td><td>Highest</td><td>Lowest</td><td>Bulk, international</td></tr>
+<tr><td><strong>Pipeline</strong></td><td>Continuous</td><td>Low</td><td>Medium</td><td>None</td><td>Oil, gas, chemicals</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Transportation Modes in SCM</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/Q4sH2i4j2jI" title="Transport Modes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Intermodal Transportation</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Factory</strong><br><small>Origin</small></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192; Road</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Port/Rail Hub</strong><br><small>Transfer Point</small></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192; Rail/Ship</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Regional Hub</strong><br><small>Distribution</small></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192; Road</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Customer</strong><br><small>Destination</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon</strong> uses intermodal &#x2014; products shipped by rail/air from warehouses to regional hubs, then by truck for last-mile delivery.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>Indian Railways Dedicated Freight Corridor (DFC):</strong> The 1,504 km Western DFC (Delhi-Mumbai) and 1,875 km Eastern DFC (Delhi-Kolkata) reduce freight transit time from 14 days to 14 hours, cutting logistics costs by 50%. <strong>Container Corporation of India (CONCOR)</strong> operates 84 inland container depots handling 3.5 million TEUs annually. <strong>Delhivery</strong> uses intermodal &#x2014; air for same-day metro delivery, rail for Tier-2 city bulk shipments, and road for last-mile in Tier-3/4 towns.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Compare all 5 modes with a table. Be able to recommend the best mode for given scenarios. Indian logistics infrastructure projects (DFC, Sagarmala) are excellent exam examples.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"R-R-A-W-P"</strong> for modes: <strong>R</strong>oad, <strong>R</strong>ail, <strong>A</strong>ir, <strong>W</strong>ater, <strong>P</strong>ipeline</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Five modes: Road, Rail, Air, Water, Pipeline</li>
+<li>Intermodal combines strengths of multiple modes</li>
+<li>Amazon uses rail/air + truck intermodal strategy</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 11 -->
+<div class="unit" id="u11">
+<h3 id="u11">Unit 11: Location Strategy</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
+<div id="sU11">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Facility location is a long-term strategic decision affecting costs and service levels. <strong>Hub-and-Spoke Model</strong> = central hub with radiating routes to spoke locations. Location techniques: Factor Rating, Center-of-Gravity, Load-Distance.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Location Decision Factors (C-L-I-G-T)</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>C</strong>ustomers</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>L</strong>abor</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>I</strong>nfrastructure</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>G</strong>overnment</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>T</strong>ax</div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Facility Location Strategy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/R5sQ8mYtQ8E" title="Location Strategy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Warehouse Location: Centralized vs Decentralized</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Centralized</th><th>Decentralized</th></tr></thead>
+<tbody>
+<tr><td><strong>Inventory</strong></td><td>Lower total (risk pooling)</td><td>Higher total (duplicated)</td></tr>
+<tr><td><strong>Transport Cost</strong></td><td>Higher (longer distances)</td><td>Lower (shorter distances)</td></tr>
+<tr><td><strong>Service Level</strong></td><td>Slower delivery</td><td>Faster delivery</td></tr>
+<tr><td><strong>Economies of Scale</strong></td><td>High</td><td>Low</td></tr>
+<tr><td><strong>Best For</strong></td><td>Low-value, stable demand</td><td>High-value, time-sensitive</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Location Techniques</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Technique</th><th>Method</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td><strong>Factor Rating</strong></td><td>Score locations on weighted factors (1-10 scale)</td><td>Multiple qualitative factors</td></tr>
+<tr><td><strong>Center-of-Gravity</strong></td><td>Mathematical center of demand/supply points using coordinates</td><td>Minimizing transport distance</td></tr>
+<tr><td><strong>Load-Distance</strong></td><td>Minimize total (Load x Distance) across all points</td><td>Heavy goods, bulk materials</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Amazon</strong> places fulfillment centers near major population clusters (center-of-gravity approach) to enable same-day/next-day delivery.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>Amazon India</strong> has 60+ fulfillment centers located using center-of-gravity analysis &#x2014; major hubs in Mumbai (Bhiwandi), Delhi-NCR (Manesar), Bengaluru (near airport), Hyderabad, and Kolkata. <strong>Flipkart</strong> chose Bengaluru as its national logistics hub due to IT talent availability and airport proximity. <strong>Reliance Jio Mart</strong> leverages Reliance Retail's 18,000+ stores as decentralized fulfillment points, enabling 4-hour delivery in 200+ cities. <strong>Shadowfax</strong> (Indian last-mile logistics) uses factor rating considering delivery density, traffic patterns, and warehouse costs.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Know the three location techniques and be able to apply factor rating to a problem. Explain center-of-gravity with Indian city coordinates for extra marks.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"C-L-I-G-T"</strong> for location factors: <strong>C</strong>ustomers, <strong>L</strong>abor, <strong>I</strong>nfrastructure, <strong>G</strong>overnment, <strong>T</strong>ax</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Location is a long-term strategic decision</li>
+<li>Factors: C-L-I-G-T; Techniques: Factor Rating, Center-of-Gravity, Load-Distance</li>
+<li>Amazon uses center-of-gravity for fulfillment center placement</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 12 -->
+<div class="unit" id="u12">
+<h3 id="u12">Unit 12: SCM in Service Organizations</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p>Service supply chains differ from manufacturing: people, information, and processes. Key service characteristics: intangibility, perishability, heterogeneity. <strong>Reverse logistics</strong> = managing product returns, recycling, and disposal. <strong>Industry Examples:</strong> Healthcare (pharmaceuticals, medical equipment), Hospitality (food, beverages, linens), Retail (fast fashion, seasonal inventory), IT services (cloud, SaaS).</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Service Industries &amp; SCM Focus</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Industry</th><th>Supply Chain Focus</th><th>Key Challenge</th><th>Indian Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Healthcare</strong></td><td>Medical supplies, pharma, equipment</td><td>Zero stockout, cold chain</td><td>Apollo Hospitals, PharmEasy</td></tr>
+<tr><td><strong>Food Delivery</strong></td><td>Restaurant supplies, fresh ingredients</td><td>30-min delivery, perishability</td><td>Swiggy, Zomato</td></tr>
+<tr><td><strong>E-commerce</strong></td><td>Last-mile delivery, returns</td><td>Speed, reverse logistics</td><td>Flipkart, Amazon India</td></tr>
+<tr><td><strong>IT Services</strong></td><td>Cloud infrastructure, data centers</td><td>Uptime, latency</td><td>Infosys, TCS</td></tr>
+<tr><td><strong>BFSI</strong></td><td>Document processing, ATM cash</td><td>Security, compliance</td><td>SBI, HDFC Bank</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Service Supply Chains</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6cL3N3b0u0E" title="Service SC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Service vs Manufacturing SCM</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Feature</th><th>Manufacturing SCM</th><th>Service SCM</th></tr></thead>
+<tbody>
+<tr><td><strong>Output</strong></td><td>Tangible goods</td><td>Intangible services</td></tr>
+<tr><td><strong>Inventory</strong></td><td>Physical stock</td><td>Capacity/capability</td></tr>
+<tr><td><strong>Quality</strong></td><td>Standardized, measurable</td><td>Variable, subjective</td></tr>
+<tr><td><strong>Delivery</strong></td><td>Physical distribution</td><td>Direct delivery to customer</td></tr>
+<tr><td><strong>Storage</strong></td><td>Warehouses, distribution centers</td><td>Cannot store services</td></tr>
+<tr><td><strong>Customer Contact</strong></td><td>Low (manufacturing is back-end)</td><td>High (service is front-end)</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Reverse Logistics Process</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Customer Return</strong></div>
+<div style="font-size:1.2rem;color:rgba(214,48,49,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Collection</strong></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Sorting/Testing</strong></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Repair/Recycle/Dispose</strong></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Reintegrate</strong></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Hospital supply chains</strong> must ensure critical supplies (blood, organs, medications) are available 24/7 with zero tolerance for stockouts.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>Swiggy/Zomato</strong> operate service supply chains with 30-minute delivery promises &#x2014; they manage restaurant partnerships, rider allocation, real-time demand prediction, and perishable food handling. <strong>1mg/PharmEasy</strong> manage pharmaceutical supply chains requiring cold storage for insulin, vaccines, and temperature-sensitive medicines across 20,000+ pin codes. <strong>Indian Railways catering (IRCTC)</strong> supplies 1.2 million meals daily across 350+ trains with zero-stockout requirements for pantry cars.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Understand how SCM principles adapt to service contexts. The intangibility aspect changes everything. Indian food delivery and healthcare examples are highly relevant.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"I-P-H"</strong> for service characteristics: <strong>I</strong>ntangibility, <strong>P</strong>erishability, <strong>H</strong>eterogeneity</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Service SCM involves people, information, processes</li>
+<li>Service characteristics: Intangibility, Perishability, Heterogeneity</li>
+<li>Hospital supply chains require 24/7 availability with zero stockout tolerance</li>
+</ul></div>
+</div></div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Sustainability &amp; Future</h2>
+
+<!-- UNIT 13 -->
+<div class="unit" id="u13">
+<h3 id="u13">Unit 13: Design for Sustainable Supply Chain</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
+<div id="sU13">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Sustainability</strong> = meeting present needs without compromising future generations. <strong>Triple Bottom Line (TBL)</strong> = People, Planet, Profit. <strong>Green SCM</strong> = reducing environmental impact across the entire supply chain. <strong>Circular Economy</strong> = design out waste, keep products in use, regenerate natural systems.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Triple Bottom Line</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>People</strong><br><small>Social</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Planet</strong><br><small>Environmental</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Profit</strong><br><small>Economic</small></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Sustainable Supply Chains</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/f6M0HnmDpGk" title="Sustainable SC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Circular Economy Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/zCRKvDyyHmI" title="Circular Economy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Green SCM Practices</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Stage</th><th>Green Practice</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Procurement</strong></td><td>Sustainable sourcing criteria, local suppliers</td><td>Buying from certified organic farms</td></tr>
+<tr><td><strong>Manufacturing</strong></td><td>Reduce emissions, waste, energy consumption</td><td>Solar-powered factories</td></tr>
+<tr><td><strong>Packaging</strong></td><td>Biodegradable, minimal, reusable packaging</td><td>Amazon frustration-free packaging</td></tr>
+<tr><td><strong>Logistics</strong></td><td>Route optimization, electric vehicles, cleaner fuels</td><td>EV delivery fleets</td></tr>
+<tr><td><strong>Reverse Logistics</strong></td><td>Returns, recycling, remanufacturing</td><td>Apple trade-in programs</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Circular Economy Model</h5>
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Design</strong><br><small>For reuse/repair</small></div>
+<div style="font-size:1.2rem;color:rgba(0,206,201,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Produce</strong><br><small>Minimal waste</small></div>
+<div style="font-size:1.2rem;color:rgba(0,210,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Use</strong><br><small>Extend lifespan</small></div>
+<div style="font-size:1.2rem;color:rgba(255,215,0,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Reuse/Repair</strong><br><small>Keep in loop</small></div>
+<div style="font-size:1.2rem;color:rgba(108,99,255,.5)">&#x2192;</div>
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Recycle</strong><br><small>Recover materials</small></div>
+</div>
+<p style="color:rgba(255,255,255,.45);font-size:.8rem;margin-top:.5rem">Circulate products and materials at highest value &#x2014; zero waste to landfill</p>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>Patagonia's</strong> supply chain uses recycled materials, offers repair services, and resells used clothing &#x2014; true circular economy in action.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>ITC Limited</strong> is carbon-positive for 17+ years, water-positive for 19+ years, and solid waste recycling-positive for 14+ years. Their paperboards use 100% recycled fiber. <strong>Mahindra &amp; Mahindra</strong> was the first Indian company to adopt internal carbon pricing (Rs 1,300/ton CO2). <strong>Amul</strong> operates the world's largest milk supply chain (3.6 million farmers) with minimal cold chain wastage through cooperative model. <strong>Maruti Suzuki</strong> achieved 95% vehicle recyclability and uses 100% renewable energy at its Gurugram plant.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>TBL and circular economy are trending exam topics. Link sustainability to competitive advantage. Indian companies like ITC and Mahindra are excellent case studies for TBL implementation.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"P-P-P"</strong> for TBL: <strong>P</strong>eople, <strong>P</strong>lanet, <strong>P</strong>rofit</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Triple Bottom Line: People, Planet, Profit</li>
+<li>Green SCM reduces environmental impact across the chain</li>
+<li>Patagonia demonstrates circular economy in practice</li>
+</ul></div>
+</div></div>
+
+<!-- UNIT 14 -->
+<div class="unit" id="u14">
+<h3 id="u14">Unit 14: Future Trends and Issues</h3>
+<div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Industry 4.0</strong> = integration of IoT, AI, Big Data, Cloud in manufacturing and supply chains. <strong>3D Printing</strong> = enables on-demand, localized production. <strong>Digital Twin</strong> = virtual replica of supply chain for simulation and optimization. <strong>Resilience</strong> = ability to recover from disruptions.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Future Trends Map</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>AI</strong><br><small>Demand Forecasting</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>IoT</strong><br><small>Real-time Monitoring</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Blockchain</strong><br><small>Traceability</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Digital Twin</strong><br><small>Simulation</small></div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>3D Printing</strong><br><small>On-demand Production</small></div>
+</div>
+</div>
+
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Industry 4.0 and Supply Chain</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1e1n1n1b1b1Q" title="Industry 4.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Digital Twins in Logistics</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/m2M1b1b1b1Y" title="Digital Twins" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Industry 4.0 Technologies in SCM</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Technology</th><th>SCM Application</th><th>Benefit</th></tr></thead>
+<tbody>
+<tr><td><strong>IoT Sensors</strong></td><td>Real-time temperature, humidity, location monitoring</td><td>Cold chain integrity, asset tracking</td></tr>
+<tr><td><strong>AI/ML</strong></td><td>Demand forecasting, route optimization, predictive maintenance</td><td>30-50% forecast accuracy improvement</td></tr>
+<tr><td><strong>Big Data Analytics</strong></td><td>Pattern recognition, customer behavior, supplier risk</td><td>Data-driven decisions</td></tr>
+<tr><td><strong>Cloud Computing</strong></td><td>Shared platforms, scalable storage, collaboration</td><td>Lower IT costs, real-time access</td></tr>
+<tr><td><strong>3D Printing</strong></td><td>On-demand spare parts, rapid prototyping</td><td>Reduced inventory, faster response</td></tr>
+<tr><td><strong>Digital Twin</strong></td><td>Virtual supply chain simulation and testing</td><td>Risk-free optimization</td></tr>
+<tr><td><strong>Autonomous Vehicles</strong></td><td>Self-driving trucks, delivery drones</td><td>24/7 operations, lower labor cost</td></tr>
+<tr><td><strong>Blockchain</strong></td><td>End-to-end traceability, smart contracts</td><td>Trust, transparency, fraud reduction</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; Supply Chain Resilience Strategies</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Diversification</strong><br><small>Multiple suppliers</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Safety Stock</strong><br><small>Buffer inventory</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Dual Sourcing</strong><br><small>Two suppliers per component</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Nearshoring</strong><br><small>Reduce distance risk</small></div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Agility</strong><br><small>Rapid response capability</small></div>
+</div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p><strong>DHL</strong> uses IoT sensors for real-time package tracking, AI for route optimization, and is testing autonomous delivery vehicles.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Examples</div><p><strong>Flipkart</strong> uses AI-powered demand forecasting that reduced inventory holding costs by 20% and improved delivery prediction accuracy to 95%. <strong>Delhivery</strong> deployed IoT-enabled smart lockers across 500+ locations for contactless delivery. <strong>NITI Aayog</strong> partnered with Apollo Hospitals to pilot blockchain for pharmaceutical supply chain traceability. <strong>Tesco India</strong> uses digital twins to simulate warehouse operations before physical implementation. <strong>Dunzo</strong> and <strong>Swiggy Genie</strong> are testing drone delivery in Bengaluru and Hyderabad for medicine and food delivery.</p></div>
+<div class="callout callout-examtip"><div class="callout-label">&#x2757; Exam Tip</div><p>Future trends questions test your vision. Link technology to specific SCM benefits. India's drone delivery policy (2021) and DFC project are excellent exam references.</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>"A-I-B-D-R"</strong> for future trends: <strong>A</strong>I, <strong>I</strong>oT, <strong>B</strong>lockchain, <strong>D</strong>igital twin, <strong>R</strong>esilience</p></div>
+<div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
+<li>Industry 4.0: IoT, AI, Big Data, Cloud integration</li>
+<li>3D printing enables on-demand, localized production</li>
+<li>DHL uses IoT + AI for tracking and optimization</li>
+</ul></div>
+</div></div>
+
+<!-- MASTER MNEMONICS TABLE -->
+<div class="unit" id="mnemonics">
+<h3>&#x1F9E0; Master Mnemonics Table</h3>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>T-W-I-O-P</strong></td><td>Transportation, Warehousing, Inventory, Order processing, Packaging</td><td>PDM Components</td></tr>
+<tr><td><strong>P-T-P</strong></td><td>Pre-transaction, Transaction, Post-transaction</td><td>Customer Service</td></tr>
+<tr><td><strong>P-S-M-D-R</strong></td><td>Plan, Source, Make, Deliver, Return</td><td>SCOR Model</td></tr>
+<tr><td><strong>C-Q-C-T-R</strong></td><td>Cost, Quality, Capacity, Technology, Risk</td><td>Outsourcing Factors</td></tr>
+<tr><td><strong>E-E-R-G-B</strong></td><td>ERP, EDI, RFID, GPS, Blockchain</td><td>IT Enablers</td></tr>
+<tr><td><strong>P-O-M-D</strong></td><td>Purchase, Operating, Maintenance, Disposal</td><td>TCO Components</td></tr>
+<tr><td><strong>P-A-I-A-M</strong></td><td>Plan, Analyze, Integrate, Act, Maturity</td><td>Benchmarking Process</td></tr>
+<tr><td><strong>D-O-P-R</strong></td><td>Demand forecasting, Order batching, Price fluctuations, Rationing</td><td>Bullwhip Causes</td></tr>
+<tr><td><strong>I-V-E</strong></td><td>Information sharing, VMI, EDLP</td><td>Bullwhip Fixes</td></tr>
+<tr><td><strong>R-R-A-W-P</strong></td><td>Road, Rail, Air, Water, Pipeline</td><td>Transport Modes</td></tr>
+<tr><td><strong>C-L-I-G-T</strong></td><td>Customers, Labor, Infrastructure, Government, Tax</td><td>Location Factors</td></tr>
+<tr><td><strong>I-P-H</strong></td><td>Intangibility, Perishability, Heterogeneity</td><td>Service Characteristics</td></tr>
+<tr><td><strong>P-P-P</strong></td><td>People, Planet, Profit</td><td>Triple Bottom Line</td></tr>
+<tr><td><strong>A-I-B-D-R</strong></td><td>AI, IoT, Blockchain, Digital twin, Resilience</td><td>Future Trends</td></tr>
+</tbody></table></div>
+</div>
+
+<!-- INDIAN LOGISTICS LANDSCAPE -->
+<div class="unit" id="indian-logistics">
+<h3>&#x1F1EE;&#x1F1F3; Indian Logistics Landscape</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Facts</div><p>India's logistics cost is <strong>14% of GDP</strong> (vs 8% in developed countries). The National Logistics Policy (2022) targets reducing this to <strong>10% by 2030</strong>. India ranks <strong>38th</strong> in World Bank's Logistics Performance Index. The sector employs <strong>22 million+</strong> people and is valued at <strong>$250 billion</strong>.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; India's Major Logistics Players</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Company</th><th>Type</th><th>Scale</th><th>Key Strength</th></tr></thead>
+<tbody>
+<tr><td><strong>Flipkart (Ekart)</strong></td><td>E-commerce logistics</td><td>1,400+ fulfillment centers</td><td>Tier-2/3 city reach</td></tr>
+<tr><td><strong>Amazon India</strong></td><td>E-commerce logistics</td><td>60+ fulfillment centers</td><td>AI-powered delivery</td></tr>
+<tr><td><strong>Delhivery</strong></td><td>3PL (Third Party)</td><td>2.5M packages/day</td><td>Technology-first approach</td></tr>
+<tr><td><strong>Blue Dart</strong></td><td>Courier/Express</td><td>35,000+ pin codes</td><td>DHL partnership</td></tr>
+<tr><td><strong>Gati</strong></td><td>Express distribution</td><td>19,000+ pin codes</td><td>B2B focus</td></tr>
+<tr><td><strong>Rivigo (now Mahindra Logistics)</strong></td><td>Full truck load</td><td>Relay trucking model</td><td>Driver fatigue reduction</td></tr>
+<tr><td><strong>Shadowfax</strong></td><td>Last-mile delivery</td><td>300+ cities</td><td>Hyperlocal delivery</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; India Government Logistics Initiatives</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Initiative</th><th>Objective</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td><strong>PM Gati Shakti</strong></td><td>Multi-modal connectivity infrastructure</td><td>16 ministries integrated on single platform</td></tr>
+<tr><td><strong>National Logistics Policy</strong></td><td>Reduce logistics cost to 10% of GDP</td><td>Unified logistics interface, ease of logistics</td></tr>
+<tr><td><strong>Dedicated Freight Corridors</strong></td><td>High-speed rail freight</td><td>Delhi-Mumbai 14 hours (from 14 days)</td></tr>
+<tr><td><strong>Sagarmala Project</strong></td><td>Port-led development</td><td>14 coastal economic zones, port modernization</td></tr>
+<tr><td><strong>Bharatmala Pariyojana</strong></td><td>Highway network expansion</td><td>83,677 km of economic corridors</td></tr>
+<tr><td><strong>UPI/Digital Payments</strong></td><td>Cashless logistics transactions</td><td>Faster payment cycles, reduced COD dependency</td></tr>
+<tr><td><strong>GeM Portal</strong></td><td>Government e-Procurement</td><td>Rs 4+ lakh crore in transparent procurement</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Supply Chain Innovations</div>
+<p><strong>Amul's Cooperative Model:</strong> 3.6 million farmers, 18,000+ village dairy cooperative societies, processing 35 million liters of milk daily with minimal wastage &#x2014; the world's most efficient dairy supply chain. <strong>Reliance Jio Mart:</strong> Connects 30 million kirana stores to digital supply chain, enabling same-day grocery delivery in 200+ cities. <strong>Zomato/Swiggy:</strong> Process 3-4 million food orders daily with 20-minute delivery using AI-powered demand prediction and dynamic rider allocation.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Indian Logistics Quick Facts</div>
+<p><strong>"14-10-38"</strong> = <strong>14</strong>% logistics cost (current), <strong>10</strong>% target (2030), <strong>38</strong>th LPI rank. <strong>"D-S-B-R"</strong> for major players: <strong>D</strong>elhivery, <strong>S</strong>hadowfax, <strong>B</strong>lue Dart, <strong>R</strong>ivigo.</p></div>
+</div>
+
+<!-- LOGISTICS KPIs -->
+<div class="unit" id="logistics-kpis">
+<h3>&#x1F4CA; Logistics KPIs Deep Dive</h3>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definition</div><p><strong>Logistics KPIs</strong> (Key Performance Indicators) are quantifiable metrics used to evaluate supply chain performance across cost, speed, quality, and reliability dimensions. Effective KPIs follow the <strong>SMART</strong> framework: Specific, Measurable, Achievable, Relevant, Time-bound.</p></div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; KPI Categories &amp; Formulas</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Category</th><th>KPI</th><th>Formula</th><th>World-Class Target</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><strong>Cost KPIs</strong></td><td>Cost per Order Shipped</td><td>Total logistics cost / Orders shipped</td><td>Decreasing trend</td></tr>
+<tr><td>Logistics Cost as % of Revenue</td><td>Total logistics cost / Revenue x 100</td><td>&lt;8%</td></tr>
+<tr><td>Warehousing Cost per Unit</td><td>Total warehouse cost / Units stored</td><td>Decreasing trend</td></tr>
+<tr><td rowspan="3"><strong>Speed KPIs</strong></td><td>Order Cycle Time</td><td>Order placed &#x2192; Order delivered</td><td>&lt;48 hours</td></tr>
+<tr><td>Throughput Time</td><td>Time from raw material to finished goods</td><td>Minimize</td></tr>
+<tr><td>Lead Time Variability</td><td>Standard deviation of lead times</td><td>&lt;10%</td></tr>
+<tr><td rowspan="3"><strong>Quality KPIs</strong></td><td>Perfect Order Rate</td><td>Orders with zero defects / Total orders</td><td>>95%</td></tr>
+<tr><td>Damage Rate</td><td>Damaged units / Total units shipped</td><td>&lt;0.5%</td></tr>
+<tr><td>Order Accuracy</td><td>Correct orders / Total orders</td><td>>99.5%</td></tr>
+<tr><td rowspan="3"><strong>Reliability KPIs</strong></td><td>On-time Delivery Rate</td><td>On-time orders / Total orders</td><td>>95%</td></tr>
+<tr><td>Fill Rate</td><td>Orders filled from stock / Total orders</td><td>>98%</td></tr>
+<tr><td>Stockout Rate</td><td>Stockout events / Total demand events</td><td>&lt;2%</td></tr>
+<tr><td rowspan="3"><strong>Efficiency KPIs</strong></td><td>Inventory Turnover</td><td>COGS / Average Inventory</td><td>>8x per year</td></tr>
+<tr><td>Asset Utilization</td><td>Actual output / Maximum capacity</td><td>>85%</td></tr>
+<tr><td>Cash-to-Cash Cycle</td><td>Inv Days + Rec Days &#x2013; Pay Days</td><td>&lt;30 days</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; SCOR Level 1 Metrics</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Attribute</th><th>Metric</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><strong>Reliability</strong></td><td>Perfect Order Fulfillment</td><td>% of orders delivered on-time, complete, damage-free, with correct documentation</td></tr>
+<tr><td>Delivery Performance</td><td>% of orders delivered by the requested date</td></tr>
+<tr><td rowspan="2"><strong>Responsiveness</strong></td><td>Order Fulfillment Cycle Time</td><td>Average time from customer order to delivery</td></tr>
+<tr><td>Upside Supply Chain Flexibility</td><td>Time to achieve an unplanned 20% increase in orders</td></tr>
+<tr><td rowspan="2"><strong>Agility</strong></td><td>Upside Supply Chain Flexibility</td><td>Response time for demand surge</td></tr>
+<tr><td>Downside Supply Chain Adaptability</td><td>Reduction in volume achievable without cost increase</td></tr>
+<tr><td rowspan="2"><strong>Cost</strong></td><td>Supply Chain Management Cost</td><td>Total cost to plan, source, deliver, and return</td></tr>
+<tr><td>Cost of Goods Sold</td><td>Direct costs of production</td></tr>
+<tr><td rowspan="2"><strong>Assets</strong></td><td>Cash-to-Cash Cycle Time</td><td>Time to convert investments into cash flows</td></tr>
+<tr><td>Return on Supply Chain Fixed Assets</td><td>Earnings / Fixed assets employed</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian KPI Benchmarks</div>
+<p><strong>Amazon India:</strong> 95% on-time delivery, 99% order accuracy, 24-hour metro delivery. <strong>Flipkart:</strong> 85% on-time delivery during sales (95% normal), 48-hour Tier-1 city delivery. <strong>Delhivery:</strong> 99.5% tracking accuracy, 2.5M daily packages, 36-72 hour Tier-2 delivery. <strong>Blue Dart:</strong> 98% fill rate, same-day metro delivery, 48-72 hour pan-India. Indian logistics cost breakdown: Transportation 50%, Warehousing 20%, Inventory carrying 15%, Administration 10%, Packaging 5%.</p></div>
+
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; KPI Memory Aid</div>
+<p><strong>"C-S-Q-R-E"</strong> for KPI categories: <strong>C</strong>ost, <strong>S</strong>peed, <strong>Q</strong>uality, <strong>R</strong>eliability, <strong>E</strong>fficiency. <strong>"O-F-I-C-D"</strong> for top 5 metrics: <strong>O</strong>n-time delivery, <strong>F</strong>ill rate, <strong>I</strong>nventory turnover, <strong>C</strong>ycle time, <strong>D</strong>elivery accuracy.</p></div>
+</div>
+
+<!-- EXAM FOCUS -->
+<div class="unit" id="exam">
+<h3>&#x1F3AF; Exam Focus</h3>
+<div class="callout callout-examtip"><div class="callout-label">&#x26A0; Most Frequently Asked Topics</div>
+<ul>
+<li><strong>Bullwhip Effect</strong> &#x2014; causes, effects, mitigation (appears every exam)</li>
+<li><strong>SCOR Model</strong> &#x2014; explain all 5 processes</li>
+<li><strong>Push vs Pull vs Leagile</strong> &#x2014; comparison with examples</li>
+<li><strong>Outsourcing Decision</strong> &#x2014; factors and trade-offs</li>
+<li><strong>Transportation Modes</strong> &#x2014; comparison and selection criteria</li>
+<li><strong>TBL and Sustainability</strong> &#x2014; link to competitive advantage</li>
+<li><strong>Customer Service Framework</strong> &#x2014; pre/transaction/post phases</li>
+</ul>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CB; Expected Exam Questions (10 Marks Each)</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>#</th><th>Question</th><th>Key Points to Cover</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Explain the SCOR model with examples</td><td>5 processes, metrics, real-world application</td></tr>
+<tr><td>2</td><td>What is bullwhip effect? How can it be mitigated?</td><td>Definition, D-O-P-R causes, I-V-E fixes, COVID example</td></tr>
+<tr><td>3</td><td>Compare push and pull supply chain strategies</td><td>Table comparison, decoupling point, Dell example</td></tr>
+<tr><td>4</td><td>Discuss factors affecting facility location decisions</td><td>C-L-I-G-T factors, 3 techniques, warehouse types</td></tr>
+<tr><td>5</td><td>Explain the role of IT in supply chain management</td><td>ERP, EDI, RFID, GPS, Blockchain with examples</td></tr>
+<tr><td>6</td><td>What is TBL? How does it relate to SCM?</td><td>People, Planet, Profit; Green SCM practices</td></tr>
+<tr><td>7</td><td>Compare 5 transportation modes with selection criteria</td><td>Table, intermodal concept, DFC example</td></tr>
+<tr><td>8</td><td>Explain benchmarking process in SCM</td><td>4 types, P-A-I-A-M process, VMI, CPFR</td></tr>
+<tr><td>9</td><td>Discuss outsourcing decisions in supply chain</td><td>Factors, risks, Apple-Foxconn, nearshoring</td></tr>
+<tr><td>10</td><td>How does Industry 4.0 impact supply chains?</td><td>IoT, AI, blockchain, digital twin, resilience</td></tr>
+</tbody></table></div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4DD; Model Answer Structure (10-Mark Question)</h5>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center">
+<div class="vd-node" style="background:rgba(214,48,49,.2);border:1px solid rgba(214,48,49,.4)"><strong>Step 1</strong><br><small>Define the concept (2 marks)</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,.2);border:1px solid rgba(0,210,255,.4)"><strong>Step 2</strong><br><small>Explain components (3 marks)</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,.2);border:1px solid rgba(255,215,0,.4)"><strong>Step 3</strong><br><small>Real-world example (2 marks)</small></div>
+<div class="vd-node" style="background:rgba(108,99,255,.2);border:1px solid rgba(108,99,255,.4)"><strong>Step 4</strong><br><small>Compare/contrast (2 marks)</small></div>
+<div class="vd-node" style="background:rgba(0,206,201,.2);border:1px solid rgba(0,206,201,.4)"><strong>Step 5</strong><br><small>Link to SCM performance (1 mark)</small></div>
+</div>
+</div>
+
+<div class="visual-diagram">
+<h5>&#x1F4CA; One-Liner Quick Revision</h5>
+<div class="db"><table class="comparison-table">
+<thead><tr><th>Concept</th><th>One-Liner</th></tr></thead>
+<tbody>
+<tr><td><strong>Logistics</strong></td><td>Flow of goods from origin to consumption</td></tr>
+<tr><td><strong>Supply Chain</strong></td><td>Network from raw material to end customer</td></tr>
+<tr><td><strong>SCOR</strong></td><td>Plan, Source, Make, Deliver, Return</td></tr>
+<tr><td><strong>Push vs Pull</strong></td><td>Forecast-based vs demand-based production</td></tr>
+<tr><td><strong>Bullwhip</strong></td><td>Demand variability amplifies upstream</td></tr>
+<tr><td><strong>TCO</strong></td><td>Purchase + Operating + Maintenance + Disposal</td></tr>
+<tr><td><strong>VMI</strong></td><td>Supplier manages buyer's inventory</td></tr>
+<tr><td><strong>Cross-docking</strong></td><td>Direct transfer without storage</td></tr>
+<tr><td><strong>TBL</strong></td><td>People, Planet, Profit</td></tr>
+<tr><td><strong>Digital Twin</strong></td><td>Virtual replica of supply chain</td></tr>
+<tr><td><strong>e-SCM</strong></td><td>Internet-based supply chain activities</td></tr>
+<tr><td><strong>ABC Costing</strong></td><td>Costs assigned based on activity consumption</td></tr>
+<tr><td><strong>Hub-and-Spoke</strong></td><td>Central hub with radiating spoke routes</td></tr>
+<tr><td><strong>Reverse Logistics</strong></td><td>Managing returns, recycling, disposal</td></tr>
+<tr><td><strong>Leagile</strong></td><td>Lean upstream + Agile downstream</td></tr>
+</tbody></table></div>
+</div>
+<div class="summary-box"><h4>&#x1F4CB; Key Formulas Quick Reference</h4><ul>
+<li><strong>TCO = Purchase Price + Operating Costs + Maintenance + Disposal</strong></li>
+<li><strong>Inventory Turnover = COGS / Average Inventory</strong></li>
+<li><strong>Fill Rate = Orders filled from stock / Total orders</strong></li>
+<li><strong>On-time Delivery = On-time orders / Total orders</strong></li>
+<li><strong>Cash-to-Cash Cycle = Inventory Days + Receivable Days &#x2013; Payable Days</strong></li>
+</ul></div>
+</div>
+
+</main></div>
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
+<script>
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)})})();
+window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+</script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
+<script src="pwa-register.js"></script>
+</body></html>

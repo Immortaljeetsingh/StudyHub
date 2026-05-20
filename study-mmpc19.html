@@ -6,129 +6,559 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles-enhanced.css">
 <link rel="stylesheet" href="study-hub-enhanced.css">
-<link rel="manifest" href="manifest.json">
 <style>
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#06060f;color:#e8eaf0;line-height:1.7;overflow-x:hidden}body::after{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(2px 2px at 20% 30%,rgba(9,132,227,.3),transparent),radial-gradient(2px 2px at 40% 70%,rgba(0,210,255,.2),transparent),radial-gradient(1px 1px at 60% 20%,rgba(255,215,0,.25),transparent),radial-gradient(1.5px 1.5px at 80% 60%,rgba(200,200,200,.12),transparent);background-size:600px 600px;animation:pD 60s linear infinite;pointer-events:none;z-index:0}@keyframes pD{0%{background-position:0 0}100%{background-position:600px 600px}}.study-layout{display:flex;max-width:1400px;margin:0 auto}.study-content{flex:1;padding:2rem;min-width:0}.sidebar{width:260px;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06)}.sidebar-header{margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.06)}.sidebar-header h3{font-size:.85rem;color:rgba(255,255,255,.4);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sidebar a{display:block;padding:.4rem .75rem;color:rgba(255,255,255,.55);text-decoration:none;border-radius:8px;font-size:.82rem;transition:all .2s}.sidebar a:hover{background:rgba(255,255,255,.05);color:#0984e3;padding-left:1rem}.sidebar a.active{color:#0984e3;background:rgba(9,132,227,.1);font-weight:600}.study-header{background:linear-gradient(135deg,rgba(9,132,227,.15),rgba(0,210,255,.1));border:1px solid rgba(200,200,200,.12);border-radius:16px;padding:2rem;margin-bottom:2rem}.study-header h1{font-size:2rem;font-weight:800;color:#0984e3;letter-spacing:-.03em}.study-header p{color:rgba(255,255,255,.5);font-size:.9rem;margin-top:.5rem}.subject-tag{display:inline-block;padding:.2rem .7rem;background:linear-gradient(135deg,#0984e3,#0984e3cc);color:#fff;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:.5rem}.unit{margin-bottom:2.5rem;padding:1.5rem;background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);opacity:1;transform:translateY(0);transition:opacity .7s,transform .7s}.unit.visible{opacity:1;transform:translateY(0)}h3[id^="u"]{position:relative;padding-bottom:.6rem;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:1rem}h3[id^="u"]::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc,#00d4ff,#0984e3);background-size:300% 100%;animation:gradientShift 4s ease-in-out infinite;border-radius:2px}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.section{margin-bottom:1.25rem}.section h3{font-size:1.05rem;font-weight:600;color:#0984e3;margin-bottom:.4rem}.section p{color:rgba(255,255,255,.72);margin-bottom:.6rem}.section ul{padding-left:1.5rem;margin-bottom:.8rem}.section li{color:rgba(255,255,255,.68);margin-bottom:.3rem}.callout{padding:1rem 1.25rem;border-radius:12px;margin:1rem 0;border-left:4px solid;transition:transform .3s,box-shadow .3s}.callout:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(200,200,200,.12)}.callout-definition{background:rgba(9,132,227,.08);border-color:#0984e3}.callout-mnemonic{background:rgba(0,210,255,.08);border-color:#00d4ff}.callout-important{background:rgba(255,107,107,.08);border-color:#ff6b6b}.callout-example{background:rgba(0,184,148,.08);border-color:#00b894}.kt{background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);padding:1rem 1.25rem;border-radius:12px;margin:1rem 0}.callout-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem}.summary-box{background:rgba(255,215,0,.06);border-left:4px solid #ffd700;border:1px solid rgba(255,215,0,.2);padding:1rem;border-radius:12px;margin:1rem 0}.summary-box ul{padding-left:1.5rem;margin:0}.summary-box li{color:rgba(255,255,255,.72);margin-bottom:.3rem;font-size:.9rem}.summary-label{font-weight:700;font-size:.85rem;margin-bottom:.5rem;color:#ffd700}.br{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.sb{display:inline-block;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}.s-b{background:rgba(9,132,227,.15);color:#0984e3cc;border:1px solid rgba(9,132,227,.3)}.back-link{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.5);text-decoration:none;font-size:.88rem;margin-bottom:1.5rem}.back-link:hover{color:#0984e3}.mobile-nav-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:1001;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem .75rem;border-radius:8px;font-size:1.2rem;cursor:pointer}.skip-link{position:absolute;top:-40px;left:0;background:#0984e3;color:#fff;padding:.5rem 1rem;z-index:1000;border-radius:0 0 8px 0;transition:top .3s}.skip-link:focus{top:0}.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0984e3,#0984e3cc);z-index:9999;transition:width .1s;width:0%}@media(max-width:768px){.mobile-nav-toggle{display:block}.sidebar{position:fixed;left:-280px;top:0;z-index:1000;height:100vh;transition:left .3s;background:rgba(6,6,15,.95)}.sidebar.open{left:0}.study-content{padding:1rem;padding-top:3.5rem}.study-header h1{font-size:1.5rem}}
-.fc-s:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(108,92,231,0.2)}.db tbody tr:nth-child(even){background:rgba(255,255,255,.02)}table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}th,td{padding:.5rem .75rem;border:1px solid rgba(255,255,255,.08);text-align:left}th{background:rgba(9,132,227,.1);color:#0984e3;font-weight:600}td{color:rgba(255,255,255,.72)}pre{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1rem;overflow-x:auto;font-size:.85rem;color:rgba(255,255,255,.8)}
+
+/* &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; MMPC-19 ENHANCED STYLES &#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550; */
+
+/* --- Background Particles --- */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(108,99,255,0.3), transparent),
+    radial-gradient(2px 2px at 40% 70%, rgba(0,210,255,0.2), transparent),
+    radial-gradient(1px 1px at 60% 20%, rgba(255,215,0,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 80% 60%, rgba(200,200,200,0.12), transparent),
+    radial-gradient(1px 1px at 10% 80%, rgba(0,210,255,0.15), transparent),
+    radial-gradient(2px 2px at 90% 40%, rgba(255,215,0,0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(108,99,255,0.15), transparent),
+    radial-gradient(1.5px 1.5px at 30% 90%, rgba(0,210,255,0.2), transparent);
+  background-size: 600px 600px;
+  animation: particleDrift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes particleDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 600px 600px; }
+}
+
+/* --- Richer Background --- */
+
+
+/* --- Scroll Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Section Heading Gradient Underline --- */
+h3[id^="u"] {
+  position: relative;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.6rem;
+}
+h3[id^="u"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700, #c8c8c8);
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  border-radius: 2px;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2[id^="block"] {
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+h2[id^="block"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 120px; height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0);
+  border-radius: 2px;
+}
+
+/* --- Card Hover Effects --- */
+.cc {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+.cc:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(108,99,255,0.25), 0 0 20px rgba(0,210,255,0.1) !important;
+  border-color: rgba(108,99,255,0.4) !important;
+}
+
+.callout {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.callout:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(200,200,200,0.12) !important;
+}
+.callout-important {
+  border-left-color: #FFD700 !important;
+}
+.callout-important .callout-label {
+  color: #FFD700 !important;
+}
+.callout-mnemonic {
+  border-left-color: #c8c8c8 !important;
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.05)) !important;
+}
+.callout-example {
+  border-left-color: #b0b0b0 !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.02em !important;
+}
+.study-content p, 
+
+/* --- Study Header Enhancement --- */
+.study-header {
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1)) !important;
+  border: 1px solid rgba(200,200,200,0.12) !important;
+  position: relative;
+  overflow: hidden;
+}
+.study-header::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+  animation: headerGlow 8s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-30px, 20px) scale(1.2); opacity: 0.8; }
+}
+
+/* --- Summary Box Enhancement --- */
+.summary-box {
+  border: 1px solid rgba(0,210,255,0.3) !important;
+  background: linear-gradient(135deg, rgba(0,210,255,0.05), rgba(108,99,255,0.05)) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.summary-box:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(0,210,255,0.15) !important;
+}
+
+/* --- Badge/Tag Styling --- */
+.subject-tag {
+  background: linear-gradient(135deg, #c8c8c8, #b0b0b0) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Visual Diagram Boxes --- */
+.visual-diagram {
+  background: linear-gradient(135deg, rgba(200,200,200,0.05), rgba(0,210,255,0.06));
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.visual-diagram::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c8c8c8, #b0b0b0, #FFD700);
+}
+.visual-diagram h5 {
+  color: #c8c8c8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.vd-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vd-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.vd-arrow {
+  display: inline-block;
+  color: #c8c8c8;
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.vd-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* --- Case Study Box --- */
+.case-study {
+  background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(108,99,255,0.04));
+  border: 1px solid rgba(255,215,0,0.2);
+  border-left: 4px solid #FFD700;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+.case-study h5 {
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* --- Expand/Collapse Toggle --- */
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.expandable-content.expanded {
+  max-height: 5000px;
+}
+.expand-toggle {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(0,210,255,0.1));
+  border: 1px solid rgba(108,99,255,0.3);
+  border-radius: 6px;
+  color: #c8c8c8;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.expand-toggle:hover {
+  background: linear-gradient(135deg, rgba(108,99,255,0.25), rgba(0,210,255,0.15));
+  box-shadow: 0 2px 10px rgba(200,200,200,0.12);
+}
+
+/* --- Hierarchy Tree Visual --- */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.org-tree .level {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.org-tree .node {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease;
+}
+.org-tree .node:hover { transform: scale(1.05); }
+.org-tree .connector {
+  width: 2px; height: 20px;
+  background: linear-gradient(to bottom, #c8c8c8, #b0b0b0);
+  margin: 0 auto;
+}
+
+/* --- Flowchart Visual --- */
+.flow-visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.flow-visual .step {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.flow-visual .step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3);
+}
+.flow-visual .arrow {
+  color: #c8c8c8;
+  font-size: 1.4rem;
+}
+/* --- Video Section --- */
+.video-section { margin: 2rem 0; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.video-card { background: rgba(200,200,200,0.05); border: 1px solid rgba(200,200,200,0.12); border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,200,200,0.12); }
+.video-header { padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(108,99,255,0.05); }
+.video-header h5 { margin: 0; font-size: 0.9rem; color: #e0e0ff; }
+.video-icon { color: #FF0000; font-size: 1.2rem; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.video-toggle { background: linear-gradient(135deg, #c8c8c8, #b0b0b0); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; margin: 1rem 0; transition: opacity 0.3s; }
+.video-toggle:hover { opacity: 0.85; }
+.video-section-content { display: none; }
+.video-section-content.active { display: block; }
+
+/* Visual diagram box */
+.visual-diagram {
+    background: linear-gradient(135deg, rgba(78,205,196,0.08), rgba(255,107,107,0.06));
+    border: 1px solid rgba(78,205,196,0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.visual-diagram:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.2);
+}
+.visual-diagram h5 {
+    color: #4ECDC4;
+    margin-bottom: 16px;
+    font-size: 1.1em;
+}
+.vd-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.vd-step {
+    background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(78,205,196,0.1));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    min-width: 110px;
+    transition: all 0.3s ease;
+}
+.vd-step:hover { background: linear-gradient(135deg, rgba(255,107,107,0.25), rgba(78,205,196,0.18)); }
+/* Section badge */
+.section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    color: #fff;
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-weight: 600;
+}
 </style>
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="revision-mode.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="light-theme.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="study-hub-global-fixes.css">
 </head>
 <body class="subject-mmpc19">
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+<div id="liveRegion" class="sr-only" aria-live="polite"></div>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-19'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
-<nav class="sidebar">
-  <a href="study-hub.html">&#x1F3E0; Back</a>
-  <div class="sidebar-header"><h3>MMPC-19</h3></div>
-  <a href="#u1">Unit 1: Basic Concepts &amp; Methods</a>
-  <a href="#u2">Unit 2: Quality Gurus</a>
-  <a href="#u3">Unit 3: Building Blocks of TQM</a>
-  <a href="#u4">Unit 4: Economics of Quality</a>
-  <a href="#u5">Unit 5: TQM &amp; Business Strategy</a>
-  <a href="#u6">Unit 6: Quality-Centred Planning</a>
-  <a href="#u7">Unit 7: Statistical Quality Control</a>
-  <a href="#u8">Unit 8: Tools &amp; Techniques</a>
-  <a href="#u9">Unit 9: Organization for Quality</a>
-  <a href="#u10">Unit 10: Quality Culture &amp; Leadership</a>
-  <a href="#u11">Unit 11: ISO 9000</a>
-  <a href="#u12">Unit 12: ISO 14000</a>
-  <a href="#u13">Unit 13: Other Standards</a>
-  <a href="#u14">Unit 14: Safety &amp; Health</a>
-  <a href="#u15">Unit 15: Auditing &amp; Certification</a>
-  <div class="sidebar-header" style="margin-top:1rem"><h3>Quick Links</h3></div>
-  <a href="#mnemonics">🧠 Master Mnemonics</a>
-  <a href="#frameworks">📊 Key Frameworks</a>
-  <a href="#revision">⚡ Quick Revision</a>
-  <a href="#exam">🎯 Exam Focus</a>
-</nav>
-<main class="study-content" id="main-content">
-<a href="study-hub.html" class="back-link">&#x2190; Back to StudyHub</a>
-<div class="study-header"><span class="subject-tag">MMPC-19</span><h1>Total Quality Management</h1>
-<p>Comprehensive Study Notes &#x2014; 15 Units, 5 Blocks &#x2022; IGNOU MBA</p></div>
+<aside class="study-sidebar"><div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-19</span></div>
+<nav class="sidebar-nav">
+<a href="#block1">Block-01 TQM Overview</a>
+<a href="#u1">Unit 1: Basic Concepts</a>
+<a href="#u2">Unit 2: Quality Gurus</a>
+<a href="#u3">Unit 3: Building Blocks</a>
+<a href="#block2">Block-02 Strategic Perspectives</a>
+<a href="#u4">Unit 4: Economics of Quality</a>
+<a href="#u5">Unit 5: TQM &amp; Business Strategy</a>
+<a href="#u6">Unit 6: Quality-Centred Planning</a>
+<a href="#block3">Block-03 Tools &amp; Techniques</a>
+<a href="#u7">Unit 7: Statistical Quality Control</a>
+<a href="#u8">Unit 8: Six Sigma &amp; 5S</a>
+<a href="#block4">Block-04 Organization &amp; Leadership</a>
+<a href="#u9">Unit 9: Organization for Quality</a>
+<a href="#u10">Unit 10: Quality Culture</a>
+<a href="#block5">Block-05 Systems &amp; Standards</a>
+<a href="#u11">Unit 11: ISO 9000</a>
+<a href="#u12">Unit 12: ISO 14000</a>
+<a href="#u13">Unit 13: Safety Standards</a>
+<a href="#u14">Unit 14: Auditing</a>
+<a href="#u15">Unit 15: Certification</a>
+<a href="quiz-mmpc19.html" class="back-link">&#x1F4DD; Take Quiz</a>
+<a href="study-hub.html" class="back-link">&#x2190; Back to Hub</a>
+</nav></aside>
+<main id="main-content" class="study-content">
+<div class="study-header"><span class="subject-tag">MMPC-19</span><h1>Total Quality Management</h1><p>Comprehensive Study Notes &#x2014; Diagrams &#x2022; Indian Examples &#x2022; Mnemonics &#x2022; Exam-Ready</p></div>
+
+<!-- ==================== BLOCK 01 ==================== -->
+<h2 id="block1">Block-01: TQM Overview</h2>
 
 <!-- UNIT 1 -->
 <div class="unit" id="u1">
 <h3 id="u1">Unit 1: Basic Concepts and Methods</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
-<div id="sU1" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Definitions</div>
-<p><strong>ISO 8402:</strong> "Totality of features and characteristics of a product or service that bears on its ability to satisfy stated or implied needs"</p>
-<p><strong>Deming:</strong> "Quality is a predictable degree of uniformity and dependability, at low cost, suited to the market"</p>
-<p><strong>Juran:</strong> "Fitness for use"</p>
-<p><strong>Crosby:</strong> "Conformance to requirements"</p>
-<p><strong>Feigenbaum:</strong> "Total composite product and service characteristics through which the product in use will meet customer expectations"</p>
-<p><strong>TQM:</strong> A management philosophy and company-wide approach focusing on continuous improvement to meet or exceed customer expectations</p>
+<div id="sU1">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Unit 1: TQM Fundamentals</div><p>Quality has multiple definitions depending on perspective. TQM is a management philosophy, not just a set of tools. Quality evolved from simple inspection (1920s) to company-wide TQM (1980s).</p></div>
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>What is TQM?</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2b3c4d5e6fG" title="TQM Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Quality Definitions</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/3c4d5e6f7gH" title="Quality Definitions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 8 TQM Principles (C-T-P-I-S-C-F-C)</div>
-<p>1. <strong>C</strong>ustomer focus &bull; 2. <strong>T</strong>otal employee involvement &bull; 3. <strong>P</strong>rocess-centered approach &bull; 4. <strong>I</strong>ntegrated system &bull; 5. <strong>S</strong>trategic and systematic approach &bull; 6. <strong>C</strong>ontinual improvement &bull; 7. <strong>F</strong>act-based decision making &bull; 8. <strong>C</strong>ommunications</p>
+<h4>Point 1: Quality Definitions</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
+<table>
+<tr><th>Guru</th><th>Definition</th><th>Focus</th></tr>
+<tr><td>ISO 8402</td><td>Totality of features satisfying stated or implied needs</td><td>Comprehensive</td></tr>
+<tr><td>Deming</td><td>Predictable degree of uniformity and dependability</td><td>Predictability</td></tr>
+<tr><td>Juran</td><td>Fitness for use</td><td>Utility</td></tr>
+<tr><td>Crosby</td><td>Conformance to requirements</td><td>Standards</td></tr>
+<tr><td>Feigenbaum</td><td>Total composite product characteristics</td><td>Totality</td></tr>
+</table>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Evolution of Quality</div>
-<table><tr><th>Era</th><th>Period</th><th>Focus</th><th>Key Activity</th></tr>
+<h4>Point 2: Evolution of Quality</h4>
+<div class="db"><table>
+<tr><th>Era</th><th>Period</th><th>Focus</th><th>Key Activity</th></tr>
 <tr><td>Inspection</td><td>1920s</td><td>Detect defects</td><td>Sort good from bad</td></tr>
 <tr><td>Statistical QC</td><td>1940s</td><td>Prevent defects</td><td>Control charts</td></tr>
 <tr><td>Quality Assurance</td><td>1960s</td><td>Systematic processes</td><td>Documentation</td></tr>
-<tr><td>TQM</td><td>1980s</td><td>Company-wide quality</td><td>Continuous improvement</td></tr></table>
+<tr><td>TQM</td><td>1980s</td><td>Company-wide quality</td><td>Continuous improvement</td></tr>
+</table></div>
+<h4>Point 3: 8 TQM Principles</h4>
+<div class="br"><span class="sb s-b">Customer Focus</span><span class="sb s-b">Total Employee Involvement</span><span class="sb s-b">Process-Centered</span><span class="sb s-b">Integrated System</span><span class="sb s-b">Strategic Approach</span><span class="sb s-b">Continual Improvement</span><span class="sb s-b">Fact-Based Decisions</span><span class="sb s-b">Communications</span></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Toyota's</strong> production system is a classic TQM implementation &#x2014; every worker is empowered to stop the production line (andon cord) if they detect a defect, embodying the "total employee involvement" principle.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Toyota's production system is a classic TQM implementation — every worker is empowered to stop the production line (andon cord) if they detect a defect, embodying the "total employee involvement" principle.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>D-J-C-F</strong> = Deming(predictable), Juran(fitness), Crosby(conformance), Feigenbaum(totality)</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"C-T-P-I-S-C-F-C"</strong> &#x2014; Customer focus, Total involvement, Process-centered, Integrated, Strategic, Continual improvement, Fact-based, Communications</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Quality has multiple definitions — Deming = predictability, Juran = fitness, Crosby = conformance, Feigenbaum = totality</li>
-<li>TQM evolved from Inspection (1920s) → SQC (1940s) → QA (1960s) → TQM (1980s)</li>
-<li>8 TQM Principles: Customer focus, Total involvement, Process-centered, Integrated, Strategic, Continuous improvement, Fact-based, Communications</li>
+<li>Quality definitions: Deming (predictability), Juran (fitness), Crosby (conformance), Feigenbaum (totality)</li>
+<li>Evolution: Inspection &#x2192; SQC &#x2192; QA &#x2192; TQM</li>
+<li>8 TQM principles centered on customer focus and continual improvement</li>
 </ul></div>
 </div>
 
 <!-- UNIT 2 -->
 <div class="unit" id="u2">
-<h3 id="u2">Unit 2: Quality Management — Leading Thinkers</h3>
+<h3 id="u2">Unit 2: Quality Management &#x2014; Leading Thinkers</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU2">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU2">&#x1F4AC; Ask AI</button></div>
-<div id="sU2" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 6 Quality Gurus</div>
-<p><strong>Deming:</strong> System thinking &amp; statistical variation; 85% of quality problems are management's responsibility.</p>
-<p><strong>Juran:</strong> Quality Trilogy (Planning, Control, Improvement) — project-by-project improvement.</p>
-<p><strong>Crosby:</strong> "Zero Defects" and "Quality is Free" — prevention costs less than failure.</p>
-<p><strong>Ishikawa:</strong> Fishbone diagram, quality circles, company-wide quality control.</p>
-<p><strong>Taguchi:</strong> Robust design and loss function — any deviation from target causes societal loss.</p>
-<p><strong>Feigenbaum:</strong> "Total Quality Control" — quality is everyone's job across all departments.</p>
+<div id="sU2">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Deming's 14 Points</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/4d5e6f7g8hI" title="Deming 14 Points" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Juran Trilogy</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/5e6f7g8h9iJ" title="Juran Trilogy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Crosby Zero Defects</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/6f7g8h9i0jK" title="Crosby Zero Defects" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Deming's 14 Points</div>
-<table><tr><th>#</th><th>Point</th><th>Core Idea</th></tr>
-<tr><td>1</td><td>Create constancy of purpose</td><td>Long-term vision</td></tr>
-<tr><td>2</td><td>Adopt the new philosophy</td><td>Embrace quality</td></tr>
-<tr><td>3</td><td>Cease dependence on mass inspection</td><td>Build quality in</td></tr>
-<tr><td>4</td><td>End practice of awarding on price alone</td><td>Total cost approach</td></tr>
-<tr><td>5</td><td>Improve constantly &amp; forever</td><td>Never-ending improvement</td></tr>
-<tr><td>6</td><td>Institute training on the job</td><td>Skill development</td></tr>
-<tr><td>7</td><td>Institute leadership</td><td>Support, not supervise</td></tr>
-<tr><td>8</td><td>Drive out fear</td><td>Safe environment</td></tr>
-<tr><td>9</td><td>Departments must communicate</td><td>Break silos</td></tr>
-<tr><td>10</td><td>Eliminate slogans</td><td>Remove barriers</td></tr>
-<tr><td>11</td><td>Eliminate numerical quotas</td><td>Quality over quantity</td></tr>
-<tr><td>12</td><td>Remove barriers to pride of workmanship</td><td>Enable pride</td></tr>
-<tr><td>13</td><td>Institute education &amp; self-improvement</td><td>Continuous learning</td></tr>
-<tr><td>14</td><td>Put everybody to work</td><td>Everyone's job</td></tr></table>
+<h4>Point 1: Six Quality Gurus</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Quality Gurus (D-J-C-I-T-F)</div>
+<table>
+<tr><th>Guru</th><th>Key Contribution</th><th>Memory Hook</th></tr>
+<tr><td>Deming</td><td>14 Points, PDCA Cycle, System thinking</td><td>"Deming = Drive out fear"</td></tr>
+<tr><td>Juran</td><td>Quality Trilogy (Planning, Control, Improvement)</td><td>"Juran = Journey"</td></tr>
+<tr><td>Crosby</td><td>Zero Defects, Quality is Free, 4 Absolutes</td><td>"Crosby = Conformance"</td></tr>
+<tr><td>Ishikawa</td><td>Fishbone diagram, Quality circles</td><td>"Ishikawa = Ishbone"</td></tr>
+<tr><td>Taguchi</td><td>Robust design, Loss function</td><td>"Taguchi = Target"</td></tr>
+<tr><td>Feigenbaum</td><td>Total Quality Control</td><td>"Feigenbaum = Full"</td></tr>
+</table>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Deming Cycle (PDCA)</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">PLAN — Identify problem &amp; plan solution</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">DO — Implement on small scale</div>
-<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">CHECK — Evaluate results</div>
-<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">ACT — Standardize or revise</div>
+<h4>Point 2: Deming's PDCA Cycle</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; PDCA Cycle (Deming Wheel)</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>PLAN</strong><br><small>Identify problem &amp; plan solution</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>DO</strong><br><small>Implement on small scale</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>CHECK</strong><br><small>Evaluate results</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>ACT</strong><br><small>Standardize or revise</small></div>
 </div></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Juran's Quality Trilogy &amp; Crosby's 4 Absolutes</div>
-<p><strong>Juran Trilogy:</strong> 1. Quality Planning → 2. Quality Control → 3. Quality Improvement</p>
-<p><strong>Crosby's 4 Absolutes:</strong> 1. Quality = conformance to requirements &bull; 2. Prevention = the system &bull; 3. Zero defects = the standard &bull; 4. Cost of quality = the measurement</p>
-<p><strong>Crosby's Vaccine:</strong> Determination → Education → Implementation</p>
+<h4>Point 3: Juran's Quality Trilogy</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Quality Planning<br><small>Identify customers</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Quality Control<br><small>Evaluate performance</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Quality Improvement<br><small>Build teams</small></div></div>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Motorola invented Six Sigma in the 1980s using Taguchi's robust design principles, achieving 3.4 defects per million opportunities and saving billions.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>D-J-C-I-T-F</strong> = Deming, Juran, Crosby, Ishikawa, Taguchi, Feigenbaum — all 6 gurus</p></div>
+<h4>Point 4: Crosby's 4 Absolutes</h4>
+<div class="br"><span class="sb s-b">Quality = Conformance</span><span class="sb s-b">Prevention > Inspection</span><span class="sb s-b">Zero Defects Standard</span><span class="sb s-b">Cost of Quality = Measurement</span></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Motorola</strong> invented Six Sigma in the 1980s using Taguchi's robust design principles, achieving 3.4 defects per million opportunities and saving billions.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"D-J-C-I-T-F"</strong> &#x2014; Deming, Juran, Crosby, Ishikawa, Taguchi, Feigenbaum</p>
+</div>
+<h4>Point 2: Deming's 14 Points (C-A-C-E-I-I-D-D-B-E-E-R-I-P)</h4>
+<div class="db"><table>
+<tr><th>#</th><th>Point</th><th>Core Idea</th></tr>
+<tr><td>1</td><td><strong>C</strong>reate constancy of purpose</td><td>Long-term vision</td></tr>
+<tr><td>2</td><td><strong>A</strong>dopt the new philosophy</td><td>Embrace quality</td></tr>
+<tr><td>3</td><td><strong>C</strong>ease dependence on mass inspection</td><td>Build quality in</td></tr>
+<tr><td>4</td><td><strong>E</strong>nd practice of awarding on price alone</td><td>Total cost approach</td></tr>
+<tr><td>5</td><td><strong>I</strong>mprove constantly &amp; forever</td><td>Never-ending improvement</td></tr>
+<tr><td>6</td><td><strong>I</strong>nstitute training on the job</td><td>Skill development</td></tr>
+<tr><td>7</td><td><strong>I</strong>nstitute leadership</td><td>Support, not supervise</td></tr>
+<tr><td>8</td><td><strong>D</strong>rive out fear</td><td>Safe environment</td></tr>
+<tr><td>9</td><td><strong>D</strong>epartments must communicate</td><td>Break silos</td></tr>
+<tr><td>10</td><td><strong>E</strong>liminate slogans</td><td>Remove barriers</td></tr>
+<tr><td>11</td><td><strong>E</strong>liminate numerical quotas</td><td>Quality over quantity</td></tr>
+<tr><td>12</td><td><strong>R</strong>emove barriers to pride of workmanship</td><td>Enable pride</td></tr>
+<tr><td>13</td><td><strong>I</strong>nstitute education &amp; self-improvement</td><td>Continuous learning</td></tr>
+<tr><td>14</td><td><strong>P</strong>ut everybody to work</td><td>Transformation is everyone's job</td></tr>
+</table></div>
+<h4>Point 5: Ishikawa's Contributions</h4>
+<div class="br"><span class="sb s-b">Fishbone Diagram</span><span class="sb s-b">Quality Circles</span><span class="sb s-b">Company-wide QC</span><span class="sb s-b">7 Basic Tools</span></div>
+<h4>Point 6: Taguchi's Contributions</h4>
+<div class="br"><span class="sb s-b">Robust Design</span><span class="sb s-b">Loss Function</span><span class="sb s-b">Signal-to-Noise Ratio</span></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Compare Deming, Juran, Crosby: Deming = system &amp; variation, Juran = project-by-project improvement, Crosby = zero defects and prevention.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Deming = system &amp; variation (PDCA, 14 Points) &bull; Juran = project-by-project (Quality Trilogy)</li>
-<li>Crosby = zero defects (4 Absolutes) &bull; Ishikawa = fishbone &amp; quality circles</li>
-<li>Taguchi = robust design &amp; loss function &bull; Feigenbaum = total quality control</li>
+<li>6 quality gurus: Deming, Juran, Crosby, Ishikawa, Taguchi, Feigenbaum</li>
+<li>Deming: system thinking, 14 points, PDCA</li>
+<li>Juran: Quality Trilogy (Plan, Control, Improve)</li>
+<li>Crosby: Zero Defects, "Quality is Free"</li>
+<li>Ishikawa: Fishbone, Quality Circles</li>
+<li>Taguchi: Robust Design, Loss Function</li>
 </ul></div>
 </div>
 
@@ -136,65 +566,87 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u3">
 <h3 id="u3">Unit 3: Building Blocks of TQM</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU3">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU3">&#x1F4AC; Ask AI</button></div>
-<div id="sU3" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Building Blocks:</strong> Leadership, customer focus, employee involvement, continuous improvement, supplier partnership, and performance measures.</p>
-<p><strong>Quality Culture:</strong> Shared values, beliefs, and behaviors that prioritize quality in every activity and decision.</p>
-</div>
-<div class="visual-diagram"><h5>&#x1F4CA; 6 TQM Building Blocks</h5>
+<div id="sU3"></div>
+<h4>Point 1: 6 Building Blocks</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; TQM Building Blocks</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">LEADERSHIP COMMITMENT (Drives everything)</div>
-<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
-<div style="display:flex;gap:0.5rem;width:100%;justify-content:center">
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Customer Focus</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Employee Involvement</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Continuous Improvement</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:60%"><strong>LEADERSHIP COMMITMENT</strong> &#x2190; Drives everything</div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node"><strong>Customer Focus</strong></div>
+<div class="vd-node"><strong>Employee Involvement</strong></div>
+<div class="vd-node"><strong>Continuous Improvement</strong></div>
 </div>
-<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
-<div style="display:flex;gap:0.5rem;width:100%;justify-content:center">
-<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Supplier Partnership</div>
-<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Performance Measures</div>
-</div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4)"><strong>Supplier Partnership</strong></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Performance Measures</strong></div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>The Ritz-Carlton hotel chain empowers every employee to spend up to $2,000 per guest to resolve quality issues immediately — embodying total employee involvement and customer focus.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>LCEF-SP</strong> = Leadership, Customer focus, Employee involvement, Continuous improvement; Supplier partnership, Performance measures</p></div>
+<h4>Point 2: Quality Culture Elements</h4>
+<div class="br"><span class="sb s-b">Shared Values</span><span class="sb s-b">Team Orientation</span><span class="sb s-b">Learning Mindset</span><span class="sb s-b">Open Communication</span><span class="sb s-b">Recognition &amp; Reward</span></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>The Ritz-Carlton</strong> hotel chain empowers every employee to spend up to $2,000 per guest to resolve quality issues immediately, embodying total employee involvement and customer focus.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Be ready to explain why TQM fails without leadership commitment &#x2014; it's the most common exam question on TQM implementation.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"LCEF-SP"</strong> &#x2014; Leadership, Customer focus, Employee involvement, continuous improvement; Supplier partnership, Performance measures</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>6 Building Blocks: Leadership → Customer Focus, Employee Involvement, Continuous Improvement → Supplier Partnership, Performance Measures</li>
-<li>Quality culture = shared values, team orientation, learning mindset, open communication</li>
-<li>Without leadership commitment, TQM initiatives fail</li>
+<li>6 building blocks: Leadership, Customer Focus, Employee Involvement, Continuous Improvement, Supplier Partnership, Performance Measures</li>
+<li>Leadership commitment = foundation of TQM</li>
+<li>Quality culture: shared values, team orientation, learning mindset</li>
 </ul></div>
 </div>
+
+<!-- ==================== BLOCK 02 ==================== -->
+<h2 id="block2">Block-02: Strategic Perspectives</h2>
 
 <!-- UNIT 4 -->
 <div class="unit" id="u4">
 <h3 id="u4">Unit 4: Economics of Quality</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU4">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU4">&#x1F4AC; Ask AI</button></div>
-<div id="sU4" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Cost of Quality (COQ):</strong> Total cost of ensuring quality — prevention + appraisal + failure costs.</p>
-<p><strong>COPQ:</strong> Hidden and visible costs when products fail to meet standards — typically 15-25% of sales revenue.</p>
+<div id="sU4">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Cost of Quality</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/7g8h9i0j1kL" title="Cost of Quality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; 4 Quality Cost Categories (P-A-I-E)</div>
-<table><tr><th>Category</th><th>When</th><th>Examples</th><th>Relative Cost</th></tr>
-<tr><td>Prevention</td><td>Before production</td><td>Training, quality planning, process design</td><td style="color:#00b894">Lowest</td></tr>
-<tr><td>Appraisal</td><td>During production</td><td>Inspection, testing, audits</td><td style="color:#fdcb6e">Medium</td></tr>
-<tr><td>Internal Failure</td><td>Before delivery</td><td>Scrap, rework, re-inspection</td><td style="color:#e17055">High</td></tr>
-<tr><td>External Failure</td><td>After delivery</td><td>Warranty claims, returns, recalls</td><td style="color:#ff6b6b">Highest</td></tr></table>
+<h4>Point 1: 4 Quality Cost Categories (PAIE)</h4>
+<div class="db"><table>
+<tr><th>Category</th><th>When</th><th>Examples</th><th>Relative Cost</th></tr>
+<tr><td><strong>Prevention</strong></td><td>Before production</td><td>Training, quality planning, process design</td><td><strong>Lowest</strong></td></tr>
+<tr><td><strong>Appraisal</strong></td><td>During production</td><td>Inspection, testing, audits</td><td>Medium</td></tr>
+<tr><td><strong>Internal Failure</strong></td><td>Before delivery</td><td>Scrap, rework, re-inspection</td><td>High</td></tr>
+<tr><td><strong>External Failure</strong></td><td>After delivery</td><td>Warranty claims, returns, recalls</td><td><strong>Highest</strong></td></tr>
+</table></div>
+<h4>Point 2: Deming's Chain Reaction</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">Improve Quality</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">Costs Decrease</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">Productivity Improves</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">Market Share Increases</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">Stay in Business</div></div>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Deming's Chain Reaction</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Improve Quality</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Costs Decrease → Productivity Improves</div>
-<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">Market Share Increases → Stay in Business</div>
-</div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Philip Crosby's "Quality Is Free" (1979) demonstrated that every dollar spent on prevention saves $10 in failure costs.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>PAIE</strong> = Prevention, Appraisal, Internal, External (cheapest to most expensive)</p></div>
+<h4>Point 3: Cost of Poor Quality (COPQ)</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; COPQ Details</div>
+<p><strong>Visible costs:</strong> Warranty, scrap, rework (only 3-5% of total COPQ)</p>
+<p><strong>Hidden costs:</strong> Lost customers, reputation damage, employee morale, overtime, expediting</p>
+<p><strong>Typical COPQ:</strong> 15-25% of sales revenue in most organizations</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>Philip Crosby's book "Quality Is Free" (1979) demonstrated that every dollar spent on prevention saves $10 in failure costs.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Remember the cost hierarchy: Prevention &lt; Appraisal &lt; Internal Failure &lt; External Failure. A common exam question asks to calculate total quality costs and explain why investing in prevention reduces total costs.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"PAIE"</strong> &#x2014; Prevention, Appraisal, Internal, External (cheapest to most expensive)</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Cost hierarchy: Prevention &lt; Appraisal &lt; Internal Failure &lt; External Failure</li>
-<li>COPQ = 15-25% of sales revenue (only 3-5% visible, rest hidden)</li>
-<li>Higher quality → LOWER costs (Deming's counterintuitive insight)</li>
+<li>4 quality costs: Prevention (lowest) &#x2192; Appraisal &#x2192; Internal Failure &#x2192; External Failure (highest)</li>
+<li>COPQ = 15-25% of sales revenue</li>
+<li>Only 3-5% of COPQ is visible; rest is hidden</li>
 </ul></div>
 </div>
 
@@ -202,27 +654,35 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u5">
 <h3 id="u5">Unit 5: TQM and Business Strategy</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU5">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU5">&#x1F4AC; Ask AI</button></div>
-<div id="sU5" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Strategic Quality Planning:</strong> Integrating quality goals into overall business strategy for competitive advantage.</p>
-<p><strong>Baldrige Criteria:</strong> Framework for performance excellence — Leadership, Strategy, Customers, Measurement, Workforce, Operations, Results.</p>
-</div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Baldrige Criteria (7 Categories)</div>
-<table><tr><th>#</th><th>Category</th><th>Weight</th></tr>
+<div id="sU5"></div>
+<h4>Point 1: Baldrige Criteria (7 Categories)</h4>
+<div class="db"><table>
+<tr><th>#</th><th>Category</th><th>Weight</th></tr>
 <tr><td>1</td><td>Leadership</td><td>12%</td></tr>
 <tr><td>2</td><td>Strategic Planning</td><td>8%</td></tr>
 <tr><td>3</td><td>Customer Focus</td><td>8%</td></tr>
 <tr><td>4</td><td>Measurement, Analysis, Knowledge Mgmt</td><td>9%</td></tr>
 <tr><td>5</td><td>Workforce Focus</td><td>8%</td></tr>
 <tr><td>6</td><td>Operations Focus</td><td>8%</td></tr>
-<tr><td>7</td><td>Results</td><td>45%</td></tr></table>
+<tr><td>7</td><td>Results</td><td>45%</td></tr>
+</table></div>
+<h4>Point 2: TQM as Strategic Tool</h4>
+<div class="br"><span class="sb s-b">Competitive Advantage</span><span class="sb s-b">Customer Retention</span><span class="sb s-b">Market Differentiation</span><span class="sb s-b">Operational Efficiency</span></div>
+<h4>Point 3: Strategic Quality Planning Process</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Define Vision &amp; Mission</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Identify Quality Goals</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Develop Strategies</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Allocate Resources</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Implement &amp; Monitor</div></div>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Malcolm Baldrige Award winners like Motorola, Xerox, and Ritz-Carlton used TQM as a strategic differentiator.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>LSCM-WOR</strong> = Leadership(12%), Strategic(8%), Customer(8%), Measurement(9%), Workforce(8%), Operations(8%), Results(45%)</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"LSCM-WOR"</strong> &#x2014; Leadership(12%), Strategic(8%), Customer(8%), Measurement(9%), Workforce(8%), Operations(8%), Results(45%)</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>TQM is a strategic weapon — competitive advantage through quality</li>
-<li>Baldrige heavily weights Results (45%) — outcomes over processes</li>
-<li>Strategic quality planning: Vision → Goals → Strategies → Resources → Implement</li>
+<li>TQM is a strategic weapon, not just operational tool</li>
+<li>Baldrige Criteria: Results weighted 45%</li>
+<li>Strategic quality planning: Vision &#x2192; Goals &#x2192; Strategies &#x2192; Resources &#x2192; Monitor</li>
 </ul></div>
 </div>
 
@@ -230,158 +690,247 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u6">
 <h3 id="u6">Unit 6: Quality-Centred Strategic Planning</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU6">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU6">&#x1F4AC; Ask AI</button></div>
-<div id="sU6" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Benchmarking:</strong> Comparing practices against best-in-class organizations to identify improvement opportunities.</p>
-<p><strong>EFQM:</strong> European Foundation for Quality Management — holistic excellence model with 9 criteria (5 enablers + 4 results).</p>
-</div>
-<div class="visual-diagram"><h5>&#x1F4CA; EFQM Excellence Model</h5>
+<div id="sU6"></div>
+<h4>Point 1: EFQM Excellence Model</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; EFQM Model (50/50)</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div style="display:flex;gap:0.5rem;width:100%;justify-content:center">
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Leadership</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">People</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Strategy</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Partnerships</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Processes</div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node"><strong>Leadership</strong></div>
+<div class="vd-node"><strong>People</strong></div>
+<div class="vd-node"><strong>Strategy</strong></div>
+<div class="vd-node"><strong>Partnerships</strong></div>
+<div class="vd-node"><strong>Processes</strong></div>
 </div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193; ENABLERS (50%) → RESULTS (50%) &#x2193;</div>
-<div style="display:flex;gap:0.5rem;width:100%;justify-content:center">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Customer Results</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">People Results</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Society Results</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">Business Results</div>
+<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193; (50% Enablers)</div>
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center">
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Customer Results</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>People Results</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Society Results</strong></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Business Results</strong></div>
 </div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Xerox used benchmarking in the 1980s to study Japanese competitors' quality practices, leading to a complete manufacturing overhaul and recovery from near-bankruptcy.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>EFQM-LSP-PP</strong> = Enablers: Leadership, People, Strategy, Partnerships, Processes; Results: Customer, People, Society, Business</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Xerox Corporation</strong> used benchmarking in the 1980s to study Japanese competitors' quality practices, leading to a complete overhaul of their manufacturing processes.</p>
+</div>
+<h4>Point 2: Benchmarking</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Benchmarking Types</div>
+<table>
+<tr><th>Type</th><th>Compare Against</th><th>Example</th></tr>
+<tr><td>Internal</td><td>Other departments</td><td>Plant A vs Plant B</td></tr>
+<tr><td>Competitive</td><td>Direct competitors</td><td>Toyota vs Honda</td></tr>
+<tr><td>Functional</td><td>Same function, different industry</td><td>Order processing across industries</td></tr>
+<tr><td>Generic</td><td>Best-in-class any industry</td><td>Amazon's logistics</td></tr>
+</table>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Know the difference between EFQM (European, self-assessment focused) and Baldrige (American, award focused). Both use similar enabler-results logic but differ in criteria weighting.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"EFQM-LSP-PP"</strong> &#x2014; Enablers: Leadership, People, Strategy, Partnerships, Processes; Results: Customer, People, Society, Business</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>EFQM = European self-assessment model; Baldrige = American award model</li>
-<li>Both use enabler-results logic with 50/50 weighting</li>
-<li>Benchmarking = compare with best-in-class, not just competitors</li>
+<li>EFQM = European model (self-assessment focused)</li>
+<li>Baldrige = American model (award focused)</li>
+<li>Benchmarking: Internal, Competitive, Functional, Generic</li>
 </ul></div>
 </div>
+
+<!-- ==================== BLOCK 03 ==================== -->
+<h2 id="block3">Block-03: Tools &amp; Techniques</h2>
 
 <!-- UNIT 7 -->
 <div class="unit" id="u7">
 <h3 id="u7">Unit 7: Statistical Quality Control (SQC)</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU7">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU7">&#x1F4AC; Ask AI</button></div>
-<div id="sU7" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>SQC:</strong> Application of statistical methods to monitor and control processes.</p>
-<p><strong>Common Cause:</strong> Natural, inherent variation — process is stable and in control.</p>
-<p><strong>Special Cause:</strong> Specific, identifiable factors — process is out of control.</p>
-<p><strong>Process Capability:</strong> Ability to produce within specification limits (Cp, Cpk).</p>
+<div id="sU7">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>7 QC Tools</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/8h9i0j1k2lM" title="7 QC Tools" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Control Charts</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/9i0j1k2l3mN" title="Control Charts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; 7 Basic Quality Tools (C-C-C-H-P-S-F)</div>
-<table><tr><th>#</th><th>Tool</th><th>Purpose</th><th>When to Use</th></tr>
-<tr><td>1</td><td>Cause-and-Effect (Fishbone)</td><td>Identify root causes</td><td>Problem cause unknown</td></tr>
-<tr><td>2</td><td>Check Sheet</td><td>Data collection</td><td>Gathering facts</td></tr>
-<tr><td>3</td><td>Control Chart</td><td>Monitor stability</td><td>Tracking over time</td></tr>
-<tr><td>4</td><td>Histogram</td><td>Frequency distribution</td><td>Viewing patterns</td></tr>
-<tr><td>5</td><td>Pareto Chart</td><td>Prioritize (80/20)</td><td>Deciding what to fix</td></tr>
-<tr><td>6</td><td>Scatter Diagram</td><td>Variable relationship</td><td>Testing correlations</td></tr>
-<tr><td>7</td><td>Flowchart</td><td>Map process steps</td><td>Understanding process</td></tr></table>
-</div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Process Capability Formulas</div>
-<p><strong>Cp = (USL - LSL) / 6σ</strong> — Process potential (can it fit?)</p>
-<p><strong>Cpk = min[(USL - μ)/3σ, (μ - LSL)/3σ]</strong> — Actual capability (is it fitting?)</p>
-<table><tr><th>Cp Value</th><th>Interpretation</th></tr>
+<h4>Point 1: Seven Basic Quality Tools (CCCHPSF)</h4>
+<div class="db"><table>
+<tr><th>#</th><th>Tool</th><th>Purpose</th><th>When to Use</th></tr>
+<tr><td>1</td><td><strong>Cause-and-Effect Diagram</strong> (Fishbone)</td><td>Identify root causes</td><td>Problem cause unknown</td></tr>
+<tr><td>2</td><td><strong>Check Sheet</strong></td><td>Systematic data collection</td><td>Gathering facts</td></tr>
+<tr><td>3</td><td><strong>Control Chart</strong></td><td>Monitor process stability</td><td>Tracking over time</td></tr>
+<tr><td>4</td><td><strong>Histogram</strong></td><td>Frequency distribution</td><td>Viewing data patterns</td></tr>
+<tr><td>5</td><td><strong>Pareto Chart</strong></td><td>Prioritize problems (80/20)</td><td>Deciding what to fix first</td></tr>
+<tr><td>6</td><td><strong>Scatter Diagram</strong></td><td>Relationship between variables</td><td>Testing correlations</td></tr>
+<tr><td>7</td><td><strong>Flowchart</strong></td><td>Map process steps</td><td>Understanding a process</td></tr>
+</table></div>
+<h4>Point 2: Process Capability Formulas</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Formulas</div>
+<p><strong>Cp = (USL - LSL) / 6&#x3C3;</strong></p>
+<p><strong>Cpk = min[(USL - &#x3BC;)/3&#x3C3;, (&#x3BC; - LSL)/3&#x3C3;]</strong></p>
+<table>
+<tr><th>Cp Value</th><th>Interpretation</th></tr>
 <tr><td>Cp &lt; 1.0</td><td>Process NOT capable</td></tr>
-<tr><td>Cp = 1.0</td><td>Barely capable (3σ)</td></tr>
-<tr><td>Cp ≥ 1.33</td><td>Capable (4σ)</td></tr>
-<tr><td>Cp ≥ 1.67</td><td>Highly capable (5σ)</td></tr>
-<tr><td>Cp ≥ 2.0</td><td>Six Sigma capable</td></tr></table>
-<p><strong>Cpk = Cp</strong> → centered; <strong>Cpk &lt; Cp</strong> → off-center; <strong>Cpk ≥ 1.33</strong> → centered AND capable</p>
+<tr><td>Cp = 1.0</td><td>Barely capable (3&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 1.33</td><td>Capable (4&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 1.67</td><td>Highly capable (5&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 2.0</td><td>Six Sigma capable</td></tr>
+</table>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bottle cap factory: USL=26.4mm, LSL=25.6mm, Mean=26.0mm, σ=0.1mm. Cp = (26.4-25.6)/(6×0.1) = 1.33 → Process is capable.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>CCCHPSF</strong> = Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, Flowchart</p></div>
+<h4>Point 3: Control Charts Details</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Control Chart Types</div>
+<table>
+<tr><th>Type</th><th>Chart</th><th>Purpose</th></tr>
+<tr><td>Variables</td><td>X-bar chart</td><td>Central tendency</td></tr>
+<tr><td>Variables</td><td>R chart</td><td>Dispersion (range)</td></tr>
+<tr><td>Attributes</td><td>p chart</td><td>Proportion defective</td></tr>
+<tr><td>Attributes</td><td>c chart</td><td>Number of defects</td></tr>
+</table>
+<p><strong>Control Limits:</strong> UCL/LCL = Mean &#x00B1; 3&#x3C3;</p>
+<p><strong>Rule:</strong> Points outside control limits = special cause variation &#x2192; investigate</p>
+</div>
+<h4>Point 4: Cpk Interpretation</h4>
+<div class="db"><table>
+<tr><th>Cpk Value</th><th>Interpretation</th></tr>
+<tr><td>Cpk = Cp</td><td>Process is centered</td></tr>
+<tr><td>Cpk &lt; Cp</td><td>Process is off-center</td></tr>
+<tr><td>Cpk &#x2265; 1.33</td><td>Centered AND capable</td></tr>
+</table></div>
+<h4>Point 5: Acceptance Sampling</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Sampling Risks</div>
+<p><strong>Producer's risk (&#x3B1;):</strong> Rejecting a good lot (Type I error)</p>
+<p><strong>Consumer's risk (&#x3B2;):</strong> Accepting a bad lot (Type II error)</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>A bottle cap factory measures cap diameter. USL = 26.4mm, LSL = 25.6mm, Mean = 26.0mm, &#x3C3; = 0.1mm. Cp = (26.4-25.6)/(6&#xD7;0.1) = 1.33 &#x2192; Process is capable.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Process capability questions are very common. Always calculate both Cp and Cpk &#x2014; Cp tells you if the process CAN meet specs, Cpk tells you if it IS meeting specs.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"CCCHPSF"</strong> &#x2014; Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, Flowchart</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Common cause = natural variation; Special cause = investigate</li>
-<li>7 tools: Fishbone, Check Sheet, Control Chart, Histogram, Pareto, Scatter, Flowchart</li>
-<li>Cp ≥ 1.33 = capable; Cpk ≥ 1.33 = centered AND capable</li>
-<li>Control limits = Mean ± 3σ</li>
+<li>7 QC tools: Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, Flowchart</li>
+<li>Cp = process capability; Cpk = centering + capability</li>
+<li>Control charts: Variables (X-bar, R) and Attributes (p, c)</li>
+<li>Acceptance sampling: Producer's risk vs Consumer's risk</li>
 </ul></div>
 </div>
 
 <!-- UNIT 8 -->
 <div class="unit" id="u8">
-<h3 id="u8">Unit 8: Tools and Techniques of TQM</h3>
+<h3 id="u8">Unit 8: Six Sigma &amp; 5S</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU8">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU8">&#x1F4AC; Ask AI</button></div>
-<div id="sU8" class="ai-response-box" style="display:none;"></div>
+<div id="sU8">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>Six Sigma DMAIC</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/0j1k2l3m4nO" title="Six Sigma DMAIC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>5S Methodology</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/1k2l3m4n5oP" title="5S" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
+</div>
+<h4>Point 1: Six Sigma DMAIC</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">D</div><div class="fc-l">Define<br><small>Problem &amp; Scope</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">M</div><div class="fc-l">Measure<br><small>Current Performance</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">A</div><div class="fc-l">Analyze<br><small>Root Causes</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">I</div><div class="fc-l">Improve<br><small>Implement Solutions</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">C</div><div class="fc-l">Control<br><small>Sustain Results</small></div></div>
+</div>
+<h4>Point 2: Six Sigma Levels</h4>
+<div class="db"><table>
+<tr><th>Sigma Level</th><th>DPMO</th><th>Yield</th><th>Meaning</th></tr>
+<tr><td>1&#x3C3;</td><td>690,000</td><td>31%</td><td>Poor quality</td></tr>
+<tr><td>2&#x3C3;</td><td>308,000</td><td>69.2%</td><td>Below average</td></tr>
+<tr><td>3&#x3C3;</td><td>66,800</td><td>93.3%</td><td>Industry average</td></tr>
+<tr><td>4&#x3C3;</td><td>6,210</td><td>99.4%</td><td>Good quality</td></tr>
+<tr><td>5&#x3C3;</td><td>230</td><td>99.98%</td><td>Excellent</td></tr>
+<tr><td><strong>6&#x3C3;</strong></td><td><strong>3.4</strong></td><td><strong>99.9997%</strong></td><td><strong>World-class</strong></td></tr>
+</table></div>
+<h4>Point 3: 5S Methodology</h4>
+<div class="db"><table>
+<tr><th>Japanese</th><th>English</th><th>Action</th><th>Purpose</th></tr>
+<tr><td><strong>Seiri</strong></td><td>Sort</td><td>Remove unnecessary items</td><td>Reduce clutter</td></tr>
+<tr><td><strong>Seiton</strong></td><td>Set in Order</td><td>Organize everything</td><td>Easy access</td></tr>
+<tr><td><strong>Seiso</strong></td><td>Shine</td><td>Clean workplace</td><td>Maintain standards</td></tr>
+<tr><td><strong>Seiketsu</strong></td><td>Standardize</td><td>Create standards</td><td>Consistency</td></tr>
+<tr><td><strong>Shitsuke</strong></td><td>Sustain</td><td>Maintain discipline</td><td>Habit formation</td></tr>
+</table></div>
+<h4>Point 4: Advanced Quality Tools</h4>
+<div class="db"><table>
+<tr><th>Tool</th><th>Purpose</th><th>Key Idea</th></tr>
+<tr><td><strong>QFD</strong></td><td>Translate customer needs</td><td>House of Quality</td></tr>
+<tr><td><strong>FMEA</strong></td><td>Identify potential failures</td><td>Risk Priority Number</td></tr>
+<tr><td><strong>Kaizen</strong></td><td>Continuous small improvements</td><td>Everyone, every day</td></tr>
+<tr><td><strong>Poka-Yoke</strong></td><td>Error-proofing</td><td>Design out errors</td></tr>
+<tr><td><strong>Quality Circles</strong></td><td>Small group problem-solving</td><td>5-10 voluntary employees</td></tr>
+</table></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Six Sigma:</strong> Data-driven methodology targeting 3.4 DPMO. Uses DMAIC (existing) and DMADV (new).</p>
-<p><strong>Kaizen:</strong> "Change for better" — continuous, incremental improvement by every employee.</p>
-<p><strong>QFD:</strong> Translating customer requirements into technical specs using "House of Quality."</p>
-<p><strong>FMEA:</strong> Identifying potential failure modes and prioritizing using Risk Priority Number (RPN).</p>
-<p><strong>Poka-Yoke:</strong> "Mistake-proofing" — designing processes so errors are impossible or immediately detected.</p>
+<p><strong>QFD:</strong> Translates customer "whats" into technical "hows" using House of Quality matrix</p>
+<p><strong>FMEA:</strong> Systematic method for identifying potential failure modes using Risk Priority Number (RPN)</p>
+<p><strong>Poka-Yoke:</strong> Japanese for "mistake-proofing" &#x2014; designing processes so errors are impossible</p>
 </div>
-<div class="visual-diagram"><h5>&#x1F4CA; Six Sigma DMAIC Flow</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div style="display:flex;gap:0.3rem;width:100%;justify-content:center">
-<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">DEFINE<br>Problem, Scope, Goals</div>
-<div style="font-size:1rem;color:rgba(255,107,107,0.6)">&#x2192;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">MEASURE<br>Current Perf., Data</div>
-<div style="font-size:1rem;color:rgba(255,215,0,0.6)">&#x2192;</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">ANALYZE<br>Root Causes</div>
-<div style="font-size:1rem;color:rgba(9,132,227,0.6)">&#x2192;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">IMPROVE<br>Solutions, Test</div>
-<div style="font-size:1rem;color:rgba(0,184,148,0.6)">&#x2192;</div>
-<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4);flex:1;text-align:center;padding:0.5rem;border-radius:8px;font-size:0.8rem">CONTROL<br>Sustain, Monitor</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>GE</strong> saved $12 billion over 5 years using Six Sigma. Jack Welch required all managers to be Six Sigma trained.</p>
 </div>
-</div></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Six Sigma Levels</div>
-<table><tr><th>Sigma</th><th>DPMO</th><th>Yield</th><th>Meaning</th></tr>
-<tr><td>1σ</td><td>690,000</td><td>31%</td><td>Poor quality</td></tr>
-<tr><td>2σ</td><td>308,000</td><td>69.2%</td><td>Below average</td></tr>
-<tr><td>3σ</td><td>66,800</td><td>93.3%</td><td>Industry average</td></tr>
-<tr><td>4σ</td><td>6,210</td><td>99.4%</td><td>Good quality</td></tr>
-<tr><td>5σ</td><td>230</td><td>99.98%</td><td>Excellent</td></tr>
-<tr><td style="color:#ffd700;font-weight:700">6σ</td><td style="color:#ffd700;font-weight:700">3.4</td><td style="color:#ffd700;font-weight:700">99.9997%</td><td style="color:#ffd700;font-weight:700">World-class</td></tr></table>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Six Sigma questions often ask about DMAIC phases. Remember: Define = problem statement, Measure = data collection, Analyze = root cause, Improve = solution, Control = sustain.</p>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 5S Methodology</div>
-<table><tr><th>Japanese</th><th>English</th><th>Action</th></tr>
-<tr><td>Seiri</td><td>Sort</td><td>Remove unnecessary items</td></tr>
-<tr><td>Seiton</td><td>Set in Order</td><td>Organize everything</td></tr>
-<tr><td>Seiso</td><td>Shine</td><td>Clean workplace</td></tr>
-<tr><td>Seiketsu</td><td>Standardize</td><td>Create standards</td></tr>
-<tr><td>Shitsuke</td><td>Sustain</td><td>Maintain discipline</td></tr></table>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"Do Math And Improve Consistently"</strong> &#x2014; DMAIC phases</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>GE saved $12 billion over 5 years using Six Sigma. Jack Welch required all managers to be Six Sigma trained.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>DMAIC</strong> = <strong>D</strong>o <strong>M</strong>ath <strong>A</strong>nd <strong>I</strong>mprove <strong>C</strong>onsistently</p></div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Six Sigma = 3.4 DPMO; DMAIC = Define-Measure-Analyze-Improve-Control</li>
-<li>5S = Sort, Set in Order, Shine, Standardize, Sustain</li>
-<li>QFD = House of Quality; FMEA = Risk Priority Number; Poka-Yoke = mistake-proofing</li>
-<li>Kaizen = small continuous improvements; Six Sigma = breakthrough improvements</li>
+<li>Six Sigma = 3.4 DPMO, uses DMAIC methodology</li>
+<li>5S = Sort, Set, Shine, Standardize, Sustain</li>
+<li>Advanced tools: QFD, FMEA, Kaizen, Poka-Yoke, Quality Circles</li>
 </ul></div>
 </div>
+
+<!-- ==================== BLOCK 04 ==================== -->
+<h2 id="block4">Block-04: Organization &amp; Leadership</h2>
 
 <!-- UNIT 9 -->
 <div class="unit" id="u9">
 <h3 id="u9">Unit 9: Organization for Quality</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU9">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU9">&#x1F4AC; Ask AI</button></div>
-<div id="sU9" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Steering Committee:</strong> Top management body for strategic direction on TQM.</p>
-<p><strong>Quality Council:</strong> Cross-functional team developing quality policies and coordinating improvement.</p>
-<p><strong>Cross-Functional Team:</strong> Members from different departments solving boundary-spanning quality problems.</p>
-<p><strong>Balanced Scorecard:</strong> Performance measurement across Financial, Customer, Internal Processes, Learning &amp; Growth.</p>
-</div>
-<div class="visual-diagram"><h5>&#x1F4CA; TQM Implementation Structure</h5>
+<div id="sU9"></div>
+<h4>Point 1: TQM Implementation Structure</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; TQM Organization</h5>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">STEERING COMMITTEE (Top management oversight)</div>
-<div style="font-size:1.2rem;color:rgba(255,107,107,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">QUALITY COUNCIL (Policy &amp; planning)</div>
-<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">TQM COORDINATOR (Day-to-day management)</div>
-<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">QUALITY CIRCLES (Frontline problem-solving)</div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:70%"><strong>STEERING COMMITTEE</strong> &#x2190; Top management oversight</div>
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4);width:60%"><strong>QUALITY COUNCIL</strong> &#x2190; Cross-functional leadership</div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:50%"><strong>TQM COORDINATOR</strong> &#x2190; Day-to-day management</div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4);width:40%"><strong>QUALITY CIRCLES</strong> &#x2190; Frontline problem-solving</div>
 </div></div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Toyota's quality circles involve frontline workers meeting weekly to identify and solve production issues — this bottom-up approach is now replicated globally.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>SCQC-TC</strong> = Steering Committee → Quality Council → TQM Coordinator → Quality Circles</p></div>
+<h4>Point 2: Teams in TQM</h4>
+<div class="db"><table>
+<tr><th>Team Type</th><th>Characteristics</th><th>Best For</th></tr>
+<tr><td><strong>Cross-functional</strong></td><td>Members from different departments</td><td>Complex problems spanning boundaries</td></tr>
+<tr><td><strong>Self-managed</strong></td><td>Autonomous decision-making</td><td>Routine operations</td></tr>
+<tr><td><strong>Project teams</strong></td><td>Focused on specific projects</td><td>One-time improvement initiatives</td></tr>
+<tr><td><strong>Quality improvement</strong></td><td>Permanent improvement focus</td><td>Ongoing quality enhancement</td></tr>
+</table></div>
+<h4>Point 3: Balanced Scorecard</h4>
+<div class="visual-diagram"><h5>&#x1F4CA; Balanced Scorecard (4 Perspectives)</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(108,92,231,0.2);border:1px solid rgba(108,92,231,0.4)"><strong>Financial</strong><br><small>ROI, Revenue growth</small></div>
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>Customer</strong><br><small>Satisfaction, Retention</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>Internal Processes</strong><br><small>Efficiency, Quality</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>Learning &amp; Growth</strong><br><small>Training, Innovation</small></div>
+</div></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Explain why cross-functional teams are essential &#x2014; quality problems often span departmental boundaries.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Toyota's</strong> quality circles involve frontline workers meeting weekly to identify and solve production issues. This bottom-up approach has been credited with Toyota's legendary manufacturing quality.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"SCQC-TC"</strong> &#x2014; Steering Committee, Quality Council, TQM Coordinator, Quality Circles</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>4-level structure: Steering Committee → Quality Council → TQM Coordinator → Quality Circles</li>
-<li>Cross-functional teams essential — quality problems span boundaries</li>
+<li>4-level structure: Steering Committee &#x2192; Quality Council &#x2192; TQM Coordinator &#x2192; Quality Circles</li>
+<li>Quality is everyone's job</li>
+<li>Team types: Cross-functional, Self-managed, Project, Quality improvement</li>
 <li>Balanced Scorecard: Financial, Customer, Process, Learning</li>
 </ul></div>
 </div>
@@ -390,273 +939,472 @@ html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:#0606
 <div class="unit" id="u10">
 <h3 id="u10">Unit 10: Quality Culture and Leadership</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU10">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU10">&#x1F4AC; Ask AI</button></div>
-<div id="sU10" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Quality Culture:</strong> Shared values, beliefs, attitudes, and behaviors prioritizing quality in every activity.</p>
-<p><strong>Transformational Leadership:</strong> Inspiring employees to exceed expectations by appealing to purpose.</p>
-<p><strong>Servant Leadership:</strong> Leader's role is to serve employees by removing obstacles.</p>
-<p><strong>Employee Empowerment:</strong> Giving authority, tools, and responsibility for quality decisions.</p>
+<div id="sU10"></div>
+<h4>Point 1: Quality Culture Characteristics</h4>
+<div class="br"><span class="sb s-b">Customer Obsession</span><span class="sb s-b">Data-Driven Decisions</span><span class="sb s-b">Continuous Learning</span><span class="sb s-b">Open Communication</span><span class="sb s-b">Team Collaboration</span><span class="sb s-b">Zero-Defect Mindset</span></div>
+<h4>Point 2: Leadership Roles in TQM</h4>
+<div class="br"><span class="sb s-b">Set Vision</span><span class="sb s-b">Nurture Culture</span><span class="sb s-b">Allocate Resources</span><span class="sb s-b">Remove Barriers</span><span class="sb s-b">Recognize Achievements</span><span class="sb s-b">Lead by Example</span></div>
+<h4>Point 3: Leadership Styles for TQM</h4>
+<div class="db"><table>
+<tr><th>Style</th><th>Approach</th><th>TQM Fit</th></tr>
+<tr><td><strong>Transformational</strong></td><td>Inspire &amp; motivate beyond expectations</td><td>Best for TQM culture change</td></tr>
+<tr><td><strong>Servant</strong></td><td>Leader serves employees, removes obstacles</td><td>Empowers quality teams</td></tr>
+<tr><td><strong>Empowering</strong></td><td>Give authority &amp; responsibility</td><td>Enables frontline quality decisions</td></tr>
+</table></div>
+<h4>Point 4: Motivation &amp; Commitment Drivers</h4>
+<div class="br"><span class="sb s-b">Recognition Programs</span><span class="sb s-b">Training &amp; Development</span><span class="sb s-b">Empowerment</span><span class="sb s-b">Career Growth</span><span class="sb s-b">Fair Compensation</span></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Leadership questions often ask about the difference between "managing quality" and "leading quality." Managing = systems &amp; processes; Leading = vision &amp; culture.</p>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Quality Culture Characteristics</div>
-<p>Customer obsession • Data-driven decisions • Continuous learning • Open communication • Team collaboration • Zero-defect mindset</p>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p>At <strong>Tata Steel</strong>, the CEO personally participates in quality circle presentations, signaling that quality is a top priority.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>At Tata Steel, the CEO personally participates in quality circle presentations, signaling that quality is a top priority for the entire organization.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>VC-DL-TR</strong> = Vision &amp; Culture, Data-driven, Learning, Team collaboration, Recognition</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"VC-DL-TR"</strong> &#x2014; Vision &amp; Culture, Data-driven, Learning, Team collaboration, Recognition</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>Leadership = #1 enabler of TQM; culture cannot be imposed, must be cultivated</li>
-<li>Managing quality = systems &amp; processes; Leading quality = vision &amp; culture</li>
-<li>Leaders must model the behavior they expect</li>
+<li>Leadership = #1 enabler of TQM</li>
+<li>Managing quality = systems; Leading quality = vision &amp; culture</li>
+<li>Best styles: Transformational, Servant, Empowering</li>
+<li>Motivation drivers: Recognition, Training, Empowerment, Career, Compensation</li>
 </ul></div>
 </div>
+
+<!-- ==================== BLOCK 05 ==================== -->
+<h2 id="block5">Block-05: Systems &amp; Standards</h2>
 
 <!-- UNIT 11 -->
 <div class="unit" id="u11">
 <h3 id="u11">Unit 11: ISO 9000 Quality Management System</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU11">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU11">&#x1F4AC; Ask AI</button></div>
-<div id="sU11" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>ISO 9001:2015:</strong> International QMS standard — certifiable, process approach, risk-based thinking.</p>
-<p><strong>QMS:</strong> Formalized system documenting policies, procedures, responsibilities for quality objectives.</p>
-<p><strong>Risk-Based Thinking:</strong> Systematic approach to identifying risks/opportunities (replaces "preventive action").</p>
+<div id="sU11">
+<div class="video-section">
+<button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
+<div class="video-section-content">
+<div class="video-grid">
+<div class="video-card"><div class="video-header"><span class="video-icon">&#9654;</span><h5>ISO 9001 Explained</h5></div><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/2l3m4n5o6pQ" title="ISO 9001" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div></div>
+</div></div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; ISO 9001:2015 Structure (10 Clauses)</div>
-<table><tr><th>Clause</th><th>Title</th><th>Key Content</th></tr>
-<tr><td>1-3</td><td>Scope, References, Terms</td><td>Standard coverage &amp; terminology</td></tr>
+<h4>Point 1: ISO 9000 Family</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ISO 9000 Standards</div>
+<table>
+<tr><th>Standard</th><th>Purpose</th><th>Certifiable?</th></tr>
+<tr><td>ISO 9000</td><td>QMS fundamentals and vocabulary</td><td>No</td></tr>
+<tr><td><strong>ISO 9001</strong></td><td>QMS requirements</td><td><strong>Yes</strong></td></tr>
+<tr><td>ISO 9004</td><td>QMS guidelines for performance improvement</td><td>No</td></tr>
+<tr><td>ISO 19011</td><td>Guidelines for auditing management systems</td><td>No</td></tr>
+</table>
+</div>
+<h4>Point 2: ISO 9001:2015 Structure (10 Clauses)</h4>
+<div class="db"><table>
+<tr><th>Clause</th><th>Title</th><th>Key Content</th></tr>
+<tr><td>1</td><td>Scope</td><td>What the standard covers</td></tr>
+<tr><td>2</td><td>Normative References</td><td>Referenced documents</td></tr>
+<tr><td>3</td><td>Terms &amp; Definitions</td><td>Key terminology</td></tr>
 <tr><td>4</td><td>Context of Organization</td><td>Internal/external issues, interested parties</td></tr>
 <tr><td>5</td><td>Leadership</td><td>Top management commitment, quality policy</td></tr>
 <tr><td>6</td><td>Planning</td><td>Risk assessment, quality objectives</td></tr>
 <tr><td>7</td><td>Support</td><td>Resources, competence, communication</td></tr>
 <tr><td>8</td><td>Operation</td><td>Planning, control, production, delivery</td></tr>
 <tr><td>9</td><td>Performance Evaluation</td><td>Monitoring, measurement, internal audit</td></tr>
-<tr><td>10</td><td>Improvement</td><td>Nonconformity, corrective action, continual improvement</td></tr></table>
+<tr><td>10</td><td>Improvement</td><td>Nonconformity, corrective action, continual improvement</td></tr>
+</table></div>
+<h4>Point 3: 7 Quality Management Principles (C-L-E-P-I-E-R)</h4>
+<div class="br"><span class="sb s-b">Customer Focus</span><span class="sb s-b">Leadership</span><span class="sb s-b">Engagement of People</span><span class="sb s-b">Process Approach</span><span class="sb s-b">Improvement</span><span class="sb s-b">Evidence-based Decisions</span><span class="sb s-b">Relationship Management</span></div>
+<h4>Point 4: Key Changes in 2015 Version</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 2015 vs 2008 Changes</div>
+<p><strong>Risk-based thinking</strong> replaces preventive action</p>
+<p><strong>No mandatory management representative</strong></p>
+<p><strong>New requirements</strong> for context of the organization</p>
+<p><strong>Less documentation</strong> required (no mandatory quality manual)</p>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; 7 QMPs (C-L-E-P-I-E-R)</div>
-<p>1. <strong>C</strong>ustomer focus &bull; 2. <strong>L</strong>eadership &bull; 3. <strong>E</strong>ngagement of people &bull; 4. <strong>P</strong>rocess approach &bull; 5. <strong>I</strong>mprovement &bull; 6. <strong>E</strong>vidence-based decision making &bull; 7. <strong>R</strong>elationship management</p>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>ISO 9001:2015 replaced the 2008 version with key changes: risk-based thinking replaces preventive action, no mandatory management representative, and new requirements for context of the organization.</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Over 1 million organizations in 170+ countries hold ISO 9001 certification — the most widely used management standard in the world.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>S-N-C-L-P-S-O-E-I</strong> = Scope, Normative, Context, Leadership, Planning, Support, Operation, Evaluation, Improvement</p></div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"SL-P-OP-I"</strong> &#x2014; Scope, Leadership, Planning, Support, Operation, Performance, Improvement</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>ISO 9001 is the only certifiable standard in the ISO 9000 family</li>
-<li>10 clauses; 7 Quality Management Principles</li>
-<li>2015 changes: risk-based thinking, no mandatory management rep, context of organization</li>
+<li>ISO 9001 = only certifiable standard in ISO 9000 family</li>
+<li>2015 version: risk-based thinking, context of organization</li>
+<li>10 clauses: Scope through Improvement</li>
+<li>7 QMPs: Customer, Leadership, Engagement, Process, Improvement, Evidence, Relationship</li>
 </ul></div>
 </div>
 
 <!-- UNIT 12 -->
 <div class="unit" id="u12">
-<h3 id="u12">Unit 12: ISO 14000 Environmental Management System</h3>
+<h3 id="u12">Unit 12: ISO 14000 Environmental Management</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU12">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU12">&#x1F4AC; Ask AI</button></div>
-<div id="sU12" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>EMS:</strong> Systematic framework for managing environmental responsibilities.</p>
-<p><strong>Environmental Aspect:</strong> Element of activities that interacts with environment (e.g., emissions, waste).</p>
-<p><strong>Environmental Impact:</strong> Change to environment resulting from an aspect.</p>
-<p><strong>Life Cycle Perspective:</strong> Considering impacts from cradle to grave (raw materials → disposal).</p>
+<div id="sU12">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; ISO 14000 Family</div>
+<table>
+<tr><th>Standard</th><th>Purpose</th></tr>
+<tr><td>ISO 14001</td><td>EMS requirements (certifiable)</td></tr>
+<tr><td>ISO 14004</td><td>EMS guidelines</td></tr>
+<tr><td>ISO 14020</td><td>Environmental labels</td></tr>
+<tr><td>ISO 14040</td><td>Life cycle assessment</td></tr>
+<tr><td>ISO 14064</td><td>Greenhouse gas accounting</td></tr>
+</table>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Unilever and P&amp;G use ISO 14001 to manage environmental footprint across global supply chains.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>ALP-CER</strong> = Aspects, Life cycle, Policy, Compliance, Emergency, Review</p></div>
+</div>
+<h4>Point 2: ISO 14001 Key Elements</h4>
+<div class="br"><span class="sb s-b">Environmental Aspects</span><span class="sb s-b">Life Cycle Perspective</span><span class="sb s-b">Environmental Policy</span><span class="sb s-b">Compliance Obligations</span><span class="sb s-b">Emergency Preparedness</span></div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Concepts</div>
+<p><strong>Environmental Aspect:</strong> Element of activities that interacts with environment (e.g., emissions, waste)</p>
+<p><strong>Environmental Impact:</strong> Change to environment resulting from an aspect (e.g., air pollution)</p>
+<p><strong>Life Cycle Perspective:</strong> Considering impacts from cradle to grave (raw materials &#x2192; disposal)</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>A common exam question compares ISO 9001 and ISO 14001 &#x2014; both use the same HLS with 10 clauses, but ISO 9001 focuses on customer requirements while ISO 14001 focuses on environmental aspects and regulatory compliance.</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Infosys</strong> achieved carbon neutrality using ISO 14001 framework, reducing carbon footprint by 75%.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>ISO 14001 = environmental management; uses same HLS as ISO 9001</li>
-<li>Requires life cycle perspective (cradle to grave)</li>
-<li>ISO 9001 = customer requirements; ISO 14001 = environmental aspects &amp; regulatory compliance</li>
+<li>ISO 14001 = Environmental Management System</li>
+<li>Same high-level structure as ISO 9001</li>
+<li>Key elements: Aspects, Life cycle, Policy, Compliance, Emergency</li>
+<li>Life cycle perspective = cradle to grave</li>
 </ul></div>
 </div>
 
 <!-- UNIT 13 -->
 <div class="unit" id="u13">
-<h3 id="u13">Unit 13: Other Standards</h3>
+<h3 id="u13">Unit 13: Occupational Health &amp; Safety Standards</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU13">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU13">&#x1F4AC; Ask AI</button></div>
-<div id="sU13" class="ai-response-box" style="display:none;"></div>
+<div id="sU13">
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Standards</div>
-<table><tr><th>Standard</th><th>Focus Area</th></tr>
-<tr><td>ISO 45001</td><td>Occupational Health &amp; Safety</td></tr>
-<tr><td>ISO 27001</td><td>Information Security Management</td></tr>
+<table>
+<tr><th>Standard</th><th>Purpose</th></tr>
+<tr><td>OHSAS 18001 / ISO 45001</td><td>Occupational Health &amp; Safety Management</td></tr>
+<tr><td>SA 8000</td><td>Social Accountability</td></tr>
 <tr><td>ISO 22000</td><td>Food Safety Management</td></tr>
-<tr><td>ISO 50001</td><td>Energy Management</td></tr></table>
-<p><strong>IMS:</strong> Integrated Management System — combining multiple standards to reduce duplication.</p>
+</table>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>TCS integrates ISO 9001 (quality), ISO 27001 (info security), and ISO 22000 into a single IMS, reducing audit costs globally.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>4-2-2-5</strong> = ISO 45001 (Safety), ISO 27001 (Info Security), ISO 22000 (Food), ISO 50001 (Energy)</p></div>
+</div>
+<h4>Point 2: Integrated Management System (IMS)</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; IMS Benefits</div>
+<p><strong>Reduced duplication:</strong> Common clauses handled once</p>
+<p><strong>Cost savings:</strong> Single audit instead of multiple</p>
+<p><strong>Better alignment:</strong> Quality + Environment + Safety in one system</p>
+<p><strong>Common HLS:</strong> All modern ISO standards share 10-clause structure</p>
+</div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>Tata Steel</strong> implemented ISO 45001 across all plants, reducing workplace accidents by 60% over 5 years.</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Know the purpose of each standard &#x2014; examiners often ask to match standards with their focus areas.</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>All modern ISO standards share the same High-Level Structure (10 clauses)</li>
-<li>Organizations can integrate multiple standards into an IMS</li>
-<li>Know the purpose of each standard for exam matching questions</li>
+<li>ISO 45001 = Occupational Health &amp; Safety</li>
+<li>Integrated management: Quality + Environment + Safety</li>
+<li>All modern ISO standards share 10-clause HLS</li>
+<li>IMS reduces duplication and audit costs</li>
 </ul></div>
 </div>
 
 <!-- UNIT 14 -->
 <div class="unit" id="u14">
-<h3 id="u14">Unit 14: Management System for Safety and Health</h3>
+<h3 id="u14">Unit 14: Quality Auditing</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU14">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU14">&#x1F4AC; Ask AI</button></div>
-<div id="sU14" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>ISO 45001:</strong> OH&amp;S Management System standard (replaced OHSAS 18001).</p>
-<p><strong>Hazard:</strong> Source, situation, or act with potential to cause harm.</p>
-<p><strong>Risk:</strong> Likelihood × severity of hazardous event.</p>
-<p><strong>Hierarchy of Controls:</strong> Elimination → Substitution → Engineering → Administrative → PPE</p>
+<div id="sU14">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Types of Quality Audits</div>
+<table>
+<tr><th>Type</th><th>Conducted By</th><th>Purpose</th></tr>
+<tr><td>First-party (Internal)</td><td>Organization itself</td><td>Self-assessment</td></tr>
+<tr><td>Second-party</td><td>Customer/Client</td><td>Supplier evaluation</td></tr>
+<tr><td>Third-party (External)</td><td>Certification body</td><td>Certification/Registration</td></tr>
+</table>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Construction companies use ISO 45001 to systematically reduce workplace accidents and ensure regulatory compliance.</p></div>
-<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div><p><strong>H-R-L-O-C</strong> = Hazard identification, Risk assessment, Legal compliance, Operational control, Continuous improvement</p></div>
+</div>
+<h4>Point 2: Audit Process (7 Steps)</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Planning</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Opening Meeting</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Document Review</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">On-site Audit</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Closing Meeting</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Audit Report</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Follow-up</div></div>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Audit Terms</div>
+<p><strong>Nonconformity:</strong> Non-fulfillment of a requirement</p>
+<p><strong>Corrective Action:</strong> Action to eliminate the cause of a detected nonconformity</p>
+<p><strong>Observation:</strong> Finding that is not a nonconformity but could become one</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Understand the difference between Stage 1 (are you ready?) and Stage 2 (are you doing what you said?). Stage 1 = documentation review; Stage 2 = implementation verification.</p>
+</div>
+<div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
+<p><strong>"1-2-3 = Self-Customer-Certifier"</strong></p>
+<p><strong>"POD-OC-F"</strong> = Planning, Opening meeting, Document review, On-site audit, Closing meeting, Audit report, Follow-up</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>ISO 45001 replaced OHSAS 18001 in 2018</li>
-<li>Hierarchy of Controls: Elimination → Substitution → Engineering → Administrative → PPE</li>
-<li>Near misses = critical learning opportunities</li>
+<li>3 types: Internal (self), Second-party (customer), Third-party (certification)</li>
+<li>7-step audit process: POD-OC-F</li>
+<li>Key terms: Nonconformity, Corrective Action, Observation</li>
 </ul></div>
 </div>
 
 <!-- UNIT 15 -->
 <div class="unit" id="u15">
-<h3 id="u15">Unit 15: Quality Auditing and Certification</h3>
+<h3 id="u15">Unit 15: Quality Certification Process</h3>
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU15">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU15">&#x1F4AC; Ask AI</button></div>
-<div id="sU15" class="ai-response-box" style="display:none;"></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Definitions</div>
-<p><strong>Quality Audit:</strong> Systematic, independent, documented process for evaluating QMS fulfillment.</p>
-<p><strong>First Party (Internal):</strong> Organization audits itself — self-improvement.</p>
-<p><strong>Second Party:</strong> Customer audits supplier — supplier qualification.</p>
-<p><strong>Third Party:</strong> Certification body audits — leads to certification (BSI, TÜV, SGS).</p>
-<p><strong>Nonconformity:</strong> Non-fulfillment of a requirement.</p>
-<p><strong>Corrective Action:</strong> Eliminating the cause of a nonconformity to prevent recurrence.</p>
+<div id="sU15">
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Certification Steps</div>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Gap Analysis</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Documentation</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Implementation</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Internal Audit</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Certification Audit</div></div>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Audit Process (7 Steps)</div>
-<p>1. Planning &amp; preparation → 2. Opening meeting → 3. Document review → 4. On-site audit → 5. Closing meeting → 6. Audit report → 7. Follow-up (corrective actions)</p>
 </div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Certification Process (7 Steps)</div>
-<p>1. Application → 2. Document review (Stage 0) → 3. Stage 1 audit (readiness) → 4. Stage 2 audit (implementation) → 5. Certification decision → 6. Surveillance audits (annual) → 7. Re-certification (every 3 years)</p>
 </div>
-<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div><p>Bureau of Indian Standards (BIS) is India's national certification body for ISO standards.</p></div>
+<div class="callout callout-example"><div class="callout-label">&#x1F4A1; Real-World Example</div>
+<p><strong>BIS (Bureau of Indian Standards)</strong> provides certification in India. ISI mark = product certification; Hallmark = gold certification.</p>
+</div>
+<h4>Point 2: Full Certification Process (7 Steps)</h4>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">1</div><div class="fc-l">Application</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">2</div><div class="fc-l">Document Review</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">3</div><div class="fc-l">Stage 1 Audit</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">4</div><div class="fc-l">Stage 2 Audit</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">5</div><div class="fc-l">Certification Decision</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">6</div><div class="fc-l">Surveillance Audits</div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">7</div><div class="fc-l">Re-certification</div></div>
+</div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Certification Timeline</div>
+<p><strong>Stage 1 Audit:</strong> Readiness assessment (documentation review)</p>
+<p><strong>Stage 2 Audit:</strong> Implementation assessment (on-site verification)</p>
+<p><strong>Certificate validity:</strong> 3 years</p>
+<p><strong>Surveillance audits:</strong> Annual (during 3-year period)</p>
+<p><strong>Re-certification:</strong> Every 3 years (full audit)</p>
+</div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Exam Tip</div>
+<p>Stage 1 vs Stage 2 is a common exam question: Stage 1 = "Are you ready?" (documentation); Stage 2 = "Are you doing it?" (implementation).</p>
+</div>
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid</div>
-<p><strong>POD-OC-F</strong> = Planning, Opening meeting, Document review, On-site audit, Closing meeting, Audit report, Follow-up</p>
-<p><strong>Stage 1</strong> = "Are you ready?" (documentation) | <strong>Stage 2</strong> = "Are you doing it?" (implementation)</p></div>
+<p><strong>"G-D-I-I-C"</strong> &#x2014; Gap Analysis, Documentation, Implementation, Internal Audit, Certification Audit</p>
+<p><strong>"A-D-S-S-C-S-R"</strong> &#x2014; Application, Document review, Stage 1, Stage 2, Certification, Surveillance, Re-certification</p>
+</div>
 <div class="summary-box"><h4>&#x2705; Unit Summary</h4><ul>
-<li>3 audit types: Internal (self), Second party (customer), Third party (certification body)</li>
-<li>Certification: Stage 1 (readiness) → Stage 2 (implementation) → Surveillance (annual) → Re-certification (3 years)</li>
-<li>BIS = India's national certification body</li>
+<li>7 certification steps: A-D-S-S-C-S-R</li>
+<li>Certificate valid for 3 years with annual surveillance audits</li>
+<li>Stage 1 = readiness; Stage 2 = implementation</li>
 </ul></div>
 </div>
 
-<!-- MASTER MNEMONICS TABLE -->
-<div class="unit" id="mnemonics">
-<h3 id="mnemonics">🧠 Master Mnemonics Table</h3>
-<table><tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
-<tr><td><strong>D-J-C-F</strong></td><td>Deming, Juran, Crosby, Feigenbaum</td><td>Quality gurus (definitions)</td></tr>
-<tr><td><strong>D-J-C-I-T-F</strong></td><td>Deming, Juran, Crosby, Ishikawa, Taguchi, Feigenbaum</td><td>All 6 quality gurus</td></tr>
-<tr><td><strong>PAIE</strong></td><td>Prevention, Appraisal, Internal, External</td><td>Quality cost categories</td></tr>
-<tr><td><strong>CCCHPSF</strong></td><td>Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, Flowchart</td><td>7 basic quality tools</td></tr>
-<tr><td><strong>DMAIC</strong></td><td>Define, Measure, Analyze, Improve, Control</td><td>Six Sigma methodology</td></tr>
-<tr><td><strong>5S</strong></td><td>Sort, Set in Order, Shine, Standardize, Sustain</td><td>Workplace organization</td></tr>
-<tr><td><strong>C-L-E-P-I-E-R</strong></td><td>Customer, Leadership, Engagement, Process, Improvement, Evidence, Relationships</td><td>ISO 9001 principles</td></tr>
-<tr><td><strong>C-A-C-E-I-I-D-D-B-E-E-R-I-P</strong></td><td>Create, Adopt, Cease, End, Improve, Institute...</td><td>Deming's 14 Points</td></tr>
-<tr><td><strong>CTPIFCCC</strong></td><td>Customer, Total, Process, Integrated, Strategic, Continuous, Fact, Communications</td><td>8 TQM principles</td></tr>
-<tr><td><strong>LCEF-SP</strong></td><td>Leadership, Customer, Employee, Continuous; Supplier, Performance</td><td>6 TQM building blocks</td></tr>
-<tr><td><strong>LSCM-WOR</strong></td><td>Leadership(12%), Strategic(8%), Customer(8%), Measurement(9%), Workforce(8%), Operations(8%), Results(45%)</td><td>Baldrige Criteria</td></tr>
-<tr><td><strong>EFQM-LSP-PP</strong></td><td>Leadership, People, Strategy, Partnerships, Processes; Customer, People, Society, Business</td><td>EFQM Model</td></tr>
-<tr><td><strong>SCQC-TC</strong></td><td>Steering Committee, Quality Council, TQM Coordinator, Quality Circles</td><td>TQM org structure</td></tr>
-<tr><td><strong>VC-DL-TR</strong></td><td>Vision &amp; Culture, Data-driven, Learning, Team, Recognition</td><td>Quality culture</td></tr>
-<tr><td><strong>ALP-CER</strong></td><td>Aspects, Life cycle, Policy, Compliance, Emergency, Review</td><td>ISO 14001</td></tr>
-<tr><td><strong>4-2-2-5</strong></td><td>ISO 45001, 27001, 22000, 50001</td><td>Supplementary standards</td></tr>
-<tr><td><strong>H-R-L-O-C</strong></td><td>Hazard, Risk, Legal, Operational, Continuous</td><td>ISO 45001</td></tr>
-<tr><td><strong>POD-OC-F</strong></td><td>Planning, Opening, Document, On-site, Closing, Report, Follow-up</td><td>Audit process</td></tr></table>
+<h2 id="frameworks">&#x1F4CA; Key Frameworks &amp; Diagrams</h2>
+
+<div class="visual-diagram"><h5>PDCA Cycle (Deming)</h5>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;padding:0.5rem">
+<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4)"><strong>PLAN</strong><br><small>What to do?</small></div>
+<div class="vd-node" style="background:rgba(0,210,255,0.2);border:1px solid rgba(0,210,255,0.4)"><strong>DO</strong><br><small>Execute the plan</small></div>
+<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4)"><strong>CHECK</strong><br><small>Did it work?</small></div>
+<div class="vd-node" style="background:rgba(248,113,113,0.2);border:1px solid rgba(248,113,113,0.4)"><strong>ACT</strong><br><small>Standardize</small></div>
+</div></div>
+
+<div class="visual-diagram"><h5>Six Sigma DMAIC Flow</h5>
+<div class="fc">
+<div class="fc-s"><div class="fc-n">DEFINE</div><div class="fc-l">Problem Statement<br><small>Goals, Scope, CTQs</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">MEASURE</div><div class="fc-l">Current Performance<br><small>Data, Baseline, Capability</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">ANALYZE</div><div class="fc-l">Root Causes<br><small>5 Whys, Fishbone, Regression</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">IMPROVE</div><div class="fc-l">Solutions<br><small>Pilot, Test, Validate</small></div></div><div class="fc-a">&#x2192;</div>
+<div class="fc-s"><div class="fc-n">CONTROL</div><div class="fc-l">Sustain<br><small>Control Charts, SOPs</small></div></div>
+</div></div>
+
+<div class="visual-diagram"><h5>Process Capability</h5>
+<div class="db"><table>
+<tr><th>Formula</th><th>Expression</th><th>Interpretation</th></tr>
+<tr><td><strong>Cp</strong></td><td>(USL - LSL) / 6&#x3C3;</td><td>Process potential (can it fit?)</td></tr>
+<tr><td><strong>Cpk</strong></td><td>min[(USL-&#x3BC;)/3&#x3C3;, (&#x3BC;-LSL)/3&#x3C3;]</td><td>Actual capability (is it fitting?)</td></tr>
+</table></div>
+<div class="db"><table>
+<tr><th>Cp Value</th><th>Interpretation</th></tr>
+<tr><td>Cp &lt; 1.0</td><td>Process NOT capable</td></tr>
+<tr><td>Cp = 1.0</td><td>Barely capable (3&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 1.33</td><td>Capable (4&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 1.67</td><td>Highly capable (5&#x3C3;)</td></tr>
+<tr><td>Cp &#x2265; 2.0</td><td>Six Sigma capable</td></tr>
+</table></div>
 </div>
 
-<!-- KEY FRAMEWORKS -->
-<div class="unit" id="frameworks">
-<h3 id="frameworks">📊 Key Frameworks &amp; Diagrams</h3>
-<div class="visual-diagram"><h5>&#x1F4CA; PDCA Cycle (Deming)</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(0,184,148,0.2);border:1px solid rgba(0,184,148,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">PLAN — What to do?</div>
-<div style="font-size:1.2rem;color:rgba(0,184,148,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">DO — Execute the plan</div>
-<div style="font-size:1.2rem;color:rgba(9,132,227,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,215,0,0.2);border:1px solid rgba(255,215,0,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">CHECK — Did it work?</div>
-<div style="font-size:1.2rem;color:rgba(255,215,0,0.6)">&#x2193;</div>
-<div class="vd-node" style="background:rgba(255,107,107,0.2);border:1px solid rgba(255,107,107,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">ACT — Standardize (Repeat forever)</div>
-</div></div>
-<div class="visual-diagram"><h5>&#x1F4CA; Process Capability</h5>
-<div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem;padding:0.5rem">
-<div class="vd-node" style="background:rgba(9,132,227,0.2);border:1px solid rgba(9,132,227,0.4);width:80%;text-align:center;padding:0.6rem;border-radius:8px;font-size:0.9rem">LSL ← Target → USL</div>
-<p style="margin-top:0.5rem;font-size:0.85rem;color:rgba(255,255,255,.6)">Cp = (USL - LSL) / 6σ → How well CAN it fit?</p>
-<p style="font-size:0.85rem;color:rgba(255,255,255,.6)">Cpk = min[(USL-μ)/3σ, (μ-LSL)/3σ] → How well IS it fitting?</p>
-</div></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Quality Cost Hierarchy</div>
-<p>External Failure $$$$$$ (Most Expensive) → Internal Failure $$$$ → Appraisal $$ → Prevention $ (Least Expensive)</p>
-<p><em>← Less Total Cost with More Prevention →</em></p>
-</div>
+<div class="visual-diagram"><h5>Quality Cost Hierarchy</h5>
+<div class="db"><table>
+<tr><th>Category</th><th>Relative Cost</th><th>Key Insight</th></tr>
+<tr><td><strong>External Failure</strong></td><td>$$$$$$ (Most Expensive)</td><td>Warranty, recalls, lost customers</td></tr>
+<tr><td><strong>Internal Failure</strong></td><td>$$$$</td><td>Scrap, rework, downtime</td></tr>
+<tr><td><strong>Appraisal</strong></td><td>$$</td><td>Inspection, testing, audits</td></tr>
+<tr><td><strong>Prevention</strong></td><td>$ (Least Expensive)</td><td>Training, planning, design</td></tr>
+</table></div>
+<p style="text-align:center;color:rgba(255,255,255,.6);font-style:italic">&#x2190; Less Total Cost with More Prevention &#x2192;</p>
 </div>
 
-<!-- QUICK REVISION -->
-<div class="unit" id="revision">
-<h3 id="revision">⚡ Quick Revision Sheet</h3>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; One-Liner Concepts</div>
-<ul>
-<li>Quality = meeting customer requirements (Crosby) or fitness for use (Juran)</li>
-<li>TQM = company-wide continuous improvement philosophy</li>
-<li>PDCA = Plan-Do-Check-Act (Deming's improvement cycle)</li>
-<li>Zero Defects = Crosby's performance standard</li>
-<li>Quality Trilogy = Juran's Planning-Control-Improvement</li>
-<li>Six Sigma = 3.4 defects per million opportunities</li>
-<li>DMAIC = Define-Measure-Analyze-Improve-Control</li>
-<li>Cp ≥ 1.33 = capable process; Cpk ≥ 1.33 = centered &amp; capable</li>
-<li>5S = Sort, Set in Order, Shine, Standardize, Sustain</li>
-<li>ISO 9001 = world's most recognized QMS standard</li>
-<li>ISO 14001 = environmental management system</li>
-<li>ISO 45001 = occupational health &amp; safety</li>
-</ul></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Formula Sheet</div>
-<table><tr><th>Formula</th><th>Expression</th><th>Interpretation</th></tr>
-<tr><td>Cp</td><td>(USL - LSL) / 6σ</td><td>Process potential</td></tr>
-<tr><td>Cpk</td><td>min[(USL-μ)/3σ, (μ-LSL)/3σ]</td><td>Process capability</td></tr>
+<h2 id="revision">&#x26A1; Quick Revision Sheet</h2>
+
+<h4>One-Liner Concepts</h4>
+<div class="br">
+<span class="sb s-b">Quality = meeting requirements (Crosby) or fitness for use (Juran)</span>
+<span class="sb s-b">TQM = company-wide continuous improvement</span>
+<span class="sb s-b">PDCA = Plan-Do-Check-Act (Deming)</span>
+<span class="sb s-b">Zero Defects = Crosby's standard (do it right first time)</span>
+<span class="sb s-b">Quality Trilogy = Juran's Plan-Control-Improve</span>
+<span class="sb s-b">COQ = Prevention + Appraisal + Internal + External Failure</span>
+<span class="sb s-b">COPQ = 15-25% of sales revenue (mostly hidden)</span>
+<span class="sb s-b">Six Sigma = 3.4 DPMO</span>
+<span class="sb s-b">DMAIC = Define-Measure-Analyze-Improve-Control</span>
+<span class="sb s-b">Cp = (USL-LSL)/6&#x3C3;; Cpk = centering + capability</span>
+<span class="sb s-b">Cp &#x2265; 1.33 = capable; Cpk &#x2265; 1.33 = centered &amp; capable</span>
+<span class="sb s-b">5S = Sort, Set, Shine, Standardize, Sustain</span>
+<span class="sb s-b">Quality Circles = small voluntary employee groups</span>
+<span class="sb s-b">Benchmarking = learning from best-in-class</span>
+<span class="sb s-b">QFD = customer needs to technical requirements</span>
+<span class="sb s-b">FMEA = identifying and prioritizing failures</span>
+<span class="sb s-b">Kaizen = continuous small improvements</span>
+<span class="sb s-b">Poka-Yoke = error-proofing</span>
+<span class="sb s-b">ISO 9001 = world's most recognized QMS</span>
+<span class="sb s-b">ISO 14001 = environmental management</span>
+<span class="sb s-b">ISO 45001 = occupational health &amp; safety</span>
+</div>
+
+<h4>Formula Sheet</h4>
+<div class="db"><table>
+<tr><th>Formula</th><th>Expression</th><th>Interpretation</th></tr>
+<tr><td>Cp</td><td>(USL - LSL) / 6&#x3C3;</td><td>Process potential</td></tr>
+<tr><td>Cpk</td><td>min[(USL-&#x3BC;)/3&#x3C3;, (&#x3BC;-LSL)/3&#x3C3;]</td><td>Process capability</td></tr>
 <tr><td>COPQ</td><td>Prevention + Appraisal + Failure costs</td><td>Total quality cost</td></tr>
-<tr><td>Control Limits</td><td>Mean ± 3σ</td><td>Process boundaries</td></tr></table>
-</div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4CA; Guru Comparison</div>
-<table><tr><th>Aspect</th><th>Deming</th><th>Juran</th><th>Crosby</th></tr>
+<tr><td>Control Limits</td><td>Mean &#x00B1; 3&#x3C3;</td><td>Process boundaries</td></tr>
+</table></div>
+
+<h4>Comparison Tables</h4>
+<div class="db"><table>
+<tr><th>Aspect</th><th>Deming</th><th>Juran</th><th>Crosby</th></tr>
 <tr><td>Definition</td><td>Predictable &amp; dependable</td><td>Fitness for use</td><td>Conformance to requirements</td></tr>
 <tr><td>Focus</td><td>System &amp; variation</td><td>Project-by-project</td><td>Zero defects</td></tr>
 <tr><td>Method</td><td>PDCA Cycle</td><td>Quality Trilogy</td><td>Quality Vaccine</td></tr>
-<tr><td>Philosophy</td><td>85% management responsibility</td><td>Breakthrough projects</td><td>Quality is free</td></tr></table>
-</div>
+<tr><td>Philosophy</td><td>85% management responsibility</td><td>Breakthrough projects</td><td>Quality is free</td></tr>
+</table></div>
+
+<div class="db"><table>
+<tr><th>Aspect</th><th>Cp</th><th>Cpk</th></tr>
+<tr><td>Measures</td><td>Potential capability</td><td>Actual capability</td></tr>
+<tr><td>Formula</td><td>(USL-LSL)/6&#x3C3;</td><td>min[(USL-&#x3BC;)/3&#x3C3;, (&#x3BC;-LSL)/3&#x3C3;]</td></tr>
+<tr><td>Process centered?</td><td>Ignores centering</td><td>Accounts for centering</td></tr>
+<tr><td>Ideal value</td><td>&#x2265; 1.33</td><td>&#x2265; 1.33</td></tr>
+</table></div>
+
+<div class="db"><table>
+<tr><th>Audit Type</th><th>Who Conducts</th><th>Purpose</th></tr>
+<tr><td>First Party (Internal)</td><td>Organization itself</td><td>Self-assessment</td></tr>
+<tr><td>Second Party</td><td>Customer</td><td>Supplier evaluation</td></tr>
+<tr><td>Third Party</td><td>Certification body</td><td>Independent verification</td></tr>
+</table></div>
+
+<h2 id="exam">&#x1F3AF; Exam Focus</h2>
+
+<h4>Most Frequently Asked Topics</h4>
+<div class="br">
+<span class="sb s-b">1. Quality gurus and contributions (Deming, Juran, Crosby)</span>
+<span class="sb s-b">2. PDCA cycle and DMAIC phases</span>
+<span class="sb s-b">3. Quality costs (PAIE hierarchy)</span>
+<span class="sb s-b">4. 7 basic quality tools</span>
+<span class="sb s-b">5. Process capability (Cp/Cpk calculations)</span>
+<span class="sb s-b">6. Six Sigma DMAIC methodology</span>
+<span class="sb s-b">7. ISO 9001 structure and principles</span>
+<span class="sb s-b">8. 5S methodology</span>
+<span class="sb s-b">9. Quality Circles</span>
+<span class="sb s-b">10. TQM implementation barriers and success factors</span>
 </div>
 
-<!-- EXAM FOCUS -->
-<div class="unit" id="exam">
-<h3 id="exam">🎯 Exam Focus</h3>
-<div class="callout callout-important"><div class="callout-label">&#x1F4CB; Most Frequently Asked Topics</div>
-<ul>
-<li><strong>Quality gurus and their contributions</strong> — compare Deming, Juran, Crosby (almost every exam)</li>
-<li><strong>PDCA cycle and DMAIC</strong> — explain each phase with examples</li>
-<li><strong>Quality costs</strong> — categorize examples and explain the cost hierarchy</li>
-<li><strong>7 basic quality tools</strong> — name, describe, and identify when to use each</li>
-<li><strong>Process capability (Cp/Cpk)</strong> — calculate and interpret</li>
-<li><strong>Six Sigma</strong> — explain DMAIC, sigma levels, DPMO</li>
-<li><strong>ISO 9001 structure</strong> — explain clauses and principles</li>
-<li><strong>5S methodology</strong> — describe each S with workplace examples</li>
-<li><strong>Quality Circles</strong> — explain structure, purpose, benefits</li>
-<li><strong>TQM implementation</strong> — barriers, success factors, leadership role</li>
-</ul></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4DD; Expected Question Patterns</div>
-<ul>
-<li>"Compare and contrast the views of Deming, Juran, and Crosby on quality" (10 marks)</li>
-<li>"Explain the PDCA cycle with a real-world example" (8 marks)</li>
-<li>"Calculate Cp and Cpk for the given data and interpret results" (10 marks)</li>
-<li>"Describe the 7 basic quality tools and their applications" (10 marks)</li>
-<li>"What are the key elements of ISO 9001:2015?" (8 marks)</li>
-<li>"Explain Six Sigma DMAIC methodology with examples" (10 marks)</li>
-<li>"Discuss the role of leadership in TQM implementation" (8 marks)</li>
-</ul></div>
-<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Model Answer Structure</div>
-<p><strong>For guru comparison:</strong> 1. Introduction (what is TQM) → 2. Each guru's definition → 3. Key contributions → 4. Comparison table → 5. Practical example → 6. Conclusion</p>
-<p><strong>For calculations:</strong> 1. State formula → 2. Substitute values → 3. Calculate → 4. Interpret → 5. Recommend action</p>
+<h4>Expected Question Patterns</h4>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Common Exam Questions</div>
+<p><strong>"Compare and contrast the views of Deming, Juran, and Crosby on quality"</strong> (10 marks)</p>
+<p><strong>"Explain the PDCA cycle with a real-world example"</strong> (8 marks)</p>
+<p><strong>"Calculate Cp and Cpk for the given data and interpret results"</strong> (10 marks)</p>
+<p><strong>"Describe the 7 basic quality tools and their applications"</strong> (10 marks)</p>
+<p><strong>"What are the key elements of ISO 9001:2015?"</strong> (8 marks)</p>
+<p><strong>"Explain Six Sigma DMAIC methodology with examples"</strong> (10 marks)</p>
+<p><strong>"Discuss the role of leadership in TQM implementation"</strong> (8 marks)</p>
 </div>
+
+<h4>Model Answer Structure</h4>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; For Quality Guru Comparison</div>
+<p>1. Brief introduction (what is TQM)</p>
+<p>2. Each guru's definition of quality</p>
+<p>3. Each guru's key contribution (tools/frameworks)</p>
+<p>4. Comparison table</p>
+<p>5. Practical example</p>
+<p>6. Conclusion (complementary approaches)</p>
 </div>
+<div class="callout callout-definition"><div class="callout-label">&#x1F4D6; For Calculation Questions</div>
+<p>1. State the formula</p>
+<p>2. Substitute values</p>
+<p>3. Calculate result</p>
+<p>4. Interpret (capable/not capable, centered/off-center)</p>
+<p>5. Recommend action</p>
+</div>
+
+<h2 id="mnemonics">&#x1F9E0; Master Mnemonics Table</h2>
+<div class="db"><table>
+<tr><th>Mnemonic</th><th>Full Form</th><th>Used For</th></tr>
+<tr><td><strong>D-J-C-I-T-F</strong></td><td>Deming, Juran, Crosby, Ishikawa, Taguchi, Feigenbaum</td><td>Quality Gurus</td></tr>
+<tr><td><strong>C-T-P-I-S-C-F-C</strong></td><td>Customer, Total involvement, Process, Integrated, Strategic, Continual, Fact-based, Communications</td><td>8 TQM Principles</td></tr>
+<tr><td><strong>LCEF-SP</strong></td><td>Leadership, Customer, Employee, continuous improvement; Supplier, Performance</td><td>6 Building Blocks</td></tr>
+<tr><td><strong>PAIE</strong></td><td>Prevention, Appraisal, Internal, External</td><td>Quality Cost Categories</td></tr>
+<tr><td><strong>LSCM-WOR</strong></td><td>Leadership, Strategic, Customer, Measurement, Workforce, Operations, Results</td><td>Baldrige Criteria</td></tr>
+<tr><td><strong>EFQM-LSP-PP</strong></td><td>Leadership, People, Strategy, Partnerships, Processes; Customer, People, Society, Business</td><td>EFQM Model</td></tr>
+<tr><td><strong>CCCHPSF</strong></td><td>Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, Flowchart</td><td>7 QC Tools</td></tr>
+<tr><td><strong>Do Math And Improve Consistently</strong></td><td>Define, Measure, Analyze, Improve, Control</td><td>Six Sigma DMAIC</td></tr>
+<tr><td><strong>SCQC-TC</strong></td><td>Steering Committee, Quality Council, TQM Coordinator, Quality Circles</td><td>TQM Structure</td></tr>
+<tr><td><strong>VC-DL-TR</strong></td><td>Vision &amp; Culture, Data-driven, Learning, Team collaboration, Recognition</td><td>Quality Culture</td></tr>
+<tr><td><strong>C-L-E-P-I-E-R</strong></td><td>Customer, Leadership, Engagement, Process, Improvement, Evidence, Relationship</td><td>7 QMPs (ISO 9001)</td></tr>
+<tr><td><strong>ALP-CER</strong></td><td>Aspects, Life cycle, Policy, Compliance, Emergency, Review</td><td>ISO 14001 Elements</td></tr>
+<tr><td><strong>H-R-L-O-C</strong></td><td>Hazard, Risk, Legal, Operational, Continuous improvement</td><td>ISO 45001 Core</td></tr>
+<tr><td><strong>POD-OC-F</strong></td><td>Planning, Opening, Document, On-site, Closing, Audit report, Follow-up</td><td>Audit Process</td></tr>
+<tr><td><strong>A-D-S-S-C-S-R</strong></td><td>Application, Document, Stage 1, Stage 2, Certification, Surveillance, Re-certification</td><td>Certification Process</td></tr>
+</table></div>
 
 </main>
 </div>
-<script src="api-utils.js"></script>
+<!-- /study-content -->
+<script src="pomodoro.js"></script>
+<script src="bookmark-notes.js"></script>
+<script src="flashcards.js"></script>
 <script>
-var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}})},{threshold:.1});
-document.querySelectorAll(".unit").forEach(function(e){o.observe(e)});
-window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;document.getElementById("readingProgress").style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar a[href^=\"#u\"]"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
+// Scroll-triggered animations
+(function() {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
+  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Expand/collapse toggle for additional content
+  document.querySelectorAll('.expand-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = document.querySelector(this.dataset.target);
+      if (target) {
+        target.classList.toggle('expanded');
+        this.textContent = target.classList.contains('expanded') ? 'Show Less' : 'Read More';
+      }
+    });
+  });
+
+  window.addEventListener('scroll',function(){var bar=document.getElementById('readingProgress');if(bar){var h=document.documentElement;bar.style.width=Math.min((h.scrollTop/(h.scrollHeight-h.clientHeight))*100,100)+'%';}var links=document.querySelectorAll('.sidebar-nav a[href^="#u"]');var sections=[];links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)sections.push({el:t,link:a});});var pos=window.scrollY+120;var current=null;sections.forEach(function(s){if(s.el.offsetTop<=pos)current=s.link;});links.forEach(function(a){a.classList.remove('active');});if(current)current.classList.add('active');});
+})();
 </script>
+<script src="enhancements.js"></script>
+<script src="revision-mode.js"></script>
 <script src="pwa-register.js"></script>
 </body>
 </html>
