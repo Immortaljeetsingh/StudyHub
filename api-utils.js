@@ -34,8 +34,7 @@ async function callOpenRouter(text, systemPrompt) {
         if (response.status === 403 && msg.includes('limit')) {
             localStorage.removeItem('openrouter-api-key');
             localStorage.removeItem('openrouter-model');
-            if (typeof openApiSettings === 'function') openApiSettings();
-            throw new Error('API key limit reached — settings opened. Enter a new key or get one free at openrouter.ai/keys');
+            throw new Error('API key limit reached. Get a free key at openrouter.ai/keys');
         }
         throw new Error(msg);
     }
@@ -91,29 +90,7 @@ function toggleTheme() {
 }
 function loadTheme() { var saved = localStorage.getItem('studyhub-theme'); if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); var btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = '☀️ Light'; } }
 
-// ==================== API SETTINGS ====================
-function openApiSettings() {
-    const m = document.getElementById('apiSettingsModal'); if (!m) return;
-    m.classList.add('active');
-    const k = document.getElementById('apiKeyInput'); if (k) k.value = localStorage.getItem('openrouter-api-key') || '';
-    const s = document.getElementById('apiModelSelect'); if (s) s.value = localStorage.getItem('openrouter-model') || DEFAULT_MODEL;
-}
-function closeApiSettings() { const m = document.getElementById('apiSettingsModal'); if (m) m.classList.remove('active'); }
-function saveApiSettings() {
-    const key = document.getElementById('apiKeyInput')?.value?.trim();
-    const model = document.getElementById('apiModelSelect')?.value;
-    const status = document.getElementById('apiSettingsStatus');
-    if (!key) { if (status) { status.textContent = '❌ Enter an API key'; status.className = 'modal-status error'; } return; }
-    localStorage.setItem('openrouter-api-key', key); localStorage.setItem('openrouter-model', model);
-    if (status) { status.textContent = '✅ Saved!'; status.className = 'modal-status success'; }
-    setTimeout(closeApiSettings, 1200);
-}
-function resetApiSettings() {
-    localStorage.removeItem('openrouter-api-key'); localStorage.removeItem('openrouter-model');
-    const k = document.getElementById('apiKeyInput'); if (k) k.value = '';
-    const s = document.getElementById('apiModelSelect'); if (s) s.value = DEFAULT_MODEL;
-    const status = document.getElementById('apiSettingsStatus'); if (status) { status.textContent = '🔄 Reset to defaults'; status.className = 'modal-status success'; }
-}
+// ==================== API SETTINGS (removed from subject pages — kept in study-hub.html via app.js) ====================
 
 // ==================== UTILS ====================
 function initReadingProgress() { const bar = document.querySelector('.reading-progress'); if (!bar) return; window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }); }
@@ -177,20 +154,14 @@ function initSidebarCloseButton() {
 }
 
 // ==================== COMPONENTS ====================
-function renderApiSettingsModal() {
-    const opts = FREE_MODELS.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
-    return `<div id="apiSettingsModal" class="modal-overlay" onclick="if(event.target===this)closeApiSettings()"><div class="modal-box"><h2>⚙️ API Settings</h2><label for="apiKeyInput">OpenRouter API Key</label><input type="password" id="apiKeyInput" placeholder="sk-or-v1-..."><label for="apiModelSelect">Model</label><select id="apiModelSelect" style="width:100%;padding:0.7rem 0.9rem;border-radius:var(--radius-sm);background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--text-primary);font-size:0.9rem;font-family:inherit;">${opts}</select><div class="modal-actions"><button class="btn btn-primary" onclick="saveApiSettings()">💾 Save</button><button class="btn btn-outline" onclick="resetApiSettings()">🔄 Reset</button><button class="btn btn-outline" onclick="closeApiSettings()">Cancel</button></div><div id="apiSettingsStatus" class="modal-status"></div><p style="margin-top:0.75rem;font-size:0.8rem;color:var(--text-muted)">Key is pre-configured. Change model or use your own. <a href="https://openrouter.ai/keys" target="_blank" style="color:var(--accent)">Get a key</a></p></div></div>`;
-}
-
 function renderToolbar(subjectCode) {
     const L = { 'mmpc-01':{study:'study-mmpc01.html',quiz:'quiz-mmpc01.html'},'mmpc-02':{study:'study-mmpc02.html',quiz:'quiz-mmpc02.html'},'mmpc-03':{study:'study-mmpc03.html',quiz:'quiz-mmpc03.html'},'mmpc-04':{study:'study-mmpc04.html',quiz:'quiz-mmpc04.html'},'mmpc-05':{study:'study-mmpc05.html',quiz:'quiz-mmpc05.html'},'mmpc-06':{study:'study-mmpc06.html',quiz:'quiz-mmpc06.html'},'mmpc-07':{study:'study-mmpc07.html',quiz:'quiz-mmpc07.html'} };
     const l = L[subjectCode] || {};
-    return `<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">← Hub</a>${l.study?`<a href="${l.study}" class="btn btn-outline">📘 Study</a>`:''}${l.quiz?`<a href="${l.quiz}" class="btn btn-outline">📝 Quiz</a>`:''}<button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">🌙 Dark</button><button class="btn btn-outline" onclick="openApiSettings()">⚙️ API</button></div>`;
+    return `<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">← Hub</a>${l.study?`<a href="${l.study}" class="btn btn-outline">📘 Study</a>`:''}${l.quiz?`<a href="${l.quiz}" class="btn btn-outline">📝 Quiz</a>`:''}<button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">🌙 Dark</button></div>`;
 }
 
 // ==================== INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
-    if (!document.getElementById('apiSettingsModal')) { const c = document.createElement('div'); c.innerHTML = renderApiSettingsModal(); document.body.appendChild(c.firstElementChild); }
     loadTheme(); initSummarizeButtons(); initAskButtons(); initReadingProgress();
     initScrollSpy(); initMobileSidebarAutoClose(); initSidebarCloseButton();
 
