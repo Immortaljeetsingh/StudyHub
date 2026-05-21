@@ -1,0 +1,260 @@
+[
+  {
+    "id": "mmpc01",
+    "name": "Management Functions",
+    "full": "Management Functions and Organizational Processes",
+    "keywords": "planning organizing staffing directing controlling, management process, Fayol, Mintzberg"
+  },
+  {
+    "id": "mmpc02",
+    "name": "Human Resource Management",
+    "full": "Human Resource Management - Recruitment to Employee Relations",
+    "keywords": "recruitment selection training performance appraisal, HRM functions, human resource planning"
+  },
+  {
+    "id": "mmpc03",
+    "name": "Business Environment",
+    "full": "Business Environment - PESTEL, Globalization and Economic Reforms",
+    "keywords": "PESTEL analysis economic reforms globalization, business environment India, liberalization privatization"
+  },
+  {
+    "id": "mmpc04",
+    "name": "Accounting & Finance",
+    "full": "Accounting and Finance for Managers",
+    "keywords": "financial statements ratios cost accounting capital budgeting, balance sheet profit loss, accounting fundamentals"
+  },
+  {
+    "id": "mmpc05",
+    "name": "Quantitative Analysis",
+    "full": "Quantitative Analysis for Managerial Decisions",
+    "keywords": "linear programming probability hypothesis testing PERT CPM decision theory, statistics for management"
+  },
+  {
+    "id": "mmpc06",
+    "name": "Marketing Management",
+    "full": "Marketing Management - 4Ps to Digital Marketing",
+    "keywords": "4Ps consumer behavior segmentation branding digital marketing, marketing mix, Kotler"
+  },
+  {
+    "id": "mmpc07",
+    "name": "Business Communication",
+    "full": "Business Communication - Reports, Presentations and Cross-cultural",
+    "keywords": "written oral communication reports presentations, business letter writing, cross-cultural communication"
+  },
+  {
+    "id": "mmpc08",
+    "name": "Information Systems",
+    "full": "Information Systems for Managers",
+    "keywords": "IT fundamentals SDLC databases AI ERP, management information systems, emerging technologies"
+  },
+  {
+    "id": "mmpc09",
+    "name": "Machines & Materials",
+    "full": "Managing Machines and Materials - Operations and SCM",
+    "keywords": "operations management work study value engineering inventory SCM lean JIT, production management"
+  },
+  {
+    "id": "mmpc10",
+    "name": "Managerial Economics",
+    "full": "Managerial Economics - Demand, Production and Market Structures",
+    "keywords": "demand production costs market structures pricing GDP inflation, microeconomics macroeconomics"
+  },
+  {
+    "id": "mmpc11",
+    "name": "Social Processes",
+    "full": "Social Processes and Behavioural Issues in Organizations",
+    "keywords": "individual behaviour motivation groups leadership culture change, organizational behaviour, OB"
+  },
+  {
+    "id": "mmpc12",
+    "name": "Strategic Management",
+    "full": "Strategic Management - PESTEL, Porter, SWOT and Governance",
+    "keywords": "PESTEL Porter five forces SWOT BCG matrix generic strategies corporate governance, strategic analysis"
+  },
+  {
+    "id": "mmpc13",
+    "name": "Business Law",
+    "full": "Business Law - Contract Act to Consumer Protection",
+    "keywords": "contract act sale of goods partnership companies act IPR consumer protection, Indian business law"
+  },
+  {
+    "id": "mmpc14",
+    "name": "Financial Management",
+    "full": "Financial Management - TVM, WACC, Capital Budgeting and Forex",
+    "keywords": "time value money WACC capital budgeting capital structure dividend forex, financial management MBA"
+  },
+  {
+    "id": "mmpc15",
+    "name": "Research Methodology",
+    "full": "Research Methodology for Managers",
+    "keywords": "research design data collection sampling statistics correlation, research methods MBA, hypothesis testing"
+  },
+  {
+    "id": "mmpc16",
+    "name": "International Business",
+    "full": "International Business - Trade, Culture and Entry Modes",
+    "keywords": "international business environment trade theories culture entry modes marketing mix, globalization MBA"
+  },
+  {
+    "id": "mmpc17",
+    "name": "Advanced Strategy",
+    "full": "Corporate Strategy - M&A, Growth and International Strategy",
+    "keywords": "corporate strategy M&A mergers acquisitions growth international strategy governance, advanced strategic management"
+  },
+  {
+    "id": "mmpc18",
+    "name": "Entrepreneurship",
+    "full": "Entrepreneurship - Startups, Business Plans and Funding",
+    "keywords": "startup ecosystem business plans funding social entrepreneurship, venture capital, new venture creation"
+  },
+  {
+    "id": "mmpc19",
+    "name": "Total Quality Management",
+    "full": "Total Quality Management - TQM, Six Sigma and Kaizen",
+    "keywords": "TQM Deming six sigma ISO 9001 quality tools kaizen DMAIC, quality management, continuous improvement"
+  },
+  {
+    "id": "mmpc20",
+    "name": "Business Ethics & CSR",
+    "full": "Business Ethics and Corporate Social Responsibility",
+    "keywords": "business ethics Carroll pyramid Section 135 ESG GRI sustainability, CSR India, corporate governance"
+  },
+  {
+    "id": "mmph01",
+    "name": "Organisation Theory & Design",
+    "full": "Organisation Theory and Design",
+    "keywords": "organisation theories structure types Mintzberg job design JCM, organizational design, bureaucracy"
+  },
+  {
+    "id": "mmph02",
+    "name": "Human Resource Development",
+    "full": "Human Resource Development - Training, Mentoring and Competency",
+    "keywords": "HRD system training Kirkpatrick mentoring e-learning competency, human resource development MBA"
+  },
+  {
+    "id": "mmph04",
+    "name": "Industrial Relations",
+    "full": "Industrial Relations - Trade Unions, Collective Bargaining",
+    "keywords": "industrial relations trade unions collective bargaining grievance discipline, IR MBA, labour laws India"
+  },
+  {
+    "id": "mmph07",
+    "name": "Compensation Management",
+    "full": "Compensation Management - Job Evaluation to ESOPs",
+    "keywords": "compensation job evaluation EPF ESI gratuity ESOPs total rewards, salary administration, pay structure"
+  },
+  {
+    "id": "mmpb06",
+    "name": "Banking Governance",
+    "full": "Banking Governance - RBI, Basel, SEBI and ESG",
+    "keywords": "banking governance RBI Basel IRDAI SEBI ESG whistleblower, bank management, financial regulation India"
+  },
+  {
+    "id": "mmpm01",
+    "name": "Consumer Behaviour",
+    "full": "Consumer Behaviour - Models, Motivation and Decision Process",
+    "keywords": "consumer behaviour motivation perception decision process, buyer behaviour, CB models MBA"
+  },
+  {
+    "id": "mmpm02",
+    "name": "Sales Management",
+    "full": "Sales Management - Selling Skills, AIDA and Sales Force",
+    "keywords": "selling skills AIDA sales force management quotas, sales planning, personal selling"
+  },
+  {
+    "id": "mmpm03",
+    "name": "Product & Brand Management",
+    "full": "Product and Brand Management - PLC, Brand Equity and Keller",
+    "keywords": "product levels PLC brand equity Keller, product lifecycle, brand management MBA"
+  },
+  {
+    "id": "mmpm04",
+    "name": "International Marketing",
+    "full": "International Marketing - Trade Theories, 4P and Entry Modes",
+    "keywords": "international marketing trade theories 4P entry modes, global marketing, export marketing"
+  },
+  {
+    "id": "mmpm05",
+    "name": "Marketing of Services",
+    "full": "Marketing of Services - IHIP, 7Ps, SERVQUAL",
+    "keywords": "IHIP 7Ps SERVQUAL yield management, service marketing, service quality"
+  },
+  {
+    "id": "mmpm06",
+    "name": "Marketing Research",
+    "full": "Marketing Research - Process, Sampling and Statistics",
+    "keywords": "marketing research process sampling statistics report, market research methods, data collection"
+  },
+  {
+    "id": "mmpm07",
+    "name": "Integrated Marketing Communication",
+    "full": "Integrated Marketing Communication - Advertising to Digital",
+    "keywords": "IMC advertising digital marketing, promotion mix, marketing communication MBA"
+  },
+  {
+    "id": "mmpm09",
+    "name": "Retail Management",
+    "full": "Retail Management - Formats, Location, E-commerce",
+    "keywords": "retail formats location e-commerce omnichannel, retailing, store management"
+  },
+  {
+    "id": "mmpo01",
+    "name": "Operations Research",
+    "full": "Operations Research - LP, Transportation, Queuing and Simulation",
+    "keywords": "linear programming transportation assignment sequencing queuing decision theory simulation, OR MBA"
+  },
+  {
+    "id": "mmpo02",
+    "name": "Project Management",
+    "full": "Project Management - WBS, PERT/CPM, EVM and Contracts",
+    "keywords": "WBS PERT CPM EVM contracts, project planning, project scheduling MBA"
+  },
+  {
+    "id": "mmpo03",
+    "name": "Operations Management",
+    "full": "Operations Management - Process, Capacity and Six Sigma",
+    "keywords": "process capacity forecasting six sigma, operations management MBA, production planning"
+  },
+  {
+    "id": "mmpo04",
+    "name": "Management Information Systems",
+    "full": "Management Information Systems - BI, Database and Cloud",
+    "keywords": "MIS BI database cloud computing, management information systems MBA, decision support systems"
+  },
+  {
+    "id": "mmpo05",
+    "name": "Logistics & SCM",
+    "full": "Logistics and Supply Chain Management",
+    "keywords": "supply chain management transport warehousing KPIs, logistics MBA, inventory management"
+  },
+  {
+    "id": "mmpo06",
+    "name": "Materials Management",
+    "full": "Materials Management - ABC, VED, EOQ and Inventory",
+    "keywords": "ABC VED EOQ inventory management, materials management MBA, stock control"
+  },
+  {
+    "id": "mmpo08",
+    "name": "International Logistics",
+    "full": "International Logistics - Incoterms, Customs and 3PL",
+    "keywords": "incoterms transport customs 3PL third party logistics, international logistics MBA, freight forwarding"
+  },
+  {
+    "id": "mmpf01",
+    "name": "Working Capital Management",
+    "full": "Working Capital Management - Concepts, Financing and Cash Credit",
+    "keywords": "working capital current assets financing cash credit MPBF, short-term finance, liquidity management"
+  },
+  {
+    "id": "mmpf02",
+    "name": "Capital Investment",
+    "full": "Capital Investment Decisions - NPV, IRR and Dividend Policy",
+    "keywords": "NPV IRR payback capital structure dividend policy M&M, investment appraisal, capital budgeting MBA"
+  },
+  {
+    "id": "mmpf03",
+    "name": "Management Control Systems",
+    "full": "Management Control Systems - MCS, Budget and BSC",
+    "keywords": "MCS responsibility centres transfer pricing budget variance BSC, balanced scorecard, management control"
+  }
+]

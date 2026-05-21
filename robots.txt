@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /_cleanup/
+Disallow: /scripts/
+Disallow: /*.bak$
+
+Sitemap: https://immortaljeetsingh.github.io/StudyHub/sitemap.xml
+
+# StudyHub - IGNOU MBA Study Material
+# Free notes, quizzes, and study guides for all 43 IGNOU MBA subjects
