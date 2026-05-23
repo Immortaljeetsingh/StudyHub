@@ -2884,3 +2884,201 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   .comparison-table { font-size: 0.82rem; }
   .comparison-table th, .comparison-table td { padding: 0.65rem 0.85rem; }
 }
+
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FITTING FIXES — prevent desktop content overflow on subject pages
+   Targets: grid-item shrinking, wide tables, hardcoded inline colors,
+            flex containers with rigid min-widths, long unbreakable text.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Critical: allow grid children to shrink below content's natural width ── */
+.study-layout,
+.study-layout > *,
+.study-content,
+.study-content * {
+  min-width: 0;
+}
+
+/* ── Hard-cap horizontal overflow at the layout level ── */
+html, body {
+  overflow-x: hidden;
+}
+.study-layout {
+  overflow-x: clip;
+  max-width: 100vw;
+}
+.study-content {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.study-content > * {
+  max-width: 100%;
+}
+
+/* ── Tables: become horizontally scrollable when too wide instead of overflowing ── */
+.study-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.study-content table > thead,
+.study-content table > tbody,
+.study-content table > tfoot {
+  display: table;
+  width: 100%;
+  table-layout: auto;
+}
+.study-content td,
+.study-content th {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* ── Word-wrap long content (URLs, code, identifiers) ── */
+.study-content p,
+.study-content li,
+.study-content dd,
+.study-content dt,
+.study-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ── Pre / code: wrap or scroll instead of overflowing ── */
+.study-content pre {
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.study-content code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ── Images / SVG / video / iframe always fit ── */
+.study-content img,
+.study-content svg:not([id="knowledgeGraph"]),
+.study-content video,
+.study-content iframe,
+.study-content embed,
+.study-content object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Tame inline-styled flex containers with rigid min-widths ── */
+.study-content [style*="display:flex"],
+.study-content [style*="display: flex"] {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.study-content [style*="display:flex"] > *,
+.study-content [style*="display: flex"] > *,
+.study-content [style*="display:grid"] > *,
+.study-content [style*="display: grid"] > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.study-content [style*="min-width:200px"] {
+  min-width: min(200px, 100%) !important;
+  flex-basis: min(200px, 100%);
+}
+.study-content [style*="min-width:100px"] {
+  min-width: min(100px, 100%) !important;
+}
+.study-content [style*="min-width:150px"] {
+  min-width: min(150px, 100%) !important;
+}
+.study-content [style*="min-width:300px"] {
+  min-width: min(300px, 100%) !important;
+}
+
+/* ── Override inline-styled dark-theme bleed in tables ── */
+/* Some pages (mmpc03, mmpm09, mmph07 etc.) hardcode dark colors that bleed into light theme */
+.study-content table[style*="color:#e0e0e0"],
+.study-content table[style*="color: #e0e0e0"],
+.study-content table[style*="color:#fff"],
+.study-content table[style*="color: #fff"],
+.study-content table[style*="color:rgba(255,255,255"] {
+  color: var(--text-primary) !important;
+}
+.study-content tr[style*="background:#1a1a3e"],
+.study-content tr[style*="background: #1a1a3e"] {
+  background: rgba(212, 73, 62, 0.08) !important;
+}
+.study-content tr[style*="background:#1a1a3e"] th,
+.study-content tr[style*="background: #1a1a3e"] th,
+.study-content tr[style*="background:#1a1a3e"] td,
+.study-content tr[style*="background: #1a1a3e"] td {
+  color: var(--accent) !important;
+  background: transparent !important;
+  border-color: var(--border) !important;
+}
+.study-content table[style*="border-collapse:collapse"] tr,
+.study-content table[style*="border-collapse: collapse"] tr {
+  background: transparent !important;
+}
+.study-content table[style*="border-collapse"] td[style*="border:1px solid rgba(200,200,200"],
+.study-content table[style*="border-collapse"] th[style*="border:1px solid rgba(200,200,200"] {
+  border-color: var(--border) !important;
+  color: var(--text-secondary) !important;
+}
+.study-content tr[style*="border-bottom:1px solid rgba(255,255,255"] td,
+.study-content tr[style*="border-bottom: 1px solid rgba(255,255,255"] td {
+  border-bottom-color: var(--border) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* ── Sidebar must also not overflow its column ── */
+.study-sidebar {
+  min-width: 0;
+  overflow-x: hidden;
+}
+.sidebar-nav a {
+  word-break: break-word;
+}
+
+/* ── Long titles / headings shouldn't blow out ── */
+.study-content h1,
+.study-content h2,
+.study-content h3,
+.study-content h4 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* ── Inline blocks with hardcoded backgrounds — soften so theme isn't bled ── */
+.study-content [style*="background:rgba(0,0,0"],
+.study-content [style*="background: rgba(0,0,0"] {
+  background: var(--bg-card) !important;
+}
+
+/* ── Visual-diagram nodes (.vd-node) — let them wrap on narrow ── */
+.study-content .vd-node {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+  max-width: 100%;
+}
+
+/* ── DB-wrapped content (.db) — common wrapper used in subject pages ── */
+.study-content .db {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* ── Reinforce on smaller desktop widths (where issue is most visible) ── */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .study-content {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
