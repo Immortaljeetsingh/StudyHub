@@ -1,9 +1,13 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="google-site-verification" content="YVPwG3y46Ic-snC45kCJWUGHVdF-eMyjM3au5RT3fyM" />
 <title>MMPO-08 International Logistics - Free IGNOU MBA Notes 2026 | StudyHub</title>
 <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -54,8 +58,8 @@
 <button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
 <aside class="study-sidebar">
-<nav class="sidebar-nav">
 <div class="sidebar-header"><h3>Navigation</h3></div>
+<nav class="sidebar-nav">
 <a href="#block1">Block-01 Fundamentals</a>
 <a href="#u1">Unit 1: R&amp;D Management</a>
 <a href="#u2">Unit 2: Innovation Concepts</a>
@@ -90,7 +94,7 @@
 
   <!-- Mobile unit jump menu (auto-injected) -->
   <details class="unit-nav-mobile">
-    <summary>📚 Jump to unit ▾</summary>
+    <summary>?? Jump to unit ?</summary>
     <nav>
       <a href="#u1">Unit 1: R&D Management</a>
       <a href="#u2">Unit 2: Innovation Concepts</a>
@@ -1201,13 +1205,22 @@
 </ul></div>
 </div>
 
+
+<!-- Q&A -->
+<section class='qa-section'>
+<h2>Important Questions & Answers</h2>
+<ul class='qa-list'>
+<!-- Add Q&A items here -->
+</ul>
+</section>
 </main></div>
-<script src="pomodoro.js"></script>
-<script src="bookmark-notes.js"></script>
-<script src="flashcards.js"></script>
+<script src="pomodoro.js" defer></script>
+<script src="bookmark-notes.js" defer></script>
+<script src="flashcards.js" defer></script>
 <script>
 (function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('h3[id^="u"],h2[id^="block"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})();
 window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.getElementById("readingProgress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".sidebar-nav a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});
 </script>
-<script src="pwa-register.js"></script>
+<script src="pwa-register.js" defer></script>
 </body></html>
+

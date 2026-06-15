@@ -1,9 +1,13 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="google-site-verification" content="YVPwG3y46Ic-snC45kCJWUGHVdF-eMyjM3au5RT3fyM" />
 <title>MMPC-10 Managerial Economics - Free IGNOU MBA Notes 2026 | StudyHub</title>
 <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -49,7 +53,9 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="reading-progress" id="readingProgress"></div>
 <div id="liveRegion" class="sr-only" aria-live="polite"></div>
-<button class="mobile-nav-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Toggle navigation">&#x2630;</button>
+<script src="api-utils.js"></script>
+<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-10'));</script>
+<button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#x2630;</button>
 <div class="study-layout">
 <aside class="study-sidebar">
 <div class="sidebar-header"><h3>Navigation</h3><span class="subject-badge">&#x1F4D8; MMPC-10</span></div>
@@ -80,7 +86,7 @@
 
   <!-- Mobile unit jump menu (auto-injected) -->
   <details class="unit-nav-mobile">
-    <summary>📚 Jump to unit ▾</summary>
+    <summary>?? Jump to unit ?</summary>
     <nav>
       <a href="#u1">Unit 1: Scope of Managerial Economics</a>
       <a href="#u2">Unit 2-3: Demand Analysis</a>
@@ -108,7 +114,7 @@
 <div class="action-bar"><button class="btn btn-primary summarize-btn" data-target="#sU1">&#x1F4DD; Summarize</button><button class="btn btn-success ask-ai-btn" data-target="#sU1">&#x1F4AC; Ask AI</button></div>
 <div id="sU1"></div>
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Core Definition</div><p><strong>Managerial Economics</strong> = Applied Microeconomics for business decisions. It bridges the gap between economic theory and business practice, focusing on how firms react to economic environment changes. It addresses three central economic problems: <strong>What</strong> to produce, <strong>How</strong> to produce, and <strong>For whom</strong> to produce.</p><p><strong>Scope:</strong> Resource allocation, inventory management, pricing decisions, and capital budgeting. It uses economic concepts like demand, supply, elasticity, and market structure to guide business decisions.</p></div>
-<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Insight</div><p>Managerial Economics is <strong>normative</strong> (prescriptive) — it tells managers what they <em>should</em> do, unlike pure economics which is <strong>positive</strong> (descriptive). It combines microeconomic theory with decision sciences like operations research and statistics.</p></div>
+<div class="callout callout-important"><div class="callout-label">&#x26A0; Key Insight</div><p>Managerial Economics is <strong>normative</strong> (prescriptive) ï¿½ it tells managers what they <em>should</em> do, unlike pure economics which is <strong>positive</strong> (descriptive). It combines microeconomic theory with decision sciences like operations research and statistics.</p></div>
 <div class="video-section">
 <button class="video-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.textContent=this.textContent==='\u25B6 Watch Videos'?'\u25BC Hide Videos':'\u25B6 Watch Videos'">&#x25B6; Watch Videos</button>
 <div class="video-section-content">
@@ -278,7 +284,7 @@
 <div class="callout callout-mnemonic"><div class="callout-label">&#x1F9E0; Memory Aid: ENUP</div><p>Elasticity determinants: <strong>E</strong>xpenditure share, <strong>N</strong>ecessity vs Luxury, <strong>U</strong>bstitutes availability, <strong>P</strong>eriod of time.</p></div>
 <div class="kt"><p><strong>Arc Elasticity Formula:</strong> Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)] &#x2014; Use midpoint method for accuracy between two points.</p><p><strong>Point Elasticity Formula:</strong> Ed = (dQ/dP) &#xD7; (P/Q) &#x2014; Elasticity at a specific point on the demand curve.</p><p><strong>Income Elasticity:</strong> Ey = (&#x394;Q/&#x394;Y) &#xD7; (Y/Q) &#x2014; Ey > 0 = normal good, Ey < 0 = inferior good.</p><p><strong>Cross Elasticity:</strong> Exy = (&#x394;Qx/&#x394;Py) &#xD7; (Py/Qx) &#x2014; Exy > 0 = substitutes, Exy < 0 = complements.</p></div>
 <div class="callout callout-example"><div class="callout-label">&#x1F4A1; Indian Example</div><p>Petrol in India is inelastic &#x2014; even when prices cross &#x20B9;100/litre, people still buy because there are few substitutes for commuting. But luxury goods like iPhones have elastic demand &#x2014; a price hike significantly reduces sales.</p></div>
-<div class="case-study"><h5>&#x1F4CB; Case Study: Elasticity of Indian Goods</h5><p><strong>Inelastic goods in India:</strong> Petrol (|Ed| ~0.3), Salt (|Ed| ~0.1), Insulin (|Ed| ~0.0),自来水 (|Ed| ~0.2). These are necessities with few substitutes. <strong>Elastic goods in India:</strong> Air travel (|Ed| ~1.5), Restaurant meals (|Ed| ~1.2), Branded clothing (|Ed| ~1.8), Electronics (|Ed| ~1.4). These are luxuries with many substitutes. <strong>Policy implication:</strong> Government can tax inelastic goods (petrol, tobacco) without significantly reducing consumption, generating more revenue.</p></div>
+<div class="case-study"><h5>&#x1F4CB; Case Study: Elasticity of Indian Goods</h5><p><strong>Inelastic goods in India:</strong> Petrol (|Ed| ~0.3), Salt (|Ed| ~0.1), Insulin (|Ed| ~0.0),??? (|Ed| ~0.2). These are necessities with few substitutes. <strong>Elastic goods in India:</strong> Air travel (|Ed| ~1.5), Restaurant meals (|Ed| ~1.2), Branded clothing (|Ed| ~1.8), Electronics (|Ed| ~1.4). These are luxuries with many substitutes. <strong>Policy implication:</strong> Government can tax inelastic goods (petrol, tobacco) without significantly reducing consumption, generating more revenue.</p></div>
 <div class="kt"><p><strong>Key Formulas:</strong> Arc Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)] &#x2022; Point Ed = (dQ/dP) &#xD7; (P/Q) &#x2022; TR = P &#xD7; Q &#x2022; MR = dTR/dQ</p></div>
 <div class="summary-box"><h4>&#x2705; Unit 5 Summary</h4><ul>
 <li>Three elasticities: Price, Income, Cross</li>
@@ -800,12 +806,18 @@ Key: MC crosses ATC and AVC at their minimum points
 </div>
 
 </div>
+
+<!-- Q&A -->
+<section class='qa-section'>
+<h2>Important Questions & Answers</h2>
+<ul class='qa-list'>
+<!-- Add Q&A items here -->
+</ul>
+</section>
 </main>
-<script src="api-utils.js"></script>
-<script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-10'));</script>
-<script src="pomodoro.js"></script>
-<script src="bookmark-notes.js"></script>
-<script src="flashcards.js"></script>
+<script src="pomodoro.js" defer></script>
+<script src="bookmark-notes.js" defer></script>
+<script src="flashcards.js" defer></script>
 <script>
 // Scroll-triggered animations
 (function() {
@@ -847,6 +859,7 @@ Key: MC crosses ATC and AVC at their minimum points
   });
 })();
 </script>
-<script src="pwa-register.js"></script>
+<script src="pwa-register.js" defer></script>
 </body>
 </html>
+

@@ -1,22 +1,22 @@
-/* ═══════════ StudyHub — Consolidated Design System ═══════════ */
+﻿/* â•â•â•â•â•â•â•â•â•â•â• StudyHub â€” Consolidated Design System â•â•â•â•â•â•â•â•â•â•â• */
 /* Single CSS file replacing: styles.css, styles-enhanced.css, study-hub-enhanced.css,
    enhancements.css, revision-mode.css, light-theme.css, components.css, study-hub-global-fixes.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-/* ═══════════ DESIGN TOKENS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• DESIGN TOKENS â•â•â•â•â•â•â•â•â•â•â• */
 :root {
-  /* Surface — warm near-black, not navy */
+  /* Surface â€” warm near-black, not navy */
   --bg-primary: #0f0c08;
   --bg-surface: rgba(28, 22, 16, 0.95);
   --bg-elevated: rgba(40, 32, 24, 0.9);
   --bg-card: rgba(245, 237, 224, 0.04);
   --bg-card-hover: rgba(245, 237, 224, 0.08);
-  /* Text — parchment, not pure white */
+  /* Text â€” parchment, not pure white */
   --text-primary: #f5ede0;
   --text-secondary: rgba(245, 237, 224, 0.65);
   --text-muted: rgba(245, 237, 224, 0.45);
-  /* Brand — Mughal Ink palette */
+  /* Brand â€” Mughal Ink palette */
   --accent: #c9302c;
   --accent-secondary: #1d6b5a;
   --accent-warm: #d4a017;
@@ -64,7 +64,7 @@
   --accent-glow: rgba(168, 37, 43, 0.15);
 }
 
-/* ═══ Subject color tokens — per-course identity ═══ */
+/* â•â•â• Subject color tokens â€” per-course identity â•â•â• */
 .subject-mmpc01 { --subject-color: #94a3b8; --subject-glow: rgba(148,163,184,0.35); --accent: #94a3b8; }
 .subject-mmpc02 { --subject-color: #6ee7b7; --subject-glow: rgba(110,231,183,0.35); --accent: #1d6b5a; }
 .subject-mmpc03 { --subject-color: #fcd34d; --subject-glow: rgba(252,211,77,0.35); --accent: #d4a017; }
@@ -109,7 +109,7 @@
 .subject-mmpf03 { --subject-color: #f472b6; --subject-glow: rgba(244,114,182,0.35); --accent: #db2777; }
 .subject-mmpb06 { --subject-color: #94a3b8; --subject-glow: rgba(148,163,184,0.35); --accent: #64748b; }
 
-/* ═══════════ RESET & BASE ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• RESET & BASE â•â•â•â•â•â•â•â•â•â•â• */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -155,7 +155,7 @@ body::after {
   100% { transform: rotate(360deg); }
 }
 
-/* ═══════════ ACCESSIBILITY ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• ACCESSIBILITY â•â•â•â•â•â•â•â•â•â•â• */
 .live-region {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
@@ -181,7 +181,7 @@ body::after {
   border-radius: 4px;
 }
 
-/* ═══════════ HEADER ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• HEADER â•â•â•â•â•â•â•â•â•â•â• */
 header {
   text-align: center;
   padding: 1.5rem 1rem 1.75rem;
@@ -274,7 +274,7 @@ header p {
   background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.06);
 }
 
-/* ═══════════ MOBILE NAV TOGGLE ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• MOBILE NAV TOGGLE â•â•â•â•â•â•â•â•â•â•â• */
 .mobile-nav-toggle {
   display: none;
   position: fixed; bottom: 1.5rem; left: 1.5rem;
@@ -297,14 +297,14 @@ header p {
   .mobile-nav-toggle { display: flex; }
 }
 
-/* ═══════════ CONTAINER & LAYOUT ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• CONTAINER & LAYOUT â•â•â•â•â•â•â•â•â•â•â• */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* ═══════════ HERO ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â• */
 .hero {
   text-align: center;
   padding-block: clamp(3rem, 8vw, 6rem);
@@ -344,7 +344,7 @@ header p {
   min-height: 44px;
 }
 
-/* ═══════════ SECTION LABELS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SECTION LABELS â•â•â•â•â•â•â•â•â•â•â• */
 .section-label {
   display: flex; align-items: center; gap: 0.5rem;
   margin-top: 3rem; margin-bottom: 0.5rem;
@@ -367,7 +367,7 @@ header p {
   max-width: 600px; margin-bottom: 1.5rem;
 }
 
-/* ═══════════ QUICK ACCESS CARDS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• QUICK ACCESS CARDS â•â•â•â•â•â•â•â•â•â•â• */
 .quick-access-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr));
@@ -409,7 +409,7 @@ header p {
   line-height: 1.3;
 }
 
-/* ═══════════ DASHBOARD STATS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• DASHBOARD STATS â•â•â•â•â•â•â•â•â•â•â• */
 .dashboard-stats {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
@@ -482,7 +482,7 @@ header p {
   100% { background-position: -200% 0; }
 }
 
-/* ═══════════ SEARCH ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SEARCH â•â•â•â•â•â•â•â•â•â•â• */
 .search-container { margin: 2rem 0; position: relative; }
 .search-box {
   display: flex; align-items: center; gap: 0.75rem;
@@ -543,7 +543,7 @@ header p {
 .search-result-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
 .search-no-results { padding: 2rem; text-align: center; color: var(--text-muted); }
 
-/* ═══════════ SUBJECTS GRID ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SUBJECTS GRID â•â•â•â•â•â•â•â•â•â•â• */
 .subjects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
@@ -636,7 +636,7 @@ header p {
   .subject-card h3, .subject-card h4 { font-size: 1.1rem; }
 }
 
-/* ═══════════ TAG BADGES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• TAG BADGES â•â•â•â•â•â•â•â•â•â•â• */
 .tag-badge {
   display: inline-flex; align-items: center;
   padding: 0.2rem 0.6rem;
@@ -647,7 +647,7 @@ header p {
   color: var(--accent);
 }
 
-/* ═══════════ KNOWLEDGE GRAPH ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• KNOWLEDGE GRAPH â•â•â•â•â•â•â•â•â•â•â• */
 #graph-container {
   background: var(--bg-card);
   border: 1px solid var(--glass-border);
@@ -720,7 +720,7 @@ header p {
   visibility: visible;
 }
 
-/* ═══════════ FAB ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• FAB â•â•â•â•â•â•â•â•â•â•â• */
 .fab-container {
   position: fixed; bottom: 2rem; right: 2rem;
   z-index: 9999;
@@ -764,7 +764,7 @@ header p {
   .fab-container { right: 1.5rem; }
 }
 
-/* ═══════════ TOAST ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• TOAST â•â•â•â•â•â•â•â•â•â•â• */
 .toast {
   position: fixed; bottom: 6rem; right: 2rem;
   padding: 0.75rem 1.5rem;
@@ -792,7 +792,7 @@ header p {
   .toast { bottom: auto; top: 1rem; right: 1rem; left: 1rem; max-width: 100%; }
 }
 
-/* ═══════════ TOOLTIPS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• TOOLTIPS â•â•â•â•â•â•â•â•â•â•â• */
 .tooltip-term {
   color: var(--accent); font-weight: 600;
   cursor: help; position: relative;
@@ -818,7 +818,7 @@ header p {
   opacity: 1; visibility: visible;
 }
 
-/* ═══════════ SHORTCUTS MODAL ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SHORTCUTS MODAL â•â•â•â•â•â•â•â•â•â•â• */
 .shortcuts-modal {
   display: none; position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -865,7 +865,7 @@ header p {
   color: var(--text-primary); font-family: 'Inter', monospace;
 }
 
-/* ═══════════ API SETTINGS MODAL ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• API SETTINGS MODAL â•â•â•â•â•â•â•â•â•â•â• */
 .api-settings {
   display: none; position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -912,7 +912,7 @@ header p {
 .api-status.success { background: rgba(74,124,89,0.12); color: var(--success); display: block; }
 .api-status.error { background: rgba(239,68,68,0.12); color: var(--danger); display: block; }
 
-/* ═══════════ BUTTONS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• BUTTONS â•â•â•â•â•â•â•â•â•â•â• */
 .btn {
   display: inline-flex; align-items: center; gap: 0.4rem;
   padding: 0.6rem 1.35rem;
@@ -975,7 +975,7 @@ header p {
 }
 .btn-cancel:hover { background: var(--glass-strong); color: var(--text-primary); }
 
-/* ═══════════ FOOTER ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â• */
 footer {
   text-align: center;
   padding: 4rem 2rem 2rem;
@@ -1014,7 +1014,7 @@ footer kbd {
   font-family: 'Inter', monospace;
 }
 
-/* ═══════════ READING PROGRESS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• READING PROGRESS â•â•â•â•â•â•â•â•â•â•â• */
 .reading-progress {
   position: fixed; top: 0; left: 0;
   width: 0%; height: 3px;
@@ -1030,7 +1030,7 @@ footer kbd {
   100% { background-position: 0% 50%; }
 }
 
-/* ═══════════ STUDY PAGE LAYOUT ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• STUDY PAGE LAYOUT â•â•â•â•â•â•â•â•â•â•â• */
 .study-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -1061,7 +1061,7 @@ footer kbd {
   .sidebar-close-btn:hover { color: var(--accent); }
 }
 
-/* Sidebar — hidden by default, shown when units-open */
+/* Sidebar â€” hidden by default, shown when units-open */
 .study-sidebar {
   background: rgba(255,255,255,0.02);
   backdrop-filter: blur(24px) saturate(180%);
@@ -1167,7 +1167,7 @@ footer kbd {
 .study-content ul, .study-content ol { color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1rem; }
 .study-content li { margin-bottom: 0.4rem; font-size: 0.93rem; line-height: 1.65; }
 
-/* ═══════════ CALLOUT BOXES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• CALLOUT BOXES â•â•â•â•â•â•â•â•â•â•â• */
 .callout {
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius);
@@ -1211,7 +1211,7 @@ footer kbd {
 .callout-mnemonic .callout-label { color: var(--accent-secondary); }
 .callout p, .callout li { color: var(--text-primary); }
 
-/* ═══════════ COMPARISON TABLES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• COMPARISON TABLES â•â•â•â•â•â•â•â•â•â•â• */
 .comparison-table {
   width: 100%; border-collapse: separate; border-spacing: 0;
   margin: 1.25rem 0; font-size: 0.88rem;
@@ -1235,7 +1235,7 @@ footer kbd {
 .comparison-table tr:last-child td { border-bottom: none; }
 .comparison-table tr:hover td { background: rgba(201,48,44,0.04); }
 
-/* ═══════════ SUMMARY BOX ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SUMMARY BOX â•â•â•â•â•â•â•â•â•â•â• */
 .summary-box {
   background: var(--bg-card);
   backdrop-filter: blur(24px) saturate(180%);
@@ -1257,7 +1257,7 @@ footer kbd {
   color: var(--success); font-weight: 700;
 }
 
-/* ═══════════ COMPONENT STYLES (from components.css) ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• COMPONENT STYLES (from components.css) â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Flow Visual */
 .flow-visual {
@@ -1454,7 +1454,7 @@ footer kbd {
 .step { padding: 0.5rem 0.75rem; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); font-weight: 600; font-size: 0.85rem; color: var(--text-primary); }
 .s-p { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(29,107,90,0.15); border: 1px solid rgba(29,107,90,0.3); border-radius: 8px; font-size: 0.8rem; font-weight: 600; color: #c4b5fd; }
 
-/* ═══════════ AI OUTPUT ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• AI OUTPUT â•â•â•â•â•â•â•â•â•â•â• */
 .ai-output {
   background: var(--bg-card);
   backdrop-filter: blur(24px) saturate(180%);
@@ -1469,7 +1469,7 @@ footer kbd {
 .ai-output.visible { display: block; }
 @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ═══════════ TOOLBAR ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• TOOLBAR â•â•â•â•â•â•â•â•â•â•â• */
 .top-toolbar {
   display: flex; justify-content: flex-end; gap: 0.5rem;
   padding: 0.6rem 1.25rem;
@@ -1493,7 +1493,7 @@ footer kbd {
   border-color: var(--accent);
 }
 
-/* ═══════════ VIDEO SECTIONS ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• VIDEO SECTIONS â•â•â•â•â•â•â•â•â•â•â• */
 .video-section { margin: 2rem 0; }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
 .video-card { background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 14px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
@@ -1514,7 +1514,7 @@ footer kbd {
 .video-section-content { display: none; }
 .video-section-content.active { display: block; animation: fadeSlideIn 0.3s ease; }
 
-/* ═══════════ QUIZ STYLES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• QUIZ STYLES â•â•â•â•â•â•â•â•â•â•â• */
 .quiz-header { text-align: center; padding: 2rem; border-bottom: 1px solid var(--glass-border); }
 .quiz-header h1 { font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #c9302c, #d4a017, #1d6b5a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.03em; }
 .quiz-stats { display: flex; justify-content: center; gap: 2.5rem; margin: 1.25rem 0; flex-wrap: wrap; }
@@ -1548,7 +1548,7 @@ footer kbd {
 .q-explanation { margin-top: 0.75rem; padding: 0.75rem 1rem; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); font-size: 0.86rem; color: var(--text-secondary); display: none; animation: fadeSlideIn 0.3s ease; }
 .q-explanation.visible { display: block; }
 
-/* ═══════════ FOCUS MODE ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• FOCUS MODE â•â•â•â•â•â•â•â•â•â•â• */
 .focus-mode header,
 .focus-mode footer,
 .focus-mode .quick-access-grid,
@@ -1557,7 +1557,7 @@ footer kbd {
 .focus-mode .streak-widget { display: none !important; }
 .focus-mode .container { max-width: 700px; }
 
-/* ═══════════ SCROLL TO TOP ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• SCROLL TO TOP â•â•â•â•â•â•â•â•â•â•â• */
 .scroll-top {
   position: fixed; bottom: 2rem; right: 5rem;
   width: 44px; height: 44px; border-radius: 50%;
@@ -1572,7 +1572,7 @@ footer kbd {
 .scroll-top.show { opacity: 1; transform: translateY(0); }
 .scroll-top:hover { transform: translateY(-2px); }
 
-/* ═══════════ BOOKMARKS & NOTES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• BOOKMARKS & NOTES â•â•â•â•â•â•â•â•â•â•â• */
 .bookmark-btn {
   background: none; border: 1px solid var(--glass-border);
   color: var(--text-muted); padding: 0.4rem 0.8rem;
@@ -1605,7 +1605,7 @@ footer kbd {
 }
 .notes-panel textarea:focus { outline: none; border-color: var(--accent); }
 
-/* ═══════════ ACHIEVEMENT TOAST ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• ACHIEVEMENT TOAST â•â•â•â•â•â•â•â•â•â•â• */
 .achievement-toast {
   position: fixed; top: 1rem; left: 50%;
   transform: translateX(-50%) translateY(-100px);
@@ -1618,7 +1618,7 @@ footer kbd {
 }
 .achievement-toast.show { transform: translateX(-50%) translateY(0); }
 
-/* ═══════════ RESPONSIVE ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• RESPONSIVE â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Tablet (1024px) */
 @media (max-width: 1024px) {
@@ -1633,6 +1633,22 @@ footer kbd {
   margin: 1.5rem 0;
   flex-wrap: wrap;
 }
+
+/* Base definitions for layout classes (enhanced on mobile via @media below) */
+.animate-on-scroll { opacity: 0; transform: translateY(15px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.visible { opacity: 1 !important; transform: translateY(0) !important; }
+.fc { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.fc-s { flex: 1; min-width: 0; }
+.fc-a { flex-shrink: 0; font-size: 1.2rem; padding: 0 0.25rem; }
+.br { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cg { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.igl { display: grid; gap: 1rem; padding: 1rem; }
+.py { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; padding: 1rem 0; }
+.py-l { padding: 0.75rem 1.25rem; text-align: center; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; color: var(--text-primary); backdrop-filter: blur(16px); }
+.sb { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 8px; font-size: 0.8rem; font-weight: 600; }
+.s-b { background: rgba(29,107,90,0.15); border: 1px solid rgba(29,107,90,0.3); }
+.s-g { background: rgba(96,165,250,0.12); border: 1px solid rgba(96,165,250,0.25); }
+.kt { background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
 
 /* Mobile (768px) */
 @media (max-width: 768px) {
@@ -1735,9 +1751,9 @@ img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
 body { overflow-x: hidden; }
 .study-content { overflow-wrap: break-word; word-wrap: break-word; }
 
-/* ═══════════ MOBILE STUDY PAGE FIXES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• MOBILE STUDY PAGE FIXES â•â•â•â•â•â•â•â•â•â•â• */
 
-/* Kill grid on mobile — sidebar is hidden anyway */
+/* Kill grid on mobile â€” sidebar is hidden anyway */
 @media (max-width: 900px) {
   .study-layout {
     display: block;
@@ -1783,7 +1799,7 @@ body { overflow-x: hidden; }
     overflow-wrap: break-word;
   }
 
-  /* Tables, code, pre — never overflow viewport */
+  /* Tables, code, pre â€” never overflow viewport */
   .study-content table,
   .study-content pre,
   .study-content .comparison-table {
@@ -1794,7 +1810,7 @@ body { overflow-x: hidden; }
   }
 }
 
-/* Mobile unit jump menu — hidden on desktop */
+/* Mobile unit jump menu â€” hidden on desktop */
 .unit-nav-mobile { display: none; }
 @media (max-width: 900px) {
   .unit-nav-mobile {
@@ -1842,7 +1858,7 @@ body { overflow-x: hidden; }
   background: var(--bg-card-hover);
 }
 
-/* ═══════════ PREFERS-REDUCED-MOTION ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• PREFERS-REDUCED-MOTION â•â•â•â•â•â•â•â•â•â•â• */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1858,7 +1874,7 @@ body { overflow-x: hidden; }
   .btn:hover { transform: none; }
 }
 
-/* ═══════════ PRINT STYLES ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• PRINT STYLES â•â•â•â•â•â•â•â•â•â•â• */
 @media print {
   .reading-progress, .top-toolbar, .scroll-top, .fab-container,
   .mobile-nav-toggle, .study-sidebar, .toast, .shortcuts-modal,
@@ -1867,7 +1883,7 @@ body { overflow-x: hidden; }
   .study-content { max-width: 100%; padding: 0; }
 }
 
-/* ═══════════ DEFENSIVE: study content above decorative overlays ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• DEFENSIVE: study content above decorative overlays â•â•â•â•â•â•â•â•â•â•â• */
 .study-content,
 .study-sidebar,
 .study-header,
@@ -1876,7 +1892,7 @@ body { overflow-x: hidden; }
   z-index: 1;
 }
 
-/* ═══════════ BLOCK-LEVEL DIVIDERS BETWEEN UNITS (MOBILE) ═══════════ */
+/* â•â•â•â•â•â•â•â•â•â•â• BLOCK-LEVEL DIVIDERS BETWEEN UNITS (MOBILE) â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
   .unit {
     margin-top: 1.5rem;
@@ -1933,27 +1949,27 @@ body::after {
 
 
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PREMIUM POLISH v2 — refined tokens, shadows, motion, typography
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PREMIUM POLISH v2 â€” refined tokens, shadows, motion, typography
    This layer intentionally lives at the end so it wins via CSS cascade.
    It refines visual surfaces without breaking layout or per-subject identity.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 :root {
-  /* — Refined dark palette: sophisticated near-black with a hint of warmth — */
+  /* â€” Refined dark palette: sophisticated near-black with a hint of warmth â€” */
   --bg-primary: #0a0907;
   --bg-surface: rgba(20, 17, 14, 0.92);
   --bg-elevated: rgba(28, 24, 20, 0.88);
   --bg-card: rgba(247, 241, 230, 0.035);
   --bg-card-hover: rgba(247, 241, 230, 0.065);
 
-  /* — Text hierarchy on parchment — */
+  /* â€” Text hierarchy on parchment â€” */
   --text-primary: #f7f1e6;
   --text-secondary: rgba(247, 241, 230, 0.72);
   --text-muted: rgba(247, 241, 230, 0.50);
   --text-faint: rgba(247, 241, 230, 0.32);
 
-  /* — Brand: deeper terracotta, champagne highlight — */
+  /* â€” Brand: deeper terracotta, champagne highlight â€” */
   --accent: #d4493e;
   --accent-soft: #e8a86b;
   --accent-deep: #8b1f1c;
@@ -1961,16 +1977,16 @@ body::after {
   --accent-warm: #c89446;
   --accent-glow: rgba(212, 73, 62, 0.20);
 
-  /* — Glass surfaces — */
+  /* â€” Glass surfaces â€” */
   --glass: rgba(247, 241, 230, 0.04);
   --glass-border: rgba(247, 241, 230, 0.07);
   --glass-strong: rgba(247, 241, 230, 0.10);
 
-  /* — Borders — */
+  /* â€” Borders â€” */
   --border: rgba(247, 241, 230, 0.07);
   --border-strong: rgba(247, 241, 230, 0.14);
 
-  /* — Radius scale — */
+  /* â€” Radius scale â€” */
   --radius-xs: 8px;
   --radius-sm: 12px;
   --radius: 18px;
@@ -1978,7 +1994,7 @@ body::after {
   --radius-xl: 28px;
   --radius-pill: 999px;
 
-  /* — Spacing scale (8px base) — */
+  /* â€” Spacing scale (8px base) â€” */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -1989,7 +2005,7 @@ body::after {
   --space-8: 4rem;
   --space-9: 6rem;
 
-  /* — Layered shadow system — */
+  /* â€” Layered shadow system â€” */
   --shadow-sm:
     0 1px 2px rgba(0, 0, 0, 0.18),
     0 2px 8px rgba(0, 0, 0, 0.12);
@@ -2008,7 +2024,7 @@ body::after {
   --shadow: var(--shadow-md);
   --shadow-card: var(--shadow-md);
 
-  /* — Refined easing — */
+  /* â€” Refined easing â€” */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
@@ -2018,7 +2034,7 @@ body::after {
 }
 
 [data-theme="light"] {
-  /* — Refined ivory palette — */
+  /* â€” Refined ivory palette â€” */
   --bg-primary: #fbf8f1;
   --bg-surface: rgba(255, 253, 250, 0.96);
   --bg-elevated: rgba(255, 253, 250, 0.86);
@@ -2063,14 +2079,14 @@ body::after {
   --shadow-card: var(--shadow-md);
 }
 
-/* — Refined typography defaults — */
+/* â€” Refined typography defaults â€” */
 body {
   font-feature-settings: 'kern', 'liga', 'calt', 'ss01';
   letter-spacing: -0.005em;
   line-height: 1.65;
 }
 
-/* — Custom scrollbar (thin, branded) — */
+/* â€” Custom scrollbar (thin, branded) â€” */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(212, 73, 62, 0.35) transparent;
@@ -2096,7 +2112,7 @@ body {
   background-clip: padding-box;
 }
 
-/* — Refined selection — */
+/* â€” Refined selection â€” */
 ::selection {
   background: rgba(212, 73, 62, 0.28);
   color: var(--text-primary);
@@ -2106,7 +2122,7 @@ body {
   color: var(--text-primary);
 }
 
-/* — Refined focus ring — */
+/* â€” Refined focus ring â€” */
 *:focus-visible {
   outline: none;
   box-shadow:
@@ -2115,7 +2131,7 @@ body {
   border-radius: 8px;
 }
 
-/* — Header h1: refined two-tone gradient — */
+/* â€” Header h1: refined two-tone gradient â€” */
 header {
   padding: 1.75rem 1rem 2rem;
   border-bottom: 1px solid var(--border);
@@ -2154,7 +2170,7 @@ header p {
   letter-spacing: -0.005em;
 }
 
-/* — Hero: more confident scale — */
+/* â€” Hero: more confident scale â€” */
 .hero {
   padding-block: clamp(4rem, 9vw, 7rem);
   max-width: 760px;
@@ -2187,7 +2203,7 @@ header p {
 }
 .hero-actions { gap: 0.875rem; margin-top: 2.25rem; }
 
-/* — Buttons: refined gradient + inset highlight — */
+/* â€” Buttons: refined gradient + inset highlight â€” */
 .btn {
   font-weight: 600;
   letter-spacing: -0.005em;
@@ -2231,7 +2247,7 @@ header p {
   min-height: 48px;
 }
 
-/* — Section labels: tighter rhythm — */
+/* â€” Section labels: tighter rhythm â€” */
 .section-label {
   margin-top: clamp(3rem, 6vw, 4.5rem);
   margin-bottom: 0.75rem;
@@ -2262,7 +2278,7 @@ header p {
   letter-spacing: -0.005em;
 }
 
-/* — Container breathing — */
+/* â€” Container breathing â€” */
 .container { padding: 1.5rem 1.25rem; }
 @media (min-width: 768px) {
   .container { padding: 2rem 2rem; }
@@ -2271,7 +2287,7 @@ header p {
   .container { padding: 2.5rem 3rem; max-width: 1320px; }
 }
 
-/* — Subject cards: softer hover, layered shadows, refined border — */
+/* â€” Subject cards: softer hover, layered shadows, refined border â€” */
 .subject-card {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
@@ -2294,7 +2310,7 @@ header p {
   filter: drop-shadow(0 0 8px var(--subject-glow, var(--accent-glow)));
 }
 
-/* — Quick access cards: refined — */
+/* â€” Quick access cards: refined â€” */
 .quick-access-card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
@@ -2317,7 +2333,7 @@ header p {
   border: 1px solid var(--glass-border);
 }
 
-/* — Stat cards: refined — */
+/* â€” Stat cards: refined â€” */
 .stat-card {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
@@ -2340,7 +2356,7 @@ header p {
   background: linear-gradient(135deg, rgba(212, 73, 62, 0.15), rgba(232, 168, 107, 0.10));
 }
 
-/* — Search box: refined — */
+/* â€” Search box: refined â€” */
 .search-box {
   border-radius: var(--radius-pill);
   padding: 0.875rem 1.25rem;
@@ -2357,7 +2373,7 @@ header p {
   box-shadow: var(--shadow-glow);
 }
 
-/* — Theme toggle / streak widget: pill, refined — */
+/* â€” Theme toggle / streak widget: pill, refined â€” */
 .theme-toggle, .streak-widget {
   border-radius: var(--radius-pill);
   background: var(--glass);
@@ -2376,7 +2392,7 @@ header p {
   box-shadow: var(--shadow-sm);
 }
 
-/* — Tag badges: pill — */
+/* â€” Tag badges: pill â€” */
 .tag-badge {
   border-radius: var(--radius-pill);
   font-weight: 500;
@@ -2388,7 +2404,7 @@ header p {
   color: var(--accent);
 }
 
-/* — Footer: refined — */
+/* â€” Footer: refined â€” */
 footer {
   padding: 5rem 2rem 2.5rem;
   font-size: 0.85rem;
@@ -2415,13 +2431,13 @@ footer kbd {
   border-color: var(--border-strong);
 }
 
-/* — Reading progress: refined two-tone — */
+/* â€” Reading progress: refined two-tone â€” */
 .reading-progress {
   height: 2px;
   background: linear-gradient(90deg, #d4493e 0%, #e8a86b 50%, #1d6b5a 100%);
 }
 
-/* — FAB: refined gradient + glow — */
+/* â€” FAB: refined gradient + glow â€” */
 .fab-main {
   background: linear-gradient(135deg, #d4493e, #8b1f1c);
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.10);
@@ -2431,19 +2447,19 @@ footer kbd {
               inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
-/* — Knowledge graph container: refined — */
+/* â€” Knowledge graph container: refined â€” */
 #graph-container {
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
-/* — Smooth global link transitions — */
+/* â€” Smooth global link transitions â€” */
 a:not(.btn):not(.quick-access-card):not(.subject-card) {
   transition: color 0.25s var(--ease-out-expo);
 }
 
-/* — Reduce-motion respect — */
+/* â€” Reduce-motion respect â€” */
 @media (prefers-reduced-motion: reduce) {
   body::before, body::after { animation: none !important; }
   *, *::before, *::after {
@@ -2454,12 +2470,12 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 
 
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PREMIUM POLISH v2 — Subject Pages
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PREMIUM POLISH v2 â€” Subject Pages
    Refines callouts, study-header, comparison tables, summary boxes, sidebar.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* — Study header: refined two-tone gradient (was rainbow) — */
+/* â€” Study header: refined two-tone gradient (was rainbow) â€” */
 .study-header {
   padding: 3rem 0 2.25rem;
   border-bottom: 1px solid var(--border);
@@ -2504,7 +2520,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   margin-bottom: 1.25rem;
 }
 
-/* — Study content typography — */
+/* â€” Study content typography â€” */
 .study-content {
   padding: 2.5rem 1.5rem 4rem;
 }
@@ -2566,7 +2582,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 }
 .study-content li::marker { color: var(--accent); }
 
-/* — Callout boxes: refined with layered shadow + softer borders — */
+/* â€” Callout boxes: refined with layered shadow + softer borders â€” */
 .callout {
   padding: 1.25rem 1.5rem 1.25rem 1.75rem;
   border-radius: var(--radius);
@@ -2637,7 +2653,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 .callout p:last-child, .callout ul:last-child, .callout ol:last-child { margin-bottom: 0; }
 .callout p, .callout li { color: var(--text-primary); line-height: 1.7; }
 
-/* — Light theme callout adjustments — */
+/* â€” Light theme callout adjustments â€” */
 [data-theme="light"] .callout {
   border-color: var(--border-strong);
 }
@@ -2650,7 +2666,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 [data-theme="light"] .callout-formula .callout-label { color: #6d28d9; }
 [data-theme="light"] .callout-key .callout-label { color: #b45309; }
 
-/* — Comparison tables: refined — */
+/* â€” Comparison tables: refined â€” */
 .comparison-table {
   width: 100%;
   border-collapse: separate;
@@ -2725,7 +2741,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 }
 .study-content table:not(.comparison-table):not(.no-style) tr:last-child td { border-bottom: none; }
 
-/* — Summary box: refined — */
+/* â€” Summary box: refined â€” */
 .summary-box {
   background: var(--bg-card);
   backdrop-filter: blur(20px) saturate(180%);
@@ -2779,7 +2795,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   box-shadow: 0 0 8px var(--accent-glow);
 }
 
-/* — Sidebar refinement — */
+/* â€” Sidebar refinement â€” */
 .study-sidebar {
   background: var(--bg-card);
   border-right: 1px solid var(--border);
@@ -2819,7 +2835,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   background: linear-gradient(90deg, rgba(212, 73, 62, 0.06) 0%, transparent 100%);
 }
 
-/* — Code blocks (if any) — */
+/* â€” Code blocks (if any) â€” */
 .study-content code {
   font-family: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.88em;
@@ -2845,7 +2861,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   color: var(--text-primary);
 }
 
-/* — Blockquotes — */
+/* â€” Blockquotes â€” */
 .study-content blockquote {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
@@ -2857,13 +2873,13 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   letter-spacing: -0.005em;
 }
 
-/* — Reading progress on subject pages — */
+/* â€” Reading progress on subject pages â€” */
 .reading-progress {
   background: linear-gradient(90deg, #d4493e 0%, #e8a86b 50%, #1d6b5a 100%);
   height: 2px;
 }
 
-/* — Subject badge pulses gently on hover — */
+/* â€” Subject badge pulses gently on hover â€” */
 .subject-badge, .subject-tag {
   transition: transform 0.3s var(--ease-out-expo),
               box-shadow 0.3s var(--ease-out-expo);
@@ -2872,7 +2888,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   transform: translateY(-1px);
 }
 
-/* — Mobile refinements for subject pages — */
+/* â€” Mobile refinements for subject pages â€” */
 @media (max-width: 767px) {
   .study-header { padding: 2rem 1rem 1.75rem; }
   .study-header h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
@@ -2887,13 +2903,13 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
 
 
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   FITTING FIXES — prevent desktop content overflow on subject pages
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   FITTING FIXES â€” prevent desktop content overflow on subject pages
    Targets: grid-item shrinking, wide tables, hardcoded inline colors,
             flex containers with rigid min-widths, long unbreakable text.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Critical: allow grid children to shrink below content's natural width ── */
+/* â”€â”€ Critical: allow grid children to shrink below content's natural width â”€â”€ */
 .study-layout,
 .study-layout > *,
 .study-content,
@@ -2901,7 +2917,7 @@ a:not(.btn):not(.quick-access-card):not(.subject-card) {
   min-width: 0;
 }
 
-/* ── Hard-cap horizontal overflow at the layout level ── */
+/* â”€â”€ Hard-cap horizontal overflow at the layout level â”€â”€ */
 html, body {
   overflow-x: hidden;
 }
@@ -2918,7 +2934,7 @@ html, body {
   max-width: 100%;
 }
 
-/* ── Tables: become horizontally scrollable when too wide instead of overflowing ── */
+/* â”€â”€ Tables: become horizontally scrollable when too wide instead of overflowing â”€â”€ */
 .study-content table {
   display: block;
   width: 100%;
@@ -2943,7 +2959,7 @@ html, body {
   hyphens: auto;
 }
 
-/* ── Word-wrap long content (URLs, code, identifiers) ── */
+/* â”€â”€ Word-wrap long content (URLs, code, identifiers) â”€â”€ */
 .study-content p,
 .study-content li,
 .study-content dd,
@@ -2953,7 +2969,7 @@ html, body {
   word-break: break-word;
 }
 
-/* ── Pre / code: wrap or scroll instead of overflowing ── */
+/* â”€â”€ Pre / code: wrap or scroll instead of overflowing â”€â”€ */
 .study-content pre {
   white-space: pre;
   overflow-x: auto;
@@ -2964,7 +2980,7 @@ html, body {
   word-break: break-word;
 }
 
-/* ── Images / SVG / video / iframe always fit ── */
+/* â”€â”€ Images / SVG / video / iframe always fit â”€â”€ */
 .study-content img,
 .study-content svg:not([id="knowledgeGraph"]),
 .study-content video,
@@ -2975,7 +2991,7 @@ html, body {
   height: auto;
 }
 
-/* ── Tame inline-styled flex containers with rigid min-widths ── */
+/* â”€â”€ Tame inline-styled flex containers with rigid min-widths â”€â”€ */
 .study-content [style*="display:flex"],
 .study-content [style*="display: flex"] {
   flex-wrap: wrap;
@@ -3002,7 +3018,7 @@ html, body {
   min-width: min(300px, 100%) !important;
 }
 
-/* ── Override inline-styled dark-theme bleed in tables ── */
+/* â”€â”€ Override inline-styled dark-theme bleed in tables â”€â”€ */
 /* Some pages (mmpc03, mmpm09, mmph07 etc.) hardcode dark colors that bleed into light theme */
 .study-content table[style*="color:#e0e0e0"],
 .study-content table[style*="color: #e0e0e0"],
@@ -3038,7 +3054,7 @@ html, body {
   color: var(--text-secondary) !important;
 }
 
-/* ── Sidebar must also not overflow its column ── */
+/* â”€â”€ Sidebar must also not overflow its column â”€â”€ */
 .study-sidebar {
   min-width: 0;
   overflow-x: hidden;
@@ -3047,7 +3063,7 @@ html, body {
   word-break: break-word;
 }
 
-/* ── Long titles / headings shouldn't blow out ── */
+/* â”€â”€ Long titles / headings shouldn't blow out â”€â”€ */
 .study-content h1,
 .study-content h2,
 .study-content h3,
@@ -3056,26 +3072,26 @@ html, body {
   hyphens: auto;
 }
 
-/* ── Inline blocks with hardcoded backgrounds — soften so theme isn't bled ── */
+/* â”€â”€ Inline blocks with hardcoded backgrounds â€” soften so theme isn't bled â”€â”€ */
 .study-content [style*="background:rgba(0,0,0"],
 .study-content [style*="background: rgba(0,0,0"] {
   background: var(--bg-card) !important;
 }
 
-/* ── Visual-diagram nodes (.vd-node) — let them wrap on narrow ── */
+/* â”€â”€ Visual-diagram nodes (.vd-node) â€” let them wrap on narrow â”€â”€ */
 .study-content .vd-node {
   min-width: 0 !important;
   flex: 1 1 auto !important;
   max-width: 100%;
 }
 
-/* ── DB-wrapped content (.db) — common wrapper used in subject pages ── */
+/* â”€â”€ DB-wrapped content (.db) â€” common wrapper used in subject pages â”€â”€ */
 .study-content .db {
   max-width: 100%;
   overflow-x: auto;
 }
 
-/* ── Reinforce on smaller desktop widths (where issue is most visible) ── */
+/* â”€â”€ Reinforce on smaller desktop widths (where issue is most visible) â”€â”€ */
 @media (min-width: 901px) and (max-width: 1280px) {
   .study-content {
     padding-left: 1.75rem;
@@ -3085,13 +3101,13 @@ html, body {
 
 
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   CENTERING FIX — guarantee .study-content is centered on desktop
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   CENTERING FIX â€” guarantee .study-content is centered on desktop
    The CSS Grid 1fr track wasn't reliably centering with margin: auto on
    some pages. This forces a flex-based centered layout when sidebar is hidden,
    and uses minmax(0, 1fr) when the sidebar is visible so the content track
    can actually shrink to its 860px max-width and center via margin auto.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* When sidebar is hidden (default), use simple block layout for predictable centering */
 .study-layout {
@@ -3151,3 +3167,4 @@ html, body {
     border: 1px solid var(--border);
   }
 }
+
