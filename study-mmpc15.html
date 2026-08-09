@@ -16,7 +16,22 @@
   .top-toolbar .btn { flex: 0 0 auto; font-size: 0.75rem; padding: 0.4rem 0.6rem; min-height: 42px; white-space: nowrap; }
   .visual-diagram div[style*="display:flex"]:not([style*="column"]):not([style*="wrap"]) { flex-direction: column; align-items: center; gap: 0.75rem; }
 }
-@media (max-width: 900px) { .unit-nav-mobile { position: static; top: auto; } }
+/* ponytail: shared styles.css:926 units-open beats the <=900px display:none (styles.css:893),
+   so on mobile the Units button would render a full-width sticky column above content.
+   Drawer fix here, in-page, for this subject. */
+@media (max-width: 900px) {
+  .study-sidebar.units-open {
+    position: fixed; top: 0; left: 0;
+    width: min(85vw, 300px); height: 100vh;
+    z-index: 9999; overflow-y: auto;
+    background: rgba(10,10,25,0.97);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    box-shadow: 4px 0 50px rgba(0,0,0,0.5);
+    border-right: 1px solid var(--glass-border);
+  }
+  [data-theme="light"] .study-sidebar.units-open { background: rgba(255,255,255,0.97); }
+  .unit-nav-mobile { position: static; top: auto; }
+}
 </style>
 
 <link rel="manifest" href="manifest.json">
@@ -905,6 +920,22 @@ Editing &#x2192; Coding &#x2192; Classification &#x2192; Tabulation &#x2192; Pre
 <!-- /study-content -->
 <script src="pomodoro.js" defer></script>
 <script src="bookmark-notes.js" defer></script>
+<script>
+// Close the mobile Units drawer on close-button tap or nav-link tap.
+// ponytail: api-utils.js close handlers (lines 205-227) only clear 'mobile-open', not 'units-open'.
+document.addEventListener('click', function(e) {
+  if (window.innerWidth > 900) return;
+  if (e.target.closest('.sidebar-close-btn, .sidebar-nav a')) {
+    var sb = document.querySelector('.study-sidebar');
+    var layout = document.querySelector('.study-layout');
+    var btn = document.getElementById('unitsToggleBtn');
+    if (sb) sb.classList.remove('units-open');
+    if (layout) layout.classList.remove('sidebar-visible');
+    if (btn) { btn.textContent = '☰ Units'; btn.classList.remove('active'); }
+    try { localStorage.setItem('studyhub-units-open', '0'); } catch(err) {}
+  }
+});
+</script>
 <script>
 // Scroll-triggered animations
 (function() {

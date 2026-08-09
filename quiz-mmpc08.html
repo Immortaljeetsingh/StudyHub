@@ -6,9 +6,9 @@
     <title>MMPC-08 Information Systems - Quiz | StudyHub</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Mobile fixes (<=480px): clear lane for the fixed timer pill, no overlap, no spill */
+        /* Fixed timer pill (top-right) sits above the sticky toolbar (z-index 900 vs 100); clear a lane at EVERY width or the pill covers the last toolbar button ("Dark" is ~90% covered at 768-1600px). 110px = 1rem right offset + pill width. */
+        .top-toolbar { padding-right: 110px; }
         @media (max-width: 480px) {
-            .top-toolbar { padding-right: 4.5rem; }
             .quiz-header { padding-top: 3.5rem; }
             .quiz-timer { top: 0.5rem; right: 0.5rem; font-size: 0.72rem; padding: 0.25rem 0.6rem; }
             .question-card { padding: 1.25rem; }

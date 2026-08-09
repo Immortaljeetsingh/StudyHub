@@ -56,6 +56,35 @@
 <div id="liveRegion" class="sr-only" aria-live="polite"></div>
 <script src="api-utils.js"></script>
 <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpm-09'));</script>
+<script>
+// ponytail: mobile Units button opens the slide-in drawer (.mobile-open) instead of
+// api-utils.js toggleUnits()'s full-width in-flow column; desktop keeps toggleUnits()
+(function () {
+  function isMobile() { return window.innerWidth <= 900; }
+  function fix() {
+    var btn = document.getElementById('unitsToggleBtn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      if (!isMobile()) return;
+      e.preventDefault(); e.stopPropagation();
+      var sb = document.querySelector('.study-sidebar');
+      var lay = document.querySelector('.study-layout');
+      if (sb) { sb.classList.remove('units-open'); sb.classList.add('mobile-open'); }
+      if (lay) lay.classList.remove('sidebar-visible');
+    }, true);
+    if (isMobile()) {
+      var sb = document.querySelector('.study-sidebar');
+      var lay = document.querySelector('.study-layout');
+      if (sb) sb.classList.remove('units-open');
+      if (lay) lay.classList.remove('sidebar-visible');
+      btn.textContent = '\u2630 Units';
+      btn.classList.remove('active');
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix);
+  else fix();
+})();
+</script>
 <button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
 <aside class="study-sidebar">

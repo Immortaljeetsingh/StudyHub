@@ -8,7 +8,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
-<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
+<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}
+/* Mobile (<=900px): Units button opens sidebar as overlay drawer. Shared styles.css
+   .study-sidebar.units-open (line 926) is display:flex at ALL widths, but its mobile
+   block (styles.css:890-902) only styles .mobile-open — so without this, units-open
+   renders as an in-flow 100vh sticky slab covering the content at 375px. */
+@media (max-width: 900px) {
+  .study-sidebar.units-open {
+    position: fixed; top: 0; left: 0;
+    width: 280px; height: 100vh;
+    z-index: 9999; overflow-y: auto;
+    background: var(--bg-card);
+    backdrop-filter: var(--blur-strong);
+    -webkit-backdrop-filter: var(--blur-strong);
+    box-shadow: 4px 0 50px rgba(0,0,0,0.5);
+    border-right: 1px solid var(--glass-border);
+  }
+}</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -228,7 +244,7 @@
 <div class="summary-box"><h4>&#x2705; Unit 1 Summary</h4><ul>
 <li>Communication = exchanging information, ideas, thoughts, feelings between persons through verbal, written, or non-verbal means</li>
 <li>7 C's: Clarity, Conciseness, Concreteness, Correctness, Coherence, Completeness, Courtesy</li>
-<li>Elements: Sender ? Message ? Channel ? Receiver ? Feedback (noise at any stage)</li>
+<li>Elements: Sender &#8594; Message &#8594; Channel &#8594; Receiver &#8594; Feedback (noise at any stage)</li>
 <li>Models: Shannon-Weaver (linear), Berlo SMCR, Schramm (feedback), Osgood-Schramm (circular), Transactional</li>
 <li>General vs Business: informal/flexible vs formal/goal-oriented/conventional</li>
 </ul></div>
@@ -356,7 +372,7 @@
 </div>
 
 <div class="summary-box"><h4>&#x2705; Unit 2 Summary</h4><ul>
-<li>Shannon-Weaver: linear model with noise concept; Sender ? Transmitter ? Channel ? Receiver ? Destination</li>
+<li>Shannon-Weaver: linear model with noise concept; Sender &#8594; Transmitter &#8594; Channel &#8594; Receiver &#8594; Destination</li>
 <li>Encoding = converting thoughts to symbols; Decoding = interpreting symbols back to meaning</li>
 <li>6 types of noise: Physical, Psychological, Semantic, Technical, Organizational, Cultural</li>
 <li>Feedback transforms one-way transmission into two-way communication</li>
@@ -614,7 +630,7 @@
 <li>4 directions: Downward (instructions), Upward (reports), Horizontal (peer coordination), Diagonal (cross-functional)</li>
 <li>Grapevine: Keith Davis identified 4 types — Single Strand, Gossip, Probability, Cluster (most common)</li>
 <li>Grapevine is 75-90% accurate; managers should use it strategically for employee sentiment</li>
-<li>Formality levels: Highly Formal (contracts) ? Moderately Formal (letters) ? Informal (chats) ? Highly Informal</li>
+<li>Formality levels: Highly Formal (contracts) &#8594; Moderately Formal (letters) &#8594; Informal (chats) &#8594; Highly Informal</li>
 <li>Skills: Professional language, active listening, clarity, respect, cultural sensitivity, adaptability</li>
 </ul></div>
 
@@ -1033,7 +1049,7 @@
 </div>
 
 <div class="summary-box"><h4>&#x2705; Unit 8 Summary</h4><ul>
-<li>Planning: Analyze Audience ? Set Objective ? Research ? Organize ? Design Slides ? Rehearse</li>
+<li>Planning: Analyze Audience &#8594; Set Objective &#8594; Research &#8594; Organize &#8594; Design Slides &#8594; Rehearse</li>
 <li>Structure: Tell-Show-Tell — Introduction (10%), Body (80%), Conclusion (10%), Q&amp;A</li>
 <li>Visual aids: 6x6 rule, min 24pt font, high contrast, relevant images, consistent design</li>
 <li>Delivery: Voice (volume, pace 130-150 wpm, pause, variety) + Body (posture, gestures, eye contact)</li>
@@ -1121,7 +1137,7 @@
 <li>5 C's of business writing: Clarity, Conciseness, Completeness, Correctness, Courtesy</li>
 <li>Planning: Purpose, Audience, Content, Structure (direct/indirect), Channel</li>
 <li>Active voice, short paragraphs (3-5 sentences), simple words, specific, one idea per sentence</li>
-<li>Direct approach: good news ? Main point ? Details ? Close; Indirect: buffer ? reasons ? bad news ? positive</li>
+<li>Direct approach: good news &#8594; Main point &#8594; Details &#8594; Close; Indirect: buffer &#8594; reasons &#8594; bad news &#8594; positive</li>
 <li>Mnemonic: WRITE — Who, Reason, Information, Tone, Error-free</li>
 </ul></div>
 
@@ -1323,7 +1339,7 @@
 
 <div class="summary-box"><h4>&#x2705; Unit 11 Summary</h4><ul>
 <li>Report types: Informational (facts), Analytical (recommend), Proposal (persuade), Compliance (regulatory)</li>
-<li>Structure: Title Page ? Executive Summary ? TOC ? Introduction ? Findings ? Conclusions ? Recommendations ? Appendices</li>
+<li>Structure: Title Page &#8594; Executive Summary &#8594; TOC &#8594; Introduction &#8594; Findings &#8594; Conclusions &#8594; Recommendations &#8594; Appendices</li>
 <li>Executive Summary is most critical — many executives ONLY read this section</li>
 <li>Proposals: Solicited (follow RFP), Unsolicited (convince problem exists), Internal (focus on ROI)</li>
 <li>Documentation: Consistency, version control, accessibility, visual hierarchy</li>

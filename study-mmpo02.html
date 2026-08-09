@@ -9,6 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
+<style>
+@media (max-width:900px){
+  .study-sidebar.units-open{position:fixed;top:0;left:0;width:min(85vw,300px);height:100vh;z-index:9999;overflow-y:auto;background:rgba(10,10,25,0.96);backdrop-filter:blur(24px) saturate(180%);box-shadow:4px 0 50px rgba(0,0,0,0.5);border-right:1px solid var(--glass-border)}
+}
+</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -56,6 +61,13 @@
 <div id="liveRegion" class="sr-only" aria-live="polite"></div>
 <script src="api-utils.js"></script>
 <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpo-02'));</script>
+<script>
+// Toolbar hrefs from shared renderToolbar() are uppercase (study-MMPO02.html);
+// actual files are lowercase — GitHub Pages is case-sensitive, so fix in place.
+document.querySelectorAll('.top-toolbar a[href$=".html"]').forEach(function(a){
+  a.href = a.href.replace(/[^/?#]+\.html$/i, function(m){ return m.toLowerCase(); });
+});
+</script>
 <button class="mobile-nav-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">&#9776;</button>
 <div class="study-layout">
 <aside class="study-sidebar">
@@ -1142,6 +1154,24 @@
 <script src="pwa-register.js" defer></script>
 <script src="pomodoro.js" defer></script>
 <script src="bookmark-notes.js" defer></script>
+<script>
+// Mobile: shared toggleUnits()/close button only manage .mobile-open; make the
+// injected sidebar close button + nav links also close the Units drawer (units-open).
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth > 900) return;
+    function closeUnits() {
+        var sb = document.querySelector('.study-sidebar');
+        var layout = document.querySelector('.study-layout');
+        if (sb) sb.classList.remove('units-open', 'mobile-open');
+        if (layout) layout.classList.remove('sidebar-visible');
+        var t = document.getElementById('unitsToggleBtn');
+        if (t) { t.textContent = '\u2630 Units'; t.classList.remove('active'); }
+        try { localStorage.setItem('studyhub-units-open', '0'); } catch(e) {}
+    }
+    document.querySelectorAll('.sidebar-close-btn').forEach(function(b) { b.addEventListener('click', closeUnits); });
+    document.querySelectorAll('.sidebar-nav a').forEach(function(a) { a.addEventListener('click', closeUnits); });
+});
+</script>
 </body>
 </html>
 

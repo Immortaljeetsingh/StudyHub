@@ -26,13 +26,17 @@ class QuizEngine {
     loadState() {
         const saved = localStorage.getItem(`quiz-state-${this.courseId}`);
         if (saved) {
-            const state = JSON.parse(saved);
-            this.currentQ = state.currentQ || 0;
-            this.score = state.score || 0;
-            this.userAnswers = state.userAnswers || {};
-            this.reviewedQuestions = new Set(state.reviewedQuestions || []);
-            this.timeLeft = state.timeLeft !== undefined ? state.timeLeft : 20 * 60;
-            this.state = state.state || 'in-progress';
+            try {
+                const state = JSON.parse(saved);
+                this.currentQ = state.currentQ || 0;
+                this.score = state.score || 0;
+                this.userAnswers = state.userAnswers || {};
+                this.reviewedQuestions = new Set(state.reviewedQuestions || []);
+                this.timeLeft = state.timeLeft !== undefined ? state.timeLeft : 20 * 60;
+                this.state = state.state || 'in-progress';
+            } catch(e) {
+                try { localStorage.removeItem(`quiz-state-${this.courseId}`); } catch(e2) {}
+            }
         }
     }
 
@@ -269,6 +273,7 @@ class QuizEngine {
     startTimer() {
         if (this.state === 'finished') return;
         this.stopTimer();
+        document.getElementById('quizTimer').classList.add('active');
         this.timerInterval = setInterval(() => {
             this.timeLeft--;
             this.updateTimerDisplay();

@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMPC-18 Entrepreneurship - Quiz | StudyHub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mobile fixes (<=480px): clear lane for the fixed timer pill, no overlap with the toolbar */
+        @media (max-width: 480px) {
+            .top-toolbar { padding-right: 4.5rem; }
+            .quiz-timer { top: 0.5rem; right: 0.5rem; font-size: 0.72rem; padding: 0.25rem 0.6rem; }
+        }
+    </style>
 
 <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body class="subject-mmpc18">
+    <div id="liveRegion" class="sr-only" aria-live="polite"></div>
+    <script src="api-utils.js"></script>
+    <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-18'));</script>
+
     <header class="quiz-header" style="padding-top: 3.5rem;">
         <h1>&#x1F4E0; MMPC-18 Entrepreneurship Quiz</h1>
         <p>Test your knowledge of Entrepreneurship</p>

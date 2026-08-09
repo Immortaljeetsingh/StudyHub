@@ -14,6 +14,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
+<style>
+/* ponytail: Units button on mobile — styles.css .units-open (display:flex, in-flow sticky 100vh)
+   would push the unit list into the page flow at <=900px. Render it as the same fixed overlay
+   .mobile-open uses instead. Desktop (grid 260px column) is untouched. */
+@media (max-width:900px){
+  .study-sidebar.units-open{position:fixed;top:0;left:0;width:85vw;max-width:300px;height:100vh;z-index:9999;overflow-y:auto;background:rgba(10,10,25,0.95);backdrop-filter:blur(24px) saturate(180%);box-shadow:4px 0 50px rgba(0,0,0,0.5);border-right:1px solid var(--glass-border)}
+}
+</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -2307,6 +2315,19 @@ window.addEventListener('scroll', function() {
   document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
 
 })();
+
+// ponytail: on mobile, drop a desktop-remembered units-open state so the Units
+// overlay never auto-covers the page on load; the toolbar button still opens it.
+if (window.matchMedia('(max-width:900px)').matches) {
+  var sb = document.querySelector('.study-sidebar');
+  var layout = document.querySelector('.study-layout');
+  if (sb && sb.classList.contains('units-open')) {
+    sb.classList.remove('units-open');
+    if (layout) layout.classList.remove('sidebar-visible');
+    var ubtn = document.getElementById('unitsToggleBtn');
+    if (ubtn) { ubtn.textContent = '\u2630 Units'; ubtn.classList.remove('active'); }
+  }
+}
 
 </script>
 

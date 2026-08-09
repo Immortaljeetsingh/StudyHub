@@ -891,9 +891,10 @@ footer kbd {
   .study-layout,
   .study-layout.sidebar-visible { grid-template-columns: 1fr; }
   .study-sidebar { display: none; }
-  .study-sidebar.mobile-open {
+  .study-sidebar.mobile-open,
+  .study-sidebar.units-open {
     display: flex; position: fixed; top: 0; left: 0;
-    width: 280px; height: 100vh;
+    width: min(85vw, 300px); height: 100vh;
     z-index: 9999; overflow-y: auto;
     background: rgba(10,10,25,0.95);
     backdrop-filter: var(--blur-strong);
@@ -908,6 +909,7 @@ footer kbd {
   }
   .sidebar-close-btn:hover { color: var(--accent); }
 }
+.sidebar-close-btn { display: none; }
 
 /* Sidebar — hidden by default, shown when units-open */
 .study-sidebar {
@@ -1322,6 +1324,8 @@ footer kbd {
   position: sticky; top: 0; z-index: 100;
 }
 .top-toolbar > :first-child { margin-right: auto; }
+/* quiz pages with both toolbar and fixed timer pill: keep the last toolbar button clear of the pill */
+body:has(.quiz-timer) .top-toolbar { padding-right: 110px; }
 #unitsToggleBtn {
   background: rgba(201,48,44,0.1);
   border-color: rgba(201,48,44,0.2);

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}
-@media (max-width:900px){.unit-nav-mobile{position:static;top:auto}}
+@media (max-width:900px){.unit-nav-mobile{position:static;top:auto}.study-sidebar.units-open:not(.mobile-open){position:fixed;top:0;left:0;width:280px;height:100vh;z-index:9999;overflow-y:auto;background:rgba(7,8,16,0.97);backdrop-filter:blur(24px) saturate(180%);box-shadow:4px 0 50px rgba(0,0,0,0.5);border-right:1px solid var(--glass-border)}}
 @media (max-width:480px){.top-toolbar{flex-wrap:nowrap;gap:.2rem;padding:.5rem .35rem}.top-toolbar .btn{flex:1 1 0;min-width:0;padding:.45rem .1rem;font-size:.7rem;white-space:nowrap;text-align:center;overflow:hidden;text-overflow:ellipsis}}</style>
 
 <link rel="manifest" href="manifest.json">
@@ -1758,6 +1758,18 @@
         });
     });
 })();
+// Close the units drawer (fixed overlay) on mobile when a link is tapped or ✕ is clicked
+document.addEventListener('click', function(e) {
+    var sb = document.querySelector('.study-sidebar');
+    if (!sb || window.innerWidth > 900) return;
+    if (e.target.closest('.sidebar-close-btn') || e.target.closest('.sidebar-nav a[href^="#"]')) {
+        sb.classList.remove('units-open', 'mobile-open');
+        var layout = document.querySelector('.study-layout');
+        if (layout) layout.classList.remove('sidebar-visible');
+        var btn = document.getElementById('unitsToggleBtn');
+        if (btn) { btn.textContent = '☰ Units'; btn.classList.remove('active'); }
+    }
+});
 </script>
 <script src="pomodoro.js" defer></script>
 <script src="bookmark-notes.js" defer></script>

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
-<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
+<style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}@media (max-width:480px){.study-content .expand-toggle{min-height:44px;padding:.4rem .25rem}}</style>
 
 <link rel="manifest" href="manifest.json">
 
@@ -832,7 +832,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Model Answer Structure: LP Formulation (10 marks)</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec1">Read More</button>
+<div class="expandable-content" id="ec1">
 <ol>
 <li><strong>Identify decision variables (2 marks):</strong> Let x1 = units of product A, x2 = units of product B</li>
 <li><strong>Write objective function (2 marks):</strong> Maximize Z = 5x1 + 4x2 (profit per unit)</li>
@@ -842,7 +843,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Model Answer Structure: Simplex Method (15 marks)</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec2">Read More</button>
+<div class="expandable-content" id="ec2">
 <ol>
 <li><strong>Convert to standard form (2 marks):</strong> Add slack variables, set up initial tableau</li>
 <li><strong>Initial tableau (3 marks):</strong> Identify basis, calculate Zj and Cj-Zj</li>
@@ -852,7 +854,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Model Answer Structure: Transportation (10 marks)</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec3">Read More</button>
+<div class="expandable-content" id="ec3">
 <ol>
 <li><strong>Check balance (1 mark):</strong> Total supply vs total demand, add dummy if needed</li>
 <li><strong>Initial solution by VAM (4 marks):</strong> Calculate penalty for each row/column, allocate to lowest cost cell in highest penalty row/column</li>
@@ -861,7 +864,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Model Answer Structure: Queuing Theory (10 marks)</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec4">Read More</button>
+<div class="expandable-content" id="ec4">
 <ol>
 <li><strong>Identify model (2 marks):</strong> M/M/1, M/M/c, etc. State arrival rate (lambda), service rate (mu)</li>
 <li><strong>Calculate utilization (2 marks):</strong> rho = lambda/mu, check stability (rho < 1)</li>
@@ -870,7 +874,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Model Answer Structure: PERT/CPM (15 marks)</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec5">Read More</button>
+<div class="expandable-content" id="ec5">
 <ol>
 <li><strong>Draw network (2 marks):</strong> Activities, dependencies, node numbering</li>
 <li><strong>Forward pass (3 marks):</strong> Calculate ES, EF for all activities</li>
@@ -881,7 +886,8 @@ Value = (ad-bc)/[(a+d)-(b+c)]</div>
 </ol></div>
 
 <h4>Key Formulas Quick Reference</h4>
-<div class="expandable-content">
+<button class="expand-toggle" data-target="#ec6">Read More</button>
+<div class="expandable-content" id="ec6">
 <div class="formula-block">QUEUING THEORY:
 rho = lambda/mu (utilization)
 L = lambda/(mu - lambda) (avg in system)

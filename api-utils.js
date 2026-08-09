@@ -140,6 +140,7 @@ function toggleUnits() {
     const sb = document.querySelector('.study-sidebar');
     const layout = document.querySelector('.study-layout');
     if (!sb || !layout) return;
+    if (window.innerWidth <= 900) { sb.classList.toggle('mobile-open'); return; }
     const isOpen = sb.classList.toggle('units-open');
     layout.classList.toggle('sidebar-visible', isOpen);
     try { localStorage.setItem('studyhub-units-open', isOpen ? '1' : '0'); } catch(e) {}
@@ -152,7 +153,7 @@ function toggleUnits() {
 function restoreUnitsState() {
     try {
         var isOpen = localStorage.getItem('studyhub-units-open') === '1';
-        if (isOpen) {
+        if (isOpen && window.innerWidth > 900) {
             var sb = document.querySelector('.study-sidebar');
             var layout = document.querySelector('.study-layout');
             if (sb && layout) {
@@ -206,7 +207,14 @@ function initMobileSidebarAutoClose() {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 900) {
                 const sb = document.querySelector('.study-sidebar');
-                if (sb) sb.classList.remove('mobile-open');
+                if (sb) {
+                    sb.classList.remove('mobile-open');
+                    sb.classList.remove('units-open');
+                }
+                const layout = document.querySelector('.study-layout');
+                if (layout) layout.classList.remove('sidebar-visible');
+                const btn = document.getElementById('unitsToggleBtn');
+                if (btn) { btn.textContent = '☰ Units'; btn.classList.remove('active'); }
             }
         });
     });
@@ -220,7 +228,14 @@ function initSidebarCloseButton() {
         closeBtn.setAttribute('aria-label', 'Close sidebar');
         closeBtn.addEventListener('click', () => {
             const sb = document.querySelector('.study-sidebar');
-            if (sb) sb.classList.remove('mobile-open');
+            if (sb) {
+                sb.classList.remove('mobile-open');
+                sb.classList.remove('units-open');
+            }
+            const layout = document.querySelector('.study-layout');
+            if (layout) layout.classList.remove('sidebar-visible');
+            const btn = document.getElementById('unitsToggleBtn');
+            if (btn) { btn.textContent = '☰ Units'; btn.classList.remove('active'); }
         });
         header.appendChild(closeBtn);
     }
@@ -228,10 +243,10 @@ function initSidebarCloseButton() {
 
 // ==================== COMPONENTS ====================
 function renderToolbar(subjectCode) {
-    var code = subjectCode.replace('-', '');
+    var code = subjectCode.toLowerCase().replace('-', '');
     var studyHref = 'study-' + code + '.html';
     var quizHref = 'quiz-' + code + '.html';
-    return '<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline">\u2190 Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">\u2630 Units</button><a href="' + studyHref + '" class="btn btn-outline">\uD83D\uDCD8 Study</a><a href="' + quizHref + '" class="btn btn-outline">\uD83D\uDCDD Quiz</a><button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">\uD83C\uDF19 Dark</button></div>';
+    return '<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline">\u2190 Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">\u2630 Units</button><a href="' + studyHref + '" class="btn btn-outline">\uD83D\uDCD8 Study</a><a href="' + quizHref + '" class="btn btn-outline">\uD83D\uDCDD Quiz</a><button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">\uD83C\uDF19 Dark</button><button class="btn btn-outline" onclick="openApiSettings()" title="API Settings">\u2699\uFE0F API</button></div>';
 }
 
 // ==================== INIT ====================
