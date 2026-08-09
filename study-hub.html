@@ -392,16 +392,22 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
 
 /* —premium mobile (375px): one-row header, no overflow— */
 @media(max-width:1024px){body.premium-landing .header-tagline{display:none}}
-@media(max-width:640px){
-  body.premium-landing .site-header{padding:0 16px}
-  body.premium-landing .header-actions{gap:6px}
+@media(max-width:760px){
+  body.premium-landing .site-header{flex-wrap:nowrap;padding:0 12px}
+  body.premium-landing .header-actions{flex-wrap:nowrap;gap:6px}
+  body.premium-landing .btn-ghost-sm{font-size:0;padding:6px 9px}
   body.premium-landing .streak-label{display:none}
 }
-@media(max-width:520px){
-  body.premium-landing .btn-ghost-sm{font-size:0;padding:6px 8px}
+@media(max-width:640px){
+  body.premium-landing .site-header{height:56px;padding:0 10px}
+  body.premium-landing .brand-name{font-size:.9rem;white-space:nowrap}
+  body.premium-landing .brand{gap:8px;min-width:0}
 }
 @media(max-width:480px){
   body.premium-landing .streak-widget{display:none}
+}
+@media(max-width:360px){
+  body.premium-landing .brand-name{display:none}
 }
 @media(max-width:499px){
   body.premium-landing .bento-tile.large{grid-column:auto}
