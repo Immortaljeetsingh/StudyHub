@@ -105,19 +105,6 @@
 .section-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--text-muted);white-space:nowrap;transition:color .2s}
 .section-link:hover{color:var(--ink)}
 
-/* —bento— */
-.bento-grid{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:500px){.bento-grid{grid-template-columns:1fr 1fr}}@media(min-width:780px){.bento-grid{grid-template-columns:1fr 1fr 1fr}}@media(min-width:1000px){.bento-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
-.bento-tile{position:relative;display:flex;flex-direction:column;padding:24px;border-radius:var(--radius-lg);color:white;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;cursor:pointer}
-.bento-tile:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.15)}
-.bento-tile:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.bento-tile.large{grid-column:span 2}
-.bento-tile-icon{margin-bottom:12px;opacity:.8}
-.bento-tile-count{font-size:.72rem;font-weight:600;opacity:.7;text-transform:uppercase;letter-spacing:.06em}
-.bento-tile-name{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;margin-top:4px}
-.bento-tile-desc{font-size:.82rem;opacity:.8;margin-top:6px;line-height:1.5}
-.bento-tile-arrow{position:absolute;top:18px;right:18px;opacity:0;transform:translateX(-6px);transition:all .25s}
-.bento-tile:hover .bento-tile-arrow{opacity:1;transform:translateX(0)}
-
 /* —list table— */
 .list-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px}
 .chip{padding:6px 14px;border-radius:20px;font-size:.78rem;font-weight:500;border:1px solid var(--border);background:var(--card-bg);transition:all .2s;cursor:pointer;font-family:inherit;color:inherit}
@@ -154,10 +141,6 @@
 .t-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--tc-color,var(--ink-muted))}
 
 /* —neutralize enhancements.css bleed— */
-.bento-tile-icon{width:auto;height:auto;border-radius:0;background:none;display:block;flex-shrink:1}
-.bento-tile::before,.bento-tile::after{display:none}
-.bento-tile-name{font-size:1.25rem}
-.bento-tile.large{grid-column:span 2}
 .list-table{border-radius:var(--radius)}
 
 /* —fx: futuristic redesign layer— */
@@ -202,10 +185,8 @@
 /* 3D tilt cards: crisp follow, glass treatment */
 .tilt-card.fx-card{transition:transform .1s ease-out,box-shadow .25s ease,border-color .25s ease}
 .fx-card{overflow:visible}
-.bento-tile{backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%)}
 .tilt-card{will-change:auto}
 .fx-card:hover{z-index:2}
-.bento-tile.fx-card::before{display:block}
 .fx-corner{position:absolute;top:12px;right:12px;width:7px;height:7px;border-radius:50%;background:#22d3ee;box-shadow:0 0 10px #22d3ee,0 0 22px var(--fx-glow-cyan);opacity:0;transform:scale(.4);transition:opacity .3s,transform .3s;pointer-events:none;z-index:2}
 .fx-card:hover .fx-corner{opacity:1;transform:scale(1)}
 [data-theme=light] .fx-corner{background:#0891b2;box-shadow:0 0 10px #0891b2}
@@ -281,14 +262,6 @@ body.premium-landing .section-eyebrow{color:var(--p-mocha)}
 body.premium-landing .section-title{color:var(--p-mocha)}
 body.premium-landing .section-sub,body.premium-landing .section-link,body.premium-landing .graph-sub{color:var(--p-mocha-2)}
 body.premium-landing .section-link:hover{color:var(--p-gold)}
-
-/* bento tiles: glass cream cards with gold top bevel; category colour kept as accent */
-body.premium-landing .bento-tile{background:rgba(255,255,255,.5)!important;color:var(--p-mocha);border:1px solid rgba(209,184,155,.45);border-top:4px solid var(--p-gold);box-shadow:10px 10px 22px rgba(209,184,155,.38),-10px -10px 22px rgba(255,255,255,.9),inset 1px 1px 0 rgba(255,255,255,.55),inset -1px -1px 0 rgba(209,184,155,.2);border-radius:24px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-body.premium-landing .bento-tile:hover{box-shadow:14px 14px 28px rgba(209,184,155,.45),-14px -14px 28px rgba(255,255,255,.95),0 0 24px rgba(176,141,87,.25)}
-body.premium-landing .bento-tile-icon{color:var(--p-gold)}
-body.premium-landing .bento-tile-count{color:var(--p-mocha-2)}
-body.premium-landing .bento-tile-name{color:var(--p-mocha)}
-body.premium-landing .bento-tile-desc{color:var(--p-mocha-2);opacity:1}
 
 /* list table: glass rows, mocha text, gold hairlines */
 body.premium-landing .list-table{border:1px solid rgba(209,184,155,.5);background:rgba(255,255,255,.35);border-radius:20px;box-shadow:8px 8px 18px rgba(209,184,155,.3),-8px -8px 18px rgba(255,255,255,.8),inset 1px 1px 0 rgba(255,255,255,.5),inset -1px -1px 0 rgba(209,184,155,.18)}
@@ -386,9 +359,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
   body.premium-landing .hero-trust-item{padding:8px 10px}
   body.premium-landing .hero-trust-num{font-size:1.3rem}
 }
-@media(max-width:499px){
-  body.premium-landing .bento-tile.large{grid-column:auto}
-}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"StudyHub","url":"https://immortaljeetsingh.github.io/StudyHub","description":"StudyHub - Free IGNOU MBA study material for all 43 subjects.","potentialAction":{"@type":"SearchAction","target":"https://immortaljeetsingh.github.io/StudyHub/study-hub.html?q={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","name":"StudyHub"}}</script>
 </head>
@@ -478,7 +448,7 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
       <h1 class="hero-headline">The MBA study platform that <em>doesn't waste</em> your time.</h1>
       <p class="hero-sub">Access detailed notes, practice tests, and expert-vetted curricula for all 43 IGNOU MBA subjects — built for working professionals who think in 15-minute windows.</p>
       <div class="hero-ctas">
-        <a href="#bento" class="btn-primary btn-fx">
+        <a href="#subjects" class="btn-primary btn-fx">
           Explore Hub
           <svg width="16" height="16" aria-hidden="true"><use href="#arrow-right"/></svg>
         </a>
@@ -588,24 +558,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
     <circle class="node-dot violet" cx="1020" cy="300" r="4"/>
     <circle class="node-dot" cx="1140" cy="430" r="5"/>
   </svg>
-
-  <!-- Browse by Stream (Bento) -->
-  <section class="section" id="bento" aria-labelledby="bento-title">
-    <div class="section-header">
-      <div>
-        <span class="section-eyebrow" data-accent="red">Browse by stream</span>
-        <h2 class="section-title" id="bento-title">Pick a path through the syllabus.</h2>
-        <p class="section-sub">Six focused categories, one full MBA. Each stream is a curated set of courses that build on each other.</p>
-      </div>
-      <a href="#subjects" class="section-link">
-        View all 43
-        <svg width="14" height="14" aria-hidden="true"><use href="#arrow-right"/></svg>
-      </a>
-    </div>
-    <div class="bento-grid tilt-stage" id="bento-tiles" role="list" aria-label="Course categories">
-      <!-- Rendered by JS -->
-    </div>
-  </section>
 
   <!-- All Courses (List Table) -->
   <section class="section" id="subjects" aria-labelledby="courses-title">
@@ -780,7 +732,7 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
 <!-- Scripts -->
 <script src="app.js" defer></script>
 
-<!-- Preview section renderers (Bento, Course List) -->
+<!-- Preview section renderers (Course List) -->
 <script>
 (function(){
   var $ = function(s, c) { return (c || document).querySelector(s); };
@@ -789,14 +741,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
   var debounce = function(fn, ms) { var id; return function() { var ctx = this, args = arguments; clearTimeout(id); id = setTimeout(function() { fn.apply(ctx, args); }, ms); }; };
 
   var DATA = {
-    categories: [
-      { id:'MMPC', name:'Core Management', desc:'The 20 courses every MBA builds on — functions, strategy, ethics, research.', count:20, color:'var(--red)', icon:'target', size:'large' },
-      { id:'MMPM', name:'Marketing', desc:'Branding, consumer behaviour, digital, services.', count:8, color:'var(--teal)', icon:'trending' },
-      { id:'MMPO', name:'Operations', desc:'Production, supply chain, logistics, quality.', count:7, color:'var(--navy)', icon:'package' },
-      { id:'MMPF', name:'Finance', desc:'Working capital, capital investment, control systems.', count:3, color:'var(--green)', icon:'piechart' },
-      { id:'MMPH', name:'Human Resources', desc:'Recruitment, training, performance, relations.', count:4, color:'var(--gold)', icon:'users' },
-      { id:'MMPB', name:'Banking', desc:'Banking and insurance operations and regulation.', count:1, color:'var(--purple)', icon:'bank' }
-    ],
     courses: [
       ['MMPC-01','Management Functions','14','0'],['MMPC-02','Human Resource Mgmt','14','0'],
       ['MMPC-03','Business Environment','14','0'],['MMPC-04','Accounting for Managers','16','0'],
@@ -823,17 +767,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
       ['MMPF-03','Management Control','16','0']
     ],
     courseColors: { MMPC:'var(--red)', MMPH:'var(--gold)', MMPB:'var(--purple)', MMPM:'var(--teal)', MMPO:'var(--navy)', MMPF:'var(--green)' }
-  };
-
-  var Bento = {
-    render: function() {
-      var el = $('#bento-tiles'); if (!el) return;
-      el.innerHTML = DATA.categories.map(function(c) {
-        var sizeCls = c.size === 'large' ? ' large' : '';
-        var label = c.count + ' ' + (c.count === 1 ? 'course' : 'courses');
-        return '<a class="bento-tile fx-card tilt-card' + sizeCls + '" href="#subjects" data-cat="' + c.id + '" role="listitem" style="background:' + c.color + ';" tabindex="0" aria-label="' + c.name + ': ' + c.desc + '"><span class="fx-corner" aria-hidden="true"></span><div class="bento-tile-arrow" aria-hidden="true"><svg width="14" height="14"><use href="#arrow-right"/></svg></div><div class="bento-tile-icon tilt-inner" aria-hidden="true"><svg width="32" height="32"><use href="#' + c.icon + '"/></svg></div><span class="bento-tile-count">' + label + '</span><h3 class="bento-tile-name">' + safeHTML(c.name) + '</h3><p class="bento-tile-desc">' + safeHTML(c.desc) + '</p></a>';
-      }).join('');
-    }
   };
 
   var CourseList = {
@@ -877,7 +810,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
   };
 
   document.addEventListener('DOMContentLoaded', function() {
-    Bento.render();
     CourseList.init();
   });
 })();
