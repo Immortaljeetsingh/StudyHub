@@ -146,7 +146,7 @@ class QuizEngine {
 
     selectAnswer(idx) {
         const q = this.getCurrentQuestion();
-        if (!q) return;
+        if (!q || idx < 0 || idx >= q.options.length) return;
         if (this.userAnswers[this.currentQ] !== undefined) return;
 
         this.userAnswers[this.currentQ] = idx;

@@ -339,6 +339,8 @@ var m=document.getElementById("apiSettingsModal");
 if(m)m.classList.add("active");
 var k=document.getElementById("apiKeyInput");
 if(k&&!k.value){try{k.value=LS.getItem("studyhub-api-key")||"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"}catch(e){k.value="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"}}
+var md=document.getElementById("modelSelect");
+if(md){try{md.value=LS.getItem("studyhub-model")||"google/gemma-4-31b-it:free"}catch(e){md.value="google/gemma-4-31b-it:free"}}
 },
 closeApi:function(){
 var m=document.getElementById("apiSettingsModal");

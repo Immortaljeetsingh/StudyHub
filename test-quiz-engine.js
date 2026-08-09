@@ -75,5 +75,12 @@ q2.init();
 assert(String(el('scoreVal').textContent) === '50', 'score restored from saved state on reload');
 assert(q2.timerInterval === null, 'timer not started for finished saved state');
 
+// 7. selectAnswer rejects out-of-range index
+const q3 = new Q('mmpc03', 'MMPC03', questions);
+q3.init();
+q3.selectAnswer(99);
+assert(q3.userAnswers[0] === undefined, 'out-of-range index ignored');
+assert(q3.score === 0, 'no score for invalid answer');
+
 console.log('ALL QUIZ-ENGINE CHECKS PASS');
 process.exit(0);

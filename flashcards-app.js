@@ -19,33 +19,41 @@
 
     async function loadAllCards() {
         const cards = [];
+        let loadFailed = false;
         for (const subject of subjects) {
             try {
                 const response = await fetch(subject.file);
+                if (!response.ok) throw new Error('HTTP ' + response.status);
                 const html = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
-                
-                const ktSections = doc.querySelectorAll('.kt');
+
+                const ktSections = doc.querySelectorAll('.kt, .summary-box');
                 ktSections.forEach(section => {
-                    const title = section.querySelector('h4')?.textContent || 'Key Takeaway';
-                    const content = section.querySelector('ul, p')?.innerHTML || section.innerHTML;
+                    let title = section.querySelector('h4')?.textContent.trim() || '';
+                    if (!title) {
+                        const strong = section.querySelector('strong');
+                        title = strong && strong.textContent.trim().endsWith(':')
+                            ? strong.textContent.trim().replace(/:$/, '') : '';
+                    }
+                    const content = section.innerHTML;
                     if (content) {
                         cards.push({
                             subject: subject.id.toUpperCase(),
-                            front: title,
+                            front: title || 'Key Takeaway',
                             back: content
                         });
                     }
                 });
             } catch (e) {
+                loadFailed = true;
                 console.error(`Failed to load ${subject.file}:`, e);
             }
         }
-        return cards;
+        return { cards, loadFailed };
     }
 
-    function renderFlashcards(cards) {
+    function renderFlashcards(cards, loadFailed) {
         currentCards = cards;
         currentIndex = 0;
         isFlipped = false;
@@ -55,6 +63,9 @@
 
         if (cards.length === 0) {
             panel.innerHTML = '';
+            noCards.querySelector('p').textContent = loadFailed
+                ? 'Could not load flashcards - check your internet connection and try again.'
+                : 'No flashcards found. Please select a subject with key takeaways.';
             noCards.style.display = 'block';
             return;
         }
@@ -98,12 +109,13 @@
                 <span id="cardCounter" style="font-size: 0.85rem; color: var(--text-muted);">1 / ${cards.length}</span>
                 <button class="flashcard-nav-btn" id="nextBtn">Next →</button>
             </div>
-            <div style="text-align: center; margin-top: 1rem;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
                 <button id="flipBtn" style="padding: 0.5rem 1.5rem; background: rgba(94, 140, 240, 0.15); 
                             border: 1px solid rgba(94, 140, 240, 0.3); border-radius: 8px; color: var(--accent); 
                             font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif;">
                     Flip Card (Space)
                 </button>
+                <button class="flashcard-nav-btn" id="shuffleBtn">Shuffle</button>
             </div>
         `;
 
@@ -130,6 +142,14 @@
         isFlipped = !isFlipped;
     }
 
+    function shuffleCards() {
+        for (let i = currentCards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
+        }
+        renderCard();
+    }
+
     function nextCard() {
         if (currentIndex < currentCards.length - 1) { currentIndex++; renderCard(); }
     }
@@ -143,12 +163,14 @@
         document.getElementById('flashcard').addEventListener('click', flipCard);
         document.getElementById('prevBtn').addEventListener('click', prevCard);
         document.getElementById('nextBtn').addEventListener('click', nextCard);
+        document.getElementById('shuffleBtn').addEventListener('click', shuffleCards);
 
         document.onkeydown = (e) => {
             switch(e.key) {
                 case ' ': case 'Spacebar': e.preventDefault(); flipCard(); break;
                 case 'ArrowLeft': prevCard(); break;
                 case 'ArrowRight': nextCard(); break;
+                case 's': case 'S': shuffleCards(); break;
                 case 'Escape': window.location.href = 'study-hub.html'; break;
             }
         };
@@ -167,7 +189,8 @@
 
     // Initialize
     (async () => {
-        allCards = await loadAllCards();
-        renderFlashcards(allCards);
+        const loaded = await loadAllCards();
+        allCards = loaded.cards;
+        renderFlashcards(allCards, loaded.loadFailed);
     })();
 })();

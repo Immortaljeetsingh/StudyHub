@@ -4,8 +4,8 @@
   "description": "Interactive study platform for IGNOU MBA courses with knowledge graphs, quizzes, and progress tracking",
   "start_url": "./study-hub.html",
   "display": "standalone",
-  "background_color": "#070810",
-  "theme_color": "#0f1118",
+  "background_color": "#F6EFE2",
+  "theme_color": "#F6EFE2",
   "orientation": "portrait-primary",
   "categories": ["education"],
   "icons": [
