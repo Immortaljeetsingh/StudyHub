@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPC-10 Managerial Economics Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPC-10 Managerial Economics?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPC-10 Managerial Economics syllabus covers 12 units: Managerial Economics Overview, Demand Analysis, Demand Forecasting, Production Function, Cost Analysis, Market Structures, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPC-10 Managerial Economics syllabus covers 13 units across four blocks: Scope of Managerial Economics, Demand Analysis, Demand Estimation and Forecasting, Production Function, Cost Analysis, Market Structures, and Pricing Strategies. StudyHub covers all units with detailed notes."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPC-10 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-10 Managerial Economics covering all 12 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-10 Managerial Economics covering all 13 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPC-10?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPC-10 Managerial Economics has 12 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPC-10 Managerial Economics has 13 units organized across multiple blocks. StudyHub covers all units comprehensively."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +109,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpc10">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,10 +160,12 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPC-10 Managerial Economics - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPC-10 Managerial Economics solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 12 units of MMPC-10. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpc10.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPC-10 Managerial Economics solved assignments</strong>? StudyHub provides solved assignment answers for all 13 units of MMPC-10. Our model answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer covers the key concepts of the unit with Indian examples to help you score maximum marks.</p>
+    <a href="quiz-mmpc10.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="mmpc10-question-paper.html" class="landing-cta btn-fx">Solved Question Paper &rarr;</a>
+    <a href="study-mmpc10.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <section>
@@ -135,77 +173,113 @@
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPC-10 Managerial Economics. Click any unit to read the complete study notes.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Managerial Economics Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Managerial Economics Overview in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Scope of Managerial Economics</h3>
+        <p>Definition, scope, positive vs normative nature, market failures, and the four problem groups.</p>
         <a href="study-mmpc10.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Demand Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Demand Analysis in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2-3: Demand Analysis</h3>
+        <p>Demand function, Law of Demand, its exceptions, and shift vs movement along the demand curve.</p>
         <a href="study-mmpc10.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Demand Forecasting</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Demand Forecasting in the context of Managerial Economics.</p>
-        <a href="study-mmpc10.html#u3" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
-
-      <div class="unit-preview">
-        <h3>Unit 4: Production Function</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Production Function in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Demand Concepts Deep Dive</h3>
+        <p>Value in use vs value in exchange, effective demand, and types of demand such as joint and derived.</p>
         <a href="study-mmpc10.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Cost Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Cost Analysis in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Demand Elasticity (Critical Unit)</h3>
+        <p>Price, income and cross elasticity, determinants (ENUP), arc vs point methods, and the total revenue rule.</p>
         <a href="study-mmpc10.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Market Structures</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Market Structures in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Demand Estimation &amp; Forecasting</h3>
+        <p>Estimation vs forecasting, regression analysis, qualitative and quantitative methods, and R-squared and t-stats.</p>
         <a href="study-mmpc10.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Perfect Competition</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Perfect Competition in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Production Function (Critical Unit)</h3>
+        <p>TP, AP and MP, the law of diminishing returns, isoquants, MRTS, and returns to scale.</p>
         <a href="study-mmpc10.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Monopoly</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Monopoly in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Short Run Cost Analysis (Critical Unit)</h3>
+        <p>TC, ATC, AFC, AVC and MC curves, break-even and shutdown points, and operating leverage.</p>
         <a href="study-mmpc10.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Oligopoly</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Oligopoly in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Long Run Cost Analysis</h3>
+        <p>LRAC as an envelope curve, economies and diseconomies of scale, learning curve, and economies of scope.</p>
         <a href="study-mmpc10.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: Pricing Strategies</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Pricing Strategies in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Market Structure &amp; Barriers to Entry</h3>
+        <p>Four market structures, natural, strategic and legal barriers, and concentration measures.</p>
         <a href="study-mmpc10.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: National Income</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for National Income in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Perfect Competition &amp; Monopoly (Critical Unit)</h3>
+        <p>MR = MC rule, welfare comparison, deadweight loss, and the three degrees of price discrimination.</p>
         <a href="study-mmpc10.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Inflation & Business Cycles</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Inflation & Business Cycles in the context of Managerial Economics.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Monopolistic &amp; Oligopolistic Competition</h3>
+        <p>Short-run and long-run equilibrium, excess capacity, kinked demand, and Cournot-Bertrand models.</p>
         <a href="study-mmpc10.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Pricing Strategies (Critical Unit)</h3>
+        <p>Cost-plus, target return, bundling, peak load, two-part tariff, transfer pricing, and discrimination.</p>
+        <a href="study-mmpc10.html#u13" class="unit-link">Read Full Notes &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - MMPC-10</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Define Managerial Economics and explain its scope and nature. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Managerial Economics is applied microeconomics for business decisions. It bridges the gap between economic theory and business practice, focusing on how firms react to changes in the economic environment. It addresses three central economic problems: what to produce, how to produce, and for whom to produce. Its scope covers resource allocation, inventory management, pricing decisions, and capital budgeting, and it applies concepts such as demand, supply, elasticity, and market structure to guide decisions. The subject is normative, or prescriptive: it tells managers what they should do, whereas pure economics is positive, or descriptive, and states what is. It combines microeconomic theory with decision sciences such as operations research and statistics. Managers must also understand the four forms of market failure: monopoly, which creates deadweight loss; public goods, which are non-excludable; externalities, such as pollution costs borne by third parties; and information asymmetry, the classic market-for-lemons problem. Reliance Jio's entry into telecom illustrates the discipline: the company analysed demand elasticity, pricing, and market structure before launching free voice and cheap data, which disrupted the entire industry.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Managerial Economics is applied microeconomics for business decisions.</li>        <li>Its scope covers resource allocation, inventory management, pricing decisions, and capital budgeting, and it applies concepts such as demand, supply, elasticity, and market structure to guide decisions.</li>        <li>It bridges the gap between economic theory and business practice, focusing on how firms react to changes in the economic environment.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Reliance Jio's entry into telecom illustrates the discipline: the company analysed demand elasticity, pricing, and market structure before launching free voice and cheap data, which disrupted the entire industry.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Explain the Law of Demand and discuss its exceptions. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> The Law of Demand states that, other things remaining the same, the quantity demanded of a good falls when its price rises and rises when its price falls; price and quantity demanded move in opposite directions. Two effects explain the law. The income effect says that when price falls, real income rises, so consumers buy more. The substitution effect says that a price fall makes the good relatively cheaper, so consumers substitute towards it. The demand function Qd = f(Po, Pc, Ps, Yd, T, A, CR, R, E, N, O) shows that demand also depends on the prices of complements and substitutes, disposable income, tastes, advertising, credit, interest rates, expectations, and the number of buyers. There are, however, important exceptions. Giffen goods are inferior goods in which the income effect outweighs the substitution effect, so demand rises with price, as with staple foods during a famine. Veblen goods are luxury status goods, such as expensive watches, which are demanded more at higher prices. Speculative goods, such as shares or real estate in a rising market, are bought more when prices are expected to rise further. A further distinction is that a change in own price causes movement along the demand curve, while a change in any other determinant shifts the curve.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The Law of Demand states that, other things remaining the same, the quantity demanded of a good falls when its price rises and rises when its price falls; price and quantity demanded move in opposite directions.</li>        <li>Veblen goods are luxury status goods, such as expensive watches, which are demanded more at higher prices.</li>        <li>Two effects explain the law.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> A further distinction is that a change in own price causes movement along the demand curve, while a change in any other determinant shifts the curve.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. What is price elasticity of demand? Explain its relationship with total revenue. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Price elasticity of demand measures the responsiveness of quantity demanded to a change in the good's own price, computed as the percentage change in quantity divided by the percentage change in price. Demand is elastic when the absolute value of elasticity exceeds one, unit elastic when it equals one, and inelastic when it is less than one. The relationship with total revenue is crucial for pricing decisions. When demand is elastic, price and total revenue move in opposite directions: raising price reduces quantity demanded proportionately more, so revenue falls. When demand is inelastic, price and revenue move in the same direction: raising price raises revenue because quantity falls proportionately less. At unit elasticity, total revenue is at its maximum. In India, petrol is highly inelastic, with elasticity near 0.3, because commuters have few alternatives even when prices cross Rs 100 per litre, which is why the government taxes it heavily without losing much consumption. Air travel and branded clothing are elastic, with values near 1.5 and 1.8, so airlines discount heavily to fill seats. Arc elasticity uses the midpoint method: Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)], while point elasticity is (dQ/dP) x (P/Q).</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Price elasticity of demand measures the responsiveness of quantity demanded to a change in the good's own price, computed as the percentage change in quantity divided by the percentage change in price.</li>        <li>In India, petrol is highly inelastic, with elasticity near 0.3, because commuters have few alternatives even when prices cross Rs 100 per litre, which is why the government taxes it heavily without losing much consumption.</li>        <li>Demand is elastic when the absolute value of elasticity exceeds one, unit elastic when it equals one, and inelastic when it is less than one.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Arc elasticity uses the midpoint method: Ed = [(Q2-Q1)/(Q2+Q1)] / [(P2-P1)/(P2+P1)], while point elasticity is (dQ/dP) x (P/Q).</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. Distinguish between Perfect Competition and Monopoly. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Perfect competition is a market structure with many buyers and sellers dealing in a homogeneous product and free entry and exit, so every firm is a price taker facing a horizontal demand curve where P = MR = AR. A monopoly has a single seller of a unique product with blocked entry, so the firm is a price maker facing the downward-sloping market demand curve and MR is less than P. Under perfect competition, profit is maximised where P = MR = MC, and in the long run free entry drives economic profit to zero, with allocative efficiency (P = MC) and productive efficiency (production at minimum ATC). A monopoly maximises profit where MR = MC and then charges the price from the demand curve, so P is greater than MC, creating deadweight loss and reduced consumer surplus, which is partly transferred to the producer. Long-run supernormal profits are possible because natural, strategic, or legal barriers to entry protect the firm. Indian Railways is a natural monopoly in long-distance rail travel and practises third-degree price discrimination across sleeper and air-conditioned classes. MR = MC remains the universal profit-maximising rule across all market structures, and the efficiency comparison between the two structures is a frequent examination question.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Perfect competition is a market structure with many buyers and sellers dealing in a homogeneous product and free entry and exit, so every firm is a price taker facing a horizontal demand curve where P = MR = AR.</li>        <li>Indian Railways is a natural monopoly in long-distance rail travel and practises third-degree price discrimination across sleeper and air-conditioned classes.</li>        <li>A monopoly has a single seller of a unique product with blocked entry, so the firm is a price maker facing the downward-sloping market demand curve and MR is less than P.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> MR = MC remains the universal profit-maximising rule across all market structures, and the efficiency comparison between the two structures is a frequent examination question.</p>
     </div>
   </section>
 
@@ -213,11 +287,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPC-10 Managerial Economics</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPC-10 Managerial Economics?</summary>
-      <p>The IGNOU MMPC-10 Managerial Economics syllabus covers 12 units: Managerial Economics Overview, Demand Analysis, Demand Forecasting, Production Function, Cost Analysis, Market Structures, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPC-10 Managerial Economics syllabus covers 13 units across four blocks: Scope of Managerial Economics, Demand Analysis, Demand Estimation and Forecasting, Production Function, Cost Analysis, Market Structures, and Pricing Strategies. StudyHub covers all units with detailed notes.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPC-10 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-10 Managerial Economics covering all 12 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-10 Managerial Economics covering all 13 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPC-10 exam?</summary>
@@ -229,7 +303,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPC-10?</summary>
-      <p>IGNOU MMPC-10 Managerial Economics has 12 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPC-10 Managerial Economics has 13 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
     </details>
   </section>
 
@@ -239,12 +313,12 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
       <a href="study-mmpc13.html">MMPC-13 Business Law</a>
@@ -252,12 +326,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpc10.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpc10.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

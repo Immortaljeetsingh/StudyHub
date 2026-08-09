@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPH-01 Organisation Theory &amp; Design - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPH-01 Organisation Theory &amp; Design Quiz</h1>
+        <p>Test your knowledge of Organisation Theory &amp; Design</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "According to Chester I. Bernard, an organisation is:",
+                options: [
+                    "A system of consciously coordinated activities of two or more persons",
+                    "A machine designed for maximum efficiency",
+                    "A collection of rules and regulations",
+                    "A network of informal relationships"
+                ],
+                answer: 0,
+                explanation: "Chester I. Bernard defined an organisation as 'a system of consciously coordinated activities of two or more persons'. The word organisation itself derives from the Greek 'organon', meaning a tool or instrument."
+            },
+            {
+                question: "Levitt's model identifies which four components of an organisation?",
+                options: [
+                    "Task, People, Technology, Structure",
+                    "Goals, Rules, Hierarchy, Technology",
+                    "Planning, Organizing, Directing, Controlling",
+                    "Strategy, Structure, Systems, Skills"
+                ],
+                answer: 0,
+                explanation: "Levitt's 1965 model lists Task, People, Technology and Structure as the four basic components of an organisation."
+            },
+            {
+                question: "In Morgan's metaphors, an organisation seen as precision, rules and hierarchy matches the metaphor of:",
+                options: [
+                    "Brains",
+                    "Organisms",
+                    "Machines",
+                    "Cultures"
+                ],
+                answer: 2,
+                explanation: "Morgan's 'Machines' metaphor reflects Weber's bureaucracy with its emphasis on precision and rules. Organisms adapt to the environment, brains process information, and cultures share values and meanings."
+            },
+            {
+                question: "The Hawthorne experiments, which showed that social factors matter more than physical conditions, are associated with:",
+                options: [
+                    "Max Weber",
+                    "Frederick Taylor",
+                    "Elton Mayo",
+                    "Henri Fayol"
+                ],
+                answer: 2,
+                explanation: "Elton Mayo's Hawthorne experiments launched the Human Relations Movement (neo-classical theory) and showed that social factors matter more than physical working conditions."
+            },
+            {
+                question: "The idea that there is 'no one best way' to organise, and design depends on environment, technology and size, is the core of:",
+                options: [
+                    "Classical Theory",
+                    "Neo-classical Theory",
+                    "Systems Theory",
+                    "Contingency Theory"
+                ],
+                answer: 3,
+                explanation: "Contingency theory holds that the best organisational design depends on the specific circumstances, including environment, technology and size (Burns and Stalker, Lawrence and Lorsch)."
+            },
+            {
+                question: "Efficiency in management means:",
+                options: [
+                    "Doing the right things to achieve goals",
+                    "Using minimum resources to achieve goals",
+                    "Setting long-term strategic objectives",
+                    "Balancing stakeholder demands"
+                ],
+                answer: 1,
+                explanation: "Efficiency is the ratio of outputs to inputs - achieving goals with minimum resources. Effectiveness, in contrast, is doing the right things and achieving organisational goals."
+            },
+            {
+                question: "In Mintzberg's model, which part of the organisation consists of the workers who perform the basic work?",
+                options: [
+                    "Strategic Apex",
+                    "Operating Core",
+                    "Technostructure",
+                    "Support Staff"
+                ],
+                answer: 1,
+                explanation: "The Operating Core is the workers who do the basic work. The Strategic Apex is top management, the Technostructure is analysts, and Support Staff provide indirect services."
+            },
+            {
+                question: "According to Burns and Stalker, an organic organisation is best suited to:",
+                options: [
+                    "Stable, predictable environments",
+                    "Mass production industries",
+                    "Government-run monopolies",
+                    "Environments requiring rapid change and flexibility"
+                ],
+                answer: 3,
+                explanation: "Burns and Stalker linked organic structures (flexible, few rules, decentralized, autonomous teams) to unstable environments, and mechanistic structures (rules, standardization, centralized decisions) to stable ones."
+            },
+            {
+                question: "In Senge's learning organisation, the discipline that integrates all the others is:",
+                options: [
+                    "Personal Mastery",
+                    "Shared Vision",
+                    "Team Learning",
+                    "Systems Thinking"
+                ],
+                answer: 3,
+                explanation: "Systems Thinking is the fifth discipline - it sees the whole rather than just parts and integrates the other four disciplines (Personal Mastery, Mental Models, Shared Vision, Team Learning)."
+            },
+            {
+                question: "In Schein's model, the deepest level of organisational culture consists of:",
+                options: [
+                    "Artifacts",
+                    "Espoused Values",
+                    "Basic Assumptions",
+                    "Rituals"
+                ],
+                answer: 2,
+                explanation: "Basic Assumptions are the unconscious, taken-for-granted beliefs about human nature and reality - the deepest level. Artifacts (office layout, dress code, rituals) are the visible surface level, and Espoused Values (mission statements) are the stated middle level."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmph01', 'MMPH01', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

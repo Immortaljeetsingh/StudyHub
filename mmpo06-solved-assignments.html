@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPO-06 Materials Management Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPO-06 Materials Management?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPO-06 Materials Management syllabus covers 15 units: Materials Management Overview, ABC Analysis, VED Analysis, FSN Analysis, EOQ Model, Inventory Control, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPO-06 Materials Management syllabus covers 13 units: Introduction to Materials Management, Strategic Role, Designing Supplier Network, Buyer-Seller Relationships, Materials Planning and Budgeting, Push and Pull Systems, WIP Inventory, Spare Parts Management, Codification and Standardization, Warehouse Location, Warehouse Risk, Materials Management Organization, and Performance Evaluation. StudyHub covers all units with detailed notes."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPO-06 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPO-06 Materials Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPO-06 Materials Management covering all 13 units with diagrams, examples, and exam tips, plus solved assignment questions and model answers on this page. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,15 @@
       "name": "How many units are there in IGNOU MMPO-06?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPO-06 Materials Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPO-06 Materials Management has 13 units organized across 4 blocks. StudyHub covers all units comprehensively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does StudyHub provide solved assignment answers for MMPO-06?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This solved assignments page contains IGNOU-style assignment questions with model answers drawn from the units of MMPO-06, covering topics such as the 6 Rs, ABC analysis, Little's Law, and push and pull systems. Every unit card also links to the full study notes."
       }
     }
   ]
@@ -77,7 +86,7 @@
   "about": {
     "@type": "Course",
     "name": "IGNOU MMPO-06 Materials Management",
-    "description": "Materials Management - ABC, VED, EOQ and Inventory",
+    "description": "Materials Management",
     "educationalLevel": "Postgraduate",
     "provider": {
       "@type": "Organization",
@@ -87,7 +96,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +117,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpo06">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,10 +168,12 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPO-06 Materials Management - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPO-06 Materials Management solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 15 units of MMPO-06. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpo06.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPO-06 Materials Management solved assignments</strong>? You are at the right place. This page contains solved assignment questions with model answers drawn from the 13 units of MMPO-06, written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, definitions, and Indian examples to help you score maximum marks, and every unit card links to the full study notes for reference.</p>
+    <a href="quiz-mmpo06.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="study-mmpo06.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
+    <a href="mmpo06-question-paper.html" class="landing-cta btn-fx">Solved Question Paper 2025 &rarr;</a>
   </div>
 
   <section>
@@ -135,95 +181,119 @@
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPO-06 Materials Management. Click any unit to read the complete study notes.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Materials Management Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Management Overview in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Introduction to Materials Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Introduction to Materials Management in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: ABC Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for ABC Analysis in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Strategic Role of Materials Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Strategic Role of Materials Management in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: VED Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for VED Analysis in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Designing Supplier Network</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Designing Supplier Network in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: FSN Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for FSN Analysis in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Dynamics of Buyer-Seller Relationships</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Dynamics of Buyer-Seller Relationships in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: EOQ Model</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for EOQ Model in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Materials Planning and Budgeting</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Planning and Budgeting in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Inventory Control</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Inventory Control in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Push and Pull Systems</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Push and Pull Systems in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Safety Stock</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Safety Stock in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Work-in-Process (WIP) Inventory</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Work-in-Process (WIP) Inventory in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Reorder Point</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Reorder Point in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Spare Parts Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Spare Parts Management in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Purchase Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Purchase Management in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Codification and Standardization</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Codification and Standardization in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: Vendor Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Vendor Management in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Location and Layout of Warehouse</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Location and Layout of Warehouse in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Store Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Store Management in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Warehouse Risk Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Warehouse Risk Management in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Materials Handling</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Handling in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Materials Management Organization</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Management Organization in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Waste Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Waste Management in the context of Materials Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Performance Evaluation and Appraisal</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Performance Evaluation and Appraisal in the context of Materials Management.</p>
         <a href="study-mmpo06.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+    </div>
+  </section>
 
-      <div class="unit-preview">
-        <h3>Unit 14: Just-in-Time</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Just-in-Time in the context of Materials Management.</p>
-        <a href="study-mmpo06.html#u14" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
-
-      <div class="unit-preview">
-        <h3>Unit 15: Materials Planning</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Planning in the context of Materials Management.</p>
-        <a href="study-mmpo06.html#u15" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. What is materials management? Explain the 6 Rs of materials management.</h3>
+      <p class="answer"><strong>Answer:</strong> Materials management is the planning, organising, and controlling of the flow of materials from source to user. Materials are one of the 5 Ms (men, machine, methods, money, materials), and material cost averages 50-70% of total manufacturing expenditure, making materials management a strategic driver of profitability. The 6 Rs of materials management state that the right material must be supplied in the right quantity, at the right time, to the right place, at the right price, and in the right quality. A failure on any dimension causes production delays, excess inventory, or quality problems. The eight functions of materials management are materials planning and control, purchasing, inventory control, store keeping, material handling, warehousing, standardisation and simplification, and organisation and appraisal. Toyota's JIT system, where parts arrive at the assembly line exactly when needed, reduced inventory carrying costs by 75%; Indian Railways saved Rs 500 crore by centralising procurement. The memory aid is R-R-T-P-P-Q: right material, right quantity, time, place, price, and quality. Materials management decisions such as make-or-buy, value analysis (Value = Function/Cost), and supplier selection directly impact profitability.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Materials management is the planning, organising, and controlling of the flow of materials from source to user.</li>        <li>Toyota's JIT system, where parts arrive at the assembly line exactly when needed, reduced inventory carrying costs by 75%; Indian Railways saved Rs 500 crore by centralising procurement.</li>        <li>Materials are one of the 5 Ms (men, machine, methods, money, materials), and material cost averages 50-70% of total manufacturing expenditure, making materials management a strategic driver of profitability.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The memory aid is R-R-T-P-P-Q: right material, right quantity, time, place, price, and quality.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Explain ABC analysis with its classification percentages, control policies, and an example.</h3>
+      <p class="answer"><strong>Answer:</strong> ABC analysis classifies inventory by annual usage value, applying the Pareto principle that a small number of items account for most of the value. Class A items are about 20% of items but 80% of the value; they need tight control with frequent review, often with JIT delivery from suppliers. Class B items are about 30% of items and 15% of the value, requiring moderate control and periodic review. Class C items are about 50% of items but only 5% of the value, needing simple controls and bulk ordering. The steps are: list items with annual consumption and unit cost, calculate annual usage value (quantity x unit cost), rank items from highest to lowest value, compute cumulative percentages, and classify. In a Pune auto-parts example, engine blocks and transmissions (33% of items) accounted for 74% of value and became Class A. ABC can be combined with VED analysis (Vital, Essential, Desirable by criticality) to create a nine-cell ABC-VED matrix; an A-V item gets daily monitoring, while a C-D item gets minimal control. AIIMS New Delhi uses the ABC-VED matrix for 5,000+ drug SKUs, saving Rs 2 crore annually. The memory aid: ABC = Always Better Control.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>ABC analysis classifies inventory by annual usage value, applying the Pareto principle that a small number of items account for most of the value.</li>        <li>In a Pune auto-parts example, engine blocks and transmissions (33% of items) accounted for 74% of value and became Class A.</li>        <li>Class A items are about 20% of items but 80% of the value; they need tight control with frequent review, often with JIT delivery from suppliers.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The memory aid: ABC = Always Better Control.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. State and explain Little's Law. How can work-in-process inventory be reduced?</h3>
+      <p class="answer"><strong>Answer:</strong> Work-in-process (WIP) is the inventory of partially completed products in the production process. Little's Law states that WIP = Throughput x Flow Time, where throughput is the output rate and flow time is the time from start to finish. From this, flow time = WIP / throughput and throughput = WIP / flow time. For example, if a factory has 100 units in WIP and produces 20 units per hour, the flow time is 100/20 = 5 hours. WIP is caused by batch processing, waiting times, quality issues, and unbalanced lines. WIP reduction strategies include smaller batch sizes (reducing WIP between stations and giving faster quality feedback), one-piece flow (moving one unit at a time, Toyota's ideal state), reduced setup times through SMED (Single-Minute Exchange of Die, Shigeo Shingo's method for setups under 10 minutes), quality at source or Jidoka (stop the line when a defect is found), balanced workstations with equal cycle times, and Drum-Buffer-Rope from the Theory of Constraints, where the bottleneck sets the pace. In India, Tata Motors reduced WIP by 35% at Pune through one-piece flow for engine assembly, and Bajaj Auto's Chakan plant achieves four-hour WIP time against an industry average of two to three days.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Work-in-process (WIP) is the inventory of partially completed products in the production process.</li>        <li>For example, if a factory has 100 units in WIP and produces 20 units per hour, the flow time is 100/20 = 5 hours.</li>        <li>Little's Law states that WIP = Throughput x Flow Time, where throughput is the output rate and flow time is the time from start to finish.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> In India, Tata Motors reduced WIP by 35% at Pune through one-piece flow for engine assembly, and Bajaj Auto's Chakan plant achieves four-hour WIP time against an industry average of two to three days.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. Distinguish between push and pull systems. Explain Kanban and CONWIP.</h3>
+      <p class="answer"><strong>Answer:</strong> A push system produces based on forecasts, typically using MRP (Material Requirements Planning); it carries high inventory, offers low flexibility, and risks overproduction. A pull system produces based on actual demand using JIT and Kanban; it carries minimal inventory, offers high flexibility, and risks stockouts. Kanban is a visual signal system for pull production in which cards authorise production and movement. There are four types: production kanban (authorises a workstation to produce a specific quantity), withdrawal kanban (authorises movement of materials between stations), supplier kanban (signals external suppliers to deliver), and emergency kanban (for urgent situations such as breakdowns). Toyota's Kanban uses physical cards on parts bins; Tata Motors adopted Kanban at Pune in 2015 for the Nexon assembly line, reducing WIP by 40% and lead time by 25%. CONWIP (Constant Work-In-Process) is a hybrid: instead of limiting WIP at each workstation like Kanban, it limits the total number of cards in the entire system, releasing a new card only when a finished product leaves. CONWIP is simpler to implement and works better with variable processing times and long production lines; TVS Motors uses a hybrid Kanban-CONWIP system at Hosur managing 1,200+ parts across three assembly lines.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>A push system produces based on forecasts, typically using MRP (Material Requirements Planning); it carries high inventory, offers low flexibility, and risks overproduction.</li>        <li>There are four types: production kanban (authorises a workstation to produce a specific quantity), withdrawal kanban (authorises movement of materials between stations), supplier kanban (signals external suppliers to deliver), and emergency kanban (for urgent situations such as breakdowns).</li>        <li>A pull system produces based on actual demand using JIT and Kanban; it carries minimal inventory, offers high flexibility, and risks stockouts.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> CONWIP is simpler to implement and works better with variable processing times and long production lines; TVS Motors uses a hybrid Kanban-CONWIP system at Hosur managing 1,200+ parts across three assembly lines.</p>
     </div>
   </section>
 
@@ -231,11 +301,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPO-06 Materials Management</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPO-06 Materials Management?</summary>
-      <p>The IGNOU MMPO-06 Materials Management syllabus covers 15 units: Materials Management Overview, ABC Analysis, VED Analysis, FSN Analysis, EOQ Model, Inventory Control, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPO-06 Materials Management syllabus covers 13 units: Introduction to Materials Management, Strategic Role, Designing Supplier Network, Dynamics of Buyer-Seller Relationships, Materials Planning and Budgeting, Push and Pull Systems, Work-in-Process (WIP) Inventory, Spare Parts Management, Codification and Standardization, Location and Layout of Warehouse, Warehouse Risk Management, Materials Management Organization, and Performance Evaluation and Appraisal. StudyHub covers all units with detailed notes.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPO-06 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPO-06 Materials Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPO-06 Materials Management covering all 13 units with diagrams, examples, and exam tips, plus solved assignment questions and model answers on this page. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPO-06 exam?</summary>
@@ -247,7 +317,11 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPO-06?</summary>
-      <p>IGNOU MMPO-06 Materials Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPO-06 Materials Management has 13 units organized across 4 blocks. StudyHub covers all units comprehensively.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does StudyHub provide solved assignment answers for MMPO-06?</summary>
+      <p>Yes. This solved assignments page contains IGNOU-style assignment questions with model answers drawn from the units of MMPO-06, covering topics such as the 6 Rs, ABC analysis, Little's Law, and push and pull systems. Every unit card also links to the full study notes.</p>
     </details>
   </section>
 
@@ -257,12 +331,12 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -270,12 +344,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpo06.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpo06.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

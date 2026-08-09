@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPO-04 Management Information Systems - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPO-04 Management Information Systems Quiz</h1>
+        <p>Test your knowledge of Management Information Systems</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which information system type records and processes the daily business transactions of an organization?",
+                options: [
+                    "TPS (Transaction Processing System)",
+                    "MIS (Management Information System)",
+                    "DSS (Decision Support System)",
+                    "EIS (Executive Information System)"
+                ],
+                answer: 0,
+                explanation: "TPS is the operational-level system that records and processes daily transactions such as orders and payments. The IS pyramid rises from TPS at the base to MIS, DSS and EIS/ESS at the top."
+            },
+            {
+                question: "According to the A-T-R-C-A mnemonic, which of the following is NOT a characteristic of quality information?",
+                options: [
+                    "Accurate",
+                    "Timely",
+                    "Expensive",
+                    "Accessible"
+                ],
+                answer: 2,
+                explanation: "Quality information must be Accurate, Timely, Relevant, Complete and Accessible (A-T-R-C-A). The cost of producing information is not a quality characteristic of the information itself."
+            },
+            {
+                question: "What is the correct sequence of phases in the System Development Life Cycle (SDLC)?",
+                options: [
+                    "Planning, Analysis, Design, Implementation, Maintenance",
+                    "Analysis, Planning, Design, Maintenance, Implementation",
+                    "Planning, Design, Analysis, Implementation, Maintenance",
+                    "Design, Analysis, Planning, Implementation, Maintenance"
+                ],
+                answer: 0,
+                explanation: "The SDLC follows P-A-D-I-M: Planning (feasibility study), Analysis (requirements gathering), Design (system architecture), Implementation (coding and testing) and Maintenance (bug fixes and enhancements)."
+            },
+            {
+                question: "Which development approach is most suitable when user requirements are expected to change frequently during development?",
+                options: [
+                    "Waterfall model",
+                    "Agile approach",
+                    "Feasibility study",
+                    "Maintenance phase"
+                ],
+                answer: 1,
+                explanation: "Agile is an iterative approach that delivers working software in short cycles and adapts to changing requirements. Waterfall is sequential and rigid, best for well-defined, fixed requirements."
+            },
+            {
+                question: "In business intelligence and data warehousing, the ETL process stands for:",
+                options: [
+                    "Extract, Transform, Load",
+                    "Evaluate, Test, Launch",
+                    "Enter, Track, Log",
+                    "Extract, Transfer, Link"
+                ],
+                answer: 0,
+                explanation: "ETL extracts data from source systems, transforms (cleans and standardizes) it, and loads it into the data warehouse. OLAP and data mining then analyze the warehouse data."
+            },
+            {
+                question: "According to Simon's model of decision making, which is the FIRST phase?",
+                options: [
+                    "Intelligence",
+                    "Design",
+                    "Choice",
+                    "Implementation"
+                ],
+                answer: 0,
+                explanation: "Simon's model runs I-D-C-I: Intelligence (identifying the problem), Design (developing alternatives), Choice (selecting one) and Implementation (putting the decision into action)."
+            },
+            {
+                question: "Which component of an expert system applies rules from the knowledge base to facts to derive conclusions?",
+                options: [
+                    "User interface",
+                    "Inference engine",
+                    "Database server",
+                    "Report generator"
+                ],
+                answer: 1,
+                explanation: "The inference engine is the reasoning component; it uses forward chaining (data-driven) or backward chaining (goal-driven). An expert system = Knowledge Base + Inference Engine + User Interface."
+            },
+            {
+                question: "Temperature measured in Celsius is an example of which data scale, because it has equal intervals but no true zero?",
+                options: [
+                    "Nominal",
+                    "Ordinal",
+                    "Interval",
+                    "Ratio"
+                ],
+                answer: 2,
+                explanation: "The N-O-I-R scales are Nominal (categories), Ordinal (ordered categories), Interval (equal intervals, no true zero, e.g. Celsius) and Ratio (equal intervals with a true zero, e.g. weight and height)."
+            },
+            {
+                question: "In database normalization, 2NF (Second Normal Form) eliminates which type of dependency?",
+                options: [
+                    "Repeating groups",
+                    "Partial dependencies",
+                    "Transitive dependencies",
+                    "Foreign key dependencies"
+                ],
+                answer: 1,
+                explanation: "1NF removes repeating groups, 2NF removes partial dependencies (every non-key column depends on the full primary key) and 3NF removes transitive dependencies."
+            },
+            {
+                question: "Gmail, Salesforce and Office 365 are classic examples of which cloud service model?",
+                options: [
+                    "IaaS (Infrastructure as a Service)",
+                    "PaaS (Platform as a Service)",
+                    "SaaS (Software as a Service)",
+                    "On-premises data centre"
+                ],
+                answer: 2,
+                explanation: "SaaS delivers software on a subscription basis, e.g. Gmail and Salesforce. IaaS provides virtualized infrastructure (AWS EC2) and PaaS provides a development platform (Google App Engine)."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpo04', 'MMPO04', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

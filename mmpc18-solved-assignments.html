@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPC-18 Entrepreneurship Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPC-18 Entrepreneurship?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPC-18 Entrepreneurship syllabus covers 12 units: Entrepreneurship Overview, Entrepreneurial Mindset, Startup Ecosystem, Business Idea Generation, Business Plan, Market Research for Startups, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPC-18 Entrepreneurship syllabus covers 14 units: Introduction to Entrepreneurship, Entrepreneurial Competencies, Dimensions of Entrepreneurship, Entrepreneurship and Government Policies, Entrepreneurship and Economic Development, Identification of Business Idea/Opportunity, Financing an Enterprise, Evaluating and Preparing Business Plan, Implementing Business Plan, Managing the Enterprise, Social Entrepreneurship, Rural Entrepreneurship, Ethical Entrepreneurship, and Family Business and Governance. StudyHub covers all units with detailed notes and solved assignment answers."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPC-18 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-18 Entrepreneurship covering all 12 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-18 Entrepreneurship covering all 14 units with diagrams, examples, and exam tips, plus solved assignment answers on this page. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPC-18?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPC-18 Entrepreneurship has 12 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPC-18 Entrepreneurship has 14 units organized across 4 blocks: Block-01 Entrepreneurship Overview, Block-02 Entrepreneurship in India, Block-03 Establishing a New Enterprise, and Block-04 Special Issues. StudyHub covers all units comprehensively with solved assignment answers."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +109,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpc18">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,10 +160,12 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPC-18 Entrepreneurship - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPC-18 Entrepreneurship solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 12 units of MMPC-18. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpc18.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPC-18 Entrepreneurship solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 14 units of MMPC-18, across the four blocks: Entrepreneurship Overview, Entrepreneurship in India, Establishing a New Enterprise and Special Issues. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer covers key concepts, frameworks, and Indian examples to help you score maximum marks.</p>
+    <a href="quiz-mmpc18.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="study-mmpc18.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
+    <a href="mmpc18-question-paper.html" class="landing-cta btn-fx">Solved Question Paper &rarr;</a>
   </div>
 
   <section>
@@ -135,77 +173,125 @@
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPC-18 Entrepreneurship. Click any unit to read the complete study notes.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Entrepreneurship Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Entrepreneurship Overview in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Introduction to Entrepreneurship</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Introduction to Entrepreneurship in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Entrepreneurial Mindset</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Entrepreneurial Mindset in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Entrepreneurial Competencies</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Entrepreneurial Competencies in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Startup Ecosystem</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Startup Ecosystem in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Dimensions of Entrepreneurship</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Dimensions of Entrepreneurship in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Business Idea Generation</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Business Idea Generation in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Entrepreneurship and Government Policies</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Entrepreneurship and Government Policies in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Business Plan</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Business Plan in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Entrepreneurship and Economic Development</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Entrepreneurship and Economic Development in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Market Research for Startups</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Market Research for Startups in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Identification of Business Idea/Opportunity</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Identification of Business Idea/Opportunity in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Funding & Venture Capital</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Funding & Venture Capital in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Financing an Enterprise</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Financing an Enterprise in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Angel Investors</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Angel Investors in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Evaluating and Preparing Business Plan</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Evaluating and Preparing Business Plan in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Bootstrapping</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Bootstrapping in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Implementing Business Plan</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Implementing Business Plan in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: Social Entrepreneurship</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Social Entrepreneurship in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Managing the Enterprise</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Managing the Enterprise in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Women Entrepreneurship</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Women Entrepreneurship in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Social Entrepreneurship</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Social Entrepreneurship in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Government Schemes for Startups</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Government Schemes for Startups in the context of Entrepreneurship.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Rural Entrepreneurship</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Rural Entrepreneurship in the context of Entrepreneurship.</p>
         <a href="study-mmpc18.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Ethical Entrepreneurship</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Ethical Entrepreneurship in the context of Entrepreneurship.</p>
+        <a href="study-mmpc18.html#u13" class="unit-link">Read Full Notes &rarr;</a>
+      </div>
+
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: Family Business and Governance</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Family Business and Governance in the context of Entrepreneurship.</p>
+        <a href="study-mmpc18.html#u14" class="unit-link">Read Full Notes &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - MMPC-18 Entrepreneurship</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Define entrepreneurship. Distinguish between an entrepreneur, a manager and an intrapreneur.</h3>
+      <p class="answer"><strong>Answer:</strong>Entrepreneurship is the capacity to assume risk, accountability and challenges in order to explore opportunities, disrupt market norms and create value. The concept has evolved through three eras of thinking: the risk-bearing era associated with Cantillon, the trait-based era linked to Schumpeter's innovation and creative destruction, and the modern opportunity-based approach of Shane and Venkataraman. An entrepreneur differs from a manager in several ways: the entrepreneur is a risk bearer while the manager avoids risk; the entrepreneur is opportunity-oriented while the manager is resource-oriented; the entrepreneur is motivated by achievement while the manager seeks power; innovation is the entrepreneur's core function while the manager performs routine tasks; and the entrepreneur owns the venture while the manager is hired. An intrapreneur, by contrast, is an entrepreneur within an existing organisation: the company bears the risk and provides resources, while rewards come as salary and bonus rather than profit ownership. Elon Musk exemplifies the entrepreneur through SpaceX and Tesla, while Sundar Pichai's innovations within Google, such as Gmail and Chrome, illustrate the intrapreneur. Present the comparison as a table in your assignment for clarity and marks.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li><strong>Answer:</strong> Entrepreneurship is the capacity to assume risk, accountability and challenges in order to explore opportunities, disrupt market norms and create value.</li>        <li>Elon Musk exemplifies the entrepreneur through SpaceX and Tesla, while Sundar Pichai's innovations within Google, such as Gmail and Chrome, illustrate the intrapreneur.</li>        <li>The concept has evolved through three eras of thinking: the risk-bearing era associated with Cantillon, the trait-based era linked to Schumpeter's innovation and creative destruction, and the modern opportunity-based approach of Shane and Venkataraman.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Present the comparison as a table in your assignment for clarity and marks.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Explain the contribution of MSMEs to Indian economic development and the key government schemes supporting them.</h3>
+      <p class="answer"><strong>Answer:</strong>Micro, Small and Medium Enterprises are the backbone of the Indian economy. MSMEs are classified by investment in plant and machinery and annual turnover: Micro up to Rs 1 crore, Small up to Rs 10 crore and Medium up to Rs 50 crore, remembered as the 1-10-50 rule. Their contribution follows the 30-45-40 formula: MSMEs contribute roughly 30 percent of GDP, 45 percent of manufacturing output and 40 percent of exports, while employing more than 11 crore people, making them the largest employer after agriculture. They drive inclusive growth, regional development and export promotion; the Tirupur knitwear cluster in Tamil Nadu generates thousands of crores of annual exports from over 800 MSME units. Government support has evolved through the industrial policies of 1948, 1956, 1991 (liberalisation) and 2020 (Atmanirbhar Bharat), supported by schemes such as the MSME Development Act 2006, Make in India, Startup India, Stand-Up India for SC/ST and women entrepreneurs, MUDRA Yojana with loans up to Rs 10 lakh, and PMEGP for employment generation. Institutions like SIDBI, NSIC, KVIC and EDII provide financing and skill support. Quote the 30-45-40 figures precisely in your answer.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li><strong>Answer:</strong> Micro, Small and Medium Enterprises are the backbone of the Indian economy.</li>        <li>Government support has evolved through the industrial policies of 1948, 1956, 1991 (liberalisation) and 2020 (Atmanirbhar Bharat), supported by schemes such as the MSME Development Act 2006, Make in India, Startup India, Stand-Up India for SC/ST and women entrepreneurs, MUDRA Yojana with loans up to Rs 10 lakh, and PMEGP for employment generation.</li>        <li>Their contribution follows the 30-45-40 formula: MSMEs contribute roughly 30 percent of GDP, 45 percent of manufacturing output and 40 percent of exports, while employing more than 11 crore people, making them the largest employer after agriculture.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> MSMEs are classified by investment in plant and machinery and annual turnover: Micro up to Rs 1 crore, Small up to Rs 10 crore and Medium up to Rs 50 crore, remembered as the 1-10-50 rule.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. Explain the SCAMPER technique of business idea generation with suitable examples.</h3>
+      <p class="answer"><strong>Answer:</strong>SCAMPER is a seven-step technique for systematically generating and refining business ideas. Each letter stands for an action: Substitute, Combine, Adapt, Modify, Put to another use, Eliminate and Rearrange. Substitute replaces one element with another, such as using bamboo instead of plastic. Combine merges two ideas or products, as the smartphone combined a phone with a camera. Adapt transfers a successful model to another context, as Airbnb adapted the sharing model to housing. Modify changes size, shape or features, like the Mini Cooper offering a small car in a big-car market. Put to another use finds new applications, such as baking soda as a cleaning agent. Eliminate removes unnecessary elements, as Google eliminated clutter from its search page. Rearrange reorders the experience, as Netflix allowed watching anytime against the fixed TV schedule. In the Indian food-delivery space, Zomato combined food ordering, technology and delivery, while Swiggy modified the approach by building a logistics-first model. Ideas generated through SCAMPER are then validated with SWOT analysis and break-even analysis. Present each element with at least one example in your assignment.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li><strong>Answer:</strong> SCAMPER is a seven-step technique for systematically generating and refining business ideas.</li>        <li>Substitute replaces one element with another, such as using bamboo instead of plastic.</li>        <li>Each letter stands for an action: Substitute, Combine, Adapt, Modify, Put to another use, Eliminate and Rearrange.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Present each element with at least one example in your assignment.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. Discuss the major challenges of family businesses and the strategies to manage them, with Indian examples.</h3>
+      <p class="answer"><strong>Answer:</strong>Family businesses are organisations where ownership and management are concentrated within a family. They face four major challenges, remembered as S-F-P-G: Succession planning, where a lack of clarity about who takes over creates a leadership vacuum; Family versus business conflict, where personal and professional decisions get mixed, leading to poor decision-making; Professionalization, where hiring non-family managers meets resistance from family members; and Governance issues, where the absence of formal structures creates accountability gaps. Coping strategies include a clear governance structure, professional management, a written family constitution, formal conflict-resolution mechanisms and merit-based promotions. The contrasting cases of Tata and Reliance illustrate these points. The Tata Group maintained professional management through Tata Sons, family oversight through charitable trusts, and smooth succession from Ratan Tata to N. Chandrasekaran. Reliance, by contrast, faced a bitter split between Mukesh and Anil Ambani after Dhirubhai's death in the absence of a formal family constitution, demonstrating why governance structures matter. Present the challenge-strategy pairing as a table in your assignment.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li><strong>Answer:</strong> Family businesses are organisations where ownership and management are concentrated within a family.</li>        <li>The contrasting cases of Tata and Reliance illustrate these points.</li>        <li>Coping strategies include a clear governance structure, professional management, a written family constitution, formal conflict-resolution mechanisms and merit-based promotions.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> They face four major challenges, remembered as S-F-P-G: Succession planning, where a lack of clarity about who takes over creates a leadership vacuum; Family versus business conflict, where personal and professional decisions get mixed, leading to poor decision-making; Professionalization, where hiring non-family managers meets resistance from family members; and Governance issues, where the absence of formal structures creates accountability gaps.</p>
     </div>
   </section>
 
@@ -213,11 +299,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPC-18 Entrepreneurship</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPC-18 Entrepreneurship?</summary>
-      <p>The IGNOU MMPC-18 Entrepreneurship syllabus covers 12 units: Entrepreneurship Overview, Entrepreneurial Mindset, Startup Ecosystem, Business Idea Generation, Business Plan, Market Research for Startups, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPC-18 Entrepreneurship syllabus covers 14 units: Introduction to Entrepreneurship, Entrepreneurial Competencies, Dimensions of Entrepreneurship, Entrepreneurship and Government Policies, Entrepreneurship and Economic Development, Identification of Business Idea/Opportunity, Financing an Enterprise, Evaluating and Preparing Business Plan, Implementing Business Plan, Managing the Enterprise, Social Entrepreneurship, Rural Entrepreneurship, Ethical Entrepreneurship, and Family Business and Governance. StudyHub covers all units with detailed notes and solved assignment answers.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPC-18 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-18 Entrepreneurship covering all 12 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-18 Entrepreneurship covering all 14 units with diagrams, examples, and exam tips, plus solved assignment answers on this page. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPC-18 exam?</summary>
@@ -229,7 +315,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPC-18?</summary>
-      <p>IGNOU MMPC-18 Entrepreneurship has 12 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPC-18 Entrepreneurship has 14 units organized across 4 blocks: Block-01 Entrepreneurship Overview, Block-02 Entrepreneurship in India, Block-03 Establishing a New Enterprise, and Block-04 Special Issues. StudyHub covers all units comprehensively with solved assignment answers.</p>
     </details>
   </section>
 
@@ -239,12 +325,12 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -252,12 +338,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpc18.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpc18.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

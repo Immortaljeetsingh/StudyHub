@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPO-03 Operations Management Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPO-03 Operations Management?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPO-03 Operations Management syllabus covers 15 units: Operations Management Overview, Process Design, Capacity Planning, Facility Location, Facility Layout, Forecasting, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPO-03 Operations Management syllabus covers 14 units: OM Introduction, Operations Strategy, Sustainable Operations, Process and Capacity Analysis, Facility Layout, Product and Service Design, Demand Forecasting, Inventory Management, Aggregate Planning, MRP, Scheduling and Sequencing, Six Sigma, TQM, and Maintenance Management. StudyHub covers all units with detailed notes and provides solved assignment answers."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPO-03 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPO-03 Operations Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPO-03 Operations Management covering all 14 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPO-03?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPO-03 Operations Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPO-03 Operations Management has 14 units organized across multiple blocks. StudyHub covers all units comprehensively and provides solved assignment answers."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +109,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpo03">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,106 +160,138 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPO-03 Operations Management - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPO-03 Operations Management solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 15 units of MMPO-03. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpo03.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPO-03 Operations Management solved assignments</strong>? StudyHub provides IGNOU-style solved assignment questions with model answers for MMPO-03 - see the Solved Assignment Questions &amp; Answers section below. Each 120-250 word model answer is grounded in the unit-wise study notes, follows IGNOU exam format, and includes Indian examples to help you score maximum marks. Updated for the 2026 IGNOU session.</p>
+    <a href="quiz-mmpo03.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="study-mmpo03.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
+    <a href="mmpo03-question-paper.html" class="landing-cta btn-fx">Solved Question Paper &rarr;</a>
   </div>
 
   <section>
-    <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Solved Assignments for MMPO-03</h2>
-    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPO-03 Operations Management. Click any unit to read the complete study notes.</p>
+    <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">MMPO-03 Units &amp; Solved Assignment Answers</h2>
+    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Jump to the study notes for each of the 14 units of IGNOU MMPO-03 Operations Management, then scroll down for solved assignment questions with model answers.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Operations Management Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Operations Management Overview in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Operations Management &mdash; An Introduction</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Operations Management Introduction in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Process Design</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Process Design in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Operations Strategy</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Operations Strategy in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Capacity Planning</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Capacity Planning in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Sustainable Operations</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Sustainable Operations in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Facility Location</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Facility Location in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Process and Capacity Analysis</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Process and Capacity Analysis in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
+      <div class="unit-preview fx-card">
         <h3>Unit 5: Facility Layout</h3>
         <p>Key concepts, definitions, diagrams, and exam-ready notes for Facility Layout in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Forecasting</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Forecasting in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Product and Service Design</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Product and Service Design in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Aggregate Planning</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Aggregate Planning in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Demand Forecasting</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Demand Forecasting in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
+      <div class="unit-preview fx-card">
         <h3>Unit 8: Inventory Management</h3>
         <p>Key concepts, definitions, diagrams, and exam-ready notes for Inventory Management in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: MRP</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for MRP in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Aggregate Planning</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Aggregate Planning in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: ERP</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for ERP in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Materials Requirement Planning (MRP)</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Materials Requirement Planning MRP in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Quality Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Quality Management in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Scheduling and Sequencing</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Scheduling and Sequencing in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Six Sigma</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Six Sigma in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Six Sigma Quality Control</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Six Sigma Quality Control in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Lean Operations</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Lean Operations in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Total Quality Management (TQM)</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Total Quality Management in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 14: Supply Chain Integration</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Supply Chain Integration in the context of Operations Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: Maintenance Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Maintenance Management in the context of Operations Management.</p>
         <a href="study-mmpo03.html#u14" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+    </div>
+  </section>
 
-      <div class="unit-preview">
-        <h3>Unit 15: Operations Strategy</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Operations Strategy in the context of Operations Management.</p>
-        <a href="study-mmpo03.html#u15" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - IGNOU MMPO-03</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Explain ABC analysis and EOQ in inventory management.</h3>
+      <p class="answer"><strong>Answer:</strong> Inventory management balances the cost of holding stock against the risk of stock-outs. ABC analysis applies the Pareto principle to classify inventory by annual value. A items are about 20% of items but 80% of value, and need tight, frequent review; B items are roughly 30% of items and 15% of value, needing moderate control; C items are about 50% of items but only 5% of value and receive simple, infrequent control. The Economic Order Quantity (EOQ) minimizes total inventory cost, the sum of ordering cost and holding cost: EOQ = &radic;(2DS/H), where D is annual demand, S the ordering cost per order and H the holding cost per unit per year. For example, D = 12,000 units, S = Rs 500 and H = Rs 10 gives EOQ = &radic;(2 x 12,000 x 500/10) = 1,095 units, about 11 orders per year and a cycle of 33 days. The reorder point ROP = d x L + safety stock triggers replenishment, where safety stock = Z x &sigma; x &radic;L buffers demand variability. Maruti Suzuki pioneered JIT in India, keeping only 2-4 hours of component inventory, while Flipkart uses ABC slotting in its fulfilment centres during events like the Big Billion Days.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Inventory management balances the cost of holding stock against the risk of stock-outs.</li>        <li>For example, D = 12,000 units, S = Rs 500 and H = Rs 10 gives EOQ = &radic;(2 x 12,000 x 500/10) = 1,095 units, about 11 orders per year and a cycle of 33 days.</li>        <li>ABC analysis applies the Pareto principle to classify inventory by annual value.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Maruti Suzuki pioneered JIT in India, keeping only 2-4 hours of component inventory, while Flipkart uses ABC slotting in its fulfilment centres during events like the Big Billion Days.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Differentiate between chase, level and mixed aggregate planning strategies.</h3>
+      <p class="answer"><strong>Answer:</strong> Aggregate planning is a medium-term production plan, typically 3-18 months, that sets overall output, workforce and inventory levels to match forecast demand at minimum cost. The chase strategy adjusts capacity to match demand by hiring and firing workers as demand rises and falls. Inventory stays low but hiring and firing costs can be high and morale may suffer; it suits seasonal demand, as HUL does with ice cream in summer. The level strategy keeps production constant and uses inventory or backlog to absorb demand fluctuations. The workforce stays stable, avoiding hiring costs, but holding inventory costs money; Indian Railways coach factories follow this approach. The mixed strategy combines both - a stable base workforce supported by overtime, subcontracting and temporary inventory swings. Cadbury India runs its Pune plant at a level rate for Dairy Milk year-round and adds overtime and outsourced packaging during the October-December festival surge. The choice depends on relative costs: high hiring and firing costs favour level, high inventory costs favour chase, and a stable base with seasonal peaks favours mixed.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Aggregate planning is a medium-term production plan, typically 3-18 months, that sets overall output, workforce and inventory levels to match forecast demand at minimum cost.</li>        <li>The workforce stays stable, avoiding hiring costs, but holding inventory costs money; Indian Railways coach factories follow this approach.</li>        <li>The chase strategy adjusts capacity to match demand by hiring and firing workers as demand rises and falls.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The choice depends on relative costs: high hiring and firing costs favour level, high inventory costs favour chase, and a stable base with seasonal peaks favours mixed.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. What is DMAIC in Six Sigma? Explain its five phases.</h3>
+      <p class="answer"><strong>Answer:</strong> Six Sigma is a quality methodology targeting 3.4 defects per million opportunities (DPMO), a 99.99966% yield. DMAIC is its structured problem-solving framework for improving existing processes: Define, Measure, Analyze, Improve and Control. Define identifies the problem, project scope and critical-to-quality characteristics, using tools such as SIPOC and the voice of the customer. Measure collects baseline data, validates the measurement system with Gage R&amp;R and establishes the current sigma level. Analyze finds root causes using fishbone diagrams, 5-Why, Pareto charts and regression, verifying each cause with data. Improve generates and pilots solutions, using design of experiments (DOE), brainstorming and poka-yoke before full implementation. Control sustains the gains by monitoring with control charts, documenting standard operating procedures and handing over to the process owner. For new products or processes, DMADV (Define-Measure-Analyze-Design-Verify) is used instead. Tata Steel, a Deming Prize winner, and Wipro, which cut post-delivery defects by 40%, are well-known Indian adopters. The belt hierarchy runs from Master Black Belt down to Green, Yellow and White Belts.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Six Sigma is a quality methodology targeting 3.4 defects per million opportunities (DPMO), a 99.99966% yield.</li>        <li>Define identifies the problem, project scope and critical-to-quality characteristics, using tools such as SIPOC and the voice of the customer.</li>        <li>DMAIC is its structured problem-solving framework for improving existing processes: Define, Measure, Analyze, Improve and Control.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The belt hierarchy runs from Master Black Belt down to Green, Yellow and White Belts.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. Explain OEE and its three components in maintenance management.</h3>
+      <p class="answer"><strong>Answer:</strong> Overall Equipment Effectiveness (OEE) measures how well a manufacturing operation is utilized, and world-class OEE is 85% or more. It is the product of three factors: OEE = Availability x Performance x Quality. Availability is the percentage of planned production time the equipment actually runs - uptime divided by planned production time, or equivalently MTBF/(MTBF + MTTR), where MTBF is mean time between failures and MTTR is mean time to repair. Performance compares actual output with the maximum possible at rated speed. Quality is the proportion of good units produced. The 6 big losses that reduce OEE are equipment failure, setup and adjustment, idling and minor stops, reduced speed, process defects and startup losses. Maintenance itself has four types: breakdown or reactive maintenance, preventive maintenance on a schedule, predictive maintenance based on condition monitoring, and Total Productive Maintenance (TPM), where operators maintain their own equipment across eight pillars. Example: a machine with 89.6% availability, 93% performance and 96.3% quality has OEE of about 80.1%, below the world-class benchmark. Maruti&rsquo;s Gurugram plant reports OEE above 92%.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Overall Equipment Effectiveness (OEE) measures how well a manufacturing operation is utilized, and world-class OEE is 85% or more.</li>        <li>Example: a machine with 89.6% availability, 93% performance and 96.3% quality has OEE of about 80.1%, below the world-class benchmark.</li>        <li>It is the product of three factors: OEE = Availability x Performance x Quality.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Maruti&rsquo;s Gurugram plant reports OEE above 92%.</p>
     </div>
   </section>
 
@@ -231,11 +299,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPO-03 Operations Management</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPO-03 Operations Management?</summary>
-      <p>The IGNOU MMPO-03 Operations Management syllabus covers 15 units: Operations Management Overview, Process Design, Capacity Planning, Facility Location, Facility Layout, Forecasting, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPO-03 Operations Management syllabus covers 14 units: OM Introduction, Operations Strategy, Sustainable Operations, Process and Capacity Analysis, Facility Layout, Product and Service Design, Demand Forecasting, Inventory Management, Aggregate Planning, MRP, Scheduling and Sequencing, Six Sigma, TQM, and Maintenance Management. StudyHub covers all units with detailed notes and provides solved assignment answers on this page.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPO-03 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPO-03 Operations Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPO-03 Operations Management covering all 14 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPO-03 exam?</summary>
@@ -247,7 +315,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPO-03?</summary>
-      <p>IGNOU MMPO-03 Operations Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPO-03 Operations Management has 14 units organized across multiple blocks. StudyHub covers all units comprehensively and provides solved assignment questions with model answers on this page.</p>
     </details>
   </section>
 
@@ -257,12 +325,12 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -270,12 +338,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpo03.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpo03.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

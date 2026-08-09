@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-11 Social Processes - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-11 Social Processes Quiz</h1>
+        <p>Test your knowledge of Social Processes</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is NOT one of the Big Five personality traits (OCEAN)?",
+                options: [
+                    "Openness",
+                    "Conscientiousness",
+                    "Extraversion",
+                    "Perception"
+                ],
+                answer: 3,
+                explanation: "The Big Five (OCEAN) traits are Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. Perception is a separate process influencing individual behaviour, not a Big Five trait."
+            },
+            {
+                question: "According to Maslow's hierarchy, which need must be satisfied before higher needs can motivate behaviour?",
+                options: [
+                    "Self-actualization",
+                    "Physiological needs",
+                    "Esteem needs",
+                    "Social needs"
+                ],
+                answer: 1,
+                explanation: "Maslow's hierarchy places physiological needs (food, water, shelter) at the base. Lower needs must be satisfied before higher needs such as esteem or self-actualization can motivate behaviour."
+            },
+            {
+                question: "In Herzberg's two-factor theory, hygiene factors such as salary and working conditions:",
+                options: [
+                    "Drive satisfaction and motivation",
+                    "Are the main motivators",
+                    "Prevent dissatisfaction but do not motivate",
+                    "Have no effect on employees"
+                ],
+                answer: 2,
+                explanation: "Hygiene factors (salary, working conditions, company policy) prevent dissatisfaction when adequate, but only motivators such as achievement and recognition drive true satisfaction and motivation."
+            },
+            {
+                question: "Vroom's expectancy theory states that motivation equals:",
+                options: [
+                    "Expectancy x Instrumentality x Valence",
+                    "Hygiene + Motivators",
+                    "Effort x Ability x Opportunity",
+                    "Reward - Punishment"
+                ],
+                answer: 0,
+                explanation: "Vroom's process theory of motivation is Motivation = Expectancy x Instrumentality x Valence (E x I x V). It explains how motivation works, while content theories explain what motivates."
+            },
+            {
+                question: "Which stage of Tuckman's group development model is characterized by conflicts emerging among members?",
+                options: [
+                    "Forming",
+                    "Norming",
+                    "Storming",
+                    "Adjourning"
+                ],
+                answer: 2,
+                explanation: "In the storming stage, conflicts emerge as members assert roles and opinions. The full sequence is forming, storming, norming, performing, and adjourning."
+            },
+            {
+                question: "The (9,9) style on the Blake-Mouton leadership grid, called team management, reflects:",
+                options: [
+                    "High concern for people, low concern for production",
+                    "Low concern for people, high concern for production",
+                    "Low concern for both people and production",
+                    "High concern for both people and production"
+                ],
+                answer: 3,
+                explanation: "The Blake-Mouton grid's (9,9) team management style combines high concern for people with high concern for production and is considered the ideal leadership style."
+            },
+            {
+                question: "Organisational culture differs from climate in that culture is:",
+                options: [
+                    "Surface-level and easily changeable",
+                    "Deep, stable, shared values and beliefs",
+                    "The same as the physical workspace",
+                    "Only about employee salaries"
+                ],
+                answer: 1,
+                explanation: "Culture is the deep and stable set of shared values, beliefs, and norms, while climate is the surface-level, changeable perception of the work environment."
+            },
+            {
+                question: "Lewin's three-step model of organisational change is:",
+                options: [
+                    "Unfreeze, Change, Refreeze",
+                    "Forming, Storming, Norming",
+                    "Plan, Do, Act",
+                    "Diagnose, Intervene, Evaluate"
+                ],
+                answer: 0,
+                explanation: "Lewin's simple 3-step change model is unfreezing the existing state, making the change, and refreezing the new state. Kotter's 8-step model is used for large-scale change."
+            },
+            {
+                question: "Which of the following is one of the five Thomas-Kilmann conflict resolution styles?",
+                options: [
+                    "Integrating",
+                    "Dominating",
+                    "Collaborating",
+                    "Confronting"
+                ],
+                answer: 2,
+                explanation: "The five Thomas-Kilmann conflict modes are Competing, Collaborating, Compromising, Avoiding, and Accommodating. Collaborating seeks to satisfy the concerns of both parties."
+            },
+            {
+                question: "According to French and Raven, power based on followers' identification with and admiration of a leader is called:",
+                options: [
+                    "Coercive power",
+                    "Reward power",
+                    "Legitimate power",
+                    "Referent power"
+                ],
+                answer: 3,
+                explanation: "Referent power comes from followers' admiration and identification with the leader. The five bases of power are coercive, reward, legitimate, expert, and referent."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc11', 'MMPC11', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

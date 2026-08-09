@@ -1,28 +1,33 @@
 // api-utils.js — Shared OpenRouter API + UI functions for StudyHub
 
 // ==================== DEFAULTS ====================
-const DEFAULT_API_KEY_PART1 = 'sk-or-v1-548d5250b839b8cb8abe12';
-const DEFAULT_API_KEY_PART2 = 'cedc387c456b8b3244b72fbccca390d7e0b6170059';
-const DEFAULT_API_KEY = DEFAULT_API_KEY_PART1 + DEFAULT_API_KEY_PART2;
-const DEFAULT_MODEL = 'nvidia/nemotron-3-nano-30b-a3b:free';
+const DEFAULT_MODEL = 'google/gemma-4-31b-it:free';
+let DEFAULT_API_KEY = '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';
 
 const FREE_MODELS = [
-    { id: 'nvidia/nemotron-3-nano-30b-a3b:free', name: 'Nemotron 3 Nano 30B (Default)' },
-    { id: 'minimax/minimax-m2.5:free', name: 'MiniMax M2.5' },
-    { id: 'deepseek/deepseek-v4-flash:free', name: 'DeepSeek V4 Flash' },
-    { id: 'google/gemma-4-26b-a4b-it:free', name: 'Gemma 4 26B' },
-    { id: 'google/gemma-4-31b-it:free', name: 'Gemma 4 31B' },
-    { id: 'qwen/qwen3-next-80b-a3b-instruct:free', name: 'Qwen3 Next 80B' },
-    { id: 'nvidia/nemotron-3-super-120b-a12b:free', name: 'Nemotron 3 Super 120B' },
-    { id: 'poolside/laguna-m.1:free', name: 'Poolside Laguna M.1' },
+    { id: 'openrouter/free', name: 'Auto (Best Free Model)' },
+    { id: 'openai/gpt-oss-20b:free', name: 'OpenAI gpt-oss-20b' },
+    { id: 'google/gemma-4-26b-a4b-it:free', name: 'Google Gemma 4 26B' },
+    { id: 'google/gemma-4-31b-it:free', name: 'Google Gemma 4 31B' },
+    { id: 'inclusionai/ling-3.0-tiny:free', name: 'inclusionAI Ling 3.0 Tiny' },
+    { id: 'nvidia/nemotron-3-nano-30b-a3b:free', name: 'NVIDIA Nemotron 3 Nano 30B' },
+    { id: 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free', name: 'NVIDIA Nemotron 3 Nano Omni (Reasoning)' },
+    { id: 'nvidia/nemotron-3-super-120b-a12b:free', name: 'NVIDIA Nemotron 3 Super 120B' },
+    { id: 'nvidia/nemotron-3-ultra-550b-a55b:free', name: 'NVIDIA Nemotron 3 Ultra 550B' },
+    { id: 'nvidia/nemotron-nano-12b-v2-vl:free', name: 'NVIDIA Nemotron Nano 12B 2 VL' },
+    { id: 'nvidia/nemotron-nano-9b-v2:free', name: 'NVIDIA Nemotron Nano 9B V2' },
+    { id: 'cohere/north-mini-code:free', name: 'Cohere North Mini Code' },
+    { id: 'poolside/laguna-s-2.1:free', name: 'Poolside Laguna S 2.1' },
+    { id: 'poolside/laguna-xs-2.1:free', name: 'Poolside Laguna XS 2.1' },
 ];
 
-function getApiKey() { return localStorage.getItem('openrouter-api-key') || DEFAULT_API_KEY; }
-function getModel() { return localStorage.getItem('openrouter-model') || DEFAULT_MODEL; }
+function getApiKey() { try { return localStorage.getItem('studyhub-api-key') || localStorage.getItem('openrouter-api-key') || DEFAULT_API_KEY; } catch(e) { return DEFAULT_API_KEY; } }
+function getModel() { try { return localStorage.getItem('studyhub-model') || localStorage.getItem('openrouter-model') || DEFAULT_MODEL; } catch(e) { return DEFAULT_MODEL; } }
 
 // ==================== OPENROUTER API ====================
 async function callOpenRouter(text, systemPrompt) {
     const apiKey = getApiKey(); const model = getModel();
+    if (!apiKey) throw new Error('Set your API key first — use API settings on the Study Hub (openrouter.ai/keys)');
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
@@ -32,13 +37,18 @@ async function callOpenRouter(text, systemPrompt) {
         const err = await response.json().catch(() => ({}));
         const msg = err.error?.message || response.statusText;
         if (response.status === 403 && msg.includes('limit')) {
-            localStorage.removeItem('openrouter-api-key');
-            localStorage.removeItem('openrouter-model');
-            throw new Error('API key limit reached. Get a free key at openrouter.ai/keys');
+            try { localStorage.removeItem('studyhub-api-key'); localStorage.removeItem('openrouter-api-key'); localStorage.removeItem('studyhub-model'); localStorage.removeItem('openrouter-model'); } catch(e) {}
+            DEFAULT_API_KEY = '';
+            throw new Error('API key rate-limited. Open API Settings (gear icon) to enter a new key — get one free at openrouter.ai/keys');
         }
         throw new Error(msg);
     }
-    return (await response.json()).choices[0].message.content;
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (typeof content !== 'string' || !content.trim()) {
+        throw new Error('Model "' + (data.model || model) + '" returned an empty response (openrouter/free can route to non-chat models). Open API Settings (gear icon) and pick a specific chat model.');
+    }
+    return content;
 }
 
 // ==================== SUMMARIZE ====================
@@ -90,9 +100,40 @@ function toggleTheme() {
 }
 function loadTheme() { var saved = localStorage.getItem('studyhub-theme'); if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); var btn = document.getElementById('themeToggleBtn'); if (btn) btn.textContent = '☀️ Light'; } }
 
-// ==================== API SETTINGS (stub — kept in study-hub.html via app.js) ====================
-function renderApiSettingsModal() { return ''; }
-function openApiSettings() {}
+// ==================== API SETTINGS ====================
+function renderApiSettingsModal() {
+    return '<div id="apiSettingsModal" style="display:none;position:fixed;inset:0;z-index:99990;background:rgba(0,0,0,0.6);align-items:center;justify-content:center" onclick="if(event.target===this)closeApiSettings()">'
+        + '<div style="background:#fff;color:#1a1a2e;padding:1.5rem;border-radius:12px;width:min(420px,90vw);font-family:Inter,sans-serif">'
+        + '<h3 style="margin:0 0 1rem;font-size:1.1rem">⚙ API Settings</h3>'
+        + '<label style="display:block;font-size:0.8rem;margin-bottom:0.25rem">OpenRouter API Key <a href="https://openrouter.ai/keys" target="_blank" rel="noopener" style="color:#667eea">(get one)</a></label>'
+        + '<input id="apiKeyInput" type="password" placeholder="sk-or-v1-..." style="width:100%;padding:0.6rem;margin-bottom:0.75rem;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;box-sizing:border-box">'
+        + '<label style="display:block;font-size:0.8rem;margin-bottom:0.25rem">Model</label>'
+        + '<select id="modelSelect" style="width:100%;padding:0.6rem;margin-bottom:1rem;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;background:#fff">'
+        + FREE_MODELS.map(m => '<option value="' + m.id + '">' + m.name + '</option>').join('')
+        + '</select>'
+        + '<div style="display:flex;gap:0.5rem;justify-content:flex-end">'
+        + '<button onclick="closeApiSettings()" style="padding:0.5rem 1rem;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer">Cancel</button>'
+        + '<button onclick="saveApiSettings()" style="padding:0.5rem 1rem;border:none;border-radius:8px;background:#667eea;color:#fff;cursor:pointer">Save</button>'
+        + '</div></div></div>';
+}
+function openApiSettings() {
+    const m = document.getElementById('apiSettingsModal');
+    if (!m) return;
+    const key = document.getElementById('apiKeyInput'), model = document.getElementById('modelSelect');
+    if (key) key.value = getApiKey();
+    if (model) model.value = getModel();
+    m.style.display = 'flex';
+}
+function closeApiSettings() { const m = document.getElementById('apiSettingsModal'); if (m) m.style.display = 'none'; }
+function saveApiSettings() {
+    try {
+        const key = document.getElementById('apiKeyInput'), model = document.getElementById('modelSelect');
+        if (key) localStorage.setItem('studyhub-api-key', key.value.trim());
+        if (model) localStorage.setItem('studyhub-model', model.value);
+        closeApiSettings();
+        showToast('✅ API settings saved', 'success');
+    } catch(e) { showToast('❌ Could not save settings', 'error'); }
+}
 
 // ==================== UNITS TOGGLE ====================
 function toggleUnits() {
@@ -127,7 +168,7 @@ function restoreUnitsState() {
 // ==================== UTILS ====================
 function initReadingProgress() { const bar = document.querySelector('.reading-progress'); if (!bar) return; window.addEventListener('scroll', () => { const h = document.documentElement; bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%'; }); }
 function toggleMobileSidebar() { const sb = document.querySelector('.study-sidebar'); if (sb) sb.classList.toggle('mobile-open'); }
-function formatAIResponse(text) { return escapeHtml(text).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n- /g, '\n• ').replace(/\n(\d+)\. /g, '\n$1. '); }
+function formatAIResponse(text) { if (!text) return ''; return escapeHtml(text).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n- /g, '\n• ').replace(/\n(\d+)\. /g, '\n$1. '); }
 function escapeHtml(str) { const d = document.createElement('div'); d.textContent = str; return d.innerHTML; }
 function showToast(msg, type) {
     const t = document.createElement('div');
@@ -204,17 +245,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const wrap = document.createElement('div'); wrap.className = 'table-wrap';
         t.parentNode.insertBefore(wrap, t); wrap.appendChild(t);
     });
-
-    // Mobile: improve API error display
-    const origToast = window.showToast;
-    window.showToast = function(msg, type) {
-        if (typeof origToast === 'function') origToast(msg, type);
-        else {
-            const t = document.createElement('div');
-            t.style.cssText = 'position:fixed;bottom:2rem;right:2rem;left:2rem;padding:1rem 1.25rem;border-radius:12px;font-family:Inter,sans-serif;font-size:0.88rem;z-index:99999;color:white;box-shadow:0 8px 30px rgba(0,0,0,0.3);text-align:center;';
-            t.style.background = type === 'error' ? '#e53e3e' : type === 'success' ? '#48bb78' : '#667eea';
-            t.textContent = msg; document.body.appendChild(t);
-            setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity 0.3s'; setTimeout(() => t.remove(), 300); }, 4000);
-        }
-    };
 });

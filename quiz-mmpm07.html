@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-07 Integrated Marketing Communication - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-07 Integrated Marketing Communication Quiz</h1>
+        <p>Test your knowledge of Integrated Marketing Communication</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "According to Kotler and Armstrong, IMC (Integrated Marketing Communication) primarily involves:",
+                options: [
+                    "Using only paid advertising channels to reach customers",
+                    "Carefully integrating and coordinating many communication channels to deliver a clear and consistent message",
+                    "Concentrating all promotion on a single media channel",
+                    "Replacing traditional media with digital marketing alone"
+                ],
+                answer: 1,
+                explanation: "Kotler and Armstrong define IMC as a company carefully integrating and coordinating its many communication channels to deliver a clear, consistent, and compelling message, so every touchpoint reinforces the same brand story."
+            },
+            {
+                question: "In the TAPIC framework of the IMC process, what does 'C' stand for?",
+                options: [
+                    "Control",
+                    "Communicate",
+                    "Collect Feedback",
+                    "Create"
+                ],
+                answer: 2,
+                explanation: "TAPIC stands for Target market segments, Ascertain communication objectives, Plan and design messages, Implement promotional strategy, and Collect feedback - the five steps of the IMC process."
+            },
+            {
+                question: "Which promotion mix tool is described as paid, non-personal communication by an identified sponsor?",
+                options: [
+                    "Personal selling",
+                    "Public relations",
+                    "Advertising",
+                    "Sales promotion"
+                ],
+                answer: 2,
+                explanation: "Advertising is paid, non-personal communication through mass media by an identified sponsor that builds brand awareness at scale. PR is earned media, personal selling is face-to-face interaction, and sales promotion uses short-term incentives."
+            },
+            {
+                question: "Which statement correctly distinguishes SEO from SEM in digital marketing?",
+                options: [
+                    "SEO gives immediate results while SEM is slow",
+                    "SEO is paid placement while SEM is organic",
+                    "SEO is free but slow (3-6 months) while SEM gives immediate paid results",
+                    "SEO stops working when the budget stops"
+                ],
+                answer: 2,
+                explanation: "SEO is organic and free but slow, taking 3-6 months and building a long-term asset, while SEM is paid per click with immediate results that stop when the budget stops. SEO also carries higher perceived credibility than paid placements."
+            },
+            {
+                question: "GRP (Gross Rating Points) in media planning is calculated as:",
+                options: [
+                    "Reach x Frequency",
+                    "Cost / Impressions x 1000",
+                    "Reach / Frequency",
+                    "Revenue / Advertising Spend"
+                ],
+                answer: 0,
+                explanation: "GRP = Reach x Frequency, where reach is the number of unique people exposed and frequency is the average exposures per person. CPM is (Cost / Impressions) x 1000 and ROAS is Revenue / Ad Spend."
+            },
+            {
+                question: "A media scheduling pattern of heavy advertising followed by complete stops, best for seasonal products with limited budgets, is called:",
+                options: [
+                    "Continuous scheduling",
+                    "Pulsating scheduling",
+                    "Flighting",
+                    "Seasonal scheduling"
+                ],
+                answer: 2,
+                explanation: "Flighting alternates heavy advertising with complete stops and suits seasonal products with limited budgets. Continuous is steady throughout, pulsating alternates heavy and light periods, and seasonal concentrates during peak demand."
+            },
+            {
+                question: "Compared with coupons, rebates provide savings:",
+                options: [
+                    "Immediately at the point of purchase",
+                    "After the purchase through mail-in or digital claims",
+                    "Only for frequently purchased low-value items",
+                    "Without collecting any customer data"
+                ],
+                answer: 1,
+                explanation: "Rebates give post-purchase savings (mail-in or digital) and collect rich customer data for future targeting, while coupons give immediate savings at checkout with minimal data and a low redemption rate of 1-2%."
+            },
+            {
+                question: "Compared with advertising, public relations (PR) is characterized by:",
+                options: [
+                    "Paid media with full message control",
+                    "Earned media with higher credibility but less message control",
+                    "Easier measurement and immediate awareness",
+                    "Lower credibility and self-promotion"
+                ],
+                answer: 1,
+                explanation: "PR uses earned (free) media with third-party endorsement, giving higher credibility but less message control than advertising, which is paid self-promotion with full control, easier measurement, and immediate awareness."
+            },
+            {
+                question: "Which advertising budget method defines objectives first and then estimates the costs required to achieve them?",
+                options: [
+                    "Percentage of sales",
+                    "Competitive parity",
+                    "Objective and Task",
+                    "Affordable method"
+                ],
+                answer: 2,
+                explanation: "The Objective and Task method defines objectives and estimates the costs to achieve them, and is the most logical method. The five budget methods are PCOAZ: Percentage of Sales, Competitive Parity, Objective and Task, Affordable, and Zero-based."
+            },
+            {
+                question: "Which of the following is one of the six consumer rights under the SICCHR framework?",
+                options: [
+                    "Right to Profit",
+                    "Right to Safety",
+                    "Right to Monopoly",
+                    "Right to Secrecy"
+                ],
+                answer: 1,
+                explanation: "SICCHR lists six consumer rights: Safety, Information, Choice, Hearing, Redressal, and Consumer Education. The Right to Safety protects consumers from hazardous products, and the Consumer Protection Act 2019 provides three-tier dispute resolution."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm07', 'MMPM07', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

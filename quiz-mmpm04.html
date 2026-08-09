@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-04 International Human Resource Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-04 International Human Resource Management Quiz</h1>
+        <p>Test your knowledge of International Human Resource Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "IHRM can best be defined as:",
+                options: [
+                    "HRM activities carried out across national borders, dealing with employees from multiple countries",
+                    "HRM activities limited to a single country",
+                    "Only the recruitment of employees for overseas postings",
+                    "The payroll management of foreign nationals"
+                ],
+                answer: 0,
+                explanation: "IHRM covers all HRM activities performed across national borders involving employees from multiple countries; it is more complex than domestic HRM due to multiple cultures and legal systems."
+            },
+            {
+                question: "A Third Country National (TCN) is:",
+                options: [
+                    "A citizen of the host country working for the MNC",
+                    "A citizen of the parent country working abroad",
+                    "A citizen of a country other than the home or host country working for the MNC",
+                    "A local employee hired on a short-term contract"
+                ],
+                answer: 2,
+                explanation: "A TCN is a national of neither the parent nor the host country, for example a British manager posted by TCS in Brazil."
+            },
+            {
+                question: "According to Hofstede, culture is defined as:",
+                options: [
+                    "The collective programming of the mind that distinguishes one group from another",
+                    "The individual preferences of consumers",
+                    "The legal framework of a country",
+                    "The economic development level of a nation"
+                ],
+                answer: 0,
+                explanation: "Hofstede defines culture as the collective programming of the mind; it deeply impacts recruitment, compensation, motivation and leadership styles."
+            },
+            {
+                question: "Ethnocentrism in cross-cultural management refers to:",
+                options: [
+                    "The belief in the superiority of one's own culture",
+                    "The acceptance of all cultures equally",
+                    "Learning the host country language",
+                    "Hiring only host country nationals"
+                ],
+                answer: 0,
+                explanation: "Ethnocentrism, the belief that one's own culture is superior, is a major barrier to cross-cultural communication and a key challenge of cultural diversity."
+            },
+            {
+                question: "Under Perlmutter's EPRG model, the geocentric staffing approach means:",
+                options: [
+                    "Key positions are filled by parent country nationals",
+                    "Each subsidiary is staffed by host country nationals",
+                    "Staffing is done on a regional basis",
+                    "The best person is hired regardless of nationality"
+                ],
+                answer: 3,
+                explanation: "The geocentric approach selects the best person for the job irrespective of nationality, with integrated global control, as used by IBM and Google."
+            },
+            {
+                question: "The correct order of the four stages of culture shock (U-curve model) is:",
+                options: [
+                    "Crisis, Honeymoon, Adjustment, Mastery",
+                    "Honeymoon, Crisis, Adjustment, Mastery",
+                    "Adjustment, Crisis, Honeymoon, Mastery",
+                    "Honeymoon, Adjustment, Crisis, Mastery"
+                ],
+                answer: 1,
+                explanation: "Oberg's U-curve stages are Honeymoon (excitement), Crisis (frustration and anxiety), Adjustment (adapting and learning) and Mastery (integration and comfort)."
+            },
+            {
+                question: "Inpatriation refers to:",
+                options: [
+                    "Returning expatriates to their home country",
+                    "Transferring host country nationals to the headquarters to absorb corporate culture",
+                    "Hiring third country nationals",
+                    "Sending employees on short-term assignments"
+                ],
+                answer: 1,
+                explanation: "Inpatriation is the reverse of expatriation: HCNs are moved to the parent company headquarters to absorb the corporate culture."
+            },
+            {
+                question: "Which cross-cultural training method uses critical incidents from a specific country?",
+                options: [
+                    "Cultural assimilator",
+                    "Field experiences",
+                    "Sensitivity training",
+                    "Area studies"
+                ],
+                answer: 0,
+                explanation: "The cultural assimilator is a knowledge-based training method built on critical incidents from the target country; area studies provide country-specific factual information."
+            },
+            {
+                question: "The Balance Sheet approach to international compensation:",
+                options: [
+                    "Pays employees according to host country market rates",
+                    "Maintains the expatriate's home country standard of living",
+                    "Pays every expatriate the same salary worldwide",
+                    "Eliminates all allowances and premiums"
+                ],
+                answer: 1,
+                explanation: "The Balance Sheet approach maintains the expatriate's home country living standard, ensuring equity with home peers, but it is complex and expensive (used by Shell and BP)."
+            },
+            {
+                question: "Which of the following is a common challenge of repatriation?",
+                options: [
+                    "Reverse culture shock",
+                    "Higher salary expectations",
+                    "Language training failure",
+                    "Excess autonomy at headquarters"
+                ],
+                answer: 0,
+                explanation: "Repatriates often face reverse culture shock, job reintegration difficulties, loss of autonomy and status, and the 'out of sight, out of mind' problem."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm04', 'MMPM04', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

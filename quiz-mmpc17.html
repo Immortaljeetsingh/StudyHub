@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-17 Advanced Strategy - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-17 Advanced Strategy Quiz</h1>
+        <p>Test your knowledge of Advanced Strategy</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "The five paradigm shifts in the evolution of corporate management begin with:",
+                options: [
+                    "Corporate Planning, Corporate Management, Adhocism, Planned Policy, Environment-Strategy",
+                    "Adhocism, Planned Policy, Environment-Strategy Interface, Corporate Planning, Corporate Management",
+                    "Planned Policy, Adhocism, Corporate Management, Environment-Strategy, Corporate Planning",
+                    "Environment-Strategy, Adhocism, Corporate Planning, Corporate Management, Planned Policy"
+                ],
+                answer: 1,
+                explanation: "The A-P-E-C-C sequence runs Adhocism (till 1930), Planned Policy, Environment-Strategy Interface, Corporate Planning, and finally Corporate Management with implementation and control."
+            },
+            {
+                question: "Which corporate policy type involves downsizing or divesting operations to cut losses?",
+                options: [
+                    "Growth",
+                    "Stability",
+                    "Retrenchment",
+                    "Combination"
+                ],
+                answer: 2,
+                explanation: "Retrenchment cuts losses by downsizing or divesting, as when Tata Steel sold its UK operations. Growth expands, Stability maintains, and Combination mixes all three."
+            },
+            {
+                question: "In Ansoff's product-market expansion grid, which strategy carries the least risk?",
+                options: [
+                    "Diversification",
+                    "Market development",
+                    "Product development",
+                    "Market penetration"
+                ],
+                answer: 3,
+                explanation: "Market penetration (current products in current markets) is the least risky quadrant; diversification into new products and new markets is the most risky."
+            },
+            {
+                question: "Acquiring or merging with competitors at the same level of the value chain is called:",
+                options: [
+                    "Backward integration",
+                    "Forward integration",
+                    "Horizontal integration",
+                    "Unrelated diversification"
+                ],
+                answer: 2,
+                explanation: "Horizontal integration acquires competitors at the same value chain level, e.g., Facebook acquiring Instagram. Backward and forward integration move toward suppliers and customers."
+            },
+            {
+                question: "Which type of strategic alliance creates a new entity with shared ownership and risk?",
+                options: [
+                    "Non-equity alliance",
+                    "Consortium",
+                    "Licensing agreement",
+                    "Joint venture"
+                ],
+                answer: 3,
+                explanation: "A joint venture creates a new entity combining the parents' resources with shared ownership and risk, such as the Tata Starbucks 50:50 joint venture."
+            },
+            {
+                question: "The five stages of internationalization, in order, are:",
+                options: [
+                    "Domestic, Foreign, Joint Venture, Multinational, Transnational",
+                    "Foreign, Domestic, Multinational, Transnational, Joint Venture",
+                    "Domestic, Export, Franchise, Joint Venture, Subsidiary",
+                    "Joint Venture, Foreign, Domestic, Transnational, Multinational"
+                ],
+                answer: 0,
+                explanation: "The D-F-J-M-T sequence runs Domestic (ethnocentric), Foreign (export), Joint Venture (physical operations abroad), Multinational, and Transnational (global efficiency plus local responsiveness)."
+            },
+            {
+                question: "Which international market risk arises from exchange rate volatility affecting profits?",
+                options: [
+                    "Political risk",
+                    "Cultural risk",
+                    "Forex risk",
+                    "Legal risk"
+                ],
+                answer: 2,
+                explanation: "Forex or currency risk comes from exchange rate volatility affecting profitability; one of the five risks (Political, Economic, Cultural, Forex, Legal)."
+            },
+            {
+                question: "Which entry mode offers the highest risk and the highest control?",
+                options: [
+                    "Wholly owned subsidiary",
+                    "Exporting",
+                    "Franchising",
+                    "Joint venture"
+                ],
+                answer: 0,
+                explanation: "A wholly owned subsidiary (WOS) carries high risk, high control, and high investment, as in Tata's JLR acquisition. Exporting sits at the low end of the spectrum."
+            },
+            {
+                question: "In Nonaka's SECI model, converting tacit knowledge into explicit knowledge is called:",
+                options: [
+                    "Socialization",
+                    "Combination",
+                    "Internalization",
+                    "Externalization"
+                ],
+                answer: 3,
+                explanation: "Externalization converts tacit to explicit knowledge, e.g., documenting best practices and writing manuals. Socialization is tacit to tacit, Combination is explicit to explicit, Internalization is explicit to tacit."
+            },
+            {
+                question: "Innovation differs from invention because innovation adds:",
+                options: [
+                    "Technical feasibility",
+                    "Commercialization",
+                    "Patent protection",
+                    "Research funding"
+                ],
+                answer: 1,
+                explanation: "Innovation equals invention plus commercialization - an idea becomes an innovation only when it creates market value customers will pay for (e.g., Netflix vs Blockbuster)."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc17', 'MMPC17', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

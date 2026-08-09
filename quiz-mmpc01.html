@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,7 @@
             <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
                 <span class="icon">&#x2190;</span> Previous
             </button>
-            <div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
                 <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
                     <span class="icon">&#x1F500;</span> Randomize
                 </button>
@@ -196,7 +196,7 @@
             }
         ];
 
-        const quizEngine = new QuizEngine('mmpc-01', 'MMPC-01', questions);
+        const quizEngine = new QuizEngine('mmpc01', 'MMPC01', questions);
         quizEngine.init();
 
         // Keyboard shortcuts
@@ -220,7 +220,7 @@
                 case '2':
                 case '3':
                 case '4':
-                    if (quizEngine.currentState === 'in-progress') {
+                    if (quizEngine.state === 'in-progress') {
                         const num = parseInt(e.key);
                         if (num <= quizEngine.getCurrentQuestion().options.length) {
                             quizEngine.selectAnswer(num - 1);

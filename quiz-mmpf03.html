@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPF-03 Management Control Systems - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPF-03 Management Control Systems Quiz</h1>
+        <p>Test your knowledge of Management Control Systems</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "According to Anthony and Govindarajan, management control is the process by which managers:",
+                options: [
+                    "prepare financial statements for shareholders",
+                    "influence other members of the organization to implement strategies",
+                    "hire and train employees",
+                    "audit the work of subordinates"
+                ],
+                answer: 1,
+                explanation: "MCS is the process by which managers influence other members to implement the organization's strategies. The three levels of control are strategic planning, management control and operational control."
+            },
+            {
+                question: "Merchant's three types of controls are:",
+                options: [
+                    "Action, Results, Personnel",
+                    "Planning, Organizing, Controlling",
+                    "Cost, Revenue, Profit",
+                    "Standard, Measure, Correct"
+                ],
+                answer: 0,
+                explanation: "Action controls use rules and procedures (SOPs), results controls use KPIs and bonuses, and personnel/cultural controls rely on values and training. Remember ARP."
+            },
+            {
+                question: "The first step of the cybernetic control loop is to:",
+                options: [
+                    "Take corrective action",
+                    "Measure actual performance",
+                    "Set the standard",
+                    "Compare actual with standard"
+                ],
+                answer: 2,
+                explanation: "The cybernetic loop is SMAC: Set standard, Measure actual, Compare deviations, Corrective action. Example: set a target of 1000 units, measure actual 950, find a 5% unfavorable variance, then fix it."
+            },
+            {
+                question: "Which responsibility centre is evaluated on ROI, RI and EVA?",
+                options: [
+                    "Cost centre",
+                    "Revenue centre",
+                    "Profit centre",
+                    "Investment centre"
+                ],
+                answer: 3,
+                explanation: "Investment centres control costs, revenue and assets and are evaluated on ROI, RI or EVA, for example a subsidiary company. Scope increases from cost to revenue to profit to investment (CRPI)."
+            },
+            {
+                question: "Under Zero Base Budgeting (ZBB):",
+                options: [
+                    "the previous year's budget plus incremental changes is used",
+                    "every expense must be justified from zero each period",
+                    "the budget is based on one fixed activity level",
+                    "the budget is continuously updated by adding a new period"
+                ],
+                answer: 1,
+                explanation: "ZBB forces every expense to be justified from zero each period, which eliminates waste, unlike incremental budgeting which starts from last year's figures. Rolling budgets continuously add a new period."
+            },
+            {
+                question: "EVA = NOPAT - (WACC x Capital). A division with NOPAT = Rs 45 lakh, WACC = 10% and capital = Rs 200 lakh has an EVA of:",
+                options: [
+                    "Rs 25 lakh",
+                    "Rs 20 lakh",
+                    "Rs 30 lakh",
+                    "Rs 45 lakh"
+                ],
+                answer: 0,
+                explanation: "EVA = 45 - (200 x 10%) = 45 - 20 = Rs 25 lakh. EVA measures true economic profit and is more comprehensive than ROI, which may reject projects earning above the cost of capital."
+            },
+            {
+                question: "Which transfer pricing method is best when a competitive external market exists?",
+                options: [
+                    "Full cost method",
+                    "Variable cost method",
+                    "Cost-plus method",
+                    "Market price method"
+                ],
+                answer: 3,
+                explanation: "Market price is fair, objective and at arm's length when a competitive market exists. Cost-based methods are used when no market price is available, and negotiated pricing preserves divisional autonomy."
+            },
+            {
+                question: "A flexible budget differs from a fixed budget because it:",
+                options: [
+                    "adjusts with the actual activity level",
+                    "never changes once approved",
+                    "justifies expenses from zero",
+                    "is prepared for a longer period"
+                ],
+                answer: 0,
+                explanation: "A flexible budget adjusts with the actual activity level and suits variable production volumes, while a fixed budget is based on one level of activity for a stable environment."
+            },
+            {
+                question: "Which of the following is NOT one of the four Balanced Scorecard perspectives?",
+                options: [
+                    "Financial",
+                    "Customer",
+                    "Internal Process",
+                    "Marketing"
+                ],
+                answer: 3,
+                explanation: "Kaplan and Norton's BSC has four perspectives: Financial, Customer, Internal Process and Learning & Growth (FCIL). Learning and growth drives internal process, which drives customer outcomes, which drive financial results."
+            },
+            {
+                question: "PERT differs from CPM because PERT:",
+                options: [
+                    "uses a single deterministic time estimate",
+                    "is activity-oriented",
+                    "uses three probabilistic time estimates",
+                    "cannot identify a critical path"
+                ],
+                answer: 2,
+                explanation: "PERT uses three estimates (optimistic, most likely, pessimistic) with expected time = (O + 4M + P) / 6 and is event-oriented and probabilistic, best for uncertain projects like R&D. CPM uses a single estimate and is deterministic."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpf03', 'MMPF03', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

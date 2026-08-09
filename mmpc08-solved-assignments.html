@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPC-08 Information Systems Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPC-08 Information Systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPC-08 Information Systems syllabus covers 14 units: IT Fundamentals, Computer Hardware, Software Systems, Database Management, Networking, Internet & Web, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPC-08 Information Systems syllabus covers 15 units: Information Technology - An Overview, Computer Systems and Smart Devices, Computer Software, Networking Technology, MIS & Control Systems, Information Systems Economics and Security, TPS, DSS, and EIS, Integrated Applications, Building Information Systems, System Analysis and Design, Programming and Languages, Database Resource Management, Data Warehousing and Data Mining, AI in Decision Making, and Emerging Trends in IT. StudyHub covers all 15 units with solved assignment answers."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPC-08 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-08 Information Systems covering all 14 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-08 Information Systems covering all 15 units with diagrams, examples, and exam tips, along with solved assignment questions and model answers. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPC-08?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPC-08 Information Systems has 14 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPC-08 Information Systems has 15 units organized across multiple blocks, from Information Technology - An Overview to Emerging Trends in IT. StudyHub covers all 15 units with solved assignment answers."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -105,18 +106,74 @@
   .faq-item summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem}
   .faq-item summary:hover{color:var(--accent)}
   .faq-item p{padding:0 1.2rem 1rem;color:var(--text-secondary);font-size:0.9rem;line-height:1.6}
+  .qa-item{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;padding:1.2rem;margin-bottom:1.2rem}
+  .qa-item h3{font-size:0.98rem;color:var(--accent);margin-bottom:0.6rem}
+  .qa-item .qa-marks{font-size:0.75rem;color:var(--text-secondary);font-weight:600;margin-left:0.5rem}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin:0}
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpc08">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,10 +181,12 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPC-08 Information Systems - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPC-08 Information Systems solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 14 units of MMPC-08. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpc08.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPC-08 Information Systems solved assignments</strong>? StudyHub provides unit-wise solved assignment answers for all 15 units of MMPC-08, plus a Solved Assignment Questions &amp; Answers section below with four IGNOU-style questions and model answers. Our answers are written by MBA experts with Indian IT examples, all updated for the 2026 IGNOU session.</p>
+    <a href="mmpc08-question-paper.html" class="landing-cta btn-fx" role="button">Solved Question Paper</a>
+    <a href="quiz-mmpc08.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="study-mmpc08.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <section>
@@ -135,89 +194,132 @@
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPC-08 Information Systems. Click any unit to read the complete study notes.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: IT Fundamentals</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for IT Fundamentals in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Information Technology &mdash; An Overview</h3>
+        <p>Definition of IT, the five types of information systems (TPS, MIS, DSS, EIS, ERP), and e-commerce models with Indian examples.</p>
         <a href="study-mmpc08.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Computer Hardware</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Computer Hardware in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Computer Systems and Smart Devices</h3>
+        <p>Von Neumann architecture, CPU and memory hierarchy, computer generations, and smart devices with IoT.</p>
         <a href="study-mmpc08.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Software Systems</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Software Systems in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Computer Software</h3>
+        <p>System software, application software and firmware, operating system functions, and compiler vs interpreter.</p>
         <a href="study-mmpc08.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Database Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Database Management in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Networking Technology</h3>
+        <p>LAN, MAN, WAN and PAN, the OSI 7-layer model, TCP/IP, and common protocols such as HTTP, FTP and SMTP.</p>
         <a href="study-mmpc08.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Networking</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Networking in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: MIS &amp; Control Systems</h3>
+        <p>MIS as a man-machine system, Anthony's framework of management levels, and programmed vs non-programmed decisions.</p>
         <a href="study-mmpc08.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Internet & Web</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Internet & Web in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Information Systems Economics and Security</h3>
+        <p>The DIKW hierarchy, nine characteristics of information, IS success and failure factors, and the CIA security triad.</p>
         <a href="study-mmpc08.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: SDLC</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for SDLC in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: TPS, DSS, and EIS</h3>
+        <p>Transaction processing, decision support and executive information systems, and the Intelligence-Design-Choice-Implementation decision process.</p>
         <a href="study-mmpc08.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: System Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for System Analysis in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Integrated Applications</h3>
+        <p>ERP, CRM, SCM and BPR as integrated enterprise applications that connect business processes end to end.</p>
         <a href="study-mmpc08.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: System Design</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for System Design in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Building Information Systems</h3>
+        <p>Steps in building information systems, feasibility, implementation strategies, and managing IS projects.</p>
         <a href="study-mmpc08.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: ERP Systems</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for ERP Systems in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: System Analysis and Design</h3>
+        <p>SDLC phases, requirements gathering, data flow diagrams, and the tools of structured system analysis.</p>
         <a href="study-mmpc08.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Cloud Computing</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Cloud Computing in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Programming and Languages</h3>
+        <p>Programming concepts, generations of languages, and choosing the right language for business applications.</p>
         <a href="study-mmpc08.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Artificial Intelligence</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Artificial Intelligence in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Database Resource Management</h3>
+        <p>Database models, DBMS functions, relational databases, SQL, and data administration in organizations.</p>
         <a href="study-mmpc08.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Cyber Security</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Cyber Security in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Data Warehousing and Data Mining</h3>
+        <p>Data warehouse architecture, ETL, OLAP, and data mining techniques for business intelligence.</p>
         <a href="study-mmpc08.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 14: Emerging Technologies</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Emerging Technologies in the context of Information Systems.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: AI in Decision Making</h3>
+        <p>Artificial intelligence, expert systems, machine learning, and AI applications in managerial decisions.</p>
         <a href="study-mmpc08.html#u14" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+
+      <div class="unit-preview fx-card">
+        <h3>Unit 15: Emerging Trends in IT</h3>
+        <p>ICT convergence, 5G, IoT, blockchain, big data 6Vs, machine learning, and cloud computing models.</p>
+        <a href="study-mmpc08.html#u15" class="unit-link">Read Full Notes &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - MMPC-08</h2>
+    <p style="color:var(--text-secondary);text-align:center;margin-bottom:1.5rem">Four IGNOU-style assignment questions with model answers, prepared from the full MMPC-08 study notes. Each answer uses Indian IT examples for scoring marks.</p>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. What is Information Technology? Explain the major types of information systems used in business.(10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Information Technology is the collection, storage, processing, dissemination, and use of information. IT is not merely hardware and software; it also includes people, processes, and organizational goals, and it enables high-speed computation, fast communication, data storage, process automation, and big data analysis. The five major types of information systems serve different organizational levels. A Transaction Processing System (TPS) handles record keeping and routine reports for clerical staff at the operational level. A Management Information System (MIS) produces routine summaries for middle management at the tactical level. A Decision Support System (DSS) supports complex, semi-structured problem solving by managers. An Executive Information System (EIS) provides trend analysis and drill-down for senior executives, and an Enterprise Resource Planning (ERP) system integrates business processes across the entire organization. Indian examples illustrate the scale: SBI's Core Banking Solution processes over 80 million transactions a day, IRCTC's reservation system checks seat availability across thousands of stations, and TCS manages more than 600,000 employees across 50 countries using integrated systems. The mnemonic TMD-WE, TPS, MIS, DSS, Workflow, ERP, helps recall the types.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Information Technology is the collection, storage, processing, dissemination, and use of information.</li>        <li>Indian examples illustrate the scale: SBI's Core Banking Solution processes over 80 million transactions a day, IRCTC's reservation system checks seat availability across thousands of stations, and TCS manages more than 600,000 employees across 50 countries using integrated systems.</li>        <li>IT is not merely hardware and software; it also includes people, processes, and organizational goals, and it enables high-speed computation, fast communication, data storage, process automation, and big data analysis.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The mnemonic TMD-WE, TPS, MIS, DSS, Workflow, ERP, helps recall the types.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Explain the OSI reference model. How is it different from the TCP/IP model?(10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> The OSI reference model is a seven-layer theoretical framework that standardizes network communication. Each layer performs a distinct function: the Application layer (7) provides the user interface with protocols like HTTP, FTP, and SMTP; the Presentation layer (6) handles data formatting and encryption; the Session layer (5) manages sessions; the Transport layer (4) ensures end-to-end delivery using TCP or UDP; the Network layer (3) handles routing and addressing with IP; the Data Link layer (2) frames data using MAC addresses over Ethernet; and the Physical layer (1) transmits raw bits over cables or radio. The order can be recalled as "All People Seem To Need Data Processing." The TCP/IP model, by contrast, has four layers and is the practical implementation used on the Internet: Application (combining OSI layers 5-7), Transport, Internet, and Network Access (combining OSI layers 1-2). The key difference is that OSI is a theoretical reference while TCP/IP is an operational protocol stack. At the transport level, TCP provides reliable, ordered delivery with error checking, while UDP is faster but unreliable, which is why UDP suits streaming and gaming while TCP suits banking and file transfers.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The OSI reference model is a seven-layer theoretical framework that standardizes network communication.</li>        <li>Each layer performs a distinct function: the Application layer (7) provides the user interface with protocols like HTTP, FTP, and SMTP; the Presentation layer (6) handles data formatting and encryption; the Session layer (5) manages sessions; the Transport layer (4) ensures end-to-end delivery using TCP or UDP; the Network layer (3) handles routing and addressing with IP; the Data Link layer (2) frames data using MAC addresses over Ethernet; and the Physical layer (1) transmits raw bits over cables or radio.</li>        <li>At the transport level, TCP provides reliable, ordered delivery with error checking, while UDP is faster but unreliable, which is why UDP suits streaming and gaming while TCP suits banking and file transfers.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> At the transport level, TCP provides reliable, ordered delivery with error checking, while UDP is faster but unreliable, which is why UDP suits streaming and gaming while TCP suits banking and file transfers.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. What is the DIKW hierarchy? Explain the characteristics of good information.(10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> The DIKW hierarchy describes how raw facts are progressively transformed into decision-making capability. Data is raw facts, such as "24500". Information is processed data, "total withdrawals today: Rs 24,500". Knowledge is understanding patterns, "withdrawals spike on weekends". Wisdom is applying that understanding, "stock more cash on Fridays". A bank manager uses exactly this progression to decide daily cash requirements. Good information possesses nine characteristics, remembered by the mnemonic ACER-FRT-SA: Accurate (correct and error-free), Complete (all necessary details present), Economical (worth more than its cost), Reliable (consistent and dependable), Flexible (usable for multiple purposes), Relevant (pertinent to the decision), Timely (available when needed), Simple (easy to understand), and Accessible (available to authorized users). The related principle of GIGO, Garbage In, Garbage Out, warns that processing inaccurate input produces worthless output. Indian practice demonstrates these principles at scale: Tata's Rs 15,000 crore digital transformation and SBI YONO's ten million daily logins depend on information that is accurate, timely, and secure, while India's CERT-In handles over 1.5 million cyber incidents annually, underlining the need for the security dimension of information.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The DIKW hierarchy describes how raw facts are progressively transformed into decision-making capability.</li>        <li>Data is raw facts, such as "24500".</li>        <li>Information is processed data, "total withdrawals today: Rs 24,500".</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Good information possesses nine characteristics, remembered by the mnemonic ACER-FRT-SA: Accurate (correct and error-free), Complete (all necessary details present), Economical (worth more than its cost), Reliable (consistent and dependable), Flexible (usable for multiple purposes), Relevant (pertinent to the decision), Timely (available when needed), Simple (easy to understand), and Accessible (available to authorized users).</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. Write a note on the emerging trends in information technology with Indian examples.(10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> The major emerging trends in IT are 5G, the Internet of Things, blockchain, big data, machine learning, and cloud computing, all converging as voice, data, and video merge onto single high-speed IP networks. 5G offers high-speed, low-latency connectivity that powers IoT devices and autonomous vehicles. IoT connects smart devices, such as smart homes and wearables, that operate autonomously. Blockchain is a secure, decentralized distributed ledger used in cryptocurrency and supply chains. Big data is characterized by the six Vs: Volume, Velocity, Variety, Veracity, Value, and Variability. Machine learning comes in three types: supervised (learns from labeled data, as in spam detection), unsupervised (finds patterns in unlabeled data, as in customer segmentation), and reinforcement (learns from rewards and penalties, as in robotics). Cloud computing delivers IaaS, PaaS, and SaaS, like renting a house, a furnished apartment, or a hotel room respectively. India is at the forefront of these trends: UPI processes over ten billion transactions a month, Aadhaar provides identity verification to 1.3 billion people, Jio 5G covers 99% of India, and the Digital India stack of Aadhaar, UPI, DigiLocker, and CoWIN shows how emerging technologies transform governance at national scale.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The major emerging trends in IT are 5G, the Internet of Things, blockchain, big data, machine learning, and cloud computing, all converging as voice, data, and video merge onto single high-speed IP networks.</li>        <li>IoT connects smart devices, such as smart homes and wearables, that operate autonomously.</li>        <li>5G offers high-speed, low-latency connectivity that powers IoT devices and autonomous vehicles.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> India is at the forefront of these trends: UPI processes over ten billion transactions a month, Aadhaar provides identity verification to 1.3 billion people, Jio 5G covers 99% of India, and the Digital India stack of Aadhaar, UPI, DigiLocker, and CoWIN shows how emerging technologies transform governance at national scale.</p>
     </div>
   </section>
 
@@ -225,11 +327,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPC-08 Information Systems</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPC-08 Information Systems?</summary>
-      <p>The IGNOU MMPC-08 Information Systems syllabus covers 14 units: IT Fundamentals, Computer Hardware, Software Systems, Database Management, Networking, Internet & Web, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPC-08 Information Systems syllabus covers 15 units: Information Technology - An Overview, Computer Systems and Smart Devices, Computer Software, Networking Technology, MIS &amp; Control Systems, Information Systems Economics and Security, TPS, DSS, and EIS, Integrated Applications, Building Information Systems, System Analysis and Design, Programming and Languages, Database Resource Management, Data Warehousing and Data Mining, AI in Decision Making, and Emerging Trends in IT. StudyHub covers all 15 units with solved assignment answers.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPC-08 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-08 Information Systems covering all 14 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-08 Information Systems covering all 15 units with diagrams, examples, and exam tips, along with solved assignment questions and model answers. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPC-08 exam?</summary>
@@ -241,7 +343,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPC-08?</summary>
-      <p>IGNOU MMPC-08 Information Systems has 14 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPC-08 Information Systems has 15 units organized across multiple blocks, from Information Technology - An Overview to Emerging Trends in IT. StudyHub covers all 15 units comprehensively.</p>
     </details>
   </section>
 
@@ -251,11 +353,11 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -264,12 +366,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpc08.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpc08.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

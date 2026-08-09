@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-19 Total Quality Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-19 Total Quality Management Quiz</h1>
+        <p>Test your knowledge of Total Quality Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "According to Juran, quality is defined as:",
+                options: [
+                    "Conformance to requirements",
+                    "Predictable degree of uniformity",
+                    "Totality of features",
+                    "Fitness for use"
+                ],
+                answer: 3,
+                explanation: "Juran defined quality as 'fitness for use'. Deming emphasized predictable uniformity and dependability, Crosby defined quality as conformance to requirements, and Feigenbaum focused on total composite product characteristics."
+            },
+            {
+                question: "The PDCA cycle (Plan-Do-Check-Act) was popularized by:",
+                options: [
+                    "Juran",
+                    "Crosby",
+                    "Ishikawa",
+                    "Deming"
+                ],
+                answer: 3,
+                explanation: "Deming's contributions include the 14 Points, the PDCA cycle, and system thinking. In the cycle, Plan identifies the problem, Do implements on a small scale, Check evaluates results, and Act standardizes or revises."
+            },
+            {
+                question: "Crosby's philosophy of 'Zero Defects' means:",
+                options: [
+                    "Accept a small percentage of defects",
+                    "Do it right the first time",
+                    "Inspect defects at the end",
+                    "Reward workers for finding defects"
+                ],
+                answer: 1,
+                explanation: "Crosby's 4 Absolutes are: quality is conformance, prevention is better than inspection, the standard is zero defects, and the cost of quality is the measurement. His book 'Quality is Free' argued that every dollar of prevention saves 10 dollars in failure costs."
+            },
+            {
+                question: "Which quality cost category is the most expensive?",
+                options: [
+                    "Prevention",
+                    "Internal Failure",
+                    "External Failure",
+                    "Appraisal"
+                ],
+                answer: 2,
+                explanation: "The cost hierarchy is Prevention (lowest), Appraisal, Internal Failure, and External Failure (highest) - warranty claims, returns, and recalls after delivery are the most costly. Only 3-5% of the cost of poor quality is visible."
+            },
+            {
+                question: "A Pareto chart is used to:",
+                options: [
+                    "Prioritize problems using the 80/20 rule",
+                    "Monitor process stability over time",
+                    "Map process steps",
+                    "Test correlation between variables"
+                ],
+                answer: 0,
+                explanation: "The Pareto chart prioritizes problems so you know what to fix first. It is one of the 7 basic quality tools (CCCHPSF): Cause-effect, Check sheet, Control chart, Histogram, Pareto, Scatter, and Flowchart."
+            },
+            {
+                question: "A process with Cp = 1.33 is considered:",
+                options: [
+                    "Not capable",
+                    "Capable",
+                    "Barely capable",
+                    "Six Sigma capable"
+                ],
+                answer: 1,
+                explanation: "Cp >= 1.33 means the process is capable (4 sigma). Cp = 1.0 is barely capable, Cp >= 1.67 is highly capable, and Cp >= 2.0 is Six Sigma capable. Cp tells you if the process CAN meet specs; Cpk tells you if it IS meeting them."
+            },
+            {
+                question: "Six Sigma quality corresponds to how many defects per million opportunities (DPMO)?",
+                options: [
+                    "66,800",
+                    "3.4",
+                    "6,210",
+                    "230"
+                ],
+                answer: 1,
+                explanation: "Six Sigma means 3.4 defects per million opportunities with a yield of 99.9997%. Motorola invented Six Sigma in the 1980s, and GE saved $12 billion over 5 years using it."
+            },
+            {
+                question: "In the DMAIC methodology, the 'Analyze' phase focuses on:",
+                options: [
+                    "Collecting baseline data",
+                    "Sustaining results with control charts",
+                    "Identifying root causes",
+                    "Defining the problem statement"
+                ],
+                answer: 2,
+                explanation: "DMAIC phases: Define (problem statement), Measure (data collection), Analyze (root cause), Improve (solution), Control (sustain). Analysis uses tools like 5 Whys, fishbone, and regression."
+            },
+            {
+                question: "The four perspectives of the Balanced Scorecard are:",
+                options: [
+                    "Quality, Cost, Delivery, Safety",
+                    "Financial, Customer, Internal Processes, Learning and Growth",
+                    "Plan, Do, Check, Act",
+                    "People, Planet, Profit, Product"
+                ],
+                answer: 1,
+                explanation: "The Balanced Scorecard measures Financial (ROI, revenue), Customer (satisfaction, retention), Internal Processes (efficiency, quality), and Learning and Growth (training, innovation). It is part of organizing for quality."
+            },
+            {
+                question: "Which standard in the ISO 9000 family is certifiable?",
+                options: [
+                    "ISO 9000",
+                    "ISO 19011",
+                    "ISO 9001",
+                    "ISO 9004"
+                ],
+                answer: 2,
+                explanation: "ISO 9001 (QMS requirements) is the only certifiable standard in the family. ISO 9000 covers fundamentals and vocabulary, ISO 9004 gives improvement guidelines, and ISO 19011 provides auditing guidelines. ISO 9001:2015 introduced risk-based thinking."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc19', 'MMPC19', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

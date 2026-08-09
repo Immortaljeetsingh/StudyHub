@@ -19,6 +19,7 @@ class QuizEngine {
         this.renderCurrent();
         this.updateProgress();
         this.updateTimerDisplay();
+        document.getElementById('scoreVal').textContent = this.score;
         this.startTimer();
     }
 
@@ -31,6 +32,7 @@ class QuizEngine {
             this.userAnswers = state.userAnswers || {};
             this.reviewedQuestions = new Set(state.reviewedQuestions || []);
             this.timeLeft = state.timeLeft !== undefined ? state.timeLeft : 20 * 60;
+            this.state = state.state || 'in-progress';
         }
     }
 
@@ -42,6 +44,7 @@ class QuizEngine {
             reviewedQuestions: Array.from(this.reviewedQuestions),
             timeLeft: this.timeLeft,
             courseId: this.courseId,
+            state: this.state,
             timestamp: Date.now()
         };
         localStorage.setItem(`quiz-state-${this.courseId}`, JSON.stringify(state));
@@ -144,12 +147,12 @@ class QuizEngine {
     selectAnswer(idx) {
         const q = this.getCurrentQuestion();
         if (!q) return;
+        if (this.userAnswers[this.currentQ] !== undefined) return;
 
         this.userAnswers[this.currentQ] = idx;
         this.renderCurrent();
         this.renderNav();
         this.updateProgress();
-        this.saveState();
 
         if (idx === q.answer) {
             this.score += 10;
@@ -157,31 +160,39 @@ class QuizEngine {
             this.showToast('Correct! +10 points');
         }
 
+        this.saveState();
         this.saveQuizResult();
     }
 
     saveQuizResult() {
+        if (this.resultPrompted) return;
         const total = this.questions.length * 10;
         const pct = Math.round((this.score / total) * 100);
         const allAnswered = Object.keys(this.userAnswers).length === this.questions.length;
 
         if (allAnswered) {
+            this.resultPrompted = true;
+            this.state = 'finished';
+            this.stopTimer();
+            this.saveState();
             localStorage.setItem(`studyhub-quiz-${this.courseId}`, pct.toString());
             localStorage.setItem(`studyhub-quiz-${this.courseId}-details`, JSON.stringify({
                 score: this.score,
                 total: total,
                 percentage: pct,
+                courseId: this.courseId,
+                questions: this.questions,
                 timestamp: Date.now()
             }));
 
-            if (pct >= 80) {
+            if (this.questions.length >= 5 && pct >= 80) {
                 localStorage.setItem(`studyhub-progress-${this.courseId}`, '100');
                 this.showToast('Quiz complete! 100% progress unlocked.');
             }
 
             setTimeout(() => {
                 if (confirm(`Quiz complete! Score: ${pct}%. View detailed results page?`)) {
-                    window.location.href = 'quiz-results.html';
+                    window.location.href = `quiz-results.html?course=${this.courseId}`;
                 }
             }, 500);
         }
@@ -232,24 +243,31 @@ class QuizEngine {
     }
 
     toggleTimer(forceState) {
-        if (forceState !== undefined) {
-            this.timerEnabled = forceState;
-        } else {
-            this.timerEnabled = !this.timerEnabled;
-        }
-
-        if (this.timerEnabled) {
+        if (forceState === true) {
+            this.timerEnabled = true;
             this.startTimer();
             document.getElementById('quizTimer').classList.add('active');
             this.showToast('Timer enabled');
-        } else {
+        } else if (forceState === false) {
+            // pause-only path (visibilitychange): keep timerEnabled so the timer can resume
             this.stopTimer();
             document.getElementById('quizTimer').classList.remove('active');
-            this.showToast('Timer paused');
+        } else {
+            this.timerEnabled = !this.timerEnabled;
+            if (this.timerEnabled) {
+                this.startTimer();
+                document.getElementById('quizTimer').classList.add('active');
+                this.showToast('Timer enabled');
+            } else {
+                this.stopTimer();
+                document.getElementById('quizTimer').classList.remove('active');
+                this.showToast('Timer paused');
+            }
         }
     }
 
     startTimer() {
+        if (this.state === 'finished') return;
         this.stopTimer();
         this.timerInterval = setInterval(() => {
             this.timeLeft--;
@@ -320,6 +338,7 @@ class QuizEngine {
 
     finish() {
         this.stopTimer();
+        this.state = 'finished';
         const total = this.questions.length * 10;
         const pct = Math.round((this.score / total) * 100);
         const grade = this.getGrade(pct);
@@ -330,14 +349,16 @@ class QuizEngine {
             total: total,
             percentage: pct,
             grade: grade,
+            courseId: this.courseId,
+            questions: this.questions,
             timestamp: Date.now()
         }));
 
-        if (pct >= 80) {
+        if (this.questions.length >= 5 && pct >= 80) {
             localStorage.setItem(`studyhub-progress-${this.courseId}`, '100');
         }
 
-        window.location.href = 'quiz-results.html';
+        window.location.href = `quiz-results.html?course=${this.courseId}`;
     }
 
     getGrade(pct) {

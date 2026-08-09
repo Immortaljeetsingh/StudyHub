@@ -3,7 +3,7 @@
 (function () {
   // Register Service Worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(err => {
+    navigator.serviceWorker.register('./sw.js').catch(err => {
       console.warn('[PWA] Service worker registration failed:', err);
     });
   }

@@ -2,6 +2,11 @@
  * StudyHub SEO Generator
  * Generates: robots.txt, sitemap.xml, meta tags for 43 subjects, 129 landing pages
  * Run: node seo/generate.js
+ *
+ * WARNING: STEP 4 overwrites the 129 existing landing pages in the project
+ * root (one per subject x solved-assignments/guess-paper/study-material) and
+ * STEP 7 writes seo/courses.json. Run with a clean git tree so changes are
+ * reviewable, and only if landing-page regeneration is actually intended.
  */
 
 const fs = require('fs');
@@ -138,7 +143,6 @@ function getSubjectCode(id) {
 function generateRobots() {
   const content = `User-agent: *
 Allow: /
-Disallow: /_cleanup/
 Disallow: /scripts/
 Disallow: /*.bak$
 
@@ -171,10 +175,9 @@ function generateSitemap() {
     urls.push({ loc: `${BASE_URL}/${c.id}-study-material.html`, priority: '0.7', changefreq: 'monthly', lastmod: today });
   }
 
-  // Quiz pages
-  for (let i = 1; i <= 7; i++) {
-    const id = `mmpc${String(i).padStart(2, '0')}`;
-    urls.push({ loc: `${BASE_URL}/quiz-${id}.html`, priority: '0.6', changefreq: 'monthly', lastmod: today });
+  // Quiz pages (one per course, same list as study pages)
+  for (const c of courses) {
+    urls.push({ loc: `${BASE_URL}/quiz-${c.id}.html`, priority: '0.6', changefreq: 'monthly', lastmod: today });
   }
 
   // Other pages

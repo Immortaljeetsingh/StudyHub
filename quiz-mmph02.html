@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPH-02 Human Resource Development - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPH-02 Human Resource Development Quiz</h1>
+        <p>Test your knowledge of Human Resource Development</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Who is known as the 'Father of HRD in India'?",
+                options: [
+                    "T.V. Rao",
+                    "Udai Pareek",
+                    "Elton Mayo",
+                    "Douglas McGregor"
+                ],
+                answer: 0,
+                explanation: "Prof. T.V. Rao is called the Father of HRD in India. His definition describes HRD as a set of systematic and planned activities that provide learning opportunities to improve performance and enable the organisation to achieve its goals."
+            },
+            {
+                question: "In Kirkpatrick's evaluation model, the level measured immediately after training using feedback forms is:",
+                options: [
+                    "Learning",
+                    "Reaction",
+                    "Behaviour",
+                    "Results"
+                ],
+                answer: 1,
+                explanation: "Level 1, Reaction, is measured right after training with feedback forms or 'happy sheets'. Learning is tested at the end of training, Behaviour is observed 3-6 months later, and Results are checked after 6-12 months."
+            },
+            {
+                question: "Which of the following is one of the nine HRD mechanisms?",
+                options: [
+                    "Product costing",
+                    "Stock auditing",
+                    "Market research",
+                    "Potential appraisal"
+                ],
+                answer: 3,
+                explanation: "The nine HRD mechanisms are performance appraisal, potential appraisal, training, management development, organisation development, feedback, counselling, rewards and employee welfare (mnemonic PPTM-OD-FCRW)."
+            },
+            {
+                question: "The 'E' in the ADDIE training design model stands for:",
+                options: [
+                    "Evaluate",
+                    "Execute",
+                    "Explain",
+                    "Educate"
+                ],
+                answer: 0,
+                explanation: "ADDIE stands for Analyse, Design, Develop, Implement and Evaluate - the five steps of systematic training design. The Tata group even adds a fifth evaluation level, ROI."
+            },
+            {
+                question: "In Dave Ulrich's model, the HR role focused on managing change and transformation is the:",
+                options: [
+                    "Administrative Expert",
+                    "Employee Champion",
+                    "Change Agent",
+                    "Strategic Partner"
+                ],
+                answer: 2,
+                explanation: "Ulrich's 2x2 matrix gives four roles: Strategic Partner, Change Agent, Administrative Expert and Employee Champion (mnemonic SCAE). The Change Agent manages change and transformation."
+            },
+            {
+                question: "According to Boyatzis, a competency is:",
+                options: [
+                    "A task that must be completed daily",
+                    "An underlying characteristic resulting in effective or superior performance",
+                    "The salary grade of a job",
+                    "A document listing job duties"
+                ],
+                answer: 1,
+                explanation: "Boyatzis (1982) defined competency as 'an underlying characteristic of a person which results in effective and/or superior performance in a job'. Competencies are of two types: threshold and differentiating."
+            },
+            {
+                question: "Which of the following is a standard source of 360-degree feedback?",
+                options: [
+                    "Supplier",
+                    "Customer",
+                    "Competitor",
+                    "Regulator"
+                ],
+                answer: 1,
+                explanation: "360-degree feedback gathers ratings from the supervisor, peers, subordinates, self and customers. Wipro found that self-ratings are almost always higher than ratings given by others."
+            },
+            {
+                question: "According to Super's career stages, the stage that follows Maintenance (45-64 years) is:",
+                options: [
+                    "Exploration",
+                    "Establishment",
+                    "Decline",
+                    "Growth"
+                ],
+                answer: 2,
+                explanation: "Super's career stages are Exploration (15-24), Establishment (25-44), Maintenance (45-64) and Decline (65+), remembered by the mnemonic EEMD."
+            },
+            {
+                question: "The first step of the GROW coaching model is:",
+                options: [
+                    "Reality",
+                    "Options",
+                    "Will",
+                    "Goal"
+                ],
+                answer: 3,
+                explanation: "GROW stands for Goal, Reality, Options and Will - starting with 'What do you want to achieve?' and ending with 'What will you do?'"
+            },
+            {
+                question: "In the VUCA framework, 'V' stands for:",
+                options: [
+                    "Volatile",
+                    "Variable",
+                    "Vague",
+                    "Virtual"
+                ],
+                answer: 0,
+                explanation: "VUCA stands for Volatile, Unprecedented, Complex and Ambiguous - the uncertain conditions that HRD must operate within."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmph02', 'MMPH02', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPF-02 Capital Investment - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPF-02 Capital Investment Quiz</h1>
+        <p>Test your knowledge of Capital Investment</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which of the three financial decisions is considered the MOST important?",
+                options: [
+                    "Investment Decision",
+                    "Financing Decision",
+                    "Dividend Decision",
+                    "Working Capital Decision"
+                ],
+                answer: 0,
+                explanation: "The investment decision decides the total amount of assets, their composition, and the business risk of the firm, so it is the most important. The three financial decisions are Investment, Financing and Dividend (IFD)."
+            },
+            {
+                question: "A company has equity of Rs 60 lakh at Ke = 15% and debt of Rs 40 lakh at Kd = 10%, with a tax rate of 30%. Its WACC is:",
+                options: [
+                    "12.5%",
+                    "11.8%",
+                    "13.0%",
+                    "10.5%"
+                ],
+                answer: 1,
+                explanation: "WACC = (60/100 x 15%) + (40/100 x 10% x (1 - 0.30)) = 9% + 2.8% = 11.8%. Debt is cheaper than equity because interest payments give a tax shield."
+            },
+            {
+                question: "DFL = EBIT / (EBIT - Interest). For a firm with EBIT = Rs 2 lakh and Interest = Rs 1 lakh, the degree of financial leverage is:",
+                options: [
+                    "1.0",
+                    "0.5",
+                    "2.0",
+                    "3.0"
+                ],
+                answer: 2,
+                explanation: "DFL = 2 / (2 - 1) = 2.0. Financial leverage uses fixed interest costs to magnify EPS changes. Combined leverage DTL = DOL x DFL, so a 10% sales rise gives a 40% EPS rise when DTL = 4."
+            },
+            {
+                question: "The correct sequence of the project life cycle is:",
+                options: [
+                    "Planning, Conception, Execution, Termination",
+                    "Execution, Planning, Conception, Termination",
+                    "Conception, Execution, Planning, Termination",
+                    "Conception, Planning, Execution, Termination"
+                ],
+                answer: 3,
+                explanation: "CPET = Conception, Planning, Execution, Termination. A project moves from the feasibility study through design and budgeting to construction and finally commissioning."
+            },
+            {
+                question: "According to the NPV rule, a project should be accepted when:",
+                options: [
+                    "NPV > 0",
+                    "NPV < 0",
+                    "NPV = 0",
+                    "IRR < cost of capital"
+                ],
+                answer: 0,
+                explanation: "Accept a project when NPV > 0 because it adds value to the firm. NPV is the difference between the present value of inflows and outflows and is considered the best appraisal method."
+            },
+            {
+                question: "In PERT, an activity with Optimistic time = 4 days, Most Likely = 7 days and Pessimistic = 16 days has an expected time of:",
+                options: [
+                    "9 days",
+                    "8 days",
+                    "7 days",
+                    "10 days"
+                ],
+                answer: 1,
+                explanation: "Expected time = (O + 4M + P) / 6 = (4 + 28 + 16) / 6 = 48 / 6 = 8 days. Variance = ((P - O) / 6)^2 = 4 days squared, giving a standard deviation of 2 days."
+            },
+            {
+                question: "In Social Cost Benefit Analysis, shadow prices are:",
+                options: [
+                    "prices that reflect the true social value of resources",
+                    "prices fixed by government regulation",
+                    "market prices quoted on the stock exchange",
+                    "prices set by the World Bank"
+                ],
+                answer: 0,
+                explanation: "Shadow prices reflect the true economic value of resources, accounting for externalities and market distortions, so they may differ from market prices. SCBA evaluates social costs and benefits beyond financial returns."
+            },
+            {
+                question: "In CAPM, a stock with Beta > 1 is described as:",
+                options: [
+                    "Defensive",
+                    "Risk-free",
+                    "Aggressive",
+                    "Neutral"
+                ],
+                answer: 2,
+                explanation: "Beta = 1 moves with the market, Beta > 1 is aggressive (more volatile) and Beta < 1 is defensive. CAPM: E(R) = Rf + Beta x (Rm - Rf), where (Rm - Rf) is the market risk premium."
+            },
+            {
+                question: "Which risk analysis technique tests how NPV changes when a single input variable is varied while other variables are held constant?",
+                options: [
+                    "Monte Carlo simulation",
+                    "Sensitivity analysis",
+                    "Decision tree",
+                    "Scenario analysis"
+                ],
+                answer: 1,
+                explanation: "Sensitivity analysis is the 'what if' technique that changes one variable at a time to identify the most sensitive variables. Monte Carlo randomly samples all variables together, while scenario analysis uses best/worst/most likely cases."
+            },
+            {
+                question: "New securities issued for the first time (IPO, FPO, Rights Issue) are sold in the:",
+                options: [
+                    "Secondary market",
+                    "Money market",
+                    "Derivatives market",
+                    "Primary market"
+                ],
+                answer: 3,
+                explanation: "The primary market is where companies raise capital directly through new issues like IPO and FPO. Existing securities trade among investors on the secondary market (BSE, NSE)."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpf02', 'MMPF02', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -49,6 +49,13 @@ _cleanup/
 run.bat
 start-server.bat
 
+# Secrets & source materials
+indexnow-key.txt
+assignments/
+MBAFM-Question-Papers/
+font_test.pdf
+page0.ppm
+
 # Build scripts & backups
 *.bak
 __pycache__/
@@ -59,3 +66,4 @@ final_expand*.py
 gen_mmpm09.py
 upgrade_mmpf*.py
 study-mmph04-expanded.html
+studyhub-react/

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-15 Research Methodology - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-15 Research Methodology Quiz</h1>
+        <p>Test your knowledge of Research Methodology</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Research Methodology refers to:",
+                options: [
+                    "The specific tools for data collection and analysis",
+                    "The systematic approach to conducting research (the how)",
+                    "Collecting primary data only",
+                    "Writing the final research report"
+                ],
+                answer: 1,
+                explanation: "Research Methodology is the systematic approach/philosophy of conducting research (the 'how'), while Research Methods are the specific techniques and tools for data collection and analysis."
+            },
+            {
+                question: "The correct sequence of the 7-step research process is:",
+                options: [
+                    "Literature Review, Define Problem, Hypothesis, Design, Data, Analysis, Report",
+                    "Define Problem, Literature Review, Hypothesis, Research Design, Data, Analysis, Report",
+                    "Define Problem, Hypothesis, Literature Review, Design, Analysis, Data, Report",
+                    "Hypothesis, Design, Literature Review, Data, Analysis, Report, Define Problem"
+                ],
+                answer: 1,
+                explanation: "The 7 steps are: Define Problem, Literature Review, Develop Working Hypothesis, Prepare Research Design, Collect Data, Analyze Data, Prepare Report (mnemonic: D-L-H-R-D-A-R)."
+            },
+            {
+                question: "Compared to a field experiment, a lab experiment typically has:",
+                options: [
+                    "Higher internal validity but lower external validity",
+                    "Lower internal validity but higher external validity",
+                    "Both internal and external validity high",
+                    "No control over variables"
+                ],
+                answer: 0,
+                explanation: "Lab experiments have HIGH internal validity (controlled environment) but LOWER external validity (artificial setting). Field experiments have lower internal validity but higher external validity (realistic)."
+            },
+            {
+                question: "Which data collection method has the HIGHEST flexibility and HIGHEST cost?",
+                options: [
+                    "Mailed questionnaire",
+                    "Telephone interview",
+                    "Personal interview",
+                    "Observation"
+                ],
+                answer: 2,
+                explanation: "Personal interviews have the highest flexibility, highest cost, and highest response rate. Mailed questionnaires have the lowest response rate; telephone interviews are the fastest."
+            },
+            {
+                question: "Which measurement scale has a true zero point and permits ALL statistical operations?",
+                options: [
+                    "Nominal",
+                    "Ordinal",
+                    "Interval",
+                    "Ratio"
+                ],
+                answer: 3,
+                explanation: "N-O-I-R scales: Nominal (categories), Ordinal (rank), Interval (equal intervals, no true zero - e.g., temperature), Ratio (true zero - e.g., income, weight) which allows all statistics."
+            },
+            {
+                question: "In questionnaire design, sensitive questions (income, personal details) should be placed:",
+                options: [
+                    "At the very beginning of the questionnaire",
+                    "In the middle, mixed with core questions",
+                    "Near the end, after core questions",
+                    "Randomly throughout the questionnaire"
+                ],
+                answer: 2,
+                explanation: "Question sequence: opening easy non-threatening questions, then substantive core questions, then sensitive questions, and demographics last, so respondents are not put off early."
+            },
+            {
+                question: "Stratified sampling is most appropriate when:",
+                options: [
+                    "The population is heterogeneous with identifiable subgroups",
+                    "The population is small and homogeneous",
+                    "The population is hidden and hard to reach",
+                    "A list of every unit is unavailable"
+                ],
+                answer: 0,
+                explanation: "Stratified sampling divides the population into strata and takes random samples from each, ensuring representation of subgroups in a heterogeneous population. Cluster suits geographically spread, snowball suits hidden populations."
+            },
+            {
+                question: "The correct order of the 5 data processing steps is:",
+                options: [
+                    "Coding, Editing, Tabulation, Classification, Presentation",
+                    "Editing, Coding, Classification, Tabulation, Presentation",
+                    "Classification, Editing, Coding, Presentation, Tabulation",
+                    "Editing, Tabulation, Coding, Classification, Presentation"
+                ],
+                answer: 1,
+                explanation: "Data processing follows: Editing (check errors), Coding (assign codes), Classification (group data), Tabulation (arrange in tables), Presentation (visual display) - mnemonic E-C-C-T-P."
+            },
+            {
+                question: "The Chi-square test is most appropriate when the data is:",
+                options: [
+                    "Interval data with normal distribution",
+                    "Ordinal data from 2 related samples",
+                    "Categorical (nominal) data",
+                    "Large continuous ratio samples"
+                ],
+                answer: 2,
+                explanation: "Chi-square is a nonparametric test for categorical data, used for goodness of fit and tests of independence: Chi-square = Sum of (O - E)^2 / E with df = (rows - 1) x (columns - 1)."
+            },
+            {
+                question: "Which of the following is NOT a type of research misconduct?",
+                options: [
+                    "Fabrication of data",
+                    "Falsification of results",
+                    "Plagiarism of others' work",
+                    "Obtaining informed consent"
+                ],
+                answer: 3,
+                explanation: "The three misconduct types are Fabrication (making up data), Falsification (manipulating materials/processes), and Plagiarism (using others' work without attribution). Informed consent is an ethical requirement, not misconduct."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc15', 'MMPC15', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

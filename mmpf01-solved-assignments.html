@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPF-01 Working Capital Management Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPF-01 Working Capital Management?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPF-01 Working Capital Management syllabus covers 15 units: Working Capital Overview, WC Concepts, Operating Cycle, Cash Management, Receivables Management, Inventory Management, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPF-01 Working Capital Management syllabus covers 15 units across 4 blocks, from Introduction to Working Capital and the Working Capital Cycle and Operating Cycle, through Management of Receivables, Cash, Marketable Securities and Inventory, Theories and Approaches to WC, Payables Management, Bank Finance for Working Capital and Other Sources of Short-Term Finance, to Working Capital in SMEs, Large Companies, MNCs and Management in Practice. StudyHub covers all units with detailed notes."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPF-01?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPF-01 Working Capital Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPF-01 Working Capital Management has 15 units organized across 4 blocks. StudyHub covers all units comprehensively."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +109,57 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-section{margin:2.5rem 0}
+  .qa-section h2{font-size:1.4rem;color:var(--text-primary);margin-bottom:0.5rem;text-align:center}
+  .qa-section>p{font-size:0.9rem;color:var(--text-secondary);text-align:center;margin-bottom:1.5rem}
+  .qa-item{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;padding:1.2rem;margin-bottom:1.2rem}
+  .qa-item h3{font-size:0.95rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.5}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin:0}
+  .qa-item p.qa-answer{color:var(--text-primary)}
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpf01">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,106 +167,144 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPF-01 Working Capital Management - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPF-01 Working Capital Management solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 15 units of MMPF-01. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpf01.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPF-01 Working Capital Management solved assignments</strong>? StudyHub provides fully solved, IGNOU-style assignment questions with model answers for all 15 units of MMPF-01. Our answers are written by MBA experts, updated for the 2026 IGNOU session, and grounded in the unit-wise study notes. Each answer follows the mark-wise structure examiners look for &mdash; key concepts, formulas, Indian examples and mnemonics &mdash; to help you score maximum marks.</p>
+    <a href="quiz-mmpf01.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="mmpf01-question-paper.html" class="landing-cta btn-fx">Solved Question Paper &rarr;</a>
+    <a href="study-mmpf01.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <section>
     <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Solved Assignments for MMPF-01</h2>
-    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPF-01 Working Capital Management. Click any unit to read the complete study notes.</p>
+    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse all 15 units of IGNOU MMPF-01 Working Capital Management. Click any unit to open the complete study notes, or scroll down for the solved assignment questions with model answers.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Working Capital Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Working Capital Overview in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Introduction to Working Capital</h3>
+        <p>Gross vs net working capital, permanent vs temporary WC, operating cycle (CIRO) and the importance of WC.</p>
         <a href="study-mmpf01.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: WC Concepts</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for WC Concepts in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Working Capital Cycle and Operating Cycle</h3>
+        <p>Operating cycle flow, cash conversion cycle (CCC = Inv. Days + Rec. Days - Pay. Days) and the negative CCC model.</p>
         <a href="study-mmpf01.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Operating Cycle</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Operating Cycle in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Determinants of Working Capital</h3>
+        <p>Internal and external determinants (NPC GOI), and WC estimation methods: percentage of sales, operating cycle, balance sheet.</p>
         <a href="study-mmpf01.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Cash Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Cash Management in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Management of Receivables</h3>
+        <p>Credit policy components, 5 C's of credit, aging schedule, collection escalation and factoring.</p>
         <a href="study-mmpf01.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Receivables Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Receivables Management in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Management of Cash</h3>
+        <p>Three motives for holding cash (TPS), cash budgeting, and the Baumol and Miller-Orr models.</p>
         <a href="study-mmpf01.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Inventory Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Inventory Management in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Management of Marketable Securities</h3>
+        <p>Instrument types (T-bills, CP, CDs, money market funds), SLY selection criteria and the Baumol model.</p>
         <a href="study-mmpf01.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Payables Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Payables Management in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Management of Inventory</h3>
+        <p>Inventory costs, EOQ = sqrt(2DS/H), ABC/VED/FSN analysis and safety stock calculation.</p>
         <a href="study-mmpf01.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Working Capital Financing</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Working Capital Financing in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Theories and Approaches to WC</h3>
+        <p>Matching, Conservative and Aggressive approaches (MCA); Walker's approach and the risk-return trade-off.</p>
         <a href="study-mmpf01.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Cash Credit</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Cash Credit in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Payables Management</h3>
+        <p>Trade credit as spontaneous finance, cost of trade credit (2/10 net 30 = 37.24%) and stretching payables.</p>
         <a href="study-mmpf01.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: MPBF</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for MPBF in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Bank Finance for Working Capital</h3>
+        <p>Cash credit, overdraft, term loans, packing credit and bill discounting (COTPB); Tandon Committee 40% norm.</p>
         <a href="study-mmpf01.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Trade Credit</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Trade Credit in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Other Sources of Short-Term Finance</h3>
+        <p>Commercial paper, inter-corporate deposits, public deposits, factoring (CIPF) and securitization.</p>
         <a href="study-mmpf01.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: Short-term Finance</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Short-term Finance in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Working Capital in SMEs</h3>
+        <p>MSMED Act 2006 classification, SME WC challenges, and support via MUDRA, CGTMSE and TReDS.</p>
         <a href="study-mmpf01.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Bank Finance</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Bank Finance in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Working Capital in Large Companies</h3>
+        <p>Capital market access, professional treasury, COVID-19 impact and supply chain finance strategies.</p>
         <a href="study-mmpf01.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 14: WC in India</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for WC in India in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: Working Capital in MNCs</h3>
+        <p>Currency and political risk, transfer pricing, multilateral netting and leading-lagging techniques.</p>
         <a href="study-mmpf01.html#u14" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 15: WC Policies</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for WC Policies in the context of Working Capital Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 15: Working Capital Management in Practice</h3>
+        <p>WC efficiency metrics (WC turnover, days WC, CCC), industry patterns and digital transformation.</p>
         <a href="study-mmpf01.html#u15" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+    </div>
+  </section>
+
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - MMPF-01</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Distinguish between gross working capital and net working capital. Explain permanent and temporary working capital with examples. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Gross Working Capital is the total investment in current assets - cash, inventory, receivables and marketable securities. It is an asset-side concept used in the modern corporate finance perspective and indicates the total funds tied up in short-term operations. Net Working Capital is the excess of current assets over current liabilities: NWC = Current Assets - Current Liabilities. It is an accounting-based liquidity measure: positive NWC means the firm can meet its short-term obligations and provides a cushion to creditors. For example, a firm with ₹50 lakh current assets and ₹30 lakh current liabilities has gross working capital of ₹50 lakh but net working capital of only ₹20 lakh. Working capital is also divided by behaviour into permanent and temporary components. Permanent working capital is the minimum level of current assets needed to run the business throughout the year regardless of fluctuations - for example, a garment manufacturer must always hold raw material stock. Temporary working capital is the additional requirement during seasonal or peak periods, such as the festival-season surge in demand for Amul's dairy products. This distinction drives the financing decision: permanent WC should be financed from long-term sources, while temporary WC can be met with short-term borrowing such as cash credit or overdraft.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Gross Working Capital is the total investment in current assets - cash, inventory, receivables and marketable securities.</li>        <li>For example, a firm with ₹50 lakh current assets and ₹30 lakh current liabilities has gross working capital of ₹50 lakh but net working capital of only ₹20 lakh.</li>        <li>It is an asset-side concept used in the modern corporate finance perspective and indicates the total funds tied up in short-term operations.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> This distinction drives the financing decision: permanent WC should be financed from long-term sources, while temporary WC can be met with short-term borrowing such as cash credit or overdraft.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Define the cash conversion cycle. Explain its components and the ways in which a firm can shorten it. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> The Cash Conversion Cycle (CCC) is the net time period during which a firm's cash remains tied up in operating activities, from payment for raw materials to collection from customers. The operating cycle runs Cash - Raw Materials - Work-in-Progress - Finished Goods - Receivables - Cash and equals Inventory Period plus Receivables Period. The CCC adjusts for supplier credit: CCC = Inventory Days + Receivable Days - Payable Days, where inventory days = 365/Inventory Turnover, receivable days = 365/Receivables Turnover and payable days = 365/Payables Turnover. A shorter cycle means faster cash recovery and a lower working capital requirement; a longer cycle locks up funds. A firm can shorten its CCC by adopting just-in-time inventory and faster production, accelerating collections through digital payments such as UPI, tightening credit terms, offering discounts for early payment and negotiating longer supplier payment terms. Amazon India collects instantly from customers through digital payments but pays suppliers in 60-90 days, creating a negative CCC - effectively using supplier money to fund operations; Flipkart, Zomato and Swiggy follow similar models. Reliance Industries reduced its CCC from 45 days to 30 days through JIT retail inventory, digital collections and negotiated 60-90 day payables, saving thousands of crores annually. Industry benchmarks vary: FMCG 20-30 days, manufacturing 40-60 days, infrastructure 90-120 days.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The Cash Conversion Cycle (CCC) is the net time period during which a firm's cash remains tied up in operating activities, from payment for raw materials to collection from customers.</li>        <li>A firm can shorten its CCC by adopting just-in-time inventory and faster production, accelerating collections through digital payments such as UPI, tightening credit terms, offering discounts for early payment and negotiating longer supplier payment terms.</li>        <li>The operating cycle runs Cash - Raw Materials - Work-in-Progress - Finished Goods - Receivables - Cash and equals Inventory Period plus Receivables Period.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Industry benchmarks vary: FMCG 20-30 days, manufacturing 40-60 days, infrastructure 90-120 days.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. Discuss the factors that determine the working capital requirements of a firm. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Working capital requirements are determined by a combination of internal and external factors. The nature of business is foremost: manufacturing firms need more working capital than service firms, while infrastructure firms need the most because clients such as government agencies delay payments for 90-120 days. HUL needs little working capital because consumers pay immediately, whereas L&amp;T needs high working capital for the same reason. Production policy matters too: level production gives steady needs, seasonal production gives fluctuating needs, and JIT production lowers requirements. The credit policy is decisive - a liberal credit policy increases receivables and hence working capital, while strict credit terms reduce it. Growth rate matters: expanding businesses need proportionately more working capital to finance rising stocks and debtors. Operating efficiency reduces requirements, as faster turnover of inventory and receivables releases cash. Among external factors, inflation increases working capital needs as raw material and other costs rise; interest rates determine the cost of borrowing; competition forces liberal credit; and technology, such as UPI and digital collections, reduces requirements. Estimation methods include the percentage-of-sales method, the operating cycle method (daily expenses x operating cycle days) and the balance sheet method. Remember the mnemonic NPC GOI - Nature, Production, Credit, Growth, Operating efficiency, Inflation - and always classify factors as internal or external.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Working capital requirements are determined by a combination of internal and external factors.</li>        <li>The nature of business is foremost: manufacturing firms need more working capital than service firms, while infrastructure firms need the most because clients such as government agencies delay payments for 90-120 days.</li>        <li>HUL needs little working capital because consumers pay immediately, whereas L&amp;T needs high working capital for the same reason.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Remember the mnemonic NPC GOI - Nature, Production, Credit, Growth, Operating efficiency, Inflation - and always classify factors as internal or external.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. What is cash credit? Discuss the methods of bank finance for working capital and the Tandon Committee norms. (10 Marks)</h3>
+      <p class="answer"><strong>Answer:</strong> Cash credit is the most common working capital facility in India: a bank sanctions a limit against the security of current assets such as inventory and debtors, and the borrower draws, repays and re-borrows up to that limit as needed, paying interest only on the amount used. Other methods of bank finance include: overdraft, which allows drawing beyond the account balance up to a sanctioned limit, usually unsecured and used for short-term gaps; term loans with fixed repayment schedules for specific needs; packing credit, which is pre-shipment finance for exporters; and bill discounting, where trade bills are converted into immediate cash. The Working Capital Gap is Current Assets minus Current Liabilities other than bank borrowings. The Tandon Committee (1975) recommended that banks finance up to 40% of this gap, ensuring the borrower contributes its own funds. Under RBI norms, working capital finance should not exceed 40% of the borrower's projected turnover; typically the first 25% of the gap comes from long-term sources and the remaining 75% from bank finance. Cash credit is preferred for its high flexibility, while overdraft limits are usually lower than cash credit limits. Remember the mnemonic COTPB - Cash credit, Overdraft, Term loan, Packing credit, Bill discounting.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Cash credit is the most common working capital facility in India: a bank sanctions a limit against the security of current assets such as inventory and debtors, and the borrower draws, repays and re-borrows up to that limit as needed, paying interest only on the amount used.</li>        <li>Other methods of bank finance include: overdraft, which allows drawing beyond the account balance up to a sanctioned limit, usually unsecured and used for short-term gaps; term loans with fixed repayment schedules for specific needs; packing credit, which is pre-shipment finance for exporters; and bill discounting, where trade bills are converted into immediate cash.</li>        <li>Remember the mnemonic COTPB - Cash credit, Overdraft, Term loan, Packing credit, Bill discounting.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Remember the mnemonic COTPB - Cash credit, Overdraft, Term loan, Packing credit, Bill discounting.</p>
     </div>
   </section>
 
@@ -231,11 +312,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPF-01 Working Capital Management</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPF-01 Working Capital Management?</summary>
-      <p>The IGNOU MMPF-01 Working Capital Management syllabus covers 15 units: Working Capital Overview, WC Concepts, Operating Cycle, Cash Management, Receivables Management, Inventory Management, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPF-01 Working Capital Management syllabus covers 15 units across 4 blocks, from Introduction to Working Capital and the Working Capital Cycle and Operating Cycle, through Management of Receivables, Cash, Marketable Securities and Inventory, Theories and Approaches to WC, Payables Management, Bank Finance for Working Capital and Other Sources of Short-Term Finance, to Working Capital in SMEs, Large Companies, MNCs and Management in Practice. StudyHub covers all units with detailed notes and solved model answers.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPF-01 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPF-01 Working Capital Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPF-01 Working Capital Management covering all 15 units with diagrams, examples, and exam tips, plus solved assignment questions with model answers. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPF-01 exam?</summary>
@@ -247,7 +328,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPF-01?</summary>
-      <p>IGNOU MMPF-01 Working Capital Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPF-01 Working Capital Management has 15 units organized across 4 blocks. StudyHub covers all units comprehensively.</p>
     </details>
   </section>
 
@@ -257,12 +338,12 @@
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -270,12 +351,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpf01.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpf01.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

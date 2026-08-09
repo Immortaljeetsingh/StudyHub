@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-01 Consumer Behaviour - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-01 Consumer Behaviour Quiz</h1>
+        <p>Test your knowledge of Consumer Behaviour</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Consumer behaviour (CB) studies the processes by which individuals and organizations:",
+                options: [
+                    "Produce and distribute goods to wholesalers",
+                    "Set government policies for market regulation",
+                    "Select, purchase, use, and dispose of products, services, ideas, or experiences to satisfy needs and desires",
+                    "Calculate the production cost of goods only"
+                ],
+                answer: 2,
+                explanation: "CB studies how individuals and organizations select, purchase, use, and dispose of products, services, ideas, or experiences to satisfy needs and desires. It integrates psychology, sociology, anthropology, and economics to explain buyer behaviour."
+            },
+            {
+                question: "In a family purchase, the person who first suggests the idea of buying a product is the:",
+                options: [
+                    "Initiator",
+                    "Influencer",
+                    "Decider",
+                    "User"
+                ],
+                answer: 0,
+                explanation: "The initiator is the person who first suggests the idea of buying a product. The five buyer roles are Initiator, Influencer, Decider, Buyer, and User, and these roles may be played by different people in a single purchase."
+            },
+            {
+                question: "According to Maslow's hierarchy of needs, LIC insurance and Godrej locks primarily appeal to which need level?",
+                options: [
+                    "Safety needs",
+                    "Physiological needs",
+                    "Esteem needs",
+                    "Self-actualization"
+                ],
+                answer: 0,
+                explanation: "LIC insurance and Godrej locks address safety needs: security, health, and financial stability. Maslow's hierarchy runs from physiological to safety, belongingness, esteem, and self-actualization, and lower needs must generally be met first."
+            },
+            {
+                question: "In Herzberg's two-factor theory, which of the following is a motivator that actively drives satisfaction?",
+                options: [
+                    "Salary",
+                    "Working conditions",
+                    "Company policy",
+                    "Recognition"
+                ],
+                answer: 3,
+                explanation: "Recognition is a motivator in Herzberg's theory; motivators such as achievement, recognition, and responsibility actively drive satisfaction. Salary, working conditions, and company policy are hygiene factors whose absence causes dissatisfaction but whose presence does not motivate."
+            },
+            {
+                question: "A Maruti loyalist dismisses Tata Motors safety data because they believe 'Maruti is best.' This consumer behaviour illustrates:",
+                options: [
+                    "Selective attention",
+                    "Selective distortion",
+                    "Selective retention",
+                    "Classical conditioning"
+                ],
+                answer: 1,
+                explanation: "Selective distortion is when consumers twist information to fit their preconceptions; a Maruti loyalist may dismiss Tata safety data that conflicts with the belief that Maruti is best. Selective attention is screening out stimuli, and selective retention is remembering the good points of liked brands."
+            },
+            {
+                question: "Paytm cashback rewards that encourage repeat usage of the app are an example of:",
+                options: [
+                    "Cognitive learning",
+                    "Operant conditioning",
+                    "Classical conditioning",
+                    "Perceptual organization"
+                ],
+                answer: 1,
+                explanation: "Operant conditioning (Skinner) is learning through consequences: positive reinforcement such as Paytm cashback encourages repeat usage. Classical conditioning links a brand with a positive stimulus, while cognitive learning involves observation and insight."
+            },
+            {
+                question: "In the ABC model of attitudes, the statement 'I will buy Bournvita this weekend' represents the:",
+                options: [
+                    "Cognitive component",
+                    "Affective component",
+                    "Behavioural component",
+                    "Perceptual component"
+                ],
+                answer: 2,
+                explanation: "The behavioural component is the intention to act, as in 'I will buy Bournvita this weekend.' The affective component is feelings ('I love Bournvita') and the cognitive component is beliefs ('Bournvita contains DHA which helps brain development')."
+            },
+            {
+                question: "When Virat Kohli endorses Puma, young consumers who wish to be like him treat Kohli as a(n):",
+                options: [
+                    "Membership group",
+                    "Dissociative group",
+                    "Aspirational group",
+                    "Primary group"
+                ],
+                answer: 2,
+                explanation: "An aspirational group is one a person wishes to join, such as Bollywood celebrities and sports stars; Kohli's Puma endorsement creates informational and value-expressive influence. Membership groups are those the person actually belongs to, and dissociative groups are those whose values the person rejects."
+            },
+            {
+                question: "In the consumer decision process, the stage where a consumer perceives a gap between their actual state and desired state is:",
+                options: [
+                    "Evaluation of alternatives",
+                    "Problem recognition",
+                    "Information search",
+                    "Post-purchase behaviour"
+                ],
+                answer: 1,
+                explanation: "Problem recognition is the first stage of the five-stage consumer decision process: the gap between the actual state and the desired state, triggered by internal stimuli such as hunger or external stimuli such as an advertisement."
+            },
+            {
+                question: "According to the study notes, what percentage of unhappy Indian consumers do not complain but simply stop buying?",
+                options: [
+                    "50%",
+                    "70%",
+                    "96%",
+                    "20%"
+                ],
+                answer: 2,
+                explanation: "96% of unhappy Indian consumers do not complain; passive complaint behaviour (simply stopping the purchase) is the most common in India. Others take private action such as negative word-of-mouth or public action such as complaints and social media posts."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm01', 'MMPM01', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

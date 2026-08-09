@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPO-02 Project Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPO-02 Project Management Quiz</h1>
+        <p>Test your knowledge of Project Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Compared to operations, which are ongoing and repetitive, a project is characterized as:",
+                options: [
+                    "Temporary and unique",
+                    "Ongoing and repetitive",
+                    "Continuous and routine",
+                    "Permanent and standardized"
+                ],
+                answer: 0,
+                explanation: "A project is a temporary endeavor undertaken to create a unique product, service, or result. Operations are ongoing and repetitive, while programs group related projects and portfolios serve strategic objectives."
+            },
+            {
+                question: "In the TELOS feasibility framework, which type answers the question 'Should we build it?' using NPV, IRR, and payback analysis?",
+                options: [
+                    "Technical feasibility",
+                    "Economic feasibility",
+                    "Legal feasibility",
+                    "Operational feasibility"
+                ],
+                answer: 1,
+                explanation: "Economic feasibility uses NPV (accept if > 0), IRR (accept if > required rate), and payback period. Technical asks 'Can we build it?', legal 'Are we allowed to?', and schedule 'Can we do it on time?'."
+            },
+            {
+                question: "The document that formally authorizes a project and gives the project manager authority to apply organizational resources is the:",
+                options: [
+                    "Statement of Work (SOW)",
+                    "Project charter",
+                    "Business case",
+                    "Risk register"
+                ],
+                answer: 1,
+                explanation: "The charter, issued in the initiation phase, formally authorizes the project and gives the PM authority. The SOW describes what to deliver, and the business case justifies why the project is needed."
+            },
+            {
+                question: "The lowest level of the Work Breakdown Structure, where time, cost, and resources can be estimated, is called a:",
+                options: [
+                    "Major deliverable",
+                    "Sub-deliverable",
+                    "Work package",
+                    "Milestone"
+                ],
+                answer: 2,
+                explanation: "Work packages are the lowest level of the WBS and are estimable for cost and duration. The WBS is a deliverable-oriented hierarchical decomposition of the total project scope."
+            },
+            {
+                question: "In PERT, the expected activity time with optimistic (O), most likely (M), and pessimistic (P) estimates is:",
+                options: [
+                    "(O + M + P) / 3",
+                    "(O + 4M + P) / 6",
+                    "(O + 2M + P) / 4",
+                    "(O + 4M + P) / 3"
+                ],
+                answer: 1,
+                explanation: "PERT expected time = (O + 4M + P) / 6 with variance = ((P - O) / 6)^2. PERT is probabilistic with 3 estimates, while CPM is deterministic with a single time estimate."
+            },
+            {
+                question: "The critical path in a project network is:",
+                options: [
+                    "The shortest path through the network",
+                    "The path containing the most activities",
+                    "The longest path, which determines the minimum project duration",
+                    "Any path with positive float"
+                ],
+                answer: 2,
+                explanation: "The critical path is the longest sequence of activities and determines the minimum project duration. Activities on it have zero float (Slack = LS - ES = 0)."
+            },
+            {
+                question: "Project crashing reduces project duration by:",
+                options: [
+                    "Adding resources to critical path activities",
+                    "Performing sequential activities in parallel",
+                    "Removing activities from the network",
+                    "Extending activity durations"
+                ],
+                answer: 0,
+                explanation: "Crashing adds resources (overtime, extra staff) to critical path activities, increasing cost. Crash cost per period = (Crash Cost - Normal Cost) / (Normal Time - Crash Time), and the cheapest critical activity is crashed first."
+            },
+            {
+                question: "In Earned Value Analysis, Cost Variance (CV) is calculated as:",
+                options: [
+                    "CV = EV - AC",
+                    "CV = EV - PV",
+                    "CV = AC - EV",
+                    "CV = EV x AC"
+                ],
+                answer: 0,
+                explanation: "CV = EV - AC; positive means under budget. SV = EV - PV (positive = ahead of schedule), CPI = EV / AC, and SPI = EV / PV. EV always comes first."
+            },
+            {
+                question: "Which set of strategies is used to respond to negative risks (threats) in a project?",
+                options: [
+                    "Avoid, Transfer, Mitigate, Accept",
+                    "Exploit, Share, Enhance, Accept",
+                    "Prevent, Transfer, Mitigate, Ignore",
+                    "Avoid, Share, Enhance, Accept"
+                ],
+                answer: 0,
+                explanation: "ATMA (Avoid, Transfer, Mitigate, Accept) is used for negative risks or threats. ESEA (Exploit, Share, Enhance, Accept) is used for positive risks or opportunities."
+            },
+            {
+                question: "In a fixed price contract, the risk of cost overruns is borne by the:",
+                options: [
+                    "Buyer",
+                    "Seller",
+                    "Both parties equally",
+                    "Government"
+                ],
+                answer: 1,
+                explanation: "In a Fixed Price contract the total price is set and the seller absorbs cost overruns. In a Cost Reimbursable contract the buyer bears cost risk, and in T&M contracts risk is shared."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpo02', 'MMPO02', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

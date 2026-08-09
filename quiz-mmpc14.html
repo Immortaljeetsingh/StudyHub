@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-14 Financial Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-14 Financial Management Quiz</h1>
+        <p>Test your knowledge of Financial Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Firm value is determined by three key financial decisions expressed as V = f[I, F, D]. These decisions are:",
+                options: [
+                    "Investing, Forecasting, and Directing",
+                    "Investment, Financing, and Dividend",
+                    "Financing, Controlling, and Planning",
+                    "Dividend, Budgeting, and Auditing"
+                ],
+                answer: 1,
+                explanation: "The three decisions that determine firm value are the Investment decision (where to invest funds), the Financing decision (how to raise funds - debt vs equity mix), and the Dividend decision (how much profit to distribute vs retain)."
+            },
+            {
+                question: "Using the Rule of 72, money invested at 8% interest will approximately double in:",
+                options: [
+                    "6 years",
+                    "8 years",
+                    "9 years",
+                    "12 years"
+                ],
+                answer: 2,
+                explanation: "Rule of 72: Doubling period = 72 / Rate = 72 / 8 = 9 years. At 12%, money doubles in about 6 years."
+            },
+            {
+                question: "Beta (B) measures which type of risk?",
+                options: [
+                    "Unsystematic risk",
+                    "Systematic risk relative to the market",
+                    "Business risk only",
+                    "Liquidity risk"
+                ],
+                answer: 1,
+                explanation: "Beta measures systematic (market) risk relative to the market. Beta = 1 moves with the market, beta > 1 is more volatile, beta < 1 is less volatile, and beta = 0 is a risk-free asset."
+            },
+            {
+                question: "A bond trades at a PREMIUM when:",
+                options: [
+                    "Coupon rate equals market rate",
+                    "Coupon rate is zero",
+                    "Coupon rate is lower than market rate",
+                    "Coupon rate is higher than market rate"
+                ],
+                answer: 3,
+                explanation: "Bond pricing rule: Coupon rate > Market rate means the bond sells at a PREMIUM; Coupon rate < Market rate means DISCOUNT; Coupon rate = Market rate means PAR."
+            },
+            {
+                question: "The after-tax cost of debt (Kd) is calculated using the formula:",
+                options: [
+                    "Kd = I / Np",
+                    "Kd = I(1 - T) / Np",
+                    "Kd = Dp / Pp",
+                    "Kd = Rf + B(Rm - Rf)"
+                ],
+                answer: 1,
+                explanation: "Interest is tax-deductible, so Kd = Interest x (1 - Tax rate) / Net Proceeds. The tax shield on interest makes debt cheaper than equity."
+            },
+            {
+                question: "Under capital budgeting rules, a project should be ACCEPTED when:",
+                options: [
+                    "NPV is negative",
+                    "NPV is zero",
+                    "NPV is positive",
+                    "IRR is below WACC"
+                ],
+                answer: 2,
+                explanation: "Accept if NPV > 0, IRR > WACC, and PI > 1. NPV is the preferred measure because it directly measures wealth increase and assumes reinvestment at WACC (realistic)."
+            },
+            {
+                question: "A longer operating cycle (Cash to Raw Materials to WIP to Finished Goods to Debtors to Cash) means the firm:",
+                options: [
+                    "Needs more working capital",
+                    "Needs less working capital",
+                    "Needs no working capital",
+                    "Has lower inventory levels"
+                ],
+                answer: 0,
+                explanation: "A longer operating cycle means funds stay locked in inventory and receivables longer, so more working capital is needed to support operations."
+            },
+            {
+                question: "Which of the following is a money market instrument?",
+                options: [
+                    "Equity shares",
+                    "Debentures",
+                    "Commercial Paper",
+                    "Preference shares"
+                ],
+                answer: 2,
+                explanation: "Money market instruments (maturity up to 1 year) include T-Bills, Commercial Paper, Certificates of Deposit, and Call Money. Shares and debentures are capital market instruments."
+            },
+            {
+                question: "Financial Leverage (DFL = EBIT / (EBIT - Interest)) measures the:",
+                options: [
+                    "Sensitivity of EPS to sales changes",
+                    "Sensitivity of EPS to EBIT changes",
+                    "Sensitivity of EBIT to sales changes",
+                    "Sensitivity of sales to EPS changes"
+                ],
+                answer: 1,
+                explanation: "DOL = Contribution/EBIT measures EBIT sensitivity to sales; DFL = EBIT/(EBIT - Interest) measures EPS sensitivity to EBIT; DCL = DOL x DFL measures EPS sensitivity to sales."
+            },
+            {
+                question: "According to the MM (Modigliani-Miller) hypothesis on dividends:",
+                options: [
+                    "Dividend policy is irrelevant in perfect markets",
+                    "All profits must be retained in the business",
+                    "Dividends are riskier than capital gains",
+                    "Higher dividends always increase firm value"
+                ],
+                answer: 0,
+                explanation: "MM says dividend policy does not affect firm value in perfect markets (no taxes, no transaction costs, rational investors) because investors can create 'homemade dividends' by selling shares."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc14', 'MMPC14', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

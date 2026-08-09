@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-09 Machines &amp; Materials - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body class="subject-mmpc09">
+    <div id="liveRegion" class="sr-only" aria-live="polite"></div>
+    <script src="api-utils.js"></script>
+    <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-09'));</script>
+
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-09 Machines &amp; Materials Quiz</h1>
+        <p>Test your knowledge of Machines &amp; Materials</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "How does Operations Management (OM) differ from Production Management?",
+                options: [
+                    "OM is limited to factory floor efficiency",
+                    "OM covers both goods and services, while production management covers manufacturing only",
+                    "Production management covers both goods and services",
+                    "OM excludes service organizations"
+                ],
+                answer: 1,
+                explanation: "OM has a broader scope than production management: it covers manufacturing plus services (hospitals, banks, IT) and the entire value chain, while production management focuses only on factory floor efficiency in traditional manufacturing of tangible goods."
+            },
+            {
+                question: "Therbligs, the basic hand motions used in motion study, were developed by:",
+                options: [
+                    "Frank Gilbreth",
+                    "Henry Gantt",
+                    "Frederick Taylor",
+                    "Lawrence Miles"
+                ],
+                answer: 0,
+                explanation: "Therbligs are the 17 basic motions identified by Frank Gilbreth, classified into effective (productive) and ineffective (wasteful) motions; eliminating ineffective therbligs improves productivity. Gantt gave the Gantt chart, Taylor gave scientific management, and Miles gave value engineering."
+            },
+            {
+                question: "According to Value Engineering, the value of a product can be increased by:",
+                options: [
+                    "Increasing cost without changing function",
+                    "Reducing function while keeping cost",
+                    "Reducing cost while maintaining function",
+                    "Keeping cost and function unchanged"
+                ],
+                answer: 2,
+                explanation: "Value = Function / Cost, so value rises when function improves or cost falls. Value Engineering, developed by Lawrence Miles at GE, focuses on what a product does (function) rather than what it costs."
+            },
+            {
+                question: "The EOQ (Economic Order Quantity) formula used to find the optimal order quantity is:",
+                options: [
+                    "2DS/H",
+                    "sqrt(2DS/H)",
+                    "D/SH",
+                    "sqrt(2H/DS)"
+                ],
+                answer: 1,
+                explanation: "EOQ = sqrt(2DS/H), where D = annual demand, S = ordering cost per order, and H = holding cost per unit per year. It minimizes the total of ordering and holding costs for inventory."
+            },
+            {
+                question: "In the 5S methodology, Seiketsu means:",
+                options: [
+                    "Sustain",
+                    "Sort",
+                    "Standardize",
+                    "Shine"
+                ],
+                answer: 2,
+                explanation: "5S runs Seiri (Sort), Seiton (Set in Order), Seiso (Shine), Seiketsu (Standardize - creating rules to maintain the first 3S), and Shitsuke (Sustain - building discipline). Seiketsu is the fourth step: Standardize."
+            },
+            {
+                question: "What is the correct order of the PPC (Production Planning and Control) cycle?",
+                options: [
+                    "Planning, Routing, Scheduling, Dispatching, Follow-up",
+                    "Scheduling, Planning, Follow-up, Routing, Dispatching",
+                    "Dispatching, Scheduling, Planning, Routing, Follow-up",
+                    "Routing, Planning, Scheduling, Follow-up, Dispatching"
+                ],
+                answer: 0,
+                explanation: "The PPC cycle runs Planning (what and when), Routing (where and how), Scheduling (timeline), Dispatching (execution) and Follow-up (control). Follow-up ensures actual production matches the planned production."
+            },
+            {
+                question: "Which layout type is best suited to mass production of standardized products?",
+                options: [
+                    "Process (functional) layout",
+                    "Fixed position layout",
+                    "Cellular layout",
+                    "Product (line) layout"
+                ],
+                answer: 3,
+                explanation: "Product layout arranges equipment in the sequence of operations and suits high-volume, low-variety standardized products such as Maruti Suzuki's assembly line. Process layout groups similar machines and suits job shops with low volume and high variety."
+            },
+            {
+                question: "Overall Equipment Effectiveness (OEE) is calculated as:",
+                options: [
+                    "Availability + Performance + Quality",
+                    "MTBF x MTTR",
+                    "Availability x Performance x Quality",
+                    "Output / Input"
+                ],
+                answer: 2,
+                explanation: "OEE = Availability x Performance x Quality; world-class OEE is about 85% while most Indian factories run at 40-60%. MTBF measures reliability (time between failures) and MTTR measures how fast equipment is repaired."
+            },
+            {
+                question: "In lean manufacturing, which of the seven wastes (TIMWOOD) is considered the most dangerous?",
+                options: [
+                    "Waiting",
+                    "Defects",
+                    "Transport",
+                    "Overproduction"
+                ],
+                answer: 3,
+                explanation: "The seven wastes are Transport, Inventory, Motion, Waiting, Overproduction, Overprocessing and Defects. Overproduction is the most dangerous because making more than needed hides all the other wastes in the process."
+            },
+            {
+                question: "In PERT, the expected time of an activity is calculated using which formula?",
+                options: [
+                    "(O + M + P) / 3",
+                    "(O + 2M + P) / 4",
+                    "(4O + M + P) / 6",
+                    "(O + 4M + P) / 6"
+                ],
+                answer: 3,
+                explanation: "PERT uses three time estimates - Optimistic (O), Most Likely (M) and Pessimistic (P) - with Te = (O + 4M + P) / 6, giving the most likely time a weight of 4. CPM instead uses a single deterministic time estimate."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc09', 'MMPC09', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

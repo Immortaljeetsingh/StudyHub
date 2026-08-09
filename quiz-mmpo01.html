@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPO-01 Operations Research - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPO-01 Operations Research Quiz</h1>
+        <p>Test your knowledge of Operations Research</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "The graphical method of solving a Linear Programming problem is suitable only when the number of decision variables is:",
+                options: [
+                    "One",
+                    "Two",
+                    "Three",
+                    "Any number"
+                ],
+                answer: 1,
+                explanation: "The graphical method works for only 2 decision variables. For more variables, use the simplex method, which is algebraic and handles any number of variables."
+            },
+            {
+                question: "In the simplex method, the stopping rule for a maximization problem is that the current solution is optimal when:",
+                options: [
+                    "All Zj - Cj values are negative",
+                    "All Zj - Cj values are greater than or equal to zero",
+                    "All Zj - Cj values are zero",
+                    "The minimum ratio test fails"
+                ],
+                answer: 1,
+                explanation: "The simplex stops when all Zj - Cj >= 0 for a maximization problem. The entering variable is chosen as the most negative Zj - Cj, and the leaving variable by the minimum ratio test."
+            },
+            {
+                question: "A transportation problem is balanced when:",
+                options: [
+                    "Total supply exceeds total demand",
+                    "Total demand exceeds total supply",
+                    "Total supply equals total demand",
+                    "Each source supplies exactly one destination"
+                ],
+                answer: 2,
+                explanation: "A transportation problem must be balanced (total supply = total demand). If unbalanced, a dummy source or destination is added. It is then solved with VAM for the initial solution and MODI for optimality."
+            },
+            {
+                question: "In Vogel's Approximation Method (VAM), the initial allocation is made to the lowest cost cell of:",
+                options: [
+                    "The row or column with the highest penalty",
+                    "The row or column with the lowest penalty",
+                    "The first row of the matrix",
+                    "The cell with the highest cost in the matrix"
+                ],
+                answer: 0,
+                explanation: "VAM calculates the penalty for each row and column as the difference between the two lowest costs, then allocates to the lowest cost cell in the row or column with the highest penalty."
+            },
+            {
+                question: "The assignment problem, where each source is assigned to exactly one destination, is optimally solved using the:",
+                options: [
+                    "North-West Corner method",
+                    "Vogel's Approximation Method",
+                    "Hungarian method",
+                    "MODI method"
+                ],
+                answer: 2,
+                explanation: "The assignment problem is a special case of the transportation problem solved by the Hungarian method: subtract row minimums, then column minimums, cover zeros with minimum lines, and repeat until optimal."
+            },
+            {
+                question: "In the M/M/1 queuing model, the system is stable (queue does not grow indefinitely) when the utilization factor rho = lambda/mu is:",
+                options: [
+                    "Greater than 1",
+                    "Equal to 1",
+                    "Less than 1",
+                    "Equal to zero"
+                ],
+                answer: 2,
+                explanation: "The utilization factor rho = lambda/mu must be less than 1 for a stable system. Otherwise arrivals exceed service capacity and the queue grows without bound."
+            },
+            {
+                question: "Little's Law, which applies to ALL queuing models, states that the average number in the system is:",
+                options: [
+                    "L = lambda + W",
+                    "L = lambda x W",
+                    "L = W / lambda",
+                    "L = mu x W"
+                ],
+                answer: 1,
+                explanation: "Little's Law: L = lambda x W (and Lq = lambda x Wq). It links the average number of customers in the system to the arrival rate and average waiting time, and works for every queuing model."
+            },
+            {
+                question: "A saddle point in a game theory payoff matrix exists when:",
+                options: [
+                    "Maximin is greater than minimax",
+                    "Maximin is less than minimax",
+                    "Maximin equals minimax",
+                    "Every row minimum equals every column maximum"
+                ],
+                answer: 2,
+                explanation: "A saddle point exists when maximin = minimax. It is the cell that is minimum in its row and maximum in its column, giving the value of the game. Otherwise, mixed strategies are used."
+            },
+            {
+                question: "The PERT expected time for an activity with optimistic (a), most likely (m), and pessimistic (b) estimates is calculated as:",
+                options: [
+                    "(a + m + b) / 3",
+                    "(a + 4m + b) / 6",
+                    "(a + 2m + b) / 4",
+                    "(a + 4m + b) / 3"
+                ],
+                answer: 1,
+                explanation: "PERT expected time te = (a + 4m + b) / 6, a weighted average giving the most likely time four times the weight of the optimistic and pessimistic times. Variance = [(b - a) / 6]^2."
+            },
+            {
+                question: "The Expected Value of Perfect Information (EVPI) is the maximum amount a decision maker should pay for perfect information, calculated as:",
+                options: [
+                    "EMV with perfect information minus EMV without perfect information",
+                    "Best payoff minus worst payoff",
+                    "Sum of all payoffs divided by the number of states",
+                    "Probability weighted average of regrets"
+                ],
+                answer: 0,
+                explanation: "EVPI = EMV (with perfect information) - EMV (best without perfect information). It measures the value of removing uncertainty about future states of nature."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpo01', 'MMPO01', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

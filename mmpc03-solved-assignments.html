@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPC-03 Business Environment Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPC-03 Business Environment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPC-03 Business Environment syllabus covers 15 units: Business Environment Overview, Economic Environment, Economic Reforms, Liberalization & Privatization, Globalization, Political Environment, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPC-03 Business Environment syllabus covers 14 units: Introduction to Business and Environment, Economic Growth and Development, Socio-Cultural and Politico Legal Environment, Business Ethics and CSR, Indian Financial System, and more. StudyHub covers all units with detailed notes and solved assignment answers."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPC-03 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-03 Business Environment covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-03 Business Environment covering all 14 units, plus model answers to solved assignment questions, with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,7 @@
       "name": "How many units are there in IGNOU MMPC-03?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPC-03 Business Environment has 15 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPC-03 Business Environment has 14 units organized across multiple blocks. StudyHub covers all units comprehensively."
       }
     }
   ]
@@ -87,7 +88,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +109,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpc03">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,106 +160,138 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPC-03 Business Environment - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPC-03 Business Environment solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 15 units of MMPC-03. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpc03.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPC-03 Business Environment solved assignments</strong>? StudyHub provides model answers to IGNOU-style assignment questions covering the key concepts of all 14 units of MMPC-03. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer is grounded in the full study notes and includes key concepts and Indian examples to help you score maximum marks.</p>
+    <a href="quiz-mmpc03.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="mmpc03-question-paper.html" class="landing-cta btn-fx" role="button">Solved Question Paper &rarr;</a>
+    <a href="study-mmpc03.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <section>
-    <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Solved Assignments for MMPC-03</h2>
-    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPC-03 Business Environment. Click any unit to read the complete study notes.</p>
+    <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Study Notes for MMPC-03</h2>
+    <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse detailed study notes for each of the 14 units of IGNOU MMPC-03 Business Environment. Click any unit to read the complete study material.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Business Environment Overview</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Business Environment Overview in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Introduction to Business and Environment</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Introduction to Business and Environment in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Economic Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Economic Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Economic Growth and Development</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Economic Growth and Development in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Economic Reforms</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Economic Reforms in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Socio-Cultural and Politico Legal Environment</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Socio-Cultural and Politico Legal Environment in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Liberalization & Privatization</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Liberalization & Privatization in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Business Ethics and Corporate Social Responsibility (CSR)</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Business Ethics and Corporate Social Responsibility (CSR) in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Globalization</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Globalization in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Indian Financial System</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Indian Financial System in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Political Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Political Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Industrial Policy Framework</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Industrial Policy Framework in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Legal Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Legal Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Agri-business Environment</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Agri-business Environment in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Social Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Social Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: New Economic Policy</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for New Economic Policy in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Technological Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Technological Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Financial Sector and Fiscal Sector Reforms</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Financial Sector and Fiscal Sector Reforms in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10: Ecological Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Ecological Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: International Financial System</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for International Financial System in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: International Business Environment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for International Business Environment in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Balance of Payments (BoP)</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Balance of Payments (BoP) in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: CSR & Ethics</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for CSR & Ethics in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Foreign Trade</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Foreign Trade in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Indian Economy</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Indian Economy in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Sources of Global Financing</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Sources of Global Financing in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 14: Business Cycles</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Business Cycles in the context of Business Environment.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: Technological Environment</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Technological Environment in the context of Business Environment.</p>
         <a href="study-mmpc03.html#u14" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+    </div>
+  </section>
 
-      <div class="unit-preview">
-        <h3>Unit 15: Government Policy</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Government Policy in the context of Business Environment.</p>
-        <a href="study-mmpc03.html#u15" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers - IGNOU MMPC-03 Business Environment</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Define business environment. Explain its characteristics and importance for managerial decision-making.</h3>
+      <p class="answer"><strong>Answer:</strong> Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements. It furnishes the macro-context within which firms operate and includes the value system of society, government rules and regulations, monetary policies of the central bank, the institutional setup of the country, and attitudes towards foreign capital and enterprise. The environment has five key characteristics. It is dynamic, changing constantly due to customer preferences, competitors, technology, and government policy. It is uncertain, since factors fluctuate quickly and are hard to predict. It is complex, exposed to technological disruptions, global competition, and shifting regulatory conditions. It shows relativity, varying from country to country and region to region, and it is interrelated, as all factors influence each other. Studying the environment is important because decisions must consider possible environmental reactions; marketing managers study the market before product launches, finance managers study capital and money market structures, and personnel managers must understand government rules on reservations. Environmental analysis helps managers identify opportunities and threats, enabling firms such as Reliance Jio to convert environmental scanning into competitive advantage.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Business environment refers to the totality of all factors which are external to and beyond the control of individual business enterprises and their managements.</li>        <li>Environmental analysis helps managers identify opportunities and threats, enabling firms such as Reliance Jio to convert environmental scanning into competitive advantage.</li>        <li>It furnishes the macro-context within which firms operate and includes the value system of society, government rules and regulations, monetary policies of the central bank, the institutional setup of the country, and attitudes towards foreign capital and enterprise.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Environmental analysis helps managers identify opportunities and threats, enabling firms such as Reliance Jio to convert environmental scanning into competitive advantage.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Distinguish between economic growth and economic development with suitable Indian examples.</h3>
+      <p class="answer"><strong>Answer:</strong> Economic growth refers to the increase in the real output of goods and services over time, typically measured by the GDP growth rate. It is a quantitative concept. Economic development is broader: it encompasses improvements in living standards, including income distribution, health and education outcomes, infrastructure development, and reduction in poverty levels. Development is measured through indicators such as GDP per capita, the Human Development Index (HDI), poverty ratio, Gini coefficient, infant mortality rate, and literacy rate. The determinants of growth include physical capital, human capital, natural resources, technology, and institutional factors such as property rights and political stability. India illustrates the distinction through two contrasting state models. Gujarat focuses on industrialization and infrastructure, achieving high GDP growth of about 10%, while Kerala prioritizes human development, with the highest literacy rate of 96% and the best HDI in India. Gujarat has higher GDP; Kerala has better social indicators. The example shows that a country can have growth without development and that the ideal strategy combines both approaches, which is why NITI Aayog replaced the Planning Commission in 2015 to pursue outcome-based, bottom-up development planning.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Economic growth refers to the increase in the real output of goods and services over time, typically measured by the GDP growth rate.</li>        <li>Development is measured through indicators such as GDP per capita, the Human Development Index (HDI), poverty ratio, Gini coefficient, infant mortality rate, and literacy rate.</li>        <li>It is a quantitative concept.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The example shows that a country can have growth without development and that the ideal strategy combines both approaches, which is why NITI Aayog replaced the Planning Commission in 2015 to pursue outcome-based, bottom-up development planning.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. Explain the New Economic Policy of 1991 and its three components of LPG reforms.</h3>
+      <p class="answer"><strong>Answer:</strong> The New Economic Policy of 1991 was introduced in response to the severe Balance of Payments crisis, when India's foreign exchange reserves fell to about two weeks of imports and gold had to be pledged. The policy is popularly known as LPG reforms. Liberalization meant removing the license raj, industrial delicensing, opening the economy to FDI, and freeing forex and tax regimes, including the introduction of service tax. Privatization involved disinvestment of government equity in public sector undertakings and reducing the state's role in production. Globalization meant opening Indian markets to international trade and investment and integrating the economy with global markets. The Narasimham Committee's recommendations shaped banking and financial sector reforms that accompanied the policy. The impact was dramatic: average GDP growth rose from the 3.5% Hindu rate of growth to 6-7% in the post-reform period, FDI grew from negligible levels to over 80 billion dollars annually, and India moved from a license raj to a market-oriented economy. The reforms transformed the business environment for firms, which now had to compete with global players while gaining access to technology, capital, and larger markets.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The New Economic Policy of 1991 was introduced in response to the severe Balance of Payments crisis, when India's foreign exchange reserves fell to about two weeks of imports and gold had to be pledged.</li>        <li>Globalization meant opening Indian markets to international trade and investment and integrating the economy with global markets.</li>        <li>The policy is popularly known as LPG reforms.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> The reforms transformed the business environment for firms, which now had to compete with global players while gaining access to technology, capital, and larger markets.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. What is Balance of Payments? Explain its structure and the causes of India's Current Account Deficit.</h3>
+      <p class="answer"><strong>Answer:</strong> The Balance of Payments (BoP) is a systematic record of all economic transactions between the residents of a country and the rest of the world during a given period. It has two major components. The Current Account records trade in goods and services, income, and unilateral transfers such as remittances. The Capital Account records investment flows, including foreign direct investment, portfolio investment, and loans. A deficit on the current account, known as the Current Account Deficit (CAD), arises when payments for imports exceed receipts from exports and transfers. In India, the CAD is driven mainly by oil imports and gold imports, which dominate the import bill. It is offset partly by strong services exports, particularly IT and software, and by remittances, where India is the largest recipient globally at over 100 billion dollars annually, with Gulf countries as a major source. The 1991 crisis illustrates the danger of an unsustainable BoP position, when forex reserves fell to 1.2 billion dollars and India approached the IMF. Today, the RBI manages forex reserves and the rupee has moved from a fixed peg to a managed float, with the exchange rate largely market-determined.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>The Balance of Payments (BoP) is a systematic record of all economic transactions between the residents of a country and the rest of the world during a given period.</li>        <li>The Current Account records trade in goods and services, income, and unilateral transfers such as remittances.</li>        <li>It has two major components.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Today, the RBI manages forex reserves and the rupee has moved from a fixed peg to a managed float, with the exchange rate largely market-determined.</p>
     </div>
   </section>
 
@@ -231,11 +299,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPC-03 Business Environment</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPC-03 Business Environment?</summary>
-      <p>The IGNOU MMPC-03 Business Environment syllabus covers 15 units: Business Environment Overview, Economic Environment, Economic Reforms, Liberalization & Privatization, Globalization, Political Environment, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPC-03 Business Environment syllabus covers 14 units: Introduction to Business and Environment, Economic Growth and Development, Socio-Cultural and Politico Legal Environment, Business Ethics and CSR, Indian Financial System, and more. StudyHub covers all units with detailed notes.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPC-03 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-03 Business Environment covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-03 Business Environment covering all 14 units, plus model answers to solved assignment questions, with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPC-03 exam?</summary>
@@ -247,7 +315,7 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPC-03?</summary>
-      <p>IGNOU MMPC-03 Business Environment has 15 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPC-03 Business Environment has 14 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
     </details>
   </section>
 
@@ -256,12 +324,12 @@
     <div class="related-grid">
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc02.html">MMPC-02 Human Resource Management</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -270,12 +338,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpc03.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpc03.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

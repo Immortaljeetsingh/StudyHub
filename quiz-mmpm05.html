@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-05 Marketing of Services - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-05 Marketing of Services Quiz</h1>
+        <p>Test your knowledge of Marketing of Services</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "The IHIP characteristic that explains why an empty airline seat at departure is revenue lost forever is:",
+                options: [
+                    "Intangibility",
+                    "Heterogeneity",
+                    "Inseparability",
+                    "Perishability"
+                ],
+                answer: 3,
+                explanation: "Perishability means services cannot be stored or inventoried; unused capacity, like an empty hotel room or airline seat, generates zero income."
+            },
+            {
+                question: "Which IHIP characteristic forces marketers to use tangible cues such as branded uniforms and modern office decor?",
+                options: [
+                    "Intangibility",
+                    "Perishability",
+                    "Inseparability",
+                    "Heterogeneity"
+                ],
+                answer: 0,
+                explanation: "Intangibility means services cannot be seen, touched or felt before purchase, so marketers use tangible cues to reduce perceived risk."
+            },
+            {
+                question: "The extended services marketing mix (7Ps) adds which three Ps to the traditional 4Ps?",
+                options: [
+                    "People, Process, Physical Evidence",
+                    "Product, Price, Promotion",
+                    "Packaging, Placement, Positioning",
+                    "People, Price, Physical Evidence"
+                ],
+                answer: 0,
+                explanation: "The traditional 4Ps (Product, Price, Place, Promotion) are insufficient for services and are extended with People, Process and Physical Evidence."
+            },
+            {
+                question: "In the Service Marketing Triangle, the actual delivery of the service by employees to customers is called:",
+                options: [
+                    "Internal marketing",
+                    "External marketing",
+                    "Interactive marketing",
+                    "Mass marketing"
+                ],
+                answer: 2,
+                explanation: "Interactive marketing is the employee-customer interface, the 'moment of truth' where promises made through external marketing are kept or broken."
+            },
+            {
+                question: "The Zone of Tolerance is the range between:",
+                options: [
+                    "Desired service and adequate service",
+                    "Search quality and credence quality",
+                    "Cost and price",
+                    "Supply and demand"
+                ],
+                answer: 0,
+                explanation: "The Zone of Tolerance lies between the desired service the customer hopes for and the adequate minimum level; it narrows for critical services and loyal customers."
+            },
+            {
+                question: "Which pricing strategy did Jio use to enter the Indian telecom market?",
+                options: [
+                    "Skimming",
+                    "Penetration",
+                    "Loss leader",
+                    "High price maintenance"
+                ],
+                answer: 1,
+                explanation: "Jio entered with penetration pricing (free data) to gain market share, then gradually raised prices after building 400M+ subscribers."
+            },
+            {
+                question: "According to the Service Profit Chain, employee satisfaction leads to:",
+                options: [
+                    "Higher service quality and customer satisfaction",
+                    "Lower wages",
+                    "More competition",
+                    "Reduced capacity"
+                ],
+                answer: 0,
+                explanation: "The chain runs from employee satisfaction through service quality and customer satisfaction to loyalty, revenue growth and profitability."
+            },
+            {
+                question: "Which SERVQUAL dimension is consistently the MOST important for overall service quality?",
+                options: [
+                    "Assurance",
+                    "Tangibles",
+                    "Reliability",
+                    "Empathy"
+                ],
+                answer: 2,
+                explanation: "Reliability, performing the promised service dependably, explains the largest variance in overall service quality."
+            },
+            {
+                question: "Under GATS, Indian BPO and IT services delivered remotely to clients abroad belong to:",
+                options: [
+                    "Mode 1: Cross-border supply",
+                    "Mode 2: Consumption abroad",
+                    "Mode 3: Commercial presence",
+                    "Mode 4: Movement of persons"
+                ],
+                answer: 0,
+                explanation: "In Mode 1 (cross-border) the service crosses the border while the provider stays at home; TCS software development and Genpact claims processing are examples."
+            },
+            {
+                question: "Yield management is best described as:",
+                options: [
+                    "Dynamic pricing of a perishable service to maximize revenue per unit",
+                    "Fixed pricing for all customers",
+                    "Charging the same price all year round",
+                    "Reducing capacity to cut costs"
+                ],
+                answer: 0,
+                explanation: "Yield management sets prices dynamically based on demand, time and capacity; airlines, hotels, IRCTC tatkal pricing and Uber surge pricing use it."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm05', 'MMPM05', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

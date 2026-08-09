@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-20 Business Ethics &amp; CSR - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-20 Business Ethics &amp; CSR Quiz</h1>
+        <p>Test your knowledge of Business Ethics &amp; CSR</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Business ethics begins where the ___ ends.",
+                options: [
+                    "Market",
+                    "Law",
+                    "Culture",
+                    "Contract"
+                ],
+                answer: 1,
+                explanation: "Ethics goes beyond the legal minimum requirement. Unlike law, it is not codified, is contextual, and is enforced through social sanctions and reputation rather than legal penalties."
+            },
+            {
+                question: "Utilitarianism holds that an action is ethical if it:",
+                options: [
+                    "Follows universal rules",
+                    "Builds personal virtue",
+                    "Produces the greatest good for the greatest number",
+                    "Is fair behind a veil of ignorance"
+                ],
+                answer: 2,
+                explanation: "Utilitarianism (Bentham and Mill) is a consequentialist approach that judges actions by outcomes, applied through cost-benefit analysis. Other theories: Deontology (Kant, duty-based), Virtue Ethics (Aristotle), Social Contract (Rawls), and Stakeholder Theory (Freeman)."
+            },
+            {
+                question: "The shareholder view that the 'business of business is to do business' is associated with:",
+                options: [
+                    "Milton Friedman",
+                    "Edward Freeman",
+                    "Howard Bowen",
+                    "Archie Carroll"
+                ],
+                answer: 0,
+                explanation: "Friedman argued companies should maximize shareholder value within the law, while Freeman's stakeholder theory balances the interests of employees, customers, suppliers, community, and environment. This Friedman vs Freeman debate appears in almost every exam."
+            },
+            {
+                question: "ESG stands for:",
+                options: [
+                    "Environmental, Social, Governance",
+                    "Ethics, Sustainability, Governance",
+                    "Economic, Social, Green",
+                    "Equity, Stakeholders, Growth"
+                ],
+                answer: 0,
+                explanation: "ESG covers Environmental (climate, waste), Social (human rights, labor, community), and Governance (board, transparency, anti-corruption). It is the framework that connects ethics, CSR, and corporate governance."
+            },
+            {
+                question: "The first formal definition of CSR, 'social obligations of businessmen', was given by:",
+                options: [
+                    "Howard Bowen in 1953",
+                    "Archie Carroll in 1991",
+                    "Edward Freeman in 1984",
+                    "Milton Friedman in 1970"
+                ],
+                answer: 0,
+                explanation: "Howard Bowen (1953) provided the first formal definition of CSR. CSR evolved from voluntary obligations in the 1950s through Carroll's CSR Pyramid in the 1970s to mandatory CSR in India in 2013."
+            },
+            {
+                question: "The base of Carroll's CSR Pyramid is:",
+                options: [
+                    "Economic responsibility",
+                    "Philanthropic responsibility",
+                    "Ethical responsibility",
+                    "Legal responsibility"
+                ],
+                answer: 0,
+                explanation: "Carroll's pyramid from base to top: Economic (be profitable), Legal (obey the law), Ethical (do what is right), Philanthropic (be a good corporate citizen). Amul is cited as the living embodiment of the pyramid."
+            },
+            {
+                question: "India became the first country to mandate CSR by law under:",
+                options: [
+                    "MSME Act 2006",
+                    "Companies Act 2013, Section 135",
+                    "Companies Act 1956",
+                    "Foreign Exchange Act 1999"
+                ],
+                answer: 1,
+                explanation: "Section 135 of the Companies Act 2013 gave statutory recognition to CSR, evolving from voluntary guidelines (2009) to mandatory provisions (2013) and strengthened rules (2021). India is one of only 3 countries with mandatory CSR."
+            },
+            {
+                question: "Under Section 135, eligible companies must spend what share of average net profits on CSR?",
+                options: [
+                    "5%",
+                    "1%",
+                    "2%",
+                    "10%"
+                ],
+                answer: 2,
+                explanation: "The 2-3-5 rule: 2% of average net profits of the last 3 years must be spent on CSR, triggered by thresholds of Rs 500 crore net worth, Rs 1,000 crore turnover, or Rs 5 crore net profit. Activities must fall under Schedule VII."
+            },
+            {
+                question: "The CSR Committee of a company must have:",
+                options: [
+                    "At least 5 directors",
+                    "Only executive directors",
+                    "At least 2 directors with no independent director",
+                    "At least 3 directors, with 1 independent director"
+                ],
+                answer: 3,
+                explanation: "The CSR committee needs a minimum of 3 directors including at least 1 independent director. Admin overheads are capped at 5% of total CSR expenditure, and implementing agencies must register under CSR-1."
+            },
+            {
+                question: "According to the Brundtland Commission (1987), sustainable development means:",
+                options: [
+                    "Balancing imports and exports",
+                    "Maximizing profit while protecting the environment",
+                    "Meeting present needs without compromising future generations' ability to meet their own needs",
+                    "Growing the economy at any cost"
+                ],
+                answer: 2,
+                explanation: "The Brundtland definition links present and future needs. Related concepts include the triple bottom line (People, Planet, Profit), the circular economy (reduce, reuse, recycle), and carbon neutrality."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc20', 'MMPC20', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

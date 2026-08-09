@@ -12,25 +12,24 @@
         longBreak: 15 * 60
     };
     const CYCLES_BEFORE_LONG = 4;
+    const VALID_MODES = ['study', 'shortBreak', 'longBreak'];
+    let audioCtx = null;
 
     class PomodoroTimer {
         constructor() {
+            if (document.getElementById('pomodoroWidget')) return;
             this.timeLeft = TIMES.study;
             this.totalTime = TIMES.study;
             this.isRunning = false;
             this.mode = 'study';
             this.cycle = 1;
             this.intervalId = null;
+            this.endTime = null;
             
             this.loadState();
             this.render();
             this.bindEvents();
             this.updateDisplay();
-            
-            // Request notification permission
-            if ('Notification' in window && Notification.permission === 'default') {
-                Notification.requestPermission();
-            }
         }
 
         render() {
@@ -54,7 +53,7 @@
                             <button class="pomodoro-btn" id="pomodoroStart">▶ Start</button>
                             <button class="pomodoro-btn" id="pomodoroReset">↺</button>
                         </div>
-                        <div class="pomodoro-cycle" id="pomodoroCycle">Cycle 1/4</div>
+                        <div class="pomodoro-cycle" id="pomodoroCycle">Cycle 1/${CYCLES_BEFORE_LONG}</div>
                     </div>
                 </div>
             `;
@@ -74,30 +73,40 @@
         start() {
             if (this.isRunning) return;
             this.isRunning = true;
+            if ('Notification' in window && Notification.permission === 'default') {
+                Notification.requestPermission();
+            }
+            this.endTime = Date.now() + this.timeLeft * 1000;
             this.updateBtn();
             this.intervalId = setInterval(() => this.tick(), 1000);
         }
 
         pause() {
+            if (!this.isRunning) return;
             this.isRunning = false;
-            this.updateBtn();
             clearInterval(this.intervalId);
+            this.timeLeft = Math.max(0, Math.round((this.endTime - Date.now()) / 1000));
+            this.updateDisplay();
+            this.updateBtn();
+            this.saveState();
         }
 
         reset() {
             this.pause();
+            this.endTime = null;
             this.timeLeft = this.totalTime;
             this.updateDisplay();
             this.saveState();
         }
 
         tick() {
-            this.timeLeft--;
+            this.timeLeft = Math.max(0, Math.round((this.endTime - Date.now()) / 1000));
             if (this.timeLeft <= 0) {
                 this.complete();
+            } else {
+                this.updateDisplay();
+                this.saveState();
             }
-            this.updateDisplay();
-            this.saveState();
         }
 
         complete() {
@@ -154,18 +163,21 @@
 
         beep() {
             try {
-                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioCtx.state === 'suspended') audioCtx.resume();
                 [800, 1000, 800].forEach((freq, i) => {
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
                     osc.connect(gain);
-                    gain.connect(ctx.destination);
+                    gain.connect(audioCtx.destination);
                     osc.frequency.value = freq;
                     osc.type = 'sine';
-                    gain.gain.setValueAtTime(0.3, ctx.currentTime + i * 0.2);
-                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + i * 0.2 + 0.15);
-                    osc.start(ctx.currentTime + i * 0.2);
-                    osc.stop(ctx.currentTime + i * 0.2 + 0.15);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime + i * 0.2);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + i * 0.2 + 0.15);
+                    osc.start(audioCtx.currentTime + i * 0.2);
+                    osc.stop(audioCtx.currentTime + i * 0.2 + 0.15);
                 });
             } catch (e) {}
         }
@@ -187,7 +199,7 @@
             if (modeEl) modeEl.textContent = `${modeIcons[this.mode]} ${modeText[this.mode]}`;
             
             const cycleEl = document.getElementById('pomodoroCycle');
-            if (cycleEl) cycleEl.textContent = `Cycle ${this.cycle}/4`;
+            if (cycleEl) cycleEl.textContent = `Cycle ${Math.max(this.cycle, 1)}/${CYCLES_BEFORE_LONG}`;
             
             // Color based on mode
             const colors = { study: '#5e8cf0', shortBreak: '#34d399', longBreak: '#fbbf24' };
@@ -229,20 +241,17 @@
                     const s = JSON.parse(saved);
                     this.timeLeft = s.timeLeft || TIMES.study;
                     this.totalTime = s.totalTime || TIMES.study;
-                    this.mode = s.mode || 'study';
+                    this.mode = VALID_MODES.includes(s.mode) ? s.mode : 'study';
                     this.cycle = s.cycle || 1;
                 }
             } catch (e) {}
         }
     }
 
-    // Only init on dashboard page (study-hub.html)
-    const currentPage = window.location.pathname.split('/').pop();
-    if (currentPage === 'study-hub.html' || currentPage === '') {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => new PomodoroTimer());
-        } else {
-            new PomodoroTimer();
-        }
+    // Init whenever the script is present
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => new PomodoroTimer());
+    } else {
+        new PomodoroTimer();
     }
 })();

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPO-06 Materials Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPO-06 Materials Management Quiz</h1>
+        <p>Test your knowledge of Materials Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is NOT one of the 6 Rs of materials management?",
+                options: [
+                    "Right material",
+                    "Right quantity",
+                    "Right supplier",
+                    "Right price"
+                ],
+                answer: 2,
+                explanation: "The 6 Rs are Right Material, Right Quantity, Right Time, Right Place, Right Price and Right Quality (R-R-T-P-P-Q). Supplier selection is a purchasing activity, not one of the 6 Rs."
+            },
+            {
+                question: "Materials typically account for what share of total manufacturing expenditure?",
+                options: [
+                    "10-20%",
+                    "50-70%",
+                    "30-40%",
+                    "80-90%"
+                ],
+                answer: 1,
+                explanation: "Materials are one of the 5 Ms and average 50-70% of total manufacturing cost, making materials management a key driver of profitability."
+            },
+            {
+                question: "In value analysis, the value of a product is formally expressed as:",
+                options: [
+                    "Function divided by Cost",
+                    "Cost divided by Function",
+                    "Function multiplied by Cost",
+                    "Cost minus Function"
+                ],
+                answer: 0,
+                explanation: "Value = Function / Cost. Value increases either by improving function or reducing cost, following the SAVE framework: Study, Analyze, Valuate, Execute."
+            },
+            {
+                question: "In the Kraljic matrix, items with HIGH supply risk and LOW profit impact are classified as:",
+                options: [
+                    "Strategic items",
+                    "Leverage items",
+                    "Bottleneck items",
+                    "Routine items"
+                ],
+                answer: 2,
+                explanation: "Strategic (high risk, high impact) get long-term partnerships; leverage (low risk, high impact) use competitive bidding; bottleneck (high risk, low impact) need supply security; routine (low risk, low impact) use simplified processes."
+            },
+            {
+                question: "The Economic Order Quantity (EOQ) that minimizes total ordering plus holding cost is calculated as:",
+                options: [
+                    "sqrt(2 x D x S / H)",
+                    "sqrt(2 x D x H / S)",
+                    "2 x D x S / H",
+                    "sqrt(D x S / H)"
+                ],
+                answer: 0,
+                explanation: "EOQ = sqrt(2 x D x S / H) where D = annual demand, S = ordering cost per order and H = holding cost per unit per year. It balances ordering and holding costs."
+            },
+            {
+                question: "Which three inputs does Material Requirements Planning (MRP) require to calculate net requirements?",
+                options: [
+                    "MPS, BOM and inventory records",
+                    "Pricing, packaging and transport data",
+                    "Sales, marketing and finance plans",
+                    "Supplier, order and invoice data"
+                ],
+                answer: 0,
+                explanation: "MRP inputs are M-B-I: the Master Production Schedule, Bill of Materials and Inventory records. Net requirements = Gross - Scheduled Receipts - On-hand inventory."
+            },
+            {
+                question: "MRP-based production that schedules according to forecasts is classified as a:",
+                options: [
+                    "Pull system",
+                    "Push system",
+                    "Kanban system",
+                    "CONWIP system"
+                ],
+                answer: 1,
+                explanation: "Push systems (MRP) produce on forecasts and carry high inventory; pull systems (JIT/Kanban) produce on actual demand with minimal inventory and higher flexibility."
+            },
+            {
+                question: "A factory has 100 units of work-in-process and produces 20 units per hour. Using Little's Law, the flow time is:",
+                options: [
+                    "2 hours",
+                    "5 hours",
+                    "20 hours",
+                    "100 hours"
+                ],
+                answer: 1,
+                explanation: "Little's Law: WIP = Throughput x Flow Time, so Flow Time = 100 / 20 = 5 hours. It links work-in-process, throughput and flow time."
+            },
+            {
+                question: "In ABC analysis, 'A' items are typically:",
+                options: [
+                    "20% of items accounting for 80% of value",
+                    "50% of items accounting for 5% of value",
+                    "30% of items accounting for 15% of value",
+                    "10% of items accounting for 90% of value"
+                ],
+                answer: 0,
+                explanation: "ABC follows the Pareto rule: A = 20% of items / 80% of value with tight control, B = 30% / 15% with moderate control, and C = 50% / 5% with simple control."
+            },
+            {
+                question: "Which inventory classification method groups items by criticality as Vital, Essential and Desirable?",
+                options: [
+                    "ABC analysis",
+                    "VED analysis",
+                    "FSN analysis",
+                    "XYZ analysis"
+                ],
+                answer: 1,
+                explanation: "VED classifies by criticality: Vital items stop production if out of stock, Essential items cause partial disruption, and Desirable items only cause inconvenience. FSN groups by movement and XYZ by demand variability."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpo06', 'MMPO06', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

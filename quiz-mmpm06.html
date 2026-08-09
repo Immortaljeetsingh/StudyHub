@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-06 Marketing Research - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-06 Marketing Research Quiz</h1>
+        <p>Test your knowledge of Marketing Research</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Marketing research is needed when the decision-maker faces:",
+                options: [
+                    "Certainty and complete information",
+                    "Uncertainty and risk",
+                    "No competition",
+                    "Guaranteed sales"
+                ],
+                answer: 1,
+                explanation: "Research is required when managers face uncertainty and risk, and the cost of research is less than the cost of a wrong decision."
+            },
+            {
+                question: "Which step is considered the most critical in the marketing research process?",
+                options: [
+                    "Problem definition",
+                    "Data entry",
+                    "Report writing",
+                    "Sampling"
+                ],
+                answer: 0,
+                explanation: "Problem definition is the most critical step ('a problem well defined is a problem half-solved'); many research projects fail because the problem was poorly defined."
+            },
+            {
+                question: "India's marketing research industry is currently ranked _____ globally by size (ESOMAR report).",
+                options: [
+                    "4th",
+                    "2nd",
+                    "10th",
+                    "15th"
+                ],
+                answer: 0,
+                explanation: "India is the 4th largest MR market globally, with revenue of $2.1 billion in FY21 expected to reach $4.2 billion by FY26."
+            },
+            {
+                question: "Which research design is most suitable when the research problem is not well understood?",
+                options: [
+                    "Causal",
+                    "Descriptive",
+                    "Exploratory",
+                    "Experimental"
+                ],
+                answer: 2,
+                explanation: "Exploratory design (literature review, expert interviews, focus groups) is used to gain insights and clarify ambiguous problems."
+            },
+            {
+                question: "A Type I error in hypothesis testing means:",
+                options: [
+                    "Accepting a false null hypothesis",
+                    "Rejecting a true null hypothesis",
+                    "Failing to collect data",
+                    "Choosing the wrong significance level"
+                ],
+                answer: 1,
+                explanation: "Type I error (alpha) is rejecting a true null hypothesis, a false positive, like concluding an ad campaign works when it actually does not."
+            },
+            {
+                question: "Data collected firsthand for the specific research need is called:",
+                options: [
+                    "Secondary data",
+                    "Primary data",
+                    "Syndicated data",
+                    "Historical data"
+                ],
+                answer: 1,
+                explanation: "Primary data is collected firsthand for the current problem; it is specific to the research need but expensive, while secondary data is cheap and quick but may not fit."
+            },
+            {
+                question: "In the data processing pipeline, which step comes first?",
+                options: [
+                    "Cleaning",
+                    "Tabulation",
+                    "Editing",
+                    "Data entry"
+                ],
+                answer: 2,
+                explanation: "The six-step pipeline is Editing, Coding, Classification, Tabulation, Data Entry and Cleaning; editing checks completeness and consistency first."
+            },
+            {
+                question: "Which statistical test is appropriate for categorical data to test independence?",
+                options: [
+                    "Z-test",
+                    "t-test",
+                    "F-test",
+                    "Chi-square test"
+                ],
+                answer: 3,
+                explanation: "The chi-square test is used for categorical data and independence; Z and t tests compare means, and the F-test compares variances (ANOVA)."
+            },
+            {
+                question: "If R squared equals 0.75 in a regression analysis, it means:",
+                options: [
+                    "X explains 75% of the variation in Y",
+                    "Y causes 75% of the variation in X",
+                    "75% of the data is valid",
+                    "The model is definitely wrong"
+                ],
+                answer: 0,
+                explanation: "R squared is the coefficient of determination: the proportion of variance in the dependent variable explained by the independent variable(s)."
+            },
+            {
+                question: "Which of the following is NOT one of the 6 Vs of Big Data?",
+                options: [
+                    "Volume",
+                    "Velocity",
+                    "Variability",
+                    "Valuation"
+                ],
+                answer: 3,
+                explanation: "The 6 Vs of Big Data are Volume, Variety, Velocity, Veracity, Value and Variability; 'Valuation' is not among them."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm06', 'MMPM06', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

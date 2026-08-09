@@ -162,17 +162,7 @@
         e.target.classList.add('active');
         
         const subject = e.target.dataset.subject;
-        currentCards = subject === 'all' ? allCards : allCards.filter(c => c.subject.toLowerCase() === subject);
-        currentIndex = 0;
-        
-        if (currentCards.length > 0) {
-            renderCard();
-            document.getElementById('noCards').style.display = 'none';
-            document.getElementById('flashcardPanel').style.display = 'block';
-        } else {
-            document.getElementById('flashcardPanel').style.display = 'none';
-            document.getElementById('noCards').style.display = 'block';
-        }
+        renderFlashcards(subject === 'all' ? allCards : allCards.filter(c => c.subject.toLowerCase() === subject));
     });
 
     // Initialize

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-02 Sales Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-02 Sales Management Quiz</h1>
+        <p>Test your knowledge of Sales Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "According to the AMA, sales management is the planning, direction, and control of:",
+                options: [
+                    "Advertising campaigns of a business unit",
+                    "Personal selling activities of a business unit",
+                    "Financial budgets of a business unit",
+                    "Warehousing operations of a business unit"
+                ],
+                answer: 1,
+                explanation: "The AMA defines sales management as 'the planning, direction, and control of the personal selling activities of a business unit,' including recruiting, selecting, training, equipping, assigning, routing, supervising, paying, and motivating the sales force."
+            },
+            {
+                question: "According to Kotler, which of the following is a quality of a good salesperson?",
+                options: [
+                    "Empathy",
+                    "Warehouse capacity",
+                    "Brand patents",
+                    "Loyalty discounts"
+                ],
+                answer: 0,
+                explanation: "Kotler's qualities of a good salesperson include empathy, self-drive, resilience, communication, product knowledge, and problem-solving. Empathy is the ability to understand the customer's perspective and feelings."
+            },
+            {
+                question: "In Kirkpatrick's four levels of training evaluation, which level measures actual business outcomes such as sales volume and conversion rates?",
+                options: [
+                    "Reaction",
+                    "Learning",
+                    "Behaviour",
+                    "Results"
+                ],
+                answer: 3,
+                explanation: "The Results level measures business outcomes such as sales volume, conversion rates, and customer satisfaction. Reaction uses feedback forms, Learning uses pre/post tests, and Behaviour is assessed through field observation."
+            },
+            {
+                question: "LIC agents who earn only a percentage of the premiums they collect are on a:",
+                options: [
+                    "Straight salary plan",
+                    "Straight commission plan",
+                    "Combination plan",
+                    "Bonus-only plan"
+                ],
+                answer: 1,
+                explanation: "LIC agents work on straight commission: pay based entirely on sales results with no fixed salary; new agents get 25% first-year commission on regular premium policies. Combination plans (salary plus commission) are the most common in India."
+            },
+            {
+                question: "Using the workload method, a district has 10,000 retailers needing 4 calls per month, and one salesperson can make 500 calls per month. How many salespersons are needed?",
+                options: [
+                    "40",
+                    "60",
+                    "80",
+                    "100"
+                ],
+                answer: 2,
+                explanation: "Total calls per month = 10,000 x 4 = 40,000. One salesperson makes 500 calls per month. Sales force needed = 40,000 / 500 = 80 salespersons."
+            },
+            {
+                question: "Which qualitative forecasting method uses iterative surveys of experts until consensus is reached?",
+                options: [
+                    "Delphi method",
+                    "Time series analysis",
+                    "Moving average",
+                    "Exponential smoothing"
+                ],
+                answer: 0,
+                explanation: "The Delphi method uses iterative surveys of experts until consensus is reached and is used for long-range strategic forecasting. Time series, moving average, and exponential smoothing are quantitative, data-based methods."
+            },
+            {
+                question: "Which step of the 7-step personal selling process involves identifying potential customers or leads?",
+                options: [
+                    "Prospecting",
+                    "Pre-approach",
+                    "Approach",
+                    "Closing"
+                ],
+                answer: 0,
+                explanation: "Prospecting identifies potential customers (leads) through referrals, cold calling, trade shows, and website inquiries. The 7 steps are: Prospecting, Pre-approach, Approach, Presentation, Handling objections, Closing, and Follow-up."
+            },
+            {
+                question: "Compared with the AIDA model, AIDAS adds which stage that is possible only in face-to-face selling?",
+                options: [
+                    "Attention",
+                    "Interest",
+                    "Satisfaction",
+                    "Desire"
+                ],
+                answer: 2,
+                explanation: "AIDAS adds Satisfaction to AIDA. AIDA applies to one-way communication such as sales letters and advertisements; the extra S in AIDAS represents post-purchase follow-up, which is only possible in two-way personal selling."
+            },
+            {
+                question: "In negotiation, BATNA refers to:",
+                options: [
+                    "The final price offered to the customer",
+                    "Your best alternative if the current negotiation fails",
+                    "The opening offer in a negotiation",
+                    "A written contract clause"
+                ],
+                answer: 1,
+                explanation: "BATNA is the Best Alternative To a Negotiated Agreement: your fallback option if the current negotiation fails. A strong BATNA gives you confidence and leverage, so you should never negotiate from a position of weakness."
+            },
+            {
+                question: "A territory has fixed costs of Rs 5,00,000, a selling price of Rs 500 per unit, and a variable cost of Rs 300 per unit. The break-even point in units is:",
+                options: [
+                    "1,000 units",
+                    "1,500 units",
+                    "2,000 units",
+                    "2,500 units"
+                ],
+                answer: 3,
+                explanation: "Contribution margin = Rs 500 - Rs 300 = Rs 200 per unit. Break-even = Fixed Costs / Contribution Margin = Rs 5,00,000 / Rs 200 = 2,500 units. Sales beyond 2,500 units generate pure profit of Rs 200 per unit."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm02', 'MMPM02', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

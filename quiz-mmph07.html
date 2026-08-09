@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPH-07 Compensation Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPH-07 Compensation Management Quiz</h1>
+        <p>Test your knowledge of Compensation Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is direct compensation?",
+                options: [
+                    "PF and pension",
+                    "Basic pay, DA and overtime",
+                    "Medical insurance",
+                    "Housing allowance"
+                ],
+                answer: 1,
+                explanation: "Direct compensation includes basic pay, dearness allowance, overtime, incentives, bonus and commissions. PF, pension, medical insurance and housing are indirect (fringe) benefits."
+            },
+            {
+                question: "According to Vroom, motivation equals expectancy x instrumentality x:",
+                options: [
+                    "Valence",
+                    "Validity",
+                    "Volume",
+                    "Variance"
+                ],
+                answer: 0,
+                explanation: "Vroom's expectancy theory states Motivation = Expectancy x Instrumentality x Valence. If any factor is zero, motivation becomes zero."
+            },
+            {
+                question: "Equity theory, which says employees compare their input-outcome ratios, was proposed by:",
+                options: [
+                    "Vroom",
+                    "Herzberg",
+                    "Adams",
+                    "Maslow"
+                ],
+                answer: 2,
+                explanation: "Adams (1963) proposed equity theory: employees compare their input-outcome ratio with others. Inequity can lead to reduced effort, seeking a raise, rationalizing, changing comparison targets or quitting."
+            },
+            {
+                question: "The expatriate pay approach that maintains the home-country standard of living is the:",
+                options: [
+                    "Going Rate",
+                    "Balance Sheet",
+                    "Cafeteria",
+                    "Market Pricing"
+                ],
+                answer: 1,
+                explanation: "The Balance Sheet approach keeps the expatriate's home-country standard of living using base salary, cost-of-living differential, housing, tax equalisation and hardship premium. The Going Rate approach uses host-country market rates."
+            },
+            {
+                question: "The Minimum Wages Act was enacted in:",
+                options: [
+                    "1936",
+                    "1965",
+                    "1972",
+                    "1948"
+                ],
+                answer: 3,
+                explanation: "The Minimum Wages Act came in 1948. The Payment of Wages Act is 1936, the Equal Remuneration Act 1976 and the Payment of Bonus Act 1965 - all now merged into the Code on Wages 2019."
+            },
+            {
+                question: "Of the employer's 12% provident fund contribution, the share credited to EPS (pension) is:",
+                options: [
+                    "8.33%",
+                    "3.67%",
+                    "12%",
+                    "6%"
+                ],
+                answer: 0,
+                explanation: "The employer's 12% contribution is split as 8.33% to the Employees' Pension Scheme and 3.67% to the EPF. The employee contributes 12% to the EPF, and the UAN makes it portable."
+            },
+            {
+                question: "Gratuity is calculated using the formula:",
+                options: [
+                    "(Last salary x 12 x years)/30",
+                    "(Last salary x 10 x years)/20",
+                    "(Last salary x 15 x years)/30",
+                    "(Last salary x 15 x years)/26"
+                ],
+                answer: 3,
+                explanation: "Gratuity = (Last salary x 15 x years of service)/26, payable after 5+ years of service. It is employer-funded and tax-free up to Rs 20 lakh under the Gratuity Act 1972."
+            },
+            {
+                question: "Job evaluation determines the relative worth of:",
+                options: [
+                    "The person performing the job",
+                    "The job itself",
+                    "The work output only",
+                    "The department head"
+                ],
+                answer: 1,
+                explanation: "Job evaluation is a systematic method to determine the relative worth of jobs - it evaluates the job, not the person (that is merit rating). Work study measures work output."
+            },
+            {
+                question: "The most popular quantitative job evaluation method is:",
+                options: [
+                    "Ranking",
+                    "Classification",
+                    "Point rating",
+                    "Factor comparison"
+                ],
+                answer: 2,
+                explanation: "Point rating (mnemonic RCPF) is the most popular method: 5-8 factors are scored in degrees and summed - e.g., 150 points for a sweeper versus 316 for a turner. Ranking and Classification are qualitative methods."
+            },
+            {
+                question: "The 7th Pay Commission set the minimum monthly pay for central government employees at:",
+                options: [
+                    "Rs 7,000",
+                    "Rs 12,000",
+                    "Rs 18,000",
+                    "Rs 25,000"
+                ],
+                answer: 2,
+                explanation: "The 7th Pay Commission (2016) set the minimum at Rs 18,000 with a fitment factor of 2.57x. Earlier commissions: the 5th (1996) set Rs 2,550 and the 6th (2006) Rs 7,000."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmph07', 'MMPH07', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

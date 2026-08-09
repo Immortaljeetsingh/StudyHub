@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>IGNOU MMPC-02 Human Resource Management Solved Assignments 2026 | StudyHub</title>
@@ -26,7 +27,7 @@
       "name": "What is the syllabus for IGNOU MMPC-02 Human Resource Management?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IGNOU MMPC-02 Human Resource Management syllabus covers 15 units: Introduction to HRM, Human Resource Planning, Job Analysis, Recruitment, Selection, Training & Development, and more. StudyHub covers all units with detailed notes."
+        "text": "The IGNOU MMPC-02 Human Resource Management syllabus covers 14 units: Concept & Evolution of HRM, Functions of HRM, Human Resource Planning, Recruitment & Selection, Training & Development, Compensation & Rewards Management, and more. StudyHub covers all units with detailed notes."
       }
     },
     {
@@ -34,7 +35,7 @@
       "name": "Where can I get free IGNOU MMPC-02 study material?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-02 Human Resource Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material."
+        "text": "StudyHub provides free comprehensive study notes for IGNOU MMPC-02 Human Resource Management covering all 14 units with diagrams, examples, and exam tips, plus solved assignment questions and model answers on this page. Visit our study notes page for the complete material."
       }
     },
     {
@@ -58,7 +59,15 @@
       "name": "How many units are there in IGNOU MMPC-02?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "IGNOU MMPC-02 Human Resource Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively."
+        "text": "IGNOU MMPC-02 Human Resource Management has 14 units organized across multiple blocks. StudyHub covers all units comprehensively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does StudyHub provide solved assignment answers for MMPC-02?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This solved assignments page contains IGNOU-style assignment questions with model answers drawn from the units of MMPC-02, covering topics such as the evolution of HRM, training and development, performance appraisal, and collective bargaining. Every unit card also links to the full study notes."
       }
     }
   ]
@@ -87,7 +96,7 @@
   }
 }</script>
 <style>
-  .landing-hero{background:linear-gradient(135deg,var(--bg-surface),var(--bg-primary));padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
@@ -108,15 +117,50 @@
   .breadcrumb{margin-bottom:1.5rem;font-size:0.85rem;color:var(--text-secondary)}
   .breadcrumb a{color:var(--accent);text-decoration:none}
   .breadcrumb a:hover{text-decoration:underline}
-  .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
+  .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+  .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
+  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
+  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
+  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
+  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
+  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
+  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
+  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .unit-accordion[open] summary::after{transform:rotate(90deg)}
+  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
+  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
+  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body class="subject-mmpc02">
-<div style="max-width:900px;margin:0 auto;padding:1.5rem">
+<div class="fx-mesh" aria-hidden="true"></div>
+<div style="max-width:900px;margin:0 auto;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom))">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="study-hub.html">StudyHub</a> &rsaquo;
     <a href="study-hub.html">IGNOU MBA</a> &rsaquo;
@@ -124,10 +168,12 @@
     <span>Solved Assignments</span>
   </nav>
 
-  <div class="landing-hero">
+  <div class="landing-hero reveal">
     <h1>IGNOU MMPC-02 Human Resource Management - Solved Assignments 2026</h1>
-    <p>Looking for <strong>IGNOU MMPC-02 Human Resource Management solved assignments</strong>? StudyHub provides comprehensive solved assignment answers for all 15 units of MMPC-02. Our answers are written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, diagrams, and Indian examples to help you score maximum marks.</p>
-    <a href="study-mmpc02.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <p>Looking for <strong>IGNOU MMPC-02 Human Resource Management solved assignments</strong>? You are at the right place. This page contains solved assignment questions with model answers drawn from the 14 units of MMPC-02, written by MBA experts and updated for the 2026 IGNOU session. Each answer includes key concepts, definitions, and Indian examples to help you score maximum marks, and every unit card links to the full study notes for reference.</p>
+    <a href="quiz-mmpc02.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
+    <a href="mmpc02-question-paper.html" class="landing-cta btn-fx" role="button">Solved Question Paper &rarr;</a>
+    <a href="study-mmpc02.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <section>
@@ -135,95 +181,125 @@
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse solved assignments for each unit of IGNOU MMPC-02 Human Resource Management. Click any unit to read the complete study notes.</p>
     <div class="unit-grid">
 
-      <div class="unit-preview">
-        <h3>Unit 1: Introduction to HRM</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Introduction to HRM in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 1: Concept &amp; Evolution of HRM</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Concept &amp; Evolution of HRM in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u1" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 2: Human Resource Planning</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Human Resource Planning in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 2: Functions of HRM</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Functions of HRM in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u2" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 3: Job Analysis</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Job Analysis in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 3: Environment &amp; Strategic HRM</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Environment &amp; Strategic HRM in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u3" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 4: Recruitment</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Recruitment in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 4: Human Resource Planning</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Human Resource Planning in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u4" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 5: Selection</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Selection in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 5: Job Analysis, Design &amp; Evaluation</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Job Analysis, Design &amp; Evaluation in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u5" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 6: Training & Development</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Training & Development in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 6: Recruitment &amp; Selection</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Recruitment &amp; Selection in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u6" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 7: Performance Appraisal</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Performance Appraisal in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 7: Socialization &amp; Mobility</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Socialization &amp; Mobility in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u7" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 8: Compensation Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Compensation Management in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 8: Performance Appraisal</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Performance Appraisal in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u8" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 9: Employee Relations</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Employee Relations in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 9: Career Development</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Career Development in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u9" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 10:  Grievance Handling</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for  Grievance Handling in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 10: Training &amp; Development</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Training &amp; Development in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u10" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 11: Discipline Management</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Discipline Management in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 11: Compensation &amp; Rewards Management</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Compensation &amp; Rewards Management in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u11" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 12: HR Information System</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for HR Information System in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 12: Employee Empowerment</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Employee Empowerment in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u12" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 13: Quality of Work Life</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Quality of Work Life in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 13: Grievance Handling &amp; Discipline</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Grievance Handling &amp; Discipline in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u13" class="unit-link">Read Full Notes &rarr;</a>
       </div>
 
-      <div class="unit-preview">
-        <h3>Unit 14: International HRM</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for International HRM in the context of Human Resource Management.</p>
+      <div class="unit-preview fx-card">
+        <h3>Unit 14: Unions &amp; Associations</h3>
+        <p>Key concepts, definitions, diagrams, and exam-ready notes for Unions &amp; Associations in the context of Human Resource Management.</p>
         <a href="study-mmpc02.html#u14" class="unit-link">Read Full Notes &rarr;</a>
       </div>
+    </div>
+  </section>
 
-      <div class="unit-preview">
-        <h3>Unit 15: Emerging Trends in HRM</h3>
-        <p>Key concepts, definitions, diagrams, and exam-ready notes for Emerging Trends in HRM in the context of Human Resource Management.</p>
-        <a href="study-mmpc02.html#u15" class="unit-link">Read Full Notes &rarr;</a>
-      </div>
+    <section class="qa-section">
+    <h2>Solved Assignment Questions &amp; Answers</h2>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q1. Discuss the evolution of Human Resource Management and the changing role of the HR function.</h3>
+      <p class="answer"><strong>Answer:</strong> HRM has evolved through five stages. Industrial Welfare (1880s&ndash;1910s) began with the Factories Act 1881 and early welfare programs such as Tata Steel's 1912 initiatives, which introduced the eight-hour workday, free medical aid, and provident fund. Personnel Management (1910s&ndash;1960s) focused on record keeping and payroll administration. Industrial Relations (1930s&ndash;1980s) emphasized unions and collective bargaining, as seen in the Birla Group's labor welfare initiatives. Strategic HRM (1980s&ndash;2000s) aligned HR with business strategy, with Infosys building global HR systems in the 1990s to support its global delivery model. Digital HR (2000s&ndash;present) uses AI, people analytics, and remote work platforms, such as TCS's AI-driven learning platform iEvolve. The role has changed from a clerical welfare function to a strategic business partner. As Gary Dessler defined it, HRM covers acquiring, training, appraising, and compensating employees, plus labor relations, health, safety, and fairness. J.R.D. Tata's Tata Administrative Service (1956), modeled on the IAS, created a pipeline of future leaders and set benchmarks that Indian industry still follows.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>HRM has evolved through five stages.</li>        <li>Industrial Welfare (1880s&ndash;1910s) began with the Factories Act 1881 and early welfare programs such as Tata Steel's 1912 initiatives, which introduced the eight-hour workday, free medical aid, and provident fund.</li>        <li>Personnel Management (1910s&ndash;1960s) focused on record keeping and payroll administration.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Tata's Tata Administrative Service (1956), modeled on the IAS, created a pipeline of future leaders and set benchmarks that Indian industry still follows.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q2. Differentiate between training and development. Describe the training process.</h3>
+      <p class="answer"><strong>Answer:</strong> Training is a systematic process of enhancing knowledge, skills, and abilities for the employee's current job; it is short-term, specific, has measurable outcomes, and offers immediate application. Development is broader and long-term, preparing employees for future roles through conceptual knowledge and career growth. Training typically uses on-the-job methods such as job instruction, coaching, mentoring, and job rotation, while development leans on off-the-job methods like lectures, case studies, role play, and simulations, supplemented by technology-based e-learning. The training process has five steps: needs assessment to identify skill gaps; setting measurable objectives; program design covering curriculum and methods; implementation of the training; and evaluation of effectiveness. Kirkpatrick's model evaluates at four levels: reaction, learning, behavior, and results. Mahindra's Leadership University runs 500+ programs, and its "Born Digital" initiative trained 15,000 employees in AI, cloud, and analytics, cutting external tech hiring by 40%. Marico invests 2% of its HR budget in training, focusing on digital marketing and data analytics skills.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Training is a systematic process of enhancing knowledge, skills, and abilities for the employee's current job; it is short-term, specific, has measurable outcomes, and offers immediate application.</li>        <li>Training typically uses on-the-job methods such as job instruction, coaching, mentoring, and job rotation, while development leans on off-the-job methods like lectures, case studies, role play, and simulations, supplemented by technology-based e-learning.</li>        <li>Development is broader and long-term, preparing employees for future roles through conceptual knowledge and career growth.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Marico invests 2% of its HR budget in training, focusing on digital marketing and data analytics skills.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q3. Explain the modern methods of performance appraisal. What rating errors should appraisers avoid?</h3>
+      <p class="answer"><strong>Answer:</strong> Modern appraisal methods include BARS (Behaviorally Anchored Rating Scales), which anchor each performance dimension with concrete behavior descriptions; MBO (Management by Objectives), where manager and employee jointly set measurable objectives; 360-degree feedback, which collects ratings from self, supervisor, peers, subordinates, and customers, and is best suited to leadership development; and assessment centers, which combine multiple exercises. These methods are more objective than traditional graphic rating scales, essays, and confidential reports. Common rating errors are the halo effect (one strong trait inflates all ratings), recency bias (judging only recent performance), central tendency (rating everyone average, countered by forced distribution), and leniency or strictness (consistently high or low ratings, countered by calibration sessions). Appraisal serves career development, compensation, training needs identification, succession planning, and legal documentation. Tata Steel's TBEM uses a balanced scorecard of financial, customer, process, and learning measures, while Wipro's "Spirit of Wipro" replaced annual reviews with quarterly "connect" conversations and a talent grid of performance and potential, cutting appraisal grievances by 60%.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Modern appraisal methods include BARS (Behaviorally Anchored Rating Scales), which anchor each performance dimension with concrete behavior descriptions; MBO (Management by Objectives), where manager and employee jointly set measurable objectives; 360-degree feedback, which collects ratings from self, supervisor, peers, subordinates, and customers, and is best suited to leadership development; and assessment centers, which combine multiple exercises.</li>        <li>Tata Steel's TBEM uses a balanced scorecard of financial, customer, process, and learning measures, while Wipro's "Spirit of Wipro" replaced annual reviews with quarterly "connect" conversations and a talent grid of performance and potential, cutting appraisal grievances by 60%.</li>        <li>These methods are more objective than traditional graphic rating scales, essays, and confidential reports.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Tata Steel's TBEM uses a balanced scorecard of financial, customer, process, and learning measures, while Wipro's "Spirit of Wipro" replaced annual reviews with quarterly "connect" conversations and a talent grid of performance and potential, cutting appraisal grievances by 60%.</p>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-item">
+      <h3>Q4. What is collective bargaining? Differentiate between collective bargaining, conciliation, and arbitration.</h3>
+      <p class="answer"><strong>Answer:</strong> Collective bargaining is the direct negotiation between a trade union and management over wages, working conditions, and terms of employment, without any third party; its outcome is a written collective agreement. The process runs through preparation, negotiation, agreement, implementation, and administration. Conciliation is a form of third-party intervention in which the conciliator facilitates discussion between the parties but cannot impose a solution. Arbitration goes further: the arbitrator, a neutral third party, hears both sides and gives a binding decision. Strikes and lockouts are weapons of last resort. Trade unions &mdash; craft, industrial, general, or white-collar &mdash; are regulated in India under the Trade Unions Act, 1926, and their functions include collective bargaining, representation, welfare, and political action. The Industrial Disputes Act, 1947 provides for conciliation, arbitration, and adjudication of disputes. Air India illustrates both the power and the challenges of unionization in the public sector: its recognized unions for pilots (IPG), cabin crew, and ground staff negotiate salary revisions, working hours, and safety protocols.</p>
+      <p><strong>Key points:</strong></p>
+      <ul class="key-points">        <li>Collective bargaining is the direct negotiation between a trade union and management over wages, working conditions, and terms of employment, without any third party; its outcome is a written collective agreement.</li>        <li>Trade unions &mdash; craft, industrial, general, or white-collar &mdash; are regulated in India under the Trade Unions Act, 1926, and their functions include collective bargaining, representation, welfare, and political action.</li>        <li>The process runs through preparation, negotiation, agreement, implementation, and administration.</li></ul>
+      <p class="takeaway"><strong>Takeaway:</strong> Air India illustrates both the power and the challenges of unionization in the public sector: its recognized unions for pilots (IPG), cabin crew, and ground staff negotiate salary revisions, working hours, and safety protocols.</p>
     </div>
   </section>
 
@@ -231,11 +307,11 @@
     <h2>Frequently Asked Questions - IGNOU MMPC-02 Human Resource Management</h2>
     <details class="faq-item">
       <summary>What is the syllabus for IGNOU MMPC-02 Human Resource Management?</summary>
-      <p>The IGNOU MMPC-02 Human Resource Management syllabus covers 15 units: Introduction to HRM, Human Resource Planning, Job Analysis, Recruitment, Selection, Training & Development, and more. StudyHub covers all units with detailed notes.</p>
+      <p>The IGNOU MMPC-02 Human Resource Management syllabus covers 14 units: Concept &amp; Evolution of HRM, Functions of HRM, Human Resource Planning, Recruitment &amp; Selection, Training &amp; Development, Compensation &amp; Rewards Management, and more. StudyHub covers all units with detailed notes.</p>
     </details>
     <details class="faq-item">
       <summary>Where can I get free IGNOU MMPC-02 study material?</summary>
-      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-02 Human Resource Management covering all 15 units with diagrams, examples, and exam tips. Visit our study notes page for the complete material.</p>
+      <p>StudyHub provides free comprehensive study notes for IGNOU MMPC-02 Human Resource Management covering all 14 units with diagrams, examples, and exam tips, plus solved assignment questions and model answers on this page. Visit our study notes page for the complete material.</p>
     </details>
     <details class="faq-item">
       <summary>How to prepare for IGNOU MMPC-02 exam?</summary>
@@ -247,7 +323,11 @@
     </details>
     <details class="faq-item">
       <summary>How many units are there in IGNOU MMPC-02?</summary>
-      <p>IGNOU MMPC-02 Human Resource Management has 15 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+      <p>IGNOU MMPC-02 Human Resource Management has 14 units organized across multiple blocks. StudyHub covers all units comprehensively.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does StudyHub provide solved assignment answers for MMPC-02?</summary>
+      <p>Yes. This solved assignments page contains IGNOU-style assignment questions with model answers drawn from the units of MMPC-02, covering topics such as the evolution of HRM, training and development, performance appraisal, and collective bargaining. Every unit card also links to the full study notes.</p>
     </details>
   </section>
 
@@ -256,12 +336,12 @@
     <div class="related-grid">
       <a href="study-mmpc01.html">MMPC-01 Management Functions</a>
       <a href="study-mmpc03.html">MMPC-03 Business Environment</a>
-      <a href="study-mmpc04.html">MMPC-04 Accounting & Finance</a>
+      <a href="study-mmpc04.html">MMPC-04 Accounting &amp; Finance</a>
       <a href="study-mmpc05.html">MMPC-05 Quantitative Analysis</a>
       <a href="study-mmpc06.html">MMPC-06 Marketing Management</a>
       <a href="study-mmpc07.html">MMPC-07 Business Communication</a>
       <a href="study-mmpc08.html">MMPC-08 Information Systems</a>
-      <a href="study-mmpc09.html">MMPC-09 Machines & Materials</a>
+      <a href="study-mmpc09.html">MMPC-09 Machines &amp; Materials</a>
       <a href="study-mmpc10.html">MMPC-10 Managerial Economics</a>
       <a href="study-mmpc11.html">MMPC-11 Social Processes</a>
       <a href="study-mmpc12.html">MMPC-12 Strategic Management</a>
@@ -270,12 +350,13 @@
   </div>
 
   <div style="text-align:center;margin:2rem 0">
-    <a href="study-mmpc02.html" class="landing-cta">View Full Study Notes &rarr;</a>
+    <a href="study-mmpc02.html" class="landing-cta btn-fx">View Full Study Notes &rarr;</a>
   </div>
 
   <footer style="text-align:center;padding:2rem 0;color:var(--text-secondary);font-size:0.8rem;border-top:1px solid var(--glass-border);margin-top:2rem">
     <p>StudyHub - Free IGNOU MBA Study Material | <a href="study-hub.html" style="color:var(--accent)">Browse All 43 Subjects</a></p>
   </footer>
 </div>
+    <script src="pwa-register.js" defer></script>
 </body>
 </html>

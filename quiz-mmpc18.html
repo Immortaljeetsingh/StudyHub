@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-18 Entrepreneurship - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-18 Entrepreneurship Quiz</h1>
+        <p>Test your knowledge of Entrepreneurship</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which scholar is associated with the concept of 'creative destruction' in entrepreneurship?",
+                options: [
+                    "Cantillon",
+                    "Adam Smith",
+                    "Kirzner",
+                    "Schumpeter"
+                ],
+                answer: 3,
+                explanation: "Schumpeter (1934) is known for innovation and creative destruction, where innovation destroys the old equilibrium and creates new value. It is the most frequently tested concept in MMPC-18, so cite him first in any entrepreneurship definition question."
+            },
+            {
+                question: "An intrapreneur is best described as someone who:",
+                options: [
+                    "Innovates within an existing company using company resources",
+                    "Starts a new venture with personal financial risk",
+                    "Avoids risk and manages routine operations",
+                    "Mobilizes all resources himself or herself"
+                ],
+                answer: 0,
+                explanation: "An intrapreneur is an entrepreneur within an existing organization. The company bears the risk and provides resources, and the reward is salary plus bonus. Sundar Pichai, who innovated Gmail and Chrome at Google, is an example."
+            },
+            {
+                question: "The triple bottom line concept measures an enterprise's performance across:",
+                options: [
+                    "People, Planet, Profit",
+                    "Price, Promotion, Place",
+                    "Profit, Product, People",
+                    "Planet, Process, People"
+                ],
+                answer: 0,
+                explanation: "The triple bottom line evaluates social impact (People), environmental impact (Planet), and financial returns (Profit). Social entrepreneurship is assessed on this basis, while the double bottom line covers social impact plus financial sustainability."
+            },
+            {
+                question: "Under the MSME classification, a Micro enterprise has an investment in plant and machinery of up to:",
+                options: [
+                    "Rs 5 crore",
+                    "Rs 50 crore",
+                    "Rs 1 crore",
+                    "Rs 10 crore"
+                ],
+                answer: 2,
+                explanation: "Micro enterprises have investment up to Rs 1 crore and turnover up to Rs 5 crore. The mnemonic 'M-S-M = 1-10-50' stands for Micro (1 crore), Small (10 crore), and Medium (50 crore) investment limits."
+            },
+            {
+                question: "MUDRA Yojana provides loans to micro and small units of up to:",
+                options: [
+                    "Rs 10 lakh",
+                    "Rs 1 lakh",
+                    "Rs 50 lakh",
+                    "Rs 1 crore"
+                ],
+                answer: 0,
+                explanation: "MUDRA (Micro Units Development and Refinance Agency) provides loans up to Rs 10 lakh to small entrepreneurs. It is a key government financing scheme along with PMEGP, Startup India, and Stand-Up India."
+            },
+            {
+                question: "In the SCAMPER method, combining a phone with a camera to create the smartphone is an example of:",
+                options: [
+                    "Modify",
+                    "Substitute",
+                    "Combine",
+                    "Adapt"
+                ],
+                answer: 2,
+                explanation: "The 'C' in SCAMPER stands for Combine - merging two elements to create something new. Zomato combined food ordering, technology, and delivery, while Airbnb adapted the sharing model to housing."
+            },
+            {
+                question: "The break-even point (BEP) is calculated as:",
+                options: [
+                    "Variable Cost / (Market Price - Fixed Cost)",
+                    "Fixed Cost / (Market Price per unit - Variable Cost per unit)",
+                    "Fixed Cost x (Market Price - Variable Cost)",
+                    "(Market Price - Variable Cost) / Fixed Cost"
+                ],
+                answer: 1,
+                explanation: "BEP = Fixed Cost / (Market Price per unit - Variable Cost per unit). In the worked example, fixed cost of Rs 36,20,000 with a price of Rs 440 and variable cost of Rs 40 per unit gives BEP = 36,20,000 / 400 = 9,050 units."
+            },
+            {
+                question: "The correct sequence of financing stages for a new enterprise is:",
+                options: [
+                    "Seed, Growth, Startup, Expansion",
+                    "Startup, Seed, Expansion, Growth",
+                    "Growth, Startup, Seed, Expansion",
+                    "Seed, Startup, Growth, Expansion"
+                ],
+                answer: 3,
+                explanation: "The stages are Seed (savings, family), Startup (angels, grants), Growth (VC, banks), and Expansion (IPO, corporate). Flipkart moved from Rs 4 lakh bootstrapping to angel funding to VC funding and finally the Walmart acquisition."
+            },
+            {
+                question: "According to the study material, the biggest challenge of family businesses is:",
+                options: [
+                    "Excess government regulation",
+                    "High marketing costs",
+                    "Succession planning",
+                    "Low product quality"
+                ],
+                answer: 2,
+                explanation: "Succession planning - deciding who takes over next - is the #1 topic in family business questions. Reliance (conflict between Mukesh and Anil) contrasts with Tata (smooth succession and professional management)."
+            },
+            {
+                question: "According to utilitarianism, an action is ethical if it:",
+                options: [
+                    "Follows a universal rule or duty",
+                    "Builds the character of the decision maker",
+                    "Is accepted by local culture",
+                    "Produces the greatest good for the greatest number"
+                ],
+                answer: 3,
+                explanation: "Utilitarianism (Bentham and Mill) judges actions by outcomes - the greatest good for the greatest number, applied through cost-benefit analysis. The three ethical theories are Utilitarianism, Deontological (duty-based), and Virtue Ethics (character-based)."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc18', 'MMPC18', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

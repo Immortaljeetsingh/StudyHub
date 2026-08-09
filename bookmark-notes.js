@@ -11,12 +11,11 @@
     // ==================== INIT ====================
     function init() {
         const currentPage = window.location.pathname.split('/').pop();
-        const isStudyPage = currentPage.match(/^study-mmpc\d+\.html$/);
+        const isStudyPage = currentPage.match(/^study-(?!hub)[a-z]+\d+\.html$/);
         
         if (isStudyPage) {
             addBookmarkButton();
             addNotesButton();
-            loadNotes();
         }
         
         // Update sidebar bookmarks (runs on all pages)
@@ -70,7 +69,7 @@
         const isBookmarked = bookmarks.some(b => b.url === currentPage);
         
         btn.innerHTML = isBookmarked ? '★' : '☆';
-        btn.classList.toggle('bookmarked', isBookmarked);
+        btn.classList.toggle('active', isBookmarked);
         btn.setAttribute('aria-label', isBookmarked ? 'Remove bookmark' : 'Bookmark this page');
     }
 
@@ -93,17 +92,39 @@
         const bookmarks = getBookmarks();
         
         if (bookmarks.length === 0) {
-            container.innerHTML = '<div style="padding: 0.5rem 0.75rem; color: var(--text-muted); font-size: 0.8rem;">No bookmarks yet</div>';
+            const empty = document.createElement('div');
+            empty.style.padding = '0.5rem 0.75rem';
+            empty.style.color = 'var(--text-muted)';
+            empty.style.fontSize = '0.8rem';
+            empty.textContent = 'No bookmarks yet';
+            container.replaceChildren(empty);
             return;
         }
         
-        container.innerHTML = bookmarks.map((b, i) => `
-            <div class="sidebar-bookmark-item">
-                <span class="sidebar-bookmark-icon">🔖</span>
-                <a href="${b.url}" style="flex: 1; color: inherit; text-decoration: none;">${b.title}</a>
-                <button class="sidebar-bookmark-remove" onclick="event.preventDefault(); event.stopPropagation(); removeBookmark(${i});" aria-label="Remove bookmark">×</button>
-            </div>
-        `).join('');
+        container.replaceChildren(...bookmarks.map((b, i) => {
+            const item = document.createElement('div');
+            item.className = 'sidebar-bookmark-item';
+            
+            const icon = document.createElement('span');
+            icon.className = 'sidebar-bookmark-icon';
+            icon.textContent = '🔖';
+            
+            const link = document.createElement('a');
+            link.href = b.url;
+            link.style.flex = '1';
+            link.style.color = 'inherit';
+            link.style.textDecoration = 'none';
+            link.textContent = b.title;
+            
+            const remove = document.createElement('button');
+            remove.className = 'sidebar-bookmark-remove';
+            remove.setAttribute('aria-label', 'Remove bookmark');
+            remove.textContent = '×';
+            remove.addEventListener('click', () => removeBookmark(i));
+            
+            item.append(icon, link, remove);
+            return item;
+        }));
     }
 
     window.removeBookmark = function(index) {
@@ -133,9 +154,9 @@
             document.body.appendChild(panel);
         }
         
-        panel.classList.toggle('active');
+        panel.classList.toggle('open');
         
-        if (panel.classList.contains('active')) {
+        if (panel.classList.contains('open')) {
             // Focus textarea
             const textarea = document.getElementById('notesTextarea');
             if (textarea) setTimeout(() => textarea.focus(), 300);
@@ -164,7 +185,7 @@
         `;
         
         panel.querySelector('#notesClose').addEventListener('click', () => {
-            panel.classList.remove('active');
+            panel.classList.remove('open');
         });
         
         const textarea = panel.querySelector('#notesTextarea');
@@ -174,6 +195,7 @@
             saveTimeout = setTimeout(() => saveNotes(textarea.value), 500);
         });
         
+        loadNotes();
         return panel;
     }
 

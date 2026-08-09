@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-12 Strategic Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-12 Strategic Management Quiz</h1>
+        <p>Test your knowledge of Strategic Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is NOT one of Mintzberg's 5 Ps of strategy?",
+                options: [
+                    "Pattern",
+                    "Position",
+                    "Perspective",
+                    "Promotion"
+                ],
+                answer: 3,
+                explanation: "Mintzberg's 5 Ps are Pattern, Plan, Position, Perspective, and Ploy. Promotion is not part of the framework."
+            },
+            {
+                question: "A vision statement primarily answers the question:",
+                options: [
+                    "What business are we in?",
+                    "Where do we want to be?",
+                    "How do we evaluate performance?",
+                    "Who are our competitors?"
+                ],
+                answer: 1,
+                explanation: "Vision is future-oriented and aspirational, answering 'Where do we want to be?', while the mission is present-oriented and answers 'What business are we in?'."
+            },
+            {
+                question: "Perlmutter's EPRG framework includes ethnocentric, polycentric, regiocentric, and:",
+                options: [
+                    "Egocentric",
+                    "Geocentric",
+                    "Eurocentric",
+                    "Technocentric"
+                ],
+                answer: 1,
+                explanation: "The four EPRG orientations for international operations are ethnocentric (home country), polycentric (host country), regiocentric (region), and geocentric (global)."
+            },
+            {
+                question: "In the EFE Matrix, a total weighted score above 2.5 indicates:",
+                options: [
+                    "A strong external position",
+                    "A weak external position",
+                    "A balanced internal position",
+                    "A failing industry"
+                ],
+                answer: 0,
+                explanation: "EFE weights range from 0.0 to 1.0 and ratings from 1 to 4; a total weighted score above 2.5 signals a strong external position, while below 2.5 signals a weak one."
+            },
+            {
+                question: "In Porter's five forces model, which force is HIGH when products are undifferentiated and buyers are price-sensitive?",
+                options: [
+                    "Threat of substitutes",
+                    "Threat of new entrants",
+                    "Supplier power",
+                    "Bargaining power of buyers"
+                ],
+                answer: 3,
+                explanation: "Buyer power is high when products are undifferentiated or standardized, buyers are price-sensitive, and there is a credible threat of backward integration."
+            },
+            {
+                question: "According to the VRIN framework (Barney), resources must be valuable, rare, and inimitable, and also:",
+                options: [
+                    "Non-substitutable",
+                    "Numerous",
+                    "Negotiable",
+                    "New"
+                ],
+                answer: 0,
+                explanation: "VRIN stands for Valuable, Rare, Inimitable, and Non-substitutable. Resources meeting all four criteria can sustain competitive advantage under the resource-based view."
+            },
+            {
+                question: "A firm that fails to achieve any of Porter's three generic strategies is described as:",
+                options: [
+                    "A niche player",
+                    "A market leader",
+                    "Stuck in the middle",
+                    "A fast follower"
+                ],
+                answer: 2,
+                explanation: "'Stuck in the middle' describes firms that achieve neither cost leadership, differentiation, nor focus, which typically leads to poor performance."
+            },
+            {
+                question: "In the BCG matrix, businesses with high market share in low-growth markets are called:",
+                options: [
+                    "Stars",
+                    "Question marks",
+                    "Dogs",
+                    "Cash cows"
+                ],
+                answer: 3,
+                explanation: "Cash cows are market leaders in mature, slow-growing markets that generate more cash than they need and fund other business units. Stars are high-growth, high-share businesses."
+            },
+            {
+                question: "Which of the following is a HARD element in the McKinsey 7S framework?",
+                options: [
+                    "Style",
+                    "Staff",
+                    "Systems",
+                    "Shared values"
+                ],
+                answer: 2,
+                explanation: "The hard elements of the 7S framework are Strategy, Structure, and Systems. Style, staff, skills, and shared values are soft elements, with shared values at the centre."
+            },
+            {
+                question: "The five pillars of corporate governance are:",
+                options: [
+                    "Accountability, Fairness, Transparency, Integrity, Social Responsibility",
+                    "Profit, People, Planet, Process, Policy",
+                    "Planning, Organizing, Staffing, Directing, Controlling",
+                    "Vision, Mission, Goals, Objectives, Strategy"
+                ],
+                answer: 0,
+                explanation: "The five pillars (AFTIS) are Accountability, Fairness, Transparency, Integrity, and Social Responsibility, building on the Cadbury definition of governance as the system by which organizations are directed and controlled."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc12', 'MMPC12', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

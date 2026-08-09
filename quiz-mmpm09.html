@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-09 Retail Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-09 Retail Management Quiz</h1>
+        <p>Test your knowledge of Retail Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "What share of India's retail market is accounted for by the unorganized sector of kirana and small retailers?",
+                options: [
+                    "55%",
+                    "70%",
+                    "88%",
+                    "95%"
+                ],
+                answer: 2,
+                explanation: "India's retail market is worth about $1.2 trillion with 12 million+ small retailers, and the unorganized sector holds an 88% share. The market contributes 8-10% of GDP and is the 2nd largest employer after agriculture."
+            },
+            {
+                question: "Reliance Smart operates very large stores of 30,000-50,000 sq ft stocking 30,000+ SKUs at low prices. Which retail model is this?",
+                options: [
+                    "Specialty store",
+                    "Convenience store",
+                    "Hypermarket",
+                    "Warehouse club"
+                ],
+                answer: 2,
+                explanation: "A hypermarket is a very large store with a wide 'everything' assortment at low prices, like Reliance Smart. Specialty stores (Tanishq) are small with narrow deep assortments, convenience stores (24Seven) carry limited ranges, and warehouse clubs (Costco) sell bulk items on membership."
+            },
+            {
+                question: "The Wheel of Retailing theory says that new retail formats typically:",
+                options: [
+                    "Enter as high-price, high-service stores",
+                    "Enter as low-price, low-margin, low-status formats that upgrade over time and become vulnerable",
+                    "Never change their positioning over time",
+                    "Always target premium customers"
+                ],
+                answer: 1,
+                explanation: "The Wheel of Retailing describes new formats entering as low-price, low-margin, low-status operations, upgrading over time, and then becoming vulnerable to newer low-price entrants."
+            },
+            {
+                question: "Which store layout uses parallel aisles with a structured flow and is typically used by supermarkets?",
+                options: [
+                    "Free-flow",
+                    "Grid",
+                    "Loop (Racetrack)",
+                    "Herringbone"
+                ],
+                answer: 1,
+                explanation: "The GFLH layouts are: Grid (parallel aisles, structured flow, for supermarkets), Free-flow (open space, for boutiques), Loop/Racetrack (guided path, for malls), and Herringbone (main aisle with angled sides, for electronics)."
+            },
+            {
+                question: "What is the largest single cause of shrinkage (inventory loss) in Indian retail stores?",
+                options: [
+                    "Staff theft",
+                    "Shoplifting",
+                    "Administrative errors",
+                    "Supplier fraud"
+                ],
+                answer: 1,
+                explanation: "India's shrinkage rate is 2.38% (about Rs 3,470 crores), of which shoplifting accounts for 47.6% and staff theft for 25.5%. Prevention uses the STAFF approach: Surveillance, Technology, Audits, Fingerprinting, and Friendly staff."
+            },
+            {
+                question: "According to Huff's Gravity Model, a store's attraction for customers is based on:",
+                options: [
+                    "Floor space divided by the square of the distance from customers",
+                    "Advertising spend divided by the price level",
+                    "Staff size divided by the number of competitors",
+                    "Inventory value divided by store size"
+                ],
+                answer: 0,
+                explanation: "Huff's Gravity Model states Attraction = Floor Space / Distance squared. A 10,000 sq ft store at 2 km captured 75.8% of visits against a 20,000 sq ft store at 5 km, showing proximity beats size."
+            },
+            {
+                question: "Compared with national brands, private labels (store brands) typically earn the retailer margins of:",
+                options: [
+                    "5-10%",
+                    "15-20%",
+                    "25-30%",
+                    "50-60%"
+                ],
+                answer: 2,
+                explanation: "Private labels earn higher margins of 25-30% versus 15-20% for national brands, and they are growing at 15-20% annually in India. Trent's Westside runs on 90%+ private labels and is India's most successful private-label-only fashion retailer."
+            },
+            {
+                question: "Which retailer is the classic Indian example of the EDLP (Every Day Low Pricing) strategy?",
+                options: [
+                    "Shoppers Stop",
+                    "DMart",
+                    "Tanishq",
+                    "24Seven"
+                ],
+                answer: 1,
+                explanation: "DMart follows EDLP with no sales or coupons, cutting marketing costs by 30-40% versus high-low retailers. Shoppers Stop uses high-low pricing with 40-70% sale discounts, and psychological pricing uses Rs 999 instead of Rs 1,000."
+            },
+            {
+                question: "In the EOQ formula EOQ = sqrt(2DS/H), 'S' stands for:",
+                options: [
+                    "Demand",
+                    "Ordering cost",
+                    "Holding cost",
+                    "Safety stock"
+                ],
+                answer: 1,
+                explanation: "EOQ = sqrt(2DS/H) balances ordering and holding costs, where D is demand, S is ordering cost, and H is holding cost. Inventory turnover is COGS / Average Inventory, and JIT keeps minimal inventory with frequent replenishment."
+            },
+            {
+                question: "Customer Lifetime Value (CLV) is calculated as:",
+                options: [
+                    "Revenue from ads / Cost of ads",
+                    "Average purchase value x Purchase frequency x Customer lifespan",
+                    "Cost of goods sold / Average inventory",
+                    "Percent promoters - Percent detractors"
+                ],
+                answer: 1,
+                explanation: "CLV = Average purchase value x Purchase frequency x Customer lifespan; for example Rs 2,000 x 6 times a year x 5 years = Rs 60,000. NPS = % promoters - % detractors, and inventory turnover = COGS / Average inventory."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm09', 'MMPM09', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

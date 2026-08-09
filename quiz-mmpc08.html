@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPC-08 Information Systems - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body class="subject-mmpc08">
+    <div id="liveRegion" class="sr-only" aria-live="polite"></div>
+    <script src="api-utils.js"></script>
+    <script>document.write(renderApiSettingsModal());document.write(renderToolbar('mmpc-08'));</script>
+
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPC-08 Information Systems Quiz</h1>
+        <p>Test your knowledge of Information Systems</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Which information system serves clerical staff by handling routine record keeping and day-to-day transactions?",
+                options: [
+                    "MIS",
+                    "EIS",
+                    "TPS",
+                    "DSS"
+                ],
+                answer: 2,
+                explanation: "TPS (Transaction Processing System) handles routine record keeping and repetitive transactions for clerical staff at the operational level. MIS serves middle management with routine summaries, DSS supports managers in complex problem solving, and EIS serves senior executives with trend analysis and drill-down."
+            },
+            {
+                question: "The CPU consists of which three main components?",
+                options: [
+                    "RAM, ROM, and Cache",
+                    "Control Unit, ALU, and Registers",
+                    "Monitor, Keyboard, and Mouse",
+                    "HDD, SSD, and Optical drive"
+                ],
+                answer: 1,
+                explanation: "The CPU is the brain of the computer, made up of the Control Unit (decodes instructions), the ALU (arithmetic and logical operations), and Registers (small high-speed memory for temporary results). RAM, ROM and cache are memory components, not parts of the CPU."
+            },
+            {
+                question: "How does a compiler differ from an interpreter in translating source code?",
+                options: [
+                    "It executes code line by line",
+                    "It never creates an object file",
+                    "It translates the entire program at once",
+                    "It reports errors immediately at each line"
+                ],
+                answer: 2,
+                explanation: "A compiler translates the whole program in one pass and creates an object or executable file, giving faster execution, with errors reported after compilation. An interpreter translates and executes line by line with no object file, making debugging easier but execution slower."
+            },
+            {
+                question: "In the OSI model, which layer is responsible for routing and logical addressing of packets?",
+                options: [
+                    "Presentation layer",
+                    "Transport layer",
+                    "Physical layer",
+                    "Network layer"
+                ],
+                answer: 3,
+                explanation: "The Network layer (Layer 3) handles routing and logical addressing using the IP protocol. The Transport layer (4) gives end-to-end delivery via TCP/UDP, the Presentation layer (6) handles data formatting and encryption, and the Physical layer (1) transmits raw bits."
+            },
+            {
+                question: "According to Anthony's framework, strategic planning decisions at top management level use information that is primarily:",
+                options: [
+                    "External and long-term",
+                    "Internal and detailed",
+                    "Historical and repetitive",
+                    "Daily and operational"
+                ],
+                answer: 0,
+                explanation: "Strategic planning (top management) uses external, long-term, summarized information for unstructured decisions. Operational control (lower management) uses internal, detailed data for structured decisions, while tactical management (middle) uses a mix of internal and external data for semi-structured decisions."
+            },
+            {
+                question: "What does an ERP (Enterprise Resource Planning) system primarily achieve?",
+                options: [
+                    "Only manages customer relationships",
+                    "Integrates all business functions on a shared database",
+                    "Only handles supply chain logistics",
+                    "Replaces all hardware systems"
+                ],
+                answer: 1,
+                explanation: "ERP is a business process management system that integrates planning, manufacturing, sales, marketing, HR and finance modules around a single integrated database. CRM focuses on customer interactions, SCM on the flow of goods from supplier to consumer, and BPR on radical process redesign."
+            },
+            {
+                question: "Which is the correct first phase of the SDLC (Systems Development Life Cycle)?",
+                options: [
+                    "Coding",
+                    "Logical Design",
+                    "Operation and Maintenance",
+                    "Project Identification"
+                ],
+                answer: 3,
+                explanation: "The 7-phase SDLC begins with Project Identification (problem recognition and feasibility, producing a project charter), then moves through Initiation, Analysis, Logical Design, Physical Design, Implementation, and finally Operation and Maintenance."
+            },
+            {
+                question: "In database normalization, which normal form removes transitive dependencies?",
+                options: [
+                    "1NF",
+                    "3NF",
+                    "2NF",
+                    "4NF"
+                ],
+                answer: 1,
+                explanation: "3NF requires 2NF plus removal of transitive dependencies - for example moving Dept Name, which depends on Dept ID rather than the primary key, into a separate table. 1NF removes repeating groups and 2NF removes partial dependencies."
+            },
+            {
+                question: "Which set of characteristics defines a data warehouse?",
+                options: [
+                    "Application-oriented, volatile, unintegrated",
+                    "Detailed, constantly updated, operational",
+                    "Subject-oriented, integrated, time-variant, non-volatile",
+                    "Unstructured, real-time, unintegrated"
+                ],
+                answer: 2,
+                explanation: "A data warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data built for decision support, unlike operational databases which are application-oriented, detailed and frequently updated. Mnemonic: SITS."
+            },
+            {
+                question: "An expert system typically consists of which three components?",
+                options: [
+                    "Input, hidden, and output layers",
+                    "Sensors, actuators, and controller",
+                    "Compiler, interpreter, and debugger",
+                    "Knowledge base, inference engine, and user interface"
+                ],
+                answer: 3,
+                explanation: "Expert systems emulate human expert decision-making using a Knowledge Base (facts and IF-THEN rules), an Inference Engine (reasoning through forward or backward chaining), and a User Interface. Input-hidden-output layers belong to neural networks, not expert systems."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpc08', 'MMPC08', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>

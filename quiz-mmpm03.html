@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPM-03 Product &amp; Brand Management - Quiz | StudyHub</title>
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="quiz-header">
+        <h1>&#x1F4E0; MMPM-03 Product &amp; Brand Management Quiz</h1>
+        <p>Test your knowledge of Product &amp; Brand Management</p>
+        <div class="quiz-stats">
+            <div class="quiz-stat">
+                <div class="stat-value" id="currentQ">1</div>
+                <div class="stat-label">Current</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="scoreVal">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+            <div class="quiz-stat">
+                <div class="stat-value" id="timeVal">20:00</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+        <div class="quiz-progress-container">
+            <div class="quiz-progress-bar" id="progressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="progressText">Question 1 of 10</div>
+    </header>
+
+    <div class="quiz-controls" style="justify-content: center;">
+        <button class="btn btn-secondary" onclick="quizEngine.reviewMode()" id="reviewBtn">
+            <span class="icon">&#x1F4CB;</span> Review Answers
+        </button>
+        <div class="review-panel" id="reviewPanel">
+            <h3><span class="icon">&#x1F4CD;</span> Jump to Question</h3>
+            <div class="question-nav-grid" id="navGrid"></div>
+        </div>
+        <button class="btn btn-outline" onclick="quizEngine.toggleTimer()" id="timerBtn">
+            <span class="icon">&#x23F1;</span> Toggle Timer
+        </button>
+    </div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
+        <div class="question-nav" id="questionNav">
+            <h3><span class="icon">&#x1F50D;</span> Question Navigation</h3>
+            <div class="question-nav-grid" id="questionNavGrid"></div>
+        </div>
+
+        <div class="question-card current-question" id="questionCard">
+            <h3 id="questionTitle">Question Title</h3>
+            <div id="questionContent"></div>
+        </div>
+
+        <div id="answerOptions"></div>
+        <div id="explanationArea" style="margin-top: 1rem;"></div>
+
+        <div class="quiz-controls" style="justify-content: space-between; margin-top: 2rem;">
+            <button class="btn btn-outline" onclick="quizEngine.prev()" id="prevBtn">
+                <span class="icon">&#x2190;</span> Previous
+            </button>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <button class="btn btn-secondary" onclick="quizEngine.randomize()" id="randomBtn">
+                    <span class="icon">&#x1F500;</span> Randomize
+                </button>
+                <button class="btn btn-secondary" onclick="quizEngine.markReview()" id="markBtn">
+                    <span class="icon">&#x1F516;</span> Mark for Review
+                </button>
+            </div>
+            <button class="btn btn-primary" onclick="quizEngine.next()" id="nextBtn">
+                Next <span class="icon">&#x2192;</span>
+            </button>
+        </div>
+    </main>
+
+    <div class="quiz-timer" id="quizTimer">
+        <span class="icon">&#x23F1;</span> <span id="timerDisplay">20:00</span>
+    </div>
+
+    <script src="quiz-engine.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "In Kotler's five product levels, the innermost level representing the fundamental benefit the customer is buying is the:",
+                options: [
+                    "Expected product",
+                    "Augmented product",
+                    "Core benefit",
+                    "Potential product"
+                ],
+                answer: 2,
+                explanation: "Kotler's five levels run from Core benefit, Basic product, Expected product, Augmented product, to Potential product. The core benefit is the fundamental benefit the customer is actually buying."
+            },
+            {
+                question: "The number of product lines a company offers is called the product mix:",
+                options: [
+                    "Width",
+                    "Length",
+                    "Depth",
+                    "Consistency"
+                ],
+                answer: 0,
+                explanation: "Width is the number of product lines (Amul: butter, cheese, milk, ice cream, chocolate). Length is the total items across lines, depth is the variants per product, and consistency is the relatedness of the lines."
+            },
+            {
+                question: "Line stretching in which a company moves from a premium brand into a lower-priced segment, as with Surf Excel extending to Wheel, is called:",
+                options: [
+                    "Upward stretching",
+                    "Downward stretching",
+                    "Two-way stretching",
+                    "Line filling"
+                ],
+                answer: 1,
+                explanation: "Downward stretching moves from premium to lower-priced segments (Surf Excel to Wheel). Upward stretching enters premium segments (Lifebuoy to premium liquid handwash), and two-way stretching moves in both directions."
+            },
+            {
+                question: "In the product life cycle, profits typically peak during which stage?",
+                options: [
+                    "Introduction",
+                    "Growth",
+                    "Maturity",
+                    "Decline"
+                ],
+                answer: 1,
+                explanation: "Growth is marked by rapid sales rise and peak profits. Introduction has low sales and negative profits, maturity has plateauing sales with declining profits, and decline shows falling sales and low profits."
+            },
+            {
+                question: "According to Rogers' diffusion of innovation, the first 2.5% of consumers to adopt a new product are the:",
+                options: [
+                    "Early adopters",
+                    "Early majority",
+                    "Innovators",
+                    "Laggards"
+                ],
+                answer: 2,
+                explanation: "Innovators (2.5%) adopt first, followed by early adopters (13.5%), early majority (34%), late majority (34%), and laggards (16%)."
+            },
+            {
+                question: "In Ansoff's growth matrix, launching new products for existing markets is:",
+                options: [
+                    "Market penetration",
+                    "Market development",
+                    "Product development",
+                    "Diversification"
+                ],
+                answer: 2,
+                explanation: "Product development means new products for existing markets. Market penetration is existing products in existing markets, market development is existing products in new markets, and diversification is new products in new markets."
+            },
+            {
+                question: "In the idea screening Drop/Error matrix, dropping a good idea is called:",
+                options: [
+                    "Error of commission",
+                    "Error of omission",
+                    "Correct decision",
+                    "Acceptance error"
+                ],
+                answer: 1,
+                explanation: "Dropping a good idea is the error of omission (a lost opportunity), while accepting a bad idea is the error of commission. Both rejecting a bad idea and accepting a good idea are correct decisions."
+            },
+            {
+                question: "Which type of test market is a full market test with the highest validity but also the highest cost?",
+                options: [
+                    "Standard test market",
+                    "Controlled test market",
+                    "Simulated test market",
+                    "Concept test"
+                ],
+                answer: 0,
+                explanation: "The standard test market is a full market test with the highest validity and the highest cost. Controlled test markets use limited distribution, and simulated test markets are lab-based with the lowest cost."
+            },
+            {
+                question: "Which type of brand name is an invented word with no prior meaning, such as Kodak or Xerox?",
+                options: [
+                    "Descriptive",
+                    "Suggestive",
+                    "Arbitrary",
+                    "Fanciful"
+                ],
+                answer: 3,
+                explanation: "Fanciful brand names are invented words with no prior meaning (Kodak, Xerox). Descriptive names describe the product (Clean & Clear), suggestive names suggest a benefit, and arbitrary names use a real word unrelated to the product (Apple)."
+            },
+            {
+                question: "In Keller's CBBE model, the peak of the brand equity pyramid, reflecting loyalty and a sense of community, is:",
+                options: [
+                    "Brand salience",
+                    "Brand performance",
+                    "Brand judgments",
+                    "Brand resonance"
+                ],
+                answer: 3,
+                explanation: "Brand resonance is the peak of Keller's CBBE pyramid, representing loyalty and community. Brand salience (awareness) is the foundation, above which sit performance/imagery and judgments/feelings."
+            }
+        ];
+
+        const quizEngine = new QuizEngine('mmpm03', 'MMPM03', questions);
+        quizEngine.init();
+
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            switch(e.key) {
+                case 'ArrowLeft': case 'a': case 'A': e.preventDefault(); quizEngine.prev(); break;
+                case 'ArrowRight': case 'd': case 'D': e.preventDefault(); quizEngine.next(); break;
+                case '1': case '2': case '3': case '4':
+                    if (quizEngine.state === 'in-progress') {
+                        const num = parseInt(e.key);
+                        if (num <= quizEngine.getCurrentQuestion().options.length) {
+                            quizEngine.selectAnswer(num - 1);
+                        }
+                    }
+                    break;
+            }
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                quizEngine.toggleTimer(false);
+            } else {
+                if (quizEngine.timerEnabled) {
+                    quizEngine.toggleTimer(true);
+                }
+            }
+        });
+    </script>
+    <script src="pwa-register.js"></script>
+</body>
+</html>
