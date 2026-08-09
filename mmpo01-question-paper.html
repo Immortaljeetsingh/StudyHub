@@ -130,7 +130,7 @@
     <span>Question Paper</span>
   </nav>
 
-  <div class="landing-hero reveal">
+  <div class="landing-hero">
     <h1>IGNOU MMPO-01 Operations Research - Question Paper with Solved Answers</h1>
     <p>Prepare for the <strong>IGNOU MMPO-01 Operations Research term-end exam</strong> with this exam-style question paper built from the 16 units of the course. It contains 6 questions in the real TEE pattern - <strong>"Answer any five"</strong> - covering LP formulation, simplex, transportation, assignment, queuing and PERT/CPM, with <strong>step-by-step solved answers</strong> for every question. Perfect for last-minute revision.</p>
     <a href="quiz-mmpo01.html" class="landing-cta btn-fx" role="button">Take Quiz</a>
@@ -166,7 +166,7 @@
         <p><strong>Graphical solution:</strong> Step 1 - Draw the constraint lines: 2x + y = 80 through (40, 0) and (0, 80); x + 2y = 100 through (100, 0) and (0, 50). Step 2 - Shade the feasible region below both lines in the first quadrant. Step 3 - Corner points: (0, 0), (40, 0), (0, 50) and the line intersection. Solving 2x + y = 80 and x + 2y = 100 gives x = 20, y = 40. Step 4 - Evaluate Z at each corner: (0,0): 0; (40,0): 1600; (0,50): 1500; (20,40): 40(20) + 30(40) = 2000.</p>
         <p><strong>Optimum:</strong> produce 20 units of A and 40 units of B, giving a maximum weekly profit of Rs 2,000. Both resources are fully used: 2(20) + 40 = 80 machine hours and 20 + 2(40) = 100 labour hours.</p>
         <div class="key-points"><strong>Key points to remember:</strong> define decision variables first; write each resource as a constraint; the optimum always lies at a corner point of the feasible region; test every corner point in Z; an isoprofit line tangent to the feasible region also locates the optimum.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LP feasible region of the furniture problem with optimum at 20, 40">
+        <figure class="yp-fig"><svg class="yp-svg" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LP feasible region of the furniture problem with optimum at 20, 40">
 <title>Graphical solution - feasible region and optimum corner</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <line x1="70" y1="310" x2="610" y2="310" stroke="#475569" stroke-width="1.5"/>
@@ -225,7 +225,7 @@
         <p><strong>Step 3 - MODI optimality test.</strong> With u&#8321; = 0 for row A: v&#8321; = 4 (cell A-W1), v&#8323; = 6 (cell A-W3). For row B: u&#8322; + 6 = 9 gives u&#8322; = 3, then v&#8322; = 5 - 3 = 2. For unoccupied cells, d&#x1D62;&#x2C7; = c&#x1D62;&#x2C7; - (u&#x1D62; + v&#x2C7;): A-W2: 8 - (0 + 2) = 6 and B-W1: 7 - (3 + 4) = 0. All d &ge; 0, so the solution is optimal.</p>
         <p><strong>Answer:</strong> minimum transportation cost = Rs 370 with allocations A-W1 = 20, A-W3 = 20, B-W2 = 25, B-W3 = 5 (4 allocations = m + n - 1 = 2 + 3 - 1, so non-degenerate).</p>
         <div class="key-points"><strong>Key points to remember:</strong> balance the problem first (add dummy row/column if needed); least cost method starts from the cheapest cell; MODI computes u&#x1D62; + v&#x2C7; for occupied cells and d = c - (u + v) for empty cells; optimal when all d &ge; 0.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Transportation matrix with least cost allocations">
+        <figure class="yp-fig"><svg class="yp-svg" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Transportation matrix with least cost allocations">
 <title>Transportation problem - least cost solution</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Transportation Matrix - Least Cost Solution (Rs 370)</text>
@@ -285,7 +285,7 @@
         <p><strong>Step 4 - Improvement:</strong> smallest uncovered element is 1. Subtract 1 from uncovered elements and add 1 at line intersections. Result: J1: 2, 1, 0, 1; J2: 1, 0, 2, 0; J3: 0, 2, 4, 1; J4: 1, 0, 2, 0.</p>
         <p><strong>Step 5 - Optimal assignment and answer:</strong> independent zero assignments: J1-M3, J2-M4, J3-M1, J4-M2. Minimum cost = 5 + 5 + 6 + 5 = Rs 21, verified from the original matrix.</p>
         <div class="key-points"><strong>Key points to remember:</strong> subtract row minima, then column minima; draw minimum lines to cover zeros; if lines &lt; n, improve the matrix; make one zero assignment per row and column; total matches the original cost matrix.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Assignment cost matrix with optimal Hungarian assignments highlighted">
+        <figure class="yp-fig"><svg class="yp-svg" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Assignment cost matrix with optimal Hungarian assignments highlighted">
 <title>Assignment problem - Hungarian method solution</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Assignment Matrix - Hungarian Solution (Min Rs 21)</text>
@@ -351,7 +351,7 @@
         <p><strong>Step 5 - Average waiting time in the queue:</strong> W&#8345; = &lambda;/[&mu;(&mu; - &lambda;)] = 12/45 = 0.267 hours = 16 minutes. (Check: W&#8345; = W - 1/&mu; = 20 - 4 = 16 minutes.)</p>
         <p><strong>Step 6 - Probability of 3 or more customers:</strong> P(n &ge; 3) = &rho;&sup3; = (0.8)&sup3; = 0.512. So about 51% of the time at least 3 customers are in the system. Also P(n &gt; k) = &rho;&#8319; for an M/M/1 queue.</p>
         <div class="key-points"><strong>Key points to remember:</strong> &rho; = &lambda;/&mu; must be &lt; 1; L = &lambda;/(&mu;-&lambda;), L&#8345; = &lambda;&sup2;/&mu;(&mu;-&lambda;); W = 1/(&mu;-&lambda;), W&#8345; = L&#8345;/&lambda;; P(n &ge; k) = &rho;&#8319;; keep units consistent (hours or minutes).</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="M/M/1 single server queue diagram">
+        <figure class="yp-fig"><svg class="yp-svg" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="M/M/1 single server queue diagram">
 <title>M/M/1 queuing system</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">M/M/1 Single-Server Queue</text>
@@ -399,7 +399,7 @@
         <p><strong>Step 6 - Probability of completion within 18 weeks:</strong> critical path variance = &sigma;&sup2;(A) + &sigma;&sup2;(C) + &sigma;&sup2;(E) + &sigma;&sup2;(F) = 4 &times; 0.111 = 0.444, so &sigma; = 0.667 weeks. Z = (18 - 16)/0.667 = 3.0. From the normal table, P(Z &le; 3.0) = 0.9987.</p>
         <p><strong>Answer:</strong> project duration = 16 weeks; critical activities A, C, E, F; probability of completing within 18 weeks &asymp; 99.9%.</p>
         <div class="key-points"><strong>Key points to remember:</strong> t&#8342; = (o + 4m + p)/6; forward pass gives earliest, backward pass latest; critical path has zero float; Z = (due date - project duration)/&sigma;; add variances of critical activities only.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PERT network with critical path 1-2-4-5-6 highlighted">
+        <figure class="yp-fig"><svg class="yp-svg" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PERT network with critical path 1-2-4-5-6 highlighted">
 <title>PERT network - critical path in cyan</title>
 <defs>
 <marker id="mk1c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#22d3ee"/></marker>

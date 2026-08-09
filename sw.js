@@ -1,4 +1,4 @@
-const CACHE_NAME = 'studyhub-v6';
+const CACHE_NAME = 'studyhub-v7';
 const STATIC_ASSETS = [
   './',
   './study-hub.html',

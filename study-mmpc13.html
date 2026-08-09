@@ -930,7 +930,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.unit, .visual-diagram, .case-study, .summary-box, .callout, h2[id^="block"]').forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);

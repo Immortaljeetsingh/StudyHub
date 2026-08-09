@@ -389,6 +389,23 @@ body.premium-landing .graph-legend{background:rgba(255,255,255,.5);border:1px so
 body.premium-landing .legend-item{color:var(--p-mocha-2)}
 body.premium-landing .legend-color{border-color:rgba(209,184,155,.5)}
 body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
+
+/* —premium mobile (375px): one-row header, no overflow— */
+@media(max-width:1024px){body.premium-landing .header-tagline{display:none}}
+@media(max-width:640px){
+  body.premium-landing .site-header{padding:0 16px}
+  body.premium-landing .header-actions{gap:6px}
+  body.premium-landing .streak-label{display:none}
+}
+@media(max-width:520px){
+  body.premium-landing .btn-ghost-sm{font-size:0;padding:6px 8px}
+}
+@media(max-width:480px){
+  body.premium-landing .streak-widget{display:none}
+}
+@media(max-width:499px){
+  body.premium-landing .bento-tile.large{grid-column:auto}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"StudyHub","url":"https://immortaljeetsingh.github.io/StudyHub","description":"StudyHub - Free IGNOU MBA study material for all 43 subjects.","potentialAction":{"@type":"SearchAction","target":"https://immortaljeetsingh.github.io/StudyHub/study-hub.html?q={search_term_string}","query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","name":"StudyHub"}}</script>
 </head>

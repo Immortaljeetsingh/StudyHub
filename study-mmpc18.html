@@ -128,7 +128,7 @@
 </div></div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Key Thinkers Table</div>
-<table>
+<div class="db"><table>
 <tr><th>Scholar</th><th>Contribution</th><th>Memory Hook</th></tr>
 <tr><td>Cantillon (1680-1744)</td><td>Risk-bearing theory</td><td>"Cantillon = Chance" (uncertain price)</td></tr>
 <tr><td>Adam Smith (1776)</td><td>Profit-seeking enterpriser</td><td>"Smith = Seeker" (profit)</td></tr>
@@ -137,7 +137,7 @@
 <tr><td>McClelland (1961)</td><td>Need for achievement</td><td>"McClelland = Must achieve"</td></tr>
 <tr><td>Kirzner (1973)</td><td>Opportunity discovery</td><td>"Kirzner = Knows" (opportunities)</td></tr>
 <tr><td>Shane &amp; Venkataraman (2000)</td><td>Opportunity-based entrepreneurship</td><td>"S&amp;V = Search, Value"</td></tr>
-</table></div>
+</table></div></div>
 
 <div class="callout callout-definition"><div class="callout-label">&#x1F4D6; Entrepreneur vs Manager</div>
 <div class="db"><table>
@@ -902,7 +902,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);

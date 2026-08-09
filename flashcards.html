@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#x1F48F; Flashcards - StudyHub</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-link{display:inline-flex;align-items:center;gap:6px;margin:1rem 1rem 0;padding:6px 14px;border-radius:999px;background:var(--glass,transparent);border:1px solid var(--glass-border);color:var(--text-muted);text-decoration:none;font-size:.85rem;width:fit-content}
+        .back-link:hover{color:var(--text-primary);border-color:var(--accent)}
+        .flashcards-header,.subject-selector,#flashcardPanel{padding-left:1rem;padding-right:1rem}
+        .subject-btn{padding:.45rem .9rem;border-radius:999px;border:1px solid var(--glass-border);background:transparent;color:var(--text-muted);font-size:.8rem;font-weight:600;cursor:pointer;min-height:38px}
+        .subject-btn.active{background:rgba(94,140,240,.15);border-color:rgba(94,140,240,.4);color:var(--accent)}
+        .flashcard-nav-btn{padding:.45rem 1rem;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:var(--text-primary);font-size:.85rem;font-weight:600;cursor:pointer;min-height:38px}
+        .flashcard-nav-btn:hover{border-color:var(--accent)}
+        @media(max-width:480px){.flashcard-face{padding:1.25rem !important}}
+    </style>
 
 <link rel="manifest" href="manifest.json">
 </head>

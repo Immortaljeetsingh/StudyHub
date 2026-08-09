@@ -1215,7 +1215,9 @@
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  // ponytail: threshold 0 (was 0.1) — units are 9k+ px tall on mobile, so 10% can
+  // never fit the ~600px viewport window; any-pixel-intersection reveals them all.
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('h3[id^="u"], .visual-diagram, .case-study, .summary-box, .callout, .unit').forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);

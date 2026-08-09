@@ -1054,7 +1054,7 @@ window.addEventListener('scroll', function() {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
 
   // Add animate-on-scroll to all unit sections, visual diagrams, summary boxes, and callouts
   document.querySelectorAll('h3[id^="u"], .visual-diagram, .summary-box, .callout').forEach(function(el) {

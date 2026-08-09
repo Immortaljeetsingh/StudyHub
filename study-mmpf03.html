@@ -989,7 +989,7 @@
                 unitObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0 });
     document.querySelectorAll('.unit').forEach(function(el) {
         el.classList.add('fade-in');
         unitObserver.observe(el);
@@ -1008,7 +1008,7 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
 
     // Scroll handler for reading progress bar and sidebar active state

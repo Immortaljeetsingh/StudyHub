@@ -1427,16 +1427,21 @@
 <script>
 // Scroll-triggered animations
 (function() {
+  var els = document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('animate-on-scroll', 'visible'); });
+    return;
+  }
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
 
   // Add animate-on-scroll to all unit sections, block headings, visual diagrams, case studies, and summary boxes
-  document.querySelectorAll('h3[id^="u"], h2[id^="block"], .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-important, .callout-mnemonic').forEach(function(el) {
+  els.forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);
   });

@@ -962,7 +962,7 @@ Crash cost slope = (Crash cost - Normal cost) / (Normal time - Crash time)
 </section>
 </main></div>
 <script>
-(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+(function(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible')}})},{threshold:0,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('h3[id^="u"],.visual-diagram,.case-study,.summary-box,.callout,.callout-example,.callout-examtip,.callout-mnemonic,.formula-block,.expandable-content').forEach(function(el){el.classList.add('animate-on-scroll');o.observe(el)});
 document.querySelectorAll('.expand-toggle').forEach(function(btn){btn.addEventListener('click',function(){var t=document.querySelector(this.dataset.target);if(t){t.classList.toggle('expanded');this.textContent=t.classList.contains('expanded')?'Show Less':'Read More'}})})})();
 window.addEventListener("scroll",function(){var h=document.documentElement.scrollHeight-window.innerHeight,p=h>0?(window.scrollY/h)*100:0;var rp=document.querySelector(".reading-progress");if(rp)rp.style.width=p+"%";var u=document.querySelectorAll(".unit"),l=document.querySelectorAll(".study-sidebar a[href^='#u']"),c="";u.forEach(function(e){if(e.getBoundingClientRect().top<200)c=e.id});l.forEach(function(e){e.classList.toggle("active",e.getAttribute("href")==="#"+c)})});

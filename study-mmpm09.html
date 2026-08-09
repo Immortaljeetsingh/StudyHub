@@ -1128,7 +1128,7 @@ window.addEventListener('scroll', function() {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.unit, .visual-diagram, .case-study, .summary-box, .callout, .callout-example, .callout-mnemonic').forEach(function(el) {
     el.classList.add('animate-on-scroll');
