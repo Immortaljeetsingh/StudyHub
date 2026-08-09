@@ -118,22 +118,6 @@
 .bento-tile-arrow{position:absolute;top:18px;right:18px;opacity:0;transform:translateX(-6px);transition:all .25s}
 .bento-tile:hover .bento-tile-arrow{opacity:1;transform:translateX(0)}
 
-/* —featured— */
-.featured-grid{display:grid;grid-template-columns:1fr;gap:16px}@media(min-width:600px){.featured-grid{grid-template-columns:1fr 1fr}}
-.featured-grid .fe-card:first-child{grid-column:1 / -1}
-.fe-card{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:var(--radius);background:var(--card-bg);border:1px solid var(--border);border-left:3px solid var(--fe-color,var(--border));box-shadow:0 1px 3px var(--shadow);transition:all .25s;text-decoration:none;color:inherit}
-.fe-card:hover{border-color:transparent;box-shadow:0 8px 24px var(--shadow);transform:translateY(-2px)}
-.fe-card:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.fe-card.hero-card{padding:28px}
-.fe-card-visual{flex-shrink:0;width:48px;height:48px;color:var(--fe-color,var(--ink-muted));background:color-mix(in srgb,var(--fe-color,var(--border)) 12%,var(--card-bg));border-radius:12px;display:flex;align-items:center;justify-content:center}
-.fe-card.hero-card .fe-card-visual{width:64px;height:64px}
-.fe-card-tag{display:inline-block;margin-bottom:6px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 10px;border-radius:4px;background:var(--fe-color,var(--border));color:white}
-.fe-card-title{font-family:var(--font-serif);font-size:1.05rem;font-weight:700}
-.fe-card.hero-card .fe-card-title{font-size:1.25rem}
-.fe-card-desc{font-size:.82rem;color:var(--ink-muted);margin-top:4px;line-height:1.5}
-.fe-card-meta{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:.78rem;color:var(--ink-muted)}
-.fe-card-dot{width:3px;height:3px;border-radius:50%;background:var(--ink-muted)}
-
 /* —list table— */
 .list-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px}
 .chip{padding:6px 14px;border-radius:20px;font-size:.78rem;font-weight:500;border:1px solid var(--border);background:var(--card-bg);transition:all .2s;cursor:pointer;font-family:inherit;color:inherit}
@@ -174,12 +158,6 @@
 .bento-tile::before,.bento-tile::after{display:none}
 .bento-tile-name{font-size:1.25rem}
 .bento-tile.large{grid-column:span 2}
-.fe-card-visual::before,.fe-card-visual::after{display:none}
-.fe-card .fe-card-visual{width:48px;height:48px;border-radius:0;background:none;display:block}
-.fe-card.hero-card .fe-card-visual{width:64px;height:64px}
-.fe-card{flex-direction:row;min-height:0}
-.fe-card-visual{flex:0 0 42%;min-height:0;align-items:center;justify-content:center}
-.fe-card-tag::before{display:none}
 .list-table{border-radius:var(--radius)}
 
 /* —fx: futuristic redesign layer— */
@@ -224,7 +202,7 @@
 /* 3D tilt cards: crisp follow, glass treatment */
 .tilt-card.fx-card{transition:transform .1s ease-out,box-shadow .25s ease,border-color .25s ease}
 .fx-card{overflow:visible}
-.bento-tile,.fe-card{backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%)}
+.bento-tile{backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%)}
 .tilt-card{will-change:auto}
 .fx-card:hover{z-index:2}
 .bento-tile.fx-card::before{display:block}
@@ -241,8 +219,6 @@
 .list-row:last-child{border-bottom-left-radius:16px;border-bottom-right-radius:16px}
 .fx-card:hover{border-color:rgba(34,211,238,.4)}
 [data-theme=light] .list-row.fx-card{background-image:none}
-.fe-card.fx-card{background-image:none}
-[data-theme=light] .fe-card.fx-card{background-image:none}
 
 /* reduced motion: freeze the new fx layers */
 @media (prefers-reduced-motion:reduce){
@@ -313,15 +289,6 @@ body.premium-landing .bento-tile-icon{color:var(--p-gold)}
 body.premium-landing .bento-tile-count{color:var(--p-mocha-2)}
 body.premium-landing .bento-tile-name{color:var(--p-mocha)}
 body.premium-landing .bento-tile-desc{color:var(--p-mocha-2);opacity:1}
-
-/* featured cards: glass, gold trim, mocha type */
-body.premium-landing .fe-card{background:rgba(255,255,255,.5);border:1px solid rgba(209,184,155,.45);border-left:3px solid var(--p-gold);box-shadow:8px 8px 18px rgba(209,184,155,.35),-8px -8px 18px rgba(255,255,255,.9),inset 1px 1px 0 rgba(255,255,255,.5),inset -1px -1px 0 rgba(209,184,155,.2);border-radius:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-body.premium-landing .fe-card:hover{box-shadow:12px 12px 26px rgba(209,184,155,.42),-12px -12px 26px rgba(255,255,255,.95),0 0 22px rgba(176,141,87,.22)}
-body.premium-landing .fe-card-visual{background:rgba(176,141,87,.15);color:var(--p-gold)}
-body.premium-landing .fe-card-tag{background:rgba(176,141,87,.28);color:var(--p-mocha)}
-body.premium-landing .fe-card-title{color:var(--p-mocha)}
-body.premium-landing .fe-card-desc,body.premium-landing .fe-card-meta{color:var(--p-mocha-2)}
-body.premium-landing .fe-card-dot{background:var(--p-gold)}
 
 /* list table: glass rows, mocha text, gold hairlines */
 body.premium-landing .list-table{border:1px solid rgba(209,184,155,.5);background:rgba(255,255,255,.35);border-radius:20px;box-shadow:8px 8px 18px rgba(209,184,155,.3),-8px -8px 18px rgba(255,255,255,.8),inset 1px 1px 0 rgba(255,255,255,.5),inset -1px -1px 0 rgba(209,184,155,.18)}
@@ -640,20 +607,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
     </div>
   </section>
 
-  <!-- Editor's Picks (Featured) -->
-  <section class="section" aria-labelledby="featured-title">
-    <div class="section-header">
-      <div>
-        <span class="section-eyebrow" data-accent="teal">Editor's picks</span>
-        <h2 class="section-title" id="featured-title">Start with these three.</h2>
-        <p class="section-sub">The most-studied courses this week, handpicked by your peers and the curriculum team.</p>
-      </div>
-    </div>
-    <div class="featured-grid tilt-stage" id="featured-list" role="list" aria-label="Featured courses">
-      <!-- Rendered by JS -->
-    </div>
-  </section>
-
   <!-- All Courses (List Table) -->
   <section class="section" id="subjects" aria-labelledby="courses-title">
     <div class="section-header">
@@ -827,7 +780,7 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
 <!-- Scripts -->
 <script src="app.js" defer></script>
 
-<!-- Preview section renderers (Bento, Featured, Course List) -->
+<!-- Preview section renderers (Bento, Course List) -->
 <script>
 (function(){
   var $ = function(s, c) { return (c || document).querySelector(s); };
@@ -843,11 +796,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
       { id:'MMPF', name:'Finance', desc:'Working capital, capital investment, control systems.', count:3, color:'var(--green)', icon:'piechart' },
       { id:'MMPH', name:'Human Resources', desc:'Recruitment, training, performance, relations.', count:4, color:'var(--gold)', icon:'users' },
       { id:'MMPB', name:'Banking', desc:'Banking and insurance operations and regulation.', count:1, color:'var(--purple)', icon:'bank' }
-    ],
-    featured: [
-      { id:'mmpc04', code:'MMPC-04', name:'Accounting for Managers', desc:'Financial statements, ratios, capital budgeting — the language of business decisions.', units:16, color:'var(--red)', icon:'piechart', tag:'Most studied' },
-      { id:'mmpc06', code:'MMPC-06', name:'Marketing Management', desc:'The 4Ps, consumer behaviour, branding, and digital strategy.', units:12, color:'var(--teal)', icon:'trending', tag:'Trending' },
-      { id:'mmpc05', code:'MMPC-05', name:'Quantitative Analysis', desc:'LPP, probability, hypothesis testing, and decision theory.', units:16, color:'var(--navy)', icon:'target', tag:'New this week' }
     ],
     courses: [
       ['MMPC-01','Management Functions','14','0'],['MMPC-02','Human Resource Mgmt','14','0'],
@@ -884,16 +832,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
         var sizeCls = c.size === 'large' ? ' large' : '';
         var label = c.count + ' ' + (c.count === 1 ? 'course' : 'courses');
         return '<a class="bento-tile fx-card tilt-card' + sizeCls + '" href="#subjects" data-cat="' + c.id + '" role="listitem" style="background:' + c.color + ';" tabindex="0" aria-label="' + c.name + ': ' + c.desc + '"><span class="fx-corner" aria-hidden="true"></span><div class="bento-tile-arrow" aria-hidden="true"><svg width="14" height="14"><use href="#arrow-right"/></svg></div><div class="bento-tile-icon tilt-inner" aria-hidden="true"><svg width="32" height="32"><use href="#' + c.icon + '"/></svg></div><span class="bento-tile-count">' + label + '</span><h3 class="bento-tile-name">' + safeHTML(c.name) + '</h3><p class="bento-tile-desc">' + safeHTML(c.desc) + '</p></a>';
-      }).join('');
-    }
-  };
-
-  var Featured = {
-    render: function() {
-      var el = $('#featured-list'); if (!el) return;
-      el.innerHTML = DATA.featured.map(function(c, i) {
-        var heroCls = i === 0 ? ' hero-card' : '';
-        return '<a class="fe-card fx-card tilt-card' + heroCls + '" href="study-' + c.id + '.html" role="listitem" style="--fe-color:' + c.color + ';" tabindex="0" aria-label="' + c.name + ': ' + c.desc + '"><span class="fx-corner" aria-hidden="true"></span><div class="fe-card-visual tilt-inner" aria-hidden="true"><svg width="' + (i === 0 ? 64 : 48) + '" height="' + (i === 0 ? 64 : 48) + '"><use href="#' + c.icon + '"/></svg></div><div class="fe-card-body"><div class="fe-card-tag">' + c.tag + '</div><h3 class="fe-card-title">' + safeHTML(c.name) + '</h3><p class="fe-card-desc">' + safeHTML(c.desc) + '</p><div class="fe-card-meta"><strong>' + c.code + '</strong><span class="fe-card-dot" aria-hidden="true"></span><span>' + c.units + ' units</span></div></div></a>';
       }).join('');
     }
   };
@@ -940,7 +878,6 @@ body.premium-landing .list-search svg{color:var(--p-mocha-2)!important}
 
   document.addEventListener('DOMContentLoaded', function() {
     Bento.render();
-    Featured.render();
     CourseList.init();
   });
 })();
