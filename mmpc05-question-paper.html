@@ -107,7 +107,7 @@
   .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .related-grid a{padding:0.4rem 0.8rem;display:inline-flex;align-items:center;min-height:40px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
   .faq-section{margin:2.5rem 0}
   .faq-section h2{font-size:1.4rem;color:var(--text-primary);margin-bottom:1.5rem;text-align:center}
@@ -135,9 +135,9 @@
   .year-papers>h2{font-size:1.4rem;color:var(--text-primary);margin-bottom:0.5rem;text-align:center}
   .yp-note{font-size:0.85rem;color:var(--text-secondary);line-height:1.7;text-align:center;max-width:720px;margin:0 auto 1.2rem}
   .year-paper{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:1.2rem;overflow:hidden}
-  .year-paper summary{padding:1.05rem 1.4rem;cursor:pointer;font-weight:700;color:var(--text-primary);font-size:1rem;background:rgba(34,211,238,0.06);transition:color 0.2s;list-style:none}
+  .year-paper summary{padding:1.05rem 1.4rem;cursor:pointer;font-weight:700;color:var(--text-primary);font-size:1rem;background:rgba(34,211,238,0.06);transition:color 0.2s;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
   .year-paper summary::-webkit-details-marker{display:none}
-  .year-paper summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
+  .year-paper summary::after{content:"+";color:var(--accent);font-weight:700}
   .year-paper[open] summary::after{content:"\2212"}
   .year-paper summary:hover{color:var(--accent)}
   .year-paper[open] summary{border-bottom:1px solid var(--glass-border)}

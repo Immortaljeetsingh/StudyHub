@@ -169,6 +169,12 @@
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
   .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:480px){
+    .landing-hero{display:flex;flex-direction:column;align-items:center;padding:2.5rem 1.2rem}
+    .landing-cta{width:100%;max-width:340px;margin:0.3rem 0}
+    .unit-grid{grid-template-columns:1fr}
+    .unit-link,.related-grid a,.unit-links a{display:inline-flex;align-items:center;min-height:40px}
+  }
   </style>
 </head>
 <body class="subject-mmpc08">

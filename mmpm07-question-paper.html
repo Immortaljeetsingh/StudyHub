@@ -119,6 +119,11 @@
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
+  .related-grid a{min-height:40px;display:inline-flex;align-items:center}
+  .faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .faq-item summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .faq-item[open] summary::after{transform:rotate(90deg)}
+  @media (max-width:480px){.landing-hero{padding:2rem 1.1rem}.landing-cta{display:block;width:100%;text-align:center;margin:0.35rem 0}}
   .qa-item figure{max-width:640px;margin:1rem auto 0.4rem;background:#0f172a;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:0.5rem}
   .qa-item figure svg{width:100%;height:auto;display:block;border-radius:8px}
   .qa-item figcaption{font-size:0.78rem;color:var(--text-secondary);text-align:center;margin-top:0.45rem}
@@ -182,7 +187,7 @@
       <p><strong>(b) IMC process steps:</strong> 1) situational analysis and research, 2) define the target audience, 3) set communication objectives, 4) develop the message and creative, 5) fix the budget, 6) select media and tools, 7) execute, and 8) evaluate and feed back. Hypothetical example: launching a new energy drink for college students - research shows students trust social media and campus events; objective is 60% awareness in three months; the message stresses natural ingredients; media chosen are Instagram, YouTube and campus activations; evaluation uses awareness surveys and sales data.</p>
       <p class="kpt"><strong>Key points to remember:</strong> IMC = one voice across all tools; campaign = themed series of ads; sales promotion = short-term incentives; legal issues = truth in advertising (ASCI, CPA 2019).</p>
       <figure>
-        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,sans-serif">
+        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;height:auto;font-family:Inter,sans-serif">
           <title>IMC Framework - Consistent Message Across All Promotional Tools</title>
           <rect width="640" height="360" fill="#0d1226"/>
           <text x="320" y="34" text-anchor="middle" fill="#e2e8f0" font-size="17" font-weight="700">IMC Framework - One Voice</text>
@@ -216,7 +221,7 @@
         <figcaption>Fig: IMC framework - every promotional tool carries one consistent message</figcaption>
       </figure>
       <figure>
-        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,sans-serif">
+        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;height:auto;font-family:Inter,sans-serif">
           <title>IMC Campaign Planning - Five Steps</title>
           <rect width="640" height="360" fill="#0d1226"/>
           <defs>
@@ -258,7 +263,7 @@
       <p><strong>(b) Publicity</strong> is unpaid, non-personal communication in news form; it is not controlled by the organisation and enjoys third-party credibility. <strong>Public relations</strong> is a deliberate, planned, sustained effort to build mutual understanding between an organisation and its publics. Types of PR: media relations, employee relations, community relations, investor relations, government relations, customer relations, and crisis management.</p>
       <p class="kpt"><strong>Key points to remember:</strong> Strategy = long-term resource deployment; promotion-mix decisions flow from analysis to evaluation; publicity = uncontrolled, credible news; PR = planned relationship management.</p>
       <figure>
-        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,sans-serif">
+        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;height:auto;font-family:Inter,sans-serif">
           <title>Promotion Mix - Five Elements</title>
           <rect width="640" height="360" fill="#0d1226"/>
           <text x="320" y="34" text-anchor="middle" fill="#e2e8f0" font-size="17" font-weight="700">The Promotion Mix</text>
@@ -326,7 +331,7 @@
       <p><strong>(iii) Measuring advertising effectiveness:</strong> set communication goals using the DAGMAR approach and check them with pre- and post-campaign awareness surveys; use recall and recognition tests on the print ads; track response through coupon codes or QR codes in the ad; monitor enquiries and test-ride bookings; and compare sales in campaign and non-campaign markets to isolate the campaign&rsquo;s effect.</p>
       <p class="kpt"><strong>Key points to remember:</strong> IMC programme = objectives, audience, message, mix, budget, evaluation. Print campaign = strategic (media, timing) + creative (visual, headline, CTA). Effectiveness = DAGMAR goals, recall tests, response tracking, sales comparison.</p>
       <figure>
-        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,sans-serif">
+        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;height:auto;font-family:Inter,sans-serif">
           <title>Media Planning Process - Six Steps</title>
           <rect width="640" height="360" fill="#0d1226"/>
           <defs>
@@ -360,7 +365,7 @@
         <figcaption>Fig: Media planning flow - audience, objectives, classes, vehicles, schedule, evaluation</figcaption>
       </figure>
       <figure>
-        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" style="font-family:Inter,sans-serif">
+        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:640px;height:auto;font-family:Inter,sans-serif">
           <title>AIDA Funnel - Attention, Interest, Desire, Action</title>
           <rect width="640" height="360" fill="#0d1226"/>
           <text x="320" y="34" text-anchor="middle" fill="#e2e8f0" font-size="17" font-weight="700">AIDA - The Consumer Response Funnel</text>

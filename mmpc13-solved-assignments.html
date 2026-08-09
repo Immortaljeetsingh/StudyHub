@@ -101,7 +101,7 @@
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
   .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
   .landing-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
-  .unit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:2rem 0}
+  .unit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1rem;margin:2rem 0}
   .unit-preview{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;padding:1.2rem;transition:transform 0.2s}
   .unit-preview:hover{transform:translateY(-2px)}
   .unit-preview h3{font-size:0.95rem;color:var(--accent);margin-bottom:0.5rem}
@@ -156,6 +156,13 @@
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
   .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:480px){
+    .landing-hero{padding:2rem 1.25rem}
+    .landing-hero .landing-cta{display:flex;align-items:center;justify-content:center;width:100%;max-width:300px;margin:0.5rem auto 0}
+    .unit-link{display:inline-block;padding:0.7rem 0.1rem;min-height:40px}
+    .related-grid a,.unit-links a{display:inline-flex;align-items:center;min-height:40px}
+    .key-points{margin-left:1.1rem}
+  }
   </style>
 </head>
 <body class="subject-mmpc13">

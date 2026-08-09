@@ -112,7 +112,7 @@
   .related-subjects{margin:2rem 0;padding:1.5rem;padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right));padding-bottom:max(1.5rem,env(safe-area-inset-bottom));background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .related-grid a{padding:0.4rem 0.8rem;min-height:40px;display:inline-flex;align-items:center;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
   .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
   .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
@@ -122,48 +122,15 @@
   .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
   .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
   .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;list-style:none}
   .unit-accordion summary:hover{color:var(--accent)}
+  .unit-accordion summary::-webkit-details-marker{display:none}
   .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
   .unit-accordion[open] summary::after{transform:rotate(90deg)}
   .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
   .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a{padding:0.4rem 0.8rem;min-height:40px;display:inline-flex;align-items:center;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
   </style>
 </head>
@@ -177,7 +144,7 @@
     <span>Study Material</span>
   </nav>
 
-  <div class="landing-hero reveal">
+  <div class="landing-hero">
     <h1>IGNOU MMPH-02 Human Resource Development Study Material - Free Notes 2026</h1>
     <p>Access <strong>free IGNOU MMPH-02 Human Resource Development study material</strong> on StudyHub. Our comprehensive notes cover all 12 units with detailed explanations, diagrams, Indian business examples, memory tricks, and exam-focused summaries. Designed for IGNOU MBA students preparing for term-end examinations.</p>
     <a href="quiz-mmph02.html" class="landing-cta btn-fx" role="button">Take Quiz</a>

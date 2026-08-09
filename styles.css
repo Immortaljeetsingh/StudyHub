@@ -1328,6 +1328,7 @@ footer kbd {
   border-bottom: 1px solid var(--glass-border);
   position: sticky; top: 0; z-index: 100;
 }
+.top-toolbar > :first-child { margin-right: auto; }
 #unitsToggleBtn {
   background: rgba(201,48,44,0.1);
   border-color: rgba(201,48,44,0.2);
@@ -1345,7 +1346,7 @@ footer kbd {
 
 /* ═══════════ VIDEO SECTIONS ═══════════ */
 .video-section { margin: 2rem 0; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 1.2rem; }
 .video-card { background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 14px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
 .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
 .video-header { display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1rem; }
@@ -1569,7 +1570,7 @@ footer kbd {
 .expandable-content.expanded { max-height: 5000px; }
 
 /* Timeline container */
-.tl { display: flex; flex-direction: column; gap: 1.25rem; }
+.tl { display: flex; flex-direction: column; gap: 1.25rem; padding-left: 2rem; }
 .tl .tl-i { margin-bottom: 0; }
 
 /* Summary label (gold) */
@@ -1706,8 +1707,9 @@ footer kbd {
   .ai-output { padding: 1rem; font-size: 0.85rem; margin: 0.75rem 0; }
   .callout { padding: 0.85rem 1rem; font-size: 0.85rem; }
   .callout p, .callout li { font-size: 0.85rem; }
-  .top-toolbar { flex-wrap: wrap; gap: 0.4rem; padding: 0.5rem 0.75rem; }
-  .top-toolbar .btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; flex: 1 1 auto; text-align: center; min-width: 0; min-height: 44px; }
+  .top-toolbar { flex-wrap: wrap; gap: 0.4rem; padding: 0.5rem 0.75rem; justify-content: center; }
+  .top-toolbar > :first-child { margin-right: 0; }
+  .top-toolbar .btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; flex: 1 1 auto; text-align: center; min-width: 0; min-height: 44px; white-space: nowrap; }
   .cdp-flow, .stp-flow, .process-flow, .flow-visual { gap: 0.25rem; padding: 1rem 0.5rem; }
   .cdp-step, .stp-step, .process-step { min-width: 80px; padding: 0.6rem 0.5rem; }
   .modal-box { padding: 1.25rem; width: 95%; border-radius: 16px; }
@@ -1719,6 +1721,8 @@ footer kbd {
   .subjects-grid { grid-template-columns: 1fr; }
   .hero h2 { font-size: 1.6rem; }
   .dashboard-stats { grid-template-columns: 1fr; }
+  .top-toolbar { gap: 0.25rem; padding: 0.5rem 0.5rem; }
+  .top-toolbar .btn { padding: 0.5rem 0.35rem; font-size: 0.75rem; }
 }
 
 /* Tablet specific (601-900px) */
@@ -1807,7 +1811,8 @@ body { overflow-x: clip; }
   .unit-nav-mobile {
     display: block;
     position: sticky;
-    top: 0;
+    /* Clear the ~61px sticky .top-toolbar (z-index:100); toolbar wraps to 2 rows (~109px) only at <=320px, where the top of the bar stays visible */
+    top: 61px;
     z-index: 50;
     background: var(--bg-surface);
     backdrop-filter: blur(20px);
@@ -3452,6 +3457,10 @@ html, body {
   display: block;
   animation: fadeSlideIn 0.3s ease;
 }
+/* Guard: a closed panel must never render as a flex strip when inside .quiz-controls
+   (the <=480px .quiz-controls > div rules out-specify .review-panel's display:none) */
+.quiz-controls .review-panel { display: none !important; }
+.quiz-controls .review-panel.active { display: block !important; }
 
 /* Toast (JS sets positioning inline; visual polish here) */
 .quiz-toast {
@@ -3675,6 +3684,8 @@ html, body {
   .quiz-controls .btn { flex: 1 1 100%; }
   .quiz-controls > div { display: flex; flex: 1 1 100%; gap: 8px; }
   .quiz-controls > div .btn { flex: 1; }
+  /* Fixed timer pill (top:0.5rem) clears the centered quiz title */
+  .quiz-header { padding-top: 3.5rem; }
   .quiz-timer {
     top: 0.5rem;
     right: 0.5rem;
@@ -4263,5 +4274,9 @@ html, body {
 @media (max-width: 768px) {
   .study-content .comparison-table { min-width: 0; }
   svg { max-width: 100%; }
+  /* per-page .unit-grid uses fixed minmax(280px,1fr) which overflows <312px;
+     specificity bump ("body ") beats the per-page <style> loaded after this sheet */
+  body .unit-grid { grid-template-columns: 1fr; }
+  body .landing-hero { padding: 2rem 1rem; }
 }
 

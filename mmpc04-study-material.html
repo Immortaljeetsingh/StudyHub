@@ -88,10 +88,10 @@
   }
 }</script>
 <style>
-  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center}
+  .landing-hero{background:var(--bg-surface);padding:3rem 2rem;border-radius:20px;margin-bottom:2rem;text-align:center;display:flex;flex-direction:column;align-items:center}
   .landing-hero h1{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--text-primary);margin-bottom:1rem;line-height:1.3}
   .landing-hero p{color:var(--text-secondary);max-width:700px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.6}
-  .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s}
+  .landing-cta{display:inline-block;padding:0.8rem 2rem;background:var(--accent);color:#fff;border-radius:12px;text-decoration:none;font-weight:600;transition:transform 0.2s,box-shadow 0.2s;margin:0.35rem 0}
   .landing-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.3)}
   .unit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:2rem 0}
   .unit-preview{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;padding:1.2rem;transition:transform 0.2s}
@@ -129,7 +129,7 @@
   .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
   .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s;min-height:40px;display:inline-flex;align-items:center}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
     .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
   .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
@@ -146,7 +146,7 @@
   .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
   .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s;min-height:40px;display:inline-flex;align-items:center}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
     .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
   .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
@@ -163,7 +163,7 @@
   .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
   .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s;min-height:40px;display:inline-flex;align-items:center}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
   </style>
 </head>
@@ -187,7 +187,7 @@
   <section>
     <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Study Material for MMPC-04</h2>
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse study material for each unit of IGNOU MMPC-04 Accounting &amp; Finance. Click any unit to read the complete study notes.</p>
-    <div class="unit-accordions"><details class="unit-accordion">
+    <div class="unit-accordions"><details class="unit-accordion" open>
       <summary>Unit 1: Introduction to Accounting</summary>
       <div class="unit-body">
       <p>Accounting is the art of recording, classifying, and summarising in a significant manner and in terms of money, transactions and events which are of financial character, and interpreting the results thereof. — AICPA</p>

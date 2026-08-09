@@ -129,11 +129,11 @@
   .related-subjects{margin:2rem 0;padding:1.5rem;background:var(--bg-surface);border-radius:14px;border:1px solid var(--glass-border)}
   .related-subjects h2{font-size:1.1rem;color:var(--text-primary);margin-bottom:1rem}
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
+  .related-grid a{padding:0.4rem 0.8rem;display:inline-flex;align-items:center;min-height:40px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
   .takeaway{background:var(--accent-glow);border-left:3px solid var(--accent);border-radius:8px;padding:0.55rem 0.9rem;font-size:0.87rem;color:var(--text-primary);line-height:1.6;margin-top:0.8rem}
   .year-paper{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:1.2rem;overflow:hidden}
-  .year-paper summary{padding:1rem 1.2rem;cursor:pointer;font-weight:700;color:var(--accent);font-size:1.02rem;background:var(--glass);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  .year-paper summary{padding:1rem 1.2rem;cursor:pointer;font-weight:700;color:var(--accent);font-size:1.02rem;background:var(--glass);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:0.75rem 1rem;flex-wrap:wrap;row-gap:0.4rem}
   .year-paper summary::-webkit-details-marker{display:none}
   .year-paper summary::after{content:"\25BC";font-size:0.75rem;color:var(--text-secondary);transition:transform 0.2s}
   .year-paper[open] summary::after{transform:rotate(180deg)}

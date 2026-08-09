@@ -9,6 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <style>:root{--font-sans:"Inter",system-ui,-apple-system,sans-serif}</style>
+<style>
+@media (max-width: 480px) {
+  .top-toolbar { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 0.3rem; padding: 0.4rem 0.6rem; }
+  .top-toolbar::-webkit-scrollbar { display: none; }
+  .top-toolbar .btn { flex: 0 0 auto; font-size: 0.75rem; padding: 0.4rem 0.6rem; min-height: 42px; white-space: nowrap; }
+  .visual-diagram div[style*="display:flex"]:not([style*="column"]):not([style*="wrap"]) { flex-direction: column; align-items: center; gap: 0.75rem; }
+}
+@media (max-width: 900px) { .unit-nav-mobile { position: static; top: auto; } }
+</style>
 
 <link rel="manifest" href="manifest.json">
 

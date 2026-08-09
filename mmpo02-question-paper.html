@@ -118,6 +118,11 @@
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
+  .related-grid a{min-height:40px;display:inline-flex;align-items:center}
+  .faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .faq-item summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .faq-item[open] summary::after{transform:rotate(90deg)}
+  @media (max-width:480px){.landing-hero{padding:2rem 1.1rem}.landing-cta{display:block;width:100%;text-align:center;margin:0.35rem 0}}
 </style>
 </head>
 <body class="subject-mmpo02">
@@ -162,7 +167,7 @@
         <p>Characteristics: (1) Uniqueness - every project is different; (2) temporary nature - a fixed start and finish; (3) defined objectives - specific deliverables and acceptance criteria; (4) interdependence - activities are linked in a logical sequence; (5) use of resources with a budget; (6) risk and uncertainty - outcomes are never fully certain; (7) a dedicated team and a project manager who coordinates effort. Because projects are unique, their execution always involves some uncertainty, unlike routine operations which repeat the same process daily.</p>
         <p>The project life cycle has four phases. In the initiation phase, the idea is evaluated, objectives are set and a project charter is prepared. In the planning phase, scope, schedule, budget, quality, resources and risks are planned in detail - this is where networks, work breakdown structures and budgets are made. In the execution phase, the plan is implemented, teams do the work and progress is monitored against the plan. In the closure phase, the deliverables are handed over, lessons learned are recorded and the project is formally closed and audited. Managing these phases well is the essence of project management.</p>
         <div class="key-points"><strong>Key points to remember:</strong> project = temporary + unique + objective; life cycle = initiation, planning, execution, closure; each phase ends with reviewable deliverables.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Project life cycle - initiation, planning, execution, closure">
+        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Project life cycle - initiation, planning, execution, closure">
 <title>Project life cycle - four phases</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="38" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Project Life Cycle - Four Phases</text>
@@ -199,7 +204,7 @@
         <p>A project manager is the single person accountable for the success of a project. His key functions are: planning - defining scope, objectives, work breakdown, schedule and budget; organizing - assembling and structuring the project team and allocating resources to activities; staffing - recruiting, training and motivating team members; directing and leading - guiding the team, communicating expectations and resolving conflicts; controlling - comparing actual progress with the plan, measuring variances and taking corrective action; coordinating - integrating the work of departments, contractors and vendors; and risk management - identifying threats, planning responses and monitoring them. He is also the communication hub - reporting status to the steering committee, sponsors and stakeholders.</p>
         <p>Beyond these, a project manager must manage scope changes formally, ensure quality standards are met, manage stakeholder expectations and document lessons learned at closure. Modern project managers also need soft skills such as negotiation, conflict resolution and leadership, because projects are delivered through people. In the Indian context, project managers in construction, IT and infrastructure combine technical knowledge with PERT/CPM tools, earned value analysis and risk registers to keep projects on schedule and within budget. The functions mirror general management, but with a sharper focus on time, cost and quality targets.</p>
         <div class="key-points"><strong>Key points to remember:</strong> core functions - planning, organizing, staffing, directing, controlling, coordinating; add risk and communication management; the PM is accountable for time, cost and quality.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Work breakdown structure tree - project, deliverables, work packages">
+        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Work breakdown structure tree - project, deliverables, work packages">
 <title>Work breakdown structure - three levels</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="28" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Work Breakdown Structure (WBS) - Three Levels</text>
@@ -274,7 +279,7 @@
         <p><strong>Step 5 - Critical path:</strong> activities with zero float are A, C, F, H, so the critical path is 1-2-4-6-7 with duration 4 + 5 + 4 + 2 = 15 days. Activities B, D, E and G are non-critical and can be delayed without delaying the project: B by 2 days, D by 4 days, E by 2 days and G by 2 days. Their total floats are 2, 4, 2 and 2 days respectively.</p>
         <p><strong>Answer:</strong> project duration = 15 days; critical path = A-C-F-H (1-2-4-6-7); floats: B = 2, D = 4, E = 2, G = 2 days.</p>
         <div class="key-points"><strong>Key points to remember:</strong> forward pass takes maxima, backward pass takes minima; total float = LS - ES; zero float marks critical activities; project duration = earliest finish of the last event.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CPM network with critical path A-C-F-H highlighted">
+        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="CPM network with critical path A-C-F-H highlighted">
 <title>CPM network - critical path in cyan</title>
 <defs>
 <marker id="mk2c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#22d3ee"/></marker>
@@ -334,7 +339,7 @@
         <p><strong>Step 4 - Crash day 2:</strong> A has reached its crash limit, so the next cheapest is H at Rs 1,000/day. Crash H by 1 day (2 &rarr; 1). New duration = 13 days. Check: A-C-F-H = 3+5+4+1 = 13 days and path B-E-G-H = 2+6+3+1 = 12 days, so no new critical path appears.</p>
         <p><strong>Answer:</strong> crash A and H by one day each; minimum crash cost = 1,000 + 1,000 = Rs 2,000; new project duration = 13 days; total project cost = 10,000 + 2,000 = Rs 12,000. (Had we crashed C or F first, the cost would be higher, so A and H are optimal.)</p>
         <div class="key-points"><strong>Key points to remember:</strong> crash cost/day = (crash cost - normal cost)/(normal time - crash time); always crash the cheapest critical activity; watch crash limits and recheck the critical path after every crash.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crashing time-cost trade-off curve with optimum duration">
+        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Crashing time-cost trade-off curve with optimum duration">
 <title>Project crashing - time-cost trade-off</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Project Crashing - Time-Cost Trade-off</text>
@@ -373,7 +378,7 @@
         <p><strong>Step 4 - Estimate at Completion:</strong> EAC = BAC/CPI = 5,00,000/0.73 &asymp; Rs 6,85,000. If the same efficiency continues, the project will cost about Rs 6.85 lakh against a budget of Rs 5 lakh.</p>
         <p><strong>Comment:</strong> the project is in trouble on both fronts. CV and SV are both negative, and CPI and SPI are both below 1. The cost overrun of Rs 65,000 and schedule delay must be investigated - possible causes are poor estimation, material price rise, idle resources or rework. Management should either fast-track, crash critical activities, or re-baseline, because at the current CPI the project will exceed its budget by roughly Rs 1.85 lakh.</p>
         <div class="key-points"><strong>Key points to remember:</strong> EV = % complete &times; BAC; CV = EV - AC, SV = EV - PV; CPI = EV/AC, SPI = EV/PV; CPI &lt; 1 and SPI &lt; 1 mean over budget and behind schedule; EAC = BAC/CPI.</div>
-        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Earned value S-curves with cost and schedule variances at month 4">
+        <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Earned value S-curves with cost and schedule variances at month 4">
 <title>Earned value analysis - S-curves</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="16" font-weight="700" text-anchor="middle">Earned Value S-Curves (Rs lakh)</text>

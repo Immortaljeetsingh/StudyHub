@@ -122,6 +122,11 @@
   .related-grid{display:flex;flex-wrap:wrap;gap:0.5rem}
   .related-grid a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .related-grid a:hover{border-color:var(--accent);color:var(--accent)}
+  .related-grid a{min-height:40px;display:inline-flex;align-items:center}
+  .faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
+  .faq-item summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
+  .faq-item[open] summary::after{transform:rotate(90deg)}
+  @media (max-width:480px){.landing-hero{padding:2rem 1.1rem}.landing-cta{display:block;width:100%;text-align:center;margin:0.35rem 0}}
 </style>
 </head>
 <body class="subject-mmpm09">
@@ -179,7 +184,7 @@
       <p><strong>(iv) Private Labels:</strong> brands owned and sold exclusively by a retailer, offering better margins and differentiation - DMart earns 30%+ of its revenue from private labels across grocery, FMCG and apparel.</p>
       <p><strong>(b) Role and scope:</strong> retailing is the final link in the distribution chain that connects producers to consumers - it breaks bulk, holds inventory, offers assortment and provides service, covering everything from neighbourhood kiranas to hypermarkets and online stores. <strong>Importance and contribution:</strong> India has 12 million+ small retailers; kirana stores still hold about 88% of the market, while organised retail is growing at 25-30% annually. Retailing is a major employer, contributes significantly to the GDP, and drives consumption, modernisation and employment across tier II and tier III cities.</p>
       <p class="kpt"><strong>Key points to remember:</strong> hypermarket = big-box food + non-food; franchising = licensed brand system; catalogue = non-store ordering; private labels = retailer-owned brands. Retailing = final link, kirana 88% share, organised retail growing 25-30%.</p>
-      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retail formats chart - hypermarket, franchising, catalogue retailing and private labels">
+      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Retail formats chart - hypermarket, franchising, catalogue retailing and private labels">
 <title>Retail formats in India</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="38" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Retail Formats in India</text>
@@ -204,7 +209,7 @@
 <text x="472" y="280" fill="#e2e8f0" font-size="11" text-anchor="middle">Better margins and differentiation</text>
 <text x="472" y="305" fill="#22d3ee" font-size="11" font-style="italic" text-anchor="middle">e.g. DMart earns 30%+ from private labels</text>
 </svg><figcaption>Fig: Four retail formats at a glance - hypermarket (big-box), franchising (licensed brand), catalogue retailing (non-store ordering) and private labels (retailer-owned brands).</figcaption></figure>
-      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Supply chain flow - producer, wholesaler, retailer, consumer">
+      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Supply chain flow - producer, wholesaler, retailer, consumer">
 <title>Supply chain flow - retailing is the final link</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="38" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Supply Chain - Retailing is the Final Link</text>
@@ -249,7 +254,7 @@
       <p><strong>(a) Locational theories:</strong> the <strong>Central Place Theory</strong> (Christaller) says settlements form a hierarchy of centres, and each retail centre serves a market area of a minimum (threshold) population - so higher-order centres like malls serve larger areas than neighbourhood stores. The <strong>Spatial Interaction / Reilly&rsquo;s Law of Retail Gravitation</strong> holds that a centre attracts customers from surrounding areas in proportion to its size and in inverse proportion to distance - used to estimate trade areas and divide markets between competing centres. <strong>Retail market identification</strong> means defining the trade area (primary, secondary, tertiary), assessing market potential, purchasing power and competition before locating a store. In emerging India, these tools guide hypermarket and mall locations in growing tier II cities while kiranas continue to serve neighbourhood catchments.</p>
       <p><strong>(b) Merchandising</strong> is the planning, buying and selling of products so that the right product is available in the right place, at the right time, in the right quantity and at the right price. Its importance lies in driving sales, margins and store image; its scope covers assortment planning, buying, pricing, promotion, inventory and in-store display. Factors to consider while setting merchandising objectives: target customer profile, store image and positioning, competition, desired sales volume and profit margins, budget, product life cycles, and seasonal or fashion trends.</p>
       <p class="kpt"><strong>Key points to remember:</strong> Central Place = hierarchy + threshold population; Reilly = size vs distance. Merchandising = right product, place, time, quantity, price; objectives = customer, image, competition, profit.</p>
-      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retail gravitation model - customers choose between two centres by size and distance">
+      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Retail gravitation model - customers choose between two centres by size and distance">
 <title>Reilly's law of retail gravitation</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="38" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Location Theory - Reilly's Law of Retail Gravitation</text>
@@ -281,7 +286,7 @@
       <p><strong>(d) Category:</strong> a unit of merchandise management - a group of similar, substitutable products managed as one business unit (for example, oral care or snacks). Category management links buying decisions to store-level sales and profit targets.</p>
       <p><strong>(e) Visual Merchandising In India:</strong> the art of presenting products through window displays, fixtures, lighting, planograms and store layout to attract customers and drive impulse purchases - visual merchandising influences 60-70% of impulse purchase decisions. Indian examples: Tanishq&rsquo;s jewellery displays and DMart&rsquo;s end-cap displays of private labels.</p>
       <p class="kpt"><strong>Key points to remember:</strong> rural formats = modernised haats, vans, company outlets; dialectic = thesis-antithesis-synthesis; unplanned markets = organic clusters; category = managed product groups; visual merchandising = 60-70% of impulse purchases.</p>
-      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wheel of retailing cycle - entry, trading up, vulnerability, new format">
+      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Wheel of retailing cycle - entry, trading up, vulnerability, new format">
 <title>Wheel of retailing cycle</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="30" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Wheel of Retailing - Format Evolution Cycle</text>
@@ -311,7 +316,7 @@
 <text x="320" y="206" fill="#e2e8f0" font-size="12" font-weight="700" text-anchor="middle">Synthesis</text>
 <text x="320" y="342" fill="#a78bfa" font-size="11" text-anchor="middle">Same idea as the dialectic process: department stores vs discounters blended into hypermarkets</text>
 </svg><figcaption>Fig: Wheel of retailing - formats enter with low price and service, trade up, become vulnerable and are replaced by a new cycle; it mirrors the dialectic process (thesis-antithesis-synthesis).</figcaption></figure>
-      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Store layout types - grid, racetrack and free-flow">
+      <figure class="yp-fig"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="yp-svg" role="img" aria-label="Store layout types - grid, racetrack and free-flow">
 <title>Three store layout types</title>
 <rect x="1" y="1" width="638" height="358" rx="12" fill="#0d1226" stroke="#1e293b"/>
 <text x="320" y="32" fill="#e2e8f0" font-size="17" font-weight="700" text-anchor="middle">Store Layout Types</text>

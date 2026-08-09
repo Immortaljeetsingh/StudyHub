@@ -231,7 +231,7 @@ function renderToolbar(subjectCode) {
     var code = subjectCode.replace('-', '');
     var studyHref = 'study-' + code + '.html';
     var quizHref = 'quiz-' + code + '.html';
-    return '<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline" style="margin-right:auto">\u2190 Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">\u2630 Units</button><a href="' + studyHref + '" class="btn btn-outline">\uD83D\uDCD8 Study</a><a href="' + quizHref + '" class="btn btn-outline">\uD83D\uDCDD Quiz</a><button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">\uD83C\uDF19 Dark</button></div>';
+    return '<div class="top-toolbar"><a href="study-hub.html" class="btn btn-outline">\u2190 Hub</a><button id="unitsToggleBtn" class="btn btn-outline" onclick="toggleUnits()">\u2630 Units</button><a href="' + studyHref + '" class="btn btn-outline">\uD83D\uDCD8 Study</a><a href="' + quizHref + '" class="btn btn-outline">\uD83D\uDCDD Quiz</a><button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()">\uD83C\uDF19 Dark</button></div>';
 }
 
 // ==================== INIT ====================

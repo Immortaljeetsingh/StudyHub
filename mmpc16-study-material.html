@@ -131,40 +131,12 @@
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
   .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:480px){
+    .landing-hero{padding:2rem 1.25rem}
+    .landing-cta{display:block;width:100%;max-width:320px;box-sizing:border-box;margin:0 auto 0.8rem}
+    .landing-cta:last-child{margin-bottom:0}
+    .unit-links a{padding:0.7rem 0.9rem;min-height:40px;display:inline-flex;align-items:center}
+  }
   </style>
 </head>
 <body class="subject-mmpc16">
@@ -187,7 +159,7 @@
   <section>
     <h2 style="font-size:1.3rem;color:var(--text-primary);margin-bottom:0.5rem">Unit-wise Study Material for MMPC-16</h2>
     <p style="color:var(--text-secondary);margin-bottom:1.5rem">Browse study material for each unit of IGNOU MMPC-16 International Business. Click any unit to read the complete study notes.</p>
-    <div class="unit-accordions"><details class="unit-accordion">
+    <div class="unit-accordions"><details class="unit-accordion" open>
       <summary>Unit 1: Dynamics of International Business</summary>
       <div class="unit-body">
       <p>Tata Steel acquired NatSteel (Singapore) and Corus (Europe) to overcome domestic competition from ArcelorMittal and POSCO, achieving economies of scale in the cyclical steel industry.</p>

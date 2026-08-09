@@ -131,40 +131,12 @@
   .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
   .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
   .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
-    .qa-divider{height:1px;background:var(--glass-border);margin:1.5rem 0}
-  .qa-item h3{font-size:1rem;color:var(--accent);margin-bottom:0.6rem;line-height:1.4}
-  .qa-item p{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.6rem}
-  .qa-item p.answer{color:var(--text-primary);margin-bottom:0.8rem}
-  .key-points{margin:0.6rem 0 0.8rem 1.4rem}
-  .key-points li{font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.35rem}
-  .takeaway{font-size:0.9rem;color:var(--accent);line-height:1.6;border-top:1px dashed var(--glass-border);padding-top:0.6rem}
-  .unit-accordion{background:var(--bg-surface);border:1px solid var(--glass-border);border-radius:14px;margin-bottom:0.9rem;overflow:hidden}
-  .unit-accordion summary{padding:1rem 1.2rem;cursor:pointer;font-weight:600;color:var(--text-primary);font-size:0.95rem;display:flex;align-items:center;justify-content:space-between;gap:0.6rem}
-  .unit-accordion summary:hover{color:var(--accent)}
-  .unit-accordion summary::after{content:"\25B8";color:var(--accent);transition:transform .2s;flex-shrink:0}
-  .unit-accordion[open] summary::after{transform:rotate(90deg)}
-  .unit-accordion .unit-body{padding:0.2rem 1.2rem 1.2rem}
-  .unit-accordion .unit-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1rem}
-  .unit-links{display:flex;flex-wrap:wrap;gap:0.5rem}
-  .unit-links a{padding:0.4rem 0.8rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;transition:all 0.2s}
-  .unit-links a:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:480px){
+    .landing-hero{padding:2rem 1.25rem}
+    .landing-cta{display:block;width:100%;max-width:320px;box-sizing:border-box;margin:0 auto 0.8rem}
+    .landing-cta:last-child{margin-bottom:0}
+    .unit-links a{padding:0.7rem 0.9rem;min-height:40px;display:inline-flex;align-items:center}
+  }
   </style>
 </head>
 <body class="subject-mmpc19">
@@ -197,7 +169,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 2: Quality Management &#x2014; Leading Thinkers</summary>
       <div class="unit-body">
       <p>Motorola invented Six Sigma in the 1980s using Taguchi's robust design principles, achieving 3.4 defects per million opportunities and saving billions.</p>
@@ -207,7 +179,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 3: Building Blocks of TQM</summary>
       <div class="unit-body">
       <p>The Ritz-Carlton hotel chain empowers every employee to spend up to $2,000 per guest to resolve quality issues immediately, embodying total employee involvement and customer focus.</p>
@@ -217,7 +189,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 4: Economics of Quality</summary>
       <div class="unit-body">
       <p>Visible costs: Warranty, scrap, rework (only 3-5% of total COPQ)</p>
@@ -227,7 +199,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 5: TQM and Business Strategy</summary>
       <div class="unit-body">
       <p>"LSCM-WOR" — Leadership(12%), Strategic(8%), Customer(8%), Measurement(9%), Workforce(8%), Operations(8%), Results(45%)</p>
@@ -237,7 +209,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 6: Quality-Centred Strategic Planning</summary>
       <div class="unit-body">
       <p>Xerox Corporation used benchmarking in the 1980s to study Japanese competitors' quality practices, leading to a complete overhaul of their manufacturing processes.</p>
@@ -247,7 +219,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 7: Statistical Quality Control (SQC)</summary>
       <div class="unit-body">
       <p>Cp = (USL - LSL) / 6σ</p>
@@ -257,7 +229,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 8: Six Sigma &amp; 5S</summary>
       <div class="unit-body">
       <p>QFD: Translates customer "whats" into technical "hows" using House of Quality matrix</p>
@@ -267,7 +239,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 9: Organization for Quality</summary>
       <div class="unit-body">
       <p>Explain why cross-functional teams are essential — quality problems often span departmental boundaries.</p>
@@ -277,7 +249,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 10: Quality Culture and Leadership</summary>
       <div class="unit-body">
       <p>Leadership questions often ask about the difference between "managing quality" and "leading quality." Managing = systems & processes; Leading = vision & culture.</p>
@@ -287,7 +259,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 11: ISO 9000 Quality Management System</summary>
       <div class="unit-body">
       <p>Risk-based thinking replaces preventive action</p>
@@ -297,7 +269,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 12: ISO 14000 Environmental Management</summary>
       <div class="unit-body">
       <p>Environmental Aspect: Element of activities that interacts with environment (e.g., emissions, waste)</p>
@@ -307,7 +279,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 13: Occupational Health &amp; Safety Standards</summary>
       <div class="unit-body">
       <p>Reduced duplication: Common clauses handled once</p>
@@ -317,7 +289,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 14: Quality Auditing</summary>
       <div class="unit-body">
       <p>Nonconformity: Non-fulfillment of a requirement</p>
@@ -327,7 +299,7 @@
       <a href="quiz-mmpc19.html">Take Quiz</a>
       <a href="mmpc19-solved-assignments.html">Solved Assignments</a></div>
       </div>
-      </details><details class="unit-accordion" open>
+      </details><details class="unit-accordion">
       <summary>Unit 15: Quality Certification Process</summary>
       <div class="unit-body">
       <p>BIS (Bureau of Indian Standards) provides certification in India. ISI mark = product certification; Hallmark = gold certification.</p>
