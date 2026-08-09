@@ -2074,6 +2074,42 @@ body::after {
   --shadow-card: var(--shadow-md);
 }
 
+/* ═══ Dark-mode accent fixes — bright light-mode twins for accents < 4.5:1 on #0a0907 ═══
+   Scope :root:not([data-theme="light"]) covers study pages (data-theme="dark"), quiz and
+   question-paper pages (no attribute, base dark tokens). Light mode keeps dark-mid accents. */
+:root:not([data-theme="light"]) .subject-mmpb06,
+:root:not([data-theme="light"]) .subject-mmpc02,
+:root:not([data-theme="light"]) .subject-mmpc04,
+:root:not([data-theme="light"]) .subject-mmpc05,
+:root:not([data-theme="light"]) .subject-mmpc08,
+:root:not([data-theme="light"]) .subject-mmpc09,
+:root:not([data-theme="light"]) .subject-mmpc10,
+:root:not([data-theme="light"]) .subject-mmpc13,
+:root:not([data-theme="light"]) .subject-mmpc17,
+:root:not([data-theme="light"]) .subject-mmpc18,
+:root:not([data-theme="light"]) .subject-mmph01,
+:root:not([data-theme="light"]) .subject-mmpm01,
+:root:not([data-theme="light"]) .subject-mmpm03,
+:root:not([data-theme="light"]) .subject-mmpm05,
+:root:not([data-theme="light"]) .subject-mmpm09,
+:root:not([data-theme="light"]) .subject-mmpo01,
+:root:not([data-theme="light"]) .subject-mmpo02,
+:root:not([data-theme="light"]) .subject-mmpo06,
+:root:not([data-theme="light"]) .subject-mmpf03 {
+  --accent: var(--subject-color);
+}
+
+/* Cyan (#22d3ee) buttons — dark text instead of white (1.8:1); hover uses opacity/transform only */
+:root:not([data-theme="light"]) .btn-primary,
+:root:not([data-theme="light"]) .btn-save,
+:root:not([data-theme="light"]) .fab-main,
+:root:not([data-theme="light"]) .video-toggle,
+:root:not([data-theme="light"]) .skip-link,
+:root:not([data-theme="light"]) #unitsToggleBtn.active,
+:root:not([data-theme="light"]) .q-option.selected .q-option-letter {
+  color: #04222a;
+}
+
 /* — Refined typography defaults — */
 body {
   font-feature-settings: 'kern', 'liga', 'calt', 'ss01';
